@@ -1,0 +1,918 @@
+/* LG Device :992px. */
+
+@media only screen and (min-width: 1920px) {
+    .header-bar-area .container {
+        max-width: 1800px !important;
+    }
+
+    .container {
+        max-width: 1500px;
+    }
+
+    .hero_img_one {
+        margin-right: calc(100% - 50vw);
+    }
+
+    .hero_img_two {
+        margin-left: calc(100% - 46vw);
+    }
+
+    .hero_curve {
+        top: 58%;
+    }
+
+    .sms_text h3 {
+        font-size: 44px;
+    }
+
+    .sms_text p {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+    .header-bar-area .container {
+        max-width: 1550px !important;
+    }
+
+    .container {
+        max-width: 1280px;
+    }
+
+    .hero_curve {
+        top: 58%;
+        max-width: 61%;
+    }
+
+    .hero_img_one {
+        margin-right: calc(100% - 43vw);
+    }
+
+    .hero_img_two {
+        margin-left: calc(100% - 46vw);
+    }
+
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+    .header-bar-area .container {
+        max-width: 1480px !important;
+    }
+
+    .container {
+        max-width: 1280px;
+    }
+
+    .navbar-brand img {
+        max-width: 71%;
+    }
+
+    .hero_img_one {
+        margin-right: calc(100% - 46vw);
+    }
+
+    .hero_img_two {
+        margin-left: calc(100% - 46vw);
+    }
+
+    .hero_curve {
+        top: 60%;
+        max-width: 62%;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .header-bar-area .container {
+        max-width: 1480px !important;
+    }
+
+    .container {
+        max-width: 1290px;
+    }
+
+
+    .hero_img_one {
+        margin-right: calc(100% - 46vw);
+    }
+
+    .hero_img_two {
+        margin-left: calc(100% - 46vw);
+    }
+
+    .hero_curve {
+        top: 61%;
+        max-width: 62%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {}
+
+@media only screen and (min-width: 1200px) {
+
+
+    .container-fluid {
+        padding: 0 60px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    .main-menu {
+        display: inline-block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .main-menu {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .pricing_box {
+        margin: 0 40px 45px;
+    }
+
+    .hero_section {
+
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hero_text_one span {
+        font-size: 24px;
+    }
+
+    .hero_text_one h1 {
+        font-size: 60px;
+
+    }
+
+    .hero_text_one p {
+        font-size: 46px;
+    }
+
+    .hero_text_two span {
+        font-size: 28px;
+    }
+
+    .hero_text_two h2 {
+        font-size: 32px;
+    }
+
+    .hero_text_two p {
+        font-size: 16px;
+    }
+
+    .hero_curve {
+        top: 61%;
+        max-width: 62%;
+    }
+
+    .site-navbar .site-navigation .site-menu>li {
+        padding: 10px 20px;
+    }
+
+    .site-navbar .site-navigation .site-menu li>a {
+        font-size: 14px;
+    }
+
+    .service_feature_text h3 {
+        font-size: 32px;
+    }
+
+    .service_feature_text p {
+
+        font-size: 20px;
+    }
+
+    .service_feature_text a.link {
+        font-size: 20px;
+    }
+
+    .promo_link {
+        font-size: 16px;
+    }
+
+    .service_feature_item p {
+        font-size: 14px;
+    }
+
+    .promo_text h2 {
+        font-size: 38px;
+    }
+
+    .promo_text p {
+        font-size: 26px;
+    }
+
+    .promo_title p {
+        font-size: 24px;
+    }
+
+    .promo_bottom_text {
+        font-size: 18px;
+    }
+
+    .sms_feature_item p {
+        font-size: 20px;
+    }
+
+    .sms_feature_item a {
+        padding: 22px 40px 20px 30px;
+        font-size: 15px;
+    }
+
+    .sms_form_text h4 {
+        font-size: 25px;
+    }
+
+    .sms_form_text p {
+        font-size: 16px;
+    }
+
+    .sms_form_field input {
+        width: 62%;
+    }
+
+    .btn.v2 {
+        font-size: 18px;
+        padding: 20px 18px;
+    }
+
+    .simple_feature_list li p {
+        font-size: 20px;
+    }
+
+    .faq_bottom_text {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .footer_section a {
+        font-size: 22px;
+    }
+
+    p.copyright {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .footer_menu {
+        text-align: center;
+    }
+
+    .footer_contact {
+        text-align: right;
+    }
+
+
+
+}
+
+
+/* MD Device :768px. */
+
+@media only screen and (max-width: 991px) {
+    .lg-none {
+        display: none;
+    }
+
+
+    .faq_bottom_text {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .mobile-bar.js-menu-toggle {
+        float: right;
+    }
+
+
+    .mobile-bar span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #31B1E7;
+        margin: 4px 0;
+        border-radius: 5px;
+        position: relative;
+        top: 2px;
+    }
+    img.hero_curve{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .md-none {
+        display: none;
+    }
+
+}
+
+/* Extra small Device. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-bar-area {
+        padding: 25px 0;
+    }
+
+    .hero_img_one {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .hero_text_one {
+        z-index: 99;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    .hero_curve {
+        top: 61%;
+        max-width: 62%;
+    }
+
+    .hero_top_one,
+    .hero_bottom_one {
+        padding: 80px 0 0;
+    }
+
+    .hero_text_two {
+        padding: 0 0 60px;
+        text-align: center;
+    }
+
+    .promo_item_three_img {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .service_feature_item {
+
+        margin-bottom: 30px;
+    }
+
+    .service_feature_text {
+        text-align: center;
+    }
+
+    .promo_text h2 {
+        font-size: 38px;
+    }
+
+    .promo_text p {
+        font-size: 26px;
+    }
+
+    .promo_title {
+        min-width: 300px
+    }
+
+    .promo_title p {
+        font-size: 20px;
+    }
+
+    .promo_bottom_text {
+        font-size: 16px;
+    }
+
+    .sms_section {
+        height: 750px;
+
+    }
+
+    .sms_form {
+        transform: translateY(23px);
+    }
+
+    .sms_feature_item a {
+
+        margin-top: 30px;
+    }
+
+    .sms_form_text {
+        margin-bottom: 45px;
+    }
+
+    .slider_item h3 {
+        font-size: 18px;
+    }
+
+    .owl-prev {
+        left: -35px;
+    }
+
+    .owl-next {
+        right: -35px;
+    }
+
+    .slider_item p {
+        font-size: 14px;
+    }
+
+    .slider_item a {
+        font-size: 10px;
+    }
+
+    .simple_feature_list {
+        columns: 2;
+    }
+
+    .simple_feature_list li p {
+        font-size: 20px;
+    }
+
+    .simple_feature_list li i {
+        font-size: 26px;
+        top: 5px;
+    }
+
+    .footer_section a {
+        font-size: 17px;
+    }
+
+    .footer_widget h4 {
+        font-size: 26px;
+    }
+
+    .footer_logo img {
+        max-width: 85%;
+    }
+
+    p.copyright {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .footer_widget p {
+        font-size: 22px;
+    }
+
+    .footer_menu {
+        text-align: center;
+    }
+
+    .footer_contact {
+        text-align: right;
+        position: relative;
+        top: 7px;
+    }
+
+    .footer_section {
+        padding: 80px 0 55px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .xs-none {
+        display: none;
+    }
+
+    .header-bar-area {
+        padding: 20px 0;
+    }
+
+    .row_pad {
+        padding-bottom: 80px;
+    }
+
+    .xs-block {
+        display: block;
+    }
+
+    .hero_img_one {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .hero_text_one {
+        z-index: 99;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    .hero_curve {
+        top: 61%;
+        max-width: 62%;
+    }
+
+    .hero_top_one,
+    .hero_bottom_one {
+        padding: 80px 0 0;
+    }
+
+    .hero_text_two {
+        padding: 0 0 60px;
+        text-align: center;
+    }
+
+    .hero_text_one span {
+        font-size: 18px;
+    }
+
+    .hero_text_one h1 {
+        font-size: 34px;
+
+    }
+
+    .hero_text_one p {
+        font-size: 36px;
+    }
+
+    .hero_text_two span {
+        font-size: 20px;
+    }
+
+    .hero_text_two h2 {
+        font-size: 26px;
+    }
+
+    .hero_text_one,
+    .hero_text_two {
+        text-align: center;
+    }
+
+    .hero_text_two p {
+        font-size: 14px;
+    }
+
+    .hero_curve {
+        top: 61%;
+        max-width: 62%;
+    }
+
+    .promo_item_three_img {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .service_feature_text {
+        text-align: center;
+    }
+
+    .service_feature_text {
+        text-align: center;
+    }
+
+    .service_feature_text h3 {
+        font-size: 22px;
+    }
+
+    .service_feature_text a.link {
+        font-size: 18px;
+
+    }
+
+
+    .promo_link {
+
+        font-size: 13px;
+    }
+
+    .service_feature_text p {
+        font-size: 16px;
+
+    }
+
+    .promo_text h2 {
+        font-size: 26px;
+    }
+
+    .promo_text p {
+        font-size: 18px;
+    }
+
+    .promo_title {
+        min-width: 300px
+    }
+
+    .promo_title p {
+        font-size: 18px;
+    }
+
+    .promo_bottom_text {
+        font-size: 15px;
+    }
+
+    .sms_section {
+        height: 750px;
+
+    }
+
+    .sms_text h3 {
+        font-size: 20px;
+    }
+
+    .sms_text p {
+        font-size: 14px;
+        padding: 0;
+        line-height: 22px;
+    }
+
+    .sms_section {
+        height: 800px;
+    }
+
+    .sms_text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .sms_feature_item {
+        margin-bottom: 30px;
+    }
+
+    .sms_feature_item a {
+        padding: 14px 40px 14px 30px;
+        font-size: 14px;
+        line-height: 43px;
+    }
+
+    .sms_feature_item a img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        position: relative;
+        top: 5px;
+    }
+
+    .sms_form {
+        padding: 30px 20px 30px 20px;
+        transform: translateY(25px);
+    }
+
+    .sms_form_text h4 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .promo_item {
+        margin-bottom: 40px;
+    }
+
+    .sms_feature_item p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .sms_form_field button {
+        width: 50%;
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+    }
+
+    .sms_form_field input {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .sms_form_text {
+        margin-bottom: 40px;
+    }
+
+    .sms_form_field input:placeholder {
+        text-align: center;
+    }
+
+    .sms_form_text p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .owl-carousel.slider_wrap {
+        margin-top: 30px;
+    }
+
+    .owl-carousel.slider_wrap::before,
+    .owl-carousel.slider_wrap::after {
+        display: none;
+    }
+
+    .owl-prev {
+        top: -38px;
+        right: 63px;
+        left: auto;
+    }
+
+    .owl-next {
+        top: -38px;
+        right: 0px;
+    }
+
+    .owl-carousel.slider_wrap .item {
+        padding: 30px 10px;
+    }
+
+    .simple_section {
+        padding: 60px 0;
+    }
+
+    .simple_feature_list {
+        columns: 1;
+        margin-left: 30px;
+    }
+
+
+    .simple_title {
+
+        font-size: 30px;
+        line-height: 1.4;
+        margin-bottom: 35px;
+
+    }
+
+    .simple_feature_list li p {
+        font-size: 20px;
+    }
+
+    .simple_feature_list li i {
+        font-size: 30px;
+        top: 5px;
+    }
+
+    .pricing_box {
+        margin: 0 0px 45px;
+        padding: 50px 15px 30px;
+
+    }
+
+    .pricing_box h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .pricing_box p {
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .price_plan {
+        padding: 30px 20px;
+        margin: 30px 0px 30px;
+    }
+
+    .price_plan h2 {
+        font-size: 65px;
+        text-align: left;
+        margin: 8px 0 15px;
+    }
+
+    .price_plan h2 span {
+        font-size: 18px;
+    }
+
+    .price_bottom_text p {
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    .price_bottom_text ul {
+        margin-left: 20px;
+    }
+
+    .pricing_feature {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .pricing_box img {
+        display: none;
+    }
+
+    .pricing_feature li p {
+        font-size: 18px;
+    }
+
+    .pricing_bottom_text {
+        margin: 15px 0px 0px;
+    }
+
+    .price_bottom_text ul li {
+        font-size: 16px;
+    }
+
+    .pricing_bottom_text span {
+        font-size: 18px;
+    }
+
+    .pricing_bottom_text h3 {
+        font-size: 22px;
+    }
+
+
+    .faq_header {
+        font-size: 16px;
+        margin-right: 35px;
+    }
+
+    .close:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+
+    .card {
+
+        padding: 15px 5px 10px;
+
+    }
+
+    .card-body p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .card-header span {
+        top: 24px;
+        right: 16px;
+        font-size: 26px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        line-height: 46px;
+    }
+
+    .faq_bottom_text h3 {
+        font-size: 34px;
+    }
+
+    .faq_bottom_text p {
+        font-size: 22px;
+    }
+
+    .section_title {
+        font-size: 32px;
+    }
+
+    .service_feature_item {
+        margin: 0 38px 30px;
+    }
+
+    .footer_section {
+        padding: 80px 0 20px;
+    }
+
+    .footer_section a {
+        font-size: 18px;
+    }
+
+    .footer_widget h4 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .footer_widget {
+        margin-bottom: 40px;
+    }
+
+    .footer_widget p {
+        font-size: 20px;
+    }
+
+    .footer_menu {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer_menu li {
+        display: block;
+    }
+
+    p.copyright {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .footer_menu li a {
+        font-size: 12px;
+    }
+
+    .footer_widget p a img {
+        margin-left: 0;
+        margin-right: 10px;
+        position: relative;
+        top: -4px;
+    }
+
+    .footer_widget p {
+        font-size: 22px;
+    }
+
+    .footer_contact a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .footer_logo {
+        text-align: center;
+    }
+}
