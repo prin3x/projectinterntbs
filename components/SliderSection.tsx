@@ -19,7 +19,7 @@ const SliderSection = () => (
             items={4}
             nav
             dots={false}
-            //   autoplay
+            autoplay
             autoplayTimeout={5500}
             loop
             navText={[
