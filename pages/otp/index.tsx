@@ -13,15 +13,15 @@ import BacktoTop from '../../components/BacktoTop';
 export default function Home() {
   return (
     <Layout>
-      <Proloader></Proloader>
+      <Proloader />
       <div className="page_wrapper">
-        <HeroSection></HeroSection>
-        <SmsSection></SmsSection>
-        <SimpleIconSection></SimpleIconSection>
-        <TrackSection></TrackSection>
-        <CtaSection></CtaSection>
+        <HeroSection />
+        <SmsSection />
+        <SimpleIconSection />
+        <TrackSection />
+        <CtaSection />
       </div>
-      <BacktoTop></BacktoTop>
+      <BacktoTop />
     </Layout>
   );
 }

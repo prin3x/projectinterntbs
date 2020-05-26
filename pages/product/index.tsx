@@ -14,17 +14,17 @@ import BacktoTop from '../../components/BacktoTop';
 export default function Home() {
   return (
     <Layout>
-      <Proloader></Proloader>
+      <Proloader />
       <div className="page_wrapper">
-        <HeroSection></HeroSection>
-        <SmsSection></SmsSection>
-        <PromoSection></PromoSection>
-        <SimpleSection></SimpleSection>
-        <PricingSection></PricingSection>
-        <SliderSection></SliderSection>
-        <FaqSection></FaqSection>
+        <HeroSection />
+        <SmsSection />
+        <PromoSection />
+        <SimpleSection />
+        <PricingSection />
+        <SliderSection />
+        <FaqSection />
       </div>
-      <BacktoTop></BacktoTop>
+      <BacktoTop />
     </Layout>
   );
 }
