@@ -2,15 +2,15 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import Proloader from '../components/Proloader';
-import HeroSection from '../components/first/HeroSection';
-import PartnerSection from '../components/first/PartnerSection';
-import FeatureSection from '../components/first/FeatureSection';
-import SimpleSliderSection from '../components/first/SimpleSliderSection';
-import GlobeSection from '../components/first/GlobeSection';
-import SmsSection from '../components/first/SmsSection';
-import TestimonialSection from '../components/first/TestimonialSection';
-import EduSection from '../components/first/EduSection';
-import CtaSection from '../components/first/CtaSection';
+import HeroSection from '../components/home/HeroSection';
+import PartnerSection from '../components/home/PartnerSection';
+import FeatureSection from '../components/home/FeatureSection';
+import SimpleSliderSection from '../components/home/SimpleSliderSection';
+import GlobeSection from '../components/home/GlobeSection';
+import SmsSection from '../components/home/SmsSection';
+import TestimonialSection from '../components/home/TestimonialSection';
+import EduSection from '../components/home/EduSection';
+import CtaSection from '../components/home/CtaSection';
 
 import BacktoTop from '../components/BacktoTop';
 
