@@ -86,11 +86,11 @@
   // -----------------------------------*/
   // $('select').niceSelect();
   // $('.user_select').niceSelect();
-  $('.user_select').on('click', function (event) {
-    event.preventDefault();
-    if ($(this).hasClass('open')) $(this).removeClass('open');
-    else $(this).addClass('open');
-  });
+  // $('.user_select').on('click', function (event) {
+  //   event.preventDefault();
+  //   if ($(this).hasClass('open')) $(this).removeClass('open');
+  //   else $(this).addClass('open');
+  // });
 
   // /*=========================
   //   OwlCarousel START
