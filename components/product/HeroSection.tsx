@@ -1,4 +1,6 @@
-const HeroSection = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const HeroSection = ({ t }: any) => (
   <div
     className="hero_section"
     style={{ backgroundImage: 'url(img/hero_bg.png)' }}
@@ -8,9 +10,9 @@ const HeroSection = () => (
       <div className="row align-item-center hero_top_one">
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="hero_text_one">
-            <span>เพิ่มความสำเร็จให้ SMS Marketing ด้วย</span>
+            <span>{t('t3')}</span>
             <h1>SMS Provider</h1>
-            <p>อันดับ 1 ของไทย</p>
+            <p>{t('t4')}</p>
           </div>
         </div>
         <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
@@ -46,4 +48,11 @@ const HeroSection = () => (
     </div>
   </div>
 );
-export default HeroSection;
+HeroSection.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'footer'],
+});
+
+HeroSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('common')(HeroSection);
