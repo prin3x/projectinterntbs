@@ -1,4 +1,6 @@
-const HeroSectionV4 = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const HeroSectionV4 = ({ t }: any) => (
   <div
     className="hero_section v3"
     style={{ backgroundImage: 'url(img/bg_11.png)' }}
@@ -12,10 +14,10 @@ const HeroSectionV4 = () => (
         </div>
         <div className="col-lg-6 col-md-12 col-12">
           <div className="hero_text_one v2">
-            <span>วัดผลแคมเปญ SMS แม่นยำ</span>
-            <h1>ไม่เสียงบการตลาดไปโดยเปล่าประโยชน์</h1>
+            <span>{t('span1')}</span>
+            <h1>{t('h1')}</h1>
             <p>
-              ฟีเจอร์นี้สำหรับ <span>Corporate Package</span> เท่านั้น
+              {t('p1')} <span>{t('span2')}</span> {t('p2')}
             </p>
           </div>
         </div>
@@ -23,4 +25,11 @@ const HeroSectionV4 = () => (
     </div>
   </div>
 );
-export default HeroSectionV4;
+HeroSectionV4.getInitialProps = async () => ({
+  namespacesRequired: ['SmstrackingHeroSection'],
+});
+
+HeroSectionV4.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('SmstrackingHeroSection')(HeroSectionV4);

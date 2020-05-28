@@ -1,4 +1,6 @@
-const EduSection = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const EduSection = ({ t }: any) => (
   <div className="edu_section">
     <div className="container">
       <div className="row align-items-center">
@@ -8,7 +10,7 @@ const EduSection = () => (
               <div className="edu_box">
                 <img src="img/img_7.png" alt="Image" />
                 <div className="edu_box_text">
-                  <p>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</p>
+                  <p>{t('p1')}</p>
                 </div>
               </div>
             </div>
@@ -18,7 +20,7 @@ const EduSection = () => (
                   <div className="edu_box">
                     <img src="img/img_8.png" alt="Image" />
                     <div className="edu_box_text">
-                      <p>4 วิธีสื่อสารกับลูกค้า ให้มีประสิทธิ ภาพมากที่สุด</p>
+                      <p>{t('p2')}</p>
                     </div>
                   </div>
                 </div>
@@ -26,9 +28,7 @@ const EduSection = () => (
                   <div className="edu_box">
                     <img src="img/img_9.png" alt="Image" />
                     <div className="edu_box_text">
-                      <p>
-                        ปิดการขายด้วย Testimonials ทำง่ายๆ แต่ผลลัพธ์เกินคาด
-                      </p>
+                      <p>{t('p3')}</p>
                     </div>
                   </div>
                 </div>
@@ -38,12 +38,19 @@ const EduSection = () => (
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="edu_text">
-            <h3>เทคนิคและความรู้ที่น่าสนใจเกี่ยวกับ SMS และ Marketing</h3>
-            <a href="#">ดูเนื้อหาทั้งหมด</a>
+            <h3>{t('h1')}</h3>
+            <a href="#">{t('a1')}</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 );
-export default EduSection;
+EduSection.getInitialProps = async () => ({
+  namespacesRequired: ['HomeEduSection'],
+});
+
+EduSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('HomeEduSection')(EduSection);

@@ -1,15 +1,13 @@
-const SimpleIconSectionV2 = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const SimpleIconSectionV2 = ({ t }: any) => (
   <div className="simple_icon_section">
     <div className="container">
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offsert-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>วัดผลแคมเปญแม่นยำ ด้วยข้อมูลที่จับต้องได้</h3>
-            <p>
-              คุณสามารถใช้ข้อมูลจาก “รายงานแคมเปญ” ของ SMS Tracking
-              ในการนำไปวัดผลทางการตลาด ว่าแคมเปญ SMS
-              ของคุณสำเร็จและคุ้มค่ากับงบประมาณที่ใช้มากแค่ไหน
-            </p>
+            <h3>{t('h1')}</h3>
+            <p>{t('p1')}</p>
           </div>
         </div>
         <div className="col-md-12">
@@ -19,36 +17,38 @@ const SimpleIconSectionV2 = () => (
               <div className="simple_icon">
                 <img src="img/img_12.png" alt="Image" />
                 <p>
-                  จำนวน SMS <br />
-                  ที่ส่งถึงผู้รับ
+                  {t('p2-1')}
+                  <br />
+                  {t('p2-2')}
                 </p>
               </div>
               <div className="simple_icon">
                 <img src="img/img_4.png" alt="Image" />
                 <p>
-                  จำนวนผู้รับ <br />
-                  ที่เปิดอ่าน
+                  {t('p3-1')} <br />
+                  {t('p3-2')}
                 </p>
               </div>
               <div className="simple_icon">
                 <img src="img/img_13.png" alt="Image" />
                 <p>
-                  จำนวนการเข้าชม <br />
-                  เว็บไซต์ที่มาจาก SMS
+                  {t('p4-1')} <br />
+                  {t('p4-2')}
                 </p>
               </div>
               <div className="simple_icon">
                 <img src="img/img_14.png" alt="Image" />
                 <p>
-                  จำนวน Conversion <br />
-                  ที่มาจาก SMS
+                  {t('p5-1')}
+                  <br />
+                  {t('p5-2')}
                 </p>
               </div>
               <div className="simple_icon">
                 <img src="img/img_17.png" alt="Image" />
                 <p>
-                  จำนวนเครดิต <br />
-                  ที่ใช้ในแคมเปญ
+                  {t('p6-1')} <br />
+                  {t('p6-2')}
                 </p>
               </div>
             </div>
@@ -74,4 +74,13 @@ const SimpleIconSectionV2 = () => (
     </div>
   </div>
 );
-export default SimpleIconSectionV2;
+SimpleIconSectionV2.getInitialProps = async () => ({
+  namespacesRequired: ['SmstrackingSimpleIconSection'],
+});
+
+SimpleIconSectionV2.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('SmstrackingSimpleIconSection')(
+  SimpleIconSectionV2
+);

@@ -1,4 +1,6 @@
-const SimpleSection = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const SimpleSection = ({ t }: any) => (
   <div
     className="simple_section"
     style={{ backgroundImage: 'url(img/bg_4.png)' }}
@@ -6,45 +8,45 @@ const SimpleSection = () => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h2 className="simple_title">ครบทุกฟีเจอร์พื้นฐาน ของการส่ง SMS</h2>
+          <h2 className="simple_title">{t('h1')}</h2>
         </div>
         <div className="col-md-12">
           <ul className="simple_feature_list">
             <li>
               <i className="far fa-check-circle"></i>
-              <p>ตรวจสอบผลการส่งได้ทันที</p>
+              <p>{t('p1-1')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>ตรวจสอบผลการส่งได้ทันที</p>
+              <p>{t('p1-2')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>ตั้งเวลาส่งได้หลากหลาย</p>
+              <p>{t('p1-3')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>มีรายงานการส่งแบบละเอียด</p>
+              <p>{t('p1-4')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>กำหนด Sender Name ได้</p>
+              <p>{t('p1-5')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>สถานะการส่งที่ระบุชัดเจน</p>
+              <p>{t('p1-6')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>ระบบ Block List</p>
+              <p>{t('p1-7')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>Phonebook</p>
+              <p>{t('p1-8')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>มี Template ให้</p>
+              <p>{t('p1-9')}</p>
             </li>
           </ul>
         </div>
@@ -52,4 +54,11 @@ const SimpleSection = () => (
     </div>
   </div>
 );
-export default SimpleSection;
+SimpleSection.getInitialProps = async () => ({
+  namespacesRequired: ['ProductSimpleSection'],
+});
+
+SimpleSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('ProductSimpleSection')(SimpleSection);

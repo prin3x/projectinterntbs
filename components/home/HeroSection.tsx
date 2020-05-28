@@ -9,19 +9,17 @@ const HeroSectionV2 = ({ t }: any) => (
       <div className="row align-item-center hero_top_one">
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="hero_text_one">
-            {/* <h1>ตอบโจทย์ทุกความต้องการ ด้านการส่ง SMS</h1>
-            <p>ส่ง SMS ไว มั่นใจได้ในความเสถียรพร้อมให้คำปรึกษาทุกขั้นตอน</p> */}
-            <h1>{t('t1')}</h1>
-            <p>{t('t2')}</p>
+            <h1>{t('h1')}</h1>
+            <p>{t('p1')}</p>
             <ul className="cta-btn">
               <li>
                 <a className="btn v3" href="#">
-                  ทดลองส่งฟรี
+                  {t('a1')}
                 </a>
               </li>
               <li>
                 <a className="btn v5" href="#">
-                  ดูแพ็กเกจราคา
+                  {t('a2')}
                 </a>
               </li>
             </ul>
@@ -33,10 +31,10 @@ const HeroSectionV2 = ({ t }: any) => (
 );
 
 HeroSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'footer'],
+  namespacesRequired: ['HomeHeroSection'],
 });
 
 HeroSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('common')(HeroSectionV2);
+export default withTranslation('HomeHeroSection')(HeroSectionV2);

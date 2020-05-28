@@ -1,8 +1,10 @@
 import dynamic from 'next/dynamic';
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
   ssr: false,
 });
-const SimpleSliderSection = () => (
+const SimpleSliderSection = ({ t }: any) => (
   <div className="simple_slider_section">
     <div className="container-fluid">
       <div className="row">
@@ -10,8 +12,8 @@ const SimpleSliderSection = () => (
           <div className="simple_slider_heading_wrap">
             <div className="simple_slider_heading">
               <h3>
-                ครอบคลุมทุกจุดประสงค์ <br />
-                การส่ง <span>SMS</span>
+                {t('h1')} <br />
+                {t('h1-1')} <span>SMS</span>
               </h3>
             </div>
             <div className="simple_slider_heading_img">
@@ -53,37 +55,45 @@ const SimpleSliderSection = () => (
           >
             <div className="item">
               <div className="simple_slider_item">
-                <h4>โปรโมตกิจกรรม การตลาด</h4>
+                <h4>{t('h2')}</h4>
                 <img src="img/user_3.png" alt="Image" />
                 <p>
-                  25 ก.พ. นี้ ลดเพิ่มสูงสุด30% ผลิตภัณฑ์ออแกนนิคที่ร่วม รายการ{' '}
-                  <span>ดูสินค้าทั้งหมด</span>
+                  {t('p1')}
+                  <span>{t('span1')}</span>
                 </p>
                 <a href="#" className="btn v9">
-                  ทดลองส่งฟรี
+                  {t('a1')}
                 </a>
               </div>
             </div>
             <div className="item">
               <div className="simple_slider_item">
-                <h4>โปรโมตกิจกรรม การตลาด</h4>
+                <h4>{t('h2')}</h4>
                 <img src="img/user_3.png" alt="Image" />
                 <p>
-                  25 ก.พ. นี้ ลดเพิ่มสูงสุด30% ผลิตภัณฑ์ออแกนนิคที่ร่วม รายการ{' '}
-                  <span>ดูสินค้าทั้งหมด</span>
+                  {t('p1')}
+                  <span>{t('span1')}</span>
                 </p>
                 <a href="#" className="btn v9">
-                  ทดลองส่งฟรี
+                  {t('a1')}
                 </a>
               </div>
             </div>
           </OwlCarousel>
           <a href="#" className="lang_link text-right pr-4">
-            ใช้ SMS ทำอะไรได้อีกบ้าง <img src="img/arrow_3.png" alt="Image" />
+            {t('a2')} <img src="img/arrow_3.png" alt="Image" />
           </a>
         </div>
       </div>
     </div>
   </div>
 );
-export default SimpleSliderSection;
+
+SimpleSliderSection.getInitialProps = async () => ({
+  namespacesRequired: ['HomeSimpleSliderSection'],
+});
+
+SimpleSliderSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('HomeSimpleSliderSection')(SimpleSliderSection);

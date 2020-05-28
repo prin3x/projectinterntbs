@@ -1,4 +1,6 @@
-const SmsSection = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const SmsSection = ({ t }: any) => (
   <div
     className="sms_section"
     style={{ backgroundImage: 'url(img/promo_bg.png' }}
@@ -7,12 +9,8 @@ const SmsSection = () => (
       <div className="row">
         <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 ">
           <div className="sms_text">
-            <h3>ส่ง OTP ไม่ดีเลย รันแคมเปญไม่สะดุด</h3>
-            <p>
-              ส่ง SMS ผ่าน 3 เครือข่ายหลักโดยตรง (AIS, TRUE, DTAC)
-              ระบบเลือกช่องทางการส่งที่ตรงกับเครือข่ายของเบอร์ผู้รับ
-              รับประกันความเสถียร 24/7
-            </p>
+            <h3>{t('h1')}</h3>
+            <p>{t('p1')}</p>
           </div>
         </div>
         <div className="col-md-12">
@@ -20,15 +18,15 @@ const SmsSection = () => (
             <div className="row">
               <div className="col-lg-4 col-md-6">
                 <div className="sms_feature_item">
-                  <p>จำนวนการส่ง SMS โดยเฉลี่ย / วัน</p>
+                  <p>{t('p2')}</p>
                   <h3>2,000,00</h3>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
                 <div className="sms_feature_item">
-                  <p>ระยะเวลาการส่ง SMS โดยเฉลี่ย</p>
+                  <p>{t('p3')}</p>
                   <h3>
-                    2.9 <span>วินาที</span>
+                    2.9 <span>{t('span1')}</span>
                   </h3>
                 </div>
               </div>
@@ -36,7 +34,7 @@ const SmsSection = () => (
                 <div className="sms_feature_item">
                   <a href="#">
                     <img src="img/play_icon.png" alt="Image" />
-                    ทำไมเราถึงส่งไว?
+                    {t('a1')}
                   </a>
                 </div>
               </div>
@@ -50,15 +48,15 @@ const SmsSection = () => (
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="sms_form_text">
-                  <h4>ทดลองส่ง SMS เข้ามือถือคุณได้ทันที</h4>
-                  <p>เพียงกรอกเบอร์มือถือของคุณ และยืนยันตัวตนผ่าน OTP</p>
+                  <h4>{t('h2')}</h4>
+                  <p>{t('p4')}</p>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
                 <div className="sms_form_field">
-                  <input type="text" placeholder="เบอร์มือถือของคุณ" />
+                  <input type="text" placeholder={t('input1')} />
                   <button className="btn v2" type="submit">
-                    ยืนยันเบอร์
+                    {t('button1')}
                   </button>
                 </div>
               </div>
@@ -69,4 +67,11 @@ const SmsSection = () => (
     </div>
   </div>
 );
-export default SmsSection;
+SmsSection.getInitialProps = async () => ({
+  namespacesRequired: ['ProductSmsSection'],
+});
+
+SmsSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('ProductSmsSection')(SmsSection);

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Layout from '../../components/Layout';
 // import Proloader from '../../components/Proloader';
 import HeroSection from '../../components/product/HeroSection';

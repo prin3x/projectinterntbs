@@ -1,4 +1,6 @@
-const HeroSectionV3 = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const HeroSectionV3 = ({ t }: any) => (
   <div
     className="hero_section v3"
     style={{ backgroundImage: 'url(assets/img/bg_11.png)' }}
@@ -13,12 +15,12 @@ const HeroSectionV3 = () => (
         <div className="col-lg-6 col-md-12 col-12">
           <div className="hero_text_one v2">
             <h1>
-              <span> ระบบส่ง OTP </span> พร้อมใช้ <br />
-              เพิ่มความปลอดภัย <br />
-              ไม่ต้องเขียนโปรแกรมเพิ่ม
+              <span> {t('span1')} </span> {t('h1')} <br />
+              {t('h2')} <br />
+              {t('h3')}
             </h1>
             <p>
-              ฟีเจอร์นี้สำหรับ <span>Corporate Package</span> เท่านั้น
+              {t('p1')} <span>{t('span2')}</span> {t('p2')}
             </p>
           </div>
         </div>
@@ -26,4 +28,11 @@ const HeroSectionV3 = () => (
     </div>
   </div>
 );
-export default HeroSectionV3;
+HeroSectionV3.getInitialProps = async () => ({
+  namespacesRequired: ['OtpHeroSection'],
+});
+
+HeroSectionV3.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('OtpHeroSection')(HeroSectionV3);

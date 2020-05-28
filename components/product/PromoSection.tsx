@@ -1,4 +1,6 @@
-const PromoSection = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const PromoSection = ({ t }: any) => (
   <div
     className="promo_section"
     style={{ backgroundImage: 'url(img/bg_5.png)' }}
@@ -8,10 +10,11 @@ const PromoSection = () => (
         <div className="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
           <div className="promo_text">
             <h2>
-              ฟีเจอร์ครบ ตอบโจทย์ทั้ง <br />
-              Marketer และ Developer
+              {t('h1-1')}
+              <br />
+              {t('h1-2')}
             </h2>
-            <p>ใช้ง่าย ไม่ว่าจะส่งผ่านเว็บหรือ API</p>
+            <p>{t('p1')}</p>
           </div>
         </div>
       </div>
@@ -20,14 +23,15 @@ const PromoSection = () => (
           <div className="promo_item">
             <div className="promo_title">
               <p>
-                ส่งผ่านเว็บเองง่าย ๆ <br />
-                ไม่ต้องรู้เรื่องเทคนิคก็ส่งได้
+                {t('p2-1')}
+                <br />
+                {t('p2-2')}
               </p>
             </div>
             <div className="promo_img">
               <img src="img/promo_2.png" alt="Image" />
               <a href="#" className="btn v2">
-                ทดลองส่งฟรี
+                {t('a1')}
               </a>
             </div>
           </div>
@@ -36,8 +40,9 @@ const PromoSection = () => (
           <div className="promo_item">
             <div className="promo_title">
               <p>
-                เขียนเชื่อม API ง่าย <br />
-                ต่อได้ทุกภาษา
+                {t('p3-1')}
+                <br />
+                {t('p3-2')}
               </p>
             </div>
             <div className="promo_img">
@@ -51,9 +56,8 @@ const PromoSection = () => (
         <div className="col-md-12">
           <div className="promo_bottom_text">
             <p>
-              ยังไม่ค่อยเข้าใจว่าการส่ง SMS ผ่าน ThaiBulkSMS
-              ต่างจากการส่งผ่านมือถืออย่างไร{' '}
-              <span>ความรู้เบื้องต้นเกี่ยวกับ SMS</span>
+              {t('p4')}
+              <span>{t('span1')}</span>
             </p>
           </div>
         </div>
@@ -66,19 +70,21 @@ const PromoSection = () => (
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="service_feature_text">
-            <h3>ไม่เสียเครดิต ถ้าส่งไม่ถึงผู้รับ</h3>
+            <h3>{t('h2')}</h3>
             <p>
-              ตรวจสอบได้ถึงมือถือปลายทาง ว่า SMS ส่งถึงมือถือผู้รับหรือไม่{' '}
+              {t('p5-1')}
               <br />
-              หากส่งไม่ถึง เช่น ติด Anti-Spam, ปิดเครื่อง, โทรศัพท์ข้อมูลเต็ม{' '}
+              {t('p5-2')}
               <br />
-              ฯลฯ ทางเราจะคืนเครดิตให้คุณ
+              {t('p5-3')}
             </p>
             <a className="link" href="#">
-              Anti-Spam คืออะไร
+              {t('a2')}
             </a>
             <h6 className="promo_link">
-              ฟีเจอร์นี้สำหรับ <span>แพ็กเกจ Corporate SMS</span> เท่านั้น
+              {t('h3-1')}
+              <span>{t('span2')}</span>
+              {t('h3-2')}
             </h6>
           </div>
         </div>
@@ -87,18 +93,18 @@ const PromoSection = () => (
         <div className="col-lg-5 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="service_feature_text">
             <h3>
-              วัดผลแคมเปญแม่นยำ <br />
-              ด้วย SMS Tracking
+              {t('h4-1')}
+              <br />
+              {t('h4-2')}
             </h3>
-            <p>
-              ติดตามลูกค้าหรือกลุ่มเป้าหมายได้ทันทีหลังจาก ที่กดส่งข้อความ
-              พร้อมเช็กสถานะได้ว่าปลายทาง เปิดอ่านข้อความของเราแล้วหรือยัง
-            </p>
+            <p>{t('p6')}</p>
             <a className="link" href="#">
-              SMS Tracking ทำงานอย่างไร?
+              {t('a3')}
             </a>
             <h6 className="promo_link">
-              ฟีเจอร์นี้สำหรับ <span>แพ็กเกจ Corporate SMS</span> เท่านั้น
+              {t('h5-1')}
+              <span>{t('span3')}</span>
+              {t('h5-2')}
             </h6>
           </div>
         </div>
@@ -107,19 +113,19 @@ const PromoSection = () => (
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
                 <img src="img/img_4.png" alt="Image" />
-                <p>รู้ว่าใครเปิด หรือไม่เปิดข้อความ</p>
+                <p>{t('p7')}</p>
               </div>
             </div>
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
                 <img src="img/img_5.png" alt="Image" />
-                <p>รู้ว่าใครเปิด หรือไม่เปิดข้อความ</p>
+                <p>{t('p7')}</p>
               </div>
             </div>
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
                 <img src="img/img_6.png" alt="Image" />
-                <p>รู้ว่าใครเปิด หรือไม่เปิดข้อความ</p>
+                <p>{t('p7')}</p>
               </div>
             </div>
           </div>
@@ -134,21 +140,21 @@ const PromoSection = () => (
         <div className="col-lg-6 col-md-12">
           <div className="service_feature_text">
             <h3>
-              ระบบส่ง OTP แบบพร้อมใช้ <br />
-              ไม่ต้องเขียนโปรแกรมเพิ่ม
+              {t('h6-1')}
+              <br />
+              {t('h6-2')}
             </h3>
-            <p>
-              ให้ Developer ทำงานง่ายและสะดวกขึ้น เพราะเพียงเซ็ตอัพ
-              เบื้องต้นไม่กี่คลิก ก็ได้โค้ดสำหรับนำไปใช้กับ API ได้ทันที
-            </p>
+            <p>{t('p8')}</p>
             <a href="#" className="btn v2">
-              ทดลองส่งฟรี
+              {t('a4')}
             </a>
             <a className="link" href="#">
-              อ่านเพิ่มเติมเกี่ยวกับ OTP Ready-to-Use
+              {t('a5')}
             </a>
             <h6 className="promo_link">
-              ฟีเจอร์นี้สำหรับ <span>แพ็กเกจ Corporate SMS</span> เท่านั้น
+              {t('h7-1')}
+              <span>{t('span4')}</span>
+              {t('h7-2')}
             </h6>
           </div>
         </div>
@@ -156,4 +162,11 @@ const PromoSection = () => (
     </div>
   </div>
 );
-export default PromoSection;
+PromoSection.getInitialProps = async () => ({
+  namespacesRequired: ['ProductPromoSection'],
+});
+
+PromoSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('ProductPromoSection')(PromoSection);
