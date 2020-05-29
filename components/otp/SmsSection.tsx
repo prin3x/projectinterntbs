@@ -1,18 +1,17 @@
-const SmsSectionV3 = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
             <h3>
-              เซ็ตอัพง่าย ไม่กี่คลิก <br />
-              ก็สามารถส่ง OTP ได้ทันที
+              {t('h1-1')}
+              <br />
+              {t('h1-2')}
             </h3>
-            <p>
-              คุณสามารถส่ง OTP ยืนยันตัวตนเพื่อเพิ่มความปลอดภัยให้ลูกค้าได้
-              โดยไม่ต้องเขียนโปรแกรมเพิ่ม เพียงตั้งค่าไม่กี่ขั้นตอน ก็จะได้โค้ด
-              สำหรับนำไปใช้กับ API ได้ทันที ช่วยให้ Developer ทำงานเร็วขึ้น
-            </p>
+            <p>{t('p1')}</p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -27,13 +26,13 @@ const SmsSectionV3 = () => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>ทดลองใช้งานระบบส่ง OTP พร้อมใช้ ได้ทันที</h4>
+                  <h4>{t('h2')}</h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
                   <a href="#" className="btn v8">
-                    ทดลองใช้ฟรี
+                    {t('a1')}
                   </a>
                 </div>
               </div>
@@ -44,4 +43,12 @@ const SmsSectionV3 = () => (
     </div>
   </div>
 );
-export default SmsSectionV3;
+
+SmsSectionV3.getInitialProps = async () => ({
+  namespacesRequired: ['OtpSmsSection'],
+});
+
+SmsSectionV3.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('OtpSmsSection')(SmsSectionV3);

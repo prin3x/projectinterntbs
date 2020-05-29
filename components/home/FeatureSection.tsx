@@ -1,10 +1,13 @@
-const FeatureSection = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const FeatureSection = ({ t }: any) => (
   <div className="feature_section">
     <div className="container">
       <div className="row">
         <div className="col-md-12">
           <h3 className="section_title">
-            ทำไมต้องเป็น<span className="col_one">ThaiBulk</span>{' '}
+            {t('h1')}
+            <span className="col_one">ThaiBulk</span>{' '}
             <span className="col_two">SMS</span>
           </h3>
         </div>
@@ -16,8 +19,9 @@ const FeatureSection = () => (
             <div className="single_feature_text">
               <h4>SMS Provider</h4>
               <p>
-                อันดับ 1 ของไทย <br />
-                ที่ได้รับใบอนุญาตจาก กสทช.
+                {t('p1')}
+                <br />
+                {t('p1-1')}
               </p>
             </div>
           </div>
@@ -27,7 +31,7 @@ const FeatureSection = () => (
             <img src="img/icon_2.png" alt="Image" />
             <div className="single_feature_text">
               <h4>Direct Connection</h4>
-              <p>ต่อตรงกับ 3 เครือข่ายหลัก</p>
+              <p>{t('p2')}</p>
             </div>
           </div>
         </div>
@@ -37,8 +41,8 @@ const FeatureSection = () => (
             <div className="single_feature_text">
               <h4>User Friendly</h4>
               <p>
-                ทั้งกับผู้ใช้ทั่วไป <br />
-                และ Developer
+                {t('p3')} <br />
+                {t('p3-1')}
               </p>
             </div>
           </div>
@@ -48,7 +52,7 @@ const FeatureSection = () => (
             <img src="img/icon_4.png" alt="Image" />
             <div className="single_feature_text">
               <h4>Industry Expert</h4>
-              <p>ที่ให้คำแนะนำได้ทุกขั้นตอน</p>
+              <p>{t('p4')}</p>
             </div>
           </div>
         </div>
@@ -56,4 +60,11 @@ const FeatureSection = () => (
     </div>
   </div>
 );
-export default FeatureSection;
+FeatureSection.getInitialProps = async () => ({
+  namespacesRequired: ['HomeFeatureSection'],
+});
+
+FeatureSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('HomeFeatureSection')(FeatureSection);

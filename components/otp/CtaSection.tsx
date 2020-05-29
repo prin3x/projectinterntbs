@@ -1,4 +1,6 @@
-const CtaSectionV2 = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const CtaSectionV2 = ({ t }: any) => (
   <div
     className="cta_section v2"
     style={{ backgroundImage: 'url(img/bg_10.png)' }}
@@ -8,14 +10,14 @@ const CtaSectionV2 = () => (
         <div className=" col-lg-12">
           <div className="cta-text">
             <h3>
-              ส่ง OTP ด้วยระบบพร้อมใช้ <br />
-              ไม่ต้องเสียเวลาเขียนโปรแกรมเอง
+              {t('h1-1')} <br />
+              {t('h1-2')}
             </h3>
             <a href="#" className="btn v7">
-              ทดลองใช้ฟรี
+              {t('a1')}
             </a>
             <p>
-              หรือ <a href="#">ล็อกอิน</a> หากมีบัญชีผู้ใช้แล้ว
+              {t('p1-1')} <a href="#">{t('a2')}</a> {t('p1-2')}
             </p>
           </div>
         </div>
@@ -23,4 +25,11 @@ const CtaSectionV2 = () => (
     </div>
   </div>
 );
-export default CtaSectionV2;
+CtaSectionV2.getInitialProps = async () => ({
+  namespacesRequired: ['OtpCtaSection'],
+});
+
+CtaSectionV2.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('OtpCtaSection')(CtaSectionV2);

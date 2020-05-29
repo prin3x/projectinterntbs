@@ -1,4 +1,6 @@
-const CtaSectionV3 = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const CtaSectionV3 = ({ t }: any) => (
   <div
     className="cta_section v2"
     style={{ backgroundImage: 'url(img/bg_10.png)' }}
@@ -8,14 +10,14 @@ const CtaSectionV3 = () => (
         <div className=" col-lg-12">
           <div className="cta-text">
             <h3>
-              ไม่เสียงบการตลาดโดยเปล่าประโยชน์อีกต่อไป <br />
-              เพียงใช้ SMS Tracking
+              {t('h1-1')} <br />
+              {t('h1-2')}
             </h3>
             <a href="#" className="btn v7">
-              ทดลองใช้ฟรี
+              {t('a1')}
             </a>
             <p>
-              หรือ <a href="#">ล็อกอิน</a> หากมีบัญชีผู้ใช้แล้ว
+              {t('p1-1')} <a href="#">{t('a2')}</a> {t('p1-2')}
             </p>
           </div>
         </div>
@@ -23,4 +25,11 @@ const CtaSectionV3 = () => (
     </div>
   </div>
 );
-export default CtaSectionV3;
+CtaSectionV3.getInitialProps = async () => ({
+  namespacesRequired: ['SmstrackingCtaSection'],
+});
+
+CtaSectionV3.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('SmstrackingCtaSection')(CtaSectionV3);

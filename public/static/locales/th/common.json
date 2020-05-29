@@ -1,0 +1,11 @@
+{
+  "t1": "ตอบโจทย์ทุกความต้องการ ด้านการส่ง SMS",
+  "t2": "ส่ง SMS ไว มั่นใจได้ในความเสถียรพร้อมให้คำปรึกษาทุกขั้นตอน",
+  "t3": "เพิ่มความสำเร็จให้ SMS Marketing ด้วย",
+  "t4": "อันดับ 1 ของไทย",
+  "h1": "Ein einfaches Beispiel",
+  "change-locale": "Wechseln Locale",
+  "to-second-page": "Zur zweiten Seite",
+  "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
+  "error-without-status": "Auf dem Server ist ein Fehler aufgetreten"
+}

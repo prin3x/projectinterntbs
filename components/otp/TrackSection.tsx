@@ -1,4 +1,6 @@
-const TrackSection = () => (
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const TrackSection = ({ t }: any) => (
   <div
     className="track_section"
     style={{ backgroundImage: 'url(img/bg_7.png)' }}
@@ -13,13 +15,10 @@ const TrackSection = () => (
         <div className="col-lg-6 col-md-12">
           <div className="track_text">
             <h3>
-              รู้ผลสถานะการยืนยันตัวตน <br />
-              ครบทุกรายการ
+              {t('h1-1')} <br />
+              {t('h1-2')}
             </h3>
-            <p>
-              สามารถดูสถานะการยืนยันตัวตนผ่านรหัส OTP ที่ส่งไปได้ครบทุกรายการ
-              ไม่ว่าจะยืนยันสำเร็จ หรือรหัสหมดอายุ
-            </p>
+            <p>{t('p1')}</p>
           </div>
         </div>
       </div>
@@ -29,24 +28,25 @@ const TrackSection = () => (
             <div className="col-lg-6">
               <div className="track_box">
                 <h4>
-                  แต่ถ้าหากคุณมี<span>ระบบส่ง OTP</span> <br />
-                  อยู่แล้ว ก็สามารถนำมาเชื่อม <span>API</span> <br />
-                  ได้เช่นกัน{' '}
+                  {t('h2-1')}
+                  <span>{t('span1')}</span> <br />
+                  {t('h2-2')} <span>API</span> <br />
+                  {t('h2-3')}
                 </h4>
                 <a href="#" className="btn v3">
-                  ขั้นตอนการใช้งาน
+                  {t('a1')}
                 </a>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="track_box v2">
                 <h4>
-                  ใช้งานระบบส่ง OTP พร้อมใช้ <br />
-                  ได้เฉพาะ <span>Corporate Package</span> <br />
-                  เท่านั้น
+                  {t('h3-1')} <br />
+                  {t('h3-2')} <span>Corporate Package</span> <br />
+                  {t('h3-3')}
                 </h4>
                 <a href="#" className="btn v3">
-                  ดูราคาแพ็กเกจ
+                  {t('a2')}
                 </a>
               </div>
             </div>
@@ -56,4 +56,11 @@ const TrackSection = () => (
     </div>
   </div>
 );
-export default TrackSection;
+TrackSection.getInitialProps = async () => ({
+  namespacesRequired: ['OtpTrackSection'],
+});
+
+TrackSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('OtpTrackSection')(TrackSection);

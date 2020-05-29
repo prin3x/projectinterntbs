@@ -1,8 +1,10 @@
 import dynamic from 'next/dynamic';
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
   ssr: false,
 });
-const SliderSection = () => (
+const SliderSection = ({ t }: any) => (
   <div
     className="slider_section"
     style={{ backgroundImage: 'url(img/bg_2.png)' }}
@@ -10,7 +12,7 @@ const SliderSection = () => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h3 className="section_title">นำ SMS ไปใช้งานได้หลากหลาย</h3>
+          <h3 className="section_title">{t('h1')}</h3>
         </div>
       </div>
       <div className="row">
@@ -44,42 +46,30 @@ const SliderSection = () => (
           >
             <div className="item">
               <div className="slider_item">
-                <h3>ส่ง OTP ยืนยันตัวตน</h3>
-                <p>
-                  รหัสผ่านแบบใช้ครั้งเดียว เพื่อ เพิ่มความปลอดภัยให้กับการทำ
-                  ธุรกรรมทางอินเทอร์เน็ต
-                </p>
-                <a href="#">การส่ง OTP ต่างจาก SMS ปกติอย่างไร? </a>
+                <h3>{t('h2')}</h3>
+                <p>{t('p1')}</p>
+                <a href="#">{t('a1')}</a>
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>โปรโมตกิจกรรม การตลาด</h3>
-                <p>
-                  รหัสผ่านแบบใช้ครั้งเดียว เพื่อ เพิ่มความปลอดภัยให้กับการทำ
-                  ธุรกรรมทางอินเทอร์เน็ต
-                </p>
-                <a href="#">การส่ง OTP ต่างจาก SMS ปกติอย่างไร? </a>
+                <h3>{t('h3')}</h3>
+                <p>{t('p2')}</p>
+                <a href="#">{t('a1')}</a>
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>แจ้งสถานะการขนส่ง</h3>
-                <p>
-                  รหัสผ่านแบบใช้ครั้งเดียว เพื่อ เพิ่มความปลอดภัยให้กับการทำ
-                  ธุรกรรมทางอินเทอร์เน็ต
-                </p>
-                <a href="#">การส่ง OTP ต่างจาก SMS ปกติอย่างไร? </a>
+                <h3>{t('h4')}</h3>
+                <p>{t('p2')}</p>
+                <a href="#">{t('a1')}</a>
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>แจ้งเตือนวัน หมดอายุ</h3>
-                <p>
-                  รหัสผ่านแบบใช้ครั้งเดียว เพื่อ เพิ่มความปลอดภัยให้กับการทำ
-                  ธุรกรรมทางอินเทอร์เน็ต
-                </p>
-                <a href="#">การส่ง OTP ต่างจาก SMS ปกติอย่างไร? </a>
+                <h3>{t('h5')}</h3>
+                <p>{t('p2')}</p>
+                <a href="#">{t('a1')}</a>
               </div>
             </div>
           </OwlCarousel>
@@ -88,4 +78,11 @@ const SliderSection = () => (
     </div>
   </div>
 );
-export default SliderSection;
+SliderSection.getInitialProps = async () => ({
+  namespacesRequired: ['ProductSliderSection'],
+});
+
+SliderSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('ProductSliderSection')(SliderSection);
