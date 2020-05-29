@@ -12,10 +12,10 @@ const SimpleIconSectionV2 = ({ t }: any) => (
         </div>
         <div className="col-md-12">
           <div className="icon_wrapper">
-            <img className="arrow_bg" src="img/arrow_bg.png" alt="Image" />
+            <img className="arrow_bg" src="/img/arrow_bg.png" alt="Image" />
             <div className="simple_icon_wrapper">
               <div className="simple_icon">
-                <img src="img/img_12.png" alt="Image" />
+                <img src="/img/img_12.png" alt="Image" />
                 <p>
                   {t('p2-1')}
                   <br />
@@ -23,21 +23,21 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                 </p>
               </div>
               <div className="simple_icon">
-                <img src="img/img_4.png" alt="Image" />
+                <img src="/img/img_4.png" alt="Image" />
                 <p>
                   {t('p3-1')} <br />
                   {t('p3-2')}
                 </p>
               </div>
               <div className="simple_icon">
-                <img src="img/img_13.png" alt="Image" />
+                <img src="/img/img_13.png" alt="Image" />
                 <p>
                   {t('p4-1')} <br />
                   {t('p4-2')}
                 </p>
               </div>
               <div className="simple_icon">
-                <img src="img/img_14.png" alt="Image" />
+                <img src="/img/img_14.png" alt="Image" />
                 <p>
                   {t('p5-1')}
                   <br />
@@ -45,7 +45,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                 </p>
               </div>
               <div className="simple_icon">
-                <img src="img/img_17.png" alt="Image" />
+                <img src="/img/img_17.png" alt="Image" />
                 <p>
                   {t('p6-1')} <br />
                   {t('p6-2')}

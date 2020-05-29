@@ -29,7 +29,7 @@ const PromoSection = ({ t }: any) => (
               </p>
             </div>
             <div className="promo_img">
-              <img src="img/promo_2.png" alt="Image" />
+              <img src="/img/promo_2.png" alt="Image" />
               <a href="#" className="btn v2">
                 {t('a1')}
               </a>
@@ -46,7 +46,7 @@ const PromoSection = ({ t }: any) => (
               </p>
             </div>
             <div className="promo_img">
-              <img src="img/promo_1.png" alt="Image" />
+              <img src="/img/promo_1.png" alt="Image" />
               <a href="#" className="btn v2">
                 TBS Developer
               </a>
@@ -65,7 +65,7 @@ const PromoSection = ({ t }: any) => (
       <div className="row align-items-center row_pad">
         <div className="col-lg-6 col-md-12">
           <div className="promo_item_three_img">
-            <img src="img/plane.png" alt="Image" />
+            <img src="/img/plane.png" alt="Image" />
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
@@ -112,19 +112,19 @@ const PromoSection = ({ t }: any) => (
           <div className="row">
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
-                <img src="img/img_4.png" alt="Image" />
+                <img src="/img/img_4.png" alt="Image" />
                 <p>{t('p7')}</p>
               </div>
             </div>
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
-                <img src="img/img_5.png" alt="Image" />
+                <img src="/img/img_5.png" alt="Image" />
                 <p>{t('p7')}</p>
               </div>
             </div>
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
-                <img src="img/img_6.png" alt="Image" />
+                <img src="/img/img_6.png" alt="Image" />
                 <p>{t('p7')}</p>
               </div>
             </div>
@@ -134,7 +134,7 @@ const PromoSection = ({ t }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-6 col-md-12">
           <div className="promo_item_three_img">
-            <img src="img/device.png" alt="Image" />
+            <img src="/img/device.png" alt="Image" />
           </div>
         </div>
         <div className="col-lg-6 col-md-12">

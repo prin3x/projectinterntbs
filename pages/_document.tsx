@@ -43,8 +43,8 @@ class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.0/css/nice-select.css"
             rel="stylesheet"
           />
-          <link href="css/style.css" rel="stylesheet" />
-          <link href="css/responsive.css" rel="stylesheet" />
+          <link href="/css/style.css" rel="stylesheet" />
+          <link href="/css/responsive.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />
@@ -54,7 +54,7 @@ class MyDocument extends Document {
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.0/js/jquery.nice-select.min.js"></script>
-          <script src="js/main.js"></script>
+          <script src="/js/main.js"></script>
         </body>
       </Html>
     );

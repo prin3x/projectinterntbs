@@ -33,7 +33,7 @@ const SmsSection = ({ t }: any) => (
               <div className="col-lg-4 col-md-12">
                 <div className="sms_feature_item">
                   <a href="#">
-                    <img src="img/play_icon.png" alt="Image" />
+                    <img src="/img/play_icon.png" alt="Image" />
                     {t('a1')}
                   </a>
                 </div>

@@ -7,16 +7,16 @@
   });
 
   // sticky
-  var wind = $(window);
-  var sticky = $('.header-bar-area');
-  wind.on('scroll', function () {
-    var scroll = wind.scrollTop();
-    if (scroll < 100) {
-      sticky.removeClass('sticky');
-    } else {
-      sticky.addClass('sticky');
-    }
-  });
+  // var wind = $(window);
+  // var sticky = $('.header-bar-area');
+  // wind.on('scroll', function () {
+  //   var scroll = wind.scrollTop();
+  //   if (scroll < 100) {
+  //     sticky.removeClass('sticky');
+  //   } else {
+  //     sticky.addClass('sticky');
+  //   }
+  // });
 
   $('body').on('click', '.js-menu-toggle', function (e) {
     var $this = $(this);

@@ -253,7 +253,7 @@ const FaqSection = ({ t }: any) => (
           <div className="row">
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
-                <img src="img/img_1.png" alt="Image" />
+                <img src="/img/img_1.png" alt="Image" />
                 <a href="#" className="btn v4">
                   {t('a1')}
                 </a>
@@ -261,7 +261,7 @@ const FaqSection = ({ t }: any) => (
             </div>
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
-                <img src="img/img_2.png" alt="Image" />
+                <img src="/img/img_2.png" alt="Image" />
                 <a href="#" className="btn v4">
                   {t('a2')}
                 </a>
@@ -269,7 +269,7 @@ const FaqSection = ({ t }: any) => (
             </div>
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
-                <img src="img/img_3.png" alt="Image" />
+                <img src="/img/img_3.png" alt="Image" />
                 <a href="#" className="btn v4">
                   {t('a3')}
                 </a>

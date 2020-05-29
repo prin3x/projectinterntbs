@@ -11,7 +11,7 @@ const PricingSection = ({ t }: any) => (
       <div className="row">
         <div className="col-lg-6 col-md-12">
           <div className="pricing_box">
-            <img src="img/price_1.png" alt="Image" />
+            <img src="/img/price_1.png" alt="Image" />
             <h3>Standard SMS</h3>
             <p>{t('p1')}</p>
             <ul className="pricing_feature">
@@ -49,7 +49,7 @@ const PricingSection = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="pricing_box">
-            <img src="img/price_2.png" alt="Image" />
+            <img src="/img/price_2.png" alt="Image" />
             <h3>Corporate SMS</h3>
             <p>{t('p6')}</p>
             <ul className="pricing_feature">

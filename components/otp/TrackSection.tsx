@@ -9,7 +9,7 @@ const TrackSection = ({ t }: any) => (
       <div className="row track_top">
         <div className="col-lg-6 col-md-12">
           <div className="track_img">
-            <img src="img/img_22.png" alt="Image" />
+            <img src="/img/img_22.png" alt="Image" />
           </div>
         </div>
         <div className="col-lg-6 col-md-12">

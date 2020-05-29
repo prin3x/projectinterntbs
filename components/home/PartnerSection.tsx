@@ -36,27 +36,27 @@ const PartnerSection = () => (
           >
             <div className="item">
               <div className="partner_item">
-                <img src="img/partner_logo_1.png" alt="Image" />
+                <img src="/img/partner_logo_1.png" alt="Image" />
               </div>
             </div>
             <div className="item">
               <div className="partner_item">
-                <img src="img/partner_logo_2.png" alt="Image" />
+                <img src="/img/partner_logo_2.png" alt="Image" />
               </div>
             </div>
             <div className="item">
               <div className="partner_item">
-                <img src="img/partner_logo_3.png" alt="Image" />
+                <img src="/img/partner_logo_3.png" alt="Image" />
               </div>
             </div>
             <div className="item">
               <div className="partner_item">
-                <img src="img/partner_logo_4.png" alt="Image" />
+                <img src="/img/partner_logo_4.png" alt="Image" />
               </div>
             </div>
             <div className="item">
               <div className="partner_item">
-                <img src="img/partner_logo_5.png" alt="Image" />
+                <img src="/img/partner_logo_5.png" alt="Image" />
               </div>
             </div>
           </OwlCarousel>

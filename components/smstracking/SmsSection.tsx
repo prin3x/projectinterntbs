@@ -15,7 +15,7 @@ const SmsSectionV4 = ({ t }: any) => (
         </div>
         <div className="col-lg-7">
           <div className="newsletter_img">
-            <img src="img/img_21.png" alt="Image" />
+            <img src="/img/img_21.png" alt="Image" />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { i18n, withTranslation, Link } from '../i18n';
-
+import * as React from 'react';
 const menuClick = () => {
   if ($('.nice-select').hasClass('open')) $('.nice-select').removeClass('open');
   else $('.nice-select').addClass('open');
@@ -12,8 +12,24 @@ const changeLang = (lang: any) => {
     .addClass('focus');
   $('.current').text(lang);
 };
+
 const Header = ({ t }: any) => {
   const lang = i18n.language;
+  React.useEffect(() => {
+    // window is accessible here.
+    var wind = $(window);
+    var sticky = $('.header-bar-area');
+    wind.on('scroll', function () {
+      var scroll = wind.scrollTop();
+      if (scroll) {
+        if (scroll < 100) {
+          sticky.removeClass('sticky');
+        } else {
+          sticky.addClass('sticky');
+        }
+      }
+    });
+  }, []);
   return (
     <div className="header-bar-area position-fixed w-100 ">
       <div className="container">
@@ -308,6 +324,16 @@ const Header = ({ t }: any) => {
 };
 Header.getInitialProps = async () => {
   namespacesRequired: ['header'];
+  var wind = $(window);
+  var sticky = $('.header-bar-area');
+  wind.on('scroll', function () {
+    var scroll = wind.scrollTop();
+    if (scroll < 100) {
+      sticky.removeClass('sticky');
+    } else {
+      sticky.addClass('sticky');
+    }
+  });
 };
 
 Header.propTypes = {
