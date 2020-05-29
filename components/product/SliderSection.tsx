@@ -7,7 +7,7 @@ const OwlCarousel = dynamic(import('react-owl-carousel'), {
 const SliderSection = ({ t }: any) => (
   <div
     className="slider_section"
-    style={{ backgroundImage: 'url(img/bg_2.png)' }}
+    style={{ backgroundImage: 'url(/img/bg_2.png)' }}
   >
     <div className="container">
       <div className="row">

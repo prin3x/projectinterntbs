@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const CtaSectionV2 = ({ t }: any) => (
   <div
     className="cta_section v2"
-    style={{ backgroundImage: 'url(img/bg_10.png)' }}
+    style={{ backgroundImage: 'url(/img/bg_10.png)' }}
   >
     <div className="container">
       <div className="row align-items-center">

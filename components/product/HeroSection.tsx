@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const HeroSection = ({ t }: any) => (
   <div
     className="hero_section"
-    style={{ backgroundImage: 'url(img/hero_bg.png)' }}
+    style={{ backgroundImage: 'url(/img/hero_bg.png)' }}
   >
     <img src="/img/curve_1.png" alt="Image" className="hero_curve" />
     <div className="container">

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const TrackSection = ({ t }: any) => (
   <div
     className="track_section"
-    style={{ backgroundImage: 'url(img/bg_7.png)' }}
+    style={{ backgroundImage: 'url(/img/bg_7.png)' }}
   >
     <div className="container">
       <div className="row track_top">

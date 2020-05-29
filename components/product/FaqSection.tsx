@@ -1,7 +1,10 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const FaqSection = ({ t }: any) => (
-  <div className="faq_section" style={{ backgroundImage: 'url(img/bg_3.png)' }}>
+  <div
+    className="faq_section"
+    style={{ backgroundImage: 'url(/img/bg_3.png)' }}
+  >
     <div className="container">
       <div className="row">
         <div className="col-md-12">

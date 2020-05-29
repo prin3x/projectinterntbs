@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const PromoSection = ({ t }: any) => (
   <div
     className="promo_section"
-    style={{ backgroundImage: 'url(img/bg_5.png)' }}
+    style={{ backgroundImage: 'url(/img/bg_5.png)' }}
   >
     <div className="container">
       <div className="row">
