@@ -20,13 +20,11 @@ const Header = ({ t }: any) => {
     var wind = $(window);
     var sticky = $('.header-bar-area');
     wind.on('scroll', function () {
-      var scroll = wind.scrollTop();
-      if (scroll) {
-        if (scroll < 100) {
-          sticky.removeClass('sticky');
-        } else {
-          sticky.addClass('sticky');
-        }
+      var scroll = window.pageYOffset;
+      if (scroll < 100) {
+        sticky.removeClass('sticky');
+      } else {
+        sticky.addClass('sticky');
       }
     });
   }, []);
@@ -324,16 +322,6 @@ const Header = ({ t }: any) => {
 };
 Header.getInitialProps = async () => {
   namespacesRequired: ['header'];
-  var wind = $(window);
-  var sticky = $('.header-bar-area');
-  wind.on('scroll', function () {
-    var scroll = wind.scrollTop();
-    if (scroll < 100) {
-      sticky.removeClass('sticky');
-    } else {
-      sticky.addClass('sticky');
-    }
-  });
 };
 
 Header.propTypes = {
