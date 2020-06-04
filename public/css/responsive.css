@@ -358,6 +358,22 @@
     .box__wrapper .box__content{
         padding: 30px !important;
     }
+    .input-txt01 {
+        width: 100%;
+        padding: 1% 2%;
+        font-size: 18px;
+        border-radius: 15px;
+        border: 2px solid #b2bbc3;
+        margin: 15px auto;
+    }
+    .input-twocolumn .input-txt02 {
+        width: 48%;
+        padding: 1% 2%;
+        font-size: 18px;
+        border-radius: 15px;
+        border: 2px solid #b2bbc3;
+        margin: 15px 0;
+    }
 
     .box__wrapper .box__body .info__box {
         padding: 15px 20px;
@@ -396,6 +412,16 @@
     .edu_section::before {
         top: 65% !important;
         height:320px !important;
+    }
+    .userType_section, .register_section, .login_section {
+        min-height: 700px;
+        text-align: center;
+        padding: 140px 0 60px;
+        background: url(../img/bg-page.png) no-repeat top center;
+        background-size: cover;
+    }
+    .finish-regis {
+        max-width: 600px;
     }
 }
 
@@ -2052,6 +2078,111 @@
 
     .simple_slider_section {
         padding: 70px 0;
+    }
+    .chooseType {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .chooseType .indivType, .chooseType .companyType {
+        box-shadow: 0 0 20px #E8EDEE;
+        border-radius: 15px;
+        width: 320px;
+        padding: 20px;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    .form-indiv {
+        padding: 30px 30px;
+    }
+    .form-indiv {
+        max-width: 900px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #E8EDEE;
+        background-color: #fff;
+        padding: 30px 30px;
+        margin: 40px auto 100px;
+        text-align: left;
+    }
+    .btn.v2 {
+        padding: 20px 40px;
+    }
+    .form-indiv h4 {
+        font-size: 16px;
+        font-weight: 300;
+        color: #5b6e80;
+        margin: 0px 0 10px;
+        line-height: 1.4;
+    }
+    .input-txt01 {
+        padding: 3%;
+        font-size: 18px;
+    }
+    .input-twocolumn .input-txt02 {
+        width: 48%;
+        padding: 3%;
+        font-size: 18px;
+    }
+    .select-address {
+        margin: 20px 0 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .select-address label:last-child {
+        margin-left: 0px;
+    }
+    .footer_contact {
+        margin-top: 5px;
+        text-align: left;
+    }
+    .form-login {
+        max-width: 600px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #E8EDEE;
+        background-color: #fff;
+        padding: 30px;
+        margin: 40px auto 100px;
+        text-align: left;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .input-twocolumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .input-twocolumn .input-txt02 {
+        width: 100%;
+        padding: 3%;
+        font-size: 18px;
+    }
+    .captcha {
+        margin: 20px 0 30px;
+        max-width: 100%;
+    }
+    .finish-regis {
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto 100px;
+    }
+    .finish-regis .img-finish-regis {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+    .finish-regis p.sub-text {
+        font-size: 18px;
+        font-weight: 300;
+        color: #5b6e80;
+    }
+    .userType_section, .register_section, .login_section {
+        padding: 150px 0 60px;
     }
 
     .box__wrapper .box__header{
