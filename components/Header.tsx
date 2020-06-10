@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { i18n, withTranslation, Link } from '../i18n';
 import * as React from 'react';
 const menuClick = () => {
-  if ($('.nice-select').hasClass('open')) $('.nice-select').removeClass('open');
-  else $('.nice-select').addClass('open');
+  if ($('.divnice').hasClass('open')) $('.divnice').removeClass('open');
+  else $('.divnice').addClass('open');
 };
 const changeLang = (lang: any) => {
   $('.option').removeClass('selected').removeClass('focus');
@@ -42,7 +42,10 @@ const Header = ({ t }: any) => {
                   <option>Th</option>
                   <option>En</option>
                 </select>
-                <div className="nice-select user_select" onClick={menuClick}>
+                <div
+                  className="nice-select user_select divnice"
+                  onClick={menuClick}
+                >
                   <span className="current">{lang}</span>
                   <ul className="list">
                     <li
