@@ -2,8 +2,9 @@ import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const SmsSection = ({ t }: any) => (
   <div
-    className="sms_section"
-    style={{ backgroundImage: 'url(/img/promo_bg.png' }}
+    className="sms_section lazyload"
+    // style={{ backgroundImage: 'url(/img/promo_bg.png' }}
+    data-bgset="/img/promo_bg.png"
   >
     <div className="container">
       <div className="row">
@@ -33,7 +34,11 @@ const SmsSection = ({ t }: any) => (
               <div className="col-lg-4 col-md-12">
                 <div className="sms_feature_item">
                   <a href="#">
-                    <img src="/img/play_icon.png" alt="Image" />
+                    <img
+                      className="lazyload"
+                      data-src="/img/play_icon.png"
+                      alt="Image"
+                    />
                     {t('a1')}
                   </a>
                 </div>

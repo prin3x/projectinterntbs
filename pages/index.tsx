@@ -10,6 +10,7 @@ import SmsSection from '../components/home/SmsSection';
 import TestimonialSection from '../components/home/TestimonialSection';
 import EduSection from '../components/home/EduSection';
 import CtaSection from '../components/home/CtaSection';
+import { withTranslation } from '../i18n';
 import BacktoTop from '../components/BacktoTop';
 import Head from 'next/head';
 const Homepage = () => (
@@ -31,8 +32,11 @@ const Homepage = () => (
         <meta name="author" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta property="og:url" content="https://d1vb0eqohs6ps7.cloudfront.net/" />
-        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://d1vb0eqohs6ps7.cloudfront.net/"
+        />
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="บริการส่ง SMS จากเว็บถึงมือถือ เพื่อการตลาด, CRM, ประชาสัมพันธ์ สมัครทดลองฟรีวันนี้ ง่ายนิดเดียว มีบริการให้คำแนะนำฟรี พร้อมทั้งบริการพัฒนาแอปพลิเคชั่นเฉพาะคุณ ส่งได้ทุกค่ายทั้ง AIS DTAC TrueMove Truemove-Hทรงพลังที่สุด! Ferrari SF90 Stradale เปิดตัวครั้งแรกในไทย เคาะราคา 40.9 ล้าน"
@@ -41,7 +45,10 @@ const Homepage = () => (
           property="og:description"
           content="บริการส่ง SMS จากเว็บถึงมือถือ เพื่อการตลาด, CRM, ประชาสัมพันธ์ สมัครทดลองฟรีวันนี้ ง่ายนิดเดียว มีบริการให้คำแนะนำฟรี พร้อมทั้งบริการพัฒนาแอปพลิเคชั่นเฉพาะคุณ ส่งได้ทุกค่ายทั้ง AIS DTAC TrueMove Truemove-H"
         />
-        <meta property="og:image" content="https://d1vb0eqohs6ps7.cloudfront.net/img/demoog.jpg" />
+        <meta
+          property="og:image"
+          content="https://d1vb0eqohs6ps7.cloudfront.net/img/demoog.jpg"
+        />
         <meta property="og:site_name" content="https://thaibulksms.com" />
         <meta property="og:image:secure_url" content="" />
         <meta property="og:image:type" content="image/jpeg" />
@@ -68,4 +75,7 @@ const Homepage = () => (
     </Layout>
   </React.Fragment>
 );
-export default Homepage;
+Homepage.getInitialProps = async () => ({
+  namespacesRequired: [],
+});
+export default withTranslation()(Homepage);

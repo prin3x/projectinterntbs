@@ -8,8 +8,9 @@ const FaqSection = ({ t }: any) => {
   }, []);
   return (
     <div
-      className="faq_section"
-      style={{ backgroundImage: 'url(/img/bg_3.png)' }}
+      className="faq_section lazyload"
+      // style={{ backgroundImage: 'url(/img/bg_3.png)' }}
+      data-bgset="/img/bg_3.png"
     >
       <div className="container">
         <div className="row">
@@ -262,7 +263,11 @@ const FaqSection = ({ t }: any) => {
             <div className="row">
               <div className="col-md-4 col-12">
                 <div className="service_feature_item">
-                  <img src="/img/img_1.png" alt="Image" />
+                  <img
+                    className="lazyload"
+                    data-src="/img/img_1.png"
+                    alt="Image"
+                  />
                   <a href="#" className="btn v4">
                     {t('a1')}
                   </a>
@@ -270,7 +275,11 @@ const FaqSection = ({ t }: any) => {
               </div>
               <div className="col-md-4 col-12">
                 <div className="service_feature_item">
-                  <img src="/img/img_2.png" alt="Image" />
+                  <img
+                    className="lazyload"
+                    data-src="/img/img_2.png"
+                    alt="Image"
+                  />
                   <a href="#" className="btn v4">
                     {t('a2')}
                   </a>
@@ -278,7 +287,11 @@ const FaqSection = ({ t }: any) => {
               </div>
               <div className="col-md-4 col-12">
                 <div className="service_feature_item">
-                  <img src="/img/img_3.png" alt="Image" />
+                  <img
+                    className="lazyload"
+                    data-src="/img/img_3.png"
+                    alt="Image"
+                  />
                   <a href="#" className="btn v4">
                     {t('a3')}
                   </a>

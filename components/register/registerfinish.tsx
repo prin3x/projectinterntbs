@@ -1,10 +1,14 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const Registerfinish = ({ t }: any) => (
+const RegisterfinishComponents = ({ t }: any) => (
   <div className="register_section">
     <div className="finish-regis">
       <div className="img-finish-regis">
-        <img src="/img/img-finish-regis.png" alt="Image" />
+        <img
+          className="lazyload"
+          data-src="/img/img-finish-regis.png"
+          alt="Image"
+        />
       </div>
       <h2>{t('h1')}</h2>
       <p className="sub-text">
@@ -24,11 +28,11 @@ const Registerfinish = ({ t }: any) => (
     </div>
   </div>
 );
-Registerfinish.getInitialProps = async () => ({
+RegisterfinishComponents.getInitialProps = async () => ({
   namespacesRequired: ['Registerfinish'],
 });
 
-Registerfinish.propTypes = {
+RegisterfinishComponents.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Registerfinish')(Registerfinish);
+export default withTranslation('Registerfinish')(RegisterfinishComponents);

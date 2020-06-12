@@ -26,7 +26,7 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-home"
                   aria-selected="true"
                 >
-                  <img src="/img/main_3.png" alt="" />
+                  <img className="lazyload" data-src="/img/main_3.png" alt="" />
                   <span>{t('span1')}</span>
                 </a>
               </li>
@@ -40,7 +40,7 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-profile"
                   aria-selected="false"
                 >
-                  <img src="/img/dollar.png" alt="" />
+                  <img className="lazyload" data-src="/img/dollar.png" alt="" />
                   <span>{t('span2')}</span>
                 </a>
               </li>

@@ -18,7 +18,7 @@ const GlobeSection = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
           <div className="globe_img">
-            <img src="/img/img_10.png" alt="Image" />
+            <img className="lazyload" data-src="/img/img_10.png" alt="Image" />
           </div>
         </div>
       </div>

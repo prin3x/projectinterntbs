@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const Register = ({ t }: any) => (
+const RegisterComponents = ({ t }: any) => (
   <div className="register_section">
     <h2>{t('h1')}</h2>
     <div className="form-indiv">
@@ -13,7 +13,7 @@ const Register = ({ t }: any) => (
         <input type="text" className="input-txt02" placeholder={t('input4')} />
       </div>
       <div className="captcha">
-        <img src="/img/captcha.jpg" alt="Image" />
+        <img className="lazyload" data-src="/img/captcha.jpg" alt="Image" />
       </div>
       <div className="sec-checkbox">
         <div>
@@ -39,11 +39,11 @@ const Register = ({ t }: any) => (
     </div>
   </div>
 );
-Register.getInitialProps = async () => ({
+RegisterComponents.getInitialProps = async () => ({
   namespacesRequired: ['Register'],
 });
 
-Register.propTypes = {
+RegisterComponents.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Register')(Register);
+export default withTranslation('Register')(RegisterComponents);

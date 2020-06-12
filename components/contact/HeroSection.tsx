@@ -48,26 +48,46 @@ const HeroSection = ({ t }: any) => {
                   <h3>{t('h2')}</h3>
                   <ul>
                     <li style={{ marginTop: '10px' }}>
-                      <img src="/img/location.png" alt="" />
+                      <img
+                        className="lazyload"
+                        data-src="/img/location.png"
+                        alt=""
+                      />
                       <p>
                         {t('p1-1')} <br />
                         {t('p1-2')}
                       </p>
                     </li>
                     <li>
-                      <img src="/img/call.png" alt="" />
+                      <img
+                        className="lazyload"
+                        data-src="/img/call.png"
+                        alt=""
+                      />
                       <p>{t('p2')}</p>
                     </li>
                     <li>
-                      <img src="/img/calendar.png" alt="" />
+                      <img
+                        className="lazyload"
+                        data-src="/img/calendar.png"
+                        alt=""
+                      />
                       <p>{t('p3')}</p>
                     </li>
                     <li>
-                      <img src="/img/mail_2.png" alt="" />
+                      <img
+                        className="lazyload"
+                        data-src="/img/mail_2.png"
+                        alt=""
+                      />
                       <p>contact@thaibulksms.com</p>
                     </li>
                     <li>
-                      <img src="/img/clock.png" alt="" />
+                      <img
+                        className="lazyload"
+                        data-src="/img/clock.png"
+                        alt=""
+                      />
                       <p>{t('p4')}</p>
                     </li>
                   </ul>

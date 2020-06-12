@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const UsertypeCompany = ({ t }: any) => (
+const UsertypeCompanyComponents = ({ t }: any) => (
   <div className="userType_section">
     <h2>{t('h1')}</h2>
     <p className="sub_userType">
@@ -62,11 +62,11 @@ const UsertypeCompany = ({ t }: any) => (
     </div>
   </div>
 );
-UsertypeCompany.getInitialProps = async () => ({
+UsertypeCompanyComponents.getInitialProps = async () => ({
   namespacesRequired: ['UsertypeCompany'],
 });
 
-UsertypeCompany.propTypes = {
+UsertypeCompanyComponents.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('UsertypeCompany')(UsertypeCompany);
+export default withTranslation('UsertypeCompany')(UsertypeCompanyComponents);

@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const Login = ({ t }: any) => (
+const LoginComponents = ({ t }: any) => (
   <div className="login_section">
     <h2>{t('h1')}</h2>
     <div className="form-login">
@@ -18,11 +18,11 @@ const Login = ({ t }: any) => (
     </div>
   </div>
 );
-Login.getInitialProps = async () => ({
+LoginComponents.getInitialProps = async () => ({
   namespacesRequired: ['Login'],
 });
 
-Login.propTypes = {
+LoginComponents.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Login')(Login);
+export default withTranslation('Login')(LoginComponents);

@@ -8,8 +8,9 @@ const PricingSection = ({ t }: any) => {
   }, []);
   return (
     <div
-      className="pricing-section position-relative pricing__top"
-      style={{ backgroundImage: 'url(/img/bg_11.png)' }}
+      className="pricing-section position-relative pricing__top lazyload"
+      // style={{ backgroundImage: 'url(/img/bg_11.png)' }}
+      data-bgset="/img/bg_11.png"
     >
       <div className="container">
         <div className="row justify-content-xl-end mt-80">
@@ -92,8 +93,16 @@ const PricingSection = ({ t }: any) => {
         </div>
       </div>
 
-      <img src="/img/img_25.png" className="img-fluid bg__img img__1" alt="" />
-      <img src="/img/img__11.png" className="img-fluid bg__img img__2" alt="" />
+      <img
+        className="img-fluid bg__img img__1 lazyload"
+        data-src="/img/img_25.png"
+        alt=""
+      />
+      <img
+        className="img-fluid bg__img img__2 lazyload"
+        data-src="/img/img__11.png"
+        alt=""
+      />
     </div>
   );
 };

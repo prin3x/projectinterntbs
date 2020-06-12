@@ -6,8 +6,9 @@ const TabContent = ({ t }: any) => {
   React.useEffect(() => {}, []);
   return (
     <div
-      className="tab__content faq_section"
-      style={{ backgroundImage: 'url(/img/bg_3.png)' }}
+      className="tab__content faq_section lazyload"
+      // style={{ backgroundImage: 'url(/img/bg_3.png)' }}
+      data-bgset="/img/bg_3.png"
     >
       <div className="container">
         <div className="row">
@@ -23,7 +24,11 @@ const TabContent = ({ t }: any) => {
                     <div className="d-flex align-items-start icon__box__wrapper">
                       <div className="icon__box">
                         <span className="serial__number">1</span>
-                        <img src="/img/o1.png" className="img-fluid" alt="" />
+                        <img
+                          className="img-fluid lazyload"
+                          data-src="/img/o1.png"
+                          alt=""
+                        />
                       </div>
                       <div className="serial__content">
                         <h4>{t('h1')}</h4>
@@ -44,7 +49,11 @@ const TabContent = ({ t }: any) => {
                     <div className="d-flex align-items-start icon__box__wrapper">
                       <div className="icon__box">
                         <span className="serial__number">2</span>
-                        <img src="/img/o2.png" className="img-fluid" alt="" />
+                        <img
+                          className="img-fluid lazyload"
+                          data-src="/img/o2.png"
+                          alt=""
+                        />
                       </div>
                       <div className="serial__content">
                         <h4>{t('h2')}</h4>
@@ -61,7 +70,11 @@ const TabContent = ({ t }: any) => {
                     <div className="d-flex align-items-start icon__box__wrapper">
                       <div className="icon__box">
                         <span className="serial__number">3</span>
-                        <img src="/img/o3.png" className="img-fluid" alt="" />
+                        <img
+                          className="img-fluid lazyload"
+                          data-src="/img/o3.png"
+                          alt=""
+                        />
                       </div>
                       <div className="serial__content">
                         <h4>{t('h3')}</h4>
@@ -81,7 +94,11 @@ const TabContent = ({ t }: any) => {
                     <div className="d-flex align-items-start icon__box__wrapper">
                       <div className="icon__box">
                         <span className="serial__number">4</span>
-                        <img src="/img/o4.png" className="img-fluid" alt="" />
+                        <img
+                          className="img-fluid lazyload"
+                          data-src="/img/o4.png"
+                          alt=""
+                        />
                       </div>
                       <div className="serial__content">
                         <h4>{t('h4')}</h4>
@@ -98,7 +115,11 @@ const TabContent = ({ t }: any) => {
                     <div className="d-flex align-items-start icon__box__wrapper">
                       <div className="icon__box">
                         <span className="serial__number">5</span>
-                        <img src="/img/o5.png" className="img-fluid" alt="" />
+                        <img
+                          className="img-fluid lazyload"
+                          data-src="/img/o5.png"
+                          alt=""
+                        />
                       </div>
                       <div className="serial__content">
                         <h4>{t('h5')}</h4>
@@ -115,7 +136,11 @@ const TabContent = ({ t }: any) => {
                     <div className="d-flex align-items-start icon__box__wrapper">
                       <div className="icon__box">
                         <span className="serial__number">6</span>
-                        <img src="/img/o6.png" className="img-fluid" alt="" />
+                        <img
+                          className="img-fluid lazyload"
+                          data-src="/img/o6.png"
+                          alt=""
+                        />
                       </div>
                       <div className="serial__content">
                         <h4>{t('h6')}</h4>
@@ -148,7 +173,11 @@ const TabContent = ({ t }: any) => {
                             <div className="col-md-6">
                               <div className="info__box flex-column text-center border-0 new__info__box">
                                 <div className="info__icon mr-0">
-                                  <img src="/img/icon_13.png" alt="" />
+                                  <img
+                                    className="lazyload"
+                                    data-src="/img/icon_13.png"
+                                    alt=""
+                                  />
                                 </div>
                                 <h5>
                                   {t('h8-1')}
@@ -173,7 +202,11 @@ const TabContent = ({ t }: any) => {
                             <div className="col-md-6">
                               <div className="info__box flex-column text-center border-0 new__info__box">
                                 <div className="info__icon mr-0">
-                                  <img src="/img/icon_24.png" alt="" />
+                                  <img
+                                    className="lazyload"
+                                    data-src="/img/icon_24.png"
+                                    alt=""
+                                  />
                                 </div>
                                 <h5>{t('h9')}</h5>
                                 <p>
@@ -206,7 +239,11 @@ const TabContent = ({ t }: any) => {
                             <div className="col-12">
                               <div className="info__box flex-column text-center border-0 new__info__box">
                                 <div className="info__icon mr-0">
-                                  <img src="/img/icon_25.png" alt="" />
+                                  <img
+                                    className="lazyload"
+                                    data-src="/img/icon_25.png"
+                                    alt=""
+                                  />
                                 </div>
                                 <h5 className="mt-4">{t('h11')}</h5>
                                 <p>
@@ -247,7 +284,11 @@ const TabContent = ({ t }: any) => {
             <div className="row">
               <div className="col-md-4 col-12">
                 <div className="service_feature_item">
-                  <img src="/img/img_1.png" alt="Image" />
+                  <img
+                    className="lazyload"
+                    data-src="/img/img_1.png"
+                    alt="Image"
+                  />
                   <a href="#" className="btn v4">
                     {t('a6')}
                   </a>
@@ -255,7 +296,11 @@ const TabContent = ({ t }: any) => {
               </div>
               <div className="col-md-4 col-12">
                 <div className="service_feature_item">
-                  <img src="/img/img_2.png" alt="Image" />
+                  <img
+                    className="lazyload"
+                    data-src="/img/img_2.png"
+                    alt="Image"
+                  />
                   <a href="#" className="btn v4">
                     {t('a7')}
                   </a>
@@ -263,7 +308,11 @@ const TabContent = ({ t }: any) => {
               </div>
               <div className="col-md-4 col-12">
                 <div className="service_feature_item">
-                  <img src="/img/img_3.png" alt="Image" />
+                  <img
+                    className="lazyload"
+                    data-src="/img/img_3.png"
+                    alt="Image"
+                  />
                   <a href="#" className="btn v4">
                     {t('a8')}
                   </a>

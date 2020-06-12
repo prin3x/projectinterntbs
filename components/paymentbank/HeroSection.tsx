@@ -265,12 +265,20 @@ const HeroSection = ({ t }: any) => {
                 style={{ backgroundColor: ' #f1f8f9' }}
               >
                 <div className="d-flex align-items-center item__box">
-                  <img src="/img/icon_20.png" className="img-fluid" alt="" />
+                  <img
+                    className="img-fluid lazyload"
+                    data-src="/img/icon_20.png"
+                    alt=""
+                  />
                   <h4>1. {t('h8')}</h4>
                 </div>
 
                 <div className="d-flex align-items-center item__box">
-                  <img src="/img/icon_21.png" className="img-fluid" alt="" />
+                  <img
+                    className="img-fluid lazyload"
+                    data-src="/img/icon_21.png"
+                    alt=""
+                  />
                   <h4>
                     2.{' '}
                     <a href="#" className="theme__text link">
@@ -280,7 +288,11 @@ const HeroSection = ({ t }: any) => {
                 </div>
 
                 <div className="d-flex align-items-center item__box">
-                  <img src="/img/icon_22.png" className="img-fluid" alt="" />
+                  <img
+                    className="img-fluid lazyload"
+                    data-src="/img/icon_22.png"
+                    alt=""
+                  />
                   <h4>
                     3. {t('h9-1')}
                     <br />
@@ -289,7 +301,11 @@ const HeroSection = ({ t }: any) => {
                 </div>
 
                 <div className="d-flex align-items-center item__box">
-                  <img src="/img/icon_23.png" className="img-fluid" alt="" />
+                  <img
+                    className="img-fluid lazyload"
+                    data-src="/img/icon_23.png"
+                    alt=""
+                  />
                   <h4>
                     4. {t('h10-1')} <br />
                     {t('h10-2')}

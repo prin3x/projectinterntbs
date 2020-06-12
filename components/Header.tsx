@@ -84,7 +84,11 @@ const Header = ({ t }: any) => {
           <div className="col-lg-3 col-md-6 col-9">
             <Link href="/">
               <a className="navbar-brand p-0 m-0" href="#">
-                <img src="/img/logo_1.png" alt="Logo" />
+                <img
+                  className="lazyload"
+                  data-src="/img/logo_1.png"
+                  alt="Logo"
+                />
               </a>
             </Link>
           </div>

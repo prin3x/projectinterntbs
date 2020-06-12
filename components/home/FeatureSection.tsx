@@ -15,7 +15,7 @@ const FeatureSection = ({ t }: any) => (
       <div className="row mt-5">
         <div className="col-md-3">
           <div className="single_feature_item">
-            <img src="/img/icon_1.png" alt="Image" />
+            <img className="lazyload" data-src="/img/icon_1.png" alt="Image" />
             <div className="single_feature_text">
               <h4>SMS Provider</h4>
               <p>
@@ -28,7 +28,7 @@ const FeatureSection = ({ t }: any) => (
         </div>
         <div className="col-md-3">
           <div className="single_feature_item">
-            <img src="/img/icon_2.png" alt="Image" />
+            <img className="lazyload" data-src="/img/icon_2.png" alt="Image" />
             <div className="single_feature_text">
               <h4>Direct Connection</h4>
               <p>{t('p2')}</p>
@@ -37,7 +37,7 @@ const FeatureSection = ({ t }: any) => (
         </div>
         <div className="col-md-3">
           <div className="single_feature_item">
-            <img src="/img/icon_3.png" alt="Image" />
+            <img className="lazyload" data-src="/img/icon_3.png" alt="Image" />
             <div className="single_feature_text">
               <h4>User Friendly</h4>
               <p>
@@ -49,7 +49,7 @@ const FeatureSection = ({ t }: any) => (
         </div>
         <div className="col-md-3">
           <div className="single_feature_item">
-            <img src="/img/icon_4.png" alt="Image" />
+            <img className="lazyload" data-src="/img/icon_4.png" alt="Image" />
             <div className="single_feature_text">
               <h4>Industry Expert</h4>
               <p>{t('p4')}</p>

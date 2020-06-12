@@ -8,7 +8,11 @@ const EduSection = ({ t }: any) => (
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-4">
               <div className="edu_box">
-                <img src="/img/img_7.png" alt="Image" />
+                <img
+                  className="lazyload"
+                  data-src="/img/img_7.png"
+                  alt="Image"
+                />
                 <div className="edu_box_text">
                   <p>{t('p1')}</p>
                 </div>
@@ -18,7 +22,11 @@ const EduSection = ({ t }: any) => (
               <div className="row">
                 <div className="col-lg-12 col-md-6">
                   <div className="edu_box">
-                    <img src="/img/img_8.png" alt="Image" />
+                    <img
+                      className="lazyload"
+                      data-src="/img/img_8.png"
+                      alt="Image"
+                    />
                     <div className="edu_box_text">
                       <p>{t('p2')}</p>
                     </div>
@@ -26,7 +34,11 @@ const EduSection = ({ t }: any) => (
                 </div>
                 <div className="col-lg-12 col-md-6">
                   <div className="edu_box">
-                    <img src="/img/img_9.png" alt="Image" />
+                    <img
+                      className="lazyload"
+                      data-src="/img/img_9.png"
+                      alt="Image"
+                    />
                     <div className="edu_box_text">
                       <p>{t('p3')}</p>
                     </div>

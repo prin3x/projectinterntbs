@@ -2,14 +2,15 @@ import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const TrackSectionV2 = ({ t }: any) => (
   <div
-    className="track_section"
-    style={{ backgroundImage: 'url(/img/bg_7.png)' }}
+    className="track_section lazyload"
+    // style={{ backgroundImage: 'url(/img/bg_7.png)' }}
+    data-bgset="/img/bg_7.png"
   >
     <div className="container">
       <div className="row track_top">
         <div className="col-lg-6 col-md-12">
           <div className="track_img">
-            <img src="/img/img_19.png" alt="Image" />
+            <img className="lazyload" data-src="/img/img_19.png" alt="Image" />
           </div>
         </div>
         <div className="col-lg-6 col-md-12">

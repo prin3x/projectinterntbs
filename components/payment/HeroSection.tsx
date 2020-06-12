@@ -35,7 +35,11 @@ const HeroSection = ({ t }: any) => {
                   <div className="col-md-6">
                     <div className="info__box">
                       <div className="info__icon">
-                        <img src="/img/icon_13.png" alt="" />
+                        <img
+                          className="lazyload"
+                          data-src="/img/icon_13.png"
+                          alt=""
+                        />
                       </div>
                       <p>
                         {t('p1-1')}
@@ -48,7 +52,11 @@ const HeroSection = ({ t }: any) => {
                   <div className="col-md-6">
                     <div className="info__box">
                       <div className="info__icon">
-                        <img src="/img/icon_24.png" alt="" />
+                        <img
+                          className="lazyload"
+                          data-src="/img/icon_24.png"
+                          alt=""
+                        />
                       </div>
                       <p>{t('p2')}</p>
                     </div>
@@ -64,7 +72,11 @@ const HeroSection = ({ t }: any) => {
                   <div className="col-md-6">
                     <div className="info__box">
                       <div className="info__icon">
-                        <img src="/img/icon_25.png" alt="" />
+                        <img
+                          className="lazyload"
+                          data-src="/img/icon_25.png"
+                          alt=""
+                        />
                       </div>
                       <p>{t('p4')}</p>
                     </div>

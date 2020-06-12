@@ -6,9 +6,10 @@ const AllPricing = ({ t }: any) => {
   React.useEffect(() => {}, []);
   return (
     <div
-      className="all__pricing accordion"
+      className="all__pricing accordion lazyload"
       id="accordion"
-      style={{ backgroundImage: 'url(/img/pricing_bg.png)' }}
+      // style={{ backgroundImage: 'url(/img/pricing_bg.png)' }}
+      data-bgset="/img/pricing_bg.png"
     >
       <div className="container">
         <div className="row">
