@@ -2,8 +2,9 @@ import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const SmsSectionV2 = ({ t }: any) => (
   <div
-    className="sms_section "
-    style={{ backgroundImage: 'url(/img/promo_bg.png)' }}
+    className="sms_section lazyload"
+    // style={{ backgroundImage: 'url(/img/promo_bg.png)' }}
+    data-bgset="/img/promo_bg.png"
   >
     <div className="container">
       <div className="row">

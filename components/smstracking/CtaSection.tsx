@@ -2,8 +2,9 @@ import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const CtaSectionV3 = ({ t }: any) => (
   <div
-    className="cta_section v2"
-    style={{ backgroundImage: 'url(/img/bg_10.png)' }}
+    className="cta_section v2 lazyload"
+    // style={{ backgroundImage: 'url(/img/bg_10.png)' }}
+    data-bgset="/img/bg_10.png"
   >
     <div className="container">
       <div className="row align-items-center">

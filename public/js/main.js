@@ -18,6 +18,18 @@
   //   }
   // });
 
+  // sticky  box
+  // var wind = $(window);
+  // var sticky__box = $('.side__box');
+  // wind.on('scroll', function () {
+  //   var scroll = wind.scrollTop();
+  //   if (scroll < 300) {
+  //     sticky__box.removeClass('sticky__box');
+  //   } else {
+  //     sticky__box.addClass('sticky__box');
+  //   }
+  // });
+
   $('body').on('click', '.js-menu-toggle', function (e) {
     var $this = $(this);
     e.preventDefault();

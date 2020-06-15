@@ -2,10 +2,15 @@ import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const HeroSection = ({ t }: any) => (
   <div
-    className="hero_section"
-    style={{ backgroundImage: 'url(/img/hero_bg.png)' }}
+    className="hero_section lazyload"
+    // style={{ backgroundImage: 'url(/img/hero_bg.png)' }}
+    data-bgset="/img/hero_bg.png"
   >
-    <img src="/img/curve_1.png" alt="Image" className="hero_curve" />
+    <img
+      className="hero_curve lazyload"
+      data-src="/img/curve_1.png"
+      alt="Image"
+    />
     <div className="container">
       <div className="row align-item-center hero_top_one">
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
@@ -17,14 +22,14 @@ const HeroSection = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
           <div className="hero_img_one">
-            <img src="/img/hero_1.png" alt="Image" />
+            <img className="lazyload" data-src="/img/hero_1.png" alt="Image" />
           </div>
         </div>
       </div>
       <div className="row align-items-center hero_bottom_one">
         <div className="col-lg-6">
           <div className="hero_img_two">
-            <img src="/img/hero_2.png" alt="Image" />
+            <img className="lazyload" data-src="/img/hero_2.png" alt="Image" />
           </div>
         </div>
         <div className="col-lg-6">

@@ -48,7 +48,11 @@ const TestimonialSection = ({ t }: any) => (
                 <p className="client_quote">{t('p1')}</p>
                 <div className="client_info">
                   <div className="client_img">
-                    <img src="/img/client_1.png" alt="Image" />
+                    <img
+                      className="lazyload"
+                      data-src="/img/client_1.png"
+                      alt="Image"
+                    />
                   </div>
                   <div className="client_name">
                     <h6>{t('h2')}</h6>
@@ -62,7 +66,11 @@ const TestimonialSection = ({ t }: any) => (
                 <p className="client_quote">{t('p1')}</p>
                 <div className="client_info">
                   <div className="client_img">
-                    <img src="/img/client_1.png" alt="Image" />
+                    <img
+                      className="lazyload"
+                      data-src="/img/client_1.png"
+                      alt="Image"
+                    />
                   </div>
                   <div className="client_name">
                     <h6>{t('h2')}</h6>
@@ -76,7 +84,11 @@ const TestimonialSection = ({ t }: any) => (
                 <p className="client_quote">{t('p1')}</p>
                 <div className="client_info">
                   <div className="client_img">
-                    <img src="/img/client_1.png" alt="Image" />
+                    <img
+                      className="lazyload"
+                      data-src="/img/client_1.png"
+                      alt="Image"
+                    />
                   </div>
                   <div className="client_name">
                     <h6>{t('h2')}</h6>

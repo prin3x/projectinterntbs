@@ -67,7 +67,7 @@ const Footer = () => (
             <p className="xs-none">
               Follow us{' '}
               <a href="#">
-                <img src="/img/fb.png" alt="Image" />
+                <img className="lazyload" data-src="/img/fb.png" alt="Image" />
               </a>{' '}
             </p>
           </div>
@@ -77,18 +77,18 @@ const Footer = () => (
             <p>
               {' '}
               <a href="#">
-                <img src="/img/fb.png" alt="Image" />
+                <img className="lazyload" data-src="/img/fb.png" alt="Image" />
               </a>{' '}
               Follow us{' '}
             </p>
           </div>
           <div className="footer_contact">
             <a href="tel:027986000">
-              <img src="/img/phone.png" alt="Image" />
+              <img className="lazyload" data-src="/img/phone.png" alt="Image" />
               02-798-6000
             </a>
             <a href="mailto:contact@thaibulksms.com">
-              <img src="/img/mail.png" alt="" />
+              <img className="lazyload" data-src="/img/mail.png" alt="" />
               contact@thaibulksms.com
             </a>
           </div>
@@ -101,18 +101,26 @@ const Footer = () => (
               <div className="col-xl-6 col-lg-5 col-md-5">
                 <div className="footer_logo">
                   <a href="#">
-                    <img src="/img/logo_2.png" alt="Image" />
+                    <img
+                      className="lazyload"
+                      data-src="/img/logo_2.png"
+                      alt="Image"
+                    />
                   </a>
                 </div>
               </div>
               <div className="col-xl-6 col-lg-7 col-md-7 xs-none">
                 <div className="footer_contact">
                   <a href="tel:027986000">
-                    <img src="/img/phone.png" alt="Image" />
+                    <img
+                      className="lazyload"
+                      data-src="/img/phone.png"
+                      alt="Image"
+                    />
                     02-798-6000
                   </a>
                   <a href="mailto:contact@thaibulksms.com">
-                    <img src="/img/mail.png" alt="" />
+                    <img className="lazyload" data-src="/img/mail.png" alt="" />
                     contact@thaibulksms.com
                   </a>
                 </div>
