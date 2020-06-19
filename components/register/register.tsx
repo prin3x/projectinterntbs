@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const RegisterComponents = ({ t }: any) => (
   <div className="register_section">
@@ -32,9 +32,11 @@ const RegisterComponents = ({ t }: any) => (
         </div>
       </div>
       <div className="btn-regis">
-        <a className="btn v2" href="#">
-          {t('a1')}
-        </a>
+        <Link href="/register-success">
+          <a className="btn v2" href="#">
+            {t('a1')}
+          </a>
+        </Link>
       </div>
     </div>
   </div>

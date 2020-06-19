@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const UsertypeComponents = ({ t }: any) => (
   <div className="userType_section">
@@ -9,9 +9,11 @@ const UsertypeComponents = ({ t }: any) => (
         <div className="img-user">
           <img className="lazyload" data-src="/img/img-indiv.png" alt="Image" />
         </div>
-        <a href="#" className="btn v3">
-          {t('a1')}
-        </a>
+        <Link href="individual">
+          <a href="#" className="btn v3">
+            {t('a1')}
+          </a>
+        </Link>
       </div>
       <div className="companyType">
         <div className="img-user">
@@ -21,9 +23,11 @@ const UsertypeComponents = ({ t }: any) => (
             alt="Image"
           />
         </div>
-        <a href="#" className="btn v3">
-          {t('a2')}
-        </a>
+        <Link href="company">
+          <a href="#" className="btn v3">
+            {t('a2')}
+          </a>
+        </Link>
       </div>
     </div>
   </div>

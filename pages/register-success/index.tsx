@@ -1,20 +1,20 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import RegisterfinishComponents from '../../components/register/registerfinish';
+import RegisterfinishComponents from '../../components/register/register-success';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Registerfinish = () => (
+const Registeruccess = () => (
   <Layout>
     <Head>
-      <title>Registerfinish | Thaibulksms</title>
-      <meta name="title" content="Registerfinish | Thaibulksms" />
-      <meta name="description" content="registerfinish" />
-      <meta name="keywords" content="registerfinish" />
+      <title>Register success | Thaibulksms</title>
+      <meta name="title" content="Register success | Thaibulksms" />
+      <meta name="description" content="Register success" />
+      <meta name="keywords" content="Register success" />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="registerfinish" />
-      <meta property="og:description" content="registerfinish" />
+      <meta property="og:title" content="Register success" />
+      <meta property="og:description" content="Register success" />
       <meta property="og:url" content="" />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />
@@ -31,7 +31,7 @@ const Registerfinish = () => (
     <RegisterfinishComponents />
   </Layout>
 );
-Registerfinish.getInitialProps = async () => ({
+Registeruccess.getInitialProps = async () => ({
   namespacesRequired: [],
 });
-export default withTranslation()(Registerfinish);
+export default withTranslation()(Registeruccess);

@@ -27,10 +27,10 @@ const CtaSectionV3 = ({ t }: any) => (
   </div>
 );
 CtaSectionV3.getInitialProps = async () => ({
-  namespacesRequired: ['SmstrackingCtaSection'],
+  namespacesRequired: ['Sms-trackingCtaSection'],
 });
 
 CtaSectionV3.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('SmstrackingCtaSection')(CtaSectionV3);
+export default withTranslation('Sms-trackingCtaSection')(CtaSectionV3);

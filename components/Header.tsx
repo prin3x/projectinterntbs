@@ -104,9 +104,18 @@ const Header = ({ t }: any) => {
                     </Link>
                   </li>
                   <li>
-                    <a className="active" href="#">
-                      {t('menu-2')}
-                    </a>
+                    <Link href="/pricing">
+                      <a className="active" href="#">
+                        {t('menu-2')}
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/how-to-order">
+                      <a className="active" href="#">
+                        {t('menu-8')}
+                      </a>
+                    </Link>
                   </li>
                   <li className="has-children">
                     <a className="active" href="#">
@@ -114,78 +123,52 @@ const Header = ({ t }: any) => {
                     </a>
                     <ul className="dropdown">
                       <li>
-                        <a href="#">
-                          <h6>{t('menu-3-1')}</h6>
-                          <p>{t('menu-3-1-s')}</p>
-                        </a>
+                        <Link href="/ResourcesLanding">
+                          <a href="#">
+                            <h6>{t('menu-3-1')}</h6>
+                            {/* <p>{t('menu-3-1-s')}</p> */}
+                          </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
-                          <h6>{t('menu-3-2')}</h6>
-                          <p>{t('menu-3-2-s')}</p>
-                        </a>
+                        <Link href="/KnowledgeListing">
+                          <a href="#">
+                            <h6>{t('menu-3-2')}</h6>
+                            {/* <p>{t('menu-3-2-s')}</p> */}
+                          </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
-                          <h6>{t('menu-3-3')}</h6>
-                          <p>{t('menu-3-3-s')}</p>
-                        </a>
+                        <Link href="/UseCasesListing">
+                          <a href="#">
+                            <h6>{t('menu-3-3')}</h6>
+                            {/* <p>{t('menu-3-3-s')}</p> */}
+                          </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#">
-                          <h6>{t('menu-3-4')}</h6>
-                          <p>{t('menu-3-4-s')}</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <h6>{t('menu-3-5')}</h6>
-                          <p>{t('menu-3-5-s')}</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="has-children">
-                    <a className="active" href="#">
-                      {t('menu-4')}
-                    </a>
-                    <ul className="dropdown">
-                      <li>
-                        <a href="#">
-                          <h6>{t('menu-4-1')}</h6>
-                          <p>{t('menu-4-1-s')}</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <h6>{t('menu-4-2')}</h6>
-                          <p>{t('menu-4-2-s')}</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <h6>{t('menu-4-3')}</h6>
-                          <p>{t('menu-4-3-s')}</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <h6>{t('menu-4-4')}</h6>
-                          <p>{t('menu-4-4-s')}</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <h6>{t('menu-4-5')}</h6>
-                          <p>{t('menu-4-5-s')}</p>
-                        </a>
+                        <Link href="/SuccessStoriesListing">
+                          <a href="#">
+                            <h6>{t('menu-3-4')}</h6>
+                            {/* <p>{t('menu-3-4-s')}</p> */}
+                          </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a className="active" href="#">
-                      {t('menu-5')}
-                    </a>
+                    <Link href="/Documentation">
+                      <a className="active" href="#">
+                        {t('menu-4')}
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact">
+                      <a className="active" href="#">
+                        {t('menu-5')}
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -205,14 +188,25 @@ const Header = ({ t }: any) => {
                 <div className="site-mobile-menu-body">
                   <ul className="site-nav-wrap">
                     <li>
-                      <a className="active" href="#">
-                        {t('menu-1')}
-                      </a>
+                      <Link href="/product">
+                        <a className="active" href="#">
+                          {t('menu-1')}
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="active" href="#">
-                        {t('menu-2')}
-                      </a>
+                      <Link href="/pricing">
+                        <a className="active" href="#">
+                          {t('menu-2')}
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/how-to-order">
+                        <a className="active" href="#">
+                          {t('menu-8')}
+                        </a>
+                      </Link>
                     </li>
                     <li className="has-children">
                       <span
@@ -225,83 +219,52 @@ const Header = ({ t }: any) => {
                       </a>
                       <ul className="collapse" id="collapseItem0">
                         <li>
-                          <a href="#">
-                            <h6>{t('menu-3-1')}</h6>
-                            <p>{t('menu-3-1-s')}</p>
-                          </a>
+                          <Link href="/ResourcesLanding">
+                            <a href="#">
+                              <h6>{t('menu-3-1')}</h6>
+                              {/* <p>{t('menu-3-1-s')}</p> */}
+                            </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
-                            <h6>{t('menu-3-2')}</h6>
-                            <p>{t('menu-3-2-s')}</p>
-                          </a>
+                          <Link href="/KnowledgeListing">
+                            <a href="#">
+                              <h6>{t('menu-3-2')}</h6>
+                              {/* <p>{t('menu-3-2-s')}</p> */}
+                            </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
-                            <h6>{t('menu-3-3')}</h6>
-                            <p>{t('menu-3-3-s')}</p>
-                          </a>
+                          <Link href="/UseCasesListing">
+                            <a href="#">
+                              <h6>{t('menu-3-3')}</h6>
+                              {/* <p>{t('menu-3-3-s')}</p> */}
+                            </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#">
-                            <h6>{t('menu-3-4')}</h6>
-                            <p>{t('menu-3-4-s')}</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <h6>{t('menu-3-5')}</h6>
-                            <p>{t('menu-3-5-s')}</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="has-children">
-                      <span
-                        className="arrow-collapse collapsed"
-                        data-toggle="collapse"
-                        data-target="#collapseItem1"
-                      ></span>
-                      <a className="active" href="#">
-                        {t('menu-4')}
-                      </a>
-                      <ul className="collapse" id="collapseItem1">
-                        <li>
-                          <a href="#">
-                            <h6>{t('menu-4-1')}</h6>
-                            <p>{t('menu-4-1-s')}</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <h6>{t('menu-4-2')}</h6>
-                            <p>{t('menu-4-2-s')}</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <h6>{t('menu-4-3')}</h6>
-                            <p>{t('menu-4-3-s')}</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <h6>{t('menu-4-4')}</h6>
-                            <p>{t('menu-4-4-s')}</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <h6>{t('menu-4-5')}</h6>
-                            <p>{t('menu-4-5-s')}</p>
-                          </a>
+                          <Link href="/SuccessStoriesListing">
+                            <a href="#">
+                              <h6>{t('menu-3-4')}</h6>
+                              {/* <p>{t('menu-3-4-s')}</p> */}
+                            </a>
+                          </Link>
                         </li>
                       </ul>
                     </li>
                     <li>
-                      <a className="active" href="#">
-                        {t('menu-5')}
-                      </a>
+                      <Link href="/Documentation">
+                        <a className="active" href="#">
+                          {t('menu-4')}
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contact">
+                        <a className="active" href="#">
+                          {t('menu-5')}
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -312,12 +275,16 @@ const Header = ({ t }: any) => {
             <div className="menu_btn">
               <ul>
                 <li>
-                  <a href="#">{t('menu-6')}</a>
+                  <Link href="/login">
+                    <a href="#">{t('menu-6')}</a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="btn v1" href="#">
-                    {t('menu-7')}
-                  </a>
+                  <Link href="/pricing">
+                    <a className="btn v1" href="#">
+                      {t('menu-7')}
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>

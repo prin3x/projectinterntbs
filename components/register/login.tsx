@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const LoginComponents = ({ t }: any) => (
   <div className="login_section">
@@ -7,8 +7,13 @@ const LoginComponents = ({ t }: any) => (
       <input type="text" className="input-txt01" placeholder={t('input1')} />
       <input type="text" className="input-txt01" placeholder={t('input2')} />
       <div className="link-forgot">
-        <a href="">{t('a1')}</a>&nbsp;&nbsp;&nbsp;
-        <a href="">{t('a2')}</a>
+        <Link href="/register">
+          <a href="">{t('a1')}</a>
+        </Link>
+        &nbsp;&nbsp;&nbsp;
+        <Link href="/forgot-password">
+          <a href="">{t('a2')}</a>
+        </Link>
       </div>
       <div className="btn-login">
         <a className="btn v2" href="#">

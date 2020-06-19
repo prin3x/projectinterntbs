@@ -27,10 +27,10 @@ const HeroSectionV4 = ({ t }: any) => (
   </div>
 );
 HeroSectionV4.getInitialProps = async () => ({
-  namespacesRequired: ['SmstrackingHeroSection'],
+  namespacesRequired: ['Sms-trackingHeroSection'],
 });
 
 HeroSectionV4.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('SmstrackingHeroSection')(HeroSectionV4);
+export default withTranslation('Sms-trackingHeroSection')(HeroSectionV4);

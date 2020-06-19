@@ -327,10 +327,10 @@ const TabContent = ({ t }: any) => {
 };
 
 TabContent.getInitialProps = async () => ({
-  namespacesRequired: ['OrderTabContent'],
+  namespacesRequired: ['How-to-orderTabContent'],
 });
 
 TabContent.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OrderTabContent')(TabContent);
+export default withTranslation('How-to-orderTabContent')(TabContent);

@@ -53,10 +53,10 @@ const HeroSection = ({ t }: any) => {
 };
 
 HeroSection.getInitialProps = async () => ({
-  namespacesRequired: ['OrderHeroSection'],
+  namespacesRequired: ['How-to-orderHeroSection'],
 });
 
 HeroSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OrderHeroSection')(HeroSection);
+export default withTranslation('How-to-orderHeroSection')(HeroSection);

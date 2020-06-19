@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 // import Proloader from '../../components/Proloader';
-import HeroSection from '../../components/smstracking/HeroSection';
-import SmsSection from '../../components/smstracking/SmsSection';
-import SimpleIconSection from '../../components/smstracking/SimpleIconSection';
-import TrackSection from '../../components/smstracking/TrackSection';
-import CtaSection from '../../components/smstracking/CtaSection';
+import HeroSection from '../../components/sms-tracking/HeroSection';
+import SmsSection from '../../components/sms-tracking/SmsSection';
+import SimpleIconSection from '../../components/sms-tracking/SimpleIconSection';
+import TrackSection from '../../components/sms-tracking/TrackSection';
+import CtaSection from '../../components/sms-tracking/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';

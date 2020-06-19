@@ -54,10 +54,10 @@ const TrackSectionV2 = ({ t }: any) => (
   </div>
 );
 TrackSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['SmstrackingTrackSection'],
+  namespacesRequired: ['Sms-trackingTrackSection'],
 });
 
 TrackSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('SmstrackingTrackSection')(TrackSectionV2);
+export default withTranslation('Sms-trackingTrackSection')(TrackSectionV2);

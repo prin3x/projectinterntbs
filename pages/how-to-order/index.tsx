@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import HeroSection from '../../components/order/HeroSection';
-import TabContent from '../../components/order/TabContent';
+import HeroSection from '../../components/how-to-order/HeroSection';
+import TabContent from '../../components/how-to-order/TabContent';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';

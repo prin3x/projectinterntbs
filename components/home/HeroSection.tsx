@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const HeroSectionV2 = ({ t }: any) => (
   <div
@@ -14,14 +14,18 @@ const HeroSectionV2 = ({ t }: any) => (
             <p>{t('p1')}</p>
             <ul className="cta-btn">
               <li>
-                <a className="btn v3" href="#">
-                  {t('a1')}
-                </a>
+                <Link href="/register">
+                  <a className="btn v3" href="#">
+                    {t('a1')}
+                  </a>
+                </Link>
               </li>
               <li>
-                <a className="btn v5" href="#">
-                  {t('a2')}
-                </a>
+                <Link href="/pricing">
+                  <a className="btn v5" href="#">
+                    {t('a2')}
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

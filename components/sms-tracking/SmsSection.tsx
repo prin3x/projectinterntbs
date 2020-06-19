@@ -46,10 +46,10 @@ const SmsSectionV4 = ({ t }: any) => (
   </div>
 );
 SmsSectionV4.getInitialProps = async () => ({
-  namespacesRequired: ['SmstrackingSmsSection'],
+  namespacesRequired: ['Sms-trackingSmsSection'],
 });
 
 SmsSectionV4.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('SmstrackingSmsSection')(SmsSectionV4);
+export default withTranslation('Sms-trackingSmsSection')(SmsSectionV4);

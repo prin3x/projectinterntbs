@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const PromoSection = ({ t }: any) => (
   <div
@@ -107,9 +107,11 @@ const PromoSection = ({ t }: any) => (
               {t('h4-2')}
             </h3>
             <p>{t('p6')}</p>
-            <a className="link" href="#">
-              {t('a3')}
-            </a>
+            <Link href="/sms-tracking">
+              <a className="link" href="#">
+                {t('a3')}
+              </a>
+            </Link>
             <h6 className="promo_link">
               {t('h5-1')}
               <span>{t('span3')}</span>
@@ -169,9 +171,11 @@ const PromoSection = ({ t }: any) => (
             <a href="#" className="btn v2">
               {t('a4')}
             </a>
-            <a className="link" href="#">
-              {t('a5')}
-            </a>
+            <Link href="/otp">
+              <a className="link" href="#">
+                {t('a5')}
+              </a>
+            </Link>
             <h6 className="promo_link">
               {t('h7-1')}
               <span>{t('span4')}</span>

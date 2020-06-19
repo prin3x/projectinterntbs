@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import dynamic from 'next/dynamic';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
@@ -102,9 +102,11 @@ const TestimonialSection = ({ t }: any) => (
       </div>
       <div className="row">
         <div className="col-md-12 text-center">
-          <a href="#" className="btn v6">
-            {t('a1')}
-          </a>
+          <Link href="/SuccessStoriesListing">
+            <a href="#" className="btn v6">
+              {t('a1')}
+            </a>
+          </Link>
         </div>
       </div>
     </div>

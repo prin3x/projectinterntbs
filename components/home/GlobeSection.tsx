@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const GlobeSection = ({ t }: any) => (
   <div className="globe_section">
@@ -11,9 +11,11 @@ const GlobeSection = ({ t }: any) => (
               <span>{t('span1-2')}</span> {t('h1-3')}
             </h3>
             <p>{t('p1')}</p>
-            <a href="#" className="btn v3">
-              {t('a1')}
-            </a>
+            <Link href="/contact">
+              <a href="#" className="btn v3">
+                {t('a1')}
+              </a>
+            </Link>
           </div>
         </div>
         <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">

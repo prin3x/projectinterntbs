@@ -95,12 +95,12 @@ const SimpleIconSectionV2 = ({ t }: any) => (
   </div>
 );
 SimpleIconSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['SmstrackingSimpleIconSection'],
+  namespacesRequired: ['Sms-trackingSimpleIconSection'],
 });
 
 SimpleIconSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('SmstrackingSimpleIconSection')(
+export default withTranslation('Sms-trackingSimpleIconSection')(
   SimpleIconSectionV2
 );

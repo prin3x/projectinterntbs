@@ -1,87 +1,88 @@
-const Footer = () => (
+import { withTranslation, Link } from '../i18n';
+import PropTypes from 'prop-types';
+const Footer = ({ t }: any) => (
   <div className="footer_section">
     <div className="container">
       <div className="row">
         <div className="col-md-3 col-6">
           <div className="footer_widget">
-            <h4>Product</h4>
+            <h4>{t('menu-1')}</h4>
             <ul>
               <li>
-                <a href="#">Features</a>
+                <Link href="/product">
+                  <a href="#">{t('menu-1-1')}</a>
+                </Link>
               </li>
               <li>
-                <a href="#">Package Compare</a>
-              </li>
-              <li>
-                <a href="#">Pricing</a>
+                <Link href="/pricing">
+                  <a href="#">{t('menu-1-2')}</a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="col-md-3 col-6">
           <div className="footer_widget">
-            <h4>Blog</h4>
+            <h4>{t('menu-2')}</h4>
             <ul>
               <li>
-                <a href="#">Knowledge</a>
+                <Link href="/KnowledgeListing">
+                  <a href="#">{t('menu-2-1')}</a>
+                </Link>
               </li>
               <li>
-                <a href="#">Use Cases</a>
+                <Link href="/UseCasesListing">
+                  <a href="#">{t('menu-2-2')}</a>
+                </Link>
               </li>
               <li>
-                <a href="#">Success Stories</a>
+                <Link href="/SuccessStoriesListing">
+                  <a href="#">{t('menu-2-3')}</a>
+                </Link>
               </li>
               <li>
-                <a href="#">Intro to SMS</a>
+                <Link href="">
+                  <a href="#">{t('menu-2-4')}</a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="col-md-3 col-6">
           <div className="footer_widget">
-            <h4>Support</h4>
+            <h4>{t('menu-3')}</h4>
             <ul>
               <li>
-                <a href="#">How to order</a>
+                <Link href="/how-to-order">
+                  <a href="#">{t('menu-3-1')}</a>
+                </Link>
               </li>
               <li>
-                <a href="#">FAQ</a>
-              </li>
-              <li>
-                <a href="#">Developer</a>
+                <Link href="/Documentation">
+                  <a href="#">{t('menu-3-2')}</a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="col-md-3 col-6">
           <div className="footer_widget">
-            <h4>Company</h4>
-            <ul>
-              <li>
-                <a href="#">Why ThaibulkSMS</a>
-              </li>
-              <li>
-                <a href="#">Reseller Program</a>
-              </li>
-            </ul>
-            <p className="xs-none">
-              Follow us{' '}
+            <Link href="/fb">
               <a href="#">
-                <img className="lazyload" data-src="/img/fb.png" alt="Image" />
-              </a>{' '}
-            </p>
+                <h4>
+                  {t('menu-4')}
+                  <img
+                    className="lazyload"
+                    style={{ maxWidth: '25px', marginLeft: '20px' }}
+                    data-src="/img/fb.png"
+                    alt="Image"
+                  />
+                </h4>
+              </a>
+            </Link>
           </div>
         </div>
         <div className="col-12 md-none">
-          <div className="footer_widget">
-            <p>
-              {' '}
-              <a href="#">
-                <img className="lazyload" data-src="/img/fb.png" alt="Image" />
-              </a>{' '}
-              Follow us{' '}
-            </p>
-          </div>
           <div className="footer_contact">
             <a href="tel:027986000">
               <img className="lazyload" data-src="/img/phone.png" alt="Image" />
@@ -153,4 +154,11 @@ const Footer = () => (
     </div>
   </div>
 );
-export default Footer;
+Footer.getInitialProps = async () => ({
+  namespacesRequired: ['Footer'],
+});
+
+Footer.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('Footer')(Footer);
