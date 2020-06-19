@@ -5,13 +5,13 @@ import Help from '../../components/Help';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Contact = () => (
+const Contact = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Contact | Thaibulksms</title>
-      <meta name="title" content="Contact | Thaibulksms" />
-      <meta name="description" content="contact" />
-      <meta name="keywords" content="contact" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -52,6 +52,6 @@ const Contact = () => (
   </Layout>
 );
 Contact.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['ContactMeta'],
 });
-export default withTranslation()(Contact);
+export default withTranslation('ContactMeta')(Contact);

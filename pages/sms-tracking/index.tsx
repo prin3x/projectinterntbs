@@ -9,13 +9,13 @@ import CtaSection from '../../components/sms-tracking/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Smstracking = () => (
+const Smstracking = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Smstracking | Thaibulksms</title>
-      <meta name="title" content="Smstracking | Thaibulksms" />
-      <meta name="description" content="smstracking" />
-      <meta name="keywords" content="smstracking" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -52,6 +52,6 @@ const Smstracking = () => (
   </Layout>
 );
 Smstracking.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['Sms-trackingMeta'],
 });
-export default withTranslation()(Smstracking);
+export default withTranslation('Sms-trackingMeta')(Smstracking);

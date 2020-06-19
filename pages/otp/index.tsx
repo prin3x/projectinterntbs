@@ -9,13 +9,13 @@ import CtaSection from '../../components/otp/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Otp = () => (
+const Otp = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Otp | Thaibulksms</title>
-      <meta name="title" content="Otp | Thaibulksms" />
-      <meta name="description" content="OTP" />
-      <meta name="keywords" content="OTP" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -46,6 +46,6 @@ const Otp = () => (
   </Layout>
 );
 Otp.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['OtpMeta'],
 });
-export default withTranslation()(Otp);
+export default withTranslation('OtpMeta')(Otp);

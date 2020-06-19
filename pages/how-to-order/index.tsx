@@ -5,13 +5,13 @@ import TabContent from '../../components/how-to-order/TabContent';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Order = () => (
+const Order = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Order | Thaibulksms</title>
-      <meta name="title" content="Order | Thaibulksms" />
-      <meta name="description" content="order" />
-      <meta name="keywords" content="order" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -38,6 +38,6 @@ const Order = () => (
   </Layout>
 );
 Order.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['How-to-orderMeta'],
 });
-export default withTranslation()(Order);
+export default withTranslation('How-to-orderMeta')(Order);

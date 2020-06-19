@@ -6,13 +6,13 @@ import FaqSection from '../../components/pricing/FaqSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Pricing = () => (
+const Pricing = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Pricing | Thaibulksms</title>
-      <meta name="title" content="Pricing | Thaibulksms" />
-      <meta name="description" content="pricing" />
-      <meta name="keywords" content="pricing" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -40,6 +40,6 @@ const Pricing = () => (
   </Layout>
 );
 Pricing.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['PricingMeta'],
 });
-export default withTranslation()(Pricing);
+export default withTranslation('PricingMeta')(Pricing);

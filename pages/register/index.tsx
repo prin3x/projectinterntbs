@@ -3,13 +3,13 @@ import Layout from '../../components/Layout';
 import RegisterComponents from '../../components/register/register';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Register = () => (
+const Register = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Register | Thaibulksms</title>
-      <meta name="title" content="Register | Thaibulksms" />
-      <meta name="description" content="register" />
-      <meta name="keywords" content="register" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -32,6 +32,6 @@ const Register = () => (
   </Layout>
 );
 Register.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['RegisterMeta'],
 });
-export default withTranslation()(Register);
+export default withTranslation('RegisterMeta')(Register);

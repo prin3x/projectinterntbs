@@ -3,13 +3,13 @@ import Layout from '../../components/Layout';
 import UsertypeCompanyComponents from '../../components/register/usertypecompany';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Usertypecompany = () => (
+const Usertypecompany = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Usertypecompany | Thaibulksms</title>
-      <meta name="title" content="Usertypecompany | Thaibulksms" />
-      <meta name="description" content="usertypecompany" />
-      <meta name="keywords" content="usertypecompany" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -32,6 +32,6 @@ const Usertypecompany = () => (
   </Layout>
 );
 Usertypecompany.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['UsertypeCompanyMeta'],
 });
-export default withTranslation()(Usertypecompany);
+export default withTranslation('UsertypeCompanyMeta')(Usertypecompany);

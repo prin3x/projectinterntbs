@@ -6,13 +6,13 @@ import Help from '../../components/Help';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Payment = () => (
+const Payment = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Payment | Thaibulksms</title>
-      <meta name="title" content="Payment | Thaibulksms" />
-      <meta name="description" content="payment" />
-      <meta name="keywords" content="payment" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -55,6 +55,6 @@ const Payment = () => (
   </Layout>
 );
 Payment.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['PaymentMeta'],
 });
-export default withTranslation()(Payment);
+export default withTranslation('PaymentMeta')(Payment);

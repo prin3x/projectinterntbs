@@ -3,13 +3,13 @@ import Layout from '../../components/Layout';
 import UsertypeComponents from '../../components/register/usertype';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Usertype = () => (
+const Usertype = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Usertype | Thaibulksms</title>
-      <meta name="title" content="Usertype | Thaibulksms" />
-      <meta name="description" content="usertype" />
-      <meta name="keywords" content="usertype" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -32,6 +32,6 @@ const Usertype = () => (
   </Layout>
 );
 Usertype.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['UsertypeMeta'],
 });
-export default withTranslation()(Usertype);
+export default withTranslation('UsertypeMeta')(Usertype);

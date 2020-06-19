@@ -13,22 +13,14 @@ import CtaSection from '../components/home/CtaSection';
 import { withTranslation } from '../i18n';
 import BacktoTop from '../components/BacktoTop';
 import Head from 'next/head';
-const Homepage = () => (
+const Homepage = ({ t }: any) => (
   <React.Fragment>
     <Layout>
       <Head>
-        <title>
-          ส่ง SMS เข้ามือถือฟรี 20 ข้อความ, ส่ง SMS จากเว็บ, ส่ง SMS ด้วย API,
-          บริการ SMS Solutions, Mobile Marketing Solutions - ThaiBulkSMS.COM
-        </title>
-        <meta
-          name="description"
-          content="บริการส่ง SMS จากเว็บถึงมือถือ เพื่อการตลาด, CRM, ประชาสัมพันธ์ สมัครทดลองฟรีวันนี้ ง่ายนิดเดียว มีบริการให้คำแนะนำฟรี พร้อมทั้งบริการพัฒนาแอปพลิเคชั่นเฉพาะคุณ ส่งได้ทุกค่ายทั้ง AIS DTAC TrueMove Truemove-H"
-        />
-        <meta
-          name="keywords"
-          content="free,sms,gateway,website,mobile,phone,online,text,message,messages,thailand,aggregator,thai,server,service,services,providers,shortcodes,ส่ง,ฟรี,gsm,ขาย,ถูก,2g,3g,4g,messaging,,ais,api,bulk,advertising,pricing,price,reseller,software,solutions,campaignscoporate,broadcast,direct,dtac,truemove,hutch,cdma,net,ads,ราคา,promotion,การตลาด,ธุรกิจ,เครือข่าย,เว็บ,โฆษณา,โทรศัพท์เคลื่อนที่,โทรศัพท์มือถือ,ข้อความ,ข้อความสั้น,สตางค์,หารายได้ออนไลน์,ออนไลน์"
-        />
+        <title>{t('title')}</title>
+        <meta name="title" content={t('title')} />
+        <meta name="description" content={t('description')} />
+        <meta name="keywords" content={t('keywords')} />
         <meta name="author" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -76,6 +68,6 @@ const Homepage = () => (
   </React.Fragment>
 );
 Homepage.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['HomeMeta'],
 });
-export default withTranslation()(Homepage);
+export default withTranslation('HomeMeta')(Homepage);

@@ -11,13 +11,13 @@ import FaqSection from '../../components/product/FaqSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Product = () => (
+const Product = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Product | Thaibulksms</title>
-      <meta name="title" content="Product | Thaibulksms" />
-      <meta name="description" content="product" />
-      <meta name="keywords" content="product" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -56,6 +56,6 @@ const Product = () => (
   </Layout>
 );
 Product.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['ProductMeta'],
 });
-export default withTranslation()(Product);
+export default withTranslation('ProductMeta')(Product);

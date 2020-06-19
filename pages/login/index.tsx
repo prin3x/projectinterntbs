@@ -3,13 +3,13 @@ import Layout from '../../components/Layout';
 import LoginComponents from '../../components/register/login';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Login = () => (
+const Login = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Login | Thaibulksms</title>
-      <meta name="title" content="Login | Thaibulksms" />
-      <meta name="description" content="login" />
-      <meta name="keywords" content="login" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -34,6 +34,6 @@ const Login = () => (
   </Layout>
 );
 Login.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['LoginMeta'],
 });
-export default withTranslation()(Login);
+export default withTranslation('LoginMeta')(Login);

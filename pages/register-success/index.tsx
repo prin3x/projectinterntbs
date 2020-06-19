@@ -3,13 +3,13 @@ import Layout from '../../components/Layout';
 import RegisterfinishComponents from '../../components/register/register-success';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Registeruccess = () => (
+const Registeruccess = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>Register success | Thaibulksms</title>
-      <meta name="title" content="Register success | Thaibulksms" />
-      <meta name="description" content="Register success" />
-      <meta name="keywords" content="Register success" />
+      <title>{t('title')}</title>
+      <meta name="title" content={t('title')} />
+      <meta name="description" content={t('description')} />
+      <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -32,6 +32,6 @@ const Registeruccess = () => (
   </Layout>
 );
 Registeruccess.getInitialProps = async () => ({
-  namespacesRequired: [],
+  namespacesRequired: ['RegistersuccessMeta'],
 });
-export default withTranslation()(Registeruccess);
+export default withTranslation('RegistersuccessMeta')(Registeruccess);
