@@ -17,7 +17,7 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img className="lazyload" data-src="/img/icon_1.png" alt="Image" />
             <div className="single_feature_text">
-              <h4>SMS Provider</h4>
+              <h4>No.1 SMS Platform</h4>
               <p>
                 {t('p1')}
                 <br />
@@ -30,8 +30,12 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img className="lazyload" data-src="/img/icon_2.png" alt="Image" />
             <div className="single_feature_text">
-              <h4>Direct Connection</h4>
-              <p>{t('p2')}</p>
+              <h4>Fast & Reliable</h4>
+              <p>
+                {t('p2')}
+                <br />
+                {t('p2-1')}
+              </p>
             </div>
           </div>
         </div>
@@ -39,7 +43,7 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img className="lazyload" data-src="/img/icon_3.png" alt="Image" />
             <div className="single_feature_text">
-              <h4>User Friendly</h4>
+              <h4>Smart Console</h4>
               <p>
                 {t('p3')} <br />
                 {t('p3-1')}
@@ -51,8 +55,12 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img className="lazyload" data-src="/img/icon_4.png" alt="Image" />
             <div className="single_feature_text">
-              <h4>Industry Expert</h4>
-              <p>{t('p4')}</p>
+              <h4>Easily Integrated API</h4>
+              <p>
+                {t('p4')}
+                <br />
+                {t('p4-1')}
+              </p>
             </div>
           </div>
         </div>

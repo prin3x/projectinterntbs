@@ -13,7 +13,7 @@ const SliderSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h3 className="section_title">{t('h1')}</h3>
+          <h3 className="section_title">{t('h1')} </h3>
         </div>
       </div>
       <div className="row">
@@ -49,34 +49,44 @@ const SliderSection = ({ t }: any) => (
               <div className="slider_item">
                 <h3>{t('h2')}</h3>
                 <p>{t('p1')}</p>
-                <a href="#">{t('a1')}</a>
+                {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
                 <h3>{t('h3')}</h3>
                 <p>{t('p2')}</p>
-                <a href="#">{t('a1')}</a>
+                {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
                 <h3>{t('h4')}</h3>
-                <p>{t('p2')}</p>
-                <a href="#">{t('a1')}</a>
+                <p>{t('p3')}</p>
+                {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
                 <h3>{t('h5')}</h3>
-                <p>{t('p2')}</p>
-                <a href="#">{t('a1')}</a>
+                <p>{t('p4')}</p>
+                {/* <a href="#">{t('a1')}</a> */}
+              </div>
+            </div>
+            <div className="item">
+              <div className="slider_item">
+                <h3>{t('h6')}</h3>
+                <p>{t('p5')}</p>
+                {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
           </OwlCarousel>
         </div>
       </div>
     </div>
+    <p style={{ textAlign: 'center', marginTop: '100px', color: '#31b1e7' }}>
+      {t('a1')}
+    </p>
   </div>
 );
 SliderSection.getInitialProps = async () => ({

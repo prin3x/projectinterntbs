@@ -12,7 +12,7 @@ const PricingSection = ({ t }: any) => (
         <div className="col-lg-6 col-md-12">
           <div className="pricing_box">
             <img className="lazyload" data-src="/img/price_1.png" alt="Image" />
-            <h3>Standard SMS</h3>
+            <h3>STANDAED SMS</h3>
             <p>{t('p1')}</p>
             <ul className="pricing_feature">
               <li>
@@ -27,6 +27,10 @@ const PricingSection = ({ t }: any) => (
                 <i className="far fa-check-circle"></i>
                 <p>{t('p4')}</p>
               </li>
+              <li>
+                <i className="far fa-check-circle"></i>
+                <p>{t('p5')}</p>
+              </li>
             </ul>
             <div className="price_plan">
               <span>{t('span1')}</span>
@@ -38,11 +42,12 @@ const PricingSection = ({ t }: any) => (
               </a>
             </div>
             <div className="price_bottom_text">
-              <p>{t('p5')}</p>
+              <p>{t('p6')}</p>
               <ul>
                 <li>{t('li1')}</li>
                 <li>{t('li2')}</li>
                 <li>{t('li3')}</li>
+                <li>{t('li4')}</li>
               </ul>
             </div>
           </div>
@@ -50,13 +55,9 @@ const PricingSection = ({ t }: any) => (
         <div className="col-lg-6 col-md-12">
           <div className="pricing_box">
             <img className="lazyload" data-src="/img/price_2.png" alt="Image" />
-            <h3>Corporate SMS</h3>
-            <p>{t('p6')}</p>
+            <h3>CORPORATE SMS</h3>
+            <p>{t('p7')}</p>
             <ul className="pricing_feature">
-              <li>
-                <i className="far fa-check-circle"></i>
-                <p>{t('p7')}</p>
-              </li>
               <li>
                 <i className="far fa-check-circle"></i>
                 <p>{t('p8')}</p>
@@ -64,6 +65,14 @@ const PricingSection = ({ t }: any) => (
               <li>
                 <i className="far fa-check-circle"></i>
                 <p>{t('p9')}</p>
+              </li>
+              <li>
+                <i className="far fa-check-circle"></i>
+                <p>{t('p10')}</p>
+              </li>
+              <li>
+                <i className="far fa-check-circle"></i>
+                <p>{t('p11')}</p>
               </li>
             </ul>
             <div className="price_plan">
@@ -76,7 +85,7 @@ const PricingSection = ({ t }: any) => (
               </a>
             </div>
             <div className="price_bottom_text">
-              <p>{t('p10')}</p>
+              <p>{t('p12')}</p>
               <ul>
                 <li>{t('li5')}</li>
                 <li>{t('li6')}</li>
@@ -89,7 +98,7 @@ const PricingSection = ({ t }: any) => (
       <div className="row">
         <div className="col-md-12">
           <div className="pricing_bottom_text">
-            <span>{t('span5')}</span>
+            {/* <span>{t('span5')}</span> */}
             <h3>{t('h2')}</h3>
             <a href="#" className="btn v3">
               {t('a3')}

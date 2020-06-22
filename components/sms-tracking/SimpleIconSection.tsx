@@ -48,7 +48,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   {t('p4-2')}
                 </p>
               </div>
-              <div className="simple_icon">
+              {/* <div className="simple_icon">
                 <img
                   className="lazyload"
                   data-src="/img/img_14.png"
@@ -59,7 +59,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   <br />
                   {t('p5-2')}
                 </p>
-              </div>
+              </div> */}
               <div className="simple_icon">
                 <img
                   className="lazyload"

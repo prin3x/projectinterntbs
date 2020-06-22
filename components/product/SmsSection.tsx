@@ -20,14 +20,14 @@ const SmsSection = ({ t }: any) => (
               <div className="col-lg-4 col-md-6">
                 <div className="sms_feature_item">
                   <p>{t('p2')}</p>
-                  <h3>2,000,00</h3>
+                  <h3>300,000+</h3>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
                 <div className="sms_feature_item">
                   <p>{t('p3')}</p>
                   <h3>
-                    2.9 <span>{t('span1')}</span>
+                    1.9 <span>{t('span1')}</span>
                   </h3>
                 </div>
               </div>

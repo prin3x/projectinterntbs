@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
   ssr: false,
@@ -67,33 +67,97 @@ const SimpleSliderSection = ({ t }: any) => (
                 />
                 <p>
                   {t('p1')}
-                  <span>{t('span1')}</span>
+                  <Link href="/">
+                    <a href="#">
+                      <span>{t('span1')}</span>
+                    </a>
+                  </Link>
                 </p>
                 <a href="#" className="btn v9">
-                  {t('a1')}
+                  {t('test')}
                 </a>
               </div>
             </div>
             <div className="item">
               <div className="simple_slider_item">
-                <h4>{t('h2')}</h4>
+                <h4>{t('h3')}</h4>
                 <img
                   className="lazyload"
                   data-src="/img/user_3.png"
                   alt="Image"
                 />
                 <p>
-                  {t('p1')}
-                  <span>{t('span1')}</span>
+                  {t('p2')}
+                  <Link href="/">
+                    <a href="#">
+                      <span>{t('span2')}</span>
+                    </a>
+                  </Link>
                 </p>
                 <a href="#" className="btn v9">
-                  {t('a1')}
+                  {t('test')}
+                </a>
+              </div>
+            </div>
+            <div className="item">
+              <div className="simple_slider_item">
+                <h4>{t('h4')}</h4>
+                <img
+                  className="lazyload"
+                  data-src="/img/user_3.png"
+                  alt="Image"
+                />
+                <p>{t('p3')}</p>
+                <a href="#" className="btn v9">
+                  {t('test')}
+                </a>
+              </div>
+            </div>
+            <div className="item">
+              <div className="simple_slider_item">
+                <h4>{t('h5')}</h4>
+                <img
+                  className="lazyload"
+                  data-src="/img/user_3.png"
+                  alt="Image"
+                />
+                <p>
+                  {t('p4')}
+                  <Link href="/">
+                    <a href="#">
+                      <span>{t('span4')}</span>
+                    </a>
+                  </Link>
+                </p>
+                <a href="#" className="btn v9">
+                  {t('test')}
+                </a>
+              </div>
+            </div>
+            <div className="item">
+              <div className="simple_slider_item">
+                <h4>{t('h6')}</h4>
+                <img
+                  className="lazyload"
+                  data-src="/img/user_3.png"
+                  alt="Image"
+                />
+                <p>
+                  {t('p5')}
+                  <Link href="/">
+                    <a href="#">
+                      <span>{t('span5')}</span>
+                    </a>
+                  </Link>
+                </p>
+                <a href="#" className="btn v9">
+                  {t('test')}
                 </a>
               </div>
             </div>
           </OwlCarousel>
           <a href="#" className="lang_link text-right pr-4">
-            {t('a2')}{' '}
+            {t('test')}
             <img className="lazyload" data-src="/img/arrow_3.png" alt="Image" />
           </a>
         </div>

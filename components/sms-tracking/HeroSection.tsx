@@ -17,9 +17,7 @@ const HeroSectionV4 = ({ t }: any) => (
           <div className="hero_text_one v2">
             <span>{t('span1')}</span>
             <h1>{t('h1')}</h1>
-            <p>
-              {t('p1')} <span>{t('span2')}</span> {t('p2')}
-            </p>
+            <p>{/* {t('p1')} <span>{t('span2')}</span> {t('p2')} */}</p>
           </div>
         </div>
       </div>
