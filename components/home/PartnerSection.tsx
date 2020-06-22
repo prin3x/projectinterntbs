@@ -1,13 +1,15 @@
 import dynamic from 'next/dynamic';
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
   ssr: false,
 });
-const PartnerSection = () => (
+const PartnerSection = ({ t }: any) => (
   <div className="partner_section">
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h6 className="partner_title">WE HAD THE PLEASURE WORKING WITH</h6>
+          <h6 className="partner_title">{t('h1')}</h6>
         </div>
         <div className="col-md-12">
           <OwlCarousel
@@ -85,4 +87,11 @@ const PartnerSection = () => (
     </div>
   </div>
 );
-export default PartnerSection;
+PartnerSection.getInitialProps = async () => ({
+  namespacesRequired: ['HomePartnerSection'],
+});
+
+PartnerSection.propTypes = {
+  t: PropTypes.func.isRequired,
+};
+export default withTranslation('HomePartnerSection')(PartnerSection);

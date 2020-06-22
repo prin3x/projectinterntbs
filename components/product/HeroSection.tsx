@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const HeroSection = ({ t }: any) => (
   <div
@@ -16,7 +16,7 @@ const HeroSection = ({ t }: any) => (
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="hero_text_one">
             <span>{t('span1')}</span>
-            <h1>SMS Provider</h1>
+            <h1>{t('h1')}</h1>
             <p>{t('p1')}</p>
           </div>
         </div>
@@ -40,9 +40,15 @@ const HeroSection = ({ t }: any) => (
               {t('span2-2')}
             </span>
             <h2>
-              <span>{t('span3')}</span> {t('h1')}
+              <span>{t('span3')}</span>
+              <br /> {t('h2')}
             </h2>
             <p>{t('p2')}</p>
+            <Link href="/">
+              <a>
+                <p style={{ color: '#31b1e7' }}>{t('p3')}</p>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

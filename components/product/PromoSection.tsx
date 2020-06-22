@@ -57,7 +57,7 @@ const PromoSection = ({ t }: any) => (
                 alt="Image"
               />
               <a href="#" className="btn v2">
-                TBS Developer
+                {t('a2')}
               </a>
             </div>
           </div>
@@ -88,7 +88,7 @@ const PromoSection = ({ t }: any) => (
               {t('p5-3')}
             </p>
             <a className="link" href="#">
-              {t('a2')}
+              {t('a3')}
             </a>
             <h6 className="promo_link">
               {t('h3-1')}
@@ -109,14 +109,14 @@ const PromoSection = ({ t }: any) => (
             <p>{t('p6')}</p>
             <Link href="/sms-tracking">
               <a className="link" href="#">
-                {t('a3')}
+                {t('a4')}
               </a>
             </Link>
-            <h6 className="promo_link">
+            {/* <h6 className="promo_link">
               {t('h5-1')}
               <span>{t('span3')}</span>
               {t('h5-2')}
-            </h6>
+            </h6> */}
           </div>
         </div>
         <div className="col-lg-7 col-md-12 col-12 order-lg-2 order-md-1 order-1">
@@ -128,7 +128,7 @@ const PromoSection = ({ t }: any) => (
                   data-src="/img/img_4.png"
                   alt="Image"
                 />
-                <p>{t('p7')}</p>
+                <p>{t('p7-1')}</p>
               </div>
             </div>
             <div className="col-md-4 col-12">
@@ -138,7 +138,7 @@ const PromoSection = ({ t }: any) => (
                   data-src="/img/img_5.png"
                   alt="Image"
                 />
-                <p>{t('p7')}</p>
+                <p>{t('p7-2')}</p>
               </div>
             </div>
             <div className="col-md-4 col-12">
@@ -148,7 +148,7 @@ const PromoSection = ({ t }: any) => (
                   data-src="/img/img_6.png"
                   alt="Image"
                 />
-                <p>{t('p7')}</p>
+                <p>{t('p7-3')}</p>
               </div>
             </div>
           </div>
@@ -169,11 +169,11 @@ const PromoSection = ({ t }: any) => (
             </h3>
             <p>{t('p8')}</p>
             <a href="#" className="btn v2">
-              {t('a4')}
+              {t('a5')}
             </a>
             <Link href="/otp">
               <a className="link" href="#">
-                {t('a5')}
+                {t('a6')}
               </a>
             </Link>
             <h6 className="promo_link">

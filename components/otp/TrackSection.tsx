@@ -30,8 +30,9 @@ const TrackSection = ({ t }: any) => (
               <div className="track_box">
                 <h4>
                   {t('h2-1')}
-                  <span>{t('span1')}</span> <br />
-                  {t('h2-2')} <span>API</span> <br />
+                  <br />
+                  {t('h2-2')}
+                  <span>{t('span1')}</span>
                   {t('h2-3')}
                 </h4>
                 <a href="#" className="btn v3">
@@ -42,9 +43,13 @@ const TrackSection = ({ t }: any) => (
             <div className="col-lg-6">
               <div className="track_box v2">
                 <h4>
-                  {t('h3-1')} <br />
-                  {t('h3-2')} <span>Corporate Package</span> <br />
+                  {t('h3-1')}
+                  <span>{t('span2')}</span>
+                  {t('h3-2')}
+                  <br />
                   {t('h3-3')}
+                  <span>{t('span3')}</span>
+                  {t('h3-4')}
                 </h4>
                 <a href="#" className="btn v3">
                   {t('a2')}
