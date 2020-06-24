@@ -5,11 +5,10 @@ const FeatureSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h3 className="section_title">
-            {t('h1')}
-            <span className="col_one">ThaiBulk</span>{' '}
-            <span className="col_two">SMS</span>
-          </h3>
+          <h3
+            className="section_title"
+            dangerouslySetInnerHTML={{ __html: t('homefeature.header') }}
+          ></h3>
         </div>
       </div>
       <div className="row mt-5">
@@ -17,12 +16,12 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img className="lazyload" data-src="/img/icon_1.png" alt="Image" />
             <div className="single_feature_text">
-              <h4>No.1 SMS Platform</h4>
-              <p>
-                {t('p1')}
-                <br />
-                {t('p1-1')}
-              </p>
+              <h4>{t('homefeature.feature.1.title')}</h4>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t('homefeature.feature.1.desc'),
+                }}
+              ></p>
             </div>
           </div>
         </div>
@@ -30,12 +29,12 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img className="lazyload" data-src="/img/icon_2.png" alt="Image" />
             <div className="single_feature_text">
-              <h4>Fast & Reliable</h4>
-              <p>
-                {t('p2')}
-                <br />
-                {t('p2-1')}
-              </p>
+              <h4>{t('homefeature.feature.2.title')}</h4>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t('homefeature.feature.2.desc'),
+                }}
+              ></p>
             </div>
           </div>
         </div>
@@ -43,11 +42,12 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img className="lazyload" data-src="/img/icon_3.png" alt="Image" />
             <div className="single_feature_text">
-              <h4>Smart Console</h4>
-              <p>
-                {t('p3')} <br />
-                {t('p3-1')}
-              </p>
+              <h4>{t('homefeature.feature.3.title')}</h4>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t('homefeature.feature.3.desc'),
+                }}
+              ></p>
             </div>
           </div>
         </div>
@@ -55,12 +55,12 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img className="lazyload" data-src="/img/icon_4.png" alt="Image" />
             <div className="single_feature_text">
-              <h4>Easily Integrated API</h4>
-              <p>
-                {t('p4')}
-                <br />
-                {t('p4-1')}
-              </p>
+              <h4>{t('homefeature.feature.4.title')}</h4>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t('homefeature.feature.4.desc'),
+                }}
+              ></p>
             </div>
           </div>
         </div>

@@ -1,14 +1,16 @@
 {
-  "menu-1": "Product",
-  "menu-1-1": "Features",
-  "menu-1-2": "Pricing",
-  "menu-2": "Blog",
-  "menu-2-1": "Knowledge",
-  "menu-2-2": "Use Cases",
-  "menu-2-3": "Success Stories",
-  "menu-2-4": "Intro to SMS",
-  "menu-3": "Support",
-  "menu-3-1": "How to order",
-  "menu-3-2": "Developer",
-  "menu-4": "Follow Us"
+  "footer": {
+    "service": "ENบริการ",
+    "highlight": "ENจุดเด่น",
+    "pricing": "ENราคา",
+    "database": "ENคลังข้อมูล",
+    "knowledge": "ENความรู้",
+    "example": "ENตัวอย่างการใช้",
+    "successstories": "ENเรื่องราวความสำเร็จ",
+    "smsbasic": "ENSMS เบื้องต้น",
+    "support": "ENซัพพอร์ต",
+    "howtoorder": "ENวิธีสั่งซื้อ",
+    "documentation": "ENสำหรับนักพัฒนา",
+    "about": "ENเกี่ยวกับบริษัท"
+  }
 }

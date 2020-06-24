@@ -1,5 +1,8 @@
 export interface AuthLogin {
   passcode: string;
-  error: boolean;
-  errorText: string;
+  error: ErrorMessage;
+}
+export interface ErrorMessage {
+  code: string;
+  erromessagerText: string;
 }

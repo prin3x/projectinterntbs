@@ -1,18 +1,17 @@
 {
-  "menu-1": "Product",
-  "menu-2": "Pricing",
-  "menu-3": "Knowledge",
-  "menu-3-1": "Resources Landing",
-  "menu-3-1-s": "ENReach every customer, anywhere22",
-  "menu-3-2": "Knowledge Listing",
-  "menu-3-2-s": "ENExtend and amplify your marketing campaigns",
-  "menu-3-3": "UseCases Listing",
-  "menu-3-3-s": "ENStreamline workforce operations and customer fulfillment",
-  "menu-3-4": "Success Stories Listing",
-  "menu-3-4-s": "ENDeliver personalized customer experiences at scale",
-  "menu-4": "Developer",
-  "menu-5": "Contact",
-  "menu-6": "Login",
-  "menu-7": "Buy",
-  "menu-8": "How to order"
+  "header": {
+    "product": "Product",
+    "pricing": "Pricing",
+    "howtoorder": "How to order",
+    "database": "Knowledge",
+    "resources": "Resources Landing",
+    "knowledge": "Knowledge Listing",
+    "example": "UseCases Listing",
+    "successstories": "Success Stories Listing",
+    "documentation": "Developer",
+    "contact": "Contact",
+    "login": "Login",
+    "logout": "Logout",
+    "buy": "Buy"
+  }
 }

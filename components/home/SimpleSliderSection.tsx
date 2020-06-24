@@ -11,10 +11,11 @@ const SimpleSliderSection = ({ t }: any) => (
         <div className="col-lg-5 col-md-6">
           <div className="simple_slider_heading_wrap">
             <div className="simple_slider_heading">
-              <h3>
-                {t('h1')} <br />
-                {t('h1-1')} <span>SMS</span>
-              </h3>
+              <h3
+                dangerouslySetInnerHTML={{
+                  __html: t('homesimpleslider.header'),
+                }}
+              ></h3>
             </div>
             <div className="simple_slider_heading_img">
               <img
@@ -59,105 +60,105 @@ const SimpleSliderSection = ({ t }: any) => (
           >
             <div className="item">
               <div className="simple_slider_item">
-                <h4>{t('h2')}</h4>
+                <h4>{t('homesimpleslider.item.1.title')}</h4>
                 <img
                   className="lazyload"
                   data-src="/img/user_3.png"
                   alt="Image"
                 />
                 <p>
-                  {t('p1')}
+                  {t('homesimpleslider.item.1.desc')}
                   <Link href="/">
                     <a href="#">
-                      <span>{t('span1')}</span>
+                      <span>{t('homesimpleslider.item.1.link')}</span>
                     </a>
                   </Link>
                 </p>
                 <a href="#" className="btn v9">
-                  {t('test')}
+                  {t('homesimpleslider.testBtn')}
                 </a>
               </div>
             </div>
             <div className="item">
               <div className="simple_slider_item">
-                <h4>{t('h3')}</h4>
+                <h4>{t('homesimpleslider.item.2.title')}</h4>
                 <img
                   className="lazyload"
                   data-src="/img/user_3.png"
                   alt="Image"
                 />
                 <p>
-                  {t('p2')}
+                  {t('homesimpleslider.item.2.desc')}
                   <Link href="/">
                     <a href="#">
-                      <span>{t('span2')}</span>
+                      <span>{t('homesimpleslider.item.2.link')}</span>
                     </a>
                   </Link>
                 </p>
                 <a href="#" className="btn v9">
-                  {t('test')}
+                  {t('homesimpleslider.testBtn')}
                 </a>
               </div>
             </div>
             <div className="item">
               <div className="simple_slider_item">
-                <h4>{t('h4')}</h4>
+                <h4>{t('homesimpleslider.item.3.title')}</h4>
                 <img
                   className="lazyload"
                   data-src="/img/user_3.png"
                   alt="Image"
                 />
-                <p>{t('p3')}</p>
+                <p>{t('homesimpleslider.item.3.desc')}</p>
                 <a href="#" className="btn v9">
-                  {t('test')}
+                  {t('homesimpleslider.testBtn')}
                 </a>
               </div>
             </div>
             <div className="item">
               <div className="simple_slider_item">
-                <h4>{t('h5')}</h4>
-                <img
-                  className="lazyload"
-                  data-src="/img/user_3.png"
-                  alt="Image"
-                />
-                <p>
-                  {t('p4')}
-                  <Link href="/">
-                    <a href="#">
-                      <span>{t('span4')}</span>
-                    </a>
-                  </Link>
-                </p>
-                <a href="#" className="btn v9">
-                  {t('test')}
-                </a>
-              </div>
-            </div>
-            <div className="item">
-              <div className="simple_slider_item">
-                <h4>{t('h6')}</h4>
+                <h4>{t('homesimpleslider.item.4.title')}</h4>
                 <img
                   className="lazyload"
                   data-src="/img/user_3.png"
                   alt="Image"
                 />
                 <p>
-                  {t('p5')}
+                  {t('homesimpleslider.item.4.desc')}
                   <Link href="/">
                     <a href="#">
-                      <span>{t('span5')}</span>
+                      <span>{t('homesimpleslider.item.4.link')}</span>
                     </a>
                   </Link>
                 </p>
                 <a href="#" className="btn v9">
-                  {t('test')}
+                  {t('homesimpleslider.testBtn')}
+                </a>
+              </div>
+            </div>
+            <div className="item">
+              <div className="simple_slider_item a">
+                <h4>{t('homesimpleslider.item.5.title')}</h4>
+                <img
+                  className="lazyload"
+                  data-src="/img/user_3.png"
+                  alt="Image"
+                />
+                <p>
+                  {t('homesimpleslider.item.5.desc')}
+                  <Link href="/">
+                    <a href="#">
+                      <span>{t('homesimpleslider.item.5.link')}</span>
+                    </a>
+                  </Link>
+                </p>
+                <a href="#" className="btn v9">
+                  {t('homesimpleslider.testBtn')}
                 </a>
               </div>
             </div>
           </OwlCarousel>
           <a href="#" className="lang_link text-right pr-4">
-            {t('test')}
+            {t('homesimpleslider.testBtn')}
             <img className="lazyload" data-src="/img/arrow_3.png" alt="Image" />
           </a>
         </div>

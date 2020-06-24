@@ -6,16 +6,16 @@ const Footer = ({ t }: any) => (
       <div className="row">
         <div className="col-md-3 col-6">
           <div className="footer_widget">
-            <h4>{t('menu-1')}</h4>
+            <h4>{t('footer.service')}</h4>
             <ul>
               <li>
                 <Link href="/product">
-                  <a href="#">{t('menu-1-1')}</a>
+                  <a href="#">{t('footer.highlight')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/pricing">
-                  <a href="#">{t('menu-1-2')}</a>
+                  <a href="#">{t('footer.pricing')}</a>
                 </Link>
               </li>
             </ul>
@@ -23,26 +23,26 @@ const Footer = ({ t }: any) => (
         </div>
         <div className="col-md-3 col-6">
           <div className="footer_widget">
-            <h4>{t('menu-2')}</h4>
+            <h4>{t('footer.database')}</h4>
             <ul>
               <li>
                 <Link href="/KnowledgeListing">
-                  <a href="#">{t('menu-2-1')}</a>
+                  <a href="#">{t('footer.knowledge')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/UseCasesListing">
-                  <a href="#">{t('menu-2-2')}</a>
+                  <a href="#">{t('footer.example')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/SuccessStoriesListing">
-                  <a href="#">{t('menu-2-3')}</a>
+                  <a href="#">{t('footer.successstories')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="">
-                  <a href="#">{t('menu-2-4')}</a>
+                  <a href="#">{t('footer.smsbasic')}</a>
                 </Link>
               </li>
             </ul>
@@ -50,16 +50,16 @@ const Footer = ({ t }: any) => (
         </div>
         <div className="col-md-3 col-6">
           <div className="footer_widget">
-            <h4>{t('menu-3')}</h4>
+            <h4>{t('footer.support')}</h4>
             <ul>
               <li>
                 <Link href="/how-to-order">
-                  <a href="#">{t('menu-3-1')}</a>
+                  <a href="#">{t('footer.howtoorder')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/Documentation">
-                  <a href="#">{t('menu-3-2')}</a>
+                  <a href="#">{t('footer.documentation')}</a>
                 </Link>
               </li>
             </ul>
@@ -70,7 +70,7 @@ const Footer = ({ t }: any) => (
             <Link href="/fb">
               <a href="#">
                 <h4>
-                  {t('menu-4')}
+                  {t('footer.about')}
                   <img
                     className="lazyload"
                     style={{ maxWidth: '25px', marginLeft: '20px' }}

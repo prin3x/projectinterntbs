@@ -6,14 +6,13 @@ const GlobeSection = ({ t }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="globe_text">
-            <h3>
-              {t('h1-1')} <span>{t('span1-1')}</span> {t('h1-2')}{' '}
-              <span>{t('span1-2')}</span> {t('h1-3')}
-            </h3>
-            <p>{t('p1')}</p>
+            <h3
+              dangerouslySetInnerHTML={{ __html: t('homeglobe.header') }}
+            ></h3>
+            <p>{t('homeglobe.title')}</p>
             <Link href="/contact">
               <a href="#" className="btn v3">
-                {t('a1')}
+                {t('homeglobe.detailBtn')}
               </a>
             </Link>
           </div>

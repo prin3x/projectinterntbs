@@ -17,8 +17,10 @@ export async function login(
     console.log(password);
     let loginResponse: AuthLogin = {
       passcode: 'test passcode',
-      error: false,
-      errorText: '',
+      error: {
+        code: '',
+        erromessagerText: '',
+      },
     };
     Cookie.set('PASSCODE', loginResponse.passcode, { expires: 0.15 });
     return loginResponse;
@@ -26,8 +28,10 @@ export async function login(
     console.log(error);
     let loginResponse: AuthLogin = {
       passcode: '',
-      error: true,
-      errorText: 'ชื่อผู้ใช้งาน หรือ รหัสผ่านไม่ถูกต้อง กรุณาลองอีกครั้ง #1',
+      error: {
+        code: 'login.invalid.userpass',
+        erromessagerText: 'Invalid username/password',
+      },
     };
     return loginResponse;
   }

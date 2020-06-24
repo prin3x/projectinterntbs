@@ -1,0 +1,9 @@
+{
+  "error": {
+    "login": {
+      "invalid": {
+        "userpass": "username/password ไม่ถูกต้อง"
+      }
+    }
+  }
+}

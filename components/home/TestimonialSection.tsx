@@ -9,9 +9,12 @@ const TestimonialSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h3 className="section_title">
-            {t('h1')} <span className="col_one">ThaiBulk</span>{' '}
-            <span className="col_two">SMS</span>
+          <h3
+            className="section_title"
+            dangerouslySetInnerHTML={{ __html: t('hometestimonial.header') }}
+          >
+            {/* {t('h1')} <span className="col_one">ThaiBulk</span>{' '}
+            <span className="col_two">SMS</span> */}
           </h3>
         </div>
       </div>
@@ -45,7 +48,9 @@ const TestimonialSection = ({ t }: any) => (
           >
             <div className="item">
               <div className="testimonial_item">
-                <p className="client_quote">{t('p1')}</p>
+                <p className="client_quote">
+                  {t('hometestimonial.item.1.content')}
+                </p>
                 <div className="client_info">
                   <div className="client_img">
                     <img
@@ -55,7 +60,7 @@ const TestimonialSection = ({ t }: any) => (
                     />
                   </div>
                   <div className="client_name">
-                    <h6>{t('h2')}</h6>
+                    <h6>{t('hometestimonial.item.1.credit')}</h6>
                     <p>{t('p2')}</p>
                   </div>
                 </div>
@@ -63,7 +68,9 @@ const TestimonialSection = ({ t }: any) => (
             </div>
             <div className="item">
               <div className="testimonial_item">
-                <p className="client_quote">{t('p1')}</p>
+                <p className="client_quote">
+                  {t('hometestimonial.item.1.content')}
+                </p>
                 <div className="client_info">
                   <div className="client_img">
                     <img
@@ -73,7 +80,7 @@ const TestimonialSection = ({ t }: any) => (
                     />
                   </div>
                   <div className="client_name">
-                    <h6>{t('h2')}</h6>
+                    <h6>{t('hometestimonial.item.1.credit')}</h6>
                     <p>{t('p2')}</p>
                   </div>
                 </div>
@@ -81,7 +88,9 @@ const TestimonialSection = ({ t }: any) => (
             </div>
             <div className="item">
               <div className="testimonial_item">
-                <p className="client_quote">{t('p1')}</p>
+                <p className="client_quote">
+                  {t('hometestimonial.item.1.content')}
+                </p>
                 <div className="client_info">
                   <div className="client_img">
                     <img
@@ -91,7 +100,7 @@ const TestimonialSection = ({ t }: any) => (
                     />
                   </div>
                   <div className="client_name">
-                    <h6>{t('h2')}</h6>
+                    <h6>{t('hometestimonial.item.1.credit')}</h6>
                     <p>{t('p2')}</p>
                   </div>
                 </div>
@@ -104,7 +113,7 @@ const TestimonialSection = ({ t }: any) => (
         <div className="col-md-12 text-center">
           <Link href="/SuccessStoriesListing">
             <a href="#" className="btn v6">
-              {t('a1')}
+              {t('hometestimonial.storyBtn')}
             </a>
           </Link>
         </div>

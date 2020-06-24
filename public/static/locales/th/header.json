@@ -1,18 +1,17 @@
 {
-  "menu-1": "บริการ",
-  "menu-2": "ราคา",
-  "menu-3": "คลังข้อมูล",
-  "menu-3-1": "คลังข้อมูลทั้งหมด",
-  "menu-3-1-s": "Reach every customer, anywhere22",
-  "menu-3-2": "ความรู้",
-  "menu-3-2-s": "Extend and amplify your marketing campaigns",
-  "menu-3-3": "ตัวอย่างการใช้",
-  "menu-3-3-s": "Streamline workforce operations and customer fulfillment",
-  "menu-3-4": "เรื่องราวความสำเร็จ",
-  "menu-3-4-s": "Deliver personalized customer experiences at scale",
-  "menu-4": "สำหรับนักพัฒนา",
-  "menu-5": "ติดต่อเรา",
-  "menu-6": "ล็อกอิน",
-  "menu-7": "ซื้อเลย",
-  "menu-8": "วิธีสั่งซื้อ"
+  "header": {
+    "product": "บริการ",
+    "pricing": "ราคา",
+    "howtoorder": "วิธีสั่งซื้อ",
+    "database": "คลังข้อมูล",
+    "resources": "คลังข้อมูลทั้งหมด",
+    "knowledge": "ความรู้",
+    "example": "ตัวอย่างการใช้",
+    "successstories": "เรื่องราวความสำเร็จ",
+    "documentation": "สำหรับนักพัฒนา",
+    "contact": "ติดต่อเรา",
+    "login": "Login",
+    "logout": "Logout",
+    "buy": "ซื้อเลย"
+  }
 }

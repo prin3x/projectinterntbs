@@ -13,8 +13,9 @@ const LoginComponents = ({ t }: any) => {
       inputUsername.current.value,
       inputPassword.current.value
     );
-    if (user.error) {
-      setIsError(user.errorText);
+    if (user.error.code !== '') {
+      // setIsError(t('ErrorMessage:error.login.invalid.userpass'));
+      setIsError(t(`ErrorMessage:error.${user.error.code}`));
     } else {
       window.location.reload();
     }
@@ -68,7 +69,7 @@ const LoginComponents = ({ t }: any) => {
 };
 LoginComponents.getInitialProps = async () => {
   return {
-    namespacesRequired: ['Login'],
+    namespacesRequired: ['Login', 'ErrorMessage'],
   };
 };
 
@@ -76,4 +77,4 @@ LoginComponents.propTypes = {
   t: PropTypes.func.isRequired,
   wtf: PropTypes.string,
 };
-export default withTranslation('Login')(LoginComponents);
+export default withTranslation(['Login', 'ErrorMessage'])(LoginComponents);
