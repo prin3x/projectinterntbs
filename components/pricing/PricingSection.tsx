@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 const PricingSection = ({ t }: any) => {
-  React.useEffect(() => {
-    // $('select').niceSelect();
-  }, []);
+  React.useEffect(() => {}, []);
   return (
     <div
       className="pricing-section position-relative pricing__top lazyload"

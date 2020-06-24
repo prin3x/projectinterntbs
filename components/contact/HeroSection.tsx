@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 const menuClick = () => {
-  if ($('.devnice-select').hasClass('open'))
-    $('.devnice-select').removeClass('open');
-  else $('.devnice-select').addClass('open');
+  var elDivnice = document.getElementsByClassName('devnice-select')[0];
+  if (elDivnice.classList.contains('open')) elDivnice.classList.remove('open');
+  else elDivnice.classList.add('open');
 };
 const HeroSection = ({ t }: any) => {
-  React.useEffect(() => {
-    // $('select').niceSelect();
-  }, []);
+  React.useEffect(() => {}, []);
   return (
     <div className="container">
       <style jsx>{`

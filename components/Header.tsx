@@ -1,35 +1,45 @@
 import PropTypes from 'prop-types';
 import { i18n, withTranslation, Link } from '../i18n';
-import * as React from 'react';
-const menuClick = () => {
-  if ($('.divnice').hasClass('open')) $('.divnice').removeClass('open');
-  else $('.divnice').addClass('open');
-};
-const changeLang = (lang: any) => {
-  $('.option').removeClass('selected').removeClass('focus');
-  $('.' + lang)
-    .addClass('selected')
-    .addClass('focus');
-  $('.current').text(lang);
+import React, { useState, useRef } from 'react';
+import Cookie from 'js-cookie';
+
+const logOut = () => {
+  Cookie.remove('PASSCODE');
+  window.location.reload();
 };
 
 const Header = ({ t }: any) => {
   const lang = i18n.language;
-  React.useEffect(() => {
-    // window is accessible here.
-    var wind = $(window);
-    var sticky = $('.header-bar-area');
-    wind.on('scroll', function () {
-      var scroll = window.pageYOffset;
+  const [isLogin, setIsLogin] = useState(false);
+  const headerBar: any = useRef(null);
+  function sticky() {
+    var scroll = window.pageYOffset;
+    if (headerBar.current !== null) {
       if (scroll < 100) {
-        sticky.removeClass('sticky');
+        headerBar.current.classList.remove('sticky');
       } else {
-        sticky.addClass('sticky');
+        headerBar.current.classList.add('sticky');
       }
-    });
+    }
+  }
+  function menuClick() {
+    var elDivnice = document.getElementsByClassName('divnice')[0];
+    if (elDivnice.classList.contains('open'))
+      elDivnice.classList.remove('open');
+    else elDivnice.classList.add('open');
+  }
+  React.useEffect(() => {
+    // check Cookie Login
+    if (Cookie.get('PASSCODE')) {
+      setIsLogin(true);
+    }
+    window.addEventListener('scroll', sticky);
+    return () => {
+      window.removeEventListener('scroll', sticky);
+    };
   }, []);
   return (
-    <div className="header-bar-area position-fixed w-100 ">
+    <div ref={headerBar} className="header-bar-area position-fixed w-100 ">
       <div className="container">
         <div className="row">
           <div className="col-md-12 lg-none">
@@ -43,8 +53,8 @@ const Header = ({ t }: any) => {
                   <option>En</option>
                 </select>
                 <div
-                  className="nice-select user_select divnice"
                   onClick={menuClick}
+                  className="nice-select user_select divnice"
                 >
                   <span className="current">{lang}</span>
                   <ul className="list">
@@ -56,7 +66,6 @@ const Header = ({ t }: any) => {
                       }
                       onClick={() => {
                         i18n.changeLanguage('th');
-                        changeLang('th');
                       }}
                     >
                       Th
@@ -69,7 +78,6 @@ const Header = ({ t }: any) => {
                       }
                       onClick={() => {
                         i18n.changeLanguage('en');
-                        changeLang('en');
                       }}
                     >
                       En
@@ -274,11 +282,22 @@ const Header = ({ t }: any) => {
           <div className="col-lg-3 lg-none">
             <div className="menu_btn">
               <ul>
-                <li>
+                {isLogin === true ? (
+                  <li>
+                    <a onClick={logOut}>ออกจากระบบ</a>
+                  </li>
+                ) : (
+                  <li>
+                    <Link href="/login">
+                      <a href="#">{t('menu-6')}</a>
+                    </Link>
+                  </li>
+                )}
+                {/* <li>
                   <Link href="/login">
                     <a href="#">{t('menu-6')}</a>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/pricing">
                     <a className="btn v1" href="#">

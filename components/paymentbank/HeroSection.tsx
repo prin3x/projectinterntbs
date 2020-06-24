@@ -1,18 +1,23 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-import * as React from 'react';
+import React, { useRef } from 'react';
 const HeroSection = ({ t }: any) => {
-  React.useEffect(() => {
-    var wind = $(window);
-    var sticky__box = $('.side__box');
-    wind.on('scroll', function () {
-      var scroll = window.pageYOffset;
+  const stickyBoxBar: any = useRef(null);
+  function stickyBox() {
+    var scroll = window.pageYOffset;
+    if (stickyBoxBar.current !== null) {
       if (scroll < 300) {
-        sticky__box.removeClass('sticky__box');
+        stickyBoxBar.current.classList.remove('sticky__box');
       } else {
-        sticky__box.addClass('sticky__box');
+        stickyBoxBar.current.classList.add('sticky__box');
       }
-    });
+    }
+  }
+  React.useEffect(() => {
+    window.addEventListener('scroll', stickyBox);
+    return () => {
+      window.removeEventListener('scroll', stickyBox);
+    };
   }, []);
   return (
     <div className="container">
@@ -317,7 +322,7 @@ const HeroSection = ({ t }: any) => {
         </div>
 
         <div className="col-xl-4 order-2 order-xl-3">
-          <div className="box__wrapper side__box">
+          <div className="box__wrapper side__box" ref={stickyBoxBar}>
             <div className="box__header">
               <h5>{t('h11')}</h5>
             </div>

@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 const FaqSection = ({ t }: any) => {
-  React.useEffect(() => {
-    // $('select').niceSelect();
-  }, []);
+  React.useEffect(() => {}, []);
   return (
     <div
       className="faq_section lazyload"
