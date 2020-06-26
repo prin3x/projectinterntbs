@@ -15,14 +15,8 @@ const HeroSectionV3 = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12 col-12">
           <div className="hero_text_one v2">
-            <h1>
-              <span> {t('span1')} </span> {t('h1')} <br />
-              {t('h2')} <br />
-              {t('h3')}
-            </h1>
-            <p>
-              {t('p1')} <span>{t('span2')}</span> {t('p2')}
-            </p>
+            <h1 dangerouslySetInnerHTML={{ __html: t('otphero.title') }}></h1>
+            <p dangerouslySetInnerHTML={{ __html: t('otphero.footer') }}></p>
           </div>
         </div>
       </div>

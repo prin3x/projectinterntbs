@@ -22,7 +22,7 @@ const LoginComponents = ({ t }: any) => {
   };
   return (
     <div className="login_section">
-      <h2>{t('h1')}</h2>
+      <h2>{t('login.header')}</h2>
       <div className="form-login">
         <input
           ref={inputUsername}
@@ -31,7 +31,7 @@ const LoginComponents = ({ t }: any) => {
           name="username"
           className="input-txt01"
           maxLength={50}
-          placeholder={t('input1')}
+          placeholder={t('login.username')}
         />
         <input
           ref={inputPassword}
@@ -40,7 +40,7 @@ const LoginComponents = ({ t }: any) => {
           name="password"
           className="input-txt01"
           maxLength={50}
-          placeholder={t('input2')}
+          placeholder={t('login.password')}
         />
         <div className="link-forgot">
           {isError && (
@@ -51,16 +51,16 @@ const LoginComponents = ({ t }: any) => {
             </div>
           )}
           <Link href="/register">
-            <a href="">{t('a1')}</a>
+            <a href="">{t('login.register')}</a>
           </Link>
           &nbsp;&nbsp;&nbsp;
           <Link href="/forgot-password">
-            <a href="">{t('a2')}</a>
+            <a href="">{t('login.forgotpassword')}</a>
           </Link>
         </div>
         <div className="btn-login">
           <a className="btn v2" href="#" onClick={LoginClick}>
-            {t('a3')}
+            {t('login.loginBtn')}
           </a>
         </div>
       </div>

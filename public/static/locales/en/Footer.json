@@ -1,16 +1,16 @@
 {
   "footer": {
-    "service": "ENบริการ",
-    "highlight": "ENจุดเด่น",
-    "pricing": "ENราคา",
-    "database": "ENคลังข้อมูล",
-    "knowledge": "ENความรู้",
-    "example": "ENตัวอย่างการใช้",
-    "successstories": "ENเรื่องราวความสำเร็จ",
-    "smsbasic": "ENSMS เบื้องต้น",
-    "support": "ENซัพพอร์ต",
-    "howtoorder": "ENวิธีสั่งซื้อ",
-    "documentation": "ENสำหรับนักพัฒนา",
-    "about": "ENเกี่ยวกับบริษัท"
+    "service": "Product",
+    "highlight": "Features",
+    "pricing": "Pricing",
+    "database": "Blog",
+    "knowledge": "knowledge",
+    "example": "Use Cases",
+    "successstories": "Success Stories",
+    "smsbasic": "Intro to SNS",
+    "support": "Support",
+    "howtoorder": "How to order",
+    "documentation": "Developer",
+    "about": "Follow Us"
   }
 }

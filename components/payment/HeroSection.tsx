@@ -23,19 +23,19 @@ const HeroSection = ({ t }: any) => {
     <div className="container">
       <div className="row hero_top_one">
         <div className="col-12 text-center">
-          <h3 className="section__title">{t('h1')}</h3>
+          <h3 className="section__title">{t('paymenthero.header')}</h3>
         </div>
 
         <div className="col-xl-8 order-3 order-xl-2">
           <div className="box__wrapper">
             <div className="box__header">
-              <h5>{t('h2')}</h5>
+              <h5>{t('paymenthero.payment.header')}</h5>
             </div>
             <div className="box__body">
               <div className="box__content">
                 <div className="row">
                   <div className="col-12">
-                    <h6>{t('h3')}</h6>
+                    <h6>{t('paymenthero.payment.creditnow.header')}</h6>
                   </div>
                   <div className="col-md-6">
                     <div className="info__box">
@@ -46,11 +46,13 @@ const HeroSection = ({ t }: any) => {
                           alt=""
                         />
                       </div>
-                      <p>
-                        {t('p1-1')}
-                        <br />
-                        {t('p1-2')}
-                      </p>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: t(
+                            'paymenthero.payment.creditnow.qrcodetitle'
+                          ),
+                        }}
+                      ></p>
                     </div>
                   </div>
 
@@ -63,7 +65,9 @@ const HeroSection = ({ t }: any) => {
                           alt=""
                         />
                       </div>
-                      <p>{t('p2')}</p>
+                      <p>
+                        {t('paymenthero.payment.creditnow.creditcradtitile')}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -72,7 +76,7 @@ const HeroSection = ({ t }: any) => {
               <div className="box__content border-0">
                 <div className="row align-items-center">
                   <div className="col-12">
-                    <h6>{t('p3')}</h6>
+                    <h6>{t('paymenthero.payment.creditwait.header')}</h6>
                   </div>
                   <div className="col-md-6">
                     <div className="info__box">
@@ -83,7 +87,7 @@ const HeroSection = ({ t }: any) => {
                           alt=""
                         />
                       </div>
-                      <p>{t('p4')}</p>
+                      <p>{t('paymenthero.payment.creditwait.title')}</p>
                     </div>
                   </div>
 
@@ -94,11 +98,10 @@ const HeroSection = ({ t }: any) => {
                         marginTop: '30px',
                         fontWeight: 400,
                       }}
-                    >
-                      {t('p5-1')}
-                      <br />
-                      {t('p5-2')}
-                    </p>
+                      dangerouslySetInnerHTML={{
+                        __html: t('paymenthero.payment.creditwait.desc'),
+                      }}
+                    ></p>
                   </div>
                 </div>
               </div>
@@ -111,7 +114,7 @@ const HeroSection = ({ t }: any) => {
                 <input type="radio" name="radio" />
                 <span className="checkmark"></span>
               </label>
-              <h5>{t('h4')}</h5>
+              <h5>{t('paymenthero.taxheader')}</h5>
             </div>
             <div className="box__body">
               <div
@@ -120,13 +123,18 @@ const HeroSection = ({ t }: any) => {
               >
                 <div className="row">
                   <div className="col-12">
-                    <h6 className="border__bottom">{t('h5')}</h6>
+                    <h6 className="border__bottom">
+                      {t('paymenthero.taxaddress')}
+                    </h6>
 
-                    <h6 style={{ marginTop: '30px' }}>{t('h6')}</h6>
+                    <h6 style={{ marginTop: '30px' }}>
+                      บริษัท วันม๊อบบี้ จำกัด
+                    </h6>
                     <p style={{ color: '#5b6e80', fontWeight: 400 }}>
-                      {t('h7-1')}
+                      เลขที่ 2521/10 ถนนลาดพร้าว แขวงคลองเจ้าคุณสิงห์
+                      เขตวังทองหลาง กทม 10310
                       <br />
-                      {t('h7-2')}
+                      เลขทะเบียนนิติบุคคลเลขที่ 0105550113634
                     </p>
 
                     <a
@@ -138,7 +146,7 @@ const HeroSection = ({ t }: any) => {
                         height: '65px',
                       }}
                     >
-                      {t('a1')}
+                      {t('paymenthero.changeaddressBtn')}
                     </a>
                   </div>
                 </div>
@@ -152,7 +160,7 @@ const HeroSection = ({ t }: any) => {
                 <input type="radio" name="radio" />
                 <span className="checkmark"></span>
               </label>
-              <h5>{t('h8')}</h5>
+              <h5>{t('paymenthero.taxheader')}</h5>
             </div>
             <div className="box__body">
               <div
@@ -161,7 +169,9 @@ const HeroSection = ({ t }: any) => {
               >
                 <div className="row">
                   <div className="col-12">
-                    <h6 className="border__bottom">{t('h9')}</h6>
+                    <h6 className="border__bottom">
+                      {t('paymenthero.taxaddress')}
+                    </h6>
 
                     <form action="#">
                       <div className="row">
@@ -169,22 +179,14 @@ const HeroSection = ({ t }: any) => {
                           <input
                             type="text"
                             className="input__box"
-                            placeholder={t('input1')}
+                            placeholder={t('paymenthero.form.address')}
                           />
                         </div>
                         <div className="col-md-6">
                           <input
                             type="text"
                             className="input__box"
-                            placeholder={t('input2')}
-                          />
-                        </div>
-
-                        <div className="col-md-6">
-                          <input
-                            type="text"
-                            className="input__box"
-                            placeholder={t('input3')}
+                            placeholder={t('paymenthero.form.street')}
                           />
                         </div>
 
@@ -192,7 +194,7 @@ const HeroSection = ({ t }: any) => {
                           <input
                             type="text"
                             className="input__box"
-                            placeholder={t('input4')}
+                            placeholder={t('paymenthero.form.district')}
                           />
                         </div>
 
@@ -200,7 +202,7 @@ const HeroSection = ({ t }: any) => {
                           <input
                             type="text"
                             className="input__box"
-                            placeholder={t('input5')}
+                            placeholder={t('paymenthero.form.county')}
                           />
                         </div>
 
@@ -208,7 +210,15 @@ const HeroSection = ({ t }: any) => {
                           <input
                             type="text"
                             className="input__box"
-                            placeholder={t('input6')}
+                            placeholder={t('paymenthero.form.province')}
+                          />
+                        </div>
+
+                        <div className="col-md-6">
+                          <input
+                            type="text"
+                            className="input__box"
+                            placeholder={t('paymenthero.form.postcode')}
                           />
                         </div>
 
@@ -218,7 +228,7 @@ const HeroSection = ({ t }: any) => {
                             className="btn v8"
                             style={{ marginTop: '45px' }}
                           >
-                            {t('button1')}
+                            {t('paymenthero.form.submitBtn')}
                           </button>
                         </div>
                       </div>
@@ -233,29 +243,31 @@ const HeroSection = ({ t }: any) => {
         <div className="col-xl-4 order-2 order-xl-3">
           <div className="box__wrapper side__box" ref={stickyBoxBar}>
             <div className="box__header">
-              <h5>{t('h10')}</h5>
+              <h5>{t('paymenthero.taxinvoice.title')}</h5>
             </div>
             <div className="box__body">
               <div className="box__content">
                 <div className="row">
                   <div className="col-12">
-                    <h6>{t('h11')}</h6>
+                    <h6>{t('paymenthero.taxinvoice.package')}</h6>
                   </div>
                   <div className="col-12">
                     <div className="sender__box">
                       <div className="d-flex justify-content-between">
-                        <p>{t('p6')}</p>
-                        <p className="theme__text">0.35 {t('bath')}</p>
+                        <p>{t('paymenthero.taxinvoice.price')}</p>
+                        <p className="theme__text">
+                          0.35 {t('paymenthero.taxinvoice.bath')}
+                        </p>
                       </div>
 
                       <div className="d-flex justify-content-between">
-                        <p>{t('p7')}</p>
+                        <p>{t('paymenthero.taxinvoice.quantity')}</p>
                         <p className="theme__text">85,714</p>
                       </div>
 
                       <div className="d-flex justify-content-between">
-                        <p>{t('p8')}</p>
-                        <p className="theme__text">2 {t('year')}</p>
+                        <p>{t('paymenthero.taxinvoice.life')}</p>
+                        <p className="theme__text">2 {t('paymenthero.year')}</p>
                       </div>
 
                       <div className="d-flex justify-content-between">
@@ -266,7 +278,7 @@ const HeroSection = ({ t }: any) => {
 
                     <div className="text-right">
                       <a href="#" className="link theme__text">
-                        {t('a2')}
+                        {t('paymenthero.taxinvoice.changepackage')}
                       </a>
                     </div>
                   </div>
@@ -276,7 +288,7 @@ const HeroSection = ({ t }: any) => {
               <div className="box__content">
                 <div className="row align-items-center">
                   <div className="col-12">
-                    <h6>{t('h12')}</h6>
+                    <h6>{t('paymenthero.taxinvoice.waitconfirmtitle')}</h6>
 
                     <form action="#">
                       <div className="form__wrapper">
@@ -290,7 +302,7 @@ const HeroSection = ({ t }: any) => {
                           className="btn v8"
                           style={{ width: '158px' }}
                         >
-                          {t('button2')}
+                          {t('paymenthero.taxinvoice.usecodeBtn')}
                         </button>
                       </div>
                     </form>
@@ -309,7 +321,7 @@ const HeroSection = ({ t }: any) => {
                           fontWeight: 500,
                         }}
                       >
-                        {t('h13')}
+                        {t('paymenthero.taxinvoice.pricepackage')}
                       </h6>
                       <div>
                         <h6 className="theme__text">
@@ -322,7 +334,7 @@ const HeroSection = ({ t }: any) => {
                               marginLeft: '20px',
                             }}
                           >
-                            {t('bath')}
+                            {t('paymenthero.taxinvoice.bath')}
                           </span>
                         </h6>
                       </div>
@@ -336,7 +348,7 @@ const HeroSection = ({ t }: any) => {
                           fontWeight: 500,
                         }}
                       >
-                        {t('h14')}
+                        {t('paymenthero.taxinvoice.discount')}
                       </h6>
 
                       <div>
@@ -350,7 +362,7 @@ const HeroSection = ({ t }: any) => {
                               marginLeft: '20px',
                             }}
                           >
-                            {t('bath')}
+                            {t('paymenthero.taxinvoice.bath')}
                           </span>
                         </h6>
                       </div>
@@ -378,7 +390,7 @@ const HeroSection = ({ t }: any) => {
                               marginLeft: '20px',
                             }}
                           >
-                            {t('bath')}
+                            {t('paymenthero.taxinvoice.bath')}
                           </span>
                         </h6>
                       </div>
@@ -401,14 +413,14 @@ const HeroSection = ({ t }: any) => {
                           fontWeight: 500,
                         }}
                       >
-                        {t('h15')}
+                        {t('paymenthero.taxinvoice.totalprice')}
                       </h6>
                       <div>
                         <h6
                           className="theme__text"
                           style={{ fontSize: '36px' }}
                         >
-                          32,000{' '}
+                          32,000
                           <span
                             style={{
                               fontSize: '20px',
@@ -428,7 +440,7 @@ const HeroSection = ({ t }: any) => {
                       className="btn v8 w-100 d-none d-xl-block"
                       style={{ marginTop: '65px' }}
                     >
-                      {t('a3')}
+                      {t('paymenthero.taxinvoice.confirepayment')}
                     </a>
                   </div>
                 </div>
@@ -443,33 +455,36 @@ const HeroSection = ({ t }: any) => {
             className="btn v8 d-xl-none button__sm_100"
             style={{ marginTop: '65px', padding: '24px 145px' }}
           >
-            {t('a4')}
+            {t('paymenthero.taxinvoice.confirepayment')}
           </a>
         </div>
 
         <div className="col-xl-8 order-5 bottom__content">
           <div className="box__wrapper">
-            <h6 className="__title">หมายเหตุ</h6>
+            <h6 className="__title">{t('paymenthero.note.title')}</h6>
             <ul style={{ marginTop: '30px' }}>
-              <li>{t('li1')}</li>
-              <li>{t('li2')}</li>
-              <li>
-                {t('li3')}
-                <a href="mailto::contact@thaibulksms.com">{t('a5')}</a>
-              </li>
-              <li>{t('li4')}</li>
-              <li>{t('li5')}</li>
-              <li>{t('li6')}</li>
+              <li>{t('paymenthero.note.rule.1')}</li>
+              <li>{t('paymenthero.note.rule.2')}</li>
+              <li
+                dangerouslySetInnerHTML={{
+                  __html: t('paymenthero.note.rule.3'),
+                }}
+              ></li>
+              <li>{t('paymenthero.note.rule.4')}</li>
+              <li>{t('paymenthero.note.rule.5')}</li>
+              <li>{t('paymenthero.note.rule.6')}</li>
             </ul>
           </div>
 
           <div className="box__wrapper ml-5">
-            <h6 className="__title">{t('h7')}</h6>
-            <ul>
-              <li>{t('li7')}</li>
-              <li>{t('li8')}</li>
-              <li>{t('li9')}</li>
-            </ul>
+            <h6 className="__title">
+              {t('paymenthero.note.company.companyname')}
+            </h6>
+            <ul
+              dangerouslySetInnerHTML={{
+                __html: t('paymenthero.note.company.companyaddress'),
+              }}
+            ></ul>
           </div>
         </div>
       </div>

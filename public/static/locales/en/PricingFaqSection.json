@@ -1,24 +1,16 @@
 {
-  "h1": "ENคำถามที่พบบ่อย",
-  "h2": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
-  "p1": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium.",
-  "h3": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
-  "p2": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium.",
-  "h4": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
-  "p3": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium.",
-  "h5": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
-  "p4": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium.",
-  "h6": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
-  "p5": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium.",
-  "h7": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
-  "p6": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium.",
-  "h8": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
-  "p7": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium.",
-  "h9": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
-  "p8": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium.",
-  "h10": "ENยังคงมีข้อสงสัย?",
-  "p9": "ENเลือกช่องทางติดต่อที่คุณสะดวก",
-  "a1": "ENติดต่อเจ้าหน้าที่",
-  "a2": "ENเจ้าหน้าที่ติดต่อกลับ",
-  "a3": "ENFacebook Chat"
+  "pricingfaq": {
+    "header": "ENคำถามที่พบบ่อย",
+    "faq": {
+      "1": {
+        "title": "ENStandard SMS และ Corporate SMS แตกต่างกัน อย่างไร?",
+        "desc": "ENLorem ipsum dolor sit amet, consectetur adipisicing elit. Est in obcaecati nulla amet distinctio sapiente, itaque porro, neque at laudantium."
+      }
+    },
+    "question": "ENยังคงมีข้อสงสัย ?",
+    "questiontitle": "ENเลือกช่องทางติดต่อที่คุณสะดวก",
+    "telBtn": "ENติดต่อเจ้าหน้าที่",
+    "contactBtn": "ENเจ้าหน้าที่ติดต่อกลับ",
+    "fbBrn": "ENFacebook Chat"
+  }
 }

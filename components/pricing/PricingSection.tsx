@@ -20,32 +20,40 @@ const PricingSection = ({ t }: any) => {
                 backgroundColor: '#fff',
               }}
             >
-              <h3 style={{ fontSize: '40px' }}>{t('h1')}</h3>
+              <h3 style={{ fontSize: '40px' }}>
+                {t('pricingpricing.package.standard.header')}
+              </h3>
               <p
                 style={{ fontSize: '22px', color: '#5b6e80' }}
                 className="my-4"
               >
-                {t('p1')}
+                {t('pricingpricing.package.standard.title')}
               </p>
               <ul className="pricing_feature">
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('p2')}</p>
+                  <p>{t('pricingpricing.package.standard.feature.1')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('p3')}</p>
+                  <p>{t('pricingpricing.package.standard.feature.2')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('p4')}</p>
+                  <p>{t('pricingpricing.package.standard.feature.3')}</p>
+                </li>
+                <li>
+                  <i className="far fa-check-circle"></i>
+                  <p>{t('pricingpricing.package.standard.feature.4')}</p>
                 </li>
               </ul>
               <div className="price_plan">
-                <span>{t('span1')}</span>
+                <span>{t('pricingpricing.start')}</span>
                 <h2 style={{ fontSize: '86px', fontWeight: 500 }}>
-                  0.35
-                  <span style={{ marginLeft: '1px' }}> {t('bath')} / SMS</span>
+                  {t('pricingpricing.package.standard.price')}
+                  <span style={{ marginLeft: '1px' }}>
+                    {t('pricingpricing.unit')}
+                  </span>
                 </h2>
               </div>
             </div>
@@ -58,32 +66,40 @@ const PricingSection = ({ t }: any) => {
                 backgroundColor: '#fff',
               }}
             >
-              <h3 style={{ fontSize: '40px' }}>{t('h2')}</h3>
+              <h3 style={{ fontSize: '40px' }}>
+                {t('pricingpricing.package.corporate.header')}
+              </h3>
               <p
                 style={{ fontSize: '22px', color: '#5b6e80' }}
                 className="my-4"
               >
-                {t('p5')}
+                {t('pricingpricing.package.corporate.title')}
               </p>
               <ul className="pricing_feature">
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('p6')}</p>
+                  <p>{t('pricingpricing.package.corporate.feature.1')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('p7')}</p>
+                  <p>{t('pricingpricing.package.corporate.feature.2')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('p8')}</p>
+                  <p>{t('pricingpricing.package.corporate.feature.3')}</p>
+                </li>
+                <li>
+                  <i className="far fa-check-circle"></i>
+                  <p>{t('pricingpricing.package.corporate.feature.4')}</p>
                 </li>
               </ul>
               <div className="price_plan">
-                <span>{t('span1')}</span>
+                <span>{t('pricingpricing.start')}</span>
                 <h2 style={{ fontSize: '86px', fontWeight: 500 }}>
-                  0.45{' '}
-                  <span style={{ marginLeft: '1px' }}> {t('bath')} / SMS</span>
+                  {t('pricingpricing.package.corporate.price')}
+                  <span style={{ marginLeft: '1px' }}>
+                    {t('pricingpricing.unit')}
+                  </span>
                 </h2>
               </div>
             </div>

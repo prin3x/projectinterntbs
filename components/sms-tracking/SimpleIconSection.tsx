@@ -6,8 +6,8 @@ const SimpleIconSectionV2 = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offsert-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('h1')}</h3>
-            <p>{t('p1')}</p>
+            <h3>{t('sms-trackingsimpleicon.title')}</h3>
+            <p>{t('sms-trackingsimpleicon.desc')}</p>
           </div>
         </div>
         <div className="col-md-12">
@@ -20,11 +20,11 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   data-src="/img/img_12.png"
                   alt="Image"
                 />
-                <p>
-                  {t('p2-1')}
-                  <br />
-                  {t('p2-2')}
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('sms-trackingsimpleicon.feature.1'),
+                  }}
+                ></p>
               </div>
               <div className="simple_icon">
                 <img
@@ -32,10 +32,11 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   data-src="/img/img_4.png"
                   alt="Image"
                 />
-                <p>
-                  {t('p3-1')} <br />
-                  {t('p3-2')}
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('sms-trackingsimpleicon.feature.2'),
+                  }}
+                ></p>
               </div>
               <div className="simple_icon">
                 <img
@@ -43,10 +44,11 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   data-src="/img/img_13.png"
                   alt="Image"
                 />
-                <p>
-                  {t('p4-1')} <br />
-                  {t('p4-2')}
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('sms-trackingsimpleicon.feature.3'),
+                  }}
+                ></p>
               </div>
               {/* <div className="simple_icon">
                 <img
@@ -55,9 +57,9 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   alt="Image"
                 />
                 <p>
-                  {t('p5-1')}
+                  {t('sms-trackingsimpleicon.p5-1')}
                   <br />
-                  {t('p5-2')}
+                  {t('sms-trackingsimpleicon.p5-2')}
                 </p>
               </div> */}
               <div className="simple_icon">
@@ -66,10 +68,11 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   data-src="/img/img_17.png"
                   alt="Image"
                 />
-                <p>
-                  {t('p6-1')} <br />
-                  {t('p6-2')}
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('sms-trackingsimpleicon.feature.4'),
+                  }}
+                ></p>
               </div>
             </div>
           </div>

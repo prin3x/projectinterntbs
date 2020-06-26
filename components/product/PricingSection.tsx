@@ -5,49 +5,50 @@ const PricingSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h2 className="section_title">{t('h1')}</h2>
+          <h2 className="section_title">{t('homeproductpricing.header')}</h2>
         </div>
       </div>
       <div className="row">
         <div className="col-lg-6 col-md-12">
           <div className="pricing_box">
             <img className="lazyload" data-src="/img/price_1.png" alt="Image" />
-            <h3>STANDAED SMS</h3>
-            <p>{t('p1')}</p>
+            <h3>{t('homeproductpricing.package.standard.header')}</h3>
+            <p>{t('homeproductpricing.package.standard.title')}</p>
             <ul className="pricing_feature">
               <li>
                 <i className="far fa-check-circle"></i>
-                <p>{t('p2')}</p>
+                <p>{t('homeproductpricing.package.standard.feature.1')}</p>
               </li>
               <li>
                 <i className="far fa-check-circle"></i>
-                <p>{t('p3')}</p>
+                <p>{t('homeproductpricing.package.standard.feature.2')}</p>
               </li>
               <li>
                 <i className="far fa-check-circle"></i>
-                <p>{t('p4')}</p>
+                <p>{t('homeproductpricing.package.standard.feature.3')}</p>
               </li>
               <li>
                 <i className="far fa-check-circle"></i>
-                <p>{t('p5')}</p>
+                <p>{t('homeproductpricing.package.standard.feature.4')}</p>
               </li>
             </ul>
             <div className="price_plan">
-              <span>{t('span1')}</span>
+              <span>{t('homeproductpricing.start')}</span>
               <h2>
-                0.35 <span>{t('span2')}</span>
+                {t('homeproductpricing.package.standard.price')}{' '}
+                <span>{t('homeproductpricing.unit')}</span>
               </h2>
               <a href="#" className="btn v3">
-                {t('a1')}
+                {t('homeproductpricing.viewPackageBtn')}
               </a>
             </div>
             <div className="price_bottom_text">
-              <p>{t('p6')}</p>
+              <p>{t('homeproductpricing.package.standard.suitable.title')}</p>
               <ul>
-                <li>{t('li1')}</li>
-                <li>{t('li2')}</li>
-                <li>{t('li3')}</li>
-                <li>{t('li4')}</li>
+                <li>{t('homeproductpricing.package.standard.suitable.1')}</li>
+                <li>{t('homeproductpricing.package.standard.suitable.2')}</li>
+                <li>{t('homeproductpricing.package.standard.suitable.3')}</li>
+                <li>{t('homeproductpricing.package.standard.suitable.4')}</li>
               </ul>
             </div>
           </div>
@@ -55,41 +56,42 @@ const PricingSection = ({ t }: any) => (
         <div className="col-lg-6 col-md-12">
           <div className="pricing_box">
             <img className="lazyload" data-src="/img/price_2.png" alt="Image" />
-            <h3>CORPORATE SMS</h3>
-            <p>{t('p7')}</p>
+            <h3>{t('homeproductpricing.package.corporate.header')}</h3>
+            <p>{t('homeproductpricing.package.corporate.title')}</p>
             <ul className="pricing_feature">
               <li>
                 <i className="far fa-check-circle"></i>
-                <p>{t('p8')}</p>
+                <p>{t('homeproductpricing.package.corporate.feature.1')}</p>
               </li>
               <li>
                 <i className="far fa-check-circle"></i>
-                <p>{t('p9')}</p>
+                <p>{t('homeproductpricing.package.corporate.feature.2')}</p>
               </li>
               <li>
                 <i className="far fa-check-circle"></i>
-                <p>{t('p10')}</p>
+                <p>{t('homeproductpricing.package.corporate.feature.3')}</p>
               </li>
               <li>
                 <i className="far fa-check-circle"></i>
-                <p>{t('p11')}</p>
+                <p>{t('homeproductpricing.package.corporate.feature.4')}</p>
               </li>
             </ul>
             <div className="price_plan">
-              <span>{t('span3')}</span>
+              <span>{t('homeproductpricing.start')}</span>
               <h2>
-                0.45 <span>{t('span4')}</span>
+                {t('homeproductpricing.package.corporate.price')}{' '}
+                <span>{t('homeproductpricing.unit')}</span>
               </h2>
               <a href="#" className="btn v3">
-                {t('a2')}
+                {t('homeproductpricing.viewPackageBtn')}
               </a>
             </div>
             <div className="price_bottom_text">
-              <p>{t('p12')}</p>
+              <p>{t('homeproductpricing.package.corporate.suitable.title')}</p>
               <ul>
-                <li>{t('li5')}</li>
-                <li>{t('li6')}</li>
-                <li>{t('li7')}</li>
+                <li>{t('homeproductpricing.package.corporate.suitable.1')}</li>
+                <li>{t('homeproductpricing.package.corporate.suitable.2')}</li>
+                <li>{t('homeproductpricing.package.corporate.suitable.3')}</li>
               </ul>
             </div>
           </div>
@@ -99,9 +101,9 @@ const PricingSection = ({ t }: any) => (
         <div className="col-md-12">
           <div className="pricing_bottom_text">
             {/* <span>{t('span5')}</span> */}
-            <h3>{t('h2')}</h3>
+            <h3>{t('homeproductpricing.footer')}</h3>
             <a href="#" className="btn v3">
-              {t('a3')}
+              {t('homeproductpricing.freeBtn')}
             </a>
           </div>
         </div>
