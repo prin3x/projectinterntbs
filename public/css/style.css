@@ -1781,6 +1781,13 @@ a:hover {
   position: relative;
 }
 
+.owl-carousel .owl-item img {
+  width: 100%;
+}
+.partner_item img.size-img {
+  width: 80%;
+}
+
 .owl-carousel.slider_wrap:before {
   position: absolute;
   background: linear-gradient(
@@ -2134,6 +2141,7 @@ p.copyright {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #f0f3f7;
+  overflow: hidden;
 }
 
 .simple_slider_heading {
@@ -2493,6 +2501,10 @@ p.copyright {
   clear: ;
   color: #fff;
   text-decoration: underline;
+}
+
+ulxw.before-footer {
+  text-align: center;
 }
 
 /*----------------------------
