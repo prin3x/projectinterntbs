@@ -82,7 +82,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icon_5.png"
+                  data-src="/img/icn-api01.svg"
                   alt="Image"
                 />
               </div>
@@ -91,7 +91,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icon_6.png"
+                  data-src="/img/icn-api02.svg"
                   alt="Image"
                 />
               </div>
@@ -100,7 +100,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icon_7.png"
+                  data-src="/img/icn-api03.svg"
                   alt="Image"
                 />
               </div>
@@ -109,7 +109,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icon_8.png"
+                  data-src="/img/icn-api04.svg"
                   alt="Image"
                 />
               </div>
@@ -118,7 +118,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icon_9.png"
+                  data-src="/img/icn-api05.svg"
                   alt="Image"
                 />
               </div>
@@ -127,7 +127,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icon_10.png"
+                  data-src="/img/icn-api06.svg"
                   alt="Image"
                 />
               </div>
@@ -136,7 +136,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icon_11.png"
+                  data-src="/img/icn-api07.svg"
                   alt="Image"
                 />
               </div>
@@ -145,7 +145,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icon_12.png"
+                  data-src="/img/icn-api08.svg"
                   alt="Image"
                 />
               </div>

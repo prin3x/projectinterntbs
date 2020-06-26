@@ -2503,7 +2503,7 @@ p.copyright {
   text-decoration: underline;
 }
 
-ulxw.before-footer {
+ul.before-footer {
   text-align: center;
 }
 
@@ -4077,4 +4077,23 @@ textarea.input__box.v2 {
 .pricing__bottom__content .btn {
   background: #fff;
   color: #31b1e7;
+}
+
+
+.single_lang {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 50px;
+}
+
+.promo_img {
+  width: 55%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.promo_img img {
+  min-height: 250px;
 }

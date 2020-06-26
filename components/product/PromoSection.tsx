@@ -32,7 +32,7 @@ const PromoSection = ({ t }: any) => (
             <div className="promo_img">
               <img
                 className="lazyload"
-                data-src="/img/promo_2.png"
+                data-src="/img/img-sms.svg"
                 alt="Image"
               />
               <a href="#" className="btn v2">
@@ -53,7 +53,7 @@ const PromoSection = ({ t }: any) => (
             <div className="promo_img">
               <img
                 className="lazyload"
-                data-src="/img/promo_1.png"
+                data-src="/img/img-api.svg"
                 alt="Image"
               />
               <a href="#" className="btn v2">
