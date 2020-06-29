@@ -550,6 +550,9 @@
   .footer_section a, p.copyright {
     font-size: 18px;
   }
+  .userType_section, .register_section, .login_section {
+    padding: 120px 0 60px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {

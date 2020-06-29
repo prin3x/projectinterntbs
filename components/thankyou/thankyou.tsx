@@ -4,17 +4,16 @@ const ThankyouComponents = ({ t }: any) => (
   <div className="register_section">
     <div className="finish-regis">
       <div className="img-finish-regis">
-        <img
+        <object type="image/svg+xml" data="/img/img-thankyou.svg"></object>
+        {/* <img
           className="lazyload"
           data-src="/img/img-finish-regis.png"
           alt="Image"
-        />
+        /> */}
       </div>
       <h2>{t('h1')}</h2>
       <p className="sub-text">
         {t('p1-1')}
-        <br />
-        {t('p1-2')}
       </p>
       <div className="btn-login">
         <Link href="/login">
@@ -23,10 +22,6 @@ const ThankyouComponents = ({ t }: any) => (
           </a>
         </Link>
       </div>
-      <p>
-        {t('p2')}
-        <a href="">{t('a2')}</a>
-      </p>
     </div>
   </div>
 );
