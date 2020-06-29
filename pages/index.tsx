@@ -24,19 +24,13 @@ const Homepage = ({ t }: any) => (
         <meta name="author" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta
-          property="og:url"
-          content="https://d1vb0eqohs6ps7.cloudfront.net/"
-        />
+        <meta property="og:url" content={process.env.DOMAIN_URL} />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="บริการส่ง SMS จากเว็บถึงมือถือ เพื่อการตลาด, CRM, ประชาสัมพันธ์ สมัครทดลองฟรีวันนี้ ง่ายนิดเดียว มีบริการให้คำแนะนำฟรี พร้อมทั้งบริการพัฒนาแอปพลิเคชั่นเฉพาะคุณ ส่งได้ทุกค่ายทั้ง AIS DTAC TrueMove Truemove-Hทรงพลังที่สุด! Ferrari SF90 Stradale เปิดตัวครั้งแรกในไทย เคาะราคา 40.9 ล้าน"
+          content="บริการส่ง SMS ครบวงจร ส่งง่าย ถึงมือผู้รับ| ThaiBulkSMS"
         />
-        <meta
-          property="og:description"
-          content="บริการส่ง SMS จากเว็บถึงมือถือ เพื่อการตลาด, CRM, ประชาสัมพันธ์ สมัครทดลองฟรีวันนี้ ง่ายนิดเดียว มีบริการให้คำแนะนำฟรี พร้อมทั้งบริการพัฒนาแอปพลิเคชั่นเฉพาะคุณ ส่งได้ทุกค่ายทั้ง AIS DTAC TrueMove Truemove-H"
-        />
+        <meta property="og:description" content="" />
         <meta
           property="og:image"
           content="https://d1vb0eqohs6ps7.cloudfront.net/img/demoog.jpg"

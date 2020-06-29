@@ -9,7 +9,7 @@ const HeroSection = ({ t }: any) => {
       <div className="container">
         <div className="row justify-content-center hero_top_one">
           <div className="col-12 text-center">
-            <h3 className="section__title">{t('h1')}</h3>
+            <h3 className="section__title">{t('howtoorderhero.header')}</h3>
 
             <ul
               className="nav nav-pills tab__toggle"
@@ -27,7 +27,7 @@ const HeroSection = ({ t }: any) => {
                   aria-selected="true"
                 >
                   <img className="lazyload" data-src="/img/main_3.png" alt="" />
-                  <span>{t('span1')}</span>
+                  <span>{t('howtoorderhero.howtoorderBtn')}</span>
                 </a>
               </li>
               <li className="nav-item" role="presentation">
@@ -41,7 +41,7 @@ const HeroSection = ({ t }: any) => {
                   aria-selected="false"
                 >
                   <img className="lazyload" data-src="/img/dollar.png" alt="" />
-                  <span>{t('span2')}</span>
+                  <span>{t('howtoorderhero.paymentBtn')}</span>
                 </a>
               </li>
             </ul>

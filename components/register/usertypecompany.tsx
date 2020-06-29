@@ -2,61 +2,120 @@ import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const UsertypeCompanyComponents = ({ t }: any) => (
   <div className="userType_section">
-    <h2>{t('h1')}</h2>
-    <p className="sub_userType">
-      {t('p1')} <span>{t('span1')}</span>
+    <h2>{t('usertypecompany.header')}</h2>
+    <p
+      className="sub_userType"
+      dangerouslySetInnerHTML={{ __html: t('usertypecompany.title') }}
+    >
+      {/* {t('usertypecompany.p1')} <span>{t('usertypecompany.span1')}</span> */}
     </p>
     <div className="form-indiv">
-      <h3>{t('h2')}</h3>
-      <h4>{t('h3')}</h4>
+      <h3>{t('usertypecompany.form.title')}</h3>
+      <h4>{t('usertypecompany.form.desc')}</h4>
       <div className="company-id">
-        <input type="text" className="input-txt01" placeholder={t('input1')} />
+        <input
+          type="text"
+          className="input-txt01"
+          placeholder={t('usertypecompany.form.taxnumber')}
+        />
         <a className="btn v2" href="#">
-          {t('a1')}
+          {t('usertypecompany.form.searchBtn')}
         </a>
       </div>
-      <input type="text" className="input-txt01" placeholder={t('input2')} />
+      <input
+        type="text"
+        className="input-txt01"
+        placeholder={t('usertypecompany.form.address')}
+      />
       <div className="input-twocolumn">
-        <input type="text" className="input-txt02" placeholder={t('input3')} />
-        <input type="text" className="input-txt02" placeholder={t('input4')} />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.street')}
+        />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.district')}
+        />
       </div>
       <div className="input-twocolumn">
-        <input type="text" className="input-txt02" placeholder={t('input5')} />
-        <input type="text" className="input-txt02" placeholder={t('input6')} />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.county')}
+        />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.province')}
+        />
       </div>
       <div className="input-twocolumn">
-        <input type="text" className="input-txt02" placeholder={t('input7')} />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.postcode')}
+        />
       </div>
       <hr className="form-user"></hr>
-      <h3>{t('h4')}</h3>
+      <h3>{t('usertypecompany.taxinvoiceaddress.title')}</h3>
       <div className="select-address">
         <label>
           <input type="radio" name="light" checked />
           <span className="design"></span>
-          <span className="text">{t('span2')}</span>
+          <span className="text">
+            {t('usertypecompany.taxinvoiceaddress.radio1')}
+          </span>
         </label>
 
         <label>
           <input type="radio" name="light" />
           <span className="design"></span>
-          <span className="text">{t('span3')}</span>
+          <span className="text">
+            {t('usertypecompany.taxinvoiceaddress.radio2')}
+          </span>
         </label>
       </div>
-      <input type="text" className="input-txt01" placeholder={t('input2')} />
+      <input
+        type="text"
+        className="input-txt01"
+        placeholder={t('usertypecompany.form.address')}
+      />
       <div className="input-twocolumn">
-        <input type="text" className="input-txt02" placeholder={t('input3')} />
-        <input type="text" className="input-txt02" placeholder={t('input4')} />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.street')}
+        />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.district')}
+        />
       </div>
       <div className="input-twocolumn">
-        <input type="text" className="input-txt02" placeholder={t('input5')} />
-        <input type="text" className="input-txt02" placeholder={t('input6')} />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.county')}
+        />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.province')}
+        />
       </div>
       <div className="input-twocolumn">
-        <input type="text" className="input-txt02" placeholder={t('input7')} />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('usertypecompany.form.postcode')}
+        />
       </div>
       <div className="btn-regis">
         <a className="btn v2" href="#">
-          {t('a2')}
+          {t('usertypecompany.taxinvoiceaddress.saveBtn')}
         </a>
       </div>
     </div>

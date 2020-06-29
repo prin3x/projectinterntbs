@@ -6,9 +6,7 @@ const Help = ({ t }: any) => (
       <span>
         <img className="lazyload" data-src="/img/icon_14.png" alt="" />
       </span>
-      {t('button1')}
-      <br />
-      {t('button2')}
+      <p dangerouslySetInnerHTML={{ __html: t('hepl.lable') }}></p>
     </button>
   </div>
 );

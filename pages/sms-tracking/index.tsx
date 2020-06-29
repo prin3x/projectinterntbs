@@ -21,11 +21,14 @@ const Smstracking = ({ t }: any) => (
 
       <meta
         property="og:url"
-        content="https://d1vb0eqohs6ps7.cloudfront.net/smstracking"
+        content={process.env.DOMAIN_URL + '/sms-tracking'}
       />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="smstracking" />
-      <meta property="og:description" content="smstracking" />
+      <meta
+        property="og:title"
+        content="วัดผลและติดตามสถานะการเปิดอ่านด้วยบริการ SMS Tracking"
+      />
+      <meta property="og:description" content="" />
       <meta
         property="og:image"
         content="https://d1vb0eqohs6ps7.cloudfront.net/img/demoog.jpg"

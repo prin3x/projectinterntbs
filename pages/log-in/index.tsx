@@ -13,8 +13,11 @@ const Login = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="login" />
-      <meta property="og:description" content="login" />
+      <meta
+        property="og:title"
+        content="เข้าสู่ระบบ บริการส่งข้อความด้วยระบบ Smart SMS console  - ThaiBulkSMS"
+      />
+      <meta property="og:description" content="" />
       <meta property="og:url" content="" />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />

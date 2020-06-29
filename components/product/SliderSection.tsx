@@ -13,7 +13,7 @@ const SliderSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h3 className="section_title">{t('h1')} </h3>
+          <h3 className="section_title">{t('productslider.header')} </h3>
         </div>
       </div>
       <div className="row">
@@ -47,36 +47,36 @@ const SliderSection = ({ t }: any) => (
           >
             <div className="item">
               <div className="slider_item">
-                <h3>{t('h2')}</h3>
-                <p>{t('p1')}</p>
+                <h3>{t('productslider.item.1.title')}</h3>
+                <p>{t('productslider.item.1.desc')}</p>
                 {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>{t('h3')}</h3>
-                <p>{t('p2')}</p>
+                <h3>{t('productslider.item.2.title')}</h3>
+                <p>{t('productslider.item.2.desc')}</p>
                 {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>{t('h4')}</h3>
-                <p>{t('p3')}</p>
+                <h3>{t('productslider.item.3.title')}</h3>
+                <p>{t('productslider.item.3.desc')}</p>
                 {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>{t('h5')}</h3>
-                <p>{t('p4')}</p>
+                <h3>{t('productslider.item.4.title')}</h3>
+                <p>{t('productslider.item.4.desc')}</p>
                 {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>{t('h6')}</h3>
-                <p>{t('p5')}</p>
+                <h3>{t('productslider.item.5.title')}</h3>
+                <p>{t('productslider.item.5.desc')}</p>
                 {/* <a href="#">{t('a1')}</a> */}
               </div>
             </div>
@@ -85,7 +85,7 @@ const SliderSection = ({ t }: any) => (
       </div>
     </div>
     <p style={{ textAlign: 'center', marginTop: '100px', color: '#31b1e7' }}>
-      {t('a1')}
+      {t('productslider.exampleBtn')}
     </p>
   </div>
 );

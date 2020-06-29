@@ -10,20 +10,20 @@ const HeroSectionV2 = ({ t }: any) => (
       <div className="row align-item-center hero_top_one">
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="hero_text_one">
-            <h1>{t('h1')}</h1>
-            <p>{t('p1')}</p>
+            <h1>{t('homehero.title')}</h1>
+            <p>{t('homehero.desc')}</p>
             <ul className="cta-btn">
               <li>
                 <Link href="/register">
                   <a className="btn v3" href="#">
-                    {t('a1')}
+                    {t('homehero.freeBtn')}
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/pricing">
                   <a className="btn v5" href="#">
-                    {t('a2')}
+                    {t('homehero.viewPackageBtn')}
                   </a>
                 </Link>
               </li>

@@ -3,18 +3,18 @@ import Layout from '../components/Layout';
 import Components404 from '../components/404/404';
 import Head from 'next/head';
 import { withTranslation } from '../i18n';
-const Custom404 = ({ t }: any) => (
+const Custom404 = () => (
   <Layout>
     <Head>
-      <title>{t('title')}</title>
-      <meta name="title" content={t('title')} />
-      <meta name="description" content={t('description')} />
-      <meta name="keywords" content={t('keywords')} />
+      <title>404</title>
+      <meta name="title" content="404" />
+      <meta name="description" content="" />
+      <meta name="keywords" content="" />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="Register success" />
-      <meta property="og:description" content="Register success" />
+      <meta property="og:title" content="" />
+      <meta property="og:description" content="" />
       <meta property="og:url" content="" />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />

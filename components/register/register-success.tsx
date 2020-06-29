@@ -10,22 +10,21 @@ const RegisterfinishComponents = ({ t }: any) => (
           alt="Image"
         />
       </div>
-      <h2>{t('h1')}</h2>
-      <p className="sub-text">
-        {t('p1-1')}
-        <br />
-        {t('p1-2')}
-      </p>
+      <h2>{t('registerfinish.title')}</h2>
+      <p
+        className="sub-text"
+        dangerouslySetInnerHTML={{ __html: t('registerfinish.desc') }}
+      ></p>
       <div className="btn-login">
-        <Link href="/login">
+        <Link href="/log-in">
           <a className="btn v2" href="#">
-            {t('a1')}
+            {t('registerfinish.loginBtn')}
           </a>
         </Link>
       </div>
       <p>
-        {t('p2')}
-        <a href="">{t('a2')}</a>
+        {t('registerfinish.resendsms')}
+        <a href="">{t('registerfinish.linkresendsms')}</a>
       </p>
     </div>
   </div>

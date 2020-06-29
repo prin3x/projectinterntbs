@@ -1,6 +1,6 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const ThankyouComponents = ({ t }: any) => (
+const ThankyouComponents = () => (
   <div className="register_section">
     <div className="finish-regis">
       <div className="img-finish-regis">
@@ -11,17 +11,17 @@ const ThankyouComponents = ({ t }: any) => (
           alt="Image"
         /> */}
       </div>
-      <h2>{t('h1')}</h2>
+      {/* <h2>{t('h1')}</h2>
       <p className="sub-text">
         {t('p1-1')}
       </p>
       <div className="btn-login">
-        <Link href="/login">
+        <Link href="/log-in">
           <a className="btn v2" href="#">
             {t('a1')}
           </a>
         </Link>
-      </div>
+      </div> */}
     </div>
   </div>
 );

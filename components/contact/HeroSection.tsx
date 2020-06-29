@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 const menuClick = () => {
-  if ($('.devnice-select').hasClass('open'))
-    $('.devnice-select').removeClass('open');
-  else $('.devnice-select').addClass('open');
+  var elDivnice = document.getElementsByClassName('devnice-select')[0];
+  if (elDivnice.classList.contains('open')) elDivnice.classList.remove('open');
+  else elDivnice.classList.add('open');
 };
 const HeroSection = ({ t }: any) => {
-  React.useEffect(() => {
-    // $('select').niceSelect();
-  }, []);
+  React.useEffect(() => {}, []);
   return (
     <div className="container">
       <style jsx>{`
@@ -31,7 +29,7 @@ const HeroSection = ({ t }: any) => {
       `}</style>
       <div className="row justify-content-center hero_top_one">
         <div className="col-12 text-center">
-          <h3 className="section__title">{t('h1')}</h3>
+          <h3 className="section__title">{t('contacthero.header')}</h3>
         </div>
 
         <div className="col-12">
@@ -45,7 +43,7 @@ const HeroSection = ({ t }: any) => {
                     alt=""
                   />
 
-                  <h3>{t('h2')}</h3>
+                  <h3>{t('contacthero.contact.header')}</h3>
                   <ul>
                     <li style={{ marginTop: '10px' }}>
                       <img
@@ -53,10 +51,11 @@ const HeroSection = ({ t }: any) => {
                         data-src="/img/location.png"
                         alt=""
                       />
-                      <p>
-                        {t('p1-1')} <br />
-                        {t('p1-2')}
-                      </p>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: t('contacthero.contact.address'),
+                        }}
+                      ></p>
                     </li>
                     <li>
                       <img
@@ -64,7 +63,7 @@ const HeroSection = ({ t }: any) => {
                         data-src="/img/call.png"
                         alt=""
                       />
-                      <p>{t('p2')}</p>
+                      <p>{t('contacthero.contact.phone')}</p>
                     </li>
                     <li>
                       <img
@@ -72,7 +71,7 @@ const HeroSection = ({ t }: any) => {
                         data-src="/img/calendar.png"
                         alt=""
                       />
-                      <p>{t('p3')}</p>
+                      <p>{t('contacthero.contact.fax')}</p>
                     </li>
                     <li>
                       <img
@@ -88,7 +87,7 @@ const HeroSection = ({ t }: any) => {
                         data-src="/img/clock.png"
                         alt=""
                       />
-                      <p>{t('p4')}</p>
+                      <p>{t('contacthero.contact.time')}</p>
                     </li>
                   </ul>
                 </div>
@@ -106,47 +105,49 @@ const HeroSection = ({ t }: any) => {
                       className="nice-select input__box v2 devnice-select"
                       onClick={menuClick}
                     >
-                      <span className="current">{t('span1')}</span>
+                      <span className="current">
+                        {t('contacthero.form.problem.1')}
+                      </span>
                       <ul className="list">
                         <li className="option selected" data-value="">
-                          {t('li1')}
+                          {t('contacthero.form.problem.1')}
                         </li>
                         <li className="option " data-value="">
-                          {t('li2')}
+                          {t('contacthero.form.problem.2')}
                         </li>
                         <li className="option " data-value="">
-                          {t('li3')}
+                          {t('contacthero.form.problem.3')}
                         </li>
                         <li className="option " data-value="">
-                          {t('li4')}
+                          {t('contacthero.form.problem.4')}
                         </li>
                       </ul>
                     </div>
                     <input
                       type="text"
                       className="input__box v2"
-                      placeholder={t('placeholder1')}
+                      placeholder={t('contacthero.form.firstname')}
                     />
 
                     <input
                       type="text"
                       className="input__box v2"
-                      placeholder={t('placeholder2')}
+                      placeholder={t('contacthero.form.lastname')}
                     />
                     <input
                       type="text"
                       className="input__box v2"
-                      placeholder={t('placeholder3')}
+                      placeholder={t('contacthero.form.email')}
                     />
                     <input
                       type="text"
                       className="input__box v2"
-                      placeholder={t('placeholder4')}
+                      placeholder={t('contacthero.form.phone')}
                     />
 
                     <textarea
                       className="input__box v2"
-                      placeholder={t('placeholder5')}
+                      placeholder={t('contacthero.form.detail')}
                     ></textarea>
 
                     <img
@@ -157,7 +158,7 @@ const HeroSection = ({ t }: any) => {
                     />
 
                     <label className="checkbox-wrapper">
-                      {t('label1')}
+                      {t('contacthero.form.checkbox')}
                       <input type="checkbox" />
                       <span className="checkmark"></span>
                     </label>
@@ -167,7 +168,7 @@ const HeroSection = ({ t }: any) => {
                       style={{ marginTop: '90px' }}
                     >
                       <button type="submit" className="btn v8">
-                        {t('button1')}
+                        {t('contacthero.form.submitBtn')}
                       </button>
                     </div>
                   </form>
