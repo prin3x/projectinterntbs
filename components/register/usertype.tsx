@@ -18,11 +18,12 @@ const UsertypeComponents = ({ t }: any) => (
       </div>
       <div className="companyType">
         <div className="img-user">
-          <img
+          <object type="image/svg+xml" data="/img/img_cop.svg"></object>
+          {/* <img
             className="lazyload"
             data-src="/img/img-company.png"
             alt="Image"
-          />
+          /> */}
         </div>
         <Link href="company">
           <a href="#" className="btn v3">
