@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import Components404 from '../components/404/404';
+import Layout from '../../components/Layout';
+import ThankyouComponents from '../../components/thankyou/thankyou';
 import Head from 'next/head';
-import { withTranslation } from '../i18n';
-const Custom404 = ({ t }: any) => (
+import { withTranslation } from '../../i18n';
+const Thankyou = ({ t }: any) => (
   <Layout>
     <Head>
       <title>{t('title')}</title>
@@ -28,14 +28,10 @@ const Custom404 = ({ t }: any) => (
       <meta name="twitter:image" content="" />
       <meta name="twitter:domain" content="" />
     </Head>
-    <Components404 />
+    <ThankyouComponents />
   </Layout>
 );
-// Custom404.getInitialProps = async () => ({
-//   namespacesRequired: [''],
-// });
-export default withTranslation('')(Custom404);
-
-// export default function Custom404() {
-//   return <h1>404 - Page Not Found</h1>
-// }
+Thankyou.getInitialProps = async () => ({
+  namespacesRequired: ['ThankyouMeta'],
+});
+export default withTranslation('ThankyouMeta')(Thankyou);
