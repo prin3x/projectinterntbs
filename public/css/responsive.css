@@ -229,7 +229,7 @@
   .bg__img.img__2 {
     width: 25%;
   }
-}
+
   .site-navbar .site-navigation .site-menu li > a, .header_contact_no a, .nice-select.user_select .current, .menu_btn ul li {
     font-size: 16px;
   }
@@ -1158,7 +1158,7 @@
   }
 
   .globe_text p {
-    font-size: ;
+    font-size: 20px;
   }
 }
 
@@ -1400,6 +1400,11 @@
   .promo_item_three_img {
     text-align: center;
     margin-bottom: 30px;
+    max-width: 20%;
+  }
+
+  .promo_item_three_img object {
+    width: 100%;
   }
 
   .service_feature_item {

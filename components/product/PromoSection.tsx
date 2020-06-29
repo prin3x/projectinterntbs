@@ -30,11 +30,12 @@ const PromoSection = ({ t }: any) => (
               </p>
             </div>
             <div className="promo_img">
-              <img
+              <object type="image/svg+xml" data="/img/img-sms.svg" className="lazyload"></object>
+              {/* <img
                 className="lazyload"
                 data-src="/img/img-sms.svg"
                 alt="Image"
-              />
+              /> */}
               <a href="#" className="btn v2">
                 {t('a1')}
               </a>
@@ -51,11 +52,12 @@ const PromoSection = ({ t }: any) => (
               </p>
             </div>
             <div className="promo_img">
-              <img
+              <object type="image/svg+xml" data="/img/img-api.svg" className="lazyload"></object>
+              {/* <img
                 className="lazyload"
                 data-src="/img/img-api.svg"
                 alt="Image"
-              />
+              /> */}
               <a href="#" className="btn v2">
                 {t('a2')}
               </a>
@@ -74,7 +76,8 @@ const PromoSection = ({ t }: any) => (
       <div className="row align-items-center row_pad">
         <div className="col-lg-6 col-md-12">
           <div className="promo_item_three_img">
-            <img className="lazyload" data-src="/img/plane.png" alt="Image" />
+            <object type="image/svg+xml" data="/img/img-airplane.svg" className="lazyload"></object>
+            {/* <img className="lazyload" data-src="/img/plane.png" alt="Image" /> */}
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
@@ -157,7 +160,8 @@ const PromoSection = ({ t }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-6 col-md-12">
           <div className="promo_item_three_img">
-            <img className="lazyload" data-src="/img/device.png" alt="Image" />
+            <object type="image/svg+xml" data="/img/img-credit.svg" className="lazyload"></object>
+            {/* <img className="lazyload" data-src="/img/device.png" alt="Image" /> */}
           </div>
         </div>
         <div className="col-lg-6 col-md-12">

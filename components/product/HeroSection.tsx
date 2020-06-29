@@ -22,7 +22,8 @@ const HeroSection = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
           <div className="hero_img_one">
-            <img className="lazyload" data-src="/img/banner-product.svg" alt="Image" />
+            <object type="image/svg+xml" data="/img/banner-product.svg"></object>
+            {/* <img className="lazyload" data-src="/img/banner-product.svg" alt="Image" /> */}
           </div>
         </div>
       </div>

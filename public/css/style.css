@@ -1737,6 +1737,7 @@ a:hover {
 
 .slider_item {
   padding: 30px 20px;
+  margin: 10px 0;
 }
 
 .slider_item h3 {
@@ -1945,17 +1946,17 @@ span.open {
 
 .card-header span {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 25px;
   color: #266dfe;
   opacity: 1;
   font-size: 30px;
   background: #f1f4f8;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   text-align: center;
-  line-height: 54px;
+  line-height: 48px;
 }
 
 .card-header span:hover {
@@ -2202,6 +2203,7 @@ p.copyright {
   line-height: 1.5;
   font-family: 'Sarabun', serif;
   margin: 10px 0 50px;
+  min-height: 150px;
 }
 
 .simple_slider_item a.btn.v9 {
@@ -2318,6 +2320,7 @@ p.copyright {
   font-family: 'Sarabun', serif;
   color: #2e4050;
   margin-bottom: 0;
+  min-height: 120px;
 }
 
 .client_info {
@@ -2338,6 +2341,7 @@ p.copyright {
 
 .client_name {
   margin-left: 20px;
+  min-width: 150px;
 }
 
 .client_name h6 {
@@ -2736,6 +2740,7 @@ ul.before-footer {
   width: 360px;
   padding: 20px;
   position: relative;
+  background-color: #fff;
 }
 .chooseType a.btn.v3 {
   position: absolute;
@@ -2750,6 +2755,10 @@ ul.before-footer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+.img-user object {
+  width: 100%;
+  height: auto;
 }
 .sub_userType span {
   color: #31b1e7;
@@ -3025,8 +3034,8 @@ ul.before-footer {
 /* Style the checkmark/indicator */
 
 .sec-checkbox .container .checkmark:after {
-  left: 8px;
-  top: 4px;
+  left: 5px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -4094,6 +4103,6 @@ textarea.input__box.v2 {
   flex-direction: column;
 }
 
-.promo_img img {
+.promo_img object {
   min-height: 250px;
 }
