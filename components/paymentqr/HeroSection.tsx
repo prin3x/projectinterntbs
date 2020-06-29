@@ -147,7 +147,7 @@ const HeroSection = ({ t }: any) => {
         </div>
 
         <div className="col-xl-4 order-2 order-xl-3">
-          <div className="box__wrapper side__box">
+          <div className="box__wrapper">
             <div className="box__header">
               <h5>{t('h13')}</h5>
             </div>

@@ -14,7 +14,7 @@ const CtaSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-xl-6 col-lg-12">
-          <ul className="cta-btn">
+          <ul className="cta-btn before-footer">
             <li>
               <a className="btn v3" href="#">
                 {t('a1')}

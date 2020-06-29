@@ -39,7 +39,7 @@ const PartnerSection = ({ t }: any) => (
             <div className="item">
               <div className="partner_item">
                 <img
-                  className="lazyload"
+                  className="lazyload size-img"
                   data-src="/img/partner_logo_1.png"
                   alt="Image"
                 />
