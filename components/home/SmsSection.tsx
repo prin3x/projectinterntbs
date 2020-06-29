@@ -10,7 +10,7 @@ const SmsSectionV2 = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 ">
           <div className="sms_text">
-            <h3>{t('h1')}</h3>
+            <h3>{t('homesms.header')}</h3>
           </div>
         </div>
         <div className="col-md-12">
@@ -18,21 +18,21 @@ const SmsSectionV2 = ({ t }: any) => (
             <div className="row">
               <div className="col-md-12">
                 <div className="sms_feature_item">
-                  <p>{t('p1')}</p>
+                  <p>{t('homesms.title')}</p>
                   <h2>4,662,190,879</h2>
                 </div>
               </div>
               <div className="col-md-6">
                 <div className="sms_feature_item">
-                  <p>{t('p2')}</p>
+                  <p>{t('homesms.quantity')}</p>
                   <h3>300,000+</h3>
                 </div>
               </div>
               <div className="col-md-6">
                 <div className="sms_feature_item">
-                  <p>{t('p3')}</p>
+                  <p>{t('homesms.duration')}</p>
                   <h3>
-                    1.9 <span>{t('spam1')}</span>
+                    1.9 <span>{t('homesms.second')}</span>
                   </h3>
                 </div>
               </div>
@@ -46,15 +46,18 @@ const SmsSectionV2 = ({ t }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="sms_form_text">
-                  <h4>{t('h2')}</h4>
-                  <p>{t('p4')}</p>
+                  <h4>{t('homesms.test.header')}</h4>
+                  <p>{t('homesms.test.desc')}</p>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
                 <div className="sms_form_field">
-                  <input type="text" placeholder={t('imput1')} />
+                  <input
+                    type="text"
+                    placeholder={t('homesms.test.telNumber')}
+                  />
                   <button className="btn v2" type="submit">
-                    {t('button1')}
+                    {t('homesms.test.confirmBtn')}
                   </button>
                 </div>
               </div>

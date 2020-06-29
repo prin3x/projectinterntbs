@@ -14,7 +14,7 @@ const EduSection = ({ t }: any) => (
                   alt="Image"
                 />
                 <div className="edu_box_text">
-                  <p>{t('p1')}</p>
+                  <p>{t('homeedu.content1')}</p>
                 </div>
               </div>
             </div>
@@ -28,7 +28,7 @@ const EduSection = ({ t }: any) => (
                       alt="Image"
                     />
                     <div className="edu_box_text">
-                      <p>{t('p2')}</p>
+                      <p>{t('homeedu.content2')}</p>
                     </div>
                   </div>
                 </div>
@@ -40,7 +40,7 @@ const EduSection = ({ t }: any) => (
                       alt="Image"
                     />
                     <div className="edu_box_text">
-                      <p>{t('p3')}</p>
+                      <p>{t('homeedu.content3')}</p>
                     </div>
                   </div>
                 </div>
@@ -50,9 +50,9 @@ const EduSection = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="edu_text">
-            <h3>{t('h1')}</h3>
+            <h3>{t('homeedu.header')}</h3>
             <Link href="/SuccessStoriesListing">
-              <a href="#">{t('a1')}</a>
+              <a href="#">{t('homeedu.link')}</a>
             </Link>
           </div>
         </div>

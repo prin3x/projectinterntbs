@@ -17,7 +17,7 @@ const AllPricing = ({ t }: any) => {
             <div className="row no-gutters">
               <div className="col-md-4">
                 <div className="left__box left__box__top">
-                  <p>{t('p1')}</p>
+                  <p>{t('pricingallpricing.column1')}</p>
                 </div>
               </div>
               <div className="col-md-8">
@@ -26,10 +26,10 @@ const AllPricing = ({ t }: any) => {
                     <div className="top__bar">
                       <div className="row">
                         <div className="col-6 text-center">
-                          <p>{t('p2')}</p>
+                          <p>{t('pricingallpricing.column2')}</p>
                         </div>
                         <div className="col-6 text-center">
-                          <p>{t('p3')}</p>
+                          <p>{t('pricingallpricing.column3')}</p>
                         </div>
                       </div>
                     </div>
@@ -49,7 +49,8 @@ const AllPricing = ({ t }: any) => {
                 <div className="left__box">
                   <h3>1,000</h3>
                   <span>
-                    {t('span1')} 2 {t('year')}
+                    {t('pricingallpricing.life')} 2{' '}
+                    {t('pricingallpricing.year')}
                   </span>
                 </div>
               </div>
@@ -64,12 +65,13 @@ const AllPricing = ({ t }: any) => {
                       />
                       <div className="row">
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">{t('h1')}</h4>
+                          <h4 className="d-md-none">Corporate</h4>
 
                           <h3>
                             0.60{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -78,7 +80,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -88,7 +90,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -99,7 +101,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.85{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -108,7 +111,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -118,7 +121,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -141,7 +144,8 @@ const AllPricing = ({ t }: any) => {
                 <div className="left__box">
                   <h3>3,500</h3>
                   <span>
-                    {t('span1')} 2 {t('year')}
+                    {t('pricingallpricing.life')} 2{' '}
+                    {t('pricingallpricing.year')}
                   </span>
                 </div>
               </div>
@@ -161,7 +165,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.45{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -170,7 +175,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -180,7 +185,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -191,7 +196,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.60{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -200,7 +206,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -210,7 +216,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -233,7 +239,8 @@ const AllPricing = ({ t }: any) => {
                 <div className="left__box">
                   <h3>10,000</h3>
                   <span>
-                    {t('span1')} 2 {t('year')}
+                    {t('pricingallpricing.life')} 2{' '}
+                    {t('pricingallpricing.year')}
                   </span>
                 </div>
               </div>
@@ -253,7 +260,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.40{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -262,7 +270,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -272,7 +280,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -283,7 +291,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.55{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -292,7 +301,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -302,7 +311,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -325,7 +334,8 @@ const AllPricing = ({ t }: any) => {
                 <div className="left__box">
                   <h3>30,000</h3>
                   <span>
-                    {t('span1')} 2 {t('year')}
+                    {t('pricingallpricing.life')} 2{' '}
+                    {t('pricingallpricing.year')}
                   </span>
                 </div>
               </div>
@@ -345,7 +355,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.40{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -354,7 +365,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -364,7 +375,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -375,7 +386,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.55{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -384,7 +396,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -394,7 +406,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -417,7 +429,8 @@ const AllPricing = ({ t }: any) => {
                 <div className="left__box">
                   <h3>120,000</h3>
                   <span>
-                    {t('span1')} 2 {t('year')}
+                    {t('pricingallpricing.life')} 2{' '}
+                    {t('pricingallpricing.year')}
                   </span>
                 </div>
               </div>
@@ -437,7 +450,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.40{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -446,7 +460,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -456,7 +470,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -467,7 +481,8 @@ const AllPricing = ({ t }: any) => {
                           <h3>
                             0.55{' '}
                             <span>
-                              {t('bath')}/{t('message')}
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
                             </span>
                           </h3>
 
@@ -476,7 +491,7 @@ const AllPricing = ({ t }: any) => {
                             data-parent="#accordion"
                           >
                             <div className="sender__box1">
-                              <span>{t('span2')}</span>
+                              <span>{t('pricingallpricing.quantity')}</span>
                               <span className="theme__text">85,714</span>
                             </div>
                             <div className="sender__box1">
@@ -486,7 +501,7 @@ const AllPricing = ({ t }: any) => {
 
                             <div className="text-center">
                               <a href="#" className="btn v8">
-                                {t('a1')}
+                                {t('pricingallpricing.buyBtn')}
                               </a>
                             </div>
                           </div>
@@ -500,12 +515,12 @@ const AllPricing = ({ t }: any) => {
           </div>
 
           <div className="col-12 text-center pricing__bottom__content">
-            <p>{t('p4')}</p>
+            <p>{t('pricingallpricing.footertitle')}</p>
 
             <div className="pricing__bottom d-flex align-items-center justify-content-center">
-              <h5 className="mr-5">{t('h2')}</h5>
+              <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
               <a href="#" className="btn v3">
-                {t('a2')}
+                {t('pricingallpricing.sellBtn')}
               </a>
             </div>
           </div>

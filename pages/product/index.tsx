@@ -21,13 +21,13 @@ const Product = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta
-        property="og:url"
-        content="https://d1vb0eqohs6ps7.cloudfront.net/product"
-      />
+      <meta property="og:url" content={process.env.DOMAIN_URL + '/product'} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="product" />
-      <meta property="og:description" content="product" />
+      <meta
+        property="og:title"
+        content="ผู้ให้บริการอันดับ 1 การส่งข้อความผ่านอินเทอร์เน็ต ครบวงจร  - ทดลองส่งข้อความฟรี 20 เครดิต"
+      />
+      <meta property="og:description" content="" />
       <meta
         property="og:image"
         content="https://d1vb0eqohs6ps7.cloudfront.net/img/demoog.jpg"

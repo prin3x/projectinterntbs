@@ -10,15 +10,18 @@ const CtaSectionV3 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className=" col-lg-12">
           <div className="cta-text">
-            <h3>
-              {t('h1-1')} <br />
-              {t('h1-2')}
-            </h3>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: t('sms-trackingctasection.title'),
+              }}
+            ></h3>
             <a href="#" className="btn v7">
-              {t('a1')}
+              {t('sms-trackingctasection.freeBtn')}
             </a>
             <p>
-              {t('p1-1')} <a href="#">{t('a2')}</a> {t('p1-2')}
+              {t('sms-trackingctasection.lablelogin1')}{' '}
+              <a href="#">{t('sms-trackingctasection.lablelogin2')}</a>{' '}
+              {t('sms-trackingctasection.lablelogin3')}
             </p>
           </div>
         </div>

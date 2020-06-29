@@ -15,8 +15,8 @@ const HeroSectionV4 = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12 col-12">
           <div className="hero_text_one v2">
-            <span>{t('span1')}</span>
-            <h1>{t('h1')}</h1>
+            <span>{t('sms-trackinghero.header')}</span>
+            <h1>{t('sms-trackinghero.title')}</h1>
             <p>{/* {t('p1')} <span>{t('span2')}</span> {t('p2')} */}</p>
           </div>
         </div>

@@ -2,15 +2,31 @@ import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const RegisterComponents = ({ t }: any) => (
   <div className="register_section">
-    <h2>{t('h1')}</h2>
+    <h2>{t('register.header')}</h2>
     <div className="form-indiv">
       <div className="input-twocolumn">
-        <input type="text" className="input-txt02" placeholder={t('input1')} />
-        <input type="text" className="input-txt02" placeholder={t('input2')} />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('register.firstname')}
+        />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('register.lastname')}
+        />
       </div>
       <div className="input-twocolumn">
-        <input type="text" className="input-txt02" placeholder={t('input3')} />
-        <input type="text" className="input-txt02" placeholder={t('input4')} />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('register.phone')}
+        />
+        <input
+          type="text"
+          className="input-txt02"
+          placeholder={t('register.email')}
+        />
       </div>
       <div className="captcha">
         <img className="lazyload" data-src="/img/captcha.jpg" alt="Image" />
@@ -18,14 +34,14 @@ const RegisterComponents = ({ t }: any) => (
       <div className="sec-checkbox">
         <div>
           <label className="container">
-            {t('div1')}
+            {t('register.rule')}
             <input type="checkbox" checked={true} />
             <span className="checkmark"></span>
           </label>
         </div>
         <div>
           <label className="container">
-            {t('div2')}
+            {t('register.news')}
             <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
@@ -34,7 +50,7 @@ const RegisterComponents = ({ t }: any) => (
       <div className="btn-regis">
         <Link href="/register-success">
           <a className="btn v2" href="#">
-            {t('a1')}
+            {t('register.createBtn')}
           </a>
         </Link>
       </div>

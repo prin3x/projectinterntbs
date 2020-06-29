@@ -10,12 +10,12 @@ const PromoSection = ({ t }: any) => (
       <div className="row">
         <div className="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
           <div className="promo_text">
-            <h2>
-              {t('h1-1')}
-              <br />
-              {t('h1-2')}
-            </h2>
-            <p>{t('p1')}</p>
+            <h2
+              dangerouslySetInnerHTML={{
+                __html: t('productpromo.section.1.header'),
+              }}
+            ></h2>
+            <p>{t('productpromo.section.1.title')}</p>
           </div>
         </div>
       </div>
@@ -23,21 +23,25 @@ const PromoSection = ({ t }: any) => (
         <div className="col-md-6">
           <div className="promo_item">
             <div className="promo_title">
-              <p>
-                {t('p2-1')}
-                <br />
-                {t('p2-2')}
-              </p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t('productpromo.section.1.title-left'),
+                }}
+              ></p>
             </div>
             <div className="promo_img">
-              <object type="image/svg+xml" data="/img/img-sms.svg" className="lazyload"></object>
+              <object
+                type="image/svg+xml"
+                data="/img/img-sms.svg"
+                className="lazyload"
+              ></object>
               {/* <img
                 className="lazyload"
                 data-src="/img/img-sms.svg"
                 alt="Image"
               /> */}
               <a href="#" className="btn v2">
-                {t('a1')}
+                {t('productpromo.section.1.freeBtn')}
               </a>
             </div>
           </div>
@@ -45,81 +49,84 @@ const PromoSection = ({ t }: any) => (
         <div className="col-md-6">
           <div className="promo_item">
             <div className="promo_title">
-              <p>
-                {t('p3-1')}
-                <br />
-                {t('p3-2')}
-              </p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: t('productpromo.section.1.title-right'),
+                }}
+              ></p>
             </div>
             <div className="promo_img">
-              <object type="image/svg+xml" data="/img/img-api.svg" className="lazyload"></object>
+              <object
+                type="image/svg+xml"
+                data="/img/img-api.svg"
+                className="lazyload"
+              ></object>
               {/* <img
                 className="lazyload"
                 data-src="/img/img-api.svg"
                 alt="Image"
               /> */}
               <a href="#" className="btn v2">
-                {t('a2')}
+                {t('productpromo.section.1.developerBtn')}
               </a>
             </div>
           </div>
         </div>
         <div className="col-md-12">
           <div className="promo_bottom_text">
-            <p>
-              {t('p4')}
-              <span>{t('span1')}</span>
-            </p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t('productpromo.section.1.footer'),
+              }}
+            ></p>
           </div>
         </div>
       </div>
       <div className="row align-items-center row_pad">
         <div className="col-lg-6 col-md-12">
           <div className="promo_item_three_img">
-            <object type="image/svg+xml" data="/img/img-airplane.svg" className="lazyload"></object>
+            <object
+              type="image/svg+xml"
+              data="/img/img-airplane.svg"
+              className="lazyload"
+            ></object>
             {/* <img className="lazyload" data-src="/img/plane.png" alt="Image" /> */}
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="service_feature_text">
-            <h3>{t('h2')}</h3>
-            <p>
-              {t('p5-1')}
-              <br />
-              {t('p5-2')}
-              <br />
-              {t('p5-3')}
-            </p>
+            <h3>{t('productpromo.section.2.header')}</h3>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t('productpromo.section.2.title'),
+              }}
+            ></p>
             <a className="link" href="#">
-              {t('a3')}
+              {t('productpromo.section.2.link')}
             </a>
-            <h6 className="promo_link">
-              {t('h3-1')}
-              <span>{t('span2')}</span>
-              {t('h3-2')}
-            </h6>
+            <h6
+              className="promo_link"
+              dangerouslySetInnerHTML={{
+                __html: t('productpromo.section.2.footer'),
+              }}
+            ></h6>
           </div>
         </div>
       </div>
       <div className="row align-items-center row_pad">
         <div className="col-lg-5 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="service_feature_text">
-            <h3>
-              {t('h4-1')}
-              <br />
-              {t('h4-2')}
-            </h3>
-            <p>{t('p6')}</p>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: t('productpromo.section.3.header'),
+              }}
+            ></h3>
+            <p>{t('productpromo.section.3.title')}</p>
             <Link href="/sms-tracking">
               <a className="link" href="#">
-                {t('a4')}
+                {t('productpromo.section.3.link')}
               </a>
             </Link>
-            {/* <h6 className="promo_link">
-              {t('h5-1')}
-              <span>{t('span3')}</span>
-              {t('h5-2')}
-            </h6> */}
           </div>
         </div>
         <div className="col-lg-7 col-md-12 col-12 order-lg-2 order-md-1 order-1">
@@ -131,7 +138,7 @@ const PromoSection = ({ t }: any) => (
                   data-src="/img/img_4.png"
                   alt="Image"
                 />
-                <p>{t('p7-1')}</p>
+                <p>{t('productpromo.section.3.box.1')}</p>
               </div>
             </div>
             <div className="col-md-4 col-12">
@@ -141,7 +148,7 @@ const PromoSection = ({ t }: any) => (
                   data-src="/img/img_5.png"
                   alt="Image"
                 />
-                <p>{t('p7-2')}</p>
+                <p>{t('productpromo.section.3.box.2')}</p>
               </div>
             </div>
             <div className="col-md-4 col-12">
@@ -151,7 +158,7 @@ const PromoSection = ({ t }: any) => (
                   data-src="/img/img_6.png"
                   alt="Image"
                 />
-                <p>{t('p7-3')}</p>
+                <p>{t('productpromo.section.3.box.3')}</p>
               </div>
             </div>
           </div>
@@ -160,31 +167,36 @@ const PromoSection = ({ t }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-6 col-md-12">
           <div className="promo_item_three_img">
-            <object type="image/svg+xml" data="/img/img-credit.svg" className="lazyload"></object>
+            <object
+              type="image/svg+xml"
+              data="/img/img-credit.svg"
+              className="lazyload"
+            ></object>
             {/* <img className="lazyload" data-src="/img/device.png" alt="Image" /> */}
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="service_feature_text">
-            <h3>
-              {t('h6-1')}
-              <br />
-              {t('h6-2')}
-            </h3>
-            <p>{t('p8')}</p>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: t('productpromo.section.4.header'),
+              }}
+            ></h3>
+            <p>{t('productpromo.section.4.title')}</p>
             <a href="#" className="btn v2">
-              {t('a5')}
+              {t('productpromo.section.4.freeBtn')}
             </a>
             <Link href="/otp">
               <a className="link" href="#">
-                {t('a6')}
+                {t('productpromo.section.4.link')}
               </a>
             </Link>
-            <h6 className="promo_link">
-              {t('h7-1')}
-              <span>{t('span4')}</span>
-              {t('h7-2')}
-            </h6>
+            <h6
+              className="promo_link"
+              dangerouslySetInnerHTML={{
+                __html: t('productpromo.section.4.footer'),
+              }}
+            ></h6>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('h1')}</h3>
+            <h3>{t('otpsimpleicon.otpheader')}</h3>
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@ const SimpleIconSection = ({ t }: any) => (
               />
             </div>
             <div className="check_text">
-              <p>{t('p1')}</p>
+              <p>{t('otpsimpleicon.setting1')}</p>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@ const SimpleIconSection = ({ t }: any) => (
               />
             </div>
             <div className="check_text">
-              <p>{t('p2')}</p>
+              <p>{t('otpsimpleicon.setting2')}</p>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@ const SimpleIconSection = ({ t }: any) => (
               />
             </div>
             <div className="check_text">
-              <p>{t('p3')}</p>
+              <p>{t('otpsimpleicon.setting3')}</p>
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ const SimpleIconSection = ({ t }: any) => (
               />
             </div>
             <div className="check_text">
-              <p>{t('p4')}</p>
+              <p>{t('otpsimpleicon.setting4')}</p>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('h2')}</h3>
+            <h3>{t('otpsimpleicon.apiheader')}</h3>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@ const SimpleIconSection = ({ t }: any) => (
         </div>
         <div className="col-md-12 text-center">
           <a href="#" className="lang_link">
-            {t('a1')}
+            {t('otpsimpleicon.apilink')}
             <img className="lazyload" data-src="/img/arrow_5.png" alt="Image" />
           </a>
         </div>

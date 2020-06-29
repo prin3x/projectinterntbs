@@ -13,9 +13,12 @@ const Register = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="register" />
-      <meta property="og:description" content="register" />
-      <meta property="og:url" content="" />
+      <meta
+        property="og:title"
+        content="ลงทะเบียนเข้าใช้งาน ให้คุณได้ทดลองส่งข้อความฟรี 20 เครดิตทันที - ThaiBulkSMS"
+      />
+      <meta property="og:description" content="" />
+      <meta property="og:url" content={process.env.DOMAIN_URL + '/register'} />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="https://thaibulksms.com" />

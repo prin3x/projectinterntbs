@@ -6,11 +6,12 @@ const SmsSectionV4 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3>
-              {t('h1-1')} <br />
-              {t('h1-2')}
-            </h3>
-            <p>{t('p1')}</p>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: t('sms-trackingsmssection.title'),
+              }}
+            ></h3>
+            <p>{t('sms-trackingsmssection.desc')}</p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -25,16 +26,17 @@ const SmsSectionV4 = ({ t }: any) => (
             <div className="row align-items-top">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>
-                    {t('h2-1')} <br />
-                    {t('h2-2')}
-                  </h4>
+                  <h4
+                    dangerouslySetInnerHTML={{
+                      __html: t('sms-trackingsmssection.freetitle'),
+                    }}
+                  ></h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
                   <a href="#" className="btn v8">
-                    {t('a1')}
+                    {t('sms-trackingsmssection.freeBtn')}
                   </a>
                 </div>
               </div>

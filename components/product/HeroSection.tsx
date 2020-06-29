@@ -14,16 +14,24 @@ const HeroSection = ({ t }: any) => (
     <div className="container">
       <div className="row align-item-center hero_top_one">
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
-          <div className="hero_text_one">
-            <span>{t('span1')}</span>
-            <h1>{t('h1')}</h1>
-            <p>{t('p1')}</p>
-          </div>
+          <div
+            className="hero_text_one"
+            dangerouslySetInnerHTML={{
+              __html: t('producthero.section.1.title'),
+            }}
+          ></div>
         </div>
         <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
           <div className="hero_img_one">
-            <object type="image/svg+xml" data="/img/banner-product.svg"></object>
-            {/* <img className="lazyload" data-src="/img/banner-product.svg" alt="Image" /> */}
+            <object
+              type="image/svg+xml"
+              data="/img/banner-product.svg"
+            ></object>
+            {/* <img
+              className="lazyload"
+              data-src="/img/banner-product.svg"
+              alt="Image"
+            /> */}
           </div>
         </div>
       </div>
@@ -35,19 +43,22 @@ const HeroSection = ({ t }: any) => (
         </div>
         <div className="col-lg-6">
           <div className="hero_text_two">
-            <span>
-              {t('span2-1')}
-              <br />
-              {t('span2-2')}
-            </span>
-            <h2>
-              <span>{t('span3')}</span>
-              <br /> {t('h2')}
-            </h2>
-            <p>{t('p2')}</p>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t('producthero.section.2.title1'),
+              }}
+            ></span>
+            <h2
+              dangerouslySetInnerHTML={{
+                __html: t('producthero.section.2.title2'),
+              }}
+            ></h2>
+            <p>{t('producthero.section.2.title3')}</p>
             <Link href="/">
               <a>
-                <p style={{ color: '#31b1e7' }}>{t('p3')}</p>
+                <p style={{ color: '#31b1e7' }}>
+                  {t('producthero.section.2.link')}
+                </p>
               </a>
             </Link>
           </div>

@@ -1,11 +1,9 @@
 import React from 'react';
-import Layout from '../../components/Layout';
-import HeroSection from '../../components/how-to-order/HeroSection';
-import TabContent from '../../components/how-to-order/TabContent';
-import BacktoTop from '../../components/BacktoTop';
+import Layout from '../../../components/Layout';
+import UsertypeCompanyComponents from '../../../components/register/usertypecompany';
 import Head from 'next/head';
-import { withTranslation } from '../../i18n';
-const Order = ({ t }: any) => (
+import { withTranslation } from '../../../i18n';
+const Usertypecompany = ({ t }: any) => (
   <Layout>
     <Head>
       <title>{t('title')}</title>
@@ -15,8 +13,8 @@ const Order = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="order" />
-      <meta property="og:description" content="order" />
+      <meta property="og:title" content="" />
+      <meta property="og:description" content="" />
       <meta property="og:url" content="" />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />
@@ -30,14 +28,10 @@ const Order = ({ t }: any) => (
       <meta name="twitter:image" content="" />
       <meta name="twitter:domain" content="" />
     </Head>
-    <div className="page_wrapper">
-      <HeroSection />
-      <TabContent />
-    </div>
-    <BacktoTop />
+    <UsertypeCompanyComponents />
   </Layout>
 );
-Order.getInitialProps = async () => ({
-  namespacesRequired: ['How-to-orderMeta'],
+Usertypecompany.getInitialProps = async () => ({
+  namespacesRequired: ['UsertypeCompanyMeta'],
 });
-export default withTranslation('How-to-orderMeta')(Order);
+export default withTranslation('UsertypeCompanyMeta')(Usertypecompany);

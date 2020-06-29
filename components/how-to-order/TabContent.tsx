@@ -31,16 +31,12 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('h1')}</h4>
-                        <p>
-                          {t('p1')}
-                          <a href="#" className="theme__text link mt-0">
-                            {t('a1')}
-                          </a>
-                          <br /> {t('p2-1')}
-                          <br />
-                          {t('p2-2')}
-                        </p>
+                        <h4>{t('howtoordertabcontent.content.1.title')}</h4>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: t('howtoordertabcontent.content.1.desc'),
+                          }}
+                        ></p>
                       </div>
                     </div>
                   </div>
@@ -56,12 +52,12 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('h2')}</h4>
-                        <p>
-                          {t('p3-1')}
-                          <br />
-                          {t('p3-2')}
-                        </p>
+                        <h4>{t('howtoordertabcontent.content.2.title')}</h4>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: t('howtoordertabcontent.content.2.desc'),
+                          }}
+                        ></p>
                       </div>
                     </div>
                   </div>
@@ -77,15 +73,12 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('h3')}</h4>
-                        <p>
-                          {t('p4-1')}
-                          <br />
-                          {t('p4-2')} <br />
-                          <a href="#" className="theme__text link mt-0">
-                            {t('a2')}
-                          </a>
-                        </p>
+                        <h4>{t('howtoordertabcontent.content.3.title')}</h4>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: t('howtoordertabcontent.content.3.desc'),
+                          }}
+                        ></p>
                       </div>
                     </div>
                   </div>
@@ -101,12 +94,12 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('h4')}</h4>
-                        <p>
-                          {t('p5-1')}
-                          <br />
-                          {t('p5-2')}
-                        </p>
+                        <h4>{t('howtoordertabcontent.content.4.title')}</h4>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: t('howtoordertabcontent.content.4.desc'),
+                          }}
+                        ></p>
                       </div>
                     </div>
                   </div>
@@ -122,12 +115,12 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('h5')}</h4>
-                        <p>
-                          {t('p6-1')}
-                          <br />
-                          {t('p6-2')}
-                        </p>
+                        <h4>{t('howtoordertabcontent.content.5.title')}</h4>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: t('howtoordertabcontent.content.5.desc'),
+                          }}
+                        ></p>
                       </div>
                     </div>
                   </div>
@@ -143,14 +136,12 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('h6')}</h4>
-                        <p>
-                          {t('p7-1')}
-                          <br />
-                          {t('p7-2')}
-                          <br />
-                          {t('p7-3')}
-                        </p>
+                        <h4>{t('howtoordertabcontent.content.6.title')}</h4>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: t('howtoordertabcontent.content.6.desc'),
+                          }}
+                        ></p>
                       </div>
                     </div>
                   </div>
@@ -165,7 +156,9 @@ const TabContent = ({ t }: any) => {
                   <div className="col-lg-8">
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>{t('h7')}</h5>
+                        <h5>
+                          {t('howtoordertabcontent.payment.creditnow.header')}
+                        </h5>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -179,22 +172,29 @@ const TabContent = ({ t }: any) => {
                                     alt=""
                                   />
                                 </div>
-                                <h5>
-                                  {t('h8-1')}
-                                  <br /> {t('h8-2')}
-                                </h5>
-                                <p>
-                                  {t('p8-1')} <br />
-                                  {t('p8-2')}
-                                </p>
-
+                                <h5
+                                  dangerouslySetInnerHTML={{
+                                    __html: t(
+                                      'howtoordertabcontent.payment.creditnow.qrcodetitle'
+                                    ),
+                                  }}
+                                ></h5>
+                                <p
+                                  dangerouslySetInnerHTML={{
+                                    __html: t(
+                                      'howtoordertabcontent.payment.creditnow.qrcodedesc'
+                                    ),
+                                  }}
+                                ></p>
                                 <a
                                   href="#"
                                   className="theme__text link"
                                   data-toggle="modal"
                                   data-target="#popup1"
                                 >
-                                  {t('a3')}
+                                  {t(
+                                    'howtoordertabcontent.payment.creditnow.qrcodelink'
+                                  )}
                                 </a>
                               </div>
                             </div>
@@ -208,11 +208,18 @@ const TabContent = ({ t }: any) => {
                                     alt=""
                                   />
                                 </div>
-                                <h5>{t('h9')}</h5>
-                                <p>
-                                  {t('p9-1')} <br />
-                                  {t('p9-2')}
-                                </p>
+                                <h5>
+                                  {t(
+                                    'howtoordertabcontent.payment.creditnow.creditcradtitile'
+                                  )}
+                                </h5>
+                                <p
+                                  dangerouslySetInnerHTML={{
+                                    __html: t(
+                                      'howtoordertabcontent.payment.creditnow.creditcraddecs'
+                                    ),
+                                  }}
+                                ></p>
 
                                 <a
                                   href="#"
@@ -220,7 +227,9 @@ const TabContent = ({ t }: any) => {
                                   data-toggle="modal"
                                   data-target="#popup1"
                                 >
-                                  {t('a4')}
+                                  {t(
+                                    'howtoordertabcontent.payment.creditnow.creditcradlink'
+                                  )}
                                 </a>
                               </div>
                             </div>
@@ -231,7 +240,9 @@ const TabContent = ({ t }: any) => {
 
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>{t('h10')}</h5>
+                        <h5>
+                          {t('howtoordertabcontent.payment.creditwait.header')}
+                        </h5>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -245,12 +256,18 @@ const TabContent = ({ t }: any) => {
                                     alt=""
                                   />
                                 </div>
-                                <h5 className="mt-4">{t('h11')}</h5>
-                                <p>
-                                  {t('p10-1')}
-                                  <br />
-                                  {t('p10-2')}
-                                </p>
+                                <h5 className="mt-4">
+                                  {t(
+                                    'howtoordertabcontent.payment.creditwait.title'
+                                  )}
+                                </h5>
+                                <p
+                                  dangerouslySetInnerHTML={{
+                                    __html: t(
+                                      'howtoordertabcontent.payment.creditwait.desc'
+                                    ),
+                                  }}
+                                ></p>
 
                                 <a
                                   href="#"
@@ -258,7 +275,9 @@ const TabContent = ({ t }: any) => {
                                   data-toggle="modal"
                                   data-target="#popup2"
                                 >
-                                  {t('a5')}
+                                  {t(
+                                    'howtoordertabcontent.payment.creditwait.link'
+                                  )}
                                 </a>
                               </div>
                             </div>
@@ -276,8 +295,8 @@ const TabContent = ({ t }: any) => {
         <div className="row align-items-center link__box">
           <div className="col-xl-5 col-lg-12">
             <div className="faq_bottom_text">
-              <h3>{t('h12')}</h3>
-              <p>{t('p11')}</p>
+              <h3>{t('howtoordertabcontent.question')}</h3>
+              <p>{t('howtoordertabcontent.questiontitle')}</p>
             </div>
           </div>
           <div className="col-xl-7 col-12-7">
@@ -290,7 +309,7 @@ const TabContent = ({ t }: any) => {
                     alt="Image"
                   />
                   <a href="#" className="btn v4">
-                    {t('a6')}
+                    {t('howtoordertabcontent.telBtn')}
                   </a>
                 </div>
               </div>
@@ -302,7 +321,7 @@ const TabContent = ({ t }: any) => {
                     alt="Image"
                   />
                   <a href="#" className="btn v4">
-                    {t('a7')}
+                    {t('howtoordertabcontent.contactBtn')}
                   </a>
                 </div>
               </div>
@@ -314,7 +333,7 @@ const TabContent = ({ t }: any) => {
                     alt="Image"
                   />
                   <a href="#" className="btn v4">
-                    {t('a8')}
+                    {t('howtoordertabcontent.fbBrn')}
                   </a>
                 </div>
               </div>

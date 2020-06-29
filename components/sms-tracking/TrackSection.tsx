@@ -15,8 +15,8 @@ const TrackSectionV2 = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="track_text">
-            <h3>{t('h1')}</h3>
-            <p>{t('p1')}</p>
+            <h3>{t('sms-trackingtracksection.title')}</h3>
+            <p>{t('sms-trackingtracksection.desc')}</p>
           </div>
         </div>
       </div>
@@ -25,25 +25,25 @@ const TrackSectionV2 = ({ t }: any) => (
           <div className="row">
             <div className="col-lg-6">
               <div className="track_box">
-                <h4>
-                  {t('h2-1')} <br />
-                  <span>SMS Tracking</span> <br />
-                  {t('h2-2')}
-                </h4>
+                <h4
+                  dangerouslySetInnerHTML={{
+                    __html: t('sms-trackingtracksection.campaigntitle'),
+                  }}
+                ></h4>
                 <a href="#" className="btn v3">
-                  {t('a1')}
+                  {t('sms-trackingtracksection.campaignBtn')}
                 </a>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="track_box v2">
-                <h4>
-                  {t('h3-1')}
-                  <br />
-                  <span>Corporate Package</span> {t('h3-2')}
-                </h4>
+                <h4
+                  dangerouslySetInnerHTML={{
+                    __html: t('sms-trackingtracksection.corporatepackagetitle'),
+                  }}
+                ></h4>
                 <a href="#" className="btn v3">
-                  {t('a2')}
+                  {t('sms-trackingtracksection.corporatepackageBtn')}
                 </a>
               </div>
             </div>
