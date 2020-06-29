@@ -30,11 +30,16 @@ const PromoSection = ({ t }: any) => (
               ></p>
             </div>
             <div className="promo_img">
-              <img
+              <object
+                type="image/svg+xml"
+                data="/img/img-sms.svg"
                 className="lazyload"
-                data-src="/img/promo_2.png"
+              ></object>
+              {/* <img
+                className="lazyload"
+                data-src="/img/img-sms.svg"
                 alt="Image"
-              />
+              /> */}
               <a href="#" className="btn v2">
                 {t('productpromo.section.1.freeBtn')}
               </a>
@@ -53,7 +58,7 @@ const PromoSection = ({ t }: any) => (
             <div className="promo_img">
               <img
                 className="lazyload"
-                data-src="/img/promo_1.png"
+                data-src="/img/img-api.svg"
                 alt="Image"
               />
               <a href="#" className="btn v2">

@@ -7,7 +7,8 @@ const UsertypeComponents = ({ t }: any) => (
     <div className="chooseType">
       <div className="indivType">
         <div className="img-user">
-          <img className="lazyload" data-src="/img/img-indiv.png" alt="Image" />
+          <object type="image/svg+xml" data="/img/img-indiv.svg"></object>
+          {/* <img className="lazyload" data-src="/img/img-indiv.png" alt="Image" /> */}
         </div>
         <Link href="individual">
           <a href="#" className="btn v3">

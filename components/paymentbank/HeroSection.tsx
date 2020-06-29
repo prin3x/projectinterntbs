@@ -338,7 +338,7 @@ const HeroSection = ({ t }: any) => {
         </div>
 
         <div className="col-xl-4 order-2 order-xl-3">
-          <div className="box__wrapper side__box" ref={stickyBoxBar}>
+          <div className="box__wrapper" ref={stickyBoxBar}>
             <div className="box__header">
               <h5>{t('paymentbankhero.price.header')}</h5>
             </div>
