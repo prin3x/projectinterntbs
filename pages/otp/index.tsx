@@ -19,9 +19,12 @@ const Otp = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="OTP" />
-      <meta property="og:description" content="OTP" />
-      <meta property="og:url" content="" />
+      <meta
+        property="og:title"
+        content="บริการ OTP Ready-to-Use การส่งยืนยันตัวตนที่พร้อมใช้ทันที"
+      />
+      <meta property="og:description" content="" />
+      <meta property="og:url" content={process.env.DOMAIN_URL + '/otp'} />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="https://thaibulksms.com" />

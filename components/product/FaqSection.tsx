@@ -44,7 +44,11 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.1.desc')}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: t('productfaq.faq.1.desc'),
+                    }}
+                  ></p>
                 </div>
               </div>
             </div>
@@ -61,7 +65,7 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.1.title')}
+                    {t('productfaq.faq.2.title')}
                   </h5>
                 </a>
               </div>
@@ -73,7 +77,7 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.1.desc')}</p>
+                  <p>{t('productfaq.faq.2.desc')}</p>
                 </div>
               </div>
             </div>
@@ -90,7 +94,7 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.1.title')}
+                    {t('productfaq.faq.3.title')}
                   </h5>
                 </a>
               </div>
@@ -102,7 +106,11 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.1.desc')}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: t('productfaq.faq.3.desc'),
+                    }}
+                  ></p>
                 </div>
               </div>
             </div>
@@ -119,7 +127,7 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.1.title')}
+                    {t('productfaq.faq.4.title')}
                   </h5>
                 </a>
               </div>
@@ -131,7 +139,11 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.1.desc')}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: t('productfaq.faq.4.desc'),
+                    }}
+                  ></p>
                 </div>
               </div>
             </div>
@@ -156,7 +168,7 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.1.title')}
+                    {t('productfaq.faq.5.title')}
                   </h5>
                 </a>
               </div>
@@ -168,7 +180,11 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx2"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.1.desc')}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: t('productfaq.faq.5.desc'),
+                    }}
+                  ></p>
                 </div>
               </div>
             </div>
@@ -185,7 +201,7 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.1.title')}
+                    {t('productfaq.faq.6.title')}
                   </h5>
                 </a>
               </div>
@@ -197,7 +213,7 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx2"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.1.desc')}</p>
+                  <p>{t('productfaq.faq.6.desc')}</p>
                 </div>
               </div>
             </div>
@@ -214,7 +230,7 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.1.title')}
+                    {t('productfaq.faq.7.title')}
                   </h5>
                 </a>
               </div>
@@ -226,7 +242,7 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx2"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.1.desc')}</p>
+                  <p>{t('productfaq.faq.7.desc')}</p>
                 </div>
               </div>
             </div>
@@ -243,7 +259,7 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.1.title')}
+                    {t('productfaq.faq.8.title')}
                   </h5>
                 </a>
               </div>
@@ -255,7 +271,7 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx2"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.1.desc')}</p>
+                  <p>{t('productfaq.faq.8.desc')}</p>
                 </div>
               </div>
             </div>

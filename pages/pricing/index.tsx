@@ -16,9 +16,12 @@ const Pricing = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="pricing" />
-      <meta property="og:description" content="pricing" />
-      <meta property="og:url" content="" />
+      <meta
+        property="og:title"
+        content="รวมแพ็กเกจราคาสุดคุ้มของ ThaiBulkSMS ในราคาเริ่มต้นเพียงแค่ 0.28 บาท - ทดลองส่งข้อความฟรี 20 เครดิต"
+      />
+      <meta property="og:description" content="" />
+      <meta property="og:url" content={process.env.DOMAIN_URL + '/pricing'} />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="https://thaibulksms.com" />
