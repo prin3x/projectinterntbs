@@ -242,7 +242,11 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx2"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.7.desc')}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: t('productfaq.faq.7.desc'),
+                    }}
+                  ></p>
                 </div>
               </div>
             </div>

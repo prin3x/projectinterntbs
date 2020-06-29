@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from '../../components/Layout';
-import ThankyouComponents from '../../components/thankyou/thankyou';
+import Layout from '../../../components/Layout';
+import UsertypeCompany from '../../../components/register/usertypeindividual';
 import Head from 'next/head';
-import { withTranslation } from '../../i18n';
-const Thankyou = ({ t }: any) => (
+import { withTranslation } from '../../../i18n';
+const Usertypeindividual = ({ t }: any) => (
   <Layout>
     <Head>
       <title>{t('title')}</title>
@@ -13,8 +13,8 @@ const Thankyou = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="Register success" />
-      <meta property="og:description" content="Register success" />
+      <meta property="og:title" content="" />
+      <meta property="og:description" content="" />
       <meta property="og:url" content="" />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />
@@ -28,10 +28,10 @@ const Thankyou = ({ t }: any) => (
       <meta name="twitter:image" content="" />
       <meta name="twitter:domain" content="" />
     </Head>
-    <ThankyouComponents />
+    <UsertypeCompany />
   </Layout>
 );
-Thankyou.getInitialProps = async () => ({
-  namespacesRequired: ['ThankyouMeta'],
+Usertypeindividual.getInitialProps = async () => ({
+  namespacesRequired: ['UsertypeIndividualMeta'],
 });
-export default withTranslation('ThankyouMeta')(Thankyou);
+export default withTranslation('UsertypeIndividualMeta')(Usertypeindividual);

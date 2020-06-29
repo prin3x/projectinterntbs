@@ -119,7 +119,7 @@ const Header = ({ t }: any) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/how-to-order">
+                    <Link href="/support/how-to-order">
                       <a className="active" href="#">
                         {t('header.howtoorder')}
                       </a>
@@ -210,7 +210,7 @@ const Header = ({ t }: any) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/how-to-order">
+                      <Link href="/support/how-to-order">
                         <a className="active" href="#">
                           {t('header.howtoorder')}
                         </a>
@@ -288,13 +288,13 @@ const Header = ({ t }: any) => {
                   </li>
                 ) : (
                   <li>
-                    <Link href="/login">
+                    <Link href="/log-in">
                       <a href="#">{t('header.login')}</a>
                     </Link>
                   </li>
                 )}
                 {/* <li>
-                  <Link href="/login">
+                  <Link href="/log-in">
                     <a href="#">{t('menu-6')}</a>
                   </Link>
                 </li> */}

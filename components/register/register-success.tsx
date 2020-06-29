@@ -16,7 +16,7 @@ const RegisterfinishComponents = ({ t }: any) => (
         dangerouslySetInnerHTML={{ __html: t('registerfinish.desc') }}
       ></p>
       <div className="btn-login">
-        <Link href="/login">
+        <Link href="/log-in">
           <a className="btn v2" href="#">
             {t('registerfinish.loginBtn')}
           </a>

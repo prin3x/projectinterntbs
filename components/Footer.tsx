@@ -53,7 +53,7 @@ const Footer = ({ t }: any) => (
             <h4>{t('footer.support')}</h4>
             <ul>
               <li>
-                <Link href="/how-to-order">
+                <Link href="/support/how-to-order">
                   <a href="#">{t('footer.howtoorder')}</a>
                 </Link>
               </li>

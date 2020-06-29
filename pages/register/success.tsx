@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import UsertypeComponents from '../../components/register/usertype';
+import RegisterfinishComponents from '../../components/register/register-success';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Usertype = ({ t }: any) => (
+const Registeruccess = ({ t }: any) => (
   <Layout>
     <Head>
       <title>{t('title')}</title>
@@ -13,8 +13,8 @@ const Usertype = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="usertype" />
-      <meta property="og:description" content="usertype" />
+      <meta property="og:title" content="" />
+      <meta property="og:description" content="" />
       <meta property="og:url" content="" />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />
@@ -28,10 +28,10 @@ const Usertype = ({ t }: any) => (
       <meta name="twitter:image" content="" />
       <meta name="twitter:domain" content="" />
     </Head>
-    <UsertypeComponents />
+    <RegisterfinishComponents />
   </Layout>
 );
-Usertype.getInitialProps = async () => ({
-  namespacesRequired: ['UsertypeMeta'],
+Registeruccess.getInitialProps = async () => ({
+  namespacesRequired: ['RegistersuccessMeta'],
 });
-export default withTranslation('UsertypeMeta')(Usertype);
+export default withTranslation('RegistersuccessMeta')(Registeruccess);

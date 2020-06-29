@@ -1,9 +1,11 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import UsertypeCompany from '../../components/register/usertypeindividual';
+import HeroSection from '../../components/how-to-order/HeroSection';
+import TabContent from '../../components/how-to-order/TabContent';
+import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Usertypeindividual = ({ t }: any) => (
+const Order = ({ t }: any) => (
   <Layout>
     <Head>
       <title>{t('title')}</title>
@@ -13,8 +15,11 @@ const Usertypeindividual = ({ t }: any) => (
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta property="og:title" content="regusertypeindividualister" />
-      <meta property="og:description" content="regusertypeindividualister" />
+      <meta
+        property="og:title"
+        content="ช่องทางและขั้นตอนง่าย ๆ ในการซื้อเครดิตเพื่อส่งข้อความ"
+      />
+      <meta property="og:description" content="" />
       <meta property="og:url" content="" />
       <meta property="og:image" content="" />
       <meta property="og:type" content="website" />
@@ -28,10 +33,14 @@ const Usertypeindividual = ({ t }: any) => (
       <meta name="twitter:image" content="" />
       <meta name="twitter:domain" content="" />
     </Head>
-    <UsertypeCompany />
+    <div className="page_wrapper">
+      <HeroSection />
+      <TabContent />
+    </div>
+    <BacktoTop />
   </Layout>
 );
-Usertypeindividual.getInitialProps = async () => ({
-  namespacesRequired: ['UsertypeIndividualMeta'],
+Order.getInitialProps = async () => ({
+  namespacesRequired: ['How-to-orderMeta'],
 });
-export default withTranslation('UsertypeIndividualMeta')(Usertypeindividual);
+export default withTranslation('How-to-orderMeta')(Order);
