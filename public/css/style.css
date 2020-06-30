@@ -484,8 +484,8 @@ a:hover {
 .site-navbar .site-navigation .site-menu .has-children .dropdown {
   visibility: hidden;
   opacity: 0;
-  top: 122%;
-  left: -12%;
+  top: 150%;
+  left: -122%;
   position: absolute;
   text-align: left;
   margin-top: 20px;
