@@ -2193,6 +2193,7 @@ p.copyright {
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 20px;
+  word-break: break-all;
 }
 .simple_slider_item .btn.v9 {
   box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.3);
@@ -2203,11 +2204,13 @@ p.copyright {
   line-height: 1.5;
   font-family: 'Sarabun', serif;
   margin: 10px 0 50px;
-  min-height: 150px;
+  min-height: 120px;
+  word-break: break-all;
 }
 
 .simple_slider_item a.btn.v9 {
   transform: translateY(65px);
+  word-break: break-all;
 }
 
 .simple_slider_item p span {
@@ -2502,7 +2505,7 @@ p.copyright {
 }
 
 .cta_section.v2 .cta-text p a {
-  clear: ;
+  clear: both;
   color: #fff;
   text-decoration: underline;
 }
@@ -4106,3 +4109,9 @@ textarea.input__box.v2 {
 .promo_img object {
   min-height: 250px;
 }
+
+.simple_slider_heading_img object {
+  width: 150%;
+  margin: -20% 0 0 -20%;
+}
+

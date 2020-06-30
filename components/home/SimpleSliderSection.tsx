@@ -62,12 +62,13 @@ const SimpleSliderSection = ({ t }: any) => {
                 ></h3>
               </div>
               <div className="simple_slider_heading_img">
-                <img
+                <object type="image/svg+xml" data="/img/TBS-home-feature01.svg"></object>
+                {/* <img
                   ref={mainImage}
                   className="lazyload"
                   data-src="/img/img_23.png"
                   alt="Image"
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -126,7 +127,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/img_23.png
+                    <object type="image/svg+xml" data="/img/TBS-home-feature01.svg"></object>
                   </span>
                 </div>
               </div>
@@ -150,7 +151,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/img_25.png
+                    <object type="image/svg+xml" data="/img/TBS-home-feature02.svg"></object>
                   </span>
                 </div>
               </div>
@@ -167,7 +168,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/img_23.png
+                    <object type="image/svg+xml" data="/img/TBS-home-feature03.svg"></object>
                   </span>
                 </div>
               </div>
@@ -191,7 +192,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/img_25.png
+                    <object type="image/svg+xml" data="/img/TBS-home-feature04.svg"></object>
                   </span>
                 </div>
               </div>
@@ -215,7 +216,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/img_23.png
+                    <object type="image/svg+xml" data="/img/TBS-home-feature05.svg"></object>
                   </span>
                 </div>
               </div>
