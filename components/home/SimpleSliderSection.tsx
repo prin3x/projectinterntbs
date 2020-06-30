@@ -38,7 +38,7 @@ const SimpleSliderSection = ({ t }: any) => {
             val.children[0].children[0].childNodes.forEach((childval: any) => {
               if (childval.className === 'linking') {
                 if (mainImage.current !== null) {
-                  mainImage.current.src = childval.innerText;
+                  mainImage.current.data = childval.innerText;
                 }
               }
             });
@@ -62,7 +62,11 @@ const SimpleSliderSection = ({ t }: any) => {
                 ></h3>
               </div>
               <div className="simple_slider_heading_img">
-                <object type="image/svg+xml" data="/img/TBS-home-feature01.svg"></object>
+                <object
+                  ref={mainImage}
+                  type="image/svg+xml"
+                  data="/img/TBS-home-feature01.svg"
+                ></object>
                 {/* <img
                   ref={mainImage}
                   className="lazyload"
@@ -127,7 +131,11 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    <object type="image/svg+xml" data="/img/TBS-home-feature01.svg"></object>
+                    /img/TBS-home-feature01.svg
+                    {/* <object
+                      type="image/svg+xml"
+                      data="/img/TBS-home-feature01.svg"
+                    ></object> */}
                   </span>
                 </div>
               </div>
@@ -151,7 +159,11 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    <object type="image/svg+xml" data="/img/TBS-home-feature02.svg"></object>
+                    /img/TBS-home-feature02.svg
+                    {/* <object
+                      type="image/svg+xml"
+                      data="/img/TBS-home-feature02.svg"
+                    ></object> */}
                   </span>
                 </div>
               </div>
@@ -168,7 +180,11 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    <object type="image/svg+xml" data="/img/TBS-home-feature03.svg"></object>
+                    /img/TBS-home-feature03.svg
+                    {/* <object
+                      type="image/svg+xml"
+                      data="/img/TBS-home-feature03.svg"
+                    ></object> */}
                   </span>
                 </div>
               </div>
@@ -192,7 +208,11 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    <object type="image/svg+xml" data="/img/TBS-home-feature04.svg"></object>
+                    /img/TBS-home-feature04.svg
+                    {/* <object
+                      type="image/svg+xml"
+                      data="/img/TBS-home-feature04.svg"
+                    ></object> */}
                   </span>
                 </div>
               </div>
@@ -216,7 +236,11 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    <object type="image/svg+xml" data="/img/TBS-home-feature05.svg"></object>
+                    /img/TBS-home-feature05.svg
+                    {/* <object
+                      type="image/svg+xml"
+                      data="/img/TBS-home-feature05.svg"
+                    ></object> */}
                   </span>
                 </div>
               </div>
