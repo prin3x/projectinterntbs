@@ -553,6 +553,11 @@
   .userType_section, .register_section, .login_section {
     padding: 120px 0 60px;
   }
+  .simple_slider_item p {
+    font-size: 20px;
+    min-height: 60px;
+    word-break: break-all;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {

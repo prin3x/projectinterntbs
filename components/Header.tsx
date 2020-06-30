@@ -138,23 +138,19 @@ const Header = ({ t }: any) => {
                           </a>
                         </Link>
                       </li>
-                      <li>
+                      <li className="listsub">
                         <Link href="/KnowledgeListing">
                           <a href="#">
                             <h6>{t('header.knowledge')}</h6>
                             {/* <p>{t('menu-3-2-s')}</p> */}
                           </a>
                         </Link>
-                      </li>
-                      <li>
                         <Link href="/UseCasesListing">
                           <a href="#">
                             <h6>{t('header.example')}</h6>
                             {/* <p>{t('menu-3-3-s')}</p> */}
                           </a>
                         </Link>
-                      </li>
-                      <li>
                         <Link href="/SuccessStoriesListing">
                           <a href="#">
                             <h6>{t('header.successstories')}</h6>

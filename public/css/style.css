@@ -4115,3 +4115,15 @@ textarea.input__box.v2 {
   margin: -20% 0 0 -20%;
 }
 
+ul.dropdown li.listsub {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 600px;
+}
+
+ul.dropdown li.listsub a {
+  flex: 1;
+  margin: 15px 10px;
+}
