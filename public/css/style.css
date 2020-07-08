@@ -3431,6 +3431,8 @@ ul.before-footer {
   right: -14px;
   top: 400px;
   z-index: 1024;
+  display: none !important;
+  
 }
 
 .info__box__wrapper .btn {
