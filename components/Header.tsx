@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import { i18n, withTranslation, Link } from '../i18n';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Cookie from 'js-cookie';
-
+import { logout } from '../services/user/user.service';
 const logOut = () => {
-  Cookie.remove('PASSCODE');
+  logout();
   window.location.reload();
 };
 
 const Header = ({ t }: any) => {
   const lang = i18n.language;
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(Cookie.get('PASSCODE') ? true : false);
   const headerBar: any = useRef(null);
   function sticky() {
     var scroll = window.pageYOffset;
@@ -28,7 +28,7 @@ const Header = ({ t }: any) => {
       elDivnice.classList.remove('open');
     else elDivnice.classList.add('open');
   }
-  React.useEffect(() => {
+  useEffect(() => {
     // check Cookie Login
     if (Cookie.get('PASSCODE')) {
       setIsLogin(true);
@@ -38,6 +38,7 @@ const Header = ({ t }: any) => {
       window.removeEventListener('scroll', sticky);
     };
   }, []);
+
   return (
     <div ref={headerBar} className="header-bar-area position-fixed w-100 ">
       <div className="container">
@@ -288,7 +289,7 @@ const Header = ({ t }: any) => {
                   </li>
                 ) : (
                   <li>
-                    <Link href="/log-in">
+                    <Link href="/log-in" replace>
                       <a href="#">{t('header.login')}</a>
                     </Link>
                   </li>
