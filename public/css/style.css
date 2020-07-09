@@ -534,7 +534,7 @@ a:hover {
   font-weight: 300;
   font-size: 12px;
   color: #888;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 .dropdown.sub-menu {
@@ -4129,3 +4129,4 @@ ul.dropdown li.listsub a {
   flex: 1;
   margin: 15px 10px;
 }
+

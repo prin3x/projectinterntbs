@@ -1241,6 +1241,27 @@
   .input-twocolumn .input-txt02 {
     padding: 1.5%;
   }
+  .contact__box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .contact__box img {
+    width: 100%;
+    height: auto;
+  }
+  .checkbox-wrapper {
+    font-size: 18px;
+  }
+  .checkmark {
+    height: 25px;
+    width: 25px;
+  }
+  .checkbox-wrapper .checkmark:after {
+    left: 6px;
+    top: 0px;
+    width: 7px;
+    height: 15px;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
