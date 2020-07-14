@@ -1631,7 +1631,7 @@ a:hover {
 }
 
 .hero_section.v3 .hero_text_one p {
-  font-size: 28px;
+  font-size: 20px;
   color: #5b6e80;
   font-family: 'Sarabun', serif;
   padding-left: 15px;
@@ -2913,8 +2913,8 @@ ul.before-footer {
 .newsletter_text p,
 .simple_icon_title p,
 .track_text p {
-  font-size: 24px;
-  line-height: 1.4;
+  font-size: 20px;
+  line-height: 1.6;
   color: #5b6e80;
   font-family: 'Sarabun', serif;
 }
@@ -2924,7 +2924,7 @@ ul.before-footer {
   background: #fff;
   padding: 50px 6px;
   border-radius: 10px;
-  height: 330px;
+  height: 280px;
   margin: 0 55px;
   border: 1px solid #d5dae0;
   display: flex;
@@ -3030,7 +3030,7 @@ ul.before-footer {
 }
 
 .newsletter_img img {
-  width: 95%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -4515,4 +4515,8 @@ ul.dropdown li.listsub a {
   width: 85%;
   height: auto;
   text-align: left;
+}
+
+.priceTable {
+  width: 1280px;
 }

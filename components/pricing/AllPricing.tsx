@@ -11,7 +11,7 @@ const AllPricing = ({ t }: any) => {
       // style={{ backgroundImage: 'url(/img/pricing_bg.png)' }}
       data-bgset="/img/pricing_bg.png"
     >
-      <div className="container">
+      <div className="container priceTable">
         <div className="row">
           <div className="col-12">
             <div className="row no-gutters">
