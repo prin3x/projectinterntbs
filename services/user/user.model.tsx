@@ -1,4 +1,5 @@
 export interface AuthLogin {
+  token: string;
   passcode: string;
   error: ErrorMessage;
 }

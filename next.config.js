@@ -3,7 +3,7 @@ var webpack = require('webpack');
 module.exports = {
   /* config options here */
   env: {
-    API_URL: 'API_URL',
+    API_URL: 'https://tbs-account-api.ngrok.1mobyline.com',
     DOMAIN_URL: 'https://d1vb0eqohs6ps7.cloudfront.net',
   },
   exportTrailingSlash: true,

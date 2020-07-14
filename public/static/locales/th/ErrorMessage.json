@@ -1,9 +1,14 @@
 {
-  "error": {
-    "login": {
-      "invalid": {
-        "userpass": "username/password ไม่ถูกต้อง"
-      }
+  "auth": {
+    "user": {
+      "fail": "username/password ไม่ถูกต้อง",
+      "blocked": "ผู้ใช้งานถูกปิดการเข้าใช้งาน",
+      "multisession": "multisession"
     }
-  }
+  },
+  "system": {
+    "failure": "ไม่สามารถเข้าสู่ระบบได้ กรุณาลองใหม่อีกครั้ง"
+  },
+  "Bad Request": "username/password ไม่ถูกต้อง",
+  "400": "ไม่สามารถเข้าสู่ระบบได้ กรุณาลองใหม่อีกครั้ง"
 }
