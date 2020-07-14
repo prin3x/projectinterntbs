@@ -12,7 +12,7 @@ const PricingSection = ({ t }: any) => {
     >
       <div className="container">
         <div className="row justify-content-xl-end mt-80">
-          <div className="col-lg-6 col-xl-4 col-md-6">
+          <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
             <div
               className="pricing_box m-0 pricing_box1"
               style={{

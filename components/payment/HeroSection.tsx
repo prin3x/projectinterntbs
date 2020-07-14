@@ -141,9 +141,7 @@ const HeroSection = ({ t }: any) => {
                       href="#"
                       className="btn v8 button__sm_100"
                       style={{
-                        marginTop: '45px',
-                        width: '274px',
-                        height: '65px',
+                        marginTop: '30px', padding: '20px 30px'
                       }}
                     >
                       {t('paymenthero.changeaddressBtn')}
@@ -155,7 +153,7 @@ const HeroSection = ({ t }: any) => {
           </div>
 
           <div className="box__wrapper">
-            <div className="box__header" style={{ padding: '25px 30px' }}>
+            <div className="box__header" style={{ padding: '20px 25px' }}>
               <label className="radio_wrapper">
                 <input type="radio" name="radio" />
                 <span className="checkmark"></span>
@@ -165,7 +163,7 @@ const HeroSection = ({ t }: any) => {
             <div className="box__body">
               <div
                 className="box__content border-0"
-                style={{ padding: '40px 30px 50px' }}
+                style={{ padding: '30px 20px 40px' }}
               >
                 <div className="row">
                   <div className="col-12">
@@ -453,7 +451,7 @@ const HeroSection = ({ t }: any) => {
           <a
             href="#"
             className="btn v8 d-xl-none button__sm_100"
-            style={{ marginTop: '65px', padding: '24px 145px' }}
+            style={{ marginTop: '30px', padding: '20px 30px' }}
           >
             {t('paymenthero.taxinvoice.confirepayment')}
           </a>
