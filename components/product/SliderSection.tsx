@@ -84,7 +84,7 @@ const SliderSection = ({ t }: any) => (
         </div>
       </div>
     </div>
-    <p style={{ textAlign: 'center', marginTop: '100px', color: '#31b1e7' }}>
+    <p style={{ textAlign: 'center', marginTop: '50px', color: '#31b1e7' }}>
       {t('productslider.exampleBtn')}
     </p>
   </div>

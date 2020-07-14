@@ -138,27 +138,26 @@ const Header = ({ t }: any) => {
                           </a>
                         </Link>
                       </li>
-                      <li>
+                      <li className="listsub">
                         <Link href="/KnowledgeListing">
                           <a href="#">
                             <h6>{t('header.knowledge')}</h6>
                             {/* <p>{t('menu-3-2-s')}</p> */}
+                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
-                      </li>
-                      <li>
                         <Link href="/UseCasesListing">
                           <a href="#">
                             <h6>{t('header.example')}</h6>
                             {/* <p>{t('menu-3-3-s')}</p> */}
+                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
-                      </li>
-                      <li>
                         <Link href="/SuccessStoriesListing">
                           <a href="#">
                             <h6>{t('header.successstories')}</h6>
                             {/* <p>{t('menu-3-4-s')}</p> */}
+                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
                       </li>
