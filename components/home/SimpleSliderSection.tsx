@@ -245,14 +245,14 @@ const SimpleSliderSection = ({ t }: any) => {
                 </div>
               </div>
             </OwlCarousel>
-            <a href="#" className="lang_link text-right pr-4">
+            {/* <a href="#" className="lang_link text-right pr-4">
               {t('homesimpleslider.testBtn')}
               <img
                 className="lazyload"
                 data-src="/img/arrow_3.png"
                 alt="Image"
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

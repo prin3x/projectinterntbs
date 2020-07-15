@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import React, { useRef } from 'react';
 const HeroSection = ({ t }: any) => {
@@ -38,22 +38,26 @@ const HeroSection = ({ t }: any) => {
                     <h6>{t('paymenthero.payment.creditnow.header')}</h6>
                   </div>
                   <div className="col-md-6">
-                    <div className="info__box">
-                      <div className="info__icon">
-                        <img
-                          className="lazyload"
-                          data-src="/img/icon_13.png"
-                          alt=""
-                        />
-                      </div>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: t(
-                            'paymenthero.payment.creditnow.qrcodetitle'
-                          ),
-                        }}
-                      ></p>
-                    </div>
+                    <Link href="/paymentqr">
+                      <a href="">
+                        <div className="info__box">
+                          <div className="info__icon">
+                            <img
+                              className="lazyload"
+                              data-src="/img/icon_13.png"
+                              alt=""
+                            />
+                          </div>
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: t(
+                                'paymenthero.payment.creditnow.qrcodetitle'
+                              ),
+                            }}
+                          ></p>
+                        </div>
+                      </a>
+                    </Link>
                   </div>
 
                   <div className="col-md-6">
@@ -141,7 +145,8 @@ const HeroSection = ({ t }: any) => {
                       href="#"
                       className="btn v8 button__sm_100"
                       style={{
-                        marginTop: '30px', padding: '20px 30px'
+                        marginTop: '30px',
+                        padding: '20px 30px',
                       }}
                     >
                       {t('paymenthero.changeaddressBtn')}
@@ -265,7 +270,9 @@ const HeroSection = ({ t }: any) => {
 
                       <div className="d-flex justify-content-between">
                         <p>{t('paymenthero.taxinvoice.life')}</p>
-                        <p className="theme__text">2 {t('paymenthero.year')}</p>
+                        <p className="theme__text">
+                          2 {t('paymenthero.taxinvoice.year')}
+                        </p>
                       </div>
 
                       <div className="d-flex justify-content-between">
@@ -471,6 +478,7 @@ const HeroSection = ({ t }: any) => {
               <li>{t('paymenthero.note.rule.4')}</li>
               <li>{t('paymenthero.note.rule.5')}</li>
               <li>{t('paymenthero.note.rule.6')}</li>
+              <li>{t('paymenthero.note.rule.7')}</li>
             </ul>
           </div>
 

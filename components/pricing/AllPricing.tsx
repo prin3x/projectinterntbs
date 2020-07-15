@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
@@ -89,9 +89,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -120,9 +122,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -184,9 +188,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -215,9 +221,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -279,9 +287,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -310,9 +320,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -374,9 +386,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -405,9 +419,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -469,9 +485,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>
@@ -500,9 +518,11 @@ const AllPricing = ({ t }: any) => {
                             </div>
 
                             <div className="text-center">
-                              <a href="#" className="btn v8">
-                                {t('pricingallpricing.buyBtn')}
-                              </a>
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
                             </div>
                           </div>
                         </div>

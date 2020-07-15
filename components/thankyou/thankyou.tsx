@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const ThankyouComponents = () => (
+const ThankyouComponents = ({ t }: any) => (
   <div className="register_section">
     <div className="finish-regis">
       <div className="img-finish-regis">
@@ -11,11 +11,12 @@ const ThankyouComponents = () => (
           alt="Image"
         /> */}
       </div>
-      {/* <h2>{t('h1')}</h2>
-      <p className="sub-text">
-        {t('p1-1')}
-      </p>
-      <div className="btn-login">
+      <h2>{t('thankyou.title')}</h2>
+      <p
+        className="sub-text"
+        dangerouslySetInnerHTML={{ __html: t('thankyou.desc') }}
+      ></p>
+      {/*<div className="btn-login">
         <Link href="/log-in">
           <a className="btn v2" href="#">
             {t('a1')}

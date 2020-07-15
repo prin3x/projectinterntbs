@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const UsertypeIndividual = ({ t }: any) => (
   <div className="userType_section">
@@ -108,9 +108,11 @@ const UsertypeIndividual = ({ t }: any) => (
         />
       </div>
       <div className="btn-regis">
-        <a className="btn v2" href="#">
-          {t('usertypeindividual.taxinvoiceaddress.saveBtn')}
-        </a>
+        <Link href="/payment">
+          <a className="btn v2" href="#">
+            {t('usertypeindividual.taxinvoiceaddress.saveBtn')}
+          </a>
+        </Link>
       </div>
     </div>
   </div>

@@ -48,7 +48,7 @@ const RegisterComponents = ({ t }: any) => (
         </div>
       </div>
       <div className="btn-regis">
-        <Link href="/register-success">
+        <Link href="/register/success">
           <a className="btn v2" href="#">
             {t('register.createBtn')}
           </a>

@@ -2,8 +2,8 @@
   "pricingpricing": {
     "package": {
       "standard": {
-        "header": "Standard Package",
-        "title": "ส่ง SMS ผ่านเว็บ ส่งง่ายกว่ามือถือดูรายงาน การส่งได้",
+        "header": "STANDARD SMS",
+        "title": "ส่ง SMS ได้ในราคาถูก",
         "feature": {
           "1": "ราคาถูกกว่า",
           "2": "ดูรายงานการส่งได้",
@@ -13,8 +13,8 @@
         "price": "0.35"
       },
       "corporate": {
-        "header": "Corporate Package",
-        "title": "ส่ง SMS ผ่านเว็บ ส่งง่ายกว่ามือถือดูรายงาน การส่งได้",
+        "header": "CORPORATE SMS",
+        "title": "คืนเครดิตถ้าส่งไม่ถึงผู้รับ",
         "feature": {
           "1": "ทุกฟีเจอร์ของ Standard SMS",
           "2": "ส่ง OTP ด้วยระบบพร้อมใช้",
@@ -25,6 +25,6 @@
       }
     },
     "start": "เริ่มต้นที่",
-    "unit": "บาท / SMS"
+    "unit": "บาท / ข้อความ"
   }
 }
