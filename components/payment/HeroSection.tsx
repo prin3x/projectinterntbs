@@ -38,26 +38,22 @@ const HeroSection = ({ t }: any) => {
                     <h6>{t('paymenthero.payment.creditnow.header')}</h6>
                   </div>
                   <div className="col-md-6">
-                    <Link href="/paymentqr">
-                      <a href="">
-                        <div className="info__box">
-                          <div className="info__icon">
-                            <img
-                              className="lazyload"
-                              data-src="/img/icon_13.png"
-                              alt=""
-                            />
-                          </div>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html: t(
-                                'paymenthero.payment.creditnow.qrcodetitle'
-                              ),
-                            }}
-                          ></p>
-                        </div>
-                      </a>
-                    </Link>
+                    <div className="info__box">
+                      <div className="info__icon">
+                        <img
+                          className="lazyload"
+                          data-src="/img/icon_13.png"
+                          alt=""
+                        />
+                      </div>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: t(
+                            'paymenthero.payment.creditnow.qrcodetitle'
+                          ),
+                        }}
+                      ></p>
+                    </div>
                   </div>
 
                   <div className="col-md-6">
@@ -439,14 +435,15 @@ const HeroSection = ({ t }: any) => {
                         </h6>
                       </div>
                     </div>
-
-                    <a
-                      href="#"
-                      className="btn v8 w-100 d-none d-xl-block"
-                      style={{ marginTop: '65px' }}
-                    >
-                      {t('paymenthero.taxinvoice.confirepayment')}
-                    </a>
+                    <Link href="/paymentqr">
+                      <a
+                        href="#"
+                        className="btn v8 w-100 d-none d-xl-block"
+                        style={{ marginTop: '65px' }}
+                      >
+                        {t('paymenthero.taxinvoice.confirepayment')}
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

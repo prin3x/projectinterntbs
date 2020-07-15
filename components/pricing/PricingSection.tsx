@@ -11,6 +11,11 @@ const PricingSection = ({ t }: any) => {
       data-bgset="/img/bg_11.png"
     >
       <div className="container pricing">
+        <h3
+          style={{ textAlign: 'center', fontSize: '40px', marginTop: '23px' }}
+        >
+          ราคาแพ็กเกจ
+        </h3>
         <div className="row justify-content-xl-end mt-80">
           <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
             <div
