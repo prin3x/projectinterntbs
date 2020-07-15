@@ -27,8 +27,8 @@ const TestimonialSection = ({ t }: any) => (
             dots={false}
             loop={true}
             navText={[
-              '<i class="ion-ios-arrow-back"></i>',
-              '<i class="ion-ios-arrow-forward"></i>',
+              '<i className="ion-ios-arrow-back"></i>',
+              '<i className="ion-ios-arrow-forward"></i>',
             ]}
             margin={30}
             center

@@ -26,8 +26,8 @@ const SliderSection = ({ t }: any) => (
             autoplayTimeout={5500}
             loop
             navText={[
-              '<i class="ion-ios-arrow-back"></i>',
-              '<i class="ion-ios-arrow-forward"></i>',
+              '<i className="ion-ios-arrow-back"></i>',
+              '<i className="ion-ios-arrow-forward"></i>',
             ]}
             margin={30}
             center

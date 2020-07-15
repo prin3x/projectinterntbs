@@ -86,8 +86,8 @@ const SimpleSliderSection = ({ t }: any) => {
               onTranslated={(e) => handleSelect(e)}
               onInitialized={(e) => onInitialized(e)}
               navText={[
-                '<i class="ion-ios-arrow-back"></i>',
-                '<i class="ion-ios-arrow-forward"></i>',
+                '<i className="ion-ios-arrow-back"></i>',
+                '<i className="ion-ios-arrow-forward"></i>',
               ]}
               // margin={30}
               // center
