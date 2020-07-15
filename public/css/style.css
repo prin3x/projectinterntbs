@@ -874,7 +874,7 @@ a:hover {
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown li a h6 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
   margin-bottom: 5px;
   font-weight: 400;
@@ -1327,12 +1327,13 @@ a:hover {
   text-transform: uppercase;
   line-height: 18px;
   border-radius: 12px;
-  padding: 15px 35px;
+  padding: 20px 40px;
   font-weight: 500;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
   border: none;
+  min-width: 200px;
 }
 
 .btn.v4 {
@@ -1385,7 +1386,7 @@ a:hover {
   line-height: 18px;
   border: 2px solid #31b1e7;
   border-radius: 12px;
-  padding: 13px 30px;
+  padding: 20px 40px;
   font-weight: 500;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
@@ -1532,12 +1533,12 @@ a:hover {
 }
 
 .hero_text_one h1 {
-  font-size: 64px;
-  font-weight: 700;
+  font-size: 56px;
+  font-weight: 500;
   color: #31b1e7;
   text-transform: capitalize;
-  line-height: 1;
-  margin: 10px 0 10px;
+  line-height: 1.2;
+  margin: 10px 0;
 }
 
 .hero_text_one p {
@@ -1611,7 +1612,7 @@ a:hover {
 }
 
 .hero_section.v3 .hero_top_one {
-  padding: 160px 0;
+  padding: 120px 0;
 }
 
 .hero_section.v3 .hero_text_one span {
@@ -1700,7 +1701,7 @@ a:hover {
 
 .sms_feature_item h2 {
   color: #31b1e7;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 1.2;
   margin-bottom: 75px;
 }
@@ -1804,9 +1805,10 @@ a:hover {
 }
 
 .promo_text p {
-  font-size: 36px;
+  font-size: 24px;
   color: #5b6e80;
   line-height: 1.2;
+  margin-bottom: 70px;
 }
 
 .promo_title {
@@ -1867,17 +1869,18 @@ a:hover {
   font-family: 'Sarabun', serif;
   margin: 20px 0 10px;
   display: block;
+  text-decoration: underline;
 }
 
 .promo_link {
-  background: #f1f4f8;
   line-height: 1.2;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   font-family: 'Sarabun', serif;
-  padding: 10px 18px;
+  padding: 5px 10px;
   display: inline-block;
   margin: 20px 0 0;
+  border-left: 2px solid #2983f7;
 }
 
 .promo_link span {
@@ -1918,6 +1921,7 @@ a:hover {
   color: #fff;
   line-height: 1;
   margin-bottom: 13px;
+  text-align: center;
 }
 
 .simple_feature_list li i {
@@ -1931,6 +1935,8 @@ a:hover {
   font-size: 20px;
   font-family: 'Sarabun', serif;
   padding-left: 10px;
+  min-width: 250px; 
+  text-align: left;
 }
 
 /*--------------------------------
@@ -2036,7 +2042,7 @@ a:hover {
 
 .price_plan a.btn.v3 {
   position: absolute;
-  bottom: -20px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -2049,15 +2055,17 @@ a:hover {
 }
 
 .price_bottom_text ul {
-  margin-left: 60px;
-  min-height: 120px;
+  margin-left: 50px;
+  min-height: 160px;
 }
 
 .price_bottom_text ul li {
-  font-size: 18px;
+  font-size: 16px;
   color: #5b6e80;
   font-family: 'sarabun', serif;
-  line-height: 1.6;
+  line-height: 1.4;
+  list-style: circle;
+  padding: 5px 0;
 }
 
 .price_bottom_text {
@@ -2554,7 +2562,7 @@ p.copyright {
   background: #fff;
   text-align: center;
   border-radius: 10px;
-  padding: 40px 40px;
+  padding: 30px 20px;
   box-shadow: 0 0 42px rgba(0, 0, 0, 0.2);
 }
 
@@ -2579,9 +2587,12 @@ p.copyright {
   color: #5b6e80;
   line-height: 1.5;
   font-family: 'Sarabun', serif;
-  margin: 10px 0 50px;
-  min-height: 100px;
+  margin: 10px 0 20px;
+  min-height: 120px;
   word-break: break-all;
+  background-color: #f5f7f9;
+  padding: 15px 20px;
+  border-radius: 20px;
 }
 
 .simple_slider_item a.btn.v9 {
@@ -2973,7 +2984,7 @@ ul.before-footer {
 .simple_icon_wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 90px 0;
 }
 
@@ -3541,7 +3552,7 @@ ul.before-footer {
 }
 
 .box__wrapper .box__body .info__box {
-  border: 4px solid #5b6e80;
+  border: 3px solid #5b6e80;
   border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3598,8 +3609,8 @@ ul.before-footer {
 }
 
 .box__wrapper .box__body .info__box .info__icon {
-  height: 110px;
-  width: 110px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   background-color: #f1f8f9;
   display: -webkit-box;
@@ -3619,7 +3630,7 @@ ul.before-footer {
     brightness(33%) contrast(100%);
   filter: invert(0%) sepia(0%) saturate(2811%) hue-rotate(181deg)
     brightness(33%) contrast(100%);
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 
@@ -3633,12 +3644,16 @@ ul.before-footer {
 
 .box__wrapper .box__body h6,
 .__title {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 24px;
   color: #2e4050;
   font-family: 'Sarabun', sans-serif;
   font-weight: bold;
   margin: 0;
+}
+
+.__title {
+  font-size: 20px;
 }
 
 .border__bottom {
@@ -3706,12 +3721,12 @@ ul.before-footer {
   border-color: rgb(178, 187, 195);
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
-  height: 80px;
+  height: 60px;
   width: 100%;
-  margin-top: 45px;
+  margin-top: 30px;
   font-size: 20px;
   font-weight: 400;
-  padding: 0 35px;
+  padding: 0 20px;
 }
 
 .input__box::-webkit-input-placeholder {
@@ -3756,7 +3771,7 @@ ul.before-footer {
 }
 
 .box__wrapper .sender__box p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 36px;
   color: #5b6e80;
   font-family: 'Sarabun', sans-serif;
@@ -3768,7 +3783,7 @@ ul.before-footer {
 }
 
 .box__wrapper .link {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   border-bottom: 1px solid #31b1e7;
   font-family: 'Sarabun', sans-serif;
@@ -3786,11 +3801,11 @@ ul.before-footer {
 
 .form__wrapper input {
   background-color: rgb(255, 255, 255);
-  height: 65px;
+  height: 60px;
   margin: 0;
   border-radius: 15px 0 0 15px;
   border-right: none;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .form__wrapper .btn {
@@ -3848,7 +3863,7 @@ ul.before-footer {
 }
 
 .item__box h4 {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   color: #5b6e80;
   font-weight: 400;
@@ -3858,8 +3873,8 @@ ul.before-footer {
 .item__box img {
   margin-right: 60px;
   margin-left: 30px;
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
@@ -3931,7 +3946,8 @@ ul.before-footer {
 
 .form_part {
   background-color: #fff;
-  padding: 0 70px 110px;
+  padding: 0 40px 110px;
+  margin-top: 10px;
 }
 
 .input__box.v2 {
@@ -3971,7 +3987,7 @@ textarea.input__box.v2 {
   user-select: none;
   font-family: 'Sarabun', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   color: #5b6e80;
   border-width: 1px;
   margin-bottom: 0;
@@ -3988,7 +4004,7 @@ textarea.input__box.v2 {
 
 .checkmark {
   position: absolute;
-  top: 4px;
+  top: 0px;
   left: 0;
   height: 28px;
   width: 28px;
@@ -4519,4 +4535,13 @@ ul.dropdown li.listsub a {
 
 .priceTable {
   width: 1280px;
+}
+.track_img object {
+  width: 85%;
+  height: auto;
+  text-align: center;
+  margin-top: -80px;
+}
+.single__pricing {
+  cursor: pointer;
 }

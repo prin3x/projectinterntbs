@@ -14,10 +14,14 @@
   }
 
   .hero_section.v3.payment_home .container {
-    max-width: 1420px !important;
+    max-width: 1280px !important;
   }
 
   .container {
+    max-width: 1280px;
+  }
+
+  .container.pricing {
     max-width: 1440px;
   }
 
@@ -97,7 +101,7 @@
   }
 
   .hero_section.v3.payment_home .container {
-    max-width: 1420px !important;
+    max-width: 1280px !important;
   }
   .tab__content .btn.v4 {
     font-size: 16px;
@@ -129,7 +133,7 @@
   }
 
   .hero_section.v3.payment_home .container {
-    max-width: 1366px !important;
+    max-width: 1280px !important;
   }
 
   .hero_section.v2 {
@@ -1381,6 +1385,7 @@
   }
   .hero_text_one h1 {
     font-size: 48px;
+    line-height: 1;
   }
   .hero_text_one p {
     font-size: 40px;
@@ -1617,6 +1622,10 @@
   }
   .simple_icon_section {
     padding: 90px 0;
+  }
+  .simple_slider_wrapper .owl-nav {
+    padding-left: 15px;
+    margin-top: -40px;
   }
 }
 

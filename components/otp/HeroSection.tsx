@@ -10,7 +10,8 @@ const HeroSectionV3 = ({ t }: any) => (
       <div className="row align-item-center hero_top_one">
         <div className="col-lg-6 col-md-12 col-12">
           <div className="hero_img_one">
-            <img className="lazyload" data-src="/img/hero_4.png" alt="Image" />
+            <object type="image/svg+xml" data="/img/img-otp.svg"></object>
+            {/* <img className="lazyload" data-src="/img/hero_4.png" alt="Image" /> */}
           </div>
         </div>
         <div className="col-lg-6 col-md-12 col-12">

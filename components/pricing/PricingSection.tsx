@@ -10,7 +10,7 @@ const PricingSection = ({ t }: any) => {
       // style={{ backgroundImage: 'url(/img/bg_11.png)' }}
       data-bgset="/img/bg_11.png"
     >
-      <div className="container">
+      <div className="container pricing">
         <div className="row justify-content-xl-end mt-80">
           <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
             <div
@@ -81,15 +81,15 @@ const PricingSection = ({ t }: any) => {
                   <p>{t('pricingpricing.package.corporate.feature.1')}</p>
                 </li>
                 <li>
-                  <i className="far fa-check-circle"></i>
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
                   <p>{t('pricingpricing.package.corporate.feature.2')}</p>
                 </li>
                 <li>
-                  <i className="far fa-check-circle"></i>
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
                   <p>{t('pricingpricing.package.corporate.feature.3')}</p>
                 </li>
                 <li>
-                  <i className="far fa-check-circle"></i>
+                  <i class="fa fa-plus-circle" aria-hidden="true"></i>
                   <p>{t('pricingpricing.package.corporate.feature.4')}</p>
                 </li>
               </ul>

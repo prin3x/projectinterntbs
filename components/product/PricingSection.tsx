@@ -64,15 +64,15 @@ const PricingSection = ({ t }: any) => (
                 <p>{t('homeproductpricing.package.corporate.feature.1')}</p>
               </li>
               <li>
-                <i className="far fa-check-circle"></i>
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 <p>{t('homeproductpricing.package.corporate.feature.2')}</p>
               </li>
               <li>
-                <i className="far fa-check-circle"></i>
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 <p>{t('homeproductpricing.package.corporate.feature.3')}</p>
               </li>
               <li>
-                <i className="far fa-check-circle"></i>
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 <p>{t('homeproductpricing.package.corporate.feature.4')}</p>
               </li>
             </ul>

@@ -8,7 +8,7 @@ const PromoSection = ({ t }: any) => (
   >
     <div className="container">
       <div className="row">
-        <div className="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+        <div className="col-lg-12">
           <div className="promo_text">
             <h2
               dangerouslySetInnerHTML={{
