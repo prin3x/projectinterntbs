@@ -3470,6 +3470,7 @@ ul.before-footer {
 
 .finish-regis p a {
   color: #31b1e7;
+  text-decoration: underline;
 }
 .form-login {
   max-width: 600px;
@@ -3498,6 +3499,7 @@ ul.before-footer {
 }
 .form-login .link-forgot a {
   color: #31b1e7;
+  text-decoration: underline;
 }
 .btn-login {
   margin: 30px 0;

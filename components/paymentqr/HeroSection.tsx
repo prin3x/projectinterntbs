@@ -34,9 +34,9 @@ const HeroSection = ({ t }: any) => {
             <div className="box__body">
               <div className="box__content">
                 <div className="row">
-                  <div className="col-12 text-center">
+                  <div className="col-12 text-center secQR">
                     <h6
-                      style={{ fontSize: ' 36px' }}
+                      style={{ fontSize: ' 30px' }}
                       className="title__box__top"
                     >
                       {t('paymentqrhero.paymentqr.title1')}

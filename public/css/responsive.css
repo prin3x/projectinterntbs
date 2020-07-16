@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 1920px) {
   .header-bar-area .container {
-    max-width: 1800px !important;
+    max-width: 96% !important;
   }
 
   .hero_section.v2 {
@@ -60,7 +60,7 @@
 
 @media only screen and (min-width: 1600px) and (max-width: 1919px) {
   .header-bar-area .container {
-    max-width: 1550px !important;
+    max-width: 96% !important;
   }
 
   .hero_section.v2 {
@@ -129,7 +129,7 @@
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
   .header-bar-area .container {
-    max-width: 1400px !important;
+    max-width: 96% !important;
   }
 
   .hero_section.v3.payment_home .container {
@@ -171,18 +171,6 @@
 
   .simple_slider_wrapper .item {
     padding: 30px 35px 60px;
-  }
-
-  .box__wrapper .box__body .info__box .info__icon {
-    height: 85px;
-    width: 85px;
-    padding: 15px;
-  }
-
-  .box__wrapper .box__body h6,
-  .__title,
-  .box__wrapper .box__header h5 {
-    font-size: 20px;
   }
 
   .item__box__2 p {
@@ -601,10 +589,10 @@
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .header-bar-area .container {
-    max-width: 1280px !important;
+    max-width: 96% !important;
   }
   .hero_top_one, .hero_bottom_one {
-    padding: 20px 0;
+    padding: 80px 0;
   }
   .hero_section.v3.payment_home .container {
     max-width: 1200px !important;
@@ -614,6 +602,12 @@
   }
   .header_top {
     margin-bottom: 5px;
+  }
+  .sms_form_text p {
+    font-size: 18px;
+    font-family: 'Sarabun', serif;
+    line-height: 1.2;
+    margin-bottom: 0;
   }
 
   .hero_section.v3 .container {
@@ -717,8 +711,11 @@
     padding: 80px 0 50px;
   }
   .simple_slider_heading_img object {
-    width: 160%;
-    margin: -15% 0 0 -30%;
+    width: 150%;
+    margin: -25% 0 0 -20%;
+  }
+  .simple_slider_wrapper {
+    padding: 30px 0 0px;
   }
   .simple_slider_item h4 {
     font-size: 24px;
@@ -749,7 +746,7 @@
   }
   .simple_slider_section {
     height: auto;
-    min-height: 850px;
+    min-height: 800px;
   }
   .simple_slider_heading h3, .globe_text h3 {
     font-size: 36px;
@@ -901,7 +898,7 @@
     font-family: 'Sarabun', serif;
   }
   .sms_text p {
-    margin-bottom: 0;
+    margin: 30px auto 70px;
     font-size: 18px;
     line-height: 1.8;
   }
@@ -918,9 +915,13 @@
     line-height: 1.2;
   }
   .promo_title p {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.2;
     margin-bottom: 0;
+    font-weight: 500;
+  }
+  .service_feature_item p, .service_feature_text a.link, .simple_feature_list li p {
+    font-size: 18px;
   }
   .service_feature_text p {
     font-size: 18px;
@@ -953,7 +954,7 @@
   }
   .price_bottom_text ul li {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .pricing_box img {
     margin: 40px auto;
@@ -972,9 +973,6 @@
   }
   .btn.v4 {
     font-size: 14px;
-  }
-  .box__wrapper .box__body h6, .__title, .box__wrapper .box__header h5, .box__wrapper .sender__box p {
-    font-size: 16px;
   }
   .form__wrapper .btn {
     border-radius: 0 15px 15px 0;
@@ -1071,7 +1069,7 @@
     font-size: 18px;
   }
   .price_plan h2 {
-    font-size: 70px;
+    font-size: 60px;
   } 
   .price_bottom_text ul {
     margin-left: 30px;
@@ -1095,7 +1093,7 @@
     padding: 100px 0;
     overflow: hidden;
   }
-  .pricing_box {
+  .pricing_box.m-0 {
     width: 80%;
   }
   .pricing_right {
@@ -1133,6 +1131,40 @@
   .serial__content h4 {
     font-size: 24px;
   }
+  .input__box {
+    font-size: 18px;
+  }
+  .box__wrapper .box__body p {
+    font-size: 16px;
+  }
+  .box__wrapper .box__header h5 {
+    font-size: 24px;
+  }
+  .box__wrapper .box__header {
+    padding: 20px 40px;
+  }
+  .secQR .img-fluid {
+    width: 30%;
+  }
+  .form-login {
+    max-width: 500px;
+  }
+  .finish-regis {
+    max-width: 650px;
+  }
+  .finish-regis p.sub-text {
+    font-size: 20px;
+    font-weight: 300;
+    color: #5b6e80;
+    line-height: 1.2;
+  }
+  .finish-regis .img-finish-regis {
+    width: 40%;
+    margin-bottom: 40px;
+  }
+  .input-txt01 {
+    margin: 10px auto;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -1143,11 +1175,25 @@
     display: inline-block;
     padding: 5px 15px;
   }
-
+  .hero_top_one {
+    padding: 0;
+  }
+  .hero_text_one {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .hero_img_one object {
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
   .hero_section.v2 {
     height: 730px;
   }
-
+  .owl-carousel.owl-loaded {
+    margin: 0;
+  }
   .container {
     max-width: 1024px;
   }
@@ -1243,11 +1289,9 @@
   .box__wrapper .box__body p, .box__wrapper .link {
     font-size: 16px;
   }
-  .input__box {
-    font-size: 18px;
-  }
   .input-twocolumn .input-txt02 {
-    padding: 1.5%;
+    padding: 2%;
+    margin: 10px 0;
   }
   .contact__box {
     width: 80%;
@@ -1339,7 +1383,7 @@
     min-width: 150px;
   }
   .sms_section {
-    height: 500px;
+    height: 540px;
   }
   .sms_form_field input {
     width: 60%;
@@ -1428,6 +1472,7 @@
     font-size: 18px;
     font-family: 'Sarabun', serif;
     padding-left: 10px;
+    min-width: 220px;
   }
   .price_plan h2 {
     font-size: 60px;
@@ -1437,6 +1482,12 @@
     color: #31b1e7;
     line-height: 1;
     font-weight: 500;
+  }
+  .container.pricing {
+    margin-top: 70px;
+  }
+  .pricing .mt-80 {
+    margin-top: 63px;
   }
   .slider_item p {
     font-size: 16px;
@@ -1449,7 +1500,7 @@
     height: 550px;
   }
   .faq_header {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.3;
     margin-right: 50px;
@@ -1483,9 +1534,17 @@
     font-size: 14px;
   } 
   .box__wrapper .box__body .info__box .info__icon {
-    height: 65px;
-    width: 65px;
+    height: 55px;
+    width: 55px;
     padding: 15px;
+  }
+  .box__wrapper .box__body .info__box .info__icon img {
+    max-width: 120%;
+  }
+  .form__wrapper input {
+    height: 50px;
+    padding: 0 20px;
+    font-size: 16px;
   }
   .sender__box {
     background-color: #f1f8f9;
@@ -1515,7 +1574,8 @@
     margin-right: 0px;
   }
   .pricing_box {
-    padding: 30px 35px;
+    padding: 30px 30px;
+    width: 80%;
   }
   .pricing__top .pricing_box h3 {
     font-size: 30px !important;
@@ -1627,6 +1687,33 @@
     padding-left: 15px;
     margin-top: -40px;
   }
+  .footer_widget h4 {
+    font-size: 20px;
+  }
+  .footer_section a, p.copyright {
+    font-size: 16px;
+  }
+  .form-login {
+    max-width: 500px;
+    padding: 30px;
+  }
+  .form-indiv {
+    max-width: 800px;
+    padding: 30px;
+    margin: 40px auto 100px;
+  }
+  .finish-regis {
+    margin: 20px auto 50px;
+  }
+  .chooseType {
+    max-width: 800px;
+  }
+  .chooseType .indivType, .chooseType .companyType {
+    width: 300px;
+  }
+  .img-user{
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1648,6 +1735,7 @@
     top: 47px;
     z-index: 1000;
   }
+  
 }
 
 @media only screen and (min-width: 992px) {
