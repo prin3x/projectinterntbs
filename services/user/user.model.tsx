@@ -16,6 +16,29 @@ export interface RegisterUser {
   email: string;
   isReceiveNews: string;
 }
+export interface QuickRegisterStep1 {
+  data: QuickRegisterStep1Data | {};
+  error: ErrorMessage;
+}
+export interface QuickRegisterStep1Data {
+  msisdn: string;
+}
+export interface QuickRegisterStep2 {
+  welcome_token: string;
+  data: QuickRegisterStep2Data | {};
+  error: ErrorMessage;
+}
+export interface QuickRegisterStep2Data {
+  msisdn: string;
+  pin: number;
+}
+export interface QuickRegisterStep3 {
+  data: QuickRegisterStep3Data | {};
+  error: ErrorMessage;
+}
+export interface QuickRegisterStep3Data {
+  welcomeToken: string;
+}
 export interface ErrorMessage {
   code: string;
   erromessagerText: string | '';

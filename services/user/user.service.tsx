@@ -1,16 +1,38 @@
 import axios from 'axios';
-import { AuthLogin, Register } from './user.model';
+import {
+  AuthLogin,
+  Register,
+  QuickRegisterStep1,
+  QuickRegisterStep2,
+  QuickRegisterStep3,
+} from './user.model';
 import Cookie from 'js-cookie';
 // ------------------  login --------------------------------------------
-export async function login(
-  username: string,
-  password: string
-): Promise<AuthLogin> {
+export async function login(param: any): Promise<AuthLogin> {
   try {
-    let resultAPI = await axios.post(process.env.API_URL + '/api/auth', {
-      username,
-      password,
-    });
+    console.log('login param : ', param);
+    const { username, password } = param;
+    let sendData = {};
+    if (param.firstname && param.lastname && param.email) {
+      sendData = {
+        username,
+        password,
+        firstname: param.firstname,
+        lastname: param.lastname,
+        email: param.email,
+        is_receive_news: param.news,
+      };
+    } else {
+      sendData = { username, password };
+    }
+
+    console.log('xxxxxxxxxx');
+    console.log(sendData);
+    // return loginFail();
+    let resultAPI = await axios.post(
+      process.env.API_URL + '/api/auth',
+      sendData
+    );
     // let resultAPI = await axios.get(
     //   'https://api.github.com/repos/vercel/next.js'
     // );
@@ -151,6 +173,123 @@ export async function resendRegister(): Promise<boolean> {
   const objlocalStorage = JSON.parse(strlocalStorage);
   console.log('objlocalStorage : ', objlocalStorage);
   return true;
+}
+export async function quickRegisterStep1(
+  param: any
+): Promise<QuickRegisterStep1> {
+  let dataRegister = {
+    data: { msisdn: '0804606546' },
+    error: { code: '', erromessagerText: '' },
+  };
+  return dataRegister;
+  try {
+    let { msisdn } = param;
+    let resultAPI = await axios.post(
+      process.env.API_URL + '/api/user/quick-register/1',
+      { msisdn }
+    );
+
+    console.log('resultAPI : ', resultAPI);
+    if (resultAPI.status !== 200 && resultAPI.status !== 201) {
+      return {
+        data: {},
+        error: { code: 'quickregisterfirststepdto.fail', erromessagerText: '' },
+      };
+    }
+    const data = resultAPI.data;
+    let dataRegister = {
+      data: data.data,
+      error: { code: '', erromessagerText: '' },
+    };
+    return dataRegister;
+  } catch (error) {
+    console.log('error : ', error.response);
+    let errorData = error.response
+      ? error.response.data.error
+      : { code: '400', errorMessageText: '' };
+    return { data: {}, error: errorData };
+  }
+}
+export async function quickRegisterStep2(
+  param: any
+): Promise<QuickRegisterStep2> {
+  return {
+    welcome_token: 'f7640778-8539-453c-85ed-e0bc5a1e0057',
+    data: {},
+    error: { code: '', erromessagerText: '' },
+  };
+  try {
+    console.log('param : ', param);
+    let { msisdn, pin } = param;
+    let resultAPI = await axios.post(
+      process.env.API_URL + '/api/user/quick-register/2',
+      { msisdn, pin }
+    );
+
+    console.log('resultAPI : ', resultAPI);
+    if (resultAPI.status !== 200 && resultAPI.status !== 201) {
+      return {
+        welcome_token: '',
+        data: {},
+        error: {
+          code: 'quickregistersecondstepdto.fail',
+          erromessagerText: '',
+        },
+      };
+    }
+    const data = resultAPI.data;
+    let dataRegister = {
+      welcome_token: data.welcome_token,
+      data: data.data,
+      error: { code: '', erromessagerText: '' },
+    };
+    return dataRegister;
+  } catch (error) {
+    console.log('error : ', error.response);
+    let errorData = error.response
+      ? error.response.data.error
+      : { code: '400', errorMessageText: '' };
+    return { welcome_token: '', data: {}, error: errorData };
+  }
+}
+export async function quickRegisterStep3(
+  param: any
+): Promise<QuickRegisterStep3> {
+  return {
+    data: { welcomeToken: 'test_welcome_token' },
+    error: { code: '', erromessagerText: '' },
+  };
+  try {
+    console.log('param : ', param);
+    let { welcome_token } = param;
+    let resultAPI = await axios.post(
+      process.env.API_URL + '/api/user/quick-register/3',
+      { welcome_token }
+    );
+
+    console.log('resultAPI : ', resultAPI);
+    if (resultAPI.status !== 200 && resultAPI.status !== 201) {
+      return {
+        data: {},
+        error: {
+          code: 'quickregisterthirdstepdto.fail',
+          erromessagerText: '',
+        },
+      };
+    }
+    const data = resultAPI.data;
+    let dataRegister = {
+      data: data.data,
+      error: { code: '', erromessagerText: '' },
+    };
+    return dataRegister;
+  } catch (error) {
+    console.log('error : ', error.response);
+    let errorData = error.response
+      ? error.response.data.error
+      : { code: '400', errorMessageText: '' };
+    return { data: {}, error: errorData };
+  }
 }
 // ------------------ end register --------------------------------------------
 

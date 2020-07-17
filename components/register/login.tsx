@@ -13,23 +13,12 @@ type Inputs = {
   auth: string;
 };
 const LoginComponents = ({ t }: any) => {
-  // const inputUsername: any = useRef(null);
-  // const inputPassword: any = useRef(null);
-  // const [isError, setIsError] = useState('');
-  let {
-    register,
-    handleSubmit,
-    setError,
-    clearErrors,
-    watch,
-    errors,
-  } = useForm<Inputs>();
-  const watchShowAge = watch('password', '');
+  let { register, handleSubmit, setError, clearErrors, errors } = useForm<
+    Inputs
+  >();
   const onSubmit = async (data: any) => {
-    const user = await login(data.username, data.password);
+    const user = await login(data);
     if (user.error.code !== '') {
-      console.log('loginnnnnnnnnnnn');
-      console.log('loginnnnnnnnnnnn : ', watchShowAge);
       setError('auth', {
         type: user.error.code,
         message: '',
