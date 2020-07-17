@@ -4098,6 +4098,9 @@
   .single__pricing[aria-expanded='true'] .pricing__content {
     width: 100%;
   }
+  .globe_section {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 640px) {
@@ -4123,7 +4126,7 @@
     font-size: 16px;
   }
   .single_feature_text p {
-    font-size: 14px;
+    font-size: 12px;
     color: #5b6e80;
     font-family: 'Sarabun', serif;
     line-height: 1.4;
@@ -4161,9 +4164,11 @@
     height: 640px;
     padding: 30px 0;
   }
-}
-
-@media (max-width: 575px) {
+  .col-md-3.whyTBS {
+    width: 46%;
+    margin: 0 auto;
+    padding: 0px 0px;
+  }
   .contact__left {
     padding: 15px;
   }
@@ -4234,4 +4239,63 @@
   .pricing__bottom h5 {
     margin-right: 0 !important;
   }
+  .simple_slider_wrapper .owl-next, .simple_slider_wrapper .owl-prev {
+    width: 50px;
+    height: 50px;
+  }
+  .simple_slider_wrapper .owl-next i {
+    font-size: 36px;
+    right: -2px;
+    top: -1px;
+  }
+  .simple_slider_wrapper .owl-prev i {
+    font-size: 36px;
+    left: -2px;
+    top: -1px;
+  }
+  .sms_text h3 {
+    font-size: 24px;
+  }
+  .sms_feature_item h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .sms_feature_item h3 {
+    color: #31b1e7;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  .sms_section {
+    height: 600px;
+  }
+  .sms_form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .sms_form_text h4 {
+    font-size: 18px;
+  }
+  .sms_form_text p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .sms_form_field input {
+    border: 2px solid #5b6e80;
+    height: 50px;
+    border-radius: 14px;
+    padding: 15px 20px 15px;
+  }
+  .btn.v2 {
+    min-width: 150px;
+    font-size: 16px;
+    padding: 15px 0;
+  }
+  .sms_form_text {
+    margin-bottom: 20px;
+  }
+  .testimonial_section {
+    padding: 240px 0 100px;
+  }
 }
+
