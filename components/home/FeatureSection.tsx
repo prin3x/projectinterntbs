@@ -12,7 +12,7 @@ const FeatureSection = ({ t }: any) => (
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col-md-3">
+        <div className="col-md-3 whyTBS">
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
@@ -29,7 +29,7 @@ const FeatureSection = ({ t }: any) => (
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 whyTBS">
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
@@ -46,7 +46,7 @@ const FeatureSection = ({ t }: any) => (
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 whyTBS">
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
@@ -63,7 +63,7 @@ const FeatureSection = ({ t }: any) => (
             </div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 whyTBS">
           <div className="single_feature_item">
             <img
               className="lazyload size-img"

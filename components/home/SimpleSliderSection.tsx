@@ -121,11 +121,11 @@ const SimpleSliderSection = ({ t }: any) => {
                   />
                   <p>
                     {t('homesimpleslider.item.1.desc')}
-                    <Link href="/">
+                    {/* <Link href="/">
                       <a href="#">
                         <span>{t('homesimpleslider.item.1.link')}</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </p>
                   <a href="#" className="btn v9">
                     {t('homesimpleslider.testBtn')}
@@ -149,11 +149,11 @@ const SimpleSliderSection = ({ t }: any) => {
                   />
                   <p>
                     {t('homesimpleslider.item.2.desc')}
-                    <Link href="/">
+                    {/* <Link href="/">
                       <a href="#">
                         <span>{t('homesimpleslider.item.2.link')}</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </p>
                   <a href="#" className="btn v9">
                     {t('homesimpleslider.testBtn')}
@@ -198,11 +198,11 @@ const SimpleSliderSection = ({ t }: any) => {
                   />
                   <p>
                     {t('homesimpleslider.item.4.desc')}
-                    <Link href="/">
+                    {/* <Link href="/">
                       <a href="#">
                         <span>{t('homesimpleslider.item.4.link')}</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </p>
                   <a href="#" className="btn v9">
                     {t('homesimpleslider.testBtn')}
@@ -226,11 +226,11 @@ const SimpleSliderSection = ({ t }: any) => {
                   />
                   <p>
                     {t('homesimpleslider.item.5.desc')}
-                    <Link href="/">
+                    {/* <Link href="/">
                       <a href="#">
                         <span>{t('homesimpleslider.item.5.link')}</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </p>
                   <a href="#" className="btn v9">
                     {t('homesimpleslider.testBtn')}
