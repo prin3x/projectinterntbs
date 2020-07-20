@@ -1,5 +1,6 @@
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
+import { resendRegister } from '../../services/user/user.service';
 const RegisterfinishComponents = ({ t }: any) => (
   <div className="register_section">
     <div className="finish-regis">
@@ -24,7 +25,14 @@ const RegisterfinishComponents = ({ t }: any) => (
       </div>
       <p>
         {t('registerfinish.resendsms')}
-        <a href="">{t('registerfinish.linkresendsms')}</a>
+        <a
+          href="javascript:;"
+          onClick={() => {
+            resendRegister();
+          }}
+        >
+          {t('registerfinish.linkresendsms')}
+        </a>
       </p>
     </div>
   </div>

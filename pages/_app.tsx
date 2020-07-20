@@ -4,6 +4,7 @@ import { appWithTranslation, i18n } from '../i18n';
 import React, { useEffect } from 'react';
 import { checktoken } from '../services/user/user.service';
 import Proloader from '../components/Proloader';
+import { StoreContextProvider } from '../components/context/store';
 function MyApp({ Component, pageProps }: any) {
   if (!i18n.language) i18n.changeLanguage('th');
   const router = useRouter();
@@ -21,8 +22,10 @@ function MyApp({ Component, pageProps }: any) {
   }, []);
   return (
     <>
-      <Proloader />
-      <Component {...pageProps} />
+      <StoreContextProvider>
+        <Proloader />
+        <Component {...pageProps} />
+      </StoreContextProvider>
     </>
   );
 }

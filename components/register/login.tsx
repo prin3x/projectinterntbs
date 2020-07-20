@@ -13,17 +13,17 @@ type Inputs = {
   auth: string;
 };
 const LoginComponents = ({ t }: any) => {
-  // const inputUsername: any = useRef(null);
-  // const inputPassword: any = useRef(null);
-  // const [isError, setIsError] = useState('');
-  let { register, handleSubmit, setError, errors } = useForm<Inputs>();
+  let { register, handleSubmit, setError, clearErrors, errors } = useForm<
+    Inputs
+  >();
   const onSubmit = async (data: any) => {
-    const user = await login(data.username, data.password);
+    const user = await login(data);
     if (user.error.code !== '') {
       setError('auth', {
         type: user.error.code,
         message: '',
       });
+      // clearErrors('auth');
     } else {
       Router.push('/');
     }
@@ -59,6 +59,7 @@ const LoginComponents = ({ t }: any) => {
           <input
             // ref={inputUsername}
             ref={register({ required: true, pattern: /^[a-zA-Z0-9-_@.]+$/i })}
+            onChange={() => clearErrors('auth')}
             type="text"
             id="username"
             name="username"
@@ -69,6 +70,7 @@ const LoginComponents = ({ t }: any) => {
           <input
             // ref={inputPassword}
             ref={register({ required: true })}
+            onChange={() => clearErrors('auth')}
             type="password"
             id="password"
             name="password"
