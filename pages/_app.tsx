@@ -8,7 +8,7 @@ import Proloader from '../components/Proloader';
 import { StoreContextProvider } from '../components/context/store';
 
 const tagManagerArgs = {
-  gtmId: 'GTM-M5L4PKB'
+  gtmId: process.env.NEXT_PUBLIC_GTM_CODE || ''
 }
 
 function MyApp({ Component, pageProps }: any) {

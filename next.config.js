@@ -5,6 +5,7 @@ module.exports = {
   env: {
     API_URL: 'https://tbs-account-api.ngrok.1mobyline.com',
     DOMAIN_URL: 'https://d1vb0eqohs6ps7.cloudfront.net',
+    // GTM_CODE: process.env.GTM_CODE
   },
   exportTrailingSlash: true,
   compress: true,
