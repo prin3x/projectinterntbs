@@ -2,9 +2,15 @@ import App from 'next/app';
 import Router, { useRouter } from 'next/router';
 import { appWithTranslation, i18n } from '../i18n';
 import React, { useEffect } from 'react';
+import TagManager from 'react-gtm-module'
 import { checktoken } from '../services/user/user.service';
 import Proloader from '../components/Proloader';
 import { StoreContextProvider } from '../components/context/store';
+
+const tagManagerArgs = {
+  gtmId: 'GTM-M5L4PKB'
+}
+
 function MyApp({ Component, pageProps }: any) {
   if (!i18n.language) i18n.changeLanguage('th');
   const router = useRouter();
@@ -14,6 +20,7 @@ function MyApp({ Component, pageProps }: any) {
     }
   };
   useEffect(() => {
+    TagManager.initialize(tagManagerArgs)
     handleRouteChange(router.pathname);
     Router.events.on('routeChangeStart', handleRouteChange);
     return () => {
