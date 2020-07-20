@@ -4,7 +4,15 @@ const EduSection = ({ t }: any) => (
   <div className="edu_section">
     <div className="container">
       <div className="row align-items-center">
-        <div className="col-lg-6 col-md-12">
+        <div className="col-md-6 col-md-push-6">
+          <div className="edu_text">
+            <h3>{t('homeedu.header')}</h3>
+            <Link href="/SuccessStoriesListing">
+              <a href="#">{t('homeedu.link')}</a>
+            </Link>
+          </div>
+        </div>
+        <div className="col-md-6 col-md-pull-6">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-4">
               <div className="edu_box">
@@ -46,14 +54,6 @@ const EduSection = ({ t }: any) => (
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-12">
-          <div className="edu_text">
-            <h3>{t('homeedu.header')}</h3>
-            <Link href="/SuccessStoriesListing">
-              <a href="#">{t('homeedu.link')}</a>
-            </Link>
           </div>
         </div>
       </div>
