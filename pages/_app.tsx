@@ -6,9 +6,9 @@ import TagManager from 'react-gtm-module'
 import { checktoken } from '../services/user/user.service';
 import Proloader from '../components/Proloader';
 import { StoreContextProvider } from '../components/context/store';
-
+import AppConfig from '../appConfig'
 const tagManagerArgs = {
-  gtmId: process.env.NEXT_PUBLIC_GTM_CODE || ''
+  gtmId: AppConfig.GTM_CODE || ''
 }
 
 function MyApp({ Component, pageProps }: any) {
