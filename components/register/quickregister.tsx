@@ -22,7 +22,6 @@ const QuickRegisterComponents = ({ t }: any) => {
     Inputs
   >();
   const onSubmit = async (data: any) => {
-    console.log(data);
     // if (dataStore.msisdnStore[0] === undefined) {
     //   console.log('errror msisdnStore');
     //   return;

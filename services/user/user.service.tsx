@@ -128,18 +128,35 @@ export async function registerUser(param: any): Promise<Register> {
     //   },
     //   error: { code: '', erromessagerText: '' },
     // };
-
     let { firstname, lastname, tel, email, news, recaptcha } = param;
     const is_receive_news = String(news);
     const msisdn = tel;
-    let resultAPI = await axios.post(process.env.API_URL + '/api/user', {
-      firstname,
-      lastname,
-      msisdn,
-      email,
-      is_receive_news,
-      recaptcha,
-    });
+    const cookieGclid = Cookie.get('gclid');
+    let sendData = {};
+    if (cookieGclid === undefined) {
+      sendData = {
+        firstname,
+        lastname,
+        msisdn,
+        email,
+        is_receive_news,
+        recaptcha,
+      };
+    } else {
+      sendData = {
+        firstname,
+        lastname,
+        msisdn,
+        email,
+        is_receive_news,
+        recaptcha,
+        gclid: cookieGclid,
+      };
+    }
+    let resultAPI = await axios.post(
+      process.env.API_URL + '/api/user',
+      sendData
+    );
 
     console.log('resultAPI : ', resultAPI);
     if (resultAPI.status !== 200 && resultAPI.status !== 201) {
@@ -183,7 +200,6 @@ export async function quickRegisterStep1(
   // return dataRegister;
   try {
     let { msisdn, recaptcha } = param;
-    recaptcha = 'wwww';
     let resultAPI = await axios.post(
       process.env.API_URL + '/api/user/quick-register/1',
       { msisdn, recaptcha }
@@ -219,11 +235,21 @@ export async function quickRegisterStep2(
   //   error: { code: '', erromessagerText: '' },
   // };
   try {
-    console.log('param : ', param);
     let { msisdn, pin } = param;
+    const cookieGclid = Cookie.get('gclid');
+    let sendData = {};
+    if (cookieGclid === undefined) {
+      sendData = { msisdn, pin };
+    } else {
+      sendData = {
+        msisdn,
+        pin,
+        gclid: cookieGclid,
+      };
+    }
     let resultAPI = await axios.post(
       process.env.API_URL + '/api/user/quick-register/2',
-      { msisdn, pin }
+      sendData
     );
 
     console.log('resultAPI : ', resultAPI);
@@ -260,7 +286,6 @@ export async function quickRegisterStep3(
   //   error: { code: '', erromessagerText: '' },
   // };
   try {
-    console.log('param : ', param);
     let { welcome_token } = param;
     let resultAPI = await axios.post(
       process.env.API_URL + '/api/user/quick-register/3',

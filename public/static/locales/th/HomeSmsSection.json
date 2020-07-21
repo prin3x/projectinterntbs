@@ -30,7 +30,7 @@
         },
         "fail": "ไม่สามารถลงทะเบียนได้ กรุณาลองใหม่อีกครั้ง",
         "recaptcha": {
-          "invalid": "โปรดใส่ recaptch"
+          "invalid": "โปรดใส่ recaptch ให้ถูกต้อง"
         }
       },
       "recaptcha": {
@@ -50,7 +50,8 @@
     "resultStep2": {
       "quickregistersecondstepdto": {
         "msisdn": {
-          "invalid": "หมายเลขนี้ไม่สามารถลงทะเบียนได้ กรุณาติดต่อเจ้าหน้าที่"
+          "invalid": "หมายเลขนี้ไม่สามารถลงทะเบียนได้ กรุณาติดต่อเจ้าหน้าที่",
+          "exist": "หมายเลขนี้มีในระบบแล้ว"
         },
         "pin": {
           "invalid": "รหัสผ่านไม่ถูกต้อง"
@@ -65,6 +66,10 @@
             "incorrect": "รหัสผ่านไม่ถูกต้อง"
           }
         }
+      },
+      "quickRegisterSecondStep": {
+        "pin": { "incorrect": "รหัสผ่านไม่ถูกต้อง" },
+        "ken": { "expire": "รหัสหมดอายุ" }
       }
     },
     "resultStep3": {
@@ -73,6 +78,11 @@
           "invalid": "ไม่พบ Token"
         },
         "fail": "ไม่สามารถส่งได้ กรุณาลองใหม่อีกครั้ง"
+      },
+      "quickRegisterThridStep": {
+        "key": {
+          "expire": "Token หมดอายุแล้ว"
+        }
       },
       "register": {
         "quick-3": {

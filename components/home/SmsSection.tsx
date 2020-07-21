@@ -25,12 +25,10 @@ const SmsSectionV2 = ({ t }: any) => {
   const [showLogin, setShowLogin] = useState(false);
   const [showModalcaptcha, setShowModalcaptcha] = useState(false);
   const [msisdn, setMsisdn] = useState('');
-  const [codereCaptcha, setcodereCaptcha] = useState('');
   const [tempDatastep1, setTempDatastep1] = useState({ msisdn: '' });
   const [welcome_token, setWelcomeToken] = useState('');
   const dataStore: any = useContext(StoreContext);
   const setreCaptcha = async (value: any) => {
-    setcodereCaptcha(value);
     setShowModalcaptcha(false);
 
     const resultStep1 = await quickRegisterStep1({
@@ -134,7 +132,6 @@ const SmsSectionV2 = ({ t }: any) => {
   });
   const onSubmitStep3 = async (data: any) => {
     console.log('onSubmitStep3 : ', data);
-    console.log('welcomeToken : ', welcome_token);
     if (welcome_token === '') {
       setErrorStep3('welcomeToken', {
         type: 'required',
@@ -234,7 +231,9 @@ const SmsSectionV2 = ({ t }: any) => {
                           {t('homesms.test.confirmBtn')}
                         </button>
                       </form>
-                      {t(handleErorrStep1(errrorsStep1))}
+                      <div style={{ color: 'red' }}>
+                        {t(handleErorrStep1(errrorsStep1))}
+                      </div>
                     </div>
                   )}
                   {showInputstep3 && (
@@ -254,7 +253,9 @@ const SmsSectionV2 = ({ t }: any) => {
                           ทดลองส่ง
                         </button>
                       </form>
-                      {t(handleErorrStep3(errrorsStep3))}
+                      <div style={{ color: 'red' }}>
+                        {t(handleErorrStep3(errrorsStep3))}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -372,7 +373,9 @@ const SmsSectionV2 = ({ t }: any) => {
                     </button>
                   </div>
                 </form>
-                {t(handleErorrStep2(errrorsStep2))}
+                <div style={{ color: 'red' }}>
+                  {t(handleErorrStep2(errrorsStep2))}
+                </div>
               </div>
             </div>
           </div>
