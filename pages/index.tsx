@@ -47,15 +47,15 @@ const Homepage = ({ t }: any) => (
       </Head>
       {/* <Proloader /> */}
       <div className="page_wrapper">
-        <HeroSection />
+        {/* <HeroSection />
         <PartnerSection />
         <FeatureSection />
         <SimpleSliderSection />
-        <GlobeSection />
+        <GlobeSection /> */}
         <SmsSection />
-        <TestimonialSection />
+        {/* <TestimonialSection />
         <EduSection />
-        <CtaSection />
+        <CtaSection /> */}
       </div>
       <BacktoTop />
     </Layout>

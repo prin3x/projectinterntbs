@@ -20,14 +20,12 @@ export async function login(param: any): Promise<AuthLogin> {
         firstname: param.firstname,
         lastname: param.lastname,
         email: param.email,
-        is_receive_news: param.news,
+        is_receive_news: String(param.news),
       };
     } else {
       sendData = { username, password };
     }
 
-    console.log('xxxxxxxxxx');
-    console.log(sendData);
     // return loginFail();
     let resultAPI = await axios.post(
       process.env.API_URL + '/api/auth',
@@ -111,27 +109,27 @@ export const loginFail = (code = '400', errorMessageText = '') => {
 
 export async function registerUser(param: any): Promise<Register> {
   try {
-    localStorage.setItem(
-      'TBS_resendregister',
-      JSON.stringify({
-        accID: '200605',
-        msisdn: '0847827374',
-        email: 'pachara.tho@1moby.com',
-      })
-    );
-    return {
-      accID: '200605',
-      data: {
-        firstname: 'a',
-        lastname: 'b',
-        msisdn: '0847827374',
-        email: 'pachara.tho@1moby.com',
-        isReceiveNews: 'false',
-      },
-      error: { code: '', erromessagerText: '' },
-    };
+    // localStorage.setItem(
+    //   'TBS_resendregister',
+    //   JSON.stringify({
+    //     accID: '200605',
+    //     msisdn: '0847827374',
+    //     email: 'pachara.tho@1moby.com',
+    //   })
+    // );
+    // return {
+    //   accID: '200605',
+    //   data: {
+    //     firstname: 'a',
+    //     lastname: 'b',
+    //     msisdn: '0847827374',
+    //     email: 'pachara.tho@1moby.com',
+    //     isReceiveNews: 'false',
+    //   },
+    //   error: { code: '', erromessagerText: '' },
+    // };
 
-    let { firstname, lastname, tel, email, news } = param;
+    let { firstname, lastname, tel, email, news, recaptcha } = param;
     const is_receive_news = String(news);
     const msisdn = tel;
     let resultAPI = await axios.post(process.env.API_URL + '/api/user', {
@@ -140,6 +138,7 @@ export async function registerUser(param: any): Promise<Register> {
       msisdn,
       email,
       is_receive_news,
+      recaptcha,
     });
 
     console.log('resultAPI : ', resultAPI);
@@ -177,22 +176,23 @@ export async function resendRegister(): Promise<boolean> {
 export async function quickRegisterStep1(
   param: any
 ): Promise<QuickRegisterStep1> {
-  let dataRegister = {
-    data: { msisdn: '0804606546' },
-    error: { code: '', erromessagerText: '' },
-  };
-  return dataRegister;
+  // let dataRegister = {
+  //   data: { msisdn: '0804606546' },
+  //   error: { code: '', erromessagerText: '' },
+  // };
+  // return dataRegister;
   try {
-    let { msisdn } = param;
+    let { msisdn, recaptcha } = param;
+    recaptcha = 'wwww';
     let resultAPI = await axios.post(
       process.env.API_URL + '/api/user/quick-register/1',
-      { msisdn }
+      { msisdn, recaptcha }
     );
 
     console.log('resultAPI : ', resultAPI);
     if (resultAPI.status !== 200 && resultAPI.status !== 201) {
       return {
-        data: {},
+        data: { msisdn: '' },
         error: { code: 'quickregisterfirststepdto.fail', erromessagerText: '' },
       };
     }
@@ -207,17 +207,17 @@ export async function quickRegisterStep1(
     let errorData = error.response
       ? error.response.data.error
       : { code: '400', errorMessageText: '' };
-    return { data: {}, error: errorData };
+    return { data: { msisdn: '' }, error: errorData };
   }
 }
 export async function quickRegisterStep2(
   param: any
 ): Promise<QuickRegisterStep2> {
-  return {
-    welcome_token: 'f7640778-8539-453c-85ed-e0bc5a1e0057',
-    data: {},
-    error: { code: '', erromessagerText: '' },
-  };
+  // return {
+  //   welcome_token: 'f7640778-8539-453c-85ed-e0bc5a1e0057',
+  //   data: {},
+  //   error: { code: '', erromessagerText: '' },
+  // };
   try {
     console.log('param : ', param);
     let { msisdn, pin } = param;
@@ -255,10 +255,10 @@ export async function quickRegisterStep2(
 export async function quickRegisterStep3(
   param: any
 ): Promise<QuickRegisterStep3> {
-  return {
-    data: { welcomeToken: 'test_welcome_token' },
-    error: { code: '', erromessagerText: '' },
-  };
+  // return {
+  //   data: { welcomeToken: 'test_welcome_token' },
+  //   error: { code: '', erromessagerText: '' },
+  // };
   try {
     console.log('param : ', param);
     let { welcome_token } = param;

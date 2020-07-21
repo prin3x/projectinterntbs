@@ -5,12 +5,13 @@ import React, { useEffect } from 'react';
 // import React, { useState, useRef, useEffect } from 'react';
 import Router from 'next/router';
 import { useForm } from 'react-hook-form';
+
 type Inputs = {
   example: string;
   exampleRequired: string;
   username: string;
   password: string;
-  auth: string;
+  res: string;
 };
 const LoginComponents = ({ t }: any) => {
   let { register, handleSubmit, setError, clearErrors, errors } = useForm<
@@ -18,12 +19,13 @@ const LoginComponents = ({ t }: any) => {
   >();
   const onSubmit = async (data: any) => {
     const user = await login(data);
+    console.log('login return : ', user);
     if (user.error.code !== '') {
-      setError('auth', {
+      setError('res', {
         type: user.error.code,
         message: '',
       });
-      // clearErrors('auth');
+      // clearErrors('res');
     } else {
       Router.push('/');
     }
@@ -35,8 +37,8 @@ const LoginComponents = ({ t }: any) => {
     if (error.password) {
       return 'login.validate.password.' + error.password.type;
     }
-    if (error.auth) {
-      return 'ErrorMessage:' + error.auth.type;
+    if (error.res) {
+      return 'ErrorMessage:' + error.res.type;
     }
   };
   useEffect(() => {}, []);
@@ -59,7 +61,7 @@ const LoginComponents = ({ t }: any) => {
           <input
             // ref={inputUsername}
             ref={register({ required: true, pattern: /^[a-zA-Z0-9-_@.]+$/i })}
-            onChange={() => clearErrors('auth')}
+            onChange={() => clearErrors('res')}
             type="text"
             id="username"
             name="username"
@@ -70,7 +72,7 @@ const LoginComponents = ({ t }: any) => {
           <input
             // ref={inputPassword}
             ref={register({ required: true })}
-            onChange={() => clearErrors('auth')}
+            onChange={() => clearErrors('res')}
             type="password"
             id="password"
             name="password"

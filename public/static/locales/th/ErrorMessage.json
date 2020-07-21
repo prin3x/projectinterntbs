@@ -4,6 +4,9 @@
       "fail": "username/password ไม่ถูกต้อง",
       "blocked": "ผู้ใช้งานถูกปิดการเข้าใช้งาน",
       "multisession": "multisession"
+    },
+    "isReceiveNews": {
+      "invalid": "invalid"
     }
   },
   "system": {
@@ -11,5 +14,5 @@
   },
   "Bad Request": "username/password ไม่ถูกต้อง",
   "400": "ไม่สามารถเข้าสู่ระบบได้ กรุณาลองใหม่อีกครั้ง",
-  "unauthorized": "unauthorized"
+  "unauthorized": "username/password ไม่ถูกต้อง"
 }

@@ -17,7 +17,7 @@ export interface RegisterUser {
   isReceiveNews: string;
 }
 export interface QuickRegisterStep1 {
-  data: QuickRegisterStep1Data | {};
+  data: QuickRegisterStep1Data;
   error: ErrorMessage;
 }
 export interface QuickRegisterStep1Data {
