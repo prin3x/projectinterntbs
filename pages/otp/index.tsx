@@ -8,6 +8,8 @@ import TrackSection from '../../components/otp/TrackSection';
 import CtaSection from '../../components/otp/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
+import { seo } from '../../components/seo/otp';
 import { withTranslation } from '../../i18n';
 const Otp = ({ t }: any) => (
   <Layout>
@@ -18,24 +20,7 @@ const Otp = ({ t }: any) => (
       <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-      <meta
-        property="og:title"
-        content="บริการ OTP Ready-to-Use การส่งยืนยันตัวตนที่พร้อมใช้ทันที"
-      />
-      <meta property="og:description" content="" />
-      <meta property="og:url" content={process.env.DOMAIN_URL + '/otp'} />
-      <meta property="og:image" content="" />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="https://thaibulksms.com" />
-      <meta name="twitter:site" content="" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta property="og:image:secure_url" content="" />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="600" />
-      <meta property="og:image:height" content="600" />
-      <meta name="twitter:image" content="" />
-      <meta name="twitter:domain" content="" />
+      <NextSeo openGraph={seo.openGraph} />
     </Head>
     {/* <Proloader /> */}
     <div className="page_wrapper">
