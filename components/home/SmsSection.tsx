@@ -1,9 +1,10 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import Router from 'next/router';
 import { StoreContext } from '../context/store';
+import ReCAPTCHA from 'react-google-recaptcha';
 import {
   quickRegisterStep1,
   quickRegisterStep2,
@@ -22,10 +23,28 @@ const SmsSectionV2 = ({ t }: any) => {
   const [showInputstep1, setShowInputstep1] = useState(true);
   const [showInputstep3, setShowInputstep3] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [showModalcaptcha, setShowModalcaptcha] = useState(false);
   const [msisdn, setMsisdn] = useState('');
-  const [pin, setPin] = useState('');
+  const [tempDatastep1, setTempDatastep1] = useState({ msisdn: '' });
   const [welcome_token, setWelcomeToken] = useState('');
-  const dataStore = useContext(StoreContext);
+  const dataStore: any = useContext(StoreContext);
+  const setreCaptcha = async (value: any) => {
+    setShowModalcaptcha(false);
+
+    const resultStep1 = await quickRegisterStep1({
+      msisdn: tempDatastep1.msisdn,
+      recaptcha: value,
+    });
+    if (resultStep1.error.code !== '') {
+      setErrorStep1('resultStep1', {
+        type: resultStep1.error.code,
+        message: '',
+      });
+      return;
+    }
+    setMsisdn(resultStep1.data.msisdn);
+    setShowModalpass(true);
+  };
   //================  step 1
   const {
     register: registerStep1,
@@ -44,17 +63,9 @@ const SmsSectionV2 = ({ t }: any) => {
       });
       return;
     }
-    const resultStep1 = await quickRegisterStep1(data);
-    console.log('resultStep1 : ', resultStep1);
-    if (resultStep1.error.code !== '') {
-      setErrorStep1('resultStep1', {
-        type: resultStep1.error.code,
-        message: '',
-      });
-      return;
-    }
-    setMsisdn(resultStep1.data.msisdn);
-    setShowModalpass(true);
+
+    setTempDatastep1(data);
+    setShowModalcaptcha(true);
   };
   const handleErorrStep1 = (error: any) => {
     console.log('handleErorrStep1 : ', error);
@@ -95,7 +106,6 @@ const SmsSectionV2 = ({ t }: any) => {
       });
       return;
     }
-    setPin(data.pin);
     setWelcomeToken(resultStep2.welcome_token);
     setShowModalpass(false);
     setShowInputstep1(false);
@@ -122,7 +132,6 @@ const SmsSectionV2 = ({ t }: any) => {
   });
   const onSubmitStep3 = async (data: any) => {
     console.log('onSubmitStep3 : ', data);
-    console.log('welcomeToken : ', welcome_token);
     if (welcome_token === '') {
       setErrorStep3('welcomeToken', {
         type: 'required',
@@ -222,7 +231,9 @@ const SmsSectionV2 = ({ t }: any) => {
                           {t('homesms.test.confirmBtn')}
                         </button>
                       </form>
-                      {t(handleErorrStep1(errrorsStep1))}
+                      <div style={{ color: 'red' }}>
+                        {t(handleErorrStep1(errrorsStep1))}
+                      </div>
                     </div>
                   )}
                   {showInputstep3 && (
@@ -242,7 +253,9 @@ const SmsSectionV2 = ({ t }: any) => {
                           ทดลองส่ง
                         </button>
                       </form>
-                      {t(handleErorrStep3(errrorsStep3))}
+                      <div style={{ color: 'red' }}>
+                        {t(handleErorrStep3(errrorsStep3))}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -251,6 +264,50 @@ const SmsSectionV2 = ({ t }: any) => {
           </div>
         </div>
       </div>
+      {showModalcaptcha && (
+        <div
+          style={{
+            position: 'fixed',
+            width: '100%',
+            height: '100%',
+            left: '0',
+            top: '0',
+            zIndex: 99999999,
+            background: 'rgba(0, 0, 0, 0.5)',
+            display: '',
+          }}
+        >
+          <div className="">
+            <div className="" style={{ padding: '200px 0 60px' }}>
+              <div
+                className=""
+                style={{
+                  maxWidth: '600px',
+                  borderRadius: '15px',
+                  backgroundColor: '#F4F4F4',
+                  padding: '30px 50px',
+                  margin: '40px auto 100px',
+                  textAlign: 'center',
+                }}
+              >
+                <button
+                  onClick={() => {
+                    setShowModalcaptcha(false);
+                  }}
+                >
+                  <i className="far fa-check-circle"></i>
+                </button>
+                <div>
+                  <ReCAPTCHA
+                    sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
+                    onChange={setreCaptcha}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       {showModalpass && (
         <div
           style={{
@@ -316,7 +373,9 @@ const SmsSectionV2 = ({ t }: any) => {
                     </button>
                   </div>
                 </form>
-                {t(handleErorrStep2(errrorsStep2))}
+                <div style={{ color: 'red' }}>
+                  {t(handleErorrStep2(errrorsStep2))}
+                </div>
               </div>
             </div>
           </div>

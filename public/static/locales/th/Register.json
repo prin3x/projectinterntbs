@@ -25,6 +25,9 @@
       },
       "agree": {
         "required": "กรุณากรอก ยอมรับ"
+      },
+      "recaptcha": {
+        "required": "กรุณากรอก I'm not a robot"
       }
     },
     "registerdto": {
@@ -40,12 +43,23 @@
       "email": {
         "invalid": "โปรดใส่ อีเมล์ ให้ถูกต้อง (อีเมล์เท่านั้น)"
       },
+      "isReceiveNews": {
+        "invalid": "ตรวจสอบ รับข่าวสารจาก TBS"
+      },
       "fail": "ไม่สามารถลงทะเบียนได้ กรุณาลองใหม่อีกครั้ง"
     },
     "register": {
       "msisdn": {
         "exist": "หมายเลขนี้มีในระบบแล้ว"
       }
+    },
+    "intrenal": {
+      "server": {
+        "error": "ไม่สามารถสร้างบัญชีได้ กรุณาลองใหม่อีกครั้ง"
+      }
+    },
+    "recaptcha": {
+      "invalid": "กรุณากรอก recaptcha"
     }
   }
 }

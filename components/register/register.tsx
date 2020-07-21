@@ -1,9 +1,10 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import React from 'react';
 import Router from 'next/router';
 import { registerUser } from '../../services/user/user.service';
+import ReCAPTCHA from 'react-google-recaptcha';
 type Inputs = {
   firstname: string;
   lastname: string;
@@ -11,16 +12,24 @@ type Inputs = {
   email: string;
   agree: boolean;
   news: boolean;
-  registerdto: string;
+  res: string;
+  recaptcha: string;
 };
 const RegisterComponents = ({ t }: any) => {
-  let { register, handleSubmit, setError, errors } = useForm<Inputs>();
+  let {
+    register,
+    handleSubmit,
+    setError,
+    setValue,
+    clearErrors,
+    errors,
+  } = useForm<Inputs>();
   const onSubmit = async (data: any) => {
     console.log(data);
     const user = await registerUser(data);
     console.log('user : ', user);
     if (user.error.code !== '') {
-      setError('registerdto', {
+      setError('res', {
         type: user.error.code,
         message: '',
       });
@@ -42,18 +51,24 @@ const RegisterComponents = ({ t }: any) => {
     if (error.email) {
       return 'register.validate.email.' + error.email.type;
     }
+    if (error.recaptcha) {
+      return 'register.validate.recaptcha.' + error.recaptcha.type;
+    }
     if (error.agree) {
       return 'register.validate.agree.' + error.agree.type;
     }
-    if (error.registerdto) {
-      return 'register.' + error.registerdto.type;
+    if (error.res) {
+      return 'register.' + error.res.type;
     }
 
     if (error.auth) {
       return 'ErrorMessage:' + error.auth.type;
     }
   };
-
+  const setreCaptcha = (value: any) => {
+    setValue('recaptcha', value, { shouldValidate: true });
+    clearErrors('recaptcha');
+  };
   return (
     <div className="register_section">
       <h2>{t('register.header')}</h2>
@@ -100,6 +115,14 @@ const RegisterComponents = ({ t }: any) => {
               className="input-txt02"
               placeholder={t('register.email')}
             />
+            <input
+              ref={register({
+                required: true,
+              })}
+              id="recaptcha"
+              name="recaptcha"
+              type="hidden"
+            />
           </div>
           <div
             style={{
@@ -110,9 +133,11 @@ const RegisterComponents = ({ t }: any) => {
           >
             {t(handleErorr(errors))}
           </div>
-          <div className="captcha">
-            <img className="lazyload" data-src="/img/captcha.jpg" alt="Image" />
-          </div>
+          <ReCAPTCHA
+            sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
+            onChange={setreCaptcha}
+          />
+          <br />
           <div className="sec-checkbox">
             <div>
               <label className="container">
@@ -164,4 +189,4 @@ RegisterComponents.getInitialProps = async () => ({
 RegisterComponents.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Register', 'ErrorMessage')(RegisterComponents);
+export default withTranslation('Register')(RegisterComponents);

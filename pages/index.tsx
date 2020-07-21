@@ -13,6 +13,8 @@ import CtaSection from '../components/home/CtaSection';
 import { withTranslation } from '../i18n';
 import BacktoTop from '../components/BacktoTop';
 import Head from 'next/head';
+// import { NextSeo } from 'next-seo';
+// import { seo } from '../components/seo/home';
 const Homepage = ({ t }: any) => (
   <React.Fragment>
     <Layout>
@@ -23,8 +25,8 @@ const Homepage = ({ t }: any) => (
         <meta name="keywords" content={t('keywords')} />
         <meta name="author" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <meta property="og:url" content={process.env.DOMAIN_URL} />
+        {/* <NextSeo openGraph={seo} /> */}
+        {/* <meta property="og:url" content={process.env.DOMAIN_URL} />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -43,7 +45,7 @@ const Homepage = ({ t }: any) => (
         <meta name="twitter:site" content="" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="" />
-        <meta name="twitter:domain" content="" />
+        <meta name="twitter:domain" content="" /> */}
       </Head>
       {/* <Proloader /> */}
       <div className="page_wrapper">

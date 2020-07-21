@@ -1,10 +1,11 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import { StoreContext } from '../context/store';
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { login } from '../../services/user/user.service';
 import Router from 'next/router';
+
 type Inputs = {
   firstname: string;
   lastname: string;
@@ -16,12 +17,11 @@ type Inputs = {
   auth: string;
 };
 const QuickRegisterComponents = ({ t }: any) => {
-  const dataStore = useContext(StoreContext);
+  const dataStore: any = useContext(StoreContext);
   let { register, handleSubmit, setError, clearErrors, errors } = useForm<
     Inputs
   >();
   const onSubmit = async (data: any) => {
-    console.log(data);
     // if (dataStore.msisdnStore[0] === undefined) {
     //   console.log('errror msisdnStore');
     //   return;
@@ -34,7 +34,7 @@ const QuickRegisterComponents = ({ t }: any) => {
         message: '',
       });
     } else {
-      Router.push('/pricing');
+      Router.push('/');
     }
   };
   const handleErorr = (error: any) => {
@@ -122,9 +122,7 @@ const QuickRegisterComponents = ({ t }: any) => {
           >
             {t(handleErorr(errors))}
           </div>
-          <div className="captcha">
-            <img className="lazyload" data-src="/img/captcha.jpg" alt="Image" />
-          </div>
+
           <div className="sec-checkbox">
             <div>
               <label className="container">

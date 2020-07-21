@@ -9,9 +9,9 @@ type Inputs = {
   auth: string;
 };
 const UsertypeIndividual = ({ t }: any) => {
-  let { register, handleSubmit, setError, errors } = useForm<Inputs>();
+  let { register, handleSubmit } = useForm<Inputs>();
   const onSubmit = async (data: any) => {
-    console.log('run : onSubmit');
+    console.log('run : onSubmit', data);
     // const user = await login(data.username, data.password);
     // if (user.error.code !== '') {
     //   setError('auth', {
@@ -22,17 +22,17 @@ const UsertypeIndividual = ({ t }: any) => {
     //   Router.push('/');
     // }
   };
-  const handleErorr = (error: any) => {
-    if (error.username) {
-      return 'login.validate.username.' + error.username.type;
-    }
-    if (error.password) {
-      return 'login.validate.password.' + error.password.type;
-    }
-    if (error.auth) {
-      return 'ErrorMessage:' + error.auth.type;
-    }
-  };
+  // const handleErorr = (error: any) => {
+  //   if (error.username) {
+  //     return 'login.validate.username.' + error.username.type;
+  //   }
+  //   if (error.password) {
+  //     return 'login.validate.password.' + error.password.type;
+  //   }
+  //   if (error.auth) {
+  //     return 'ErrorMessage:' + error.auth.type;
+  //   }
+  // };
   return (
     <div className="userType_section">
       <h2>{t('usertypeindividual.header')}</h2>
@@ -173,7 +173,4 @@ UsertypeIndividual.getInitialProps = async () => ({
 UsertypeIndividual.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation(
-  'UsertypeIndividual',
-  'ErrorMessage'
-)(UsertypeIndividual);
+export default withTranslation('UsertypeIndividual')(UsertypeIndividual);
