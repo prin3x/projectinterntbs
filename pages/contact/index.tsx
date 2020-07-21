@@ -5,8 +5,8 @@ import Help from '../../components/Help';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-import { NextSeo } from 'next-seo';
-import { seo } from '../components/seo/con';
+// import { NextSeo } from 'next-seo';
+// import { seo } from '../components/seo/con';
 const Contact = ({ t }: any) => (
   <Layout>
     <Head>
