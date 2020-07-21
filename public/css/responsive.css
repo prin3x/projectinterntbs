@@ -4446,6 +4446,109 @@
     font-size: 24px;
     top: 5px;
   }
+  .pricing_box.productPage {
+    margin: 0 auto 0px;
+    padding: 30px 30px;
+    width: 96%;
+  }
+  .pricing_box.productPage.coperateRate{
+    margin: 20px auto 40px;
+  }
+  .pricing_box h3 {
+    text-align: left;
+    font-size: 24px;
+  }
+  .pricing_box p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .pricing_feature {
+    text-align: left;
+  }
+  .pricing_feature li i {
+    display: inline-block;
+    font-size: 22px;
+    color: #31b1e7;
+    position: relative;
+    top: 3px;
+  } 
+  .pricing_feature li p {
+    font-size: 16px;
+  }
+  .price_plan h2 {
+    font-size: 48px;
+    text-align: right;
+    margin: 8px 0 15px;
+  }
+  .price_plan h2 span {
+    font-size: 16px;
+    margin-left: -10px;
+  }
+  .price_bottom_text ul {
+    min-height: 140px;
+  }
+  .pricing_bottom_text h3 {
+    font-size: 20px;
+  }
+  .slider_section {
+    background-size: cover;
+    padding: 60px 0 40px;
+    background-repeat: no-repeat;
+    height: 550px;
+  }
+  .slider_item h3 {
+    font-size: 20px;
+    color: #31b1e7;
+    line-height: 1;
+    font-weight: 500;
+  }
+  .slider_item p {
+    font-size: 16px;
+    color: #5b6e80;
+    font-family: 'Sarabun', serif;
+    line-height: 1.5;
+    margin: 34px 0 50px;
+  }
+  .slider_section .owl-carousel{
+    margin-top: 50px;
+  }
+  .slider_section .slider_item {
+    width: 96%;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .slider_section .owl-prev, .slider_section .owl-next {
+    width: 36px;
+    height: 36px;
+  }
+  .slider_section .owl-prev i, .slider_section .owl-next i{
+    font-size: 30px;
+    color: #31b1e7;
+    position: relative;
+    top: -3px;
+  }
+  .slider_section .owl-prev {
+    top: -44px;
+    right: 50px;
+    left: auto;
+  }
+  .slider_section .owl-next {
+    top: -44px;
+    right: 10px;
+  }
+  .faq_bottom_text h3 {
+    font-size: 30px;
+  }
+  .faq_bottom_text p {
+    font-size: 18px;
+  }
+  .service_feature_item a {
+    flex: 1;
+    margin: 0 0 0 20px;
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 375px) {

@@ -10,7 +10,7 @@ const PricingSection = ({ t }: any) => (
       </div>
       <div className="row">
         <div className="col-lg-6 col-md-12">
-          <div className="pricing_box">
+          <div className="pricing_box productPage">
             <img className="lazyload" data-src="/img/price_1.png" alt="Image" />
             <h3>{t('homeproductpricing.package.standard.header')}</h3>
             <p>{t('homeproductpricing.package.standard.title')}</p>
@@ -54,7 +54,7 @@ const PricingSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
-          <div className="pricing_box">
+          <div className="pricing_box productPage coperateRate">
             <img className="lazyload" data-src="/img/price_2.png" alt="Image" />
             <h3>{t('homeproductpricing.package.corporate.header')}</h3>
             <p>{t('homeproductpricing.package.corporate.title')}</p>
