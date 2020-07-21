@@ -1,11 +1,15 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
-import { Product } from '../../pages/pricing/pricing.model';
+import { Product, ProductPackage } from '../../pages/pricing/pricing.model';
 import numeral from 'numeral'
 import classnames from 'classnames'
 
 const SenderActive = 5
+
+const BuyPackage = (packageItem: ProductPackage) => {
+  console.log(packageItem)
+}
 const showPackage = (packages: Product[], t: Function) => {
   let itemPackages = []
   for (let item in packages) {
@@ -63,7 +67,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     </div>
 
                     <div className="text-center">
-                      <a href="#" className="btn v8">
+                      <a href="#" onClick={()=>BuyPackage(productItem.standard)} className="btn v8">
                         {t('pricingallpricing.buyBtn')}
                       </a>
                     </div>
@@ -94,7 +98,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     </div>
 
                     <div className="text-center">
-                      <a href="#" className="btn v8">
+                      <a onClick={()=>BuyPackage(productItem.standard)} className="btn v8">
                         {t('pricingallpricing.buyBtn')}
                       </a>
                     </div>
@@ -109,6 +113,7 @@ const showPackage = (packages: Product[], t: Function) => {
   }
   return itemPackages
 }
+
 const AllPricing = ({ t, packages }: any) => {
   React.useEffect(() => { }, []);
 
