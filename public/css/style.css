@@ -4552,3 +4552,8 @@ left: 50%;
 .col-md-pull-6 {
 right: 50%;
 }
+h3.headPricing {
+  font-size: 40px;
+  margin-top: 24px;
+  text-align: center;
+}

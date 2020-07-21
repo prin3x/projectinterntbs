@@ -65,10 +65,10 @@ const AllPricing = ({ t }: any) => {
                       />
                       <div className="row">
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">Corporate</h4>
+                          <h4 className="d-md-none">Standard</h4>
 
                           <h3>
-                            0.60{' '}
+                            0.85{' '}
                             <span>
                               {t('pricingallpricing.bath')}/
                               {t('pricingallpricing.message')}
@@ -98,10 +98,10 @@ const AllPricing = ({ t }: any) => {
                           </div>
                         </div>
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">Standard</h4>
+                          <h4 className="d-md-none">Corporate</h4>
 
                           <h3>
-                            0.85{' '}
+                            0.60{' '}
                             <span>
                               {t('pricingallpricing.bath')}/
                               {t('pricingallpricing.message')}
@@ -164,10 +164,10 @@ const AllPricing = ({ t }: any) => {
                       />
                       <div className="row">
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">Corporate</h4>
+                          <h4 className="d-md-none">Standard</h4>
 
                           <h3>
-                            0.45{' '}
+                            0.60{' '}
                             <span>
                               {t('pricingallpricing.bath')}/
                               {t('pricingallpricing.message')}
@@ -197,10 +197,10 @@ const AllPricing = ({ t }: any) => {
                           </div>
                         </div>
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">Standard</h4>
+                          <h4 className="d-md-none">Corporate</h4>
 
                           <h3>
-                            0.60{' '}
+                            0.45{' '}
                             <span>
                               {t('pricingallpricing.bath')}/
                               {t('pricingallpricing.message')}
@@ -263,39 +263,6 @@ const AllPricing = ({ t }: any) => {
                       />
                       <div className="row">
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">Corporate</h4>
-
-                          <h3>
-                            0.40{' '}
-                            <span>
-                              {t('pricingallpricing.bath')}/
-                              {t('pricingallpricing.message')}
-                            </span>
-                          </h3>
-
-                          <div
-                            className="expand collapse collapse3"
-                            data-parent="#accordion"
-                          >
-                            <div className="sender__box1">
-                              <span>{t('pricingallpricing.quantity')}</span>
-                              <span className="theme__text">85,714</span>
-                            </div>
-                            <div className="sender__box1">
-                              <span>Sender Name</span>
-                              <span className="theme__text">5</span>
-                            </div>
-
-                            <div className="text-center">
-                              <Link href="/log-in">
-                                <a href="#" className="btn v8">
-                                  {t('pricingallpricing.buyBtn')}
-                                </a>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6 text-center">
                           <h4 className="d-md-none">Standard</h4>
 
                           <h3>
@@ -328,6 +295,40 @@ const AllPricing = ({ t }: any) => {
                             </div>
                           </div>
                         </div>
+                        <div className="col-sm-6 text-center">
+                          <h4 className="d-md-none">Corporate</h4>
+
+                          <h3>
+                            0.40{' '}
+                            <span>
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
+                            </span>
+                          </h3>
+
+                          <div
+                            className="expand collapse collapse3"
+                            data-parent="#accordion"
+                          >
+                            <div className="sender__box1">
+                              <span>{t('pricingallpricing.quantity')}</span>
+                              <span className="theme__text">85,714</span>
+                            </div>
+                            <div className="sender__box1">
+                              <span>Sender Name</span>
+                              <span className="theme__text">5</span>
+                            </div>
+
+                            <div className="text-center">
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -362,39 +363,6 @@ const AllPricing = ({ t }: any) => {
                       />
                       <div className="row">
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">Corporate</h4>
-
-                          <h3>
-                            0.40{' '}
-                            <span>
-                              {t('pricingallpricing.bath')}/
-                              {t('pricingallpricing.message')}
-                            </span>
-                          </h3>
-
-                          <div
-                            className="expand collapse collapse4 show"
-                            data-parent="#accordion"
-                          >
-                            <div className="sender__box1">
-                              <span>{t('pricingallpricing.quantity')}</span>
-                              <span className="theme__text">85,714</span>
-                            </div>
-                            <div className="sender__box1">
-                              <span>Sender Name</span>
-                              <span className="theme__text">5</span>
-                            </div>
-
-                            <div className="text-center">
-                              <Link href="/log-in">
-                                <a href="#" className="btn v8">
-                                  {t('pricingallpricing.buyBtn')}
-                                </a>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-sm-6 text-center">
                           <h4 className="d-md-none">Standard</h4>
 
                           <h3>
@@ -427,6 +395,40 @@ const AllPricing = ({ t }: any) => {
                             </div>
                           </div>
                         </div>
+                        <div className="col-sm-6 text-center">
+                          <h4 className="d-md-none">Corporate</h4>
+
+                          <h3>
+                            0.40{' '}
+                            <span>
+                              {t('pricingallpricing.bath')}/
+                              {t('pricingallpricing.message')}
+                            </span>
+                          </h3>
+
+                          <div
+                            className="expand collapse collapse4 show"
+                            data-parent="#accordion"
+                          >
+                            <div className="sender__box1">
+                              <span>{t('pricingallpricing.quantity')}</span>
+                              <span className="theme__text">85,714</span>
+                            </div>
+                            <div className="sender__box1">
+                              <span>Sender Name</span>
+                              <span className="theme__text">5</span>
+                            </div>
+
+                            <div className="text-center">
+                              <Link href="/log-in">
+                                <a href="#" className="btn v8">
+                                  {t('pricingallpricing.buyBtn')}
+                                </a>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -461,10 +463,10 @@ const AllPricing = ({ t }: any) => {
                       />
                       <div className="row">
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">Corporate</h4>
+                          <h4 className="d-md-none">Standard</h4>
 
                           <h3>
-                            0.40{' '}
+                            0.55{' '}
                             <span>
                               {t('pricingallpricing.bath')}/
                               {t('pricingallpricing.message')}
@@ -494,10 +496,10 @@ const AllPricing = ({ t }: any) => {
                           </div>
                         </div>
                         <div className="col-sm-6 text-center">
-                          <h4 className="d-md-none">Standard</h4>
+                          <h4 className="d-md-none">Corporate</h4>
 
                           <h3>
-                            0.55{' '}
+                            0.40{' '}
                             <span>
                               {t('pricingallpricing.bath')}/
                               {t('pricingallpricing.message')}
@@ -535,7 +537,7 @@ const AllPricing = ({ t }: any) => {
           </div>
 
           <div className="col-12 text-center pricing__bottom__content">
-            <p>{t('pricingallpricing.footertitle')}</p>
+            <p dangerouslySetInnerHTML={{ __html: t('pricingallpricing.footertitle') }}/>            
 
             <div className="pricing__bottom d-flex align-items-center justify-content-center">
               <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
