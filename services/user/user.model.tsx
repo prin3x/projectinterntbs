@@ -43,3 +43,31 @@ export interface ErrorMessage {
   code: string;
   erromessagerText: string | '';
 }
+
+export interface BillToAddrss {
+  company_name: string,
+  branch_company: string,
+  address_no: string,
+  building_info: string,
+  street_info: string,
+  prvince: string,
+  amphur: string,
+  district: string,
+  postcode: string
+}
+
+export interface ShipToAddress {
+  address_no: string,
+  building_info: string,
+  street_info: string,
+  provice: string,
+  amphur: string,
+  district: string,
+  postcode: string
+}
+export interface UserAddress {
+  accId: number,
+  accType: string
+  billToAddress: BillToAddrss,
+  shipTopAddress: ShipToAddress
+}

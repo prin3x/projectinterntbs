@@ -6,7 +6,10 @@ import Help from '../../components/Help';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-const Payment = ({ t }: any) => (
+import * as ProductService from '../../services/shopping/product.service';
+import { PricingProps } from '../../services/shopping/pricing.model';
+
+const Payment: any = ({ t, packages }: PricingProps) => (
   <Layout>
     <Head>
       <title>{t('title')}</title>
@@ -47,14 +50,19 @@ const Payment = ({ t }: any) => (
           backgroundSize: 'contain',
         }}
       >
-        <HeroSection />
+        <HeroSection packages={packages} />
         <Help />
       </div>
     </div>
     <BacktoTop />
   </Layout>
 );
-Payment.getInitialProps = async () => ({
-  namespacesRequired: ['PaymentMeta'],
-});
+Payment.getInitialProps = async () => {
+
+  const packageAll = await ProductService.GetPackageAll();
+  return {
+    packages: packageAll.packages,
+    namespacesRequired: ['PaymentMeta'],
+  }
+};
 export default withTranslation('PaymentMeta')(Payment);

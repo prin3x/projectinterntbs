@@ -1,8 +1,40 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-import React, { useRef } from 'react';
-const HeroSection = ({ t }: any) => {
+import React, { useRef, useState } from 'react';
+import { PaymentType } from '../../services/shopping/payment.struct';
+import classnames from 'classnames'
+import { ProductPackage, ProductBuy } from '../../services/shopping/pricing.model';
+import Router from 'next/router';
+import numeral from 'numeral';
+import TagManager from 'react-gtm-module'
+const tagManagerArgs = {
+  dataLayer: {
+    event: 'register',
+    register_method:'register_method',
+    action: 'view'
+  }
+}
+
+let defaultProductBuy: ProductBuy = {
+  productName: '',
+  unitSms: 0,
+  credit: 0,
+  sendername: 0,
+  amount: 0,
+  vat: 0,
+  total: 0,
+  period: 0
+}
+const calcullateVat = (amount: number, vat: number): number => {
+  return amount * (vat / 100)
+}
+const HeroSection = ({ t, packages }: any) => {
+  const [paymentType, setPaymentType] = useState('')
+  const [productBuy, setProductBuy] = useState(defaultProductBuy)
+  const [shipTo, setShipTo] = useState(false)
   const stickyBoxBar: any = useRef(null);
+
+
   function stickyBox() {
     var scroll = window.pageYOffset;
     if (stickyBoxBar.current !== null) {
@@ -13,12 +45,53 @@ const HeroSection = ({ t }: any) => {
       }
     }
   }
+
   React.useEffect(() => {
     window.addEventListener('scroll', stickyBox);
     return () => {
       window.removeEventListener('scroll', stickyBox);
     };
+
   }, []);
+
+  React.useEffect(() => {
+    const packageId: any = localStorage.getItem('packageId')
+
+
+    const packageSelect: ProductPackage[] = packages.filter((item: ProductPackage) => {
+      return parseInt(packageId) === item.productId
+    })
+
+    if (!packageSelect.length) {
+      window.scrollTo(0, 0)
+      Router.push('/pricing')
+      return
+    }
+    const vat = calcullateVat(packageSelect[0].amount, 7)
+    defaultProductBuy = {
+      productName: packageSelect[0].name,
+      unitSms: packageSelect[0].amount / packageSelect[0].credit,
+      credit: packageSelect[0].credit,
+      amount: packageSelect[0].amount,
+      sendername: packageSelect[0].sender,
+      period: packageSelect[0].period,
+      vat: vat,
+      total: vat + packageSelect[0].amount,
+
+    }
+
+    setProductBuy(defaultProductBuy)
+  }, [setProductBuy]);
+
+  const handleSelectPayment = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    const type = e.currentTarget.getAttribute('data-type')
+    setPaymentType(type || '')
+  }
+
+  const onClickShipTo = () => {
+    setShipTo(!shipTo)
+  }
+  
   return (
     <div className="container">
       <div className="row hero_top_one">
@@ -37,8 +110,8 @@ const HeroSection = ({ t }: any) => {
                   <div className="col-12">
                     <h6>{t('paymenthero.payment.creditnow.header')}</h6>
                   </div>
-                  <div className="col-md-6">
-                    <div className="info__box">
+                  <div data-type={PaymentType.QR} className="col-md-6" onClick={handleSelectPayment}>
+                    <div className={classnames('info__box', { active: paymentType === PaymentType.QR })}>
                       <div className="info__icon">
                         <img
                           className="lazyload"
@@ -56,8 +129,8 @@ const HeroSection = ({ t }: any) => {
                     </div>
                   </div>
 
-                  <div className="col-md-6">
-                    <div className="info__box">
+                  <div className="col-md-6" data-type={PaymentType.CREDIT_CARD} onClick={handleSelectPayment}>
+                    <div className={classnames('info__box', { active: paymentType === PaymentType.CREDIT_CARD })}>
                       <div className="info__icon">
                         <img
                           className="lazyload"
@@ -78,8 +151,8 @@ const HeroSection = ({ t }: any) => {
                   <div className="col-12">
                     <h6>{t('paymenthero.payment.creditwait.header')}</h6>
                   </div>
-                  <div className="col-md-6">
-                    <div className="info__box">
+                  <div className="col-md-6" data-type={PaymentType.BANK_TRANSFER} onClick={handleSelectPayment}>
+                    <div className={classnames('info__box', { active: paymentType === PaymentType.BANK_TRANSFER })}>
                       <div className="info__icon">
                         <img
                           className="lazyload"
@@ -111,8 +184,8 @@ const HeroSection = ({ t }: any) => {
           <div className="box__wrapper">
             <div className="box__header" style={{ padding: '25px 30px' }}>
               <label className="radio_wrapper">
-                <input type="radio" name="radio" />
-                <span className="checkmark"></span>
+                <input type="radio" name="radio" checked={shipTo} />
+                <span className="checkmark" onClick={onClickShipTo}></span>
               </label>
               <h5>{t('paymenthero.taxheader')}</h5>
             </div>
@@ -247,30 +320,30 @@ const HeroSection = ({ t }: any) => {
               <div className="box__content">
                 <div className="row">
                   <div className="col-12">
-                    <h6>{t('paymenthero.taxinvoice.package')}</h6>
+                    <h6>{productBuy.productName}</h6>
                   </div>
                   <div className="col-12">
                     <div className="sender__box">
                       <div className="d-flex justify-content-between">
                         <p>{t('paymenthero.taxinvoice.price')}</p>
                         <p className="theme__text">
-                          0.35 {t('paymenthero.taxinvoice.bath')}
+                          {numeral(productBuy.unitSms).format('0.00')}{` `}{t('paymenthero.taxinvoice.bath')}
                         </p>
                       </div>
 
                       <div className="d-flex justify-content-between">
                         <p>{t('paymenthero.taxinvoice.quantity')}</p>
-                        <p className="theme__text">85,714</p>
+                        <p className="theme__text">{numeral(productBuy.credit).format('0,0')}</p>
                       </div>
 
                       <div className="d-flex justify-content-between">
                         <p>{t('paymenthero.taxinvoice.life')}</p>
-                        <p className="theme__text">2 {t('paymenthero.year')}</p>
+                        <p className="theme__text">{productBuy.period} {t('paymenthero.taxinvoice.month')}</p>
                       </div>
 
                       <div className="d-flex justify-content-between">
                         <p>Sender Name</p>
-                        <p className="theme__text">5</p>
+                        <p className="theme__text">{productBuy.sendername || '-'}</p>
                       </div>
                     </div>
 
@@ -292,7 +365,7 @@ const HeroSection = ({ t }: any) => {
                       <div className="form__wrapper">
                         <input
                           type="text"
-                          placeholder="TBS 20"
+                          placeholder=""
                           className="input__box"
                         />
                         <button
@@ -323,7 +396,7 @@ const HeroSection = ({ t }: any) => {
                       </h6>
                       <div>
                         <h6 className="theme__text">
-                          30,000
+                          {numeral(productBuy.amount).format('0,0')}
                           <span
                             style={{
                               fontSize: '20px',
@@ -338,7 +411,7 @@ const HeroSection = ({ t }: any) => {
                       </div>
                     </div>
 
-                    <div className="d-flex justify-content-between align-items-center">
+                    {/* <div className="d-flex justify-content-between align-items-center">
                       <h6
                         style={{
                           color: '#5b6e80',
@@ -364,7 +437,7 @@ const HeroSection = ({ t }: any) => {
                           </span>
                         </h6>
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="d-flex justify-content-between align-items-center">
                       <h6
@@ -379,7 +452,7 @@ const HeroSection = ({ t }: any) => {
 
                       <div>
                         <h6 className="theme__text">
-                          2,100
+                          {numeral(productBuy.vat).format('0,0')}
                           <span
                             style={{
                               fontSize: '20px',
@@ -418,7 +491,7 @@ const HeroSection = ({ t }: any) => {
                           className="theme__text"
                           style={{ fontSize: '36px' }}
                         >
-                          32,000
+                          {numeral(productBuy.total).format('0,0')}
                           <span
                             style={{
                               fontSize: '20px',

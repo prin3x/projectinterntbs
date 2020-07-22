@@ -5,8 +5,10 @@ import {
   QuickRegisterStep1,
   QuickRegisterStep2,
   QuickRegisterStep3,
+  UserAddress,
 } from './user.model';
 import Cookie from 'js-cookie';
+import AppConfig from '../../appConfig'
 // ------------------  login --------------------------------------------
 export async function login(param: any): Promise<AuthLogin> {
   try {
@@ -318,4 +320,14 @@ export async function quickRegisterStep3(
 }
 // ------------------ end register --------------------------------------------
 
+const ApiUserAddress = `${AppConfig.API_URL_ACCOUNT}/api/user/address`;
+export async function GetAddress ():Promise<UserAddress>{
+  const res = await axios.get(ApiUserAddress);
+  const data:UserAddress = res.data
+  return data;
+
+}
+
 export default login;
+
+
