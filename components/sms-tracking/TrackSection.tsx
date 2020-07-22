@@ -8,16 +8,16 @@ const TrackSectionV2 = ({ t }: any) => (
   >
     <div className="container">
       <div className="row track_top">
-        <div className="col-lg-6 col-md-12">
-          <div className="track_img">
-            <object type="image/svg+xml" data="/img/otp1_animate.svg"></object>
-            {/* <img className="lazyload" data-src="/img/img_19.png" alt="Image" /> */}
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-12">
+        <div className="col-md-6 col-md-push-6">
           <div className="track_text">
             <h3>{t('sms-trackingtracksection.title')}</h3>
             <p>{t('sms-trackingtracksection.desc')}</p>
+          </div>
+        </div>
+        <div className="col-md-6 col-md-pull-6">
+          <div className="track_img">
+            <object type="image/svg+xml" data="/img/otp1_animate.svg"></object>
+            {/* <img className="lazyload" data-src="/img/img_19.png" alt="Image" /> */}
           </div>
         </div>
       </div>

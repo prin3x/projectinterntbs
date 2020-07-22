@@ -3299,20 +3299,20 @@
   }
 
   .footer_section a {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .footer_widget h4 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 15px;
   }
 
   .footer_widget {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .footer_widget p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .footer_menu {
@@ -3331,7 +3331,7 @@
   }
 
   .footer_menu li a {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .footer_widget p a img {
@@ -3684,12 +3684,12 @@
     padding: 30px 30px;
   }
   .form-indiv {
-    max-width: 900px;
+    max-width: 90%;
     border-radius: 15px;
     box-shadow: 0 0 20px #e8edee;
     background-color: #fff;
     padding: 30px 30px;
-    margin: 40px auto 100px;
+    margin: 40px auto;
     text-align: left;
   }
   .btn.v2 {
@@ -3725,12 +3725,12 @@
     text-align: left;
   }
   .form-login {
-    max-width: 600px;
+    max-width: 90%;
     border-radius: 15px;
     box-shadow: 0 0 20px #e8edee;
     background-color: #fff;
     padding: 30px;
-    margin: 40px auto 100px;
+    margin: 40px auto 40px;
     text-align: left;
   }
   h2 {
@@ -3745,8 +3745,13 @@
   }
   .input-twocolumn .input-txt02 {
     width: 100%;
-    padding: 3%;
-    font-size: 18px;
+    padding: 5%;
+    font-size: 16px;
+    border: 1px solid #b2bbc3;
+    margin: 10px auto;
+  }
+  .sec-checkbox .container {
+    font-size: 14px;
   }
   .captcha {
     margin: 20px 0 30px;
@@ -3758,7 +3763,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0px auto 100px;
+    margin: 0px auto 40px;
   }
   .finish-regis .img-finish-regis {
     width: 70%;
@@ -3772,7 +3777,9 @@
   .userType_section,
   .register_section,
   .login_section {
-    padding: 150px 0 60px;
+    padding: 100px 0 60px;
+    min-height: 600px;
+    margin: 0 auto;
   }
 
   .box__wrapper .box__header {
@@ -3866,16 +3873,27 @@
     width: auto !important;
     padding: 18px 30px !important;
   }
+  .item__box {
+    flex-direction: row;
+  }
+  .item__box img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
 
   .item__box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: center;
   }
 
   .item__box h4 br {
@@ -3883,16 +3901,9 @@
   }
 
   .item__box h4 {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  .item__box img {
-    width: 90px;
-    height: 90px;
-    margin-right: 0px;
-    margin-left: 0;
-    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
   }
 
   .new__btn {
@@ -4100,6 +4111,21 @@
   }
   .globe_section {
     display: none;
+  }
+  .form-login .input-txt01 {
+    width: 100%;
+    padding: 5%;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid #b2bbc3;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+  .form-login .link-forgot {
+    margin: 0px auto 10px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
   }
 }
 
@@ -4333,7 +4359,7 @@
     margin-bottom: 10px;
   }
   .cta_section {
-    padding: 100px 0 90px;
+    padding: 80px 0 50px;
   }
   .btn.v3, .btn.v5, .btn.v6 {
     padding: 15px 20px;
@@ -4636,6 +4662,294 @@
   .pricing__top .price_plan {
     padding: 20px;
   }
+  .hero_section.v3 .hero_top_one.paymentPage {
+    padding: 60px 0;
+  }
+  .section__title {
+    font-size: 28px;
+    margin-bottom: 0px;
+    line-height: 46px;
+  }
+  .box__wrapper {
+    margin-top: 20px;
+  }
+  .box__wrapper .box__header h5 {
+    font-size: 20px;
+  }
+  .box__wrapper .box__content {
+    padding: 20px !important;
+  }
+  .sender__box {
+    margin-top: 20px;
+  }
+  .box__wrapper .box__body p{
+    line-height: 24px;
+  }
+  .box__wrapper .link {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .hideHeader {
+    display: none;
+  }
+  .form__wrapper input {
+    height: 50px;
+    padding: 0 15px;
+    font-size: 16px;
+  }
+  .box__content form .btn.v8 {
+    min-width: 120px;
+    padding: 15px 25px !important;
+    font-size: 16px;
+  }
+  .form__wrapper {
+    margin: 10px auto;
+  }
+  .box__wrapper .box__body .info__box {
+    padding: 10px 30px;
+    text-align: left !important;
+    border: 2px solid #5b6e80;
+    margin: 10px auto;
+  }
+  .box__wrapper .box__body .info__box .info__icon {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    padding: 14px;
+  }
+  .box__wrapper .box__body .info__box .info__icon img {
+    max-width: 100%;
+  }
+  .box__wrapper .box__body p {
+    text-align: left;
+  }
+  .radio_wrapper {
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0;
+    margin-right: 20px;
+    margin-top: -30px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 5px;
+  }
+  .input__box {
+    margin-top: 20px;
+    height: 50px;
+    font-size: 16px;
+  }
+  .btn.v8 {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+  .button__sm_100 {
+      padding: 15px !important;
+  }
+  .secQR h6.title__box__top{
+    font-size: 24px !important;
+    font-weight: 600 !important;
+  }
+  .imgQr {
+    max-width: 50%;
+    margin: 20px auto !important;
+  }
+  .userType_section, .register_section, .login_section {
+    padding: 100px 0 60px;
+  }
+  .finish-regis .img-finish-regis {
+    width: 50%;
+    margin: 20px auto;
+  }
+  .sub_userType {
+    font-size: 18px;
+  }
+  .chooseType .indivType, .chooseType .companyType {
+    width: 280px;
+    margin-bottom: 40px;
+  }
+  .img-user {
+    width: 100%;
+    margin: 10px auto;
+    min-height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .input-txt01, .input-twocolumn .input-txt02 {
+    padding: 4% 5%;
+    font-size: 16px;
+    border: 1px solid #b2bbc3;
+    margin: 10px auto;
+  }
+  .form-indiv h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0px;
+  }
+  .select-address label {
+    margin: 5px 0;
+  }
+  .select-address .text {
+    color: #5b6e80;
+    font-size: 16px;
+  }
+  .btn-regis {
+    margin: 30px 0;
+    width: 100%;
+    text-align: center;
+  }
+  .btn.v2.companybtn {
+    min-width: 90px;
+  }
+  .form-indiv h4 {
+    font-size: 14px;
+  }
+  .hero_section_2 .hero_top_one {
+    padding: 60px 0 20px;
+  }
+  .tab__toggle li a img {
+    height: 30px;
+    margin-bottom: 15px;
+  }
+  .tab__toggle li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-link span {
+    font-size: 16px;
+    text-align: center;
+    margin-left: 0px;
+    flex: 1;
+  }
+  .tab__toggle li  {
+    width: 100%;
+  }
+  .tab__toggle li  {
+    display: inline-block;
+    width: 48%;
+  }
+  .tab__toggle li a {
+    height: auto;
+    margin: 2%;
+    width: 96%;
+    padding: 10px 0;
+  }
+  .box__wrapper .info__box.new__info__box h5 {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Sarabun', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .box__wrapper .box__body .info__box.new__info__box p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .hero_section.v3 .hero_text_one p span, .hero_section.v3 .hero_text_one p {
+    font-size: 14px;
+    border-left: none;
+  }
+  .newsletter_text p, .simple_icon_title p, .track_text p {
+    font-size: 15px;
+    text-align: left;
+    padding: 0 10px;
+  }
+  .sms_section.v2 .sms_form {
+    padding: 40px 30px 40px 30px;
+  }
+  .feature_checklist {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px 20px;
+    border: 2px solid #f1f4f8;
+  }
+  .feature_checklist {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 25px;
+    padding: 15px 20px;
+    border: 3px solid #f1f4f8;
+  }
+  .check_img {
+    margin-right: 15px;
+    width: 10%;
+  }
+  .single_lang {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+  }
+  .lang_link {
+    font-size: 14px;
+    margin-top: 0px;
+    margin: 20px 0 0;
+  }
+  .track_box {
+    height: auto;
+    margin: 0 auto 30px;
+    width: 90%;
+  }
+  .track_box h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .btn.v7 {
+    font-size: 18px;
+    padding: 15px 40px;
+  }
+  .hero_section.v3 .hero_text_one h1 {
+    margin: 0;
+  }
+  .track_img object {
+    width: 85%;
+    height: auto;
+    text-align: center;
+    margin: -30px auto 0;
+  }
+  .simple_icon.smsTrakingpage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    padding: 15px 20px;
+    border: 2px solid #f1f4f8;
+    background-color: #fff;
+  }
+  .simple_icon.smsTrakingpage img {
+    flex: initial;
+    width: 20%;
+    margin: 0 20px;
+  }
+  .simple_icon.smsTrakingpage p {
+    flex: 1;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 0;
+  }
+  .arrow_bg {
+    top: 90%;
+    max-width: 60%;
+  } 
 }
 
 @media only screen and (min-width: 320px) and (max-width: 375px) {

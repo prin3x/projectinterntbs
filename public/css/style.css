@@ -4557,3 +4557,13 @@ h3.headPricing {
   margin-top: 24px;
   text-align: center;
 }
+a.changeAdd {
+  text-decoration: underline;
+  color: #2983f7;
+  font-size: 14px;
+  text-align: left;
+}
+.secQR h6.title__box__top{
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}

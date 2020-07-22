@@ -18,7 +18,7 @@ const UsertypeCompanyComponents = ({ t }: any) => (
           className="input-txt01"
           placeholder={t('usertypecompany.form.taxnumber')}
         />
-        <a className="btn v2" href="#">
+        <a className="btn v2 companybtn" href="#">
           {t('usertypecompany.form.searchBtn')}
         </a>
       </div>

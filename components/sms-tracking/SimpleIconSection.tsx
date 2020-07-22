@@ -14,7 +14,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
           <div className="icon_wrapper">
             <img className="arrow_bg" src="/img/arrow_bg.png" alt="Image" />
             <div className="simple_icon_wrapper">
-              <div className="simple_icon">
+              <div className="simple_icon smsTrakingpage">
                 <img
                   className="lazyload"
                   data-src="/img/img_12.png"
@@ -26,7 +26,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   }}
                 ></p>
               </div>
-              <div className="simple_icon">
+              <div className="simple_icon smsTrakingpage">
                 <img
                   className="lazyload"
                   data-src="/img/img_4.png"
@@ -38,7 +38,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   }}
                 ></p>
               </div>
-              <div className="simple_icon">
+              <div className="simple_icon smsTrakingpage">
                 <img
                   className="lazyload"
                   data-src="/img/img_13.png"
@@ -62,7 +62,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   {t('sms-trackingsimpleicon.p5-2')}
                 </p>
               </div> */}
-              <div className="simple_icon">
+              <div className="simple_icon smsTrakingpage">
                 <img
                   className="lazyload"
                   data-src="/img/img_17.png"

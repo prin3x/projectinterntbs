@@ -21,7 +21,7 @@ const HeroSection = ({ t }: any) => {
   }, []);
   return (
     <div className="container">
-      <div className="row hero_top_one">
+      <div className="row hero_top_one paymentPage">
         <div className="col-12 text-center">
           <h3 className="section__title">{t('paymenthero.header')}</h3>
         </div>
@@ -95,7 +95,7 @@ const HeroSection = ({ t }: any) => {
                     <p
                       style={{
                         color: '#5b6e80',
-                        marginTop: '30px',
+                        marginTop: '20px',
                         fontWeight: 400,
                       }}
                       dangerouslySetInnerHTML={{
@@ -130,7 +130,7 @@ const HeroSection = ({ t }: any) => {
                     <h6 style={{ marginTop: '30px' }}>
                       บริษัท วันม๊อบบี้ จำกัด
                     </h6>
-                    <p style={{ color: '#5b6e80', fontWeight: 400 }}>
+                    <p style={{ color: '#5b6e80', fontWeight: 400, marginBottom: 20, }}>
                       เลขที่ 2521/10 ถนนลาดพร้าว แขวงคลองเจ้าคุณสิงห์
                       เขตวังทองหลาง กทม 10310
                       <br />
@@ -139,11 +139,7 @@ const HeroSection = ({ t }: any) => {
 
                     <a
                       href="#"
-                      className="btn v8 button__sm_100"
-                      style={{
-                        marginTop: '30px',
-                        padding: '20px 30px',
-                      }}
+                      className="changeAdd"
                     >
                       {t('paymenthero.changeaddressBtn')}
                     </a>
@@ -289,13 +285,13 @@ const HeroSection = ({ t }: any) => {
               <div className="box__content">
                 <div className="row align-items-center">
                   <div className="col-12">
-                    <h6>{t('paymenthero.taxinvoice.waitconfirmtitle')}</h6>
+                    <h6 className="hideHeader">{t('paymenthero.taxinvoice.waitconfirmtitle')}</h6>
 
                     <form action="#">
                       <div className="form__wrapper">
                         <input
                           type="text"
-                          placeholder="TBS 20"
+                          placeholder="โค๊ดส่วนลด"
                           className="input__box"
                         />
                         <button
@@ -318,7 +314,7 @@ const HeroSection = ({ t }: any) => {
                       <h6
                         style={{
                           color: '#5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '28px',
                           fontWeight: 500,
                         }}
                       >
@@ -329,8 +325,7 @@ const HeroSection = ({ t }: any) => {
                           30,000
                           <span
                             style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
+                              fontSize: '16px',
                               color: '#5b6e80',
                               marginLeft: '20px',
                             }}
@@ -345,7 +340,7 @@ const HeroSection = ({ t }: any) => {
                       <h6
                         style={{
                           color: '#5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '28px',
                           fontWeight: 500,
                         }}
                       >
@@ -357,8 +352,6 @@ const HeroSection = ({ t }: any) => {
                           100
                           <span
                             style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
                               color: '#5b6e80',
                               marginLeft: '20px',
                             }}
@@ -373,7 +366,7 @@ const HeroSection = ({ t }: any) => {
                       <h6
                         style={{
                           color: '#5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '28px',
                           fontWeight: 500,
                         }}
                       >
@@ -385,8 +378,7 @@ const HeroSection = ({ t }: any) => {
                           2,100
                           <span
                             style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
+                              fontSize: '16px',
                               color: '#5b6e80',
                               marginLeft: '20px',
                             }}
@@ -410,7 +402,7 @@ const HeroSection = ({ t }: any) => {
                       <h6
                         style={{
                           color: '#5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '28px',
                           fontWeight: 500,
                         }}
                       >
@@ -419,13 +411,12 @@ const HeroSection = ({ t }: any) => {
                       <div>
                         <h6
                           className="theme__text"
-                          style={{ fontSize: '36px' }}
+                          style={{ fontSize: '30px' }}
                         >
                           32,000
                           <span
                             style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
+                              fontSize: '16px',
                               color: '#5b6e80',
                               marginLeft: '20px',
                             }}
