@@ -23,7 +23,7 @@ const SimpleSliderSection = ({ t }: any) => {
       }
     );
   }
-  function handlefade(e: any) {
+  function handlefade() {
     mainImage.current.classList.add('fade-exit-active');
   }
   function handleSelect(e: any) {
@@ -109,7 +109,7 @@ const SimpleSliderSection = ({ t }: any) => {
               dots={false}
               loop
               onTranslated={(e) => handleSelect(e)}
-              onTranslate={(e) => handlefade(e)}
+              onTranslate={() => handlefade()}
               onInitialized={(e) => onInitialized(e)}
               navText={[
                 '<i class="ion-ios-arrow-back"></i>',
