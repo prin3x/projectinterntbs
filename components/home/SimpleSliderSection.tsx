@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import React, { useRef } from 'react';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
@@ -23,7 +23,12 @@ const SimpleSliderSection = ({ t }: any) => {
       }
     );
   }
+  function handlefade() {
+    mainImage.current.classList.add('fade-exit-active');
+  }
   function handleSelect(e: any) {
+    mainImage.current.classList.remove('fade-exit-active');
+    mainImage.current.classList.add('fade-enter-active');
     let count = 0;
     e.currentTarget.childNodes[0].childNodes[0].childNodes.forEach(
       (val: any) => {
@@ -73,6 +78,26 @@ const SimpleSliderSection = ({ t }: any) => {
                   data-src="/img/img_23.png"
                   alt="Image"
                 /> */}
+                <style jsx>{`
+                  .fade-enter {
+                    opacity: 0;
+                  }
+                  .fade-exit {
+                    opacity: 1;
+                  }
+                  .fade-enter-active {
+                    opacity: 1;
+                  }
+                  .fade-exit-active {
+                    opacity: 0;
+                  }
+                  .fade-enter-active {
+                    transition: opacity 500ms;
+                  }
+                  .fade-exit-active {
+                    transition: opacity 1000ms;
+                  }
+                `}</style>
               </div>
             </div>
           </div>
@@ -84,6 +109,7 @@ const SimpleSliderSection = ({ t }: any) => {
               dots={false}
               loop
               onTranslated={(e) => handleSelect(e)}
+              onTranslate={() => handlefade()}
               onInitialized={(e) => onInitialized(e)}
               navText={[
                 '<i class="ion-ios-arrow-back"></i>',
