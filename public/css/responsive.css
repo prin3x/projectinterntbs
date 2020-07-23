@@ -4196,22 +4196,23 @@
     padding: 0px 0px;
   }
   .contact__left {
-    padding: 15px;
+    padding: 20px;
   }
   .form_part {
     background-color: #fff;
     padding: 0 20px 70px;
   }
   .contact__left h3 {
-    font-size: 25px;
+    font-size: 20px;
+    margin: 20px 0;
   }
   .contact__left ul li p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 19px;
-    padding-left: 32px;
+    padding-left: 39px;
   }
   .contact__left ul li img {
-    width: 20px;
+    width: 24px;
   }
   .contact__left ul li {
     margin-top: 20px;
@@ -4950,6 +4951,25 @@
     top: 90%;
     max-width: 60%;
   } 
+  .hero_section.v3 .hero_top_one {
+    padding: 60px 0 60px;
+  }
+  .contact__box {
+    margin: 30px auto 0;
+    width: 96%;
+  }
+  .contact__left ul li {
+    margin-left: 10px;
+  }
+  .contact__left ul {
+    margin-bottom: 20px;
+  }
+  .checkbox-wrapper {
+    font-size: 16px;
+    padding-left: 35px;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 375px) {

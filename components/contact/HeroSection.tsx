@@ -153,7 +153,7 @@ const HeroSection = ({ t }: any) => {
                     <img
                       src="/img/captcha.png"
                       className="img-fluid"
-                      style={{ marginTop: '40px' }}
+                      style={{ marginTop: '30px' }}
                       alt=""
                     />
 
@@ -165,7 +165,7 @@ const HeroSection = ({ t }: any) => {
 
                     <div
                       className="button__wrapper text-center"
-                      style={{ marginTop: '90px' }}
+                      style={{ marginTop: '50px' }}
                     >
                       <button type="submit" className="btn v8">
                         {t('contacthero.form.submitBtn')}
