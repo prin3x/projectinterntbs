@@ -11,9 +11,7 @@ const PricingSection = ({ t }: any) => {
       data-bgset="/img/bg_11.png"
     >
       <div className="container pricing">
-        <h3 className="headPricing">
-          ราคาแพ็กเกจ
-        </h3>
+        <h3 className="headPricing">ราคาแพ็กเกจ</h3>
         <div className="row justify-content-xl-end mt-80">
           <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
             <div
@@ -26,9 +24,7 @@ const PricingSection = ({ t }: any) => {
               <h3 style={{ fontSize: '40px' }}>
                 {t('pricingpricing.package.standard.header')}
               </h3>
-              <p
-                style={{ fontSize: '22px', color: '#5b6e80' }}
-              >
+              <p style={{ fontSize: '22px', color: '#5b6e80' }}>
                 {t('pricingpricing.package.standard.title')}
               </p>
               <ul className="pricing_feature">
@@ -71,9 +67,7 @@ const PricingSection = ({ t }: any) => {
               <h3 style={{ fontSize: '40px' }}>
                 {t('pricingpricing.package.corporate.header')}
               </h3>
-              <p
-                style={{ fontSize: '22px', color: '#5b6e80' }}
-              >
+              <p style={{ fontSize: '22px', color: '#5b6e80' }}>
                 {t('pricingpricing.package.corporate.title')}
               </p>
               <ul className="pricing_feature">
