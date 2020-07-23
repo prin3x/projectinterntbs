@@ -11,9 +11,7 @@ const UsertypeComponents = ({ t }: any) => (
           {/* <img className="lazyload" data-src="/img/img-indiv.png" alt="Image" /> */}
         </div>
         <Link href="individual">
-          <a href="#" className="btn v3">
-            {t('usertype.personBtn')}
-          </a>
+          <a className="btn v3">{t('usertype.personBtn')}</a>
         </Link>
       </div>
       <div className="companyType">
@@ -26,9 +24,7 @@ const UsertypeComponents = ({ t }: any) => (
           /> */}
         </div>
         <Link href="company">
-          <a href="#" className="btn v3">
-            {t('usertype.corporationBtn')}
-          </a>
+          <a className="btn v3">{t('usertype.corporationBtn')}</a>
         </Link>
       </div>
     </div>

@@ -1,10 +1,20 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Router from 'next/router';
 import { registerUser } from '../../services/user/user.service';
 import ReCAPTCHA from 'react-google-recaptcha';
+import TagManager from 'react-gtm-module';
+import AppConfig from '../../appConfig';
+// const tagManagerArgs = {
+//   gtmId: AppConfig.GTM_CODE || '',
+//   dataLayer: {
+//     event: 'register',
+//     register_method: 'normal',
+//     action: 'view',
+//   },
+// };
 type Inputs = {
   firstname: string;
   lastname: string;
@@ -16,6 +26,11 @@ type Inputs = {
   recaptcha: string;
 };
 const RegisterComponents = ({ t }: any) => {
+  const recaptchaRef = useRef({
+    reset: function () {
+      return;
+    },
+  });
   let {
     register,
     handleSubmit,
@@ -29,11 +44,24 @@ const RegisterComponents = ({ t }: any) => {
     const user = await registerUser(data);
     console.log('user : ', user);
     if (user.error.code !== '') {
+      if (user.error.code === 'registerdto.recaptcha.invalid') {
+        if (typeof recaptchaRef.current === 'object') {
+          recaptchaRef.current.reset();
+        }
+      }
       setError('res', {
         type: user.error.code,
         message: '',
       });
     } else {
+      console.log('========================');
+      TagManager.dataLayer({
+        dataLayer: {
+          event: 'register',
+          register_method: 'normal',
+          action: 'complete',
+        },
+      });
       Router.push('/register/success');
     }
   };
@@ -58,7 +86,8 @@ const RegisterComponents = ({ t }: any) => {
       return 'register.validate.agree.' + error.agree.type;
     }
     if (error.res) {
-      return 'register.' + error.res.type;
+      if (error.res.type !== '400') return 'register.' + error.res.type;
+      return 'ErrorMessage:' + error.res.type;
     }
 
     if (error.auth) {
@@ -69,8 +98,36 @@ const RegisterComponents = ({ t }: any) => {
     setValue('recaptcha', value, { shouldValidate: true });
     clearErrors('recaptcha');
   };
+
+  useEffect(() => {
+    // TagManager.initialize(tagManagerArgs);
+    // TagManager.dataLayer({
+    //   dataLayer: {
+    //     userId: '001',
+    //     userProject: 'project',
+    //     page: 'home',
+    //   },
+    //   dataLayerName: 'PageDataLayer',
+    // });
+  }, []);
   return (
     <div className="register_section">
+      <a
+        className="btn v2"
+        href="javascript:;"
+        onClick={async () => {
+          TagManager.dataLayer({
+            dataLayer: {
+              event: 'register',
+              register_method: 'normal',
+              action: 'complete',
+            },
+          });
+          console.log('run datalayer GTM');
+        }}
+      >
+        TEST GTM
+      </a>
       <h2>{t('register.header')}</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-indiv">
@@ -134,6 +191,7 @@ const RegisterComponents = ({ t }: any) => {
             {t(handleErorr(errors))}
           </div>
           <ReCAPTCHA
+            ref={recaptchaRef}
             sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
             onChange={setreCaptcha}
           />
@@ -166,7 +224,7 @@ const RegisterComponents = ({ t }: any) => {
           </div>
           <div className="btn-regis">
             {/* <Link href="/register-success">
-              <a className="btn v2" href="#">
+              <a className="btn v2" >
                 {t('register.createBtn')}
               </a>
             </Link> */}
@@ -175,6 +233,7 @@ const RegisterComponents = ({ t }: any) => {
               style={{ minWidth: '180px' }}
               type="submit"
               value={t('register.createBtn')}
+              onClick={() => clearErrors()}
             />
           </div>
         </div>
@@ -189,4 +248,6 @@ RegisterComponents.getInitialProps = async () => ({
 RegisterComponents.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Register')(RegisterComponents);
+export default withTranslation(['Register', 'ErrorMessage'])(
+  RegisterComponents
+);

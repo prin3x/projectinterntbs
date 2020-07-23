@@ -151,7 +151,7 @@ const UsertypeIndividual = ({ t }: any) => {
             />
           </div>
           <div className="btn-regis">
-            {/* <a className="btn v2" href="#">
+            {/* <a className="btn v2" >
               {t('usertypeindividual.taxinvoiceaddress.saveBtn')}
             </a> */}
             <input

@@ -1,6 +1,6 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.DOMAIN_URL}/pricing`,
+    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing`,
     type: 'website',
     title: 'รวมแพ็กเกจราคาสุดคุ้ม | ThaiBulkSMS',
     description: '',
@@ -11,6 +11,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.DOMAIN_URL}/pricing`,
+    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing`,
   },
 };

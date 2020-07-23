@@ -18,9 +18,7 @@ const UsertypeCompanyComponents = ({ t }: any) => (
           className="input-txt01"
           placeholder={t('usertypecompany.form.taxnumber')}
         />
-        <a className="btn v2" href="#">
-          {t('usertypecompany.form.searchBtn')}
-        </a>
+        <a className="btn v2">{t('usertypecompany.form.searchBtn')}</a>
       </div>
       <input
         type="text"
@@ -114,7 +112,7 @@ const UsertypeCompanyComponents = ({ t }: any) => (
         />
       </div>
       <div className="btn-regis">
-        <a className="btn v2" href="#">
+        <a className="btn v2">
           {t('usertypecompany.taxinvoiceaddress.saveBtn')}
         </a>
       </div>

@@ -15,12 +15,10 @@ const CtaSectionV3 = ({ t }: any) => (
                 __html: t('sms-trackingctasection.title'),
               }}
             ></h3>
-            <a href="#" className="btn v7">
-              {t('sms-trackingctasection.freeBtn')}
-            </a>
+            <a className="btn v7">{t('sms-trackingctasection.freeBtn')}</a>
             <p>
               {t('sms-trackingctasection.lablelogin1')}{' '}
-              <a href="#">{t('sms-trackingctasection.lablelogin2')}</a>{' '}
+              <a>{t('sms-trackingctasection.lablelogin2')}</a>{' '}
               {t('sms-trackingctasection.lablelogin3')}
             </p>
           </div>

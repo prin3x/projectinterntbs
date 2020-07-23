@@ -30,9 +30,7 @@ const TrackSection = ({ t }: any) => (
                     __html: t('otptrack.box.1.title'),
                   }}
                 ></h4>
-                <a href="#" className="btn v3">
-                  {t('otptrack.box.1.linkBtn')}
-                </a>
+                <a className="btn v3">{t('otptrack.box.1.linkBtn')}</a>
               </div>
             </div>
             <div className="col-lg-6">
@@ -42,9 +40,7 @@ const TrackSection = ({ t }: any) => (
                     __html: t('otptrack.box.2.title'),
                   }}
                 ></h4>
-                <a href="#" className="btn v3">
-                  {t('otptrack.box.2.linkBtn')}
-                </a>
+                <a className="btn v3">{t('otptrack.box.2.linkBtn')}</a>
               </div>
             </div>
           </div>

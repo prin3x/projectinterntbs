@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import { i18n, withTranslation, Link } from '../i18n';
 import React, { useState, useRef, useEffect } from 'react';
 import Cookie from 'js-cookie';
-import { logout } from '../services/user/user.service';
-const logOut = () => {
-  logout();
-  window.location.reload();
-};
+// import { logout } from '../services/user/user.service';
+// const logOut = () => {
+//   logout();
+//   window.location.reload();
+// };
 
 const Header = ({ t }: any) => {
   const lang = i18n.language;
@@ -92,7 +92,7 @@ const Header = ({ t }: any) => {
         <div className="row align-items-center">
           <div className="col-lg-3 col-md-6 col-9">
             <Link href="/">
-              <a className="navbar-brand p-0 m-0" href="#">
+              <a className="navbar-brand p-0 m-0">
                 <img
                   className="lazyload"
                   data-src="/img/logo_1.png"
@@ -107,33 +107,25 @@ const Header = ({ t }: any) => {
                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                   <li>
                     <Link href="/product">
-                      <a className="active" href="#">
-                        {t('header.product')}
-                      </a>
+                      <a className="active">{t('header.product')}</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/pricing">
-                      <a className="active" href="#">
-                        {t('header.pricing')}
-                      </a>
+                      <a className="active">{t('header.pricing')}</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/support/how-to-order">
-                      <a className="active" href="#">
-                        {t('header.howtoorder')}
-                      </a>
+                      <a className="active">{t('header.howtoorder')}</a>
                     </Link>
                   </li>
                   <li className="has-children">
-                    <a className="active" href="#">
-                      {t('header.database')}
-                    </a>
+                    <a className="active">{t('header.database')}</a>
                     <ul className="dropdown">
                       <li>
                         <Link href="/ResourcesLanding">
-                          <a href="#">
+                          <a>
                             <h6>{t('header.resources')}</h6>
                             {/* <p>{t('menu-3-1-s')}</p> */}
                           </a>
@@ -141,7 +133,7 @@ const Header = ({ t }: any) => {
                       </li>
                       <li className="listsub">
                         <Link href="/KnowledgeListing">
-                          <a href="#">
+                          <a>
                             <h6>{t('header.knowledge')}</h6>
                             {/* <p>{t('menu-3-2-s')}</p> */}
                             <p className="txtSub">
@@ -151,7 +143,7 @@ const Header = ({ t }: any) => {
                           </a>
                         </Link>
                         <Link href="/UseCasesListing">
-                          <a href="#">
+                          <a>
                             <h6>{t('header.example')}</h6>
                             {/* <p>{t('menu-3-3-s')}</p> */}
                             <p className="txtSub">
@@ -161,7 +153,7 @@ const Header = ({ t }: any) => {
                           </a>
                         </Link>
                         <Link href="/SuccessStoriesListing">
-                          <a href="#">
+                          <a>
                             <h6>{t('header.successstories')}</h6>
                             {/* <p>{t('menu-3-4-s')}</p> */}
                             <p className="txtSub">
@@ -175,22 +167,18 @@ const Header = ({ t }: any) => {
                   </li>
                   <li>
                     <Link href="/Documentation">
-                      <a className="active" href="#">
-                        {t('header.documentation')}
-                      </a>
+                      <a className="active">{t('header.documentation')}</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <a className="active" href="#">
-                        {t('header.contact')}
-                      </a>
+                      <a className="active">{t('header.contact')}</a>
                     </Link>
                   </li>
                 </ul>
               </nav>
               <div className="d-lg-none sm-right">
-                <a href="#" className="mobile-bar js-menu-toggle">
+                <a className="mobile-bar js-menu-toggle">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -206,23 +194,17 @@ const Header = ({ t }: any) => {
                   <ul className="site-nav-wrap">
                     <li>
                       <Link href="/product">
-                        <a className="active" href="#">
-                          {t('header.product')}
-                        </a>
+                        <a className="active">{t('header.product')}</a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/pricing">
-                        <a className="active" href="#">
-                          {t('header.pricing')}
-                        </a>
+                        <a className="active">{t('header.pricing')}</a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/support/how-to-order">
-                        <a className="active" href="#">
-                          {t('header.howtoorder')}
-                        </a>
+                        <a className="active">{t('header.howtoorder')}</a>
                       </Link>
                     </li>
                     <li className="has-children">
@@ -231,13 +213,11 @@ const Header = ({ t }: any) => {
                         data-toggle="collapse"
                         data-target="#collapseItem0"
                       ></span>
-                      <a className="active" href="#">
-                        {t('header.database')}
-                      </a>
+                      <a className="active">{t('header.database')}</a>
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/ResourcesLanding">
-                            <a href="#">
+                            <a>
                               <h6>{t('header.resources')}</h6>
                               {/* <p>{t('menu-3-1-s')}</p> */}
                             </a>
@@ -245,7 +225,7 @@ const Header = ({ t }: any) => {
                         </li>
                         <li>
                           <Link href="/KnowledgeListing">
-                            <a href="#">
+                            <a>
                               <h6>{t('header.knowledge')}</h6>
                               {/* <p>{t('menu-3-2-s')}</p> */}
                             </a>
@@ -253,7 +233,7 @@ const Header = ({ t }: any) => {
                         </li>
                         <li>
                           <Link href="/UseCasesListing">
-                            <a href="#">
+                            <a>
                               <h6>{t('header.example')}</h6>
                               {/* <p>{t('menu-3-3-s')}</p> */}
                             </a>
@@ -261,7 +241,7 @@ const Header = ({ t }: any) => {
                         </li>
                         <li>
                           <Link href="/SuccessStoriesListing">
-                            <a href="#">
+                            <a>
                               <h6>{t('header.successstories')}</h6>
                               {/* <p>{t('menu-3-4-s')}</p> */}
                             </a>
@@ -271,16 +251,12 @@ const Header = ({ t }: any) => {
                     </li>
                     <li>
                       <Link href="/Documentation">
-                        <a className="active" href="#">
-                          {t('header.documentation')}
-                        </a>
+                        <a className="active">{t('header.documentation')}</a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/contact">
-                        <a className="active" href="#">
-                          {t('header.contact')}
-                        </a>
+                        <a className="active">{t('header.contact')}</a>
                       </Link>
                     </li>
                   </ul>
@@ -293,25 +269,26 @@ const Header = ({ t }: any) => {
               <ul>
                 {isLogin === true ? (
                   <li>
-                    <a onClick={logOut}>{t('logout')}</a>
+                    {/* <a onClick={logOut}>{t('logout')}</a> */}
+                    <a href="https://member.thaibulksms.com/">
+                      {t('header.login')}
+                    </a>
                   </li>
                 ) : (
                   <li>
                     <Link href="/log-in" replace>
-                      <a href="#">{t('header.login')}</a>
+                      <a>{t('header.login')}</a>
                     </Link>
                   </li>
                 )}
                 {/* <li>
                   <Link href="/log-in">
-                    <a href="#">{t('menu-6')}</a>
+                    <a >{t('menu-6')}</a>
                   </Link>
                 </li> */}
                 <li>
                   <Link href="/pricing">
-                    <a className="btn v1" href="#">
-                      {t('header.buy')}
-                    </a>
+                    <a className="btn v1">{t('header.buy')}</a>
                   </Link>
                 </li>
               </ul>

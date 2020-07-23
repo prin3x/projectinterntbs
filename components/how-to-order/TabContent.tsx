@@ -187,7 +187,6 @@ const TabContent = ({ t }: any) => {
                                   }}
                                 ></p>
                                 <a
-                                  href="#"
                                   className="theme__text link"
                                   data-toggle="modal"
                                   data-target="#popup1"
@@ -222,7 +221,6 @@ const TabContent = ({ t }: any) => {
                                 ></p>
 
                                 <a
-                                  href="#"
                                   className="theme__text link"
                                   data-toggle="modal"
                                   data-target="#popup1"
@@ -270,7 +268,6 @@ const TabContent = ({ t }: any) => {
                                 ></p>
 
                                 <a
-                                  href="#"
                                   className="theme__text link"
                                   data-toggle="modal"
                                   data-target="#popup2"
@@ -308,9 +305,7 @@ const TabContent = ({ t }: any) => {
                     data-src="/img/img_1.png"
                     alt="Image"
                   />
-                  <a href="#" className="btn v4">
-                    {t('howtoordertabcontent.telBtn')}
-                  </a>
+                  <a className="btn v4">{t('howtoordertabcontent.telBtn')}</a>
                 </div>
               </div>
               <div className="col-md-4 col-12">
@@ -320,7 +315,7 @@ const TabContent = ({ t }: any) => {
                     data-src="/img/img_2.png"
                     alt="Image"
                   />
-                  <a href="#" className="btn v4">
+                  <a className="btn v4">
                     {t('howtoordertabcontent.contactBtn')}
                   </a>
                 </div>
@@ -332,9 +327,7 @@ const TabContent = ({ t }: any) => {
                     data-src="/img/img_3.png"
                     alt="Image"
                   />
-                  <a href="#" className="btn v4">
-                    {t('howtoordertabcontent.fbBrn')}
-                  </a>
+                  <a className="btn v4">{t('howtoordertabcontent.fbBrn')}</a>
                 </div>
               </div>
             </div>

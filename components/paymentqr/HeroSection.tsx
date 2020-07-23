@@ -66,7 +66,6 @@ const HeroSection = ({ t }: any) => {
                     </h6>
 
                     <a
-                      href="#"
                       className="btn v8 new__btn"
                       style={{ margin: '30px 0', padding: '20px 80px' }}
                     >

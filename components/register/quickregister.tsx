@@ -151,7 +151,7 @@ const QuickRegisterComponents = ({ t }: any) => {
           </div>
           <div className="btn-regis">
             {/* <Link href="/register-success">
-              <a className="btn v2" href="#">
+              <a className="btn v2" >
                 {t('quickregister.createBtn')}
                 
               </a>
@@ -161,6 +161,7 @@ const QuickRegisterComponents = ({ t }: any) => {
               style={{ minWidth: '180px' }}
               type="submit"
               value={t('quickregister.createBtn')}
+              onClick={() => clearErrors()}
             />
           </div>
         </div>

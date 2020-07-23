@@ -153,7 +153,7 @@ const SimpleIconSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-md-12 text-center">
-          <a href="#" className="lang_link">
+          <a className="lang_link">
             {t('otpsimpleicon.apilink')}
             <img className="lazyload" data-src="/img/arrow_5.png" alt="Image" />
           </a>

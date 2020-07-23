@@ -15,7 +15,7 @@ const Components404 = () => (
       <p className="sub-text">{t('p1-1')}</p>
       <div className="btn-login">
         <Link href="/log-in">
-          <a className="btn v2" href="#">
+          <a className="btn v2" >
             {t('a1')}
           </a>
         </Link>

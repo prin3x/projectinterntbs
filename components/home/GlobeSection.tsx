@@ -11,9 +11,7 @@ const GlobeSection = ({ t }: any) => (
             ></h3>
             <p>{t('homeglobe.title')}</p>
             <Link href="/contact">
-              <a href="#" className="btn v3">
-                {t('homeglobe.detailBtn')}
-              </a>
+              <a className="btn v3">{t('homeglobe.detailBtn')}</a>
             </Link>
           </div>
         </div>

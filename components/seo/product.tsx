@@ -1,6 +1,6 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.DOMAIN_URL}/product`,
+    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/product`,
     type: 'website',
     title:
       'ผู้ให้บริการอันดับ 1 การส่งข้อความผ่านอินเทอร์เน็ต ครบวงจร | ThaiBulkSMS',
@@ -12,6 +12,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.DOMAIN_URL}/product`,
+    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/product`,
   },
 };

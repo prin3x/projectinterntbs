@@ -1,6 +1,6 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.DOMAIN_URL}/log-in`,
+    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/log-in`,
     type: 'website',
     title: 'เข้าสู่ระบบ บริการส่งข้อความด้วยระบบ | ThaiBulkSMS',
     description: '',
@@ -11,6 +11,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.DOMAIN_URL}/log-in`,
+    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/log-in`,
   },
 };

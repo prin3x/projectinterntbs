@@ -310,9 +310,7 @@ const FaqSection = ({ t }: any) => {
                     data-src="/img/img_1.png"
                     alt="Image"
                   />
-                  <a href="#" className="btn v4">
-                    {t('pricingfaq.telBtn')}
-                  </a>
+                  <a className="btn v4">{t('pricingfaq.telBtn')}</a>
                 </div>
               </div>
               <div className="col-md-4 col-12">
@@ -322,9 +320,7 @@ const FaqSection = ({ t }: any) => {
                     data-src="/img/img_2.png"
                     alt="Image"
                   />
-                  <a href="#" className="btn v4">
-                    {t('pricingfaq.contactBtn')}
-                  </a>
+                  <a className="btn v4">{t('pricingfaq.contactBtn')}</a>
                 </div>
               </div>
               <div className="col-md-4 col-12">
@@ -334,9 +330,7 @@ const FaqSection = ({ t }: any) => {
                     data-src="/img/img_3.png"
                     alt="Image"
                   />
-                  <a href="#" className="btn v4">
-                    {t('pricingfaq.fbBrn')}
-                  </a>
+                  <a className="btn v4">{t('pricingfaq.fbBrn')}</a>
                 </div>
               </div>
             </div>

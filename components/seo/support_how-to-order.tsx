@@ -1,6 +1,6 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.DOMAIN_URL}/support/how-to-order`,
+    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/how-to-order`,
     type: 'website',
     title:
       'ช่องทางและขั้นตอนง่าย ๆ ในการซื้อเครดิตเพื่อส่งข้อความ | ThaiBulkSMS',
@@ -12,6 +12,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.DOMAIN_URL}/support/how-to-order`,
+    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/how-to-order`,
   },
 };

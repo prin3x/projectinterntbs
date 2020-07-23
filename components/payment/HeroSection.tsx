@@ -138,10 +138,10 @@ const HeroSection = ({ t }: any) => {
                     </p>
 
                     <a
-                      href="#"
                       className="btn v8 button__sm_100"
                       style={{
-                        marginTop: '30px', padding: '20px 30px'
+                        marginTop: '30px',
+                        padding: '20px 30px',
                       }}
                     >
                       {t('paymenthero.changeaddressBtn')}
@@ -275,7 +275,7 @@ const HeroSection = ({ t }: any) => {
                     </div>
 
                     <div className="text-right">
-                      <a href="#" className="link theme__text">
+                      <a className="link theme__text">
                         {t('paymenthero.taxinvoice.changepackage')}
                       </a>
                     </div>
@@ -434,7 +434,6 @@ const HeroSection = ({ t }: any) => {
                     </div>
 
                     <a
-                      href="#"
                       className="btn v8 w-100 d-none d-xl-block"
                       style={{ marginTop: '65px' }}
                     >
@@ -449,7 +448,6 @@ const HeroSection = ({ t }: any) => {
 
         <div className="col-12 order-4 text-center">
           <a
-            href="#"
             className="btn v8 d-xl-none button__sm_100"
             style={{ marginTop: '30px', padding: '20px 30px' }}
           >

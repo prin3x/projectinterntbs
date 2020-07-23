@@ -15,16 +15,12 @@ const HeroSectionV2 = ({ t }: any) => (
             <ul className="cta-btn">
               <li>
                 <Link href="/register">
-                  <a className="btn v3" href="#">
-                    {t('homehero.freeBtn')}
-                  </a>
+                  <a className="btn v3">{t('homehero.freeBtn')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/pricing">
-                  <a className="btn v5" href="#">
-                    {t('homehero.viewPackageBtn')}
-                  </a>
+                  <a className="btn v5">{t('homehero.viewPackageBtn')}</a>
                 </Link>
               </li>
             </ul>

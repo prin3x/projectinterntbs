@@ -1,6 +1,6 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.DOMAIN_URL}/paymentbank`,
+    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/paymentbank`,
     type: 'website',
     title: 'paymentbank | ThaiBulkSMS',
     description: '',
@@ -11,6 +11,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.DOMAIN_URL}/paymentbank`,
+    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/paymentbank`,
   },
 };

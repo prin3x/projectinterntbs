@@ -294,7 +294,7 @@ const HeroSection = ({ t }: any) => {
                   />
                   <h4>
                     2.
-                    <a href="#" className="theme__text link">
+                    <a className="theme__text link">
                       {t('paymentbankhero.howtopay.step.2')}
                     </a>
                   </h4>

@@ -35,7 +35,7 @@ const SmsSectionV4 = ({ t }: any) => (
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
-                  <a href="#" className="btn v8">
+                  <a className="btn v8">
                     {t('sms-trackingsmssection.freeBtn')}
                   </a>
                 </div>

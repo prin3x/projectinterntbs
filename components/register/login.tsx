@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { login } from '../../services/user/user.service';
 import React, { useEffect } from 'react';
 // import React, { useState, useRef, useEffect } from 'react';
-import Router from 'next/router';
+// import Router from 'next/router';
 import { useForm } from 'react-hook-form';
 
 type Inputs = {
@@ -27,7 +27,8 @@ const LoginComponents = ({ t }: any) => {
       });
       // clearErrors('res');
     } else {
-      Router.push('/');
+      // Router.push('/');
+      window.location.replace('https://member.thaibulksms.com/');
     }
   };
   const handleErorr = (error: any) => {
@@ -112,7 +113,7 @@ const LoginComponents = ({ t }: any) => {
             </Link>
           </div>
           <div className="btn-login">
-            {/* <a className="btn v2" href="#" onClick={LoginClick}>
+            {/* <a className="btn v2"  onClick={LoginClick}>
               {t('login.loginBtn')}
             </a> */}
             <input
@@ -120,6 +121,7 @@ const LoginComponents = ({ t }: any) => {
               style={{ minWidth: '180px' }}
               type="submit"
               value={t('login.loginBtn')}
+              onClick={() => clearErrors()}
             />
           </div>
         </form>

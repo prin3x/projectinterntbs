@@ -1,6 +1,6 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.DOMAIN_URL}/log-in`,
+    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/log-in`,
     type: 'website',
     title:
       'บริการ OTP Ready-to-Use การส่งยืนยันตัวตนที่พร้อมใช้ทันที | ThaiBulkSMS',
@@ -12,6 +12,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.DOMAIN_URL}/log-in`,
+    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/log-in`,
   },
 };

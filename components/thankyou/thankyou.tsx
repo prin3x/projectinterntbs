@@ -17,7 +17,7 @@ const ThankyouComponents = () => (
       </p>
       <div className="btn-login">
         <Link href="/log-in">
-          <a className="btn v2" href="#">
+          <a className="btn v2" >
             {t('a1')}
           </a>
         </Link>
