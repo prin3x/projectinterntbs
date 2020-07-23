@@ -5,6 +5,7 @@ import React, { useState, useContext } from 'react';
 import Router from 'next/router';
 import { StoreContext } from '../context/store';
 import ReCAPTCHA from 'react-google-recaptcha';
+import TagManager from 'react-gtm-module';
 import {
   quickRegisterStep1,
   quickRegisterStep2,
@@ -42,6 +43,13 @@ const SmsSectionV2 = ({ t }: any) => {
       });
       return;
     }
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'register',
+        register_method: 'quick',
+        action: 'confirm_number',
+      },
+    });
     setMsisdn(resultStep1.data.msisdn);
     setShowModalpass(true);
   };
@@ -107,6 +115,13 @@ const SmsSectionV2 = ({ t }: any) => {
       });
       return;
     }
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'register',
+        register_method: 'quick',
+        action: 'confirm_password',
+      },
+    });
     setWelcomeToken(resultStep2.welcome_token);
     setShowModalpass(false);
     setShowInputstep1(false);

@@ -267,28 +267,16 @@ const Header = ({ t }: any) => {
           <div className="col-lg-3 lg-none">
             <div className="menu_btn">
               <ul>
-                {isLogin === true ? (
-                  <li>
-                    {/* <a onClick={logOut}>{t('logout')}</a> */}
-                    <a href="https://member.thaibulksms.com/">
-                      {t('header.login')}
-                    </a>
-                  </li>
-                ) : (
-                  <li>
-                    <Link href="/log-in" replace>
-                      <a>{t('header.login')}</a>
-                    </Link>
-                  </li>
-                )}
-                {/* <li>
-                  <Link href="/log-in">
-                    <a >{t('menu-6')}</a>
+                <li>
+                  <Link href="/log-in" replace>
+                    <a>{t('header.login-' + (isLogin === true ? 'b' : 'a'))}</a>
                   </Link>
-                </li> */}
+                </li>
                 <li>
                   <Link href="/pricing">
-                    <a className="btn v1">{t('header.buy')}</a>
+                    <a className="btn v1">
+                      {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                    </a>
                   </Link>
                 </li>
               </ul>

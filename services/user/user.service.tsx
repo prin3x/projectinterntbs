@@ -197,7 +197,6 @@ export async function resendRegister() {
   }
 
   const objlocalStorage = JSON.parse(strlocalStorage);
-  console.log('objlocalStorage : ', objlocalStorage);
   const resend_register_sms_token = objlocalStorage.token;
   try {
     let resultAPI = await axios.post(
@@ -217,6 +216,9 @@ export async function resendRegister() {
   } catch (error) {
     // localStorage.setItem('TBS_token', JSON.stringify({}));
     console.log('error.response :', error.response);
+    if (error.response.data.error.code === 'resendRegisterSMS.exceeded') {
+      localStorage.removeItem('TBS_resendRegisterSMSToken');
+    }
     let errorData = error.response
       ? error.response.data.error
       : { code: '400', errorMessageText: '' };

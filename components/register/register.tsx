@@ -6,15 +6,6 @@ import Router from 'next/router';
 import { registerUser } from '../../services/user/user.service';
 import ReCAPTCHA from 'react-google-recaptcha';
 import TagManager from 'react-gtm-module';
-import AppConfig from '../../appConfig';
-// const tagManagerArgs = {
-//   gtmId: AppConfig.GTM_CODE || '',
-//   dataLayer: {
-//     event: 'register',
-//     register_method: 'normal',
-//     action: 'view',
-//   },
-// };
 type Inputs = {
   firstname: string;
   lastname: string;
@@ -31,6 +22,12 @@ const RegisterComponents = ({ t }: any) => {
       return;
     },
   });
+  let captcha: any;
+  const setCaptchaRef = (ref: any) => {
+    if (ref) {
+      return (captcha = ref);
+    }
+  };
   let {
     register,
     handleSubmit,
@@ -46,7 +43,7 @@ const RegisterComponents = ({ t }: any) => {
     if (user.error.code !== '') {
       if (user.error.code === 'registerdto.recaptcha.invalid') {
         if (typeof recaptchaRef.current === 'object') {
-          recaptchaRef.current.reset();
+          captcha.reset();
         }
       }
       setError('res', {
@@ -100,34 +97,16 @@ const RegisterComponents = ({ t }: any) => {
   };
 
   useEffect(() => {
-    // TagManager.initialize(tagManagerArgs);
-    // TagManager.dataLayer({
-    //   dataLayer: {
-    //     userId: '001',
-    //     userProject: 'project',
-    //     page: 'home',
-    //   },
-    //   dataLayerName: 'PageDataLayer',
-    // });
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'register',
+        register_method: 'normal',
+        action: 'view',
+      },
+    });
   }, []);
   return (
     <div className="register_section">
-      <a
-        className="btn v2"
-        href="javascript:;"
-        onClick={async () => {
-          TagManager.dataLayer({
-            dataLayer: {
-              event: 'register',
-              register_method: 'normal',
-              action: 'complete',
-            },
-          });
-          console.log('run datalayer GTM');
-        }}
-      >
-        TEST GTM
-      </a>
       <h2>{t('register.header')}</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-indiv">
@@ -191,7 +170,7 @@ const RegisterComponents = ({ t }: any) => {
             {t(handleErorr(errors))}
           </div>
           <ReCAPTCHA
-            ref={recaptchaRef}
+            ref={(r) => setCaptchaRef(r)}
             sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
             onChange={setreCaptcha}
           />

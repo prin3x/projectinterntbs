@@ -1,25 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import { resendRegister } from '../../services/user/user.service';
-import TagManager from 'react-gtm-module';
-import AppConfig from '../../appConfig';
-const tagManagerArgs = {
-  gtmId: AppConfig.GTM_CODE || '',
-  dataLayer: {
-    event: 'register',
-    register_method: 'normal',
-    action: 'complete',
-  },
-};
+
 const RegisterfinishComponents = ({ t }: any) => {
-  useEffect(() => {
-    TagManager.initialize(tagManagerArgs);
-    // localStorage.setItem(
-    //   'TBS_resendRegisterSMSToken',
-    //   JSON.stringify({ token: 'WTFSMSToken' })
-    // );
-  }, []);
+  const [errors, setErrors] = useState('');
+  const [sentAPI, setSentAPI] = useState(true);
+
+  const handleErorr = (error: any) => {
+    if (error.code === undefined || error.code === '') {
+      return '';
+    }
+    return 'registerfinish.' + error.code;
+  };
+  useEffect(() => {}, []);
   return (
     <div className="register_section">
       <div className="finish-regis">
@@ -45,12 +39,27 @@ const RegisterfinishComponents = ({ t }: any) => {
           <a
             href="javascript:;"
             onClick={async () => {
-              let aa = await resendRegister();
-              console.log('return api : ', aa);
+              if (sentAPI) {
+                let result = await resendRegister();
+                console.log('return api : ', result);
+                if (result.error) {
+                  setErrors(result.error);
+                }
+                if (result.error.code === 'resendRegisterSMS.exceeded') {
+                  setSentAPI(false);
+                }
+              }
             }}
           >
             {t('registerfinish.linkresendsms')}
           </a>
+        </p>
+        <p
+          style={{
+            color: '#e20000',
+          }}
+        >
+          {t(handleErorr(errors))}
         </p>
       </div>
     </div>
