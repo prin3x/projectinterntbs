@@ -2126,6 +2126,7 @@ a:hover {
   font-family: 'Sarabun', serif;
   line-height: 1.5;
   margin: 34px 0 50px;
+  word-break: break-word;
 }
 
 .slider_item p,
@@ -2933,7 +2934,7 @@ ul.before-footer {
 .track_box {
   text-align: center;
   background: #fff;
-  padding: 50px 6px;
+  padding: 50px 30px;
   border-radius: 10px;
   height: 280px;
   margin: 0 55px;
@@ -4141,7 +4142,8 @@ textarea.input__box.v2 {
 }
 
 .icon__box__wrapper {
-  margin-top: 110px;
+  margin-top: 80px;
+  padding: 0 40px 0 0;
 }
 
 .icon__box {
@@ -4566,4 +4568,7 @@ a.changeAdd {
 .secQR h6.title__box__top{
   font-size: 30px !important;
   font-weight: 600 !important;
+}
+.sms_form_field {
+  text-align: center;
 }

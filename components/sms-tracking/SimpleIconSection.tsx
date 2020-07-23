@@ -4,7 +4,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
   <div className="simple_icon_section">
     <div className="container">
       <div className="row">
-        <div className="col-xl-8 offset-xl-2 col-lg-10 offsert-lg-1 col-md-12">
+        <div className="col-xl-10 offset-xl-1 col-md-12">
           <div className="simple_icon_title">
             <h3>{t('sms-trackingsimpleicon.title')}</h3>
             <p>{t('sms-trackingsimpleicon.desc')}</p>

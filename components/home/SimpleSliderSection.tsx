@@ -116,7 +116,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.1.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User01.png"
                     alt="Image"
                   />
                   <p>
@@ -144,7 +144,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.2.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User02.png"
                     alt="Image"
                   />
                   <p>
@@ -172,7 +172,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.3.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User03.png"
                     alt="Image"
                   />
                   <p>{t('homesimpleslider.item.3.desc')}</p>
@@ -193,7 +193,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.4.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User04.png"
                     alt="Image"
                   />
                   <p>
@@ -221,7 +221,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.5.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User05.png"
                     alt="Image"
                   />
                   <p>

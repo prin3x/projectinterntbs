@@ -24,7 +24,7 @@ const SmsSectionV4 = ({ t }: any) => (
         <div className="col-md-12">
           <div className="sms_form v2">
             <div className="row align-items-top">
-              <div className="col-lg-8 col-md-12">
+              <div className="col-lg-9 col-md-12">
                 <div className="sms_form_text">
                   <h4
                     dangerouslySetInnerHTML={{
@@ -33,7 +33,7 @@ const SmsSectionV4 = ({ t }: any) => (
                   ></h4>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-12">
+              <div className="col-lg-3 col-md-12">
                 <div className="sms_form_field">
                   <a href="#" className="btn v8">
                     {t('sms-trackingsmssection.freeBtn')}

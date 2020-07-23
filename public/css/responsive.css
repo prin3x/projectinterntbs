@@ -114,7 +114,7 @@
     font-size: 35px !important;
   }
   .pricing__top .pricing_box p {
-    font-size: 19px !important;
+    font-size: 18px !important;
   }
   .pricing__top .price_plan h2 {
     font-size: 60px !important;
@@ -124,6 +124,12 @@
   }
   .bg__img.img__2 {
     width: 25%;
+  }
+  .simple_slider_item h4 {
+    font-size: 26px;
+  }
+  .simple_slider_item p {
+    font-size: 18px;
   }
 }
 
@@ -721,7 +727,8 @@
     font-size: 24px;
   }
   .simple_slider_section .owl-carousel .owl-item img{
-    width: 80%;
+    width: 30%;
+    margin: 10px auto 20px;
   }
   .simple_slider_item {
     padding: 20px;
@@ -1040,9 +1047,9 @@
     padding: 180px 0 60px;
   }
   .simple_slider_item p {
-    font-size: 18px;
+    font-size: 16px;
     min-height: 60px;
-    word-break: break-all;
+    word-break: break-word;
   }
   .sms_section {
     height: 600px;
@@ -1065,11 +1072,11 @@
     margin-bottom: 55px;
   }
   .pricing_feature li p {
-    padding-left: 12px;
-    font-size: 18px;
+    padding-left: 10px;
+    font-size: 16px;
   }
   .price_plan h2 {
-    font-size: 60px;
+    font-size: 48px;
   } 
   .price_bottom_text ul {
     margin-left: 30px;
@@ -1164,6 +1171,19 @@
   }
   .input-txt01 {
     margin: 10px auto;
+  }
+  .price_plan h2 span {
+    font-size: 16px;
+    color: #5b6e80;
+    font-family: 'Sarabun', serif;
+    margin-left: 5px !important;
+  }
+  .hero_section.v3 .hero_text_one h1 {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+  .hero_section.v3 .hero_text_one span {
+    font-size: 40px;
   }
 }
 
@@ -1303,6 +1323,7 @@
   }
   .checkbox-wrapper {
     font-size: 18px;
+    padding-left: 30px;
   }
   .checkmark {
     height: 25px;
@@ -1332,13 +1353,18 @@
   }
   .simple_slider_section .owl-carousel .owl-item img {
     width: 30%;
-    margin: 15px auto;
+    margin: 10px auto 20px;
+  }
+  .simple_slider_item h4 {
+    font-size: 20px;
+    margin: 10px auto;
+    min-height: 60px;
   }
   .simple_slider_item p {
-    font-size: 18px;
-    min-height: 80px;
-    word-break: break-all;
-    margin-bottom: 30px;
+    font-size: 14px;
+    min-height: 100px;
+    word-break: break-word;
+    margin-bottom: 20px;
   }
   .simple_slider_heading_img object {
     width: 150%;
@@ -1478,7 +1504,7 @@
     font-size: 60px;
   }
   .slider_item h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: #31b1e7;
     line-height: 1;
     font-weight: 500;
@@ -1569,6 +1595,7 @@
   .checkmark {
     height: 20px;
     width: 20px;
+    top: 5px;
   }
   .radio_wrapper {
     margin-right: 0px;
