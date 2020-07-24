@@ -10,8 +10,10 @@
     "successstories": "เรื่องราวความสำเร็จ",
     "documentation": "สำหรับนักพัฒนา",
     "contact": "ติดต่อเรา",
-    "login": "Login",
+    "login-a": "Login",
+    "login-b": "ส่ง SMS",
     "logout": "Logout",
-    "buy": "ซื้อเลย"
+    "buy-a": "ทดลองส่งฟรี",
+    "buy-b": "ซื้อเลย"
   }
 }

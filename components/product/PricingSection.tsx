@@ -38,9 +38,7 @@ const PricingSection = ({ t }: any) => (
                 {t('homeproductpricing.package.standard.price')}{' '}
                 <span>{t('homeproductpricing.unit')}</span>
               </h2>
-              <a href="#" className="btn v3">
-                {t('homeproductpricing.viewPackageBtn')}
-              </a>
+              <a className="btn v3">{t('homeproductpricing.viewPackageBtn')}</a>
             </div>
             <div className="price_bottom_text">
               <p>{t('homeproductpricing.package.standard.suitable.title')}</p>
@@ -82,9 +80,7 @@ const PricingSection = ({ t }: any) => (
                 {t('homeproductpricing.package.corporate.price')}{' '}
                 <span>{t('homeproductpricing.unit')}</span>
               </h2>
-              <a href="#" className="btn v3">
-                {t('homeproductpricing.viewPackageBtn')}
-              </a>
+              <a className="btn v3">{t('homeproductpricing.viewPackageBtn')}</a>
             </div>
             <div className="price_bottom_text">
               <p>{t('homeproductpricing.package.corporate.suitable.title')}</p>
@@ -102,9 +98,7 @@ const PricingSection = ({ t }: any) => (
           <div className="pricing_bottom_text">
             {/* <span>{t('span5')}</span> */}
             <h3>{t('homeproductpricing.footer')}</h3>
-            <a href="#" className="btn v3">
-              {t('homeproductpricing.freeBtn')}
-            </a>
+            <a className="btn v3">{t('homeproductpricing.freeBtn')}</a>
           </div>
         </div>
       </div>

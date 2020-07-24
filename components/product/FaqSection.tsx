@@ -311,9 +311,7 @@ const FaqSection = ({ t }: any) => (
                   alt="Image"
                 />
                 <Link href="/contact">
-                  <a href="#" className="btn v4">
-                    {t('productfaq.contactBtn')}
-                  </a>
+                  <a className="btn v4">{t('productfaq.contactBtn')}</a>
                 </Link>
               </div>
             </div>
@@ -324,9 +322,7 @@ const FaqSection = ({ t }: any) => (
                   data-src="/img/img_3.png"
                   alt="Image"
                 />
-                <a href="#" className="btn v4">
-                  {t('productfaq.fbBrn')}
-                </a>
+                <a className="btn v4">{t('productfaq.fbBrn')}</a>
               </div>
             </div>
           </div>

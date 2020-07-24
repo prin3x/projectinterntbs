@@ -30,7 +30,7 @@ const TrackSectionV2 = ({ t }: any) => (
                     __html: t('sms-trackingtracksection.campaigntitle'),
                   }}
                 ></h4>
-                <a href="#" className="btn v3">
+                <a className="btn v3">
                   {t('sms-trackingtracksection.campaignBtn')}
                 </a>
               </div>
@@ -42,7 +42,7 @@ const TrackSectionV2 = ({ t }: any) => (
                     __html: t('sms-trackingtracksection.corporatepackagetitle'),
                   }}
                 ></h4>
-                <a href="#" className="btn v3">
+                <a className="btn v3">
                   {t('sms-trackingtracksection.corporatepackageBtn')}
                 </a>
               </div>

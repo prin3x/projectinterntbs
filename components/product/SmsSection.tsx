@@ -33,7 +33,7 @@ const SmsSection = ({ t }: any) => (
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_feature_item">
-                  <a href="#">
+                  <a>
                     <img
                       className="lazyload"
                       data-src="/img/play_icon.png"

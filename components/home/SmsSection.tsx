@@ -5,6 +5,7 @@ import React, { useState, useContext } from 'react';
 import Router from 'next/router';
 import { StoreContext } from '../context/store';
 import ReCAPTCHA from 'react-google-recaptcha';
+import TagManager from 'react-gtm-module';
 import {
   quickRegisterStep1,
   quickRegisterStep2,
@@ -42,6 +43,13 @@ const SmsSectionV2 = ({ t }: any) => {
       });
       return;
     }
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'register',
+        register_method: 'quick',
+        action: 'confirm_number',
+      },
+    });
     setMsisdn(resultStep1.data.msisdn);
     setShowModalpass(true);
   };
@@ -51,6 +59,7 @@ const SmsSectionV2 = ({ t }: any) => {
     handleSubmit: handleSubmitStep1,
     setError: setErrorStep1,
     errors: errrorsStep1,
+    clearErrors: clearErrors1,
   } = useForm<Inputs>({
     mode: 'onBlur',
   });
@@ -106,6 +115,13 @@ const SmsSectionV2 = ({ t }: any) => {
       });
       return;
     }
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'register',
+        register_method: 'quick',
+        action: 'confirm_password',
+      },
+    });
     setWelcomeToken(resultStep2.welcome_token);
     setShowModalpass(false);
     setShowInputstep1(false);
@@ -126,6 +142,7 @@ const SmsSectionV2 = ({ t }: any) => {
     register: registerStep3,
     handleSubmit: handleSubmitStep3,
     setError: setErrorStep3,
+    clearErrors: clearErrors3,
     errors: errrorsStep3,
   } = useForm<Inputs>({
     mode: 'onBlur',
@@ -226,8 +243,13 @@ const SmsSectionV2 = ({ t }: any) => {
                           name="msisdn"
                           type="text"
                           placeholder={t('homesms.test.telNumber')}
+                          onChange={() => clearErrors1('resultStep1')}
                         />
-                        <button className="btn v2" type="submit">
+                        <button
+                          className="btn v2"
+                          type="submit"
+                          onClick={() => clearErrors1()}
+                        >
                           {t('homesms.test.confirmBtn')}
                         </button>
                       </form>
@@ -249,7 +271,11 @@ const SmsSectionV2 = ({ t }: any) => {
                           disabled={true}
                           value={msisdn}
                         />
-                        <button className="btn v2" type="submit">
+                        <button
+                          className="btn v2"
+                          type="submit"
+                          onClick={() => clearErrors3()}
+                        >
                           ทดลองส่ง
                         </button>
                       </form>
@@ -368,6 +394,7 @@ const SmsSectionV2 = ({ t }: any) => {
                         borderRadius: '0 15px 15px 0',
                         padding: '15px 34px',
                       }}
+                      onClick={() => clearErrors2()}
                     >
                       ยืนยัน
                     </button>

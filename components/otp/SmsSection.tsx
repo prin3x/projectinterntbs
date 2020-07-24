@@ -31,9 +31,7 @@ const SmsSectionV3 = ({ t }: any) => (
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
-                  <a href="#" className="btn v8">
-                    {t('otpsms.freeBtn')}
-                  </a>
+                  <a className="btn v8">{t('otpsms.freeBtn')}</a>
                 </div>
               </div>
             </div>

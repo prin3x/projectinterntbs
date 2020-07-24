@@ -28,7 +28,7 @@ export async function login(param: any): Promise<AuthLogin> {
 
     // return loginFail();
     let resultAPI = await axios.post(
-      process.env.API_URL + '/api/auth',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/auth',
       sendData
     );
     // let resultAPI = await axios.get(
@@ -77,7 +77,7 @@ export async function checktoken(): Promise<boolean> {
       logout();
       return false;
     }
-    // let resultChecktoken = await axios.post(process.env.API_URL + '/auth', {});
+    // let resultChecktoken = await axios.post(process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/auth', {});
     const resultChecktoken = true;
     if (resultChecktoken) {
       return resultChecktoken;
@@ -154,7 +154,7 @@ export async function registerUser(param: any): Promise<Register> {
       };
     }
     let resultAPI = await axios.post(
-      process.env.API_URL + '/api/user',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user',
       sendData
     );
 
@@ -172,6 +172,10 @@ export async function registerUser(param: any): Promise<Register> {
       data: data.data,
       error: { code: '', erromessagerText: '' },
     };
+    localStorage.setItem(
+      'TBS_resendRegisterSMSToken',
+      JSON.stringify({ token: data.resendRegisterSMSToken })
+    );
     return dataRegister;
   } catch (error) {
     console.log('error : ', error.response);
@@ -181,14 +185,47 @@ export async function registerUser(param: any): Promise<Register> {
     return { accID: '', data: {}, error: errorData };
   }
 }
-export async function resendRegister(): Promise<boolean> {
-  const strlocalStorage = localStorage.getItem('TBS_resendregister');
+export async function resendRegister() {
+  const strlocalStorage = localStorage.getItem('TBS_resendRegisterSMSToken');
   if (strlocalStorage === null) {
-    return false;
+    return {
+      error: {
+        code: 'resendregistersmsdto.resendRegisterSMSToken.invalid',
+        erromessagerText: '',
+      },
+    };
   }
+
   const objlocalStorage = JSON.parse(strlocalStorage);
-  console.log('objlocalStorage : ', objlocalStorage);
-  return true;
+  const resend_register_sms_token = objlocalStorage.token;
+  try {
+    let resultAPI = await axios.post(
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user/resend-register-sms',
+      { resend_register_sms_token }
+    );
+
+    console.log(resultAPI);
+    if (resultAPI.status !== 200 && resultAPI.status !== 201) {
+      return {
+        error: { code: 'resendRegisterSMS.fail', erromessagerText: '' },
+      };
+    }
+    return {
+      error: { code: '', erromessagerText: '' },
+    };
+  } catch (error) {
+    // localStorage.setItem('TBS_token', JSON.stringify({}));
+    console.log('error.response :', error.response);
+    if (error.response.data.error.code === 'resendRegisterSMS.exceeded') {
+      localStorage.removeItem('TBS_resendRegisterSMSToken');
+    }
+    let errorData = error.response
+      ? error.response.data.error
+      : { code: '400', errorMessageText: '' };
+    return {
+      error: errorData,
+    };
+  }
 }
 export async function quickRegisterStep1(
   param: any
@@ -201,7 +238,7 @@ export async function quickRegisterStep1(
   try {
     let { msisdn, recaptcha } = param;
     let resultAPI = await axios.post(
-      process.env.API_URL + '/api/user/quick-register/1',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user/quick-register/1',
       { msisdn, recaptcha }
     );
 
@@ -248,7 +285,7 @@ export async function quickRegisterStep2(
       };
     }
     let resultAPI = await axios.post(
-      process.env.API_URL + '/api/user/quick-register/2',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user/quick-register/2',
       sendData
     );
 
@@ -288,7 +325,7 @@ export async function quickRegisterStep3(
   try {
     let { welcome_token } = param;
     let resultAPI = await axios.post(
-      process.env.API_URL + '/api/user/quick-register/3',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user/quick-register/3',
       { welcome_token }
     );
 

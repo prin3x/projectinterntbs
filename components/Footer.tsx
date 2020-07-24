@@ -10,12 +10,12 @@ const Footer = ({ t }: any) => (
             <ul>
               <li>
                 <Link href="/product">
-                  <a href="#">{t('footer.highlight')}</a>
+                  <a>{t('footer.highlight')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/pricing">
-                  <a href="#">{t('footer.pricing')}</a>
+                  <a>{t('footer.pricing')}</a>
                 </Link>
               </li>
             </ul>
@@ -27,22 +27,22 @@ const Footer = ({ t }: any) => (
             <ul>
               <li>
                 <Link href="/KnowledgeListing">
-                  <a href="#">{t('footer.knowledge')}</a>
+                  <a>{t('footer.knowledge')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/UseCasesListing">
-                  <a href="#">{t('footer.example')}</a>
+                  <a>{t('footer.example')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/SuccessStoriesListing">
-                  <a href="#">{t('footer.successstories')}</a>
+                  <a>{t('footer.successstories')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="">
-                  <a href="#">{t('footer.smsbasic')}</a>
+                  <a>{t('footer.smsbasic')}</a>
                 </Link>
               </li>
             </ul>
@@ -54,12 +54,12 @@ const Footer = ({ t }: any) => (
             <ul>
               <li>
                 <Link href="/support/how-to-order">
-                  <a href="#">{t('footer.howtoorder')}</a>
+                  <a>{t('footer.howtoorder')}</a>
                 </Link>
               </li>
               <li>
                 <Link href="/Documentation">
-                  <a href="#">{t('footer.documentation')}</a>
+                  <a>{t('footer.documentation')}</a>
                 </Link>
               </li>
             </ul>
@@ -68,7 +68,7 @@ const Footer = ({ t }: any) => (
         <div className="col-md-3 col-6">
           <div className="footer_widget">
             <Link href="/fb">
-              <a href="#">
+              <a>
                 <h4>
                   {t('footer.about')}
                   <img
@@ -101,7 +101,7 @@ const Footer = ({ t }: any) => (
             <div className="row align-items-end">
               <div className="col-xl-6 col-lg-5 col-md-5">
                 <div className="footer_logo">
-                  <a href="#">
+                  <a>
                     <img
                       className="lazyload"
                       data-src="/img/logo_2.png"
@@ -135,10 +135,10 @@ const Footer = ({ t }: any) => (
               <div className="col-xl-6 col-lg-12 col-md-12">
                 <ul className="footer_menu">
                   <li>
-                    <a href="#">Terms and Conditions</a>
+                    <a>Terms and Conditions</a>
                   </li>
                   <li>
-                    <a href="#">Privacy Policy</a>
+                    <a>Privacy Policy</a>
                   </li>
                 </ul>
               </div>

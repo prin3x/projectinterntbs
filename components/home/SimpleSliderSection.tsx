@@ -122,14 +122,12 @@ const SimpleSliderSection = ({ t }: any) => {
                   <p>
                     {t('homesimpleslider.item.1.desc')}
                     <Link href="/">
-                      <a href="#">
+                      <a>
                         <span>{t('homesimpleslider.item.1.link')}</span>
                       </a>
                     </Link>
                   </p>
-                  <a href="#" className="btn v9">
-                    {t('homesimpleslider.testBtn')}
-                  </a>
+                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature01.svg
                     {/* <object
@@ -150,14 +148,12 @@ const SimpleSliderSection = ({ t }: any) => {
                   <p>
                     {t('homesimpleslider.item.2.desc')}
                     <Link href="/">
-                      <a href="#">
+                      <a>
                         <span>{t('homesimpleslider.item.2.link')}</span>
                       </a>
                     </Link>
                   </p>
-                  <a href="#" className="btn v9">
-                    {t('homesimpleslider.testBtn')}
-                  </a>
+                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature02.svg
                     {/* <object
@@ -176,9 +172,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     alt="Image"
                   />
                   <p>{t('homesimpleslider.item.3.desc')}</p>
-                  <a href="#" className="btn v9">
-                    {t('homesimpleslider.testBtn')}
-                  </a>
+                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature03.svg
                     {/* <object
@@ -199,14 +193,12 @@ const SimpleSliderSection = ({ t }: any) => {
                   <p>
                     {t('homesimpleslider.item.4.desc')}
                     <Link href="/">
-                      <a href="#">
+                      <a>
                         <span>{t('homesimpleslider.item.4.link')}</span>
                       </a>
                     </Link>
                   </p>
-                  <a href="#" className="btn v9">
-                    {t('homesimpleslider.testBtn')}
-                  </a>
+                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature04.svg
                     {/* <object
@@ -227,14 +219,12 @@ const SimpleSliderSection = ({ t }: any) => {
                   <p>
                     {t('homesimpleslider.item.5.desc')}
                     <Link href="/">
-                      <a href="#">
+                      <a>
                         <span>{t('homesimpleslider.item.5.link')}</span>
                       </a>
                     </Link>
                   </p>
-                  <a href="#" className="btn v9">
-                    {t('homesimpleslider.testBtn')}
-                  </a>
+                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature05.svg
                     {/* <object
@@ -245,7 +235,7 @@ const SimpleSliderSection = ({ t }: any) => {
                 </div>
               </div>
             </OwlCarousel>
-            <a href="#" className="lang_link text-right pr-4">
+            <a className="lang_link text-right pr-4">
               {t('homesimpleslider.testBtn')}
               <img
                 className="lazyload"

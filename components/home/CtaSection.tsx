@@ -12,14 +12,10 @@ const CtaSection = ({ t }: any) => (
         <div className="col-xl-6 col-lg-12">
           <ul className="cta-btn before-footer">
             <li>
-              <a className="btn v3" href="#">
-                {t('homecta.freeBtn')}
-              </a>
+              <a className="btn v3">{t('homecta.freeBtn')}</a>
             </li>
             <li>
-              <a className="btn v5" href="#">
-                {t('homecta.viewPackageBtn')}
-              </a>
+              <a className="btn v5">{t('homecta.viewPackageBtn')}</a>
             </li>
           </ul>
         </div>

@@ -4,7 +4,7 @@ import { StoreContext } from '../context/store';
 import React, { useEffect, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { login } from '../../services/user/user.service';
-import Router from 'next/router';
+import TagManager from 'react-gtm-module';
 
 type Inputs = {
   firstname: string;
@@ -34,7 +34,15 @@ const QuickRegisterComponents = ({ t }: any) => {
         message: '',
       });
     } else {
-      Router.push('/');
+      TagManager.dataLayer({
+        dataLayer: {
+          event: 'register',
+          register_method: 'quick',
+          action: 'complete_fulfil_info',
+        },
+      });
+      window.location.replace('https://member.thaibulksms.com/');
+      // Router.push('/');
     }
   };
   const handleErorr = (error: any) => {
@@ -63,7 +71,14 @@ const QuickRegisterComponents = ({ t }: any) => {
     }
   };
   useEffect(() => {
-    console.log('msisdnStore :::::::::::: ', dataStore.msisdnStore);
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'register',
+        register_method: 'quick',
+        action: 'view_fulfil_info',
+      },
+    });
+    // console.log('msisdnStore :::::::::::: ', dataStore.msisdnStore);
     // if (dataStore.msisdnStore[0] === undefined) {
     // Router.push('/log-in');
     // }
@@ -151,7 +166,7 @@ const QuickRegisterComponents = ({ t }: any) => {
           </div>
           <div className="btn-regis">
             {/* <Link href="/register-success">
-              <a className="btn v2" href="#">
+              <a className="btn v2" >
                 {t('quickregister.createBtn')}
                 
               </a>
@@ -161,6 +176,7 @@ const QuickRegisterComponents = ({ t }: any) => {
               style={{ minWidth: '180px' }}
               type="submit"
               value={t('quickregister.createBtn')}
+              onClick={() => clearErrors()}
             />
           </div>
         </div>

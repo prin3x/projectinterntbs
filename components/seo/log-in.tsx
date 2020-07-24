@@ -1,8 +1,8 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.DOMAIN_URL}`,
+    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/log-in`,
     type: 'website',
-    title: 'บริการส่ง SMS ครบวงจร ส่งง่าย ถึงมือผู้รับ| ThaiBulkSMS',
+    title: 'เข้าสู่ระบบ บริการส่งข้อความด้วยระบบ | ThaiBulkSMS',
     description: '',
     images: [
       {
@@ -11,6 +11,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.DOMAIN_URL}`,
+    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/log-in`,
   },
 };

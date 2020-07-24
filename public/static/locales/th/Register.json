@@ -46,6 +46,9 @@
       "isReceiveNews": {
         "invalid": "ตรวจสอบ รับข่าวสารจาก TBS"
       },
+      "recaptcha": {
+        "invalid": "กรุณากรอก reCAPTCHA"
+      },
       "fail": "ไม่สามารถลงทะเบียนได้ กรุณาลองใหม่อีกครั้ง"
     },
     "register": {

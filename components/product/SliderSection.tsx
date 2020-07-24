@@ -49,35 +49,35 @@ const SliderSection = ({ t }: any) => (
               <div className="slider_item">
                 <h3>{t('productslider.item.1.title')}</h3>
                 <p>{t('productslider.item.1.desc')}</p>
-                {/* <a href="#">{t('a1')}</a> */}
+                {/* <a >{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
                 <h3>{t('productslider.item.2.title')}</h3>
                 <p>{t('productslider.item.2.desc')}</p>
-                {/* <a href="#">{t('a1')}</a> */}
+                {/* <a >{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
                 <h3>{t('productslider.item.3.title')}</h3>
                 <p>{t('productslider.item.3.desc')}</p>
-                {/* <a href="#">{t('a1')}</a> */}
+                {/* <a >{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
                 <h3>{t('productslider.item.4.title')}</h3>
                 <p>{t('productslider.item.4.desc')}</p>
-                {/* <a href="#">{t('a1')}</a> */}
+                {/* <a >{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
                 <h3>{t('productslider.item.5.title')}</h3>
                 <p>{t('productslider.item.5.desc')}</p>
-                {/* <a href="#">{t('a1')}</a> */}
+                {/* <a >{t('a1')}</a> */}
               </div>
             </div>
           </OwlCarousel>

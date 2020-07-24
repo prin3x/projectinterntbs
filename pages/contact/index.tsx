@@ -5,8 +5,8 @@ import Help from '../../components/Help';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
-// import { NextSeo } from 'next-seo';
-// import { seo } from '../components/seo/con';
+import { NextSeo } from 'next-seo';
+import { seo } from '../../components/seo/contact';
 const Contact = ({ t }: any) => (
   <Layout>
     <Head>
@@ -16,21 +16,7 @@ const Contact = ({ t }: any) => (
       <meta name="keywords" content={t('keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {/* <NextSeo openGraph={seo.openGraph} /> */}
-      <meta property="og:title" content="ช่องทางติดต่อทีมงาน - ThaiBulkSMS " />
-      <meta property="og:description" content="" />
-      <meta property="og:url" content={process.env.DOMAIN_URL + '/contact'} />
-      <meta property="og:image" content="" />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="https://thaibulksms.com" />
-      <meta name="twitter:site" content="" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta property="og:image:secure_url" content="" />
-      <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:image:width" content="600" />
-      <meta property="og:image:height" content="600" />
-      <meta name="twitter:image" content="" />
-      <meta name="twitter:domain" content="" />
+      <NextSeo openGraph={seo.openGraph} />
     </Head>
     <div className="page_wrapper">
       <div

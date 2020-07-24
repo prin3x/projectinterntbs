@@ -87,7 +87,6 @@ const showPackage = (packages: Product[], t: Function) => {
 
                       <div className="text-center">
                         <a
-                          href="#"
                           onClick={() => BuyPackage(productItem.standard)}
                           className="btn v8"
                         >
@@ -200,9 +199,7 @@ const AllPricing = ({ t, packages }: any) => {
 
             <div className="pricing__bottom d-flex align-items-center justify-content-center">
               <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
-              <a href="#" className="btn v3">
-                {t('pricingallpricing.sellBtn')}
-              </a>
+              <a className="btn v3">{t('pricingallpricing.sellBtn')}</a>
             </div>
           </div>
         </div>

@@ -112,9 +112,7 @@ const TestimonialSection = ({ t }: any) => (
       <div className="row">
         <div className="col-md-12 text-center">
           <Link href="/SuccessStoriesListing">
-            <a href="#" className="btn v6">
-              {t('hometestimonial.storyBtn')}
-            </a>
+            <a className="btn v6">{t('hometestimonial.storyBtn')}</a>
           </Link>
         </div>
       </div>

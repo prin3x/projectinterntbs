@@ -40,9 +40,7 @@ const PromoSection = ({ t }: any) => (
                 data-src="/img/img-sms.svg"
                 alt="Image"
               /> */}
-              <a href="#" className="btn v2">
-                {t('productpromo.section.1.freeBtn')}
-              </a>
+              <a className="btn v2">{t('productpromo.section.1.freeBtn')}</a>
             </div>
           </div>
         </div>
@@ -66,7 +64,7 @@ const PromoSection = ({ t }: any) => (
                 data-src="/img/img-api.svg"
                 alt="Image"
               /> */}
-              <a href="#" className="btn v2">
+              <a className="btn v2">
                 {t('productpromo.section.1.developerBtn')}
               </a>
             </div>
@@ -101,9 +99,7 @@ const PromoSection = ({ t }: any) => (
                 __html: t('productpromo.section.2.title'),
               }}
             ></p>
-            <a className="link" href="#">
-              {t('productpromo.section.2.link')}
-            </a>
+            <a className="link">{t('productpromo.section.2.link')}</a>
             <h6
               className="promo_link"
               dangerouslySetInnerHTML={{
@@ -123,9 +119,7 @@ const PromoSection = ({ t }: any) => (
             ></h3>
             <p>{t('productpromo.section.3.title')}</p>
             <Link href="/sms-tracking">
-              <a className="link" href="#">
-                {t('productpromo.section.3.link')}
-              </a>
+              <a className="link">{t('productpromo.section.3.link')}</a>
             </Link>
           </div>
         </div>
@@ -183,13 +177,9 @@ const PromoSection = ({ t }: any) => (
               }}
             ></h3>
             <p>{t('productpromo.section.4.title')}</p>
-            <a href="#" className="btn v2">
-              {t('productpromo.section.4.freeBtn')}
-            </a>
+            <a className="btn v2">{t('productpromo.section.4.freeBtn')}</a>
             <Link href="/otp">
-              <a className="link" href="#">
-                {t('productpromo.section.4.link')}
-              </a>
+              <a className="link">{t('productpromo.section.4.link')}</a>
             </Link>
             <h6
               className="promo_link"
