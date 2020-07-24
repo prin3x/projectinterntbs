@@ -4175,7 +4175,8 @@
     font-size: 24px;
   }
   .single_feature_item img {
-    max-width: 60%;
+    max-width: 55%;
+    margin: 5px auto;
   }
   .single_feature_text {
     margin: 20px 0;
@@ -4219,7 +4220,7 @@
     font-size: 16px;
   }
   .simple_slider_section {
-    height: 600px;
+    height: 560px;
     padding: 30px 0;
   }
   .col-md-3.whyTBS {
@@ -4551,7 +4552,7 @@
     min-height: 140px;
   }
   .price_bottom_text ul li {
-    font-size: 16px;
+    font-size: 14px;
   }
   .pricing_bottom_text h3 {
     font-size: 20px;
@@ -5008,7 +5009,7 @@
     margin-top: 30px;
   }
   .simple_slider_section .simple_slider_wrapper .owl-nav {
-    bottom: -20px;
+    bottom: 50px;
   }
   .promo_img object {
     min-height: 220px;
@@ -5051,6 +5052,12 @@
   }
   .finish-regis p.sub-text {
     font-size: 16px;
+  }
+  .simple_slider_section .simple_slider_wrapper .owl-nav {
+    bottom: 0px;
+  }
+  .sms_form_text p {
+    width: 80%;
   }
 }
 
