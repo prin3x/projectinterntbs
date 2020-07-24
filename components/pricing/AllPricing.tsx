@@ -1,9 +1,46 @@
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
+import { useState } from 'react';
 
 const AllPricing = ({ t }: any) => {
-  React.useEffect(() => {}, []);
+  const [dataToggle, setIsLogin] = useState([] as any);
+  React.useEffect(() => {
+    if (screen.width > 767) {
+      setIsLogin([
+        {
+          'data-toggle': 'collapse',
+          'data-target': '.collapse1',
+          'aria-expanded': 'false',
+          'aria-controls': 'collapse1',
+        },
+        {
+          'data-toggle': 'collapse',
+          'data-target': '.collapse2',
+          'aria-expanded': 'false',
+          'aria-controls': 'collapse2',
+        },
+        {
+          'data-toggle': 'collapse',
+          'data-target': '.collapse3',
+          'aria-expanded': 'false',
+          'aria-controls': 'collapse3',
+        },
+        {
+          'data-toggle': 'collapse',
+          'data-target': '.collapse4',
+          'aria-expanded': 'false',
+          'aria-controls': 'collapse4',
+        },
+        {
+          'data-toggle': 'collapse',
+          'data-target': '.collapse5',
+          'aria-expanded': 'false',
+          'aria-controls': 'collapse5',
+        },
+      ]);
+    }
+  }, [dataToggle]);
   return (
     <div
       className="all__pricing accordion lazyload"
@@ -40,10 +77,11 @@ const AllPricing = ({ t }: any) => {
 
             <div
               className="row no-gutters single__pricing m-0"
-              data-toggle="collapse"
-              data-target=".collapse1"
-              aria-expanded="false"
-              aria-controls="collapse1"
+              // data-toggle="collapse"
+              // data-target=".collapse1"
+              // aria-expanded="false"
+              // aria-controls="collapse1"
+              {...dataToggle[0]}
             >
               <div className="col-md-4 box">
                 <div className="left__box">
@@ -139,10 +177,11 @@ const AllPricing = ({ t }: any) => {
 
             <div
               className="row no-gutters single__pricing"
-              data-toggle="collapse"
-              data-target=".collapse2"
-              aria-expanded="false"
-              aria-controls="collapse2"
+              // data-toggle="collapse"
+              // data-target=".collapse2"
+              // aria-expanded="false"
+              // aria-controls="collapse2"
+              {...dataToggle[1]}
             >
               <div className="col-md-4 box">
                 <div className="left__box">
@@ -238,10 +277,11 @@ const AllPricing = ({ t }: any) => {
 
             <div
               className="row no-gutters single__pricing"
-              data-toggle="collapse"
-              data-target=".collapse3"
-              aria-expanded="false"
-              aria-controls="collapse3"
+              // data-toggle="collapse"
+              // data-target=".collapse3"
+              // aria-expanded="false"
+              // aria-controls="collapse3"
+              {...dataToggle[2]}
             >
               <div className="col-md-4 box">
                 <div className="left__box">
@@ -337,10 +377,11 @@ const AllPricing = ({ t }: any) => {
 
             <div
               className="row no-gutters single__pricing active"
-              data-toggle="collapse"
-              data-target=".collapse4"
-              aria-expanded="true"
-              aria-controls="collapse4"
+              // data-toggle="collapse"
+              // data-target=".collapse4"
+              // aria-expanded="true"
+              // aria-controls="collapse4"
+              {...dataToggle[3]}
             >
               <div className="col-md-4 box">
                 <div className="left__box">
@@ -436,10 +477,11 @@ const AllPricing = ({ t }: any) => {
 
             <div
               className="row no-gutters single__pricing"
-              data-toggle="collapse"
-              data-target=".collapse5"
-              aria-expanded="false"
-              aria-controls="collapse5"
+              // data-toggle="collapse"
+              // data-target=".collapse5"
+              // aria-expanded="false"
+              // aria-controls="collapse5"
+              {...dataToggle[4]}
             >
               <div className="col-md-4 box">
                 <div className="left__box">
@@ -561,4 +603,4 @@ AllPricing.getInitialProps = async () => ({
 AllPricing.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('PricingAllPricing')(AllPricing);
+export default withTranslation('PricingAllPricing')(React.memo(AllPricing));
