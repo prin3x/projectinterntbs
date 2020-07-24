@@ -1,5 +1,12 @@
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
+
+const menuClick = () => {
+  var elDivnice = document.getElementsByClassName('devnice-select')[0];
+  if (elDivnice.classList.contains('open')) elDivnice.classList.remove('open');
+  else elDivnice.classList.add('open');
+};
+
 const UsertypeIndividual = ({ t }: any) => (
   <div className="userType_section">
     <h2>{t('usertypeindividual.header')}</h2>
@@ -10,6 +17,30 @@ const UsertypeIndividual = ({ t }: any) => (
       {/* {t('usertypeindividual.p1')} <span>{t('usertypeindividual.span1')}</span> */}
     </p>
     <div className="form-indiv">
+      <h3>ข้อมูลเกี่ยวกับธุรกิจ</h3>
+      <div
+        className="nice-select input__box v2 devnice-select usertypeDD"
+        onClick={menuClick}
+      >
+        <span className="current">
+          {t('contacthero.form.problem.1')}
+        </span>
+        <ul className="list">
+          <li className="option selected" data-value="">
+            {t('contacthero.form.problem.1')}
+          </li>
+          <li className="option " data-value="">
+            {t('contacthero.form.problem.2')}
+          </li>
+          <li className="option " data-value="">
+            {t('contacthero.form.problem.3')}
+          </li>
+          <li className="option " data-value="">
+            {t('contacthero.form.problem.4')}
+          </li>
+        </ul>
+      </div>
+      <hr className="form-user"></hr>
       <h3>{t('usertypeindividual.form.title')}</h3>
       <input
         type="text"

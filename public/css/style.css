@@ -3228,6 +3228,7 @@ ul.before-footer {
   background-color: #cdd4da;
   width: 100%;
   margin: 30px 0;
+  clear: both;
 }
 
 .btn-regis {
@@ -4572,3 +4573,11 @@ a.changeAdd {
 .sms_form_field {
   text-align: center;
 }
+.usertypeDD {
+  margin: 10px auto 30px !important;
+}
+.usertypeBranch {
+  margin: 15px 0 15px !important;
+  width: 48% !important;
+}
+

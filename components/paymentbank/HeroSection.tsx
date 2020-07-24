@@ -34,7 +34,7 @@ const HeroSection = ({ t }: any) => {
             <div className="box__body">
               <div className="box__content new__content">
                 <div className="row">
-                  <div className="col-4">
+                  <div className="col-6">
                     <h6 style={{ fontWeight: 400, color: '#5b6e80' }}>
                       {t('paymentbankhero.payment.ordernumber')}
                     </h6>
@@ -43,11 +43,11 @@ const HeroSection = ({ t }: any) => {
                     </h6>
                   </div>
 
-                  <div className="col-8">
+                  <div className="col-6">
                     <h6 className="theme__text font-weight-bold"> 0022953</h6>
                     <h6 style={{ fontWeight: 400, color: '#5b6e80' }}>
-                      {t('paymentbankhero.payment.length')}
                       <span className="theme__text font-weight-bold">
+                        {t('paymentbankhero.payment.length')}
                         31 มีนาคม 2562 เวลา 13:35 น.
                       </span>
                     </h6>

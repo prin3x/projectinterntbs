@@ -114,7 +114,7 @@ const PromoSection = ({ t }: any) => (
         </div>
       </div>
       <div className="row align-items-center row_pad">
-        <div className="col-lg-5 col-md-12 col-12 order-lg-1 order-md-2 order-2">
+        <div className="col-lg-5 col-md-12 col-12">
           <div className="service_feature_text">
             <h3
               dangerouslySetInnerHTML={{
@@ -129,7 +129,7 @@ const PromoSection = ({ t }: any) => (
             </Link>
           </div>
         </div>
-        <div className="col-lg-7 col-md-12 col-12 order-lg-2 order-md-1 order-1">
+        <div className="col-lg-7 col-md-12 col-12">
           <div className="row">
             <div className="col-md-4 col-12">
               <div className="service_feature_item">

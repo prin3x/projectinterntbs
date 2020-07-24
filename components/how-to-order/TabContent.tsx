@@ -152,7 +152,7 @@ const TabContent = ({ t }: any) => {
                 id="pills-profile"
                 role="tabpanel"
               >
-                <div className="row justify-content-center">
+                <div className="row justify-content-center paymentImg">
                   <div className="col-lg-8">
                     <div className="box__wrapper">
                       <div className="box__header">

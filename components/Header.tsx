@@ -125,7 +125,7 @@ const Header = ({ t }: any) => {
                       </a>
                     </Link>
                   </li>
-                  <li className="has-children">
+                  {/* <li className="has-children">
                     <a className="active" href="#">
                       {t('header.database')}
                     </a>
@@ -134,7 +134,6 @@ const Header = ({ t }: any) => {
                         <Link href="/ResourcesLanding">
                           <a href="#">
                             <h6>{t('header.resources')}</h6>
-                            {/* <p>{t('menu-3-1-s')}</p> */}
                           </a>
                         </Link>
                       </li>
@@ -142,27 +141,24 @@ const Header = ({ t }: any) => {
                         <Link href="/KnowledgeListing">
                           <a href="#">
                             <h6>{t('header.knowledge')}</h6>
-                            {/* <p>{t('menu-3-2-s')}</p> */}
                             <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
                         <Link href="/UseCasesListing">
                           <a href="#">
                             <h6>{t('header.example')}</h6>
-                            {/* <p>{t('menu-3-3-s')}</p> */}
                             <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
                         <Link href="/SuccessStoriesListing">
                           <a href="#">
                             <h6>{t('header.successstories')}</h6>
-                            {/* <p>{t('menu-3-4-s')}</p> */}
                             <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/Documentation">
                       <a className="active" href="#">
@@ -215,7 +211,7 @@ const Header = ({ t }: any) => {
                         </a>
                       </Link>
                     </li>
-                    <li className="has-children">
+                    {/* <li className="has-children">
                       <span
                         className="arrow-collapse collapsed"
                         data-toggle="collapse"
@@ -229,7 +225,6 @@ const Header = ({ t }: any) => {
                           <Link href="/ResourcesLanding">
                             <a href="#">
                               <h6>{t('header.resources')}</h6>
-                              {/* <p>{t('menu-3-1-s')}</p> */}
                             </a>
                           </Link>
                         </li>
@@ -237,7 +232,6 @@ const Header = ({ t }: any) => {
                           <Link href="/KnowledgeListing">
                             <a href="#">
                               <h6>{t('header.knowledge')}</h6>
-                              {/* <p>{t('menu-3-2-s')}</p> */}
                             </a>
                           </Link>
                         </li>
@@ -245,7 +239,6 @@ const Header = ({ t }: any) => {
                           <Link href="/UseCasesListing">
                             <a href="#">
                               <h6>{t('header.example')}</h6>
-                              {/* <p>{t('menu-3-3-s')}</p> */}
                             </a>
                           </Link>
                         </li>
@@ -253,12 +246,11 @@ const Header = ({ t }: any) => {
                           <Link href="/SuccessStoriesListing">
                             <a href="#">
                               <h6>{t('header.successstories')}</h6>
-                              {/* <p>{t('menu-3-4-s')}</p> */}
                             </a>
                           </Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/Documentation">
                         <a className="active" href="#">

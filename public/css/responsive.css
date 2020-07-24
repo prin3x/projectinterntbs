@@ -4154,6 +4154,11 @@
     font-size: 14px;
     font-weight: 300;
   }
+  .usertypeBranch, .usertypeBranch {
+    margin: 10px 0 10px !important;
+    width: 100% !important;
+    height: 50px !important;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 640px) {
@@ -4335,7 +4340,9 @@
   .sms_form_text p {
     font-size: 14px;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.6;
+    width: 70%;
+    margin: 0 auto;
   }
   .sms_form_field input {
     border: 2px solid #5b6e80;
@@ -4529,7 +4536,7 @@
     top: 3px;
   } 
   .pricing_feature li p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .price_plan h2 {
     font-size: 48px;
@@ -4537,11 +4544,14 @@
     margin: 8px 0 15px;
   }
   .price_plan h2 span {
-    font-size: 16px;
+    font-size: 14px;
     margin-left: -10px;
   }
   .price_bottom_text ul {
     min-height: 140px;
+  }
+  .price_bottom_text ul li {
+    font-size: 16px;
   }
   .pricing_bottom_text h3 {
     font-size: 20px;
@@ -4997,11 +5007,50 @@
     margin-left: 10px;
     margin-top: 30px;
   }
+  .simple_slider_section .simple_slider_wrapper .owl-nav {
+    bottom: -20px;
+  }
+  .promo_img object {
+    min-height: 220px;
+  }
+  .footer_section {
+    padding: 80px 30px 20px;
+  }
+  .paymentImg .box__wrapper .box__body .info__box .info__icon {
+    height: 70px;
+    width: 70px;
+    margin-right: 0px;
+    padding: 14px;
+  }
+  .item__box img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  .box__wrapper .link {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+  .box__wrapper .box__body h6 {
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 375px) {
   .edu_section:before {
     height: 830px;
+  }
+  .priceTable {
+    width: 100%;
+  }
+  .btn.v4 {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+  .finish-regis p.sub-text {
+    font-size: 16px;
   }
 }
 
