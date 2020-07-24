@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useState } from 'react';
 
 const AllPricing = ({ t }: any) => {
-  const [dataToggle, setIsLogin] = useState([]);
+  const [dataToggle, setIsLogin] = useState([] as any);
   React.useEffect(() => {
     if (screen.width > 767) {
       setIsLogin([
