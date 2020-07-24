@@ -143,21 +143,30 @@ const Header = ({ t }: any) => {
                           <a href="#">
                             <h6>{t('header.knowledge')}</h6>
                             {/* <p>{t('menu-3-2-s')}</p> */}
-                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
+                            <p className="txtSub">
+                              Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ
+                              ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์
+                            </p>
                           </a>
                         </Link>
                         <Link href="/UseCasesListing">
                           <a href="#">
                             <h6>{t('header.example')}</h6>
                             {/* <p>{t('menu-3-3-s')}</p> */}
-                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
+                            <p className="txtSub">
+                              Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ
+                              ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์
+                            </p>
                           </a>
                         </Link>
                         <Link href="/SuccessStoriesListing">
                           <a href="#">
                             <h6>{t('header.successstories')}</h6>
                             {/* <p>{t('menu-3-4-s')}</p> */}
-                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
+                            <p className="txtSub">
+                              Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ
+                              ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์
+                            </p>
                           </a>
                         </Link>
                       </li>
@@ -196,21 +205,21 @@ const Header = ({ t }: any) => {
                   <ul className="site-nav-wrap">
                     <li>
                       <Link href="/product">
-                        <a className="active" href="#">
+                        <a className="active closemenu" href="#">
                           {t('header.product')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/pricing">
-                        <a className="active" href="#">
+                        <a className="active closemenu" href="#">
                           {t('header.pricing')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/support/how-to-order">
-                        <a className="active" href="#">
+                        <a className="active closemenu" href="#">
                           {t('header.howtoorder')}
                         </a>
                       </Link>
@@ -227,7 +236,7 @@ const Header = ({ t }: any) => {
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/ResourcesLanding">
-                            <a href="#">
+                            <a href="#" className="closemenu">
                               <h6>{t('header.resources')}</h6>
                               {/* <p>{t('menu-3-1-s')}</p> */}
                             </a>
@@ -235,7 +244,7 @@ const Header = ({ t }: any) => {
                         </li>
                         <li>
                           <Link href="/KnowledgeListing">
-                            <a href="#">
+                            <a href="#" className="closemenu">
                               <h6>{t('header.knowledge')}</h6>
                               {/* <p>{t('menu-3-2-s')}</p> */}
                             </a>
@@ -243,7 +252,7 @@ const Header = ({ t }: any) => {
                         </li>
                         <li>
                           <Link href="/UseCasesListing">
-                            <a href="#">
+                            <a href="#" className="closemenu">
                               <h6>{t('header.example')}</h6>
                               {/* <p>{t('menu-3-3-s')}</p> */}
                             </a>
@@ -251,7 +260,7 @@ const Header = ({ t }: any) => {
                         </li>
                         <li>
                           <Link href="/SuccessStoriesListing">
-                            <a href="#">
+                            <a href="#" className="closemenu">
                               <h6>{t('header.successstories')}</h6>
                               {/* <p>{t('menu-3-4-s')}</p> */}
                             </a>
@@ -261,14 +270,14 @@ const Header = ({ t }: any) => {
                     </li>
                     <li>
                       <Link href="/Documentation">
-                        <a className="active" href="#">
+                        <a className="active closemenu" href="#">
                           {t('header.documentation')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/contact">
-                        <a className="active" href="#">
+                        <a className="active closemenu">
                           {t('header.contact')}
                         </a>
                       </Link>
