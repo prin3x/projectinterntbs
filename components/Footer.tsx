@@ -21,7 +21,7 @@ const Footer = ({ t }: any) => (
             </ul>
           </div>
         </div>
-        <div className="col-md-3 col-6">
+        {/* <div className="col-md-3 col-6">
           <div className="footer_widget">
             <h4>{t('footer.database')}</h4>
             <ul>
@@ -47,7 +47,7 @@ const Footer = ({ t }: any) => (
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
         <div className="col-md-3 col-6">
           <div className="footer_widget">
             <h4>{t('footer.support')}</h4>

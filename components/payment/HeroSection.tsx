@@ -263,7 +263,7 @@ const HeroSection = ({ t }: any) => {
                       <div className="d-flex justify-content-between">
                         <p>{t('paymenthero.taxinvoice.life')}</p>
                         <p className="theme__text">
-                          2 {t('paymenthero.taxinvoice.year')}
+                          18 {t('paymenthero.taxinvoice.month')}
                         </p>
                       </div>
 
@@ -285,13 +285,13 @@ const HeroSection = ({ t }: any) => {
               <div className="box__content">
                 <div className="row align-items-center">
                   <div className="col-12">
-                    <h6 className="hideHeader">{t('paymenthero.taxinvoice.waitconfirmtitle')}</h6>
+                    {/* <h6 className="hideHeader">{t('paymenthero.taxinvoice.waitconfirmtitle')}</h6> */}
 
                     <form action="#">
                       <div className="form__wrapper">
                         <input
                           type="text"
-                          placeholder="โค๊ดส่วนลด"
+                          placeholder="โค้ดส่วนลด"
                           className="input__box"
                         />
                         <button

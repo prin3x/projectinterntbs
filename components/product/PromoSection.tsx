@@ -74,11 +74,11 @@ const PromoSection = ({ t }: any) => (
         </div>
         <div className="col-md-12">
           <div className="promo_bottom_text">
-            <p
+            {/* <p
               dangerouslySetInnerHTML={{
                 __html: t('productpromo.section.1.footer'),
               }}
-            ></p>
+            ></p> */}
           </div>
         </div>
       </div>
@@ -101,9 +101,9 @@ const PromoSection = ({ t }: any) => (
                 __html: t('productpromo.section.2.title'),
               }}
             ></p>
-            <a className="link" href="#">
+            {/* <a className="link" href="#">
               {t('productpromo.section.2.link')}
-            </a>
+            </a> */}
             <h6
               className="promo_link"
               dangerouslySetInnerHTML={{

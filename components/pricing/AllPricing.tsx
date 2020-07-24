@@ -585,9 +585,11 @@ const AllPricing = ({ t }: any) => {
 
             <div className="pricing__bottom d-flex align-items-center justify-content-center">
               <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
-              <a href="#" className="btn v3">
+              <Link href="/contact">
+              <a className="btn v3">
                 {t('pricingallpricing.sellBtn')}
               </a>
+              </Link>
             </div>
           </div>
         </div>
