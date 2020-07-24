@@ -60,14 +60,31 @@ export interface ShipToAddress {
   address_no: string,
   building_info: string,
   street_info: string,
-  provice: string,
+  province: string,
   amphur: string,
   district: string,
   postcode: string
 }
 export interface UserAddress {
-  accId: number,
-  accType: string
+  accID: string,
+  accType: string,
+  taxID: string,
   billToAddress: BillToAddrss,
-  shipTopAddress: ShipToAddress
+  shipToAddress: ShipToAddress
+}
+
+export enum UserType{
+  Company = 'company',
+  Individual = 'individual'
+}
+
+export interface UpdateUserAddress{
+  type: string,
+  ship_to_contact_point: string,
+  ship_to_address: string,
+  ship_to_street: string,
+  ship_to_sub_district: string,
+  ship_to_district: string,
+  ship_to_province: string,
+  ship_to_postcode: string
 }

@@ -6,13 +6,27 @@ import classnames from 'classnames'
 import { ProductPackage, ProductBuy } from '../../services/shopping/pricing.model';
 import Router from 'next/router';
 import numeral from 'numeral';
-import TagManager from 'react-gtm-module'
-const tagManagerArgs = {
-  dataLayer: {
-    event: 'register',
-    register_method:'register_method',
-    action: 'view'
-  }
+import { useForm } from "react-hook-form";
+import _ from "lodash/fp";
+import Swal from 'sweetalert2'
+// import TagManager from 'react-gtm-module'
+import ThailandAddress from '../autocomplete-address-thai'
+import * as PaymentService from '../../services/shopping/payment.service'
+import { UserAddress, UserType, UpdateUserAddress } from '../../services/user/user.model';
+
+// const tagManagerArgs = {
+//   dataLayer: {
+//     event: 'register',
+//     register_method: 'register_method',
+//     action: 'view'
+//   }
+// }
+
+interface AddressShipTo {
+  companyName: string,
+  address: string,
+  taxId: string,
+  accType: string,
 }
 
 let defaultProductBuy: ProductBuy = {
@@ -25,6 +39,28 @@ let defaultProductBuy: ProductBuy = {
   total: 0,
   period: 0
 }
+
+let address: AddressShipTo = {
+  companyName: '',
+  address: '',
+  taxId: '',
+  accType: ''
+}
+
+interface ThaiAddress {
+  subdistrict: string,
+  district: string,
+  province: string,
+  zipcode: string
+}
+
+let thaiAddressDefault: ThaiAddress = {
+  subdistrict: '',
+  district: '',
+  province: '',
+  zipcode: ''
+}
+
 const calcullateVat = (amount: number, vat: number): number => {
   return amount * (vat / 100)
 }
@@ -32,9 +68,11 @@ const HeroSection = ({ t, packages }: any) => {
   const [paymentType, setPaymentType] = useState('')
   const [productBuy, setProductBuy] = useState(defaultProductBuy)
   const [shipTo, setShipTo] = useState(false)
+  const [addressShipTo, setAddressShipTo] = useState(address)
+  const [changeAddress, setChangeAddress] = useState(false)
   const stickyBoxBar: any = useRef(null);
-
-
+  const [thaiAddress, setThaiAddress] = useState(thaiAddressDefault)
+  const { register, handleSubmit, clearErrors, reset, errors, getValues, setValue } = useForm();
   function stickyBox() {
     var scroll = window.pageYOffset;
     if (stickyBoxBar.current !== null) {
@@ -53,6 +91,14 @@ const HeroSection = ({ t, packages }: any) => {
     };
 
   }, []);
+
+  React.useEffect(() => {
+    register({ name: "subdistrict" }, { required: true });
+    register({ name: "district" }, { required: true });
+    register({ name: "province" }, { required: true });
+    register({ name: "zipcode" }, { required: true, validate: v => v.length === 5, pattern: /\d/ });
+    register({ name: "address" }, { required: true })
+  }, [register]);
 
   React.useEffect(() => {
     const packageId: any = localStorage.getItem('packageId')
@@ -76,22 +122,340 @@ const HeroSection = ({ t, packages }: any) => {
       sendername: packageSelect[0].sender,
       period: packageSelect[0].period,
       vat: vat,
-      total: vat + packageSelect[0].amount,
-
+      total: vat + packageSelect[0].amount
     }
 
     setProductBuy(defaultProductBuy)
+
+    const getAddress = async () => {
+      await loadUserAddress()
+    }
+    getAddress()
   }, [setProductBuy]);
+
+  const loadUserAddress = async () => {
+    try {
+      const res: UserAddress = await PaymentService.GetAddress()
+      address = {
+        accType: res.accType,
+        companyName: res.billToAddress.company_name,
+        address: `${res.shipToAddress.building_info} ${res.shipToAddress.address_no} ${res.shipToAddress.street_info} ตำบล/แขวง ${res.shipToAddress.district} <br>อำเภอ/เขต ${res.shipToAddress.amphur} <br>จังหวัด ${res.shipToAddress.province} ${res.shipToAddress.postcode}`,
+        taxId: res.taxID
+      }
+      setShipTo(res.accType === UserType.Company)
+      setAddressShipTo(address)
+    } catch (error) {
+      console.error(error.message)
+    }
+  }
 
   const handleSelectPayment = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const type = e.currentTarget.getAttribute('data-type')
     setPaymentType(type || '')
   }
 
-  const onClickShipTo = () => {
+  const onClickShipTo = async () => {
     setShipTo(!shipTo)
   }
-  
+
+  const onSubmitAddress = async (values: any) => {
+    Swal.fire({
+      title: 'กำลังบันทึกข้อมูล',
+      showConfirmButton:false,
+      allowOutsideClick:false,
+      onBeforeOpen: () =>{
+        Swal.showLoading()
+      }
+    })
+    let contactPoint
+    if (UserType.Company === addressShipTo.accType) {
+      contactPoint = values.contact_point || 'ฝ่ายบัญชี/การเงิน'
+    } else {
+      contactPoint = values.contact_point || ''
+    }
+
+    const data: UpdateUserAddress = {
+      type: addressShipTo.accType,
+      ship_to_contact_point: contactPoint,
+      ship_to_address: values.address,
+      ship_to_street: values.street,
+      ship_to_sub_district: values.subdistrict,
+      ship_to_district: values.district,
+      ship_to_province: values.province,
+      ship_to_postcode: values.zipcode
+    }
+    await PaymentService.UpdateAddress(data)
+    try {
+      await loadUserAddress()
+    } catch (error) {
+      console.log(error.message)
+    }
+    
+    setChangeAddress(false)
+    setValue('contact_point', '')
+    setValue('address', '')
+    setValue('street', '')
+    setValue('subdistrict', '')
+    setValue('district', '')
+    setValue('province', '')
+    setValue('zipcode', '')
+    setThaiAddress(thaiAddressDefault)
+    Swal.close()
+  }
+
+  const onChangeAddress = (e: React.FormEvent<HTMLInputElement>) => {
+    clearErrors(e.currentTarget.name)
+    const data = {
+      subdistrict: e.currentTarget.name === 'subdistrict' ? e.currentTarget.value : thaiAddress.subdistrict,
+      district: e.currentTarget.name === 'district' ? e.currentTarget.value : thaiAddress.district,
+      province: e.currentTarget.name === 'province' ? e.currentTarget.value : thaiAddress.province,
+      zipcode: e.currentTarget.name === 'zipcode' ? e.currentTarget.value : thaiAddress.zipcode
+    }
+    setValue('subdistrict', data.subdistrict)
+    setValue('district', data.district)
+    setValue('province', data.province)
+    setValue('zipcode', data.zipcode)
+    setThaiAddress(data)
+
+  }
+
+  const onSelectAddress = (fullAddress: ThaiAddress) => {
+    clearErrors()
+    const { subdistrict, district, province, zipcode } = fullAddress
+    setValue('subdistrict', subdistrict)
+    setValue('district', district)
+    setValue('province', province)
+    setValue('zipcode', zipcode)
+    setThaiAddress({
+      subdistrict,
+      district,
+      province,
+      zipcode
+    })
+  }
+
+  const onSubmitPayment = async() =>{
+    if(!paymentType){
+      Swal.fire({
+        icon: 'warning',
+        title: 'ช่องทางชำระเงิน',
+        text: 'กรุณาเลือกช่องทางชำระเงิน เพื่อกดยืนยันการชำระ',
+      })
+      return 
+    }
+    if(changeAddress){
+      Swal.fire({
+        icon: 'warning',
+        title: 'ที่อยู่สำหรับจัดส่งใบกำกับภาษี',
+        text: 'กรุณาแก้ไขข้อมูลและบันทึกข้อมูลให้เรียบร้อย',
+      })
+      return
+    }
+
+    console.log(paymentType)
+
+  }
+
+  const sectionAdress = () => {
+    return <div className="row">
+      <div className="col-12">
+        <h6 className="border__bottom">
+          {t('paymenthero.taxaddress')}
+        </h6>
+
+        <h6 style={{ marginTop: '30px' }}>
+          {addressShipTo.companyName}
+        </h6>
+        <p style={{ color: '#5b6e80', fontWeight: 400 }} dangerouslySetInnerHTML={{ __html: addressShipTo.address }} />
+        <p style={{ color: '#5b6e80', fontWeight: 400 }}>
+          {addressShipTo.taxId ? `เลขทะเบียนนิติบุคคลเลขที่ ${addressShipTo.taxId}` : null}
+        </p>
+
+        <button
+          onClick={() => {
+            setChangeAddress(true)
+          }}
+          className="btn v8 button__sm_100"
+          style={{
+            marginTop: '30px', padding: '20px 30px'
+          }}
+        >
+          {t('paymenthero.changeaddressBtn')}
+        </button>
+      </div>
+    </div>
+  }
+
+  const formAdress = () => {
+    return <form onSubmit={handleSubmit(onSubmitAddress)}>
+      <div className="row">
+        <div className="col-12">
+          <h6 className="border__bottom">
+            {t('paymenthero.taxaddress')}
+          </h6>
+        </div>
+        <div className="col-12">
+          <input
+            type="text"
+            className="input__box"
+            name="contact_point"
+            ref={register}
+            placeholder={t('paymenthero.form.contact_point')}
+          />
+        </div>
+        <div className="col-12">
+          <input
+            type="text"
+            className="input__box"
+            name="address"
+
+            onChange={(e) => {
+              clearErrors(e.currentTarget.name),
+                setValue(e.currentTarget.name, e.currentTarget.value)
+            }}
+            placeholder={t('paymenthero.form.address')}
+          />
+          {_.get("address.type", errors) === "required" && (
+            <p style={{
+              color: '#e20000',
+              margin: '15px',
+            }}>This field is required</p>
+          )}
+        </div>
+        <div className="col-md-6">
+          <input
+            type="text"
+            name="street"
+            className="input__box"
+            ref={register}
+            placeholder={t('paymenthero.form.street')}
+          />
+          {_.get("street.type", errors) === "required" && (
+            <p style={{
+              color: '#e20000',
+              margin: '15px',
+            }}>This field is required</p>
+          )}
+        </div>
+
+        <div className="col-md-6">
+          <ThailandAddress
+            address="subdistrict"
+            value={thaiAddress.subdistrict}
+            onChange={onChangeAddress}
+            onSelect={onSelectAddress}
+            renderInput={(props: any) => <input
+              {...props}
+              type="text"
+              name="subdistrict"
+              className="input__box"
+              placeholder={t('paymenthero.form.district')}
+            />}
+          />
+
+          {_.get("subdistrict.type", errors) === "required" && (
+            <p style={{
+              color: '#e20000',
+              margin: '15px',
+            }}>This field is required</p>
+          )}
+        </div>
+
+        <div className="col-md-6">
+
+          <ThailandAddress
+            address="district"
+            value={thaiAddress.district}
+            onChange={onChangeAddress}
+            onSelect={onSelectAddress}
+            renderInput={(props: any) => <input
+              {...props}
+              type="text"
+              name="district"
+              className="input__box"
+              placeholder={t('paymenthero.form.county')}
+            />}
+          />
+
+          {_.get("district.type", errors) === "required" && (
+            <p style={{
+              color: '#e20000',
+              margin: '15px',
+            }}>This field is required</p>
+          )}
+
+        </div>
+
+        <div className="col-md-6">
+          <ThailandAddress
+            address="province"
+            value={thaiAddress.province}
+            onChange={onChangeAddress}
+            onSelect={onSelectAddress}
+            renderInput={(props: any) => <input
+              {...props}
+              type="text"
+              name="province"
+              className="input__box"
+              placeholder={t('paymenthero.form.province')}
+            />}
+          />
+          {_.get("province.type", errors) === "required" && (
+            <p style={{
+              color: '#e20000',
+              margin: '15px',
+            }}>This field is required</p>
+          )}
+        </div>
+
+        <div className="col-md-6">
+          <ThailandAddress
+            address="zipcode"
+            value={thaiAddress.zipcode}
+            onChange={onChangeAddress}
+            onSelect={onSelectAddress}
+            renderInput={(props: any) => <input
+              {...props}
+              type="text"
+              name="zipcode"
+              className="input__box"
+              placeholder={t('paymenthero.form.postcode')}
+            />
+            }
+          />
+          {_.get("zipcode.type", errors) === "required" && (
+            <p style={{
+              color: '#e20000',
+              margin: '15px',
+            }}>This field is required</p>
+          )}{console.log(errors)}
+          {_.get("zipcode.type", errors) === "validate" && (
+            <p style={{
+              color: '#e20000',
+              margin: '15px',
+            }}>This field is zipcode</p>
+          )}
+          {_.get("zipcode.type", errors) === "pattern" && (
+            <p style={{
+              color: '#e20000',
+              margin: '15px',
+            }}>This field is number</p>
+          )}
+        </div>
+
+        <div className="col-12 text-center">
+          <button
+            type="submit"
+            className="btn v8"
+            style={{ marginTop: '45px' }}
+          >
+            {t('paymenthero.form.submitBtn')}
+          </button>
+        </div>
+      </div>
+    </form>
+  }
+
   return (
     <div className="container">
       <div className="row hero_top_one">
@@ -184,7 +548,7 @@ const HeroSection = ({ t, packages }: any) => {
           <div className="box__wrapper">
             <div className="box__header" style={{ padding: '25px 30px' }}>
               <label className="radio_wrapper">
-                <input type="radio" name="radio" checked={shipTo} />
+                <input type="radio" name="radio" onChange={() => { }} checked={shipTo} />
                 <span className="checkmark" onClick={onClickShipTo}></span>
               </label>
               <h5>{t('paymenthero.taxheader')}</h5>
@@ -194,118 +558,7 @@ const HeroSection = ({ t, packages }: any) => {
                 className="box__content border-0"
                 style={{ padding: '40px 30px 50px' }}
               >
-                <div className="row">
-                  <div className="col-12">
-                    <h6 className="border__bottom">
-                      {t('paymenthero.taxaddress')}
-                    </h6>
-
-                    <h6 style={{ marginTop: '30px' }}>
-                      บริษัท วันม๊อบบี้ จำกัด
-                    </h6>
-                    <p style={{ color: '#5b6e80', fontWeight: 400 }}>
-                      เลขที่ 2521/10 ถนนลาดพร้าว แขวงคลองเจ้าคุณสิงห์
-                      เขตวังทองหลาง กทม 10310
-                      <br />
-                      เลขทะเบียนนิติบุคคลเลขที่ 0105550113634
-                    </p>
-
-                    <a
-                      href="#"
-                      className="btn v8 button__sm_100"
-                      style={{
-                        marginTop: '30px', padding: '20px 30px'
-                      }}
-                    >
-                      {t('paymenthero.changeaddressBtn')}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="box__wrapper">
-            <div className="box__header" style={{ padding: '20px 25px' }}>
-              <label className="radio_wrapper">
-                <input type="radio" name="radio" />
-                <span className="checkmark"></span>
-              </label>
-              <h5>{t('paymenthero.taxheader')}</h5>
-            </div>
-            <div className="box__body">
-              <div
-                className="box__content border-0"
-                style={{ padding: '30px 20px 40px' }}
-              >
-                <div className="row">
-                  <div className="col-12">
-                    <h6 className="border__bottom">
-                      {t('paymenthero.taxaddress')}
-                    </h6>
-
-                    <form action="#">
-                      <div className="row">
-                        <div className="col-12">
-                          <input
-                            type="text"
-                            className="input__box"
-                            placeholder={t('paymenthero.form.address')}
-                          />
-                        </div>
-                        <div className="col-md-6">
-                          <input
-                            type="text"
-                            className="input__box"
-                            placeholder={t('paymenthero.form.street')}
-                          />
-                        </div>
-
-                        <div className="col-md-6">
-                          <input
-                            type="text"
-                            className="input__box"
-                            placeholder={t('paymenthero.form.district')}
-                          />
-                        </div>
-
-                        <div className="col-md-6">
-                          <input
-                            type="text"
-                            className="input__box"
-                            placeholder={t('paymenthero.form.county')}
-                          />
-                        </div>
-
-                        <div className="col-md-6">
-                          <input
-                            type="text"
-                            className="input__box"
-                            placeholder={t('paymenthero.form.province')}
-                          />
-                        </div>
-
-                        <div className="col-md-6">
-                          <input
-                            type="text"
-                            className="input__box"
-                            placeholder={t('paymenthero.form.postcode')}
-                          />
-                        </div>
-
-                        <div className="col-12 text-center">
-                          <button
-                            type="submit"
-                            className="btn v8"
-                            style={{ marginTop: '45px' }}
-                          >
-                            {t('paymenthero.form.submitBtn')}
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+                {changeAddress ? formAdress() : sectionAdress()}
               </div>
             </div>
           </div>
@@ -506,13 +759,14 @@ const HeroSection = ({ t, packages }: any) => {
                       </div>
                     </div>
 
-                    <a
-                      href="#"
+                    <button
+                      type="button"
                       className="btn v8 w-100 d-none d-xl-block"
                       style={{ marginTop: '65px' }}
+                      onClick={onSubmitPayment}
                     >
                       {t('paymenthero.taxinvoice.confirepayment')}
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
