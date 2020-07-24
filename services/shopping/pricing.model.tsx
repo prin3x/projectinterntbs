@@ -25,3 +25,15 @@ export interface PricingProps {
 export interface PackageAll {
   filter: string;
 }
+
+
+export interface ProductBuy {
+  productName: string,
+  unitSms: number,
+  credit: number,
+  period: number,
+  sendername: number
+  amount: number,
+  vat: number,
+  total: number
+}
