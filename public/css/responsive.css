@@ -753,7 +753,7 @@
   }
   .simple_slider_section {
     height: auto;
-    min-height: 800px;
+    min-height: 750px;
   }
   .simple_slider_heading h3, .globe_text h3 {
     font-size: 36px;
