@@ -35,7 +35,12 @@ const RegisterComponents = ({ t }: any) => {
     setValue,
     clearErrors,
     errors,
-  } = useForm<Inputs>();
+  } = useForm<Inputs>({
+    defaultValues: {
+      agree: true,
+      news: true
+    }
+  });
   const onSubmit = async (data: any) => {
     console.log(data);
     const user = await registerUser(data);

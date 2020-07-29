@@ -42,16 +42,19 @@ export async function login(param: any): Promise<AuthLogin> {
     let loginResponse: AuthLogin = {
       token: data.token,
       passcode: data.passcode,
+      isCompletedProfile: data.isCompletedProfile,
       error: {
         code: '',
         erromessagerText: '',
       },
     };
-    localStorage.setItem(
-      'TBS_token',
-      JSON.stringify({ token: loginResponse.token })
-    );
-    Cookie.set('PASSCODE', loginResponse.passcode, { expires: 0.15 });
+    if (data.isCompletedProfile) {
+      localStorage.setItem(
+        'TBS_token',
+        JSON.stringify({ token: loginResponse.token })
+      );
+      Cookie.set('PASSCODE', loginResponse.passcode, { expires: 0.15 });
+    }
     return loginResponse;
   } catch (error) {
     localStorage.setItem('TBS_token', JSON.stringify({}));
@@ -97,6 +100,7 @@ export const loginFail = (code = '400', errorMessageText = '') => {
   let loginResponse: AuthLogin = {
     token: '',
     passcode: '',
+    isCompletedProfile: '',
     error: {
       code: code ? code : 'auth.user.fail',
       erromessagerText: errorMessageText,
