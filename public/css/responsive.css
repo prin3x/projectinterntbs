@@ -4260,6 +4260,7 @@
     width: 60px;
     padding: 10px;
     margin-right: 15px;
+    margin-left: 20px;
   }
   .icon__box .serial__number {
     height: 20px;
@@ -4274,7 +4275,7 @@
   .serial__content p,
   .serial__content p .link {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 20px;
     max-width: 280px;
   }
   .serial__content p br {

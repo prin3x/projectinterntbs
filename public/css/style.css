@@ -1230,7 +1230,7 @@ a:hover {
 }
 
 .btn.v1 {
-  color: #fff;
+  color: #fff !important;
   background: -webkit-gradient(
     linear,
     left bottom,
@@ -1269,7 +1269,7 @@ a:hover {
 }
 
 .btn.v2 {
-  color: #fff;
+  color: #fff !important;
   background: -webkit-gradient(
     linear,
     left bottom,
@@ -1303,7 +1303,7 @@ a:hover {
 }
 
 .btn.v3 {
-  color: #fff;
+  color: #fff !important;
   background: -webkit-gradient(
     linear,
     left bottom,
@@ -1338,7 +1338,7 @@ a:hover {
 }
 
 .btn.v4 {
-  color: #fff;
+  color: #fff !important;
   background: -webkit-gradient(
     linear,
     left bottom,
@@ -1380,7 +1380,7 @@ a:hover {
 }
 
 .btn.v5 {
-  color: #31b1e7;
+  color: #31b1e7 !important;
   background: transparent;
   font-size: 18px;
   text-transform: uppercase;
@@ -1395,7 +1395,7 @@ a:hover {
 }
 
 .btn.v6 {
-  color: #31b1e7;
+  color: #31b1e7 !important;
   background: transparent;
   font-size: 20px;
   text-transform: uppercase;
@@ -1410,7 +1410,7 @@ a:hover {
 }
 
 .btn.v7 {
-  color: #fff;
+  color: #fff !important;
   background: transparent;
   font-size: 20px;
   border: 3px solid #fff;
@@ -1424,7 +1424,7 @@ a:hover {
 }
 
 .btn.v8 {
-  color: #fff;
+  color: #fff !important;
   background: linear-gradient(
     0deg,
     rgba(38, 111, 253, 1) 0%,
@@ -1442,7 +1442,7 @@ a:hover {
 }
 
 .btn.v9 {
-  color: #fff;
+  color: #fff !important;
   background: linear-gradient(
     0deg,
     rgba(38, 111, 253, 1) 0%,
@@ -3640,7 +3640,7 @@ ul.before-footer {
 }
 
 .box__wrapper .box__body p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   font-family: 'Sarabun', sans-serif;
   font-weight: bold;
