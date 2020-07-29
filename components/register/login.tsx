@@ -1,11 +1,10 @@
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import { login } from '../../services/user/user.service';
-import React, { useEffect } from 'react';
-// import React, { useState, useRef, useEffect } from 'react';
-// import Router from 'next/router';
+import React, { useEffect,useContext } from 'react';
+import Router from 'next/router';
 import { useForm } from 'react-hook-form';
-
+import { StoreContext } from '../context/store';
 type Inputs = {
   example: string;
   exampleRequired: string;
@@ -17,7 +16,9 @@ const LoginComponents = ({ t }: any) => {
   let { register, handleSubmit, setError, clearErrors, errors } = useForm<
     Inputs
   >();
+  const dataStore: any = useContext(StoreContext);
   const onSubmit = async (data: any) => {
+    console.log("data.password  ::: ",data.password);
     const user = await login(data);
     console.log('login return : ', user);
     if (user.error.code !== '') {
@@ -28,7 +29,13 @@ const LoginComponents = ({ t }: any) => {
       // clearErrors('res');
     } else {
       // Router.push('/');
-      window.location.replace('https://member.thaibulksms.com/');
+      if (user.isCompletedProfile) {
+        window.location.replace('https://member.thaibulksms.com/');
+      } else {
+        dataStore.msisdnStore[1](data.username);
+        dataStore.passStore[1](data.password);
+        Router.push('/register/quickregister');
+      }
     }
   };
   const handleErorr = (error: any) => {

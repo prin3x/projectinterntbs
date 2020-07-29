@@ -1,5 +1,6 @@
 export interface AuthLogin {
   token: string;
+  isCompletedProfile: string;
   passcode: string;
   error: ErrorMessage;
 }

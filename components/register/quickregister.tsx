@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Router } from '../../i18n';
 import PropTypes from 'prop-types';
 import { StoreContext } from '../context/store';
 import React, { useEffect, useContext } from 'react';
@@ -18,14 +18,19 @@ type Inputs = {
 };
 const QuickRegisterComponents = ({ t }: any) => {
   const dataStore: any = useContext(StoreContext);
-  let { register, handleSubmit, setError, clearErrors, errors } = useForm<
+  let { register, handleSubmit, setError, clearErrors, setValue, errors } = useForm<
     Inputs
-  >();
+  >({
+    defaultValues: {
+      agree: true,
+      news: true
+    }
+  });
   const onSubmit = async (data: any) => {
-    // if (dataStore.msisdnStore[0] === undefined) {
-    //   console.log('errror msisdnStore');
-    //   return;
-    // }
+    if (dataStore.msisdnStore[0] === undefined) {
+      console.log('errror msisdnStore');
+      return;
+    }
     const user = await login({ ...data, username: dataStore.msisdnStore[0] });
     console.log('user : ', user);
     if (user.error.code !== '') {
@@ -78,10 +83,14 @@ const QuickRegisterComponents = ({ t }: any) => {
         action: 'view_fulfil_info',
       },
     });
+    console.log('dataStore : ', dataStore);
+    if(dataStore.passStore[0] !== undefined) {
+      setValue("password", dataStore.passStore[0])
+    }
     // console.log('msisdnStore :::::::::::: ', dataStore.msisdnStore);
-    // if (dataStore.msisdnStore[0] === undefined) {
-    // Router.push('/log-in');
-    // }
+    if (dataStore.msisdnStore[0] === undefined) {
+    Router.push('/log-in');
+    }
   }, []);
   return (
     <div className="register_section">
