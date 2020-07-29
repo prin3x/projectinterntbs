@@ -21,7 +21,7 @@ const HeroSection = ({ t }: any) => {
   }, []);
   return (
     <div className="container">
-      <div className="row justify-content-center hero_top_one">
+      <div className="row justify-content-center hero_top_one paymentPage">
         <div className="col-12 text-center">
           <h3 className="section__title">{t('paymentbankhero.header')}</h3>
         </div>
@@ -34,7 +34,7 @@ const HeroSection = ({ t }: any) => {
             <div className="box__body">
               <div className="box__content new__content">
                 <div className="row">
-                  <div className="col-4">
+                  <div className="col-6">
                     <h6 style={{ fontWeight: 400, color: '#5b6e80' }}>
                       {t('paymentbankhero.payment.ordernumber')}
                     </h6>
@@ -43,11 +43,11 @@ const HeroSection = ({ t }: any) => {
                     </h6>
                   </div>
 
-                  <div className="col-8">
+                  <div className="col-6">
                     <h6 className="theme__text font-weight-bold"> 0022953</h6>
                     <h6 style={{ fontWeight: 400, color: '#5b6e80' }}>
-                      {t('paymentbankhero.payment.length')}
                       <span className="theme__text font-weight-bold">
+                        {t('paymentbankhero.payment.length')}
                         31 มีนาคม 2562 เวลา 13:35 น.
                       </span>
                     </h6>
@@ -350,7 +350,7 @@ const HeroSection = ({ t }: any) => {
                       <h6
                         style={{
                           color: ' #5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '28px',
                           fontWeight: 500,
                         }}
                       >
@@ -361,8 +361,7 @@ const HeroSection = ({ t }: any) => {
                           30,000{' '}
                           <span
                             style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
+                              fontSize: '16px',
                               color: '#5b6e80',
                               marginLeft: '20px',
                             }}
@@ -377,7 +376,7 @@ const HeroSection = ({ t }: any) => {
                       <h6
                         style={{
                           color: ' #5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '28px',
                           fontWeight: 500,
                         }}
                       >
@@ -389,8 +388,7 @@ const HeroSection = ({ t }: any) => {
                           100{' '}
                           <span
                             style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
+                              fontSize: '16px',
                               color: '#5b6e80',
                               marginLeft: '20px',
                             }}
@@ -405,7 +403,7 @@ const HeroSection = ({ t }: any) => {
                       <h6
                         style={{
                           color: ' #5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '28px',
                           fontWeight: 500,
                         }}
                       >
@@ -417,8 +415,7 @@ const HeroSection = ({ t }: any) => {
                           2,100
                           <span
                             style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
+                              fontSize: '16px',
                               color: '#5b6e80',
                               marginLeft: '20px',
                             }}
@@ -442,7 +439,7 @@ const HeroSection = ({ t }: any) => {
                       <h6
                         style={{
                           color: ' #5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '28px',
                           fontWeight: 500,
                         }}
                       >
@@ -456,8 +453,7 @@ const HeroSection = ({ t }: any) => {
                           32,000{' '}
                           <span
                             style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
+                              fontSize: '16px',
                               color: '#5b6e80',
                               marginLeft: '20px',
                             }}

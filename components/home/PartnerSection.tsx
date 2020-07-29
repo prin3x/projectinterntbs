@@ -9,7 +9,9 @@ const PartnerSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h6 className="partner_title">{t('homepartner.title')}</h6>
+          <h6 className="partner_title" style={{ textTransform: 'none' }}>
+            {t('homepartner.title')}
+          </h6>
         </div>
         <div className="col-md-12">
           <OwlCarousel

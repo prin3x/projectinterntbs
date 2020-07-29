@@ -42,6 +42,15 @@
       $this.addClass('active');
     }
   });
+  $('body').on('click', '.page_wrapper, .closemenu', function (e) {
+    // var $this = $(this);
+    // e.preventDefault();
+
+    if ($('body').hasClass('offcanvas-menu')) {
+      $('body').removeClass('offcanvas-menu');
+      // $this.removeClass('active');
+    }
+  });
 
   // /* -------------------------------------
   //             Responsive menu

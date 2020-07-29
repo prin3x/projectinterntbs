@@ -5,7 +5,7 @@
       "header": "ENรายการที่รอชำระ",
       "ordernumber": "ENหมายเลขการสั่งซื้อ",
       "lastdate": "ENกำหนดชำระ",
-      "length": "ENภายใน"
+      "length": "ENภายใน "
     },
     "bank": {
       "header": "ENข้อมูลบัญชีธนาคาร",

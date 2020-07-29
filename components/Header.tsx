@@ -120,14 +120,15 @@ const Header = ({ t }: any) => {
                       <a className="active">{t('header.howtoorder')}</a>
                     </Link>
                   </li>
-                  <li className="has-children">
-                    <a className="active">{t('header.database')}</a>
+                  {/* <li className="has-children">
+                    <a className="active" href="#">
+                      {t('header.database')}
+                    </a>
                     <ul className="dropdown">
                       <li>
                         <Link href="/ResourcesLanding">
                           <a>
                             <h6>{t('header.resources')}</h6>
-                            {/* <p>{t('menu-3-1-s')}</p> */}
                           </a>
                         </Link>
                       </li>
@@ -135,36 +136,24 @@ const Header = ({ t }: any) => {
                         <Link href="/KnowledgeListing">
                           <a>
                             <h6>{t('header.knowledge')}</h6>
-                            {/* <p>{t('menu-3-2-s')}</p> */}
-                            <p className="txtSub">
-                              Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ
-                              ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์
-                            </p>
+                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
                         <Link href="/UseCasesListing">
                           <a>
                             <h6>{t('header.example')}</h6>
-                            {/* <p>{t('menu-3-3-s')}</p> */}
-                            <p className="txtSub">
-                              Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ
-                              ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์
-                            </p>
+                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
                         <Link href="/SuccessStoriesListing">
                           <a>
                             <h6>{t('header.successstories')}</h6>
-                            {/* <p>{t('menu-3-4-s')}</p> */}
-                            <p className="txtSub">
-                              Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ
-                              ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์
-                            </p>
+                            <p className="txtSub">Lorem Ipsum คือ เนื้อหาจำลองแบบเรียบๆ ที่ใช้กันในธุรกิจงานพิมพ์หรืองานเรียงพิมพ์</p>
                           </a>
                         </Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/Documentation">
                       <a className="active">{t('header.documentation')}</a>
@@ -194,20 +183,26 @@ const Header = ({ t }: any) => {
                   <ul className="site-nav-wrap">
                     <li>
                       <Link href="/product">
-                        <a className="active">{t('header.product')}</a>
+                        <a className="active closemenu" href="#">
+                          {t('header.product')}
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/pricing">
-                        <a className="active">{t('header.pricing')}</a>
+                        <a className="active closemenu" href="#">
+                          {t('header.pricing')}
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/support/how-to-order">
-                        <a className="active">{t('header.howtoorder')}</a>
+                        <a className="active closemenu" href="#">
+                          {t('header.howtoorder')}
+                        </a>
                       </Link>
                     </li>
-                    <li className="has-children">
+                    {/* <li className="has-children">
                       <span
                         className="arrow-collapse collapsed"
                         data-toggle="collapse"
@@ -217,46 +212,46 @@ const Header = ({ t }: any) => {
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/ResourcesLanding">
-                            <a>
+                            <a href="#" className="closemenu">
                               <h6>{t('header.resources')}</h6>
-                              {/* <p>{t('menu-3-1-s')}</p> */}
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/KnowledgeListing">
-                            <a>
+                            <a href="#" className="closemenu">
                               <h6>{t('header.knowledge')}</h6>
-                              {/* <p>{t('menu-3-2-s')}</p> */}
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/UseCasesListing">
-                            <a>
+                            <a href="#" className="closemenu">
                               <h6>{t('header.example')}</h6>
-                              {/* <p>{t('menu-3-3-s')}</p> */}
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/SuccessStoriesListing">
-                            <a>
+                            <a href="#" className="closemenu">
                               <h6>{t('header.successstories')}</h6>
-                              {/* <p>{t('menu-3-4-s')}</p> */}
                             </a>
                           </Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/Documentation">
-                        <a className="active">{t('header.documentation')}</a>
+                        <a className="active closemenu" href="#">
+                          {t('header.documentation')}
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/contact">
-                        <a className="active">{t('header.contact')}</a>
+                        <a className="active closemenu">
+                          {t('header.contact')}
+                        </a>
                       </Link>
                     </li>
                   </ul>

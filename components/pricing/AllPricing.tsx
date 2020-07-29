@@ -169,7 +169,7 @@ const AllPricing = ({ t, packages }: any) => {
       // style={{ backgroundImage: 'url(/img/pricing_bg.png)' }}
       data-bgset="/img/pricing_bg.png"
     >
-      <div className="container">
+      <div className="container priceTable">
         <div className="row">
           <div className="col-12">
             <div className="row no-gutters">
@@ -200,7 +200,11 @@ const AllPricing = ({ t, packages }: any) => {
           </div>
 
           <div className="col-12 text-center pricing__bottom__content">
-            <p>{t('pricingallpricing.footertitle')}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t('pricingallpricing.footertitle'),
+              }}
+            />
 
             <div className="pricing__bottom d-flex align-items-center justify-content-center">
               <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
@@ -220,4 +224,4 @@ AllPricing.getInitialProps = async () => ({
 AllPricing.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('PricingAllPricing')(AllPricing);
+export default withTranslation('PricingAllPricing')(React.memo(AllPricing));

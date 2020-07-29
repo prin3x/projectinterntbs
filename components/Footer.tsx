@@ -21,7 +21,7 @@ const Footer = ({ t }: any) => (
             </ul>
           </div>
         </div>
-        <div className="col-md-3 col-6">
+        {/* <div className="col-md-3 col-6">
           <div className="footer_widget">
             <h4>{t('footer.database')}</h4>
             <ul>
@@ -47,7 +47,7 @@ const Footer = ({ t }: any) => (
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
         <div className="col-md-3 col-6">
           <div className="footer_widget">
             <h4>{t('footer.support')}</h4>
@@ -67,19 +67,17 @@ const Footer = ({ t }: any) => (
         </div>
         <div className="col-md-3 col-6">
           <div className="footer_widget">
-            <Link href="/fb">
-              <a>
-                <h4>
-                  {t('footer.about')}
-                  <img
-                    className="lazyload"
-                    style={{ maxWidth: '25px', marginLeft: '20px' }}
-                    data-src="/img/fb.png"
-                    alt="Image"
-                  />
-                </h4>
-              </a>
-            </Link>
+            <a href="https://www.facebook.com/ThaiBulkSMS">
+              <h4>
+                {t('footer.about')}
+                <img
+                  className="lazyload"
+                  style={{ maxWidth: '25px', marginLeft: '20px' }}
+                  data-src="/img/fb.png"
+                  alt="Image"
+                />
+              </h4>
+            </a>
           </div>
         </div>
         <div className="col-12 md-none">
