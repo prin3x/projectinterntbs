@@ -8,7 +8,7 @@ const SmsSection = ({ t }: any) => (
   >
     <div className="container">
       <div className="row">
-        <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 ">
+        <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 ">
           <div className="sms_text">
             <h3>{t('productsms.header')}</h3>
             <p>{t('productsms.title')}</p>
