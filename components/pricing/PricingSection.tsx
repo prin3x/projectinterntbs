@@ -10,7 +10,8 @@ const PricingSection = ({ t }: any) => {
       // style={{ backgroundImage: 'url(/img/bg_11.png)' }}
       data-bgset="/img/bg_11.png"
     >
-      <div className="container">
+      <div className="container pricing">
+        <h3 className="headPricing">ราคาแพ็กเกจ</h3>
         <div className="row justify-content-xl-end mt-80">
           <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
             <div
@@ -23,10 +24,7 @@ const PricingSection = ({ t }: any) => {
               <h3 style={{ fontSize: '40px' }}>
                 {t('pricingpricing.package.standard.header')}
               </h3>
-              <p
-                style={{ fontSize: '22px', color: '#5b6e80' }}
-                className="my-4"
-              >
+              <p style={{ fontSize: '22px', color: '#5b6e80' }}>
                 {t('pricingpricing.package.standard.title')}
               </p>
               <ul className="pricing_feature">
@@ -49,7 +47,7 @@ const PricingSection = ({ t }: any) => {
               </ul>
               <div className="price_plan">
                 <span>{t('pricingpricing.start')}</span>
-                <h2 style={{ fontSize: '86px', fontWeight: 500 }}>
+                <h2 style={{ fontSize: '72px', fontWeight: 500 }}>
                   {t('pricingpricing.package.standard.price')}
                   <span style={{ marginLeft: '1px' }}>
                     {t('pricingpricing.unit')}
@@ -69,10 +67,7 @@ const PricingSection = ({ t }: any) => {
               <h3 style={{ fontSize: '40px' }}>
                 {t('pricingpricing.package.corporate.header')}
               </h3>
-              <p
-                style={{ fontSize: '22px', color: '#5b6e80' }}
-                className="my-4"
-              >
+              <p style={{ fontSize: '22px', color: '#5b6e80' }}>
                 {t('pricingpricing.package.corporate.title')}
               </p>
               <ul className="pricing_feature">
@@ -81,21 +76,21 @@ const PricingSection = ({ t }: any) => {
                   <p>{t('pricingpricing.package.corporate.feature.1')}</p>
                 </li>
                 <li>
-                  <i className="far fa-check-circle"></i>
+                  <i className="fa fa-plus-circle" aria-hidden="true"></i>
                   <p>{t('pricingpricing.package.corporate.feature.2')}</p>
                 </li>
                 <li>
-                  <i className="far fa-check-circle"></i>
+                  <i className="fa fa-plus-circle" aria-hidden="true"></i>
                   <p>{t('pricingpricing.package.corporate.feature.3')}</p>
                 </li>
                 <li>
-                  <i className="far fa-check-circle"></i>
+                  <i className="fa fa-plus-circle" aria-hidden="true"></i>
                   <p>{t('pricingpricing.package.corporate.feature.4')}</p>
                 </li>
               </ul>
               <div className="price_plan">
                 <span>{t('pricingpricing.start')}</span>
-                <h2 style={{ fontSize: '86px', fontWeight: 500 }}>
+                <h2 style={{ fontSize: '72px', fontWeight: 500 }}>
                   {t('pricingpricing.package.corporate.price')}
                   <span style={{ marginLeft: '1px' }}>
                     {t('pricingpricing.unit')}

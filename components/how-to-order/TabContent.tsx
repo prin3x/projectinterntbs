@@ -1,9 +1,12 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
 const TabContent = ({ t }: any) => {
-  React.useEffect(() => {}, []);
+  const [tab , setTab] = React.useState<any>() 
+  React.useEffect(() => {
+    setTab($('#pills-profile-tab'));
+  }, [tab]);
   return (
     <div
       className="tab__content faq_section lazyload"
@@ -32,11 +35,12 @@ const TabContent = ({ t }: any) => {
                       </div>
                       <div className="serial__content">
                         <h4>{t('howtoordertabcontent.content.1.title')}</h4>
-                        <p
+                        {/* <p
                           dangerouslySetInnerHTML={{
                             __html: t('howtoordertabcontent.content.1.desc'),
                           }}
-                        ></p>
+                        ></p> */}
+                            <p>{t('howtoordertabcontent.content.1.desc1')}<Link href="/pricing"><a className="theme__text link mt-0">{t('howtoordertabcontent.content.1.desc2')}</a></Link>{t('howtoordertabcontent.content.1.desc3')}</p>
                       </div>
                     </div>
                   </div>
@@ -74,11 +78,14 @@ const TabContent = ({ t }: any) => {
                       </div>
                       <div className="serial__content">
                         <h4>{t('howtoordertabcontent.content.3.title')}</h4>
-                        <p
+                        {/* <p
                           dangerouslySetInnerHTML={{
                             __html: t('howtoordertabcontent.content.3.desc'),
                           }}
-                        ></p>
+                        ></p> */}
+                        <p
+                          
+                      >{t('howtoordertabcontent.content.3.desc1')}{' '}<a onClick={()=>{ tab?.tab('show') }} className="theme__text link mt-0">{t('howtoordertabcontent.content.3.desc2')}</a></p>
                       </div>
                     </div>
                   </div>
@@ -152,7 +159,7 @@ const TabContent = ({ t }: any) => {
                 id="pills-profile"
                 role="tabpanel"
               >
-                <div className="row justify-content-center">
+                <div className="row justify-content-center paymentImg">
                   <div className="col-lg-8">
                     <div className="box__wrapper">
                       <div className="box__header">

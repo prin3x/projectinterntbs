@@ -72,7 +72,7 @@ const HeroSection = ({ t, packages }: any) => {
   const [changeAddress, setChangeAddress] = useState(false)
   const stickyBoxBar: any = useRef(null);
   const [thaiAddress, setThaiAddress] = useState(thaiAddressDefault)
-  const { register, handleSubmit, clearErrors, reset, errors, getValues, setValue } = useForm();
+  const { register, handleSubmit, clearErrors, errors, setValue } = useForm();
   function stickyBox() {
     var scroll = window.pageYOffset;
     if (stickyBoxBar.current !== null) {
@@ -759,12 +759,8 @@ const HeroSection = ({ t, packages }: any) => {
                       </div>
                     </div>
 
-<<<<<<< HEAD
-                    <a
-=======
                     <button
                       type="button"
->>>>>>> feature/buy_package
                       className="btn v8 w-100 d-none d-xl-block"
                       style={{ marginTop: '65px' }}
                       onClick={onSubmitPayment}

@@ -3,8 +3,13 @@
     "header": "ลูกค้าที่มั่นใจใน <span class=\"col_one\">ThaiBulk</span> <span class=\"col_two\">SMS</span>",
     "item": {
       "1": {
-        "content": "“Our teams tell us they’re working together and solving problems much faster, because although they are spread across the globe, Slack makes it like you’re in the same room.”",
-        "credit": "Pam Whitmore",
+        "content": "“ThaiBulkSMS ทำให้การสื่อสารด้วยการส่งข้อความไปหาลูกค้าเป็นเรื่องที่ง่ายและสะดวกมาก ๆ เพราะสามารถให้เราส่งข้อความได้ด้วยตนเอง ไม่ต้องผ่านตัวกลาง อีกทั้งยังมีรายงานการส่ง ทำให้วัดผลได้อย่างแม่นยำมากยิ่งขึ้นค่ะ”",
+        "credit": "บริษัท สินมั่นคงประกันภัย จำกัด (มหาชน)",
+        "position": "Group manager, IT, Intuit"
+      },
+      "2": {
+        "content": "“ราคาคุ้มค่ากับคุณภาพและบริการที่ได้รับมากครับ อีกทั้งยังตอบโจทย์กับสิ่งคาดหวังไว้ได้ทุกประการ ทั้งด้านการวัดผล การเรียกดูรายงาน และการควบคุมงบประมาณที่สามารถปรับเปลี่ยนได้ในแต่ละเดือนหรือจนกว่าเครดิตจะหมด”",
+        "credit": "บริษัท สมาร์ท วัน โลจิสติกส์ จำกัด",
         "position": "Group manager, IT, Intuit"
       }
     },

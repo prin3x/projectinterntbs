@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import React, { useRef } from 'react';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
@@ -23,7 +23,12 @@ const SimpleSliderSection = ({ t }: any) => {
       }
     );
   }
+  function handlefade() {
+    mainImage.current.classList.add('fade-exit-active');
+  }
   function handleSelect(e: any) {
+    mainImage.current.classList.remove('fade-exit-active');
+    mainImage.current.classList.add('fade-enter-active');
     let count = 0;
     e.currentTarget.childNodes[0].childNodes[0].childNodes.forEach(
       (val: any) => {
@@ -73,6 +78,26 @@ const SimpleSliderSection = ({ t }: any) => {
                   data-src="/img/img_23.png"
                   alt="Image"
                 /> */}
+                <style jsx>{`
+                  .fade-enter {
+                    opacity: 0;
+                  }
+                  .fade-exit {
+                    opacity: 1;
+                  }
+                  .fade-enter-active {
+                    opacity: 1;
+                  }
+                  .fade-exit-active {
+                    opacity: 0;
+                  }
+                  .fade-enter-active {
+                    transition: opacity 500ms;
+                  }
+                  .fade-exit-active {
+                    transition: opacity 1000ms;
+                  }
+                `}</style>
               </div>
             </div>
           </div>
@@ -84,6 +109,7 @@ const SimpleSliderSection = ({ t }: any) => {
               dots={false}
               loop
               onTranslated={(e) => handleSelect(e)}
+              onTranslate={() => handlefade()}
               onInitialized={(e) => onInitialized(e)}
               navText={[
                 '<i class="ion-ios-arrow-back"></i>',
@@ -116,16 +142,16 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.1.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User01.png"
                     alt="Image"
                   />
                   <p>
                     {t('homesimpleslider.item.1.desc')}
-                    <Link href="/">
-                      <a>
+                    {/* <Link href="/">
+                      <a href="#">
                         <span>{t('homesimpleslider.item.1.link')}</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </p>
                   <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
@@ -142,16 +168,16 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.2.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User02.png"
                     alt="Image"
                   />
                   <p>
                     {t('homesimpleslider.item.2.desc')}
-                    <Link href="/">
-                      <a>
+                    {/* <Link href="/">
+                      <a href="#">
                         <span>{t('homesimpleslider.item.2.link')}</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </p>
                   <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
@@ -168,7 +194,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.3.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User03.png"
                     alt="Image"
                   />
                   <p>{t('homesimpleslider.item.3.desc')}</p>
@@ -187,16 +213,16 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.4.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User04.png"
                     alt="Image"
                   />
                   <p>
                     {t('homesimpleslider.item.4.desc')}
-                    <Link href="/">
-                      <a>
+                    {/* <Link href="/">
+                      <a href="#">
                         <span>{t('homesimpleslider.item.4.link')}</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </p>
                   <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
@@ -213,16 +239,16 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.5.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/user_3.png"
+                    data-src="/img/User05.png"
                     alt="Image"
                   />
                   <p>
                     {t('homesimpleslider.item.5.desc')}
-                    <Link href="/">
-                      <a>
+                    {/* <Link href="/">
+                      <a href="#">
                         <span>{t('homesimpleslider.item.5.link')}</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </p>
                   <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
                   <span className="linking" style={{ display: 'none' }}>
@@ -235,14 +261,14 @@ const SimpleSliderSection = ({ t }: any) => {
                 </div>
               </div>
             </OwlCarousel>
-            <a className="lang_link text-right pr-4">
+            {/* <a href="#" className="lang_link text-right pr-4">
               {t('homesimpleslider.testBtn')}
               <img
                 className="lazyload"
                 data-src="/img/arrow_3.png"
                 alt="Image"
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

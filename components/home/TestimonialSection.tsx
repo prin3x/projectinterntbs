@@ -52,21 +52,41 @@ const TestimonialSection = ({ t }: any) => (
                   {t('hometestimonial.item.1.content')}
                 </p>
                 <div className="client_info">
-                  <div className="client_img">
+                  {/* <div className="client_img">
                     <img
                       className="lazyload"
                       data-src="/img/client_1.png"
                       alt="Image"
                     />
-                  </div>
+                  </div> */}
                   <div className="client_name">
                     <h6>{t('hometestimonial.item.1.credit')}</h6>
-                    <p>{t('p2')}</p>
+                    {/* <p>{t('p2')}</p> */}
                   </div>
                 </div>
               </div>
             </div>
             <div className="item">
+              <div className="testimonial_item">
+                <p className="client_quote">
+                  {t('hometestimonial.item.2.content')}
+                </p>
+                <div className="client_info">
+                  {/* <div className="client_img">
+                    <img
+                      className="lazyload"
+                      data-src="/img/client_1.png"
+                      alt="Image"
+                    />
+                  </div> */}
+                  <div className="client_name">
+                    <h6>{t('hometestimonial.item.2.credit')}</h6>
+                    {/* <p>{t('p2')}</p> */}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* <div className="item">
               <div className="testimonial_item">
                 <p className="client_quote">
                   {t('hometestimonial.item.1.content')}
@@ -85,27 +105,7 @@ const TestimonialSection = ({ t }: any) => (
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="item">
-              <div className="testimonial_item">
-                <p className="client_quote">
-                  {t('hometestimonial.item.1.content')}
-                </p>
-                <div className="client_info">
-                  <div className="client_img">
-                    <img
-                      className="lazyload"
-                      data-src="/img/client_1.png"
-                      alt="Image"
-                    />
-                  </div>
-                  <div className="client_name">
-                    <h6>{t('hometestimonial.item.1.credit')}</h6>
-                    <p>{t('p2')}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div> */}
           </OwlCarousel>
         </div>
       </div>

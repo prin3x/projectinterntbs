@@ -1,4 +1,4 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const HeroSection = ({ t }: any) => (
   <div
@@ -54,13 +54,13 @@ const HeroSection = ({ t }: any) => (
               }}
             ></h2>
             <p>{t('producthero.section.2.title3')}</p>
-            <Link href="/">
+            {/* <Link href="/">
               <a>
                 <p style={{ color: '#31b1e7' }}>
                   {t('producthero.section.2.link')}
                 </p>
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

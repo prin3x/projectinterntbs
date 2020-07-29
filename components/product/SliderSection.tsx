@@ -23,7 +23,7 @@ const SliderSection = ({ t }: any) => (
             nav
             dots={false}
             autoplay
-            autoplayTimeout={5500}
+            autoplayTimeout={8500}
             loop
             navText={[
               '<i class="ion-ios-arrow-back"></i>',
@@ -84,9 +84,9 @@ const SliderSection = ({ t }: any) => (
         </div>
       </div>
     </div>
-    <p style={{ textAlign: 'center', marginTop: '50px', color: '#31b1e7' }}>
+    {/* <p style={{ textAlign: 'center', marginTop: '50px', color: '#31b1e7' }}>
       {t('productslider.exampleBtn')}
-    </p>
+    </p> */}
   </div>
 );
 SliderSection.getInitialProps = async () => ({

@@ -8,7 +8,7 @@ const PromoSection = ({ t }: any) => (
   >
     <div className="container">
       <div className="row">
-        <div className="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+        <div className="col-lg-12">
           <div className="promo_text">
             <h2
               dangerouslySetInnerHTML={{
@@ -72,11 +72,11 @@ const PromoSection = ({ t }: any) => (
         </div>
         <div className="col-md-12">
           <div className="promo_bottom_text">
-            <p
+            {/* <p
               dangerouslySetInnerHTML={{
                 __html: t('productpromo.section.1.footer'),
               }}
-            ></p>
+            ></p> */}
           </div>
         </div>
       </div>
@@ -99,7 +99,9 @@ const PromoSection = ({ t }: any) => (
                 __html: t('productpromo.section.2.title'),
               }}
             ></p>
-            <a className="link">{t('productpromo.section.2.link')}</a>
+            {/* <a className="link" href="#">
+              {t('productpromo.section.2.link')}
+            </a> */}
             <h6
               className="promo_link"
               dangerouslySetInnerHTML={{
@@ -110,7 +112,7 @@ const PromoSection = ({ t }: any) => (
         </div>
       </div>
       <div className="row align-items-center row_pad">
-        <div className="col-lg-5 col-md-12 col-12 order-lg-1 order-md-2 order-2">
+        <div className="col-lg-5 col-md-12 col-12">
           <div className="service_feature_text">
             <h3
               dangerouslySetInnerHTML={{
@@ -123,7 +125,7 @@ const PromoSection = ({ t }: any) => (
             </Link>
           </div>
         </div>
-        <div className="col-lg-7 col-md-12 col-12 order-lg-2 order-md-1 order-1">
+        <div className="col-lg-7 col-md-12 col-12">
           <div className="row">
             <div className="col-md-4 col-12">
               <div className="service_feature_item">
