@@ -11,6 +11,7 @@ import {
   PricingProps,
   PackageAll,
 } from '../../services/shopping/pricing.model';
+import AppConfig from '../../appConfig'
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/pricing';
 const Pricing: any = ({ t, packages }: PricingProps) => {
@@ -37,13 +38,12 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
 
 Pricing.getInitialProps = async () => {
   const params: PackageAll = {
-    filter: '136,137,138,139,140,141,142,143',
+    filter: AppConfig.PRODUCT_PACKAGE,
   };
-  const packageAll = await ProductService.getPackageAll(params);
+  const packageAll = await ProductService.GetPackageFilter(params);
 
   return {
     packages: packageAll.packages,
-    test: 'ssdfsdfsfds',
     namespacesRequired: ['PricingMeta'],
   };
 };

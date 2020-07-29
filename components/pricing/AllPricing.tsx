@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
 import numeral from 'numeral';
+
 import classnames from 'classnames';
+import Router from 'next/router';
 
 const SenderActive = 5;
 
 const BuyPackage = (packageItem: ProductPackage) => {
-  console.log(packageItem);
+  localStorage.setItem('packageId', packageItem.productId.toString())
+  window.scrollTo(0, 0)
+  Router.push({pathname: '/payment'})
 };
 const showPackage = (packages: Product[], t: Function) => {
   let itemPackages = [];
@@ -32,7 +36,7 @@ const showPackage = (packages: Product[], t: Function) => {
             <h3>{numeral(productItem.amount).format('0,0')}</h3>
             <span>
               {t('pricingallpricing.life')} {`${productItem.period} `}
-              {t('pricingallpricing.year')}
+              {t('pricingallpricing.month')}
             </span>
           </div>
         </div>
@@ -52,7 +56,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     <h3>
                       {numeral(
                         productItem.standard.amount /
-                          productItem.standard.credit
+                        productItem.standard.credit
                       ).format('0.00')}
                       {` `}
                       <span>
@@ -86,12 +90,13 @@ const showPackage = (packages: Product[], t: Function) => {
                       </div>
 
                       <div className="text-center">
-                        <a
+                        <button
+                          // href="#"
                           onClick={() => BuyPackage(productItem.standard)}
                           className="btn v8"
                         >
                           {t('pricingallpricing.buyBtn')}
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -101,7 +106,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     <h3>
                       {numeral(
                         productItem.corporate.amount /
-                          productItem.corporate.credit
+                        productItem.corporate.credit
                       ).format('0.00')}{' '}
                       <span>
                         {t('pricingallpricing.bath')}/
@@ -134,12 +139,12 @@ const showPackage = (packages: Product[], t: Function) => {
                       </div>
 
                       <div className="text-center">
-                        <a
-                          onClick={() => BuyPackage(productItem.standard)}
+                        <button
+                          onClick={() => BuyPackage(productItem.corporate)}
                           className="btn v8"
                         >
                           {t('pricingallpricing.buyBtn')}
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -155,7 +160,7 @@ const showPackage = (packages: Product[], t: Function) => {
 };
 
 const AllPricing = ({ t, packages }: any) => {
-  React.useEffect(() => {}, []);
+  React.useEffect(() => { }, []);
 
   return (
     <div

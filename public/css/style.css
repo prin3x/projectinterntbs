@@ -3531,7 +3531,7 @@ ul.before-footer {
   -o-transition: 0.6s;
   transition: 0.6s;
 }
-.box__wrapper .box__body .info__box:hover {
+.box__wrapper .box__body .info__box:hover, .box__wrapper .box__body .info__box.active {
   background: -o-linear-gradient(
     bottom,
     rgba(38, 111, 253, 1) 0%,
@@ -3558,18 +3558,18 @@ ul.before-footer {
   transition: 0.6s;
 }
 
-.box__wrapper .box__body .info__box:hover .info__icon {
+.box__wrapper .box__body .info__box:hover .info__icon ,.box__wrapper .box__body .info__box.active .info__icon{
   background-color: rgb(49, 177, 231);
 }
 
-.box__wrapper .box__body .info__box:hover .info__icon img {
+.box__wrapper .box__body .info__box:hover .info__icon img,.box__wrapper .box__body .info__box.active .info__icon img {
   -webkit-filter: invert(0%) sepia(0%) saturate(2%) hue-rotate(291deg)
     brightness(104%) contrast(101%);
   filter: invert(0%) sepia(0%) saturate(2%) hue-rotate(291deg) brightness(104%)
     contrast(101%);
 }
 
-.box__wrapper .box__body .info__box:hover p {
+.box__wrapper .box__body .info__box:hover p,.box__wrapper .box__body .info__box.active p {
   color: #fff;
 }
 

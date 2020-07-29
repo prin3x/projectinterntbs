@@ -18,6 +18,7 @@
     "taxaddress": "ที่อยู่สำหรับจัดส่ง",
     "changeaddressBtn": "เปลี่ยนที่อยู่จัดส่ง",
     "form": {
+      "contact_point": "ชื่อผู้รับ",
       "address": "ที่อยู่ เช่น เลขที่, หมู่บ้าน, อาคาร, ซอย",
       "street": "ถนน",
       "district": "แขวง / ตำบล",
@@ -46,6 +47,7 @@
       "package": "แพ็กเกจ Standard Valued Pack",
       "bath": "บาท",
       "year": "ปี",
+      "month": "เดือน",
       "price": "ราคา / ข้อความ",
       "quantity": "จำนวนข้อความ",
       "life": "อายุการใช้งาน",
