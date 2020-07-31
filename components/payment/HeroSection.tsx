@@ -296,7 +296,6 @@ const HeroSection = ({ t, packages }: any) => {
           }}
           className="btn v8 button__sm_100"
           style={{
-            marginTop: '30px', 
           }}
         >
           {t('paymenthero.changeaddressBtn')}
