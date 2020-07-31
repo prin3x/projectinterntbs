@@ -6,6 +6,7 @@ import Router from 'next/router';
 import { StoreContext } from '../context/store';
 import ReCAPTCHA from 'react-google-recaptcha';
 import TagManager from 'react-gtm-module';
+import Modal from 'react-modal';
 import {
   quickRegisterStep1,
   quickRegisterStep2,
@@ -19,6 +20,7 @@ type Inputs = {
   resultStep3: string;
   welcomeToken: string;
 };
+Modal.setAppElement('#ElementModal');
 const SmsSectionV2 = ({ t }: any) => {
   const [showModalpass, setShowModalpass] = useState(false);
   const [showInputstep1, setShowInputstep1] = useState(true);
@@ -31,7 +33,6 @@ const SmsSectionV2 = ({ t }: any) => {
   const dataStore: any = useContext(StoreContext);
   const setreCaptcha = async (value: any) => {
     setShowModalcaptcha(false);
-
     const resultStep1 = await quickRegisterStep1({
       msisdn: tempDatastep1.msisdn,
       recaptcha: value,
@@ -41,6 +42,7 @@ const SmsSectionV2 = ({ t }: any) => {
         type: resultStep1.error.code,
         message: '',
       });
+      closeModal();
       return;
     }
     TagManager.dataLayer({
@@ -64,7 +66,6 @@ const SmsSectionV2 = ({ t }: any) => {
     mode: 'onBlur',
   });
   const onSubmitStep1 = async (data: any) => {
-    console.log('onSubmit : ', data);
     if (data.msisdn === '') {
       setErrorStep1('msisdn', {
         type: 'pattern',
@@ -72,12 +73,11 @@ const SmsSectionV2 = ({ t }: any) => {
       });
       return;
     }
-
+    openModal();
     setTempDatastep1(data);
     setShowModalcaptcha(true);
   };
   const handleErorrStep1 = (error: any) => {
-    console.log('handleErorrStep1 : ', error);
     if (error.msisdn) {
       return 'homesms.validate.msisdn.' + error.msisdn.type;
     }
@@ -97,7 +97,6 @@ const SmsSectionV2 = ({ t }: any) => {
     mode: 'onBlur',
   });
   const onSubmitStep2 = async (data: any) => {
-    console.log('onSubmit : ', data);
     if (data.pin === '') {
       setErrorStep2('pin', {
         type: 'required',
@@ -107,7 +106,6 @@ const SmsSectionV2 = ({ t }: any) => {
     }
     data.msisdn = msisdn;
     const resultStep2 = await quickRegisterStep2(data);
-    console.log('resultStep2 : ', resultStep2);
     if (resultStep2.error.code !== '') {
       setErrorStep2('resultStep2', {
         type: resultStep2.error.code,
@@ -126,9 +124,9 @@ const SmsSectionV2 = ({ t }: any) => {
     setShowModalpass(false);
     setShowInputstep1(false);
     setShowInputstep3(true);
+    closeModal();
   };
   const handleErorrStep2 = (error: any) => {
-    console.log('handleErorrStep2 : ', error);
     if (error.pin) {
       return 'homesms.validate.pin.' + error.pin.type;
     }
@@ -147,8 +145,7 @@ const SmsSectionV2 = ({ t }: any) => {
   } = useForm<Inputs>({
     mode: 'onBlur',
   });
-  const onSubmitStep3 = async (data: any) => {
-    console.log('onSubmitStep3 : ', data);
+  const onSubmitStep3 = async () => {
     if (welcome_token === '') {
       setErrorStep3('welcomeToken', {
         type: 'required',
@@ -157,7 +154,6 @@ const SmsSectionV2 = ({ t }: any) => {
       return;
     }
     const resultStep3 = await quickRegisterStep3({ welcome_token });
-    console.log('resultStep3 : ', resultStep3);
     if (resultStep3.error.code !== '') {
       setErrorStep3('resultStep3', {
         type: resultStep3.error.code,
@@ -165,10 +161,10 @@ const SmsSectionV2 = ({ t }: any) => {
       });
       return;
     }
+    openModal();
     setShowLogin(true);
   };
   const handleErorrStep3 = (error: any) => {
-    console.log('handleErorrStep3 : ', error);
     if (error.welcomeToken) {
       return 'homesms.validate.welcomeToken.' + error.welcomeToken.type;
     }
@@ -180,6 +176,26 @@ const SmsSectionV2 = ({ t }: any) => {
   const gotoLogin = () => {
     dataStore.msisdnStore[1](msisdn);
     Router.push('/register/quickregister');
+  };
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      width: '543px',
+      height: '300px',
+    },
   };
   return (
     <div
@@ -276,7 +292,7 @@ const SmsSectionV2 = ({ t }: any) => {
                           type="submit"
                           onClick={() => clearErrors3()}
                         >
-                          ทดลองส่ง
+                          {t('homesms.test.testBtn')}
                         </button>
                       </form>
                       <div style={{ color: 'red' }}>
@@ -290,87 +306,42 @@ const SmsSectionV2 = ({ t }: any) => {
           </div>
         </div>
       </div>
-      {showModalcaptcha && (
-        <div
-          style={{
-            position: 'fixed',
-            width: '100%',
-            height: '100%',
-            left: '0',
-            top: '0',
-            zIndex: 99999999,
-            background: 'rgba(0, 0, 0, 0.5)',
-            display: '',
-          }}
+      <div id="ElementModal">
+        <Modal
+          isOpen={modalIsOpen}
+          // onRequestClose={closeModal}
+          onRequestClose={() => {}}
+          style={customStyles}
+          contentLabel=""
         >
-          <div className="">
-            <div className="" style={{ padding: '200px 0 60px' }}>
-              <div
-                className=""
-                style={{
-                  maxWidth: '600px',
-                  borderRadius: '15px',
-                  backgroundColor: '#F4F4F4',
-                  padding: '30px 50px',
-                  margin: '40px auto 100px',
-                  textAlign: 'center',
-                }}
-              >
-                <button
-                  onClick={() => {
-                    setShowModalcaptcha(false);
-                  }}
-                >
-                  <i className="far fa-check-circle"></i>
-                </button>
-                <div>
-                  <ReCAPTCHA
-                    sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
-                    onChange={setreCaptcha}
-                  />
-                </div>
-              </div>
+          <div className="" style={{ textAlign: 'right' }}>
+            <div style={{ width: '505px', height: '49px' }}>
+              <button style={{ float: 'right' }} onClick={closeModal}>
+                close
+              </button>
             </div>
-          </div>
-        </div>
-      )}
-      {showModalpass && (
-        <div
-          style={{
-            position: 'fixed',
-            width: '100%',
-            height: '100%',
-            left: '0',
-            top: '0',
-            zIndex: 99999999,
-            background: 'rgba(0, 0, 0, 0.5)',
-            display: '',
-          }}
-        >
-          <div className="">
-            <div className="" style={{ padding: '200px 0 60px' }}>
+            {showModalcaptcha && (
+              <div>
+                <ReCAPTCHA
+                  sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
+                  onChange={setreCaptcha}
+                />
+              </div>
+            )}
+            {showModalpass && (
               <div
                 className=""
                 style={{
-                  maxWidth: '600px',
-                  borderRadius: '15px',
-                  backgroundColor: '#F4F4F4',
-                  padding: '30px 50px',
-                  margin: '40px auto 100px',
                   textAlign: 'center',
                 }}
               >
-                <button
-                  onClick={() => {
-                    setShowModalpass(false);
-                  }}
-                >
-                  <i className="far fa-check-circle"></i>
-                </button>
                 <h5 style={{ fontSize: '24px' }}>
-                  กรอกรหัสผ่านที่ได้รับทาง SMS
+                  {t('homesms.modal.showModalpass.header')}
                 </h5>
-                <form onSubmit={handleSubmitStep2(onSubmitStep2)}>
+                <form
+                  onSubmit={handleSubmitStep2(onSubmitStep2)}
+                  style={{ marginLeft: '55px' }}
+                >
                   <div className="form__wrapper">
                     <input
                       ref={registerStep2({
@@ -380,9 +351,9 @@ const SmsSectionV2 = ({ t }: any) => {
                       onChange={() => clearErrors2('resultStep2')}
                       id="pin"
                       name="pin"
-                      style={{ height: '48px' }}
-                      type="text"
-                      placeholder="รหัสผ่านที่ได้รับ"
+                      style={{ height: '48px', width: '236px' }}
+                      type="password"
+                      placeholder={t('homesms.modal.showModalpass.placeholder')}
                       className="input__box"
                     />
                     <button
@@ -396,7 +367,7 @@ const SmsSectionV2 = ({ t }: any) => {
                       }}
                       onClick={() => clearErrors2()}
                     >
-                      ยืนยัน
+                      {t('homesms.modal.showModalpass.submitBtn')}
                     </button>
                   </div>
                 </form>
@@ -404,61 +375,31 @@ const SmsSectionV2 = ({ t }: any) => {
                   {t(handleErorrStep2(errrorsStep2))}
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {showLogin && (
-        <div
-          style={{
-            position: 'fixed',
-            width: '100%',
-            height: '100%',
-            left: '0',
-            top: '0',
-            zIndex: 99999999,
-            background: 'rgba(0, 0, 0, 0.5)',
-            display: '',
-          }}
-        >
-          <div className="">
-            <div className="" style={{ padding: '200px 0 60px' }}>
+            )}
+            {showLogin && (
               <div
-                className=""
                 style={{
-                  maxWidth: '600px',
-                  borderRadius: '15px',
-                  backgroundColor: '#F4F4F4',
-                  padding: '30px 50px',
-                  margin: '40px auto 100px',
                   textAlign: 'center',
                 }}
               >
-                <button
-                  onClick={() => {
-                    setShowLogin(false);
-                  }}
-                >
-                  <i className="far fa-check-circle"></i>
-                </button>
                 <h5 style={{ fontSize: '24px' }}>
-                  คุณสามารถทดลองส่งให้คนอื่นได้เช่นกัน
+                  {t('homesms.modal.showLogin.header')}
                 </h5>
-                <p>คุณสามารถเข้าใช้งานระบบเพื่อทดลองส่งได้ทันที</p>
-                <p>ด้วยรหัสผ่านที่ได้รับทาง SMS</p>
+                <p>{t('homesms.modal.showLogin.decs1')}</p>
+                <p>{t('homesms.modal.showLogin.decs2')}</p>
                 <button
                   className="btn v2"
                   onClick={() => {
                     gotoLogin();
                   }}
                 >
-                  เข้าใช้งานระบบ
+                  {t('homesms.modal.showLogin.submitBtn')}
                 </button>
               </div>
-            </div>
+            )}
           </div>
-        </div>
-      )}
+        </Modal>
+      </div>
     </div>
   );
 };
