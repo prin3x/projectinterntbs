@@ -1,15 +1,109 @@
 {
   "homesms": {
-    "header": "ENมั่นใจได้ ในทุกๆ การส่ง SMS",
+    "header": "ENมั่นใจได้ ในทุก ๆ การส่ง SMS",
     "title": "ENจำนวน SMS ที่เราส่งไปจนถึงเวลานี้",
     "quantity": "ENจำนวนการส่ง SMS โดยเฉลี่ย / วัน",
     "duration": "ENระยะเวลาการส่ง SMS โดยเฉลี่ย",
     "second": "ENวินาที",
     "test": {
       "header": "ENทดลองส่ง SMS เข้ามือถือคุณได้ทันที",
-      "desc": "ENเพียงกรอกเบอร์มือถือของคุณ และยืนยันตัวตนผ่าน OTP",
+      "desc": "ENเพียงกรอกเบอร์มือถือของคุณ และยืนยันตัวตนด้วยรหัสผ่านที่ได้รับ",
       "telNumber": "ENเบอร์มือถือของคุณ",
-      "confirmBtn": "ENยืนยันเบอร์"
+      "confirmBtn": "ENยืนยันเบอร์",
+      "testBtn": "ENยืนยันเบอร์"
+    },
+    "modal": {
+      "showModalpass": {
+        "header": "ENกรอกรหัสผ่านที่ได้รับทาง SMS",
+        "placeholder": "ENรหัสผ่านที่ได้รับ",
+        "submitBtn": "ENยืนยัน"
+      },
+      "showLogin": {
+        "header": "ENคุณสามารถทดลองส่งให้คนอื่นได้เช่นกัน",
+        "decs1": "ENคุณสามารถเข้าใช้งานระบบเพื่อทดลองส่งได้ทันที",
+        "decs2": "ENด้วยรหัสผ่านที่ได้รับทาง SMS",
+        "submitBtn": "ENเข้าใช้งานระบบ"
+      }
+    },
+    "validate": {
+      "msisdn": {
+        "pattern": "ENโปรดใส่ หมายเลข ให้ถูกต้อง (ตัวเลขเท่านั้น)"
+      },
+      "pin": {
+        "pattern": "ENโปรดใส่ตัวเลขเท่านั้น",
+        "required": "ENโปรดใส่รหัสผ่านที่ได้รับทาง SMS"
+      },
+      "welcomeToken": {
+        "required": "ENโปรดใส่ Token"
+      }
+    },
+    "resultStep1": {
+      "quickregisterfirststepdto": {
+        "msisdn": {
+          "invalid": "ENโปรดใส่ หมายเลข ให้ถูกต้อง (ตัวเลขเท่านั้น)"
+        },
+        "fail": "ENไม่สามารถลงทะเบียนได้ กรุณาลองใหม่อีกครั้ง",
+        "recaptcha": {
+          "invalid": "ENโปรดใส่ recaptch ให้ถูกต้อง"
+        }
+      },
+      "recaptcha": {
+        "invalid": "ENโปรดใส่ recaptch"
+      },
+      "register": {
+        "msisdn": {
+          "exist": "ENหมายเลขนี้มีในระบบแล้ว"
+        }
+      },
+      "quickRegisterFirstStep": {
+        "msisdn": {
+          "exist": "ENหมายเลขนี้มีในระบบแล้ว"
+        }
+      },
+      "400": "ENไม่สามารถลงทะเบียนได้ กรุณาลองใหม่อีกครั้ง"
+    },
+    "resultStep2": {
+      "quickregistersecondstepdto": {
+        "msisdn": {
+          "invalid": "ENหมายเลขนี้ไม่สามารถลงทะเบียนได้ กรุณาติดต่อเจ้าหน้าที่",
+          "exist": "ENหมายเลขนี้มีในระบบแล้ว"
+        },
+        "pin": {
+          "invalid": "ENรหัสผ่านไม่ถูกต้อง"
+        },
+        "fail": "ENไม่สามารถลงทะเบียนได้ กรุณาลองใหม่อีกครั้ง"
+      },
+      "register": {
+        "quick-2": {
+          "exist": "ENรหัสผ่านไม่ถูกต้อง หรือ หมดอายุแล้ว",
+          "expire": "ENรหัสผ่านไม่ถูกต้อง หรือ หมดอายุแล้ว",
+          "pin": {
+            "incorrect": "ENรหัสผ่านไม่ถูกต้อง"
+          }
+        }
+      },
+      "quickRegisterSecondStep": {
+        "pin": { "incorrect": "ENรหัสผ่านไม่ถูกต้อง" },
+        "ken": { "expire": "ENรหัสหมดอายุ" }
+      }
+    },
+    "resultStep3": {
+      "quickregisterthirdstepdto": {
+        "welcomeToken": {
+          "invalid": "ENไม่พบ Token"
+        },
+        "fail": "ENไม่สามารถส่งได้ กรุณาลองใหม่อีกครั้ง"
+      },
+      "quickRegisterThridStep": {
+        "key": {
+          "expire": "ENToken หมดอายุแล้ว"
+        }
+      },
+      "register": {
+        "quick-3": {
+          "expire": "ENToken หมดอายุแล้ว"
+        }
+      }
     }
   }
 }

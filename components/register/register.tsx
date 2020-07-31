@@ -38,8 +38,8 @@ const RegisterComponents = ({ t }: any) => {
   } = useForm<Inputs>({
     defaultValues: {
       agree: true,
-      news: true
-    }
+      news: true,
+    },
   });
   const onSubmit = async (data: any) => {
     console.log(data);
