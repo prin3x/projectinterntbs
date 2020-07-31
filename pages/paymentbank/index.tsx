@@ -8,7 +8,9 @@ import Head from 'next/head';
 import { withTranslation } from '../../i18n';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/paymentbank';
-const Paymentbank = ({ t }: any) => (
+import * as ProductService from '../../services/shopping/product.service';
+import { PricingProps } from '../../services/shopping/pricing.model';
+const Paymentbank : any = ({ t, packages }: PricingProps) => (
   <Layout>
     <Head>
       <title>{t('title')}</title>
@@ -29,14 +31,19 @@ const Paymentbank = ({ t }: any) => (
           backgroundSize: 'contain',
         }}
       >
-        <HeroSection />
+        <HeroSection packages={packages}/>
         <Help />
       </div>
     </div>
     <BacktoTop />
   </Layout>
 );
-Paymentbank.getInitialProps = async () => ({
-  namespacesRequired: ['PaymentbankMeta'],
-});
+Paymentbank.getInitialProps = async () => {
+  const packageAll = await ProductService.GetPackageAll();
+  return {
+    packages: packageAll.packages,
+    namespacesRequired: ['PaymentbankMeta'],
+  }
+};
+
 export default withTranslation('PaymentbankMeta')(Paymentbank);

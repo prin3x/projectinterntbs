@@ -28,6 +28,7 @@ export interface PackageAll {
 
 
 export interface ProductBuy {
+  productId: number,
   productName: string,
   unitSms: number,
   credit: number,
@@ -35,10 +36,10 @@ export interface ProductBuy {
   sendername: number
   amount: number,
   vat: number,
-  total: number
+  total: number,
 }
 
 export interface FormBodyPayment{
-  productId: number,
-  isTaxInoivce: string
+  product_id: number,
+  is_tax_invoice: string
 }
