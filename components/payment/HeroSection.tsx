@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 import { PaymentType } from '../../services/shopping/payment.struct';
 import classnames from 'classnames'
-import { ProductPackage, ProductBuy, FormBodyPayment } from '../../services/shopping/pricing.model';
+import { ProductPackage, ProductBuy, FormBodyPayment, Payment2C2PReponse } from '../../services/shopping/pricing.model';
 import Router from 'next/router';
 import numeral from 'numeral';
 import { useForm } from "react-hook-form";
@@ -64,6 +64,22 @@ let thaiAddressDefault: ThaiAddress = {
   zipcode: ''
 }
 
+let credit2c2pResult: Payment2C2PReponse = {
+  version: '',
+  merchantId: '',
+  paymentDescription: '',
+  invoiceNo: '',
+  orderId: '',
+  currency: '',
+  amount: '',
+  customerEmail: '',
+  paymentOption: '',
+  hash: '',
+  paymentUrl: '',
+  resultUrlFrontent: '',
+  resultUrlBackend: ''
+}
+
 
 const HeroSection = ({ t, packages }: any) => {
   const [paymentType, setPaymentType] = useState('')
@@ -72,7 +88,9 @@ const HeroSection = ({ t, packages }: any) => {
   const [addressShipTo, setAddressShipTo] = useState(address)
   const [changeAddress, setChangeAddress] = useState(false)
   const stickyBoxBar: any = useRef(null);
+  const form2c2pRef: any = useRef();
   const [thaiAddress, setThaiAddress] = useState(thaiAddressDefault)
+  const [data2c2p, setData2c2p] = useState(credit2c2pResult)
   const { register, handleSubmit, clearErrors, errors, setValue } = useForm();
   function stickyBox() {
     var scroll = window.pageYOffset;
@@ -277,11 +295,17 @@ const HeroSection = ({ t, packages }: any) => {
       const query = { order: transactionId }
       const url = { pathname: '/paymentbank', query }
 
-      Cookie.set(`order-${transactionId}`, productBuy.productId.toString(), { expires: 0.15 })
+      Cookie.set(`order-bank-${transactionId}`, productBuy.productId.toString(), { expires: 0.15 })
       localStorage.removeItem('packageId')
       Router.push(url).then(() => {
         Swal.close()
       })
+    } else if (paymentType === PaymentType.CREDIT_CARD) {
+      credit2c2pResult = await PaymentService.Credit2C2PPaymentSubmit(formBody)
+      setData2c2p(credit2c2pResult)
+      localStorage.removeItem('packageId')
+      form2c2pRef.current.submit()
+      
     }
   }
 
@@ -778,12 +802,14 @@ const HeroSection = ({ t, packages }: any) => {
         </div>
 
         <div className="col-12 order-4 text-center">
-          <a
+          <button
+            type="button"
             className="btn v8 d-xl-none button__sm_100"
             style={{ marginTop: '30px', padding: '20px 30px' }}
+            onClick={onSubmitPayment}
           >
             {t('paymenthero.taxinvoice.confirepayment')}
-          </a>
+          </button>
         </div>
 
         <div className="col-xl-8 order-5 bottom__content">
@@ -815,6 +841,20 @@ const HeroSection = ({ t, packages }: any) => {
           </div>
         </div>
       </div>
+      <form id="myform2c2p" ref={form2c2pRef} method="post" action={data2c2p.paymentUrl}>
+        <input type="hidden" id="version" name="version" defaultValue={data2c2p.version} />
+        <input type="hidden" id="merchant_id" name="merchant_id" defaultValue={data2c2p.merchantId} />
+        <input type="hidden" id="payment_description" name="payment_description" defaultValue={data2c2p.paymentDescription} />
+        <input type="hidden" id="order_id" name="order_id" defaultValue={data2c2p.orderId} />
+        <input type="hidden" id="invoice_no" name="invoice_no" defaultValue={data2c2p.invoiceNo} />
+        <input type="hidden" id="currency" name="currency" defaultValue={data2c2p.currency} />
+        <input type="hidden" id="amount" name="amount" defaultValue={data2c2p.amount} />
+        <input type="hidden" id="customer_email" name="customer_email" defaultValue={data2c2p.customerEmail} />
+        <input type="hidden" id="payment_option" name="payment_option" defaultValue={data2c2p.paymentOption} />
+        <input type="hidden" id="hash_value" name="hash_value" defaultValue={data2c2p.hash} />
+        <input type="hidden" id="result_url_1" name="result_url_1" defaultValue={data2c2p.resultUrlFrontent} />
+        <input type="hidden" id="result_url_2" name="result_url_2" defaultValue={data2c2p.resultUrlBackend} />
+      </form>
     </div>
   );
 };

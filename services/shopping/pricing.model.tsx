@@ -43,3 +43,20 @@ export interface FormBodyPayment{
   product_id: number,
   is_tax_invoice: string
 }
+
+export interface Payment2C2PReponse {
+  version: string,
+  merchantId: string,
+  paymentDescription: string,
+  invoiceNo: string,
+  orderId: string,
+  currency: string,
+  amount: string,
+  customerEmail: string,
+  paymentOption: string,
+  hash: string,
+  paymentUrl: string,
+  resultUrlFrontent: string,
+  resultUrlBackend: string
+
+}

@@ -53,7 +53,7 @@ const HeroSection = ({ t, packages }: any) => {
 
   React.useEffect(() => {
     const orderId: any = router.query.order
-    const packageId: any = Cookie.get(`order-${orderId}`)
+    const packageId: any = Cookie.get(`order-bank-${orderId}`)
     const packageSelect: ProductPackage[] = packages.filter((item: ProductPackage) => {
       return parseInt(packageId) === item.productId
     })
