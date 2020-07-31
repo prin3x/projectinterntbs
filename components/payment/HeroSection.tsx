@@ -161,9 +161,9 @@ const HeroSection = ({ t, packages }: any) => {
   const onSubmitAddress = async (values: any) => {
     Swal.fire({
       title: 'กำลังบันทึกข้อมูล',
-      showConfirmButton:false,
-      allowOutsideClick:false,
-      onBeforeOpen: () =>{
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      onBeforeOpen: () => {
         Swal.showLoading()
       }
     })
@@ -190,7 +190,7 @@ const HeroSection = ({ t, packages }: any) => {
     } catch (error) {
       console.log(error.message)
     }
-    
+
     setChangeAddress(false)
     setValue('contact_point', '')
     setValue('address', '')
@@ -234,26 +234,45 @@ const HeroSection = ({ t, packages }: any) => {
     })
   }
 
-  const onSubmitPayment = async() =>{
-    if(!paymentType){
+  const onSubmitPayment = async () => {
+    if (!paymentType) {
       Swal.fire({
         icon: 'warning',
         title: 'ช่องทางชำระเงิน',
         text: 'กรุณาเลือกช่องทางชำระเงิน เพื่อกดยืนยันการชำระ',
       })
-      return 
+      return
     }
-    if(changeAddress){
+    if (changeAddress) {
       Swal.fire({
         icon: 'warning',
         title: 'ที่อยู่สำหรับจัดส่งใบกำกับภาษี',
-        text: 'กรุณาแก้ไขข้อมูลและบันทึกข้อมูลให้เรียบร้อย',
+        text: 'กรุณาแก้ไขและบันทึกข้อมูลให้เรียบร้อย',
       })
       return
     }
 
+
+    Swal.fire({
+      title: 'กำลังบันทึกข้อมูล',
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      onBeforeOpen: () => {
+        Swal.showLoading()
+      }
+    })
+
     console.log(paymentType)
 
+    if (paymentType === PaymentType.BANK_TRANSFER) {
+      window.scrollTo(0, 0)
+      const query = { order: 'foo' }
+
+      const url = { pathname: '/paymentbank', query }
+      Router.push(url).then(() => {
+        Swal.close()
+      })
+    }
   }
 
   const sectionAdress = () => {
@@ -428,7 +447,7 @@ const HeroSection = ({ t, packages }: any) => {
               color: '#e20000',
               margin: '15px',
             }}>This field is required</p>
-          )}{console.log(errors)}
+          )}
           {_.get("zipcode.type", errors) === "validate" && (
             <p style={{
               color: '#e20000',

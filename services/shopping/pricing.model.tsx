@@ -37,3 +37,8 @@ export interface ProductBuy {
   vat: number,
   total: number
 }
+
+export interface FormBodyPayment{
+  productId: number,
+  isTaxInoivce: string
+}
