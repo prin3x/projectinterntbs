@@ -795,7 +795,7 @@ const HeroSection = ({ t, packages }: any) => {
         <div className="col-12 order-4 text-center">
           <a
             className="btn v8 d-xl-none button__sm_100"
-            style={{ marginTop: '30px', padding: '20px 30px' }}
+            style={{ marginTop: '30px'}}
           >
             {t('paymenthero.taxinvoice.confirepayment')}
           </a>

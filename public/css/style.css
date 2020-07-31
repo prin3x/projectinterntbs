@@ -4376,6 +4376,20 @@ textarea.input__box.v2 {
   border-bottom: 1px solid rgb(91, 110, 128);
   padding-top: 26px;
   padding-bottom: 30px;
+  position: relative;
+}
+
+.pricing__content .arrow-down {
+  position: absolute;
+  top: 40%;
+  left: -13px;
+  width: 25px;
+  height: 25px;
+}
+
+.pricing__content .arrow-down img {
+  width: 100%;
+  height: auto;
 }
 
 .pricing__content h3 {
