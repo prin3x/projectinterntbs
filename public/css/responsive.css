@@ -1822,7 +1822,7 @@
 
   .menu_btn,
   .site-menu {
-    display: none !important;
+    display: block !important;
   }
 
   .hero_section.v2 {
@@ -1971,6 +1971,14 @@
     font-size: 30px;
     line-height: 40px;
   }
+  .btn.v1 {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+  .loginLink {
+
+    font-size: 14px;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2044,6 +2052,13 @@
   }
   .pricing__top .price_plan {
     padding: 30px 20px;
+  }
+  .feature_section {
+    padding: 60px 0;
+  }
+  .section_title {
+    font-size: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -2135,7 +2150,7 @@
   }
 
   .sms_feature_item p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .sms_feature_item a {
@@ -2144,11 +2159,11 @@
   }
 
   .sms_form_text h4 {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .sms_form_text p {
-    font-size: 22px;
+    font-size: 14px;
   }
 
   .sms_form_field input {
@@ -2228,11 +2243,11 @@
   }
 
   .single_feature_text h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .single_feature_text p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .track_text h3 {
@@ -2296,11 +2311,134 @@
   }
 
   .globe_text h3 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .globe_text p {
+    font-size: 18px;
+  }
+  .globe_section {
+    padding: 60px 0;
+    position: relative;
+  }
+  .sms_feature_item h2 {
+    color: #31b1e7;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 75px;
+  }
+  .sms_text h3 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .sms_feature_item h2 {
+    color: #31b1e7;
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 45px;
+  }
+  .sms_form_text {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .sms_section {
+    background-position: top;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+  }
+  .cta-text h3 {
+    font-size: 30px;
+    color: #2e4050;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  .cta_section {
+    padding: 80px 0 90px;
+    position: relative;
+  }
+  .edu_section::before {
+    top: 46% !important;
+    height: 320px !important;
+  }
+  .testimonial_item p.client_quote {
     font-size: 20px;
+  }
+  .testimonial_section {
+    padding: 190px 0 100px;
+  }
+  .simple_slider_section {
+    height: 650px;
+    padding: 50px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f0f3f7;
+    overflow: hidden;
+  }
+  .simple_slider_wrapper .item {
+    padding: 0px 60px 0px;
+  }
+  .simple_slider_item {
+    padding: 20px 30px;
+    margin: 0 50px;
+  }
+  .simple_slider_item p {
+    font-size: 14px;
+    margin: 10px 0 20px;
+    min-height: 80px;
+  }
+  .simple_slider_item a.btn.v9 {
+    transform: translateY(40px);
+    word-break: break-all;
+  }
+  .simple_slider_wrapper .owl-prev,
+  .simple_slider_wrapper .owl-next {
+    width: 50px;
+    height: 50px;
+  }
+
+  .simple_slider_wrapper .owl-next i,
+  .simple_slider_wrapper .owl-prev i {
+    font-size: 40px;
+  }
+
+  .simple_slider_wrapper .owl-nav {
+    padding-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    bottom: -25px;
+  }
+  .simple_slider_wrapper .owl-prev {
+    left: 100px;
+  }
+  .simple_slider_wrapper .owl-next {
+    left: 160px;
+  }
+  .hero_section.v2 .btn.v3, .hero_section.v2 .btn.v5 {
+    font-size: 18px;
+    padding: 18px 30px;
+  }
+  .footer_widget h4 {
+    font-size: 20px;
+  }
+  .footer_section a {
+    font-size: 18px;
+  }
+  p.copyright {
+    text-align: center;
+    font-size: 18px;
+  }
+  .simple_slider_heading_img object {
+    width: 160%;
+    margin: -20% 0 0 -15%;
   }
 }
 
@@ -2347,7 +2485,7 @@
     padding-top: 40px;
   }
 
-  .lg-none {
+  .xl-none, .lg-none {
     display: none;
   }
 
