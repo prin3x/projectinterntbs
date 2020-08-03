@@ -3,17 +3,19 @@ import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 import { PaymentType } from '../../services/shopping/payment.struct';
 import classnames from 'classnames'
-import { ProductPackage, ProductBuy } from '../../services/shopping/pricing.model';
+import { ProductPackage, ProductBuy, FormBodyPayment, Payment2C2PReponse } from '../../services/shopping/pricing.model';
 import Router from 'next/router';
 import numeral from 'numeral';
 import { useForm } from "react-hook-form";
 import _ from "lodash/fp";
 import Swal from 'sweetalert2'
+import Cookie from 'js-cookie';
 // import TagManager from 'react-gtm-module'
 import ThailandAddress from '../autocomplete-address-thai'
 import * as PaymentService from '../../services/shopping/payment.service'
 import { UserAddress, UserType, UpdateUserAddress } from '../../services/user/user.model';
-
+import { calcullateVat } from '../../services/helper.func';
+import Link from 'next/link'
 // const tagManagerArgs = {
 //   dataLayer: {
 //     event: 'register',
@@ -37,7 +39,8 @@ let defaultProductBuy: ProductBuy = {
   amount: 0,
   vat: 0,
   total: 0,
-  period: 0
+  period: 0,
+  productId: 0
 }
 
 let address: AddressShipTo = {
@@ -61,9 +64,23 @@ let thaiAddressDefault: ThaiAddress = {
   zipcode: ''
 }
 
-const calcullateVat = (amount: number, vat: number): number => {
-  return amount * (vat / 100)
+let credit2c2pResult: Payment2C2PReponse = {
+  version: '',
+  merchantId: '',
+  paymentDescription: '',
+  invoiceNo: '',
+  orderId: '',
+  currency: '',
+  amount: '',
+  customerEmail: '',
+  paymentOption: '',
+  hash: '',
+  paymentUrl: '',
+  resultUrlFrontent: '',
+  resultUrlBackend: ''
 }
+
+
 const HeroSection = ({ t, packages }: any) => {
   const [paymentType, setPaymentType] = useState('')
   const [productBuy, setProductBuy] = useState(defaultProductBuy)
@@ -71,7 +88,9 @@ const HeroSection = ({ t, packages }: any) => {
   const [addressShipTo, setAddressShipTo] = useState(address)
   const [changeAddress, setChangeAddress] = useState(false)
   const stickyBoxBar: any = useRef(null);
+  const form2c2pRef: any = useRef();
   const [thaiAddress, setThaiAddress] = useState(thaiAddressDefault)
+  const [data2c2p, setData2c2p] = useState(credit2c2pResult)
   const { register, handleSubmit, clearErrors, errors, setValue } = useForm();
   function stickyBox() {
     var scroll = window.pageYOffset;
@@ -113,8 +132,10 @@ const HeroSection = ({ t, packages }: any) => {
       Router.push('/pricing')
       return
     }
+
     const vat = calcullateVat(packageSelect[0].amount, 7)
     defaultProductBuy = {
+      productId: parseInt(packageId),
       productName: packageSelect[0].name,
       unitSms: packageSelect[0].amount / packageSelect[0].credit,
       credit: packageSelect[0].credit,
@@ -262,16 +283,29 @@ const HeroSection = ({ t, packages }: any) => {
       }
     })
 
-    console.log(paymentType)
-
+    const formBody: FormBodyPayment = {
+      product_id: productBuy.productId,
+      is_tax_invoice: shipTo ? 'true' : 'false'
+    }
     if (paymentType === PaymentType.BANK_TRANSFER) {
-      window.scrollTo(0, 0)
-      const query = { order: 'foo' }
 
+      const bankResult = await PaymentService.BankTransferSubmit(formBody)
+      window.scrollTo(0, 0)
+      const transactionId = bankResult.transactionId
+      const query = { order: transactionId }
       const url = { pathname: '/paymentbank', query }
+
+      Cookie.set(`order-bank-${transactionId}`, productBuy.productId.toString(), { expires: 0.15 })
+      localStorage.removeItem('packageId')
       Router.push(url).then(() => {
         Swal.close()
       })
+    } else if (paymentType === PaymentType.CREDIT_CARD) {
+      credit2c2pResult = await PaymentService.Credit2C2PPaymentSubmit(formBody)
+      setData2c2p(credit2c2pResult)
+      localStorage.removeItem('packageId')
+      form2c2pRef.current.submit()
+      
     }
   }
 
@@ -619,15 +653,17 @@ const HeroSection = ({ t, packages }: any) => {
                     </div>
 
                     <div className="text-right">
-                      <a className="link theme__text">
-                        {t('paymenthero.taxinvoice.changepackage')}
-                      </a>
+                      <Link href="/pricing">
+                        <a className="link theme__text">
+                          {t('paymenthero.taxinvoice.changepackage')}
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="box__content">
+              {/* <div className="box__content">
                 <div className="row align-items-center">
                   <div className="col-12">
                     <h6>{t('paymenthero.taxinvoice.waitconfirmtitle')}</h6>
@@ -650,7 +686,7 @@ const HeroSection = ({ t, packages }: any) => {
                     </form>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="box__content border-0">
                 <div className="row align-items-center">
@@ -681,34 +717,6 @@ const HeroSection = ({ t, packages }: any) => {
                         </h6>
                       </div>
                     </div>
-
-                    {/* <div className="d-flex justify-content-between align-items-center">
-                      <h6
-                        style={{
-                          color: '#5b6e80',
-                          lineHeight: '48px',
-                          fontWeight: 500,
-                        }}
-                      >
-                        {t('paymenthero.taxinvoice.discount')}
-                      </h6>
-
-                      <div>
-                        <h6 className="theme__text">
-                          100
-                          <span
-                            style={{
-                              fontSize: '20px',
-                              fontWeight: 'bold',
-                              color: '#5b6e80',
-                              marginLeft: '20px',
-                            }}
-                          >
-                            {t('paymenthero.taxinvoice.bath')}
-                          </span>
-                        </h6>
-                      </div>
-                    </div> */}
 
                     <div className="d-flex justify-content-between align-items-center">
                       <h6
@@ -793,12 +801,14 @@ const HeroSection = ({ t, packages }: any) => {
         </div>
 
         <div className="col-12 order-4 text-center">
-          <a
+          <button
+            type="button"
             className="btn v8 d-xl-none button__sm_100"
-            style={{ marginTop: '30px'}}
+            style={{ marginTop: '30px', padding: '20px 30px' }}
+            onClick={onSubmitPayment}
           >
             {t('paymenthero.taxinvoice.confirepayment')}
-          </a>
+          </button>
         </div>
 
         <div className="col-xl-8 order-5 bottom__content">
@@ -830,6 +840,20 @@ const HeroSection = ({ t, packages }: any) => {
           </div>
         </div>
       </div>
+      <form id="myform2c2p" ref={form2c2pRef} method="post" action={data2c2p.paymentUrl}>
+        <input type="hidden" id="version" name="version" defaultValue={data2c2p.version} />
+        <input type="hidden" id="merchant_id" name="merchant_id" defaultValue={data2c2p.merchantId} />
+        <input type="hidden" id="payment_description" name="payment_description" defaultValue={data2c2p.paymentDescription} />
+        <input type="hidden" id="order_id" name="order_id" defaultValue={data2c2p.orderId} />
+        <input type="hidden" id="invoice_no" name="invoice_no" defaultValue={data2c2p.invoiceNo} />
+        <input type="hidden" id="currency" name="currency" defaultValue={data2c2p.currency} />
+        <input type="hidden" id="amount" name="amount" defaultValue={data2c2p.amount} />
+        <input type="hidden" id="customer_email" name="customer_email" defaultValue={data2c2p.customerEmail} />
+        <input type="hidden" id="payment_option" name="payment_option" defaultValue={data2c2p.paymentOption} />
+        <input type="hidden" id="hash_value" name="hash_value" defaultValue={data2c2p.hash} />
+        <input type="hidden" id="result_url_1" name="result_url_1" defaultValue={data2c2p.resultUrlFrontent} />
+        <input type="hidden" id="result_url_2" name="result_url_2" defaultValue={data2c2p.resultUrlBackend} />
+      </form>
     </div>
   );
 };

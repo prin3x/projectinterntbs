@@ -1,7 +1,36 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-import React, { useRef } from 'react';
-const HeroSection = ({ t }: any) => {
+import React, { useRef, useState } from 'react';
+import Cookie from 'js-cookie';
+import Router, { useRouter } from 'next/router';
+import { ProductPackage, ProductBuy } from '../../services/shopping/pricing.model';
+import { calcullateVat } from '../../services/helper.func';
+import numeral from 'numeral';
+interface BillPayment {
+  orderId: string,
+  productBuy: ProductBuy
+}
+
+let defaultProductBuy: ProductBuy = {
+  productName: '',
+  unitSms: 0,
+  credit: 0,
+  sendername: 0,
+  amount: 0,
+  vat: 0,
+  total: 0,
+  period: 0,
+  productId: 0
+}
+
+let bill: BillPayment = {
+  orderId: '',
+  productBuy: defaultProductBuy
+
+}
+const HeroSection = ({ t, packages }: any) => {
+  const router = useRouter()
+  const [billPayment, setBillPayment] = useState(bill)
   const stickyBoxBar: any = useRef(null);
   function stickyBox() {
     var scroll = window.pageYOffset;
@@ -18,6 +47,43 @@ const HeroSection = ({ t }: any) => {
     return () => {
       window.removeEventListener('scroll', stickyBox);
     };
+  }, []);
+
+
+
+  React.useEffect(() => {
+    const orderId: any = router.query.order
+    const packageId: any = Cookie.get(`order-bank-${orderId}`)
+    const packageSelect: ProductPackage[] = packages.filter((item: ProductPackage) => {
+      return parseInt(packageId) === item.productId
+    })
+
+    if (!packageSelect.length) {
+      window.scrollTo(0, 0)
+      Router.push('/pricing')
+      return
+    }
+
+    const vat = calcullateVat(packageSelect[0].amount, 7)
+    defaultProductBuy = {
+      productId: parseInt(packageId),
+      productName: packageSelect[0].name,
+      unitSms: packageSelect[0].amount / packageSelect[0].credit,
+      credit: packageSelect[0].credit,
+      amount: packageSelect[0].amount,
+      sendername: packageSelect[0].sender,
+      period: packageSelect[0].period,
+      vat: vat,
+      total: vat + packageSelect[0].amount
+    }
+
+    bill = {
+      orderId: orderId,
+      productBuy: defaultProductBuy
+    }
+
+    setBillPayment(bill)
+
   }, []);
   return (
     <div className="container">
@@ -38,19 +104,10 @@ const HeroSection = ({ t }: any) => {
                     <h6 style={{ fontWeight: 400, color: '#5b6e80' }}>
                       {t('paymentbankhero.payment.ordernumber')}
                     </h6>
-                    <h6 style={{ fontWeight: 400, color: '#5b6e80' }}>
-                      {t('paymentbankhero.payment.lastdate')}
-                    </h6>
                   </div>
 
                   <div className="col-6">
-                    <h6 className="theme__text font-weight-bold"> 0022953</h6>
-                    <h6 style={{ fontWeight: 400, color: '#5b6e80' }}>
-                      <span className="theme__text font-weight-bold">
-                        {t('paymentbankhero.payment.length')}
-                        31 มีนาคม 2562 เวลา 13:35 น.
-                      </span>
-                    </h6>
+                    <h6 className="theme__text font-weight-bold"> {billPayment.orderId}</h6>
                   </div>
                 </div>
               </div>
@@ -358,7 +415,7 @@ const HeroSection = ({ t }: any) => {
                       </h6>
                       <div>
                         <h6 className="theme__text">
-                          30,000{' '}
+                          {numeral(billPayment.productBuy.amount).format('0,0')}{' '}
                           <span
                             style={{
                               fontSize: '16px',
@@ -372,7 +429,7 @@ const HeroSection = ({ t }: any) => {
                       </div>
                     </div>
 
-                    <div className="d-flex justify-content-between align-items-center">
+                    {/* <div className="d-flex justify-content-between align-items-center">
                       <h6
                         style={{
                           color: ' #5b6e80',
@@ -397,7 +454,7 @@ const HeroSection = ({ t }: any) => {
                           </span>
                         </h6>
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="d-flex justify-content-between align-items-center">
                       <h6
@@ -412,7 +469,7 @@ const HeroSection = ({ t }: any) => {
 
                       <div>
                         <h6 className="theme__text">
-                          2,100
+                          {numeral(billPayment.productBuy.vat).format('0,0')}{' '}
                           <span
                             style={{
                               fontSize: '16px',
@@ -450,7 +507,7 @@ const HeroSection = ({ t }: any) => {
                           className="theme__text"
                           style={{ fontSize: '36px' }}
                         >
-                          32,000{' '}
+                          {numeral(billPayment.productBuy.total).format('0,0')}{' '}
                           <span
                             style={{
                               fontSize: '16px',
