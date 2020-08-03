@@ -44,6 +44,7 @@ const showPackage = (packages: Product[], t: Function) => {
           <div className="row">
             <div className="col-12">
               <div className="pricing__content">
+                <div className="arrow-down"><img src="/img/arrow_down.png" alt=""/></div>
                 <img
                   src="/img/shape_triangle.png"
                   className="shape__box"

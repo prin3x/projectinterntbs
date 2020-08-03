@@ -29,7 +29,7 @@ const PricingSection = ({ t }: any) => {
               </p>
               <ul className="pricing_feature">
                 <li>
-                  <i className="far fa-crosshairs"></i>
+                  <i className="far fa-check-circle"></i>
                   <p>{t('pricingpricing.package.standard.feature.1')}</p>
                 </li>
                 <li>

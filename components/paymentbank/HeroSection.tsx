@@ -139,7 +139,7 @@ const HeroSection = ({ t, packages }: any) => {
                               {t('paymentbankhero.bank.format.accountnumber')}
                             </p>
                             <p style={{ fontWeight: 400, color: '#5b6e80' }}>
-                              {t('paymentbankhero.bank.format.accountnumber')}
+                              {t('paymentbankhero.bank.format.accountname')}
                             </p>
                           </div>
 

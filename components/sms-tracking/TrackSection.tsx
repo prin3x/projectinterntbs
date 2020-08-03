@@ -24,7 +24,7 @@ const TrackSectionV2 = ({ t }: any) => (
       <div className="row">
         <div className="col-lg-12">
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-lg-8 offset-lg-2">
               <div className="track_box">
                 <h4
                   dangerouslySetInnerHTML={{
@@ -36,7 +36,7 @@ const TrackSectionV2 = ({ t }: any) => (
                 </a>
               </div>
             </div>
-            <div className="col-lg-6">
+            {/* <div className="col-lg-6">
               <div className="track_box v2">
                 <h4
                   dangerouslySetInnerHTML={{
@@ -47,7 +47,7 @@ const TrackSectionV2 = ({ t }: any) => (
                   {t('sms-trackingtracksection.corporatepackageBtn')}
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -330,7 +330,6 @@ const HeroSection = ({ t, packages }: any) => {
           }}
           className="btn v8 button__sm_100"
           style={{
-            marginTop: '30px', padding: '20px 30px'
           }}
         >
           {t('paymenthero.changeaddressBtn')}
@@ -696,7 +695,7 @@ const HeroSection = ({ t, packages }: any) => {
                       <h6
                         style={{
                           color: '#5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '36px',
                           fontWeight: 500,
                         }}
                       >
@@ -723,7 +722,7 @@ const HeroSection = ({ t, packages }: any) => {
                       <h6
                         style={{
                           color: '#5b6e80',
-                          lineHeight: '48px',
+                          lineHeight: '36px',
                           fontWeight: 500,
                         }}
                       >
@@ -789,7 +788,7 @@ const HeroSection = ({ t, packages }: any) => {
                     <button
                       type="button"
                       className="btn v8 w-100 d-none d-xl-block"
-                      style={{ marginTop: '65px' }}
+                      style={{ marginTop: '30px' }}
                       onClick={onSubmitPayment}
                     >
                       {t('paymenthero.taxinvoice.confirepayment')}

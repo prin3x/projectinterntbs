@@ -1513,7 +1513,10 @@
     margin-top: 70px;
   }
   .pricing .mt-80 {
-    margin-top: 63px;
+    margin-top: 50px;
+  }
+  .pricing_box.m-0 {
+    width: 75%;
   }
   .slider_item p {
     font-size: 16px;
@@ -1533,7 +1536,7 @@
     font-family: 'Sarabun', sans-serif;
   }
   .btn.v4 {
-    font-size: 16px;
+    font-size: 14px;
   }
   .section__title {
     font-size: 36px;
@@ -1547,6 +1550,7 @@
   .box__wrapper .box__body p {
     font-weight: 400;
     font-size: 14px;
+    line-height: 24px;
   }
   .box__wrapper .box__body .info__box {
     border: 3px solid #5b6e80;
@@ -1616,7 +1620,7 @@
   .price_plan {
     border: 1px solid #f1f4f8;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px 20px;
     margin: 20px 5px;
     position: relative;
   }
@@ -1740,6 +1744,27 @@
   }
   .img-user{
     width: 100%;
+  }
+  .btn.v8 {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+  .btn.v1 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .pricing_box.m-0 {
+    width: 75%;
+    padding: 25px 15px 20px;
+  }
+  .pricing__bottom__content h5 {
+    font-size: 30px;
+  }
+  .pricing__bottom__content p {
+    font-size: 16px;
+  }
+  .navbar-brand img {
+    max-width: 75%;
   }
 }
 
@@ -2843,6 +2868,9 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+  .pricing__content .arrow-down {
+    display: none;
+  }
   .xs-none {
     display: none;
   }
@@ -4099,7 +4127,7 @@
     width: 186px;
   }
   .single__pricing {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .pricing__content::before {
     position: absolute;
@@ -4260,6 +4288,7 @@
     width: 60px;
     padding: 10px;
     margin-right: 15px;
+    margin-left: 20px;
   }
   .icon__box .serial__number {
     height: 20px;
@@ -4274,7 +4303,7 @@
   .serial__content p,
   .serial__content p .link {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 20px;
     max-width: 280px;
   }
   .serial__content p br {
@@ -4639,7 +4668,7 @@
   }
   .left__box p {
     font-size: 24px;
-    padding: 10px 0 0;
+    padding: 10px 0 10px;
   }
   .priceTable .col-sm-6 {
     flex: 0 0 50%;
