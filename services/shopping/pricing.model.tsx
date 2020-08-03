@@ -28,6 +28,7 @@ export interface PackageAll {
 
 
 export interface ProductBuy {
+  productId: number,
   productName: string,
   unitSms: number,
   credit: number,
@@ -35,10 +36,27 @@ export interface ProductBuy {
   sendername: number
   amount: number,
   vat: number,
-  total: number
+  total: number,
 }
 
 export interface FormBodyPayment{
-  productId: number,
-  isTaxInoivce: string
+  product_id: number,
+  is_tax_invoice: string
+}
+
+export interface Payment2C2PReponse {
+  version: string,
+  merchantId: string,
+  paymentDescription: string,
+  invoiceNo: string,
+  orderId: string,
+  currency: string,
+  amount: string,
+  customerEmail: string,
+  paymentOption: string,
+  hash: string,
+  paymentUrl: string,
+  resultUrlFrontent: string,
+  resultUrlBackend: string
+
 }

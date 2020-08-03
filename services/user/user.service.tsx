@@ -28,7 +28,7 @@ export async function login(param: any): Promise<AuthLogin> {
 
     // return loginFail();
     let resultAPI = await axios.post(
-      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/auth',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/auth',
       sendData
     );
     // let resultAPI = await axios.get(
@@ -53,6 +53,7 @@ export async function login(param: any): Promise<AuthLogin> {
         'TBS_token',
         JSON.stringify({ token: loginResponse.token })
       );
+      Cookie.set('TBS_token', loginResponse.token, { expires: 0.15 });
       Cookie.set('PASSCODE', loginResponse.passcode, { expires: 0.15 });
     }
     return loginResponse;
@@ -158,7 +159,7 @@ export async function registerUser(param: any): Promise<Register> {
       };
     }
     let resultAPI = await axios.post(
-      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user',
       sendData
     );
 
@@ -204,7 +205,7 @@ export async function resendRegister() {
   const resend_register_sms_token = objlocalStorage.token;
   try {
     let resultAPI = await axios.post(
-      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user/resend-register-sms',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/resend-register-sms',
       { resend_register_sms_token }
     );
 
@@ -242,7 +243,7 @@ export async function quickRegisterStep1(
   try {
     let { msisdn, recaptcha } = param;
     let resultAPI = await axios.post(
-      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user/quick-register/1',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/1',
       { msisdn, recaptcha }
     );
 
@@ -289,7 +290,7 @@ export async function quickRegisterStep2(
       };
     }
     let resultAPI = await axios.post(
-      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user/quick-register/2',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/2',
       sendData
     );
 
@@ -329,7 +330,7 @@ export async function quickRegisterStep3(
   try {
     let { welcome_token } = param;
     let resultAPI = await axios.post(
-      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/api/user/quick-register/3',
+      process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/3',
       { welcome_token }
     );
 
