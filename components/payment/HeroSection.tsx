@@ -160,7 +160,7 @@ const HeroSection = ({ t, packages }: any) => {
       address = {
         accType: res.accType,
         companyName: res.billToAddress.company_name,
-        address: `${res.shipToAddress.building_info} ${res.shipToAddress.address_no} ${res.shipToAddress.street_info} ตำบล/แขวง ${res.shipToAddress.district} <br>อำเภอ/เขต ${res.shipToAddress.amphur} <br>จังหวัด ${res.shipToAddress.province} ${res.shipToAddress.postcode}`,
+        address: `${res.shipToAddress.building_info} ${res.shipToAddress.address_no} ${res.shipToAddress.street_info} ตำบล/แขวง ${res.shipToAddress.district} อำเภอ/เขต ${res.shipToAddress.amphur} จังหวัด ${res.shipToAddress.province} ${res.shipToAddress.postcode}`,
         taxId: res.taxID
       }
       setShipTo(res.accType === UserType.Company)
@@ -305,7 +305,24 @@ const HeroSection = ({ t, packages }: any) => {
       setData2c2p(credit2c2pResult)
       localStorage.removeItem('packageId')
       form2c2pRef.current.submit()
-      
+    } else if(paymentType === PaymentType.QR){
+      const QrResult = await PaymentService.QrPaymentSubmit(formBody)
+      window.scrollTo(0, 0)
+      const orderId = QrResult.invoiceNo
+      const query = { orderId: orderId }
+      const url = { pathname: '/paymentqr', query }
+
+      Cookie.set(`qr-${orderId}`, productBuy.productId.toString(), { expires: 1 })
+      localStorage.removeItem('packageId')
+      Router.push(url).then(() => {
+        Swal.close()
+      })
+    }else{
+      Swal.fire({
+        icon: 'warning',
+        title: 'ช่องทางชำระเงิน',
+        text: 'กรุณาเลือกช่องทางชำระเงิน เพื่อกดยืนยันการชำระ',
+      })
     }
   }
 
@@ -320,7 +337,7 @@ const HeroSection = ({ t, packages }: any) => {
           {addressShipTo.companyName}
         </h6>
         <p style={{ color: '#5b6e80', fontWeight: 400 }} dangerouslySetInnerHTML={{ __html: addressShipTo.address }} />
-        <p style={{ color: '#5b6e80', fontWeight: 400 }}>
+        <p style={{ color: '#5b6e80', fontWeight: 400 ,marginBottom: 20}}>
           {addressShipTo.taxId ? `เลขทะเบียนนิติบุคคลเลขที่ ${addressShipTo.taxId}` : null}
         </p>
 

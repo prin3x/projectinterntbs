@@ -8,7 +8,9 @@ import Head from 'next/head';
 import { withTranslation } from '../../i18n';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/paymentqr';
-const Paymentqr = ({ t }: any) => (
+import * as ProductService from '../../services/shopping/product.service';
+import { PricingProps } from '../../services/shopping/pricing.model';
+const Paymentqr : any = ({ t, packages }: PricingProps) => (
   <Layout>
     <Head>
       <title>{t('title')}</title>
@@ -29,14 +31,20 @@ const Paymentqr = ({ t }: any) => (
           backgroundSize: 'contain',
         }}
       >
-        <HeroSection />
+        <HeroSection packages={packages}/>
         <Help />
       </div>
     </div>
     <BacktoTop />
   </Layout>
 );
-Paymentqr.getInitialProps = async () => ({
-  namespacesRequired: ['PaymentqrMeta'],
-});
+
+Paymentqr.getInitialProps = async () => {
+  const packageAll = await ProductService.GetPackageAll();
+  return {
+    packages: packageAll.packages,
+    namespacesRequired: ['PaymentqrMeta'],
+  }
+};
+
 export default withTranslation('PaymentqrMeta')(Paymentqr);
