@@ -264,7 +264,7 @@ const Header = ({ t }: any) => {
               <ul>
                 <li>
                   <Link href="/log-in" replace>
-                    <a>{t('header.login-' + (isLogin === true ? 'b' : 'a'))}</a>
+                    <a className="loginLink">{t('header.login-' + (isLogin === true ? 'b' : 'a'))}</a>
                   </Link>
                 </li>
                 <li>
