@@ -2,12 +2,13 @@ import axios from 'axios';
 import AppConfig from '../../appConfig';
 
 import { UserAddress, UpdateUserAddress } from '../user/user.model';
-import { FormBodyPayment } from './pricing.model';
+import { FormBodyPayment, QrData } from './pricing.model';
 const ApiUserAddress = `${AppConfig.API_URL_ACCOUNT}/user/address`;
 const ApiUpdateUserAddress = `${AppConfig.API_URL_ACCOUNT}/user/ship-to-address`;
 const ApiBankTransferSubmit = `${AppConfig.API_URL_SHOPPING}/payment/banktransfer`
 const ApiCredit2C2PPaymentSubmit = `${AppConfig.API_URL_SHOPPING}/payment/credit-card`
 const ApiQrPaymentSubmit = `${AppConfig.API_URL_SHOPPING}/payment/qr-confirm`
+const ApiQrShow = `${AppConfig.API_URL_SHOPPING}/payment/qr`
 export async function GetAddress ():Promise<UserAddress>{
   const res = await axios.get(ApiUserAddress);
   const data:UserAddress = res.data
@@ -33,5 +34,10 @@ export async function Credit2C2PPaymentSubmit(data: FormBodyPayment){
 
 export async function QrPaymentSubmit(data: FormBodyPayment){
   const res = await axios.post(ApiQrPaymentSubmit,data)
+  return res.data
+}
+
+export async function QrShow(data: QrData){
+  const res = await axios.post(ApiQrShow,data)
   return res.data
 }

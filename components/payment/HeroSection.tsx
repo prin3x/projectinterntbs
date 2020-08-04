@@ -305,7 +305,7 @@ const HeroSection = ({ t, packages }: any) => {
       setData2c2p(credit2c2pResult)
       localStorage.removeItem('packageId')
       form2c2pRef.current.submit()
-    } else if(paymentType === PaymentType.QR){
+    } else if (paymentType === PaymentType.QR) {
       const QrResult = await PaymentService.QrPaymentSubmit(formBody)
       window.scrollTo(0, 0)
       const orderId = QrResult.invoiceNo
@@ -315,9 +315,13 @@ const HeroSection = ({ t, packages }: any) => {
       Cookie.set(`qr-${orderId}`, productBuy.productId.toString(), { expires: 1 })
       localStorage.removeItem('packageId')
       Router.push(url).then(() => {
-        Swal.close()
+        Swal.update({
+          title: 'กำลังโหลด...', 
+        })
+        Swal.showLoading()
+
       })
-    }else{
+    } else {
       Swal.fire({
         icon: 'warning',
         title: 'ช่องทางชำระเงิน',
@@ -337,7 +341,7 @@ const HeroSection = ({ t, packages }: any) => {
           {addressShipTo.companyName}
         </h6>
         <p style={{ color: '#5b6e80', fontWeight: 400 }} dangerouslySetInnerHTML={{ __html: addressShipTo.address }} />
-        <p style={{ color: '#5b6e80', fontWeight: 400 ,marginBottom: 20}}>
+        <p style={{ color: '#5b6e80', fontWeight: 400, marginBottom: 20 }}>
           {addressShipTo.taxId ? `เลขทะเบียนนิติบุคคลเลขที่ ${addressShipTo.taxId}` : null}
         </p>
 

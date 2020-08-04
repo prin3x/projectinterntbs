@@ -60,3 +60,7 @@ export interface Payment2C2PReponse {
   resultUrlBackend: string
 
 }
+
+export interface QrData{
+  invoice_no: string
+}
