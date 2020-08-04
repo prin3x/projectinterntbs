@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 import Cookie from 'js-cookie';
 import { useRouter } from 'next/router';
-import { ProductPackage, ProductBuy } from '../../services/shopping/pricing.model';
+import { ProductPackage, ProductBuy, QrData } from '../../services/shopping/pricing.model';
 import { calcullateVat } from '../../services/helper.func';
 import numeral from 'numeral';
-
+import Swal from 'sweetalert2'
+import * as PaymentService from '../../services/shopping/payment.service'
+import { setInterval } from 'timers';
 interface BillPayment {
   orderId: string,
   productBuy: ProductBuy
@@ -30,6 +32,7 @@ let bill: BillPayment = {
 
 }
 
+
 const HeroSection = ({ t, packages }: any) => {
   const router = useRouter()
   const [billPayment, setBillPayment] = useState(bill)
@@ -45,6 +48,16 @@ const HeroSection = ({ t, packages }: any) => {
     }
   }
   React.useEffect(() => {
+    if (!Swal.isVisible()) {
+      Swal.fire({
+        title: 'กำลังโหลด...',
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        onBeforeOpen: () => {
+          Swal.showLoading()
+        }
+      })
+    }
     window.addEventListener('scroll', stickyBox);
     return () => {
       window.removeEventListener('scroll', stickyBox);
@@ -81,9 +94,34 @@ const HeroSection = ({ t, packages }: any) => {
       productBuy: defaultProductBuy
     }
 
-    setBillPayment(bill)
+
+    const loadQrImage = async () => {
+      if (!orderId) {
+
+        setTimeout(loadQrImage, 3000)
+        return
+      }
+      const data: QrData = {
+        invoice_no: orderId
+      }
+
+      const res = await PaymentService.QrShow(data)
+      if (res.status === 'Success') {
+
+        return
+      } else {
+
+        setTimeout(loadQrImage, 3000)
+      }
+      setBillPayment(bill)
+
+    }
+
+    loadQrImage()
 
   }, []);
+
+
   return (
     <div className="container">
       <div className="row justify-content-center hero_top_one paymentPage">
