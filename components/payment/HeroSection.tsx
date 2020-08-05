@@ -205,8 +205,9 @@ const HeroSection = ({ t, packages }: any) => {
       ship_to_province: values.province,
       ship_to_postcode: values.zipcode
     }
-    await PaymentService.UpdateAddress(data)
+
     try {
+      await PaymentService.UpdateAddress(data)
       await loadUserAddress()
     } catch (error) {
       console.log(error.message)
@@ -287,46 +288,49 @@ const HeroSection = ({ t, packages }: any) => {
       product_id: productBuy.productId,
       is_tax_invoice: shipTo ? 'true' : 'false'
     }
-    if (paymentType === PaymentType.BANK_TRANSFER) {
+    try {
+      if (paymentType === PaymentType.BANK_TRANSFER) {
 
-      const bankResult = await PaymentService.BankTransferSubmit(formBody)
-      window.scrollTo(0, 0)
-      const transactionId = bankResult.transactionId
-      const query = { order: transactionId }
-      const url = { pathname: '/paymentbank', query }
+        const bankResult = await PaymentService.BankTransferSubmit(formBody)
+        window.scrollTo(0, 0)
+        const transactionId = bankResult.transactionId
+        const query = { order: transactionId }
+        const url = { pathname: '/paymentbank', query }
 
-      Cookie.set(`order-bank-${transactionId}`, productBuy.productId.toString(), { expires: 0.15 })
-      localStorage.removeItem('packageId')
-      Router.push(url).then(() => {
-        Swal.close()
-      })
-    } else if (paymentType === PaymentType.CREDIT_CARD) {
-      credit2c2pResult = await PaymentService.Credit2C2PPaymentSubmit(formBody)
-      setData2c2p(credit2c2pResult)
-      localStorage.removeItem('packageId')
-      form2c2pRef.current.submit()
-    } else if (paymentType === PaymentType.QR) {
-      const QrResult = await PaymentService.QrPaymentSubmit(formBody)
-      window.scrollTo(0, 0)
-      const orderId = QrResult.invoiceNo
-      const query = { orderId: orderId }
-      const url = { pathname: '/paymentqr', query }
-
-      Cookie.set(`qr-${orderId}`, productBuy.productId.toString(), { expires: 1 })
-      localStorage.removeItem('packageId')
-      Router.push(url).then(() => {
-        Swal.update({
-          title: 'กำลังโหลด...', 
+        Cookie.set(`order-bank-${transactionId}`, productBuy.productId.toString(), { expires: 0.15 })
+        localStorage.removeItem('packageId')
+        Router.push(url).then(() => {
+          Swal.close()
         })
-        Swal.showLoading()
+      } else if (paymentType === PaymentType.CREDIT_CARD) {
+        credit2c2pResult = await PaymentService.Credit2C2PPaymentSubmit(formBody)
+        setData2c2p(credit2c2pResult)
+        localStorage.removeItem('packageId')
+        form2c2pRef.current.submit()
+      } else if (paymentType === PaymentType.QR) {
+        const QrResult = await PaymentService.QrPaymentSubmit(formBody)
+        window.scrollTo(0, 0)
+        const orderId = QrResult.invoiceNo
+        const query = { orderId: orderId }
+        const url = { pathname: '/paymentqr', query }
 
-      })
-    } else {
-      Swal.fire({
-        icon: 'warning',
-        title: 'ช่องทางชำระเงิน',
-        text: 'กรุณาเลือกช่องทางชำระเงิน เพื่อกดยืนยันการชำระ',
-      })
+        localStorage.removeItem('packageId')
+        Router.push(url).then(() => {
+          Swal.update({
+            title: 'กำลังโหลด...',
+          })
+          Swal.showLoading()
+
+        })
+      } else {
+        Swal.fire({
+          icon: 'warning',
+          title: 'ช่องทางชำระเงิน',
+          text: 'กรุณาเลือกช่องทางชำระเงิน เพื่อกดยืนยันการชำระ',
+        })
+      }
+    } catch (error) {
+      console.error(error.message)
     }
   }
 

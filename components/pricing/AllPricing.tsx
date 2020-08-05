@@ -7,7 +7,7 @@ import numeral from 'numeral';
 import classnames from 'classnames';
 import Router from 'next/router';
 
-const SenderActive = 5;
+const SenderActive = -1;
 
 const BuyPackage = (packageItem: ProductPackage) => {
   localStorage.setItem('packageId', packageItem.productId.toString())
