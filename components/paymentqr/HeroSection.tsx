@@ -1,7 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
-import Cookie from 'js-cookie';
 import { useRouter } from 'next/router';
 import { ProductPackage, ProductBuy, QrData } from '../../services/shopping/pricing.model';
 import { calcullateVat } from '../../services/helper.func';
@@ -11,7 +10,6 @@ import * as PaymentService from '../../services/shopping/payment.service'
 import Countdown, { zeroPad } from 'react-countdown';
 import * as dateFnsTimezone from 'date-fns-timezone'
 import { isBefore } from 'date-fns'
-import { AnyRecordWithTtl } from 'dns';
 interface BillPayment {
   orderId: string,
   productBuy: ProductBuy
