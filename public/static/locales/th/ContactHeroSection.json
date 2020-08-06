@@ -22,6 +22,31 @@
       "detail": "รายละเอียดเบื้องต้น",
       "checkbox": "ยืนยันรับการติดต่อจาก ThaiBulkSMS",
       "submitBtn": "Contact Me"
+    },
+    "validate": {
+      "firstname": {
+        "required": "กรุณากรอก ชื่อจริง"
+      },
+      "lastname": {
+        "required": "กรุณากรอก นามสกุล"
+      },
+      "phone": {
+        "required": "กรุณากรอก เบอร์โทรศัพท์",
+        "pattern": "โปรดใส่ หมายเลข ให้ถูกต้อง (ตัวเลขเท่านั้น)"
+      },
+      "email": {
+        "required": "กรุณากรอก อีเมลล์",
+        "pattern": "โปรดใส่ อีเมล์ ให้ถูกต้อง (อีเมล์เท่านั้น)"
+      },
+      "confirm": {
+        "required": "กรุณากรอก ยอมรับ"
+      },
+      "recaptcha": {
+        "required": "กรุณากรอก I'm not a robot"
+      },
+      "desc": {
+        "required": "กรุณากรอก รายละเอียดเบื้องต้น"
+      }
     }
   }
 }

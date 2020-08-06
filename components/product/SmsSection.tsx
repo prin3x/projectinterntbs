@@ -1,5 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
+import TestQuickregister from '../quickregister/testQuickregister';
 const SmsSection = ({ t }: any) => (
   <div
     className="sms_section productsms lazyload"
@@ -47,31 +48,7 @@ const SmsSection = ({ t }: any) => (
           </div>
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-12">
-          <div className="sms_form">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
-                <div className="sms_form_text">
-                  <h4>{t('productsms.test.header')}</h4>
-                  <p>{t('productsms.test.desc')}</p>
-                </div>
-              </div>
-              <div className="col-lg-6 col-md-12">
-                <div className="sms_form_field">
-                  <input
-                    type="text"
-                    placeholder={t('productsms.test.telNumber')}
-                  />
-                  <button className="btn v2" type="submit">
-                    {t('productsms.test.confirmBtn')}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <TestQuickregister />
     </div>
   </div>
 );

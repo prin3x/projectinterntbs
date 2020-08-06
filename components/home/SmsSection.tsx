@@ -305,100 +305,102 @@ const SmsSectionV2 = ({ t }: any) => {
             </div>
           </div>
         </div>
-      </div>
-      <div id="ElementModal">
-        <Modal
-          isOpen={modalIsOpen}
-          // onRequestClose={closeModal}
-          onRequestClose={() => {}}
-          style={customStyles}
-          contentLabel=""
-        >
-          <div className="" style={{ textAlign: 'right' }}>
-            <div style={{ width: '505px', height: '49px' }}>
-              <button style={{ float: 'right' }} onClick={closeModal}>
-                close
-              </button>
-            </div>
-            {showModalcaptcha && (
-              <div>
-                <ReCAPTCHA
-                  sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
-                  onChange={setreCaptcha}
-                />
-              </div>
-            )}
-            {showModalpass && (
-              <div
-                className=""
-                style={{
-                  textAlign: 'center',
-                }}
-              >
-                <h5 style={{ fontSize: '24px' }}>
-                  {t('homesms.modal.showModalpass.header')}
-                </h5>
-                <form
-                  onSubmit={handleSubmitStep2(onSubmitStep2)}
-                  style={{ marginLeft: '55px' }}
-                >
-                  <div className="form__wrapper">
-                    <input
-                      ref={registerStep2({
-                        required: true,
-                        pattern: /^\d+$/,
-                      })}
-                      onChange={() => clearErrors2('resultStep2')}
-                      id="pin"
-                      name="pin"
-                      style={{ height: '48px', width: '236px' }}
-                      type="password"
-                      placeholder={t('homesms.modal.showModalpass.placeholder')}
-                      className="input__box"
-                    />
-                    <button
-                      type="submit"
-                      className="btn v8"
-                      style={{
-                        width: '158px',
-                        height: '48px',
-                        borderRadius: '0 15px 15px 0',
-                        padding: '15px 34px',
-                      }}
-                      onClick={() => clearErrors2()}
-                    >
-                      {t('homesms.modal.showModalpass.submitBtn')}
-                    </button>
-                  </div>
-                </form>
-                <div style={{ color: 'red' }}>
-                  {t(handleErorrStep2(errrorsStep2))}
-                </div>
-              </div>
-            )}
-            {showLogin && (
-              <div
-                style={{
-                  textAlign: 'center',
-                }}
-              >
-                <h5 style={{ fontSize: '24px' }}>
-                  {t('homesms.modal.showLogin.header')}
-                </h5>
-                <p>{t('homesms.modal.showLogin.decs1')}</p>
-                <p>{t('homesms.modal.showLogin.decs2')}</p>
-                <button
-                  className="btn v2"
-                  onClick={() => {
-                    gotoLogin();
-                  }}
-                >
-                  {t('homesms.modal.showLogin.submitBtn')}
+        <div id="ElementModal">
+          <Modal
+            isOpen={modalIsOpen}
+            // onRequestClose={closeModal}
+            onRequestClose={() => {}}
+            style={customStyles}
+            contentLabel=""
+          >
+            <div className="" style={{ textAlign: 'right' }}>
+              <div style={{ width: '505px', height: '49px' }}>
+                <button style={{ float: 'right' }} onClick={closeModal}>
+                  close
                 </button>
               </div>
-            )}
-          </div>
-        </Modal>
+              {showModalcaptcha && (
+                <div>
+                  <ReCAPTCHA
+                    sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
+                    onChange={setreCaptcha}
+                  />
+                </div>
+              )}
+              {showModalpass && (
+                <div
+                  className=""
+                  style={{
+                    textAlign: 'center',
+                  }}
+                >
+                  <h5 style={{ fontSize: '24px' }}>
+                    {t('homesms.modal.showModalpass.header')}
+                  </h5>
+                  <form
+                    onSubmit={handleSubmitStep2(onSubmitStep2)}
+                    style={{ marginLeft: '55px' }}
+                  >
+                    <div className="form__wrapper">
+                      <input
+                        ref={registerStep2({
+                          required: true,
+                          pattern: /^\d+$/,
+                        })}
+                        onChange={() => clearErrors2('resultStep2')}
+                        id="pin"
+                        name="pin"
+                        style={{ height: '48px', width: '236px' }}
+                        type="password"
+                        placeholder={t(
+                          'homesms.modal.showModalpass.placeholder'
+                        )}
+                        className="input__box"
+                      />
+                      <button
+                        type="submit"
+                        className="btn v8"
+                        style={{
+                          width: '158px',
+                          height: '48px',
+                          borderRadius: '0 15px 15px 0',
+                          padding: '15px 34px',
+                        }}
+                        onClick={() => clearErrors2()}
+                      >
+                        {t('homesms.modal.showModalpass.submitBtn')}
+                      </button>
+                    </div>
+                  </form>
+                  <div style={{ color: 'red' }}>
+                    {t(handleErorrStep2(errrorsStep2))}
+                  </div>
+                </div>
+              )}
+              {showLogin && (
+                <div
+                  style={{
+                    textAlign: 'center',
+                  }}
+                >
+                  <h5 style={{ fontSize: '24px' }}>
+                    {t('homesms.modal.showLogin.header')}
+                  </h5>
+                  <p>{t('homesms.modal.showLogin.decs1')}</p>
+                  <p>{t('homesms.modal.showLogin.decs2')}</p>
+                  <button
+                    className="btn v2"
+                    onClick={() => {
+                      gotoLogin();
+                    }}
+                  >
+                    {t('homesms.modal.showLogin.submitBtn')}
+                  </button>
+                </div>
+              )}
+            </div>
+          </Modal>
+        </div>
       </div>
     </div>
   );

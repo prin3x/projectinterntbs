@@ -1,13 +1,105 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-import * as React from 'react';
-
+import ReCAPTCHA from 'react-google-recaptcha';
+import React, { useEffect, useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { sendContact } from '../../services/contact/contact.service';
 const menuClick = () => {
   var elDivnice = document.getElementsByClassName('devnice-select')[0];
   if (elDivnice.classList.contains('open')) elDivnice.classList.remove('open');
   else elDivnice.classList.add('open');
 };
+type Inputs = {
+  head: string;
+  firstnname: string;
+  lastname: string;
+  email: string;
+  phone: string;
+  desc: string;
+  recaptcha: string;
+  confirm: boolean;
+};
 const HeroSection = ({ t }: any) => {
+  const [wordhead, setWordhead] = useState('contacthero.form.problem.1');
+  const recaptchaRef = useRef({
+    reset: function () {
+      return;
+    },
+  });
+  let captcha: any;
+  const setCaptchaRef = (ref: any) => {
+    if (ref) {
+      return (captcha = ref);
+    }
+  };
+  let {
+    register,
+    handleSubmit,
+    setError,
+    setValue,
+    clearErrors,
+    errors,
+  } = useForm<Inputs>({
+    defaultValues: {
+      confirm: true,
+      head: '1',
+    },
+  });
+  const onSubmit = async (data: any) => {
+    console.log(data);
+    // const user = await sendContact(data);
+    // console.log('user : ', user);
+    // if (user.error.code !== '') {
+    //   if (user.error.code === 'registerdto.recaptcha.invalid') {
+    //     if (typeof recaptchaRef.current === 'object') {
+    //       captcha.reset();
+    //     }
+    //   }
+    //   setError('res', {
+    //     type: user.error.code,
+    //     message: '',
+    //   });
+    // } else {
+    //   console.log('========================');
+    //   Router.push('/register/success');
+    // }
+  };
+  const handleErorr = (error: any) => {
+    console.log(error);
+    if (error.firstname) {
+      return 'contacthero.validate.firstname.' + error.firstname.type;
+    }
+    if (error.lastname) {
+      return 'contacthero.validate.lastname.' + error.lastname.type;
+    }
+    if (error.phone) {
+      return 'contacthero.validate.phone.' + error.phone.type;
+    }
+    if (error.email) {
+      return 'contacthero.validate.email.' + error.email.type;
+    }
+    if (error.recaptcha) {
+      return 'contacthero.validate.recaptcha.' + error.recaptcha.type;
+    }
+    if (error.confirm) {
+      return 'contacthero.validate.confirm.' + error.confirm.type;
+    }
+    if (error.desc) {
+      return 'contacthero.validate.desc.' + error.desc.type;
+    }
+    if (error.res) {
+      if (error.res.type !== '400') return 'contacthero.' + error.res.type;
+      return 'ErrorMessage:' + error.res.type;
+    }
+
+    if (error.auth) {
+      return 'ErrorMessage:' + error.auth.type;
+    }
+  };
+  const setreCaptcha = (value: any) => {
+    setValue('recaptcha', value, { shouldValidate: true });
+    clearErrors('recaptcha');
+  };
   React.useEffect(() => {}, []);
   return (
     <div className="container">
@@ -94,7 +186,7 @@ const HeroSection = ({ t }: any) => {
               </div>
               <div className="col-lg-7">
                 <div className="form_part">
-                  <form action="#">
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     {/* <select name="se1" id="" className="input__box v2">
                       <option value="">ติดต่อฝ่ายขาย</option>
                       <option value="">พบปัญหาการใช้งาน</option>
@@ -105,64 +197,146 @@ const HeroSection = ({ t }: any) => {
                       className="nice-select input__box v2 devnice-select"
                       onClick={menuClick}
                     >
-                      <span className="current">
-                        {t('contacthero.form.problem.1')}
-                      </span>
+                      <span className="">{t(wordhead)}</span>
                       <ul className="list">
-                        <li className="option selected" data-value="">
+                        <li
+                          // className="option selected"
+                          className="option"
+                          data-value=""
+                          onClick={() => {
+                            setValue('head', '1', {
+                              shouldValidate: true,
+                            });
+                            setWordhead('contacthero.form.problem.1');
+                          }}
+                        >
                           {t('contacthero.form.problem.1')}
                         </li>
-                        <li className="option " data-value="">
+                        <li
+                          className="option "
+                          data-value=""
+                          onClick={() => {
+                            setValue('head', '2', {
+                              shouldValidate: true,
+                            });
+                            setWordhead('contacthero.form.problem.2');
+                          }}
+                        >
                           {t('contacthero.form.problem.2')}
                         </li>
-                        <li className="option " data-value="">
+                        <li
+                          className="option "
+                          data-value=""
+                          onClick={() => {
+                            setValue('head', '3', {
+                              shouldValidate: true,
+                            });
+                            setWordhead('contacthero.form.problem.3');
+                          }}
+                        >
                           {t('contacthero.form.problem.3')}
                         </li>
-                        <li className="option " data-value="">
+                        <li
+                          className="option "
+                          data-value=""
+                          onClick={() => {
+                            setValue('head', '4', {
+                              shouldValidate: true,
+                            });
+                            setWordhead('contacthero.form.problem.4');
+                          }}
+                        >
                           {t('contacthero.form.problem.4')}
                         </li>
                       </ul>
                     </div>
                     <input
+                      ref={register({
+                        required: true,
+                      })}
+                      id="head"
+                      name="head"
+                      type="hidden"
+                    />
+                    <input
+                      ref={register({ required: true })}
+                      id="firstname"
+                      name="firstname"
                       type="text"
                       className="input__box v2"
                       placeholder={t('contacthero.form.firstname')}
                     />
 
                     <input
+                      ref={register({ required: true })}
+                      id="lastname"
+                      name="lastname"
                       type="text"
                       className="input__box v2"
                       placeholder={t('contacthero.form.lastname')}
                     />
                     <input
+                      ref={register({
+                        required: true,
+                        pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      })}
+                      id="email"
+                      name="email"
                       type="text"
                       className="input__box v2"
                       placeholder={t('contacthero.form.email')}
                     />
                     <input
+                      ref={register({
+                        required: true,
+                        pattern: /^[0][6||8-9][0-9]{8}$/i,
+                      })}
+                      id="phone"
+                      name="phone"
                       type="text"
                       className="input__box v2"
                       placeholder={t('contacthero.form.phone')}
                     />
 
                     <textarea
+                      ref={register({ required: true })}
+                      id="desc"
+                      name="desc"
                       className="input__box v2"
                       placeholder={t('contacthero.form.detail')}
                     ></textarea>
-
-                    <img
-                      src="/img/captcha.png"
-                      className="img-fluid"
-                      style={{ marginTop: '30px' }}
-                      alt=""
+                    <input
+                      ref={register({
+                        required: true,
+                      })}
+                      id="recaptcha"
+                      name="recaptcha"
+                      type="hidden"
                     />
-
+                    <ReCAPTCHA
+                      ref={(r) => setCaptchaRef(r)}
+                      sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
+                      onChange={setreCaptcha}
+                    />
                     <label className="checkbox-wrapper">
                       {t('contacthero.form.checkbox')}
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        id="confirm"
+                        name="confirm"
+                        ref={register({ required: true })}
+                      />
                       <span className="checkmark"></span>
                     </label>
-
+                    <div
+                      style={{
+                        color: '#e20000',
+                        textAlign: 'center',
+                        margin: '15px',
+                      }}
+                    >
+                      {t(handleErorr(errors))}
+                    </div>
                     <div
                       className="button__wrapper text-center"
                       style={{ marginTop: '50px' }}
