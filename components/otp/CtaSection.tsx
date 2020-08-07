@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const CtaSectionV2 = ({ t }: any) => (
   <div
@@ -13,7 +13,10 @@ const CtaSectionV2 = ({ t }: any) => (
             <h3 dangerouslySetInnerHTML={{ __html: t('otpcta.title') }}></h3>
             <a className="btn v7">{t('otpcta.freeBtn')}</a>
             <p>
-              {t('otpcta.footer1')} <a>{t('otpcta.login')}</a>{' '}
+              {t('otpcta.footer1')}
+              <Link href="/log-in">
+                <a>{t('otpcta.login')}</a>
+              </Link>{' '}
               {t('otpcta.footer2')}
             </p>
           </div>

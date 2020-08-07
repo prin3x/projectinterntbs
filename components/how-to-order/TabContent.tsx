@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as React from 'react';
 
 const TabContent = ({ t }: any) => {
-  const [tab , setTab] = React.useState<any>() 
+  const [tab, setTab] = React.useState<any>();
   React.useEffect(() => {
     setTab($('#pills-profile-tab'));
   }, [tab]);
@@ -40,7 +40,15 @@ const TabContent = ({ t }: any) => {
                             __html: t('howtoordertabcontent.content.1.desc'),
                           }}
                         ></p> */}
-                            <p>{t('howtoordertabcontent.content.1.desc1')}<Link href="/pricing"><a className="theme__text link mt-0">{t('howtoordertabcontent.content.1.desc2')}</a></Link>{t('howtoordertabcontent.content.1.desc3')}</p>
+                        <p>
+                          {t('howtoordertabcontent.content.1.desc1')}
+                          <Link href="/pricing">
+                            <a className="theme__text link mt-0">
+                              {t('howtoordertabcontent.content.1.desc2')}
+                            </a>
+                          </Link>
+                          {t('howtoordertabcontent.content.1.desc3')}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -83,9 +91,17 @@ const TabContent = ({ t }: any) => {
                             __html: t('howtoordertabcontent.content.3.desc'),
                           }}
                         ></p> */}
-                        <p
-                          
-                      >{t('howtoordertabcontent.content.3.desc1')}{' '}<a onClick={()=>{ tab?.tab('show') }} className="theme__text link mt-0">{t('howtoordertabcontent.content.3.desc2')}</a></p>
+                        <p>
+                          {t('howtoordertabcontent.content.3.desc1')}{' '}
+                          <a
+                            onClick={() => {
+                              tab?.tab('show');
+                            }}
+                            className="theme__text link mt-0"
+                          >
+                            {t('howtoordertabcontent.content.3.desc2')}
+                          </a>
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -312,7 +328,9 @@ const TabContent = ({ t }: any) => {
                     data-src="/img/img_1.png"
                     alt="Image"
                   />
-                  <a className="btn v4">{t('howtoordertabcontent.telBtn')}</a>
+                  <a href="tel:027986000" className="btn v4">
+                    {t('howtoordertabcontent.telBtn')}
+                  </a>
                 </div>
               </div>
               <div className="col-md-4 col-12">
@@ -322,9 +340,11 @@ const TabContent = ({ t }: any) => {
                     data-src="/img/img_2.png"
                     alt="Image"
                   />
-                  <a className="btn v4">
-                    {t('howtoordertabcontent.contactBtn')}
-                  </a>
+                  <Link href="/contact">
+                    <a className="btn v4">
+                      {t('howtoordertabcontent.contactBtn')}
+                    </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-md-4 col-12">

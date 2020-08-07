@@ -8,7 +8,7 @@ const EduSection = ({ t }: any) => (
           <div className="edu_text">
             <h3>{t('homeedu.header')}</h3>
             <Link href="/SuccessStoriesListing">
-              <a href="#">{t('homeedu.link')}</a>
+              <a>{t('homeedu.link')}</a>
             </Link>
           </div>
         </div>

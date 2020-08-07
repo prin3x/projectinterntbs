@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const CtaSectionV3 = ({ t }: any) => (
   <div
@@ -18,7 +18,9 @@ const CtaSectionV3 = ({ t }: any) => (
             <a className="btn v7">{t('sms-trackingctasection.freeBtn')}</a>
             <p>
               {t('sms-trackingctasection.lablelogin1')}{' '}
-              <a>{t('sms-trackingctasection.lablelogin2')}</a>{' '}
+              <Link href="/log-in">
+                <a>{t('sms-trackingctasection.lablelogin2')}</a>
+              </Link>{' '}
               {t('sms-trackingctasection.lablelogin3')}
             </p>
           </div>

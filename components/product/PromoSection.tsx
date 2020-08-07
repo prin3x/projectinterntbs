@@ -99,7 +99,7 @@ const PromoSection = ({ t }: any) => (
                 __html: t('productpromo.section.2.title'),
               }}
             ></p>
-            {/* <a className="link" href="#">
+            {/* <a className="link" >
               {t('productpromo.section.2.link')}
             </a> */}
             <h6

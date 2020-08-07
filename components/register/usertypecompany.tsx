@@ -22,9 +22,7 @@ const UsertypeCompanyComponents = ({ t }: any) => (
         className="nice-select input__box v2 devnice-select usertypeDD"
         onClick={menuClick}
       >
-        <span className="current">
-          {t('contacthero.form.problem.1')}
-        </span>
+        <span className="current">{t('contacthero.form.problem.1')}</span>
         <ul className="list">
           <li className="option selected" data-value="">
             {t('contacthero.form.problem.1')}
@@ -49,7 +47,7 @@ const UsertypeCompanyComponents = ({ t }: any) => (
           className="input-txt01"
           placeholder={t('usertypecompany.form.taxnumber')}
         />
-        <a className="btn v2 companybtn" href="#">
+        <a className="btn v2 companybtn">
           {t('usertypecompany.form.searchBtn')}
         </a>
       </div>
@@ -89,12 +87,10 @@ const UsertypeCompanyComponents = ({ t }: any) => (
           placeholder={t('usertypecompany.form.postcode')}
         />
         <div
-        className="nice-select input__box v2 devnice-select usertypeBranch"
-        onClick={menuClick}
-      >
-          <span className="current">
-            {t('contacthero.form.problem.1')}
-          </span>
+          className="nice-select input__box v2 devnice-select usertypeBranch"
+          onClick={menuClick}
+        >
+          <span className="current">{t('contacthero.form.problem.1')}</span>
           <ul className="list">
             <li className="option selected" data-value="">
               {t('contacthero.form.problem.1')}
@@ -168,7 +164,7 @@ const UsertypeCompanyComponents = ({ t }: any) => (
       </div>
       <div className="btn-regis">
         <Link href="/payment">
-          <a className="btn v2" href="#">
+          <a className="btn v2">
             {t('usertypecompany.taxinvoiceaddress.saveBtn')}
           </a>
         </Link>

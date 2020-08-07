@@ -117,7 +117,7 @@ const Header = ({ t }: any) => {
                     </Link>
                   </li>
                   {/* <li className="has-children">
-                    <a className="active" href="#">
+                    <a className="active" >
                       {t('header.database')}
                     </a>
                     <ul className="dropdown">
@@ -179,21 +179,21 @@ const Header = ({ t }: any) => {
                   <ul className="site-nav-wrap">
                     <li>
                       <Link href="/product">
-                        <a className="active closemenu" href="#">
+                        <a className="active closemenu">
                           {t('header.product')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/pricing">
-                        <a className="active closemenu" href="#">
+                        <a className="active closemenu">
                           {t('header.pricing')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/support/how-to-order">
-                        <a className="active closemenu" href="#">
+                        <a className="active closemenu">
                           {t('header.howtoorder')}
                         </a>
                       </Link>
@@ -208,28 +208,28 @@ const Header = ({ t }: any) => {
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/ResourcesLanding">
-                            <a href="#" className="closemenu">
+                            <a  className="closemenu">
                               <h6>{t('header.resources')}</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/KnowledgeListing">
-                            <a href="#" className="closemenu">
+                            <a  className="closemenu">
                               <h6>{t('header.knowledge')}</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/UseCasesListing">
-                            <a href="#" className="closemenu">
+                            <a  className="closemenu">
                               <h6>{t('header.example')}</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/SuccessStoriesListing">
-                            <a href="#" className="closemenu">
+                            <a  className="closemenu">
                               <h6>{t('header.successstories')}</h6>
                             </a>
                           </Link>
@@ -238,7 +238,7 @@ const Header = ({ t }: any) => {
                     </li> */}
                     <li>
                       <Link href="/Documentation">
-                        <a className="active closemenu" href="#">
+                        <a className="active closemenu">
                           {t('header.documentation')}
                         </a>
                       </Link>

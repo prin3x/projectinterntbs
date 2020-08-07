@@ -148,7 +148,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <p>
                     {t('homesimpleslider.item.1.desc')}
                     {/* <Link href="/">
-                      <a href="#">
+                      <a >
                         <span>{t('homesimpleslider.item.1.link')}</span>
                       </a>
                     </Link> */}
@@ -174,7 +174,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <p>
                     {t('homesimpleslider.item.2.desc')}
                     {/* <Link href="/">
-                      <a href="#">
+                      <a >
                         <span>{t('homesimpleslider.item.2.link')}</span>
                       </a>
                     </Link> */}
@@ -219,7 +219,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <p>
                     {t('homesimpleslider.item.4.desc')}
                     {/* <Link href="/">
-                      <a href="#">
+                      <a >
                         <span>{t('homesimpleslider.item.4.link')}</span>
                       </a>
                     </Link> */}
@@ -245,7 +245,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <p>
                     {t('homesimpleslider.item.5.desc')}
                     {/* <Link href="/">
-                      <a href="#">
+                      <a >
                         <span>{t('homesimpleslider.item.5.link')}</span>
                       </a>
                     </Link> */}
@@ -261,7 +261,7 @@ const SimpleSliderSection = ({ t }: any) => {
                 </div>
               </div>
             </OwlCarousel>
-            {/* <a href="#" className="lang_link text-right pr-4">
+            {/* <a  className="lang_link text-right pr-4">
               {t('homesimpleslider.testBtn')}
               <img
                 className="lazyload"
