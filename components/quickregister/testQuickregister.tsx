@@ -1,7 +1,7 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Router from 'next/router';
 import { StoreContext } from '../context/store';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -20,7 +20,7 @@ type Inputs = {
   resultStep3: string;
   welcomeToken: string;
 };
-Modal.setAppElement('#ElementModal');
+
 const TestQuickregister = ({ t }: any) => {
   const [showModalpass, setShowModalpass] = useState(false);
   const [showInputstep1, setShowInputstep1] = useState(true);
@@ -31,6 +31,9 @@ const TestQuickregister = ({ t }: any) => {
   const [tempDatastep1, setTempDatastep1] = useState({ msisdn: '' });
   const [welcome_token, setWelcomeToken] = useState('');
   const dataStore: any = useContext(StoreContext);
+  useEffect(() => {
+    Modal.setAppElement('#ElementModal');
+  }, []);
   const setreCaptcha = async (value: any) => {
     setShowModalcaptcha(false);
     const resultStep1 = await quickRegisterStep1({
