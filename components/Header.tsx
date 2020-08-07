@@ -93,11 +93,7 @@ const Header = ({ t }: any) => {
           <div className="col-lg-3 col-md-6 col-9">
             <Link href="/">
               <a className="navbar-brand p-0 m-0">
-                <img
-                  className="lazyload"
-                  data-src="/img/logo_1.png"
-                  alt="Logo"
-                />
+                <img className="" src="/img/logo_1.png" alt="Logo" />
               </a>
             </Link>
           </div>
@@ -264,7 +260,9 @@ const Header = ({ t }: any) => {
               <ul>
                 <li>
                   <Link href="/log-in" replace>
-                    <a className="loginLink">{t('header.login-' + (isLogin === true ? 'b' : 'a'))}</a>
+                    <a className="loginLink">
+                      {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                    </a>
                   </Link>
                 </li>
                 <li>

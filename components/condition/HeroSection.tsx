@@ -2,13 +2,9 @@ import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
-const HeroSection = ({ t }: any) => {
+const HeroSection = () => {
   React.useEffect(() => {}, []);
-  return (
-    <div className="container">
-     sdfsdf
-    </div>
-  );
+  return <div className="container">sdfsdf</div>;
 };
 
 HeroSection.getInitialProps = async () => ({

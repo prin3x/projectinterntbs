@@ -1,9 +1,9 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { sendContact } from '../../services/contact/contact.service';
+// import { sendContact } from '../../services/contact/contact.service';
 const menuClick = () => {
   var elDivnice = document.getElementsByClassName('devnice-select')[0];
   if (elDivnice.classList.contains('open')) elDivnice.classList.remove('open');
@@ -21,25 +21,21 @@ type Inputs = {
 };
 const HeroSection = ({ t }: any) => {
   const [wordhead, setWordhead] = useState('contacthero.form.problem.1');
-  const recaptchaRef = useRef({
-    reset: function () {
-      return;
-    },
-  });
+  // const recaptchaRef = useRef({
+  //   reset: function () {
+  //     return;
+  //   },
+  // });
   let captcha: any;
   const setCaptchaRef = (ref: any) => {
+    console.log(captcha);
     if (ref) {
       return (captcha = ref);
     }
   };
-  let {
-    register,
-    handleSubmit,
-    setError,
-    setValue,
-    clearErrors,
-    errors,
-  } = useForm<Inputs>({
+  let { register, handleSubmit, setValue, clearErrors, errors } = useForm<
+    Inputs
+  >({
     defaultValues: {
       confirm: true,
       head: '1',
