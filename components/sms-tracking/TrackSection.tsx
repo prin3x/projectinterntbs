@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const TrackSectionV2 = ({ t }: any) => (
   <div
@@ -31,9 +31,11 @@ const TrackSectionV2 = ({ t }: any) => (
                     __html: t('sms-trackingtracksection.campaigntitle'),
                   }}
                 ></h4>
-                <a className="btn v3">
-                  {t('sms-trackingtracksection.campaignBtn')}
-                </a>
+                <Link href="/">
+                  <a className="btn v3">
+                    {t('sms-trackingtracksection.campaignBtn')}
+                  </a>
+                </Link>
               </div>
             </div>
             {/* <div className="col-lg-6">

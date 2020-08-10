@@ -106,7 +106,9 @@ const PricingSection = ({ t }: any) => (
           <div className="pricing_bottom_text">
             {/* <span>{t('span5')}</span> */}
             <h3>{t('homeproductpricing.footer')}</h3>
-            <a className="btn v3">{t('homeproductpricing.freeBtn')}</a>
+            <Link href="/register">
+              <a className="btn v3">{t('homeproductpricing.freeBtn')}</a>
+            </Link>
           </div>
         </div>
       </div>

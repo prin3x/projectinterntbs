@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import React, { useRef } from 'react';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
@@ -153,7 +153,9 @@ const SimpleSliderSection = ({ t }: any) => {
                       </a>
                     </Link> */}
                   </p>
-                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  <Link href="/register">
+                    <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  </Link>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature01.svg
                     {/* <object
@@ -179,7 +181,9 @@ const SimpleSliderSection = ({ t }: any) => {
                       </a>
                     </Link> */}
                   </p>
-                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  <Link href="/register">
+                    <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  </Link>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature02.svg
                     {/* <object
@@ -198,7 +202,9 @@ const SimpleSliderSection = ({ t }: any) => {
                     alt="Image"
                   />
                   <p>{t('homesimpleslider.item.3.desc')}</p>
-                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  <Link href="/register">
+                    <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  </Link>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature03.svg
                     {/* <object
@@ -224,7 +230,9 @@ const SimpleSliderSection = ({ t }: any) => {
                       </a>
                     </Link> */}
                   </p>
-                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  <Link href="/register">
+                    <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  </Link>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature04.svg
                     {/* <object
@@ -250,7 +258,9 @@ const SimpleSliderSection = ({ t }: any) => {
                       </a>
                     </Link> */}
                   </p>
-                  <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  <Link href="/register">
+                    <a className="btn v9">{t('homesimpleslider.testBtn')}</a>
+                  </Link>
                   <span className="linking" style={{ display: 'none' }}>
                     /img/TBS-home-feature05.svg
                     {/* <object

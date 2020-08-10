@@ -40,7 +40,9 @@ const PromoSection = ({ t }: any) => (
                 data-src="/img/img-sms.svg"
                 alt="Image"
               /> */}
-              <a className="btn v2">{t('productpromo.section.1.freeBtn')}</a>
+              <Link href="/register">
+                <a className="btn v2">{t('productpromo.section.1.freeBtn')}</a>
+              </Link>
             </div>
           </div>
         </div>
@@ -64,9 +66,11 @@ const PromoSection = ({ t }: any) => (
                 data-src="/img/img-api.svg"
                 alt="Image"
               /> */}
-              <a className="btn v2">
-                {t('productpromo.section.1.developerBtn')}
-              </a>
+              <Link href="/register">
+                <a className="btn v2">
+                  {t('productpromo.section.1.developerBtn')}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -179,7 +183,9 @@ const PromoSection = ({ t }: any) => (
               }}
             ></h3>
             <p>{t('productpromo.section.4.title')}</p>
-            <a className="btn v2">{t('productpromo.section.4.freeBtn')}</a>
+            <Link href="/register">
+              <a className="btn v2">{t('productpromo.section.4.freeBtn')}</a>
+            </Link>
             <Link href="/otp">
               <a className="link">{t('productpromo.section.4.link')}</a>
             </Link>

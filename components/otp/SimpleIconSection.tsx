@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const SimpleIconSection = ({ t }: any) => (
   <div className="simple_icon_section v2">
@@ -153,7 +153,7 @@ const SimpleIconSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-md-12 text-center">
-          <a className="lang_link">
+          <a className="lang_link" href="https://tbs.readme.io/reference">
             {t('otpsimpleicon.apilink')}
             <img className="lazyload" data-src="/img/arrow_5.png" alt="Image" />
           </a>

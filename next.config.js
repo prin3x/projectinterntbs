@@ -1,6 +1,6 @@
 var webpack = require('webpack');
-
-module.exports = {
+const withSass = require('@zeit/next-sass');
+module.exports = withSass({
   /* config options here */
   // env: {
   //   API_URL: 'https://tbs-account-api.ngrok.1mobyline.com',
@@ -16,4 +16,4 @@ module.exports = {
     //   'window.jQuery': 'jquery',
     // }),
   ],
-};
+});

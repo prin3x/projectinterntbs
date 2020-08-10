@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const SmsSectionV4 = ({ t }: any) => (
   <div className="sms_section v2 ">
@@ -35,9 +35,11 @@ const SmsSectionV4 = ({ t }: any) => (
               </div>
               <div className="col-lg-3 col-md-12">
                 <div className="sms_form_field">
-                  <a className="btn v8">
-                    {t('sms-trackingsmssection.freeBtn')}
-                  </a>
+                  <Link href="/register">
+                    <a className="btn v8">
+                      {t('sms-trackingsmssection.freeBtn')}
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

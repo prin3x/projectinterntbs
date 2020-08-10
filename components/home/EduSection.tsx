@@ -1,4 +1,4 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const EduSection = ({ t }: any) => (
   <div className="edu_section">
@@ -7,9 +7,7 @@ const EduSection = ({ t }: any) => (
         <div className="col-md-6 col-md-push-6">
           <div className="edu_text">
             <h3>{t('homeedu.header')}</h3>
-            <Link href="/SuccessStoriesListing">
-              <a>{t('homeedu.link')}</a>
-            </Link>
+            <a href="http://www.thaibulksms.com/blog/">{t('homeedu.link')}</a>
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">

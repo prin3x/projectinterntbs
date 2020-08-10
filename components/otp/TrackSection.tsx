@@ -9,7 +9,7 @@ const TrackSection = ({ t }: any) => (
     <div className="container">
       <div className="row track_top">
         <div className="col-md-6 col-md-push-6">
-        <div className="track_text">
+          <div className="track_text">
             <h3 dangerouslySetInnerHTML={{ __html: t('otptrack.title') }}></h3>
             <p>{t('otptrack.desc')}</p>
           </div>
@@ -41,7 +41,9 @@ const TrackSection = ({ t }: any) => (
                     __html: t('otptrack.box.2.title'),
                   }}
                 ></h4>
-                <a className="btn v3">{t('otptrack.box.2.linkBtn')}</a>
+                <a className="btn v3" href="https://tbs.readme.io/reference">
+                  {t('otptrack.box.2.linkBtn')}
+                </a>
               </div>
             </div>
           </div>

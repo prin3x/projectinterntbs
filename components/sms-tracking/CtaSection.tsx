@@ -15,7 +15,9 @@ const CtaSectionV3 = ({ t }: any) => (
                 __html: t('sms-trackingctasection.title'),
               }}
             ></h3>
-            <a className="btn v7">{t('sms-trackingctasection.freeBtn')}</a>
+            <Link href="/register">
+              <a className="btn v7">{t('sms-trackingctasection.freeBtn')}</a>
+            </Link>
             <p>
               {t('sms-trackingctasection.lablelogin1')}{' '}
               <Link href="/log-in">

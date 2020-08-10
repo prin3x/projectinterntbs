@@ -11,7 +11,9 @@ const CtaSectionV2 = ({ t }: any) => (
         <div className=" col-lg-12">
           <div className="cta-text">
             <h3 dangerouslySetInnerHTML={{ __html: t('otpcta.title') }}></h3>
-            <a className="btn v7">{t('otpcta.freeBtn')}</a>
+            <Link href="/register">
+              <a className="btn v7">{t('otpcta.freeBtn')}</a>
+            </Link>
             <p>
               {t('otpcta.footer1')}
               <Link href="/log-in">
