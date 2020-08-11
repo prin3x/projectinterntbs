@@ -86,6 +86,26 @@ const TestimonialSection = ({ t }: any) => (
                 </div>
               </div>
             </div>
+            <div className="item">
+              <div className="testimonial_item">
+                <p className="client_quote">
+                  {t('hometestimonial.item.3.content')}
+                </p>
+                <div className="client_info">
+                  {/* <div className="client_img">
+                    <img
+                      className="lazyload"
+                      data-src="/img/client_1.png"
+                      alt="Image"
+                    />
+                  </div> */}
+                  <div className="client_name">
+                    <h6>{t('hometestimonial.item.3.credit')}</h6>
+                    {/* <p>{t('p2')}</p> */}
+                  </div>
+                </div>
+              </div>
+            </div>
             {/* <div className="item">
               <div className="testimonial_item">
                 <p className="client_quote">
