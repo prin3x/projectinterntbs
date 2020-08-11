@@ -76,6 +76,7 @@ const TestQuickregister = ({ t }: any) => {
       });
       return;
     }
+    setShowModalpass(false);
     openModal();
     setTempDatastep1(data);
     setShowModalcaptcha(true);

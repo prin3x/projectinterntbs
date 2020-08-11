@@ -1,4 +1,4 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const SimpleIconSection = ({ t }: any) => (
   <div className="simple_icon_section v2">

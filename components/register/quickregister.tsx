@@ -18,13 +18,18 @@ type Inputs = {
 };
 const QuickRegisterComponents = ({ t }: any) => {
   const dataStore: any = useContext(StoreContext);
-  let { register, handleSubmit, setError, clearErrors, setValue, errors } = useForm<
-    Inputs
-  >({
+  let {
+    register,
+    handleSubmit,
+    setError,
+    clearErrors,
+    setValue,
+    errors,
+  } = useForm<Inputs>({
     defaultValues: {
       agree: true,
-      news: true
-    }
+      news: true,
+    },
   });
   const onSubmit = async (data: any) => {
     if (dataStore.msisdnStore[0] === undefined) {
@@ -84,12 +89,11 @@ const QuickRegisterComponents = ({ t }: any) => {
       },
     });
     console.log('dataStore : ', dataStore);
-    if(dataStore.passStore[0] !== undefined) {
-      setValue("password", dataStore.passStore[0])
+    if (dataStore.passStore[0] !== undefined) {
+      setValue('password', dataStore.passStore[0]);
     }
-    // console.log('msisdnStore :::::::::::: ', dataStore.msisdnStore);
     if (dataStore.msisdnStore[0] === undefined) {
-    Router.push('/log-in');
+      Router.push('/log-in');
     }
   }, []);
   return (
