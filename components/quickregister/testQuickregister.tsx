@@ -7,11 +7,13 @@ import { StoreContext } from '../context/store';
 import ReCAPTCHA from 'react-google-recaptcha';
 import TagManager from 'react-gtm-module';
 import Modal from 'react-modal';
+import Cookie from 'js-cookie';
 import {
   quickRegisterStep1,
   quickRegisterStep2,
   quickRegisterStep3,
 } from '../../services/user/user.service';
+import appConfig from '../../appConfig';
 type Inputs = {
   msisdn: string;
   pin: string;
@@ -178,8 +180,17 @@ const TestQuickregister = ({ t }: any) => {
   };
   //================ end step 3
   const gotoLogin = () => {
-    dataStore.msisdnStore[1](msisdn);
-    Router.push('/register/quickregister');
+    // dataStore.msisdnStore[1](msisdn);
+    let domain = 'localhost';
+    if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
+    else if (appConfig.APP_ENV === appConfig.internalTest)
+      domain = '.1mobyline.com';
+
+    Cookie.set('TBS_username', msisdn || '', { expires: 0.15, domain });
+    // Router.push('/register/quickregister');
+    window.location.replace(
+      'https://account.ngrok.1mobyline.com/register/quickregister'
+    );
   };
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
