@@ -15,7 +15,6 @@ const BuyPackage = (packageItem: ProductPackage) => {
 
   if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
   else if (appConfig.APP_ENV === appConfig.internalTest) domain = '.1mobyline.com';
-
   Cookie.set('packageId', packageItem.productId.toString(),{domain})
   window.location.replace(`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment`)
 };
