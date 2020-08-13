@@ -14,9 +14,9 @@ const Footer = ({ t }: any) => (
                 </Link>
               </li>
               <li>
-                <Link href="/pricing">
-                  <a>{t('footer.pricing')}</a>
-                </Link>
+                <a href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}>
+                  {t('footer.pricing')}
+                </a>
               </li>
             </ul>
           </div>

@@ -1,6 +1,6 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/register/success`,
+    url: `${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/success`,
     type: 'website',
     title: '| ThaiBulkSMS',
     description: '',
@@ -11,6 +11,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/register/success`,
+    site_name: `${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/success`,
   },
 };

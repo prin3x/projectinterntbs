@@ -42,11 +42,12 @@ const TabContent = ({ t }: any) => {
                         ></p> */}
                         <p>
                           {t('howtoordertabcontent.content.1.desc1')}
-                          <Link href="/pricing">
-                            <a className="theme__text link mt-0">
-                              {t('howtoordertabcontent.content.1.desc2')}
-                            </a>
-                          </Link>
+                          <a
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
+                            className="theme__text link mt-0"
+                          >
+                            {t('howtoordertabcontent.content.1.desc2')}
+                          </a>
                           {t('howtoordertabcontent.content.1.desc3')}
                         </p>
                       </div>

@@ -178,12 +178,6 @@ const QuickRegisterComponents = ({ t }: any) => {
             </div>
           </div>
           <div className="btn-regis">
-            {/* <Link href="/register-success">
-              <a className="btn v2" >
-                {t('quickregister.createBtn')}
-                
-              </a>
-            </Link> */}
             <input
               className="btn v2"
               style={{ minWidth: '180px' }}

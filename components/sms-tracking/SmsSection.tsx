@@ -35,11 +35,12 @@ const SmsSectionV4 = ({ t }: any) => (
               </div>
               <div className="col-lg-3 col-md-12">
                 <div className="sms_form_field">
-                  <Link href="/register">
-                    <a className="btn v8">
-                      {t('sms-trackingsmssection.freeBtn')}
-                    </a>
-                  </Link>
+                  <a
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    className="btn v8"
+                  >
+                    {t('sms-trackingsmssection.freeBtn')}
+                  </a>
                 </div>
               </div>
             </div>

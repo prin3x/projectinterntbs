@@ -107,9 +107,12 @@ const Header = ({ t }: any) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/pricing">
-                      <a className="active">{t('header.pricing')}</a>
-                    </Link>
+                    <a
+                      href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
+                      className="active"
+                    >
+                      {t('header.pricing')}
+                    </a>
                   </li>
                   <li>
                     <Link href="/support/how-to-order">
@@ -185,11 +188,12 @@ const Header = ({ t }: any) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/pricing">
-                        <a className="active closemenu">
-                          {t('header.pricing')}
-                        </a>
-                      </Link>
+                      <a
+                        href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
+                        className="active closemenu"
+                      >
+                        {t('header.pricing')}
+                      </a>
                     </li>
                     <li>
                       <Link href="/support/how-to-order">
@@ -259,18 +263,20 @@ const Header = ({ t }: any) => {
             <div className="menu_btn">
               <ul>
                 <li>
-                  <Link href="/log-in" replace>
-                    <a className="loginLink">
-                      {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
-                    </a>
-                  </Link>
+                  <a
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    className="loginLink"
+                  >
+                    {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                  </a>
                 </li>
                 <li>
-                  <Link href="/pricing">
-                    <a className="btn v1">
-                      {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
-                    </a>
-                  </Link>
+                  <a
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
+                    className="btn v1"
+                  >
+                    {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                  </a>
                 </li>
               </ul>
             </div>

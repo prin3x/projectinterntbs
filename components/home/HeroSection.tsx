@@ -14,14 +14,20 @@ const HeroSectionV2 = ({ t }: any) => (
             <p>{t('homehero.desc')}</p>
             <ul className="cta-btn">
               <li>
-                <Link href="/register">
-                  <a className="btn v3">{t('homehero.freeBtn')}</a>
-                </Link>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                  className="btn v3"
+                >
+                  {t('homehero.freeBtn')}
+                </a>
               </li>
               <li>
-                <Link href="/pricing">
-                  <a className="btn v5">{t('homehero.viewPackageBtn')}</a>
-                </Link>
+                <a
+                  href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
+                  className="btn v5"
+                >
+                  {t('homehero.viewPackageBtn')}
+                </a>
               </li>
             </ul>
           </div>
