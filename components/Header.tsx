@@ -107,12 +107,13 @@ const Header = ({ t }: any) => {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
-                      className="active"
-                    >
-                      {t('header.pricing')}
-                    </a>
+                    <Link href="/pricing">
+                      <a
+                        className="active"
+                      >
+                        {t('header.pricing')}
+                      </a>
+                    </Link>
                   </li>
                   <li>
                     <Link href="/support/how-to-order">
@@ -188,12 +189,13 @@ const Header = ({ t }: any) => {
                       </Link>
                     </li>
                     <li>
-                      <a
-                        href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
-                        className="active closemenu"
-                      >
-                        {t('header.pricing')}
-                      </a>
+                      <Link href="/pricing">
+                        <a
+                          className="active closemenu"
+                        >
+                          {t('header.pricing')}
+                        </a>
+                      </Link>
                     </li>
                     <li>
                       <Link href="/support/how-to-order">
@@ -271,12 +273,13 @@ const Header = ({ t }: any) => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
-                    className="btn v1"
-                  >
-                    {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
-                  </a>
+                  <Link href="/pricing">
+                    <a
+                      className="btn v1"
+                    >
+                      {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>
