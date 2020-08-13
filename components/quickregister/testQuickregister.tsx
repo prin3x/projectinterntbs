@@ -1,9 +1,7 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
-import React, { useState, useContext, useEffect } from 'react';
-import Router from 'next/router';
-import { StoreContext } from '../context/store';
+import React, { useState, useEffect } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import TagManager from 'react-gtm-module';
 import Modal from 'react-modal';
@@ -32,7 +30,6 @@ const TestQuickregister = ({ t }: any) => {
   const [msisdn, setMsisdn] = useState('');
   const [tempDatastep1, setTempDatastep1] = useState({ msisdn: '' });
   const [welcome_token, setWelcomeToken] = useState('');
-  const dataStore: any = useContext(StoreContext);
   useEffect(() => {
     Modal.setAppElement('#ElementModal');
   }, []);
@@ -180,14 +177,12 @@ const TestQuickregister = ({ t }: any) => {
   };
   //================ end step 3
   const gotoLogin = () => {
-    // dataStore.msisdnStore[1](msisdn);
     let domain = 'localhost';
     if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
     else if (appConfig.APP_ENV === appConfig.internalTest)
       domain = '.1mobyline.com';
 
     Cookie.set('TBS_username', msisdn || '', { expires: 0.15, domain });
-    // Router.push('/register/quickregister');
     window.location.replace(
       'https://account.ngrok.1mobyline.com/register/quickregister'
     );

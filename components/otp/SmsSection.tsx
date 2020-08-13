@@ -1,4 +1,4 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
