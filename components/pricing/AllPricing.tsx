@@ -5,7 +5,6 @@ import { Product, ProductPackage } from '../../services/shopping/pricing.model';
 import numeral from 'numeral';
 import TagManager from 'react-gtm-module'
 import classnames from 'classnames';
-import Router from 'next/router';
 import Cookie from 'js-cookie';
 import appConfig from '../../appConfig'
 
@@ -21,7 +20,7 @@ const BuyPackage = (packageItem: ProductPackage) => {
   window.location.replace(`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment`)
 };
 const showPackage = (packages: Product[], t: Function) => {
-  let itemPackages = [];
+  let itemPackages:any = [];
   for (let item in packages) {
     let productItem = packages[item];
     let itemNo = item + 1;
