@@ -2,11 +2,6 @@ import PropTypes from 'prop-types';
 import { i18n, withTranslation, Link } from '../i18n';
 import React, { useState, useRef, useEffect } from 'react';
 import Cookie from 'js-cookie';
-// import { logout } from '../services/user/user.service';
-// const logOut = () => {
-//   logout();
-//   window.location.reload();
-// };
 
 const Header = ({ t }: any) => {
   const lang = i18n.language;
@@ -48,7 +43,7 @@ const Header = ({ t }: any) => {
               <div className="header_contact_no">
                 <a href="tel:027986000">02-798-6000</a>
               </div>
-              <div className="header_select">
+              <div className="header_select" style={{ display: 'none' }}>
                 <select className="user_select" style={{ display: 'none' }}>
                   <option>Th</option>
                   <option>En</option>
@@ -108,11 +103,7 @@ const Header = ({ t }: any) => {
                   </li>
                   <li>
                     <Link href="/pricing">
-                      <a
-                        className="active"
-                      >
-                        {t('header.pricing')}
-                      </a>
+                      <a className="active">{t('header.pricing')}</a>
                     </Link>
                   </li>
                   <li>
@@ -190,9 +181,7 @@ const Header = ({ t }: any) => {
                     </li>
                     <li>
                       <Link href="/pricing">
-                        <a
-                          className="active closemenu"
-                        >
+                        <a className="active closemenu">
                           {t('header.pricing')}
                         </a>
                       </Link>
@@ -274,9 +263,7 @@ const Header = ({ t }: any) => {
                 </li>
                 <li>
                   <Link href="/pricing">
-                    <a
-                      className="btn v1"
-                    >
+                    <a className="btn v1">
                       {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
                     </a>
                   </Link>

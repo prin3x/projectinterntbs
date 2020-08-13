@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
@@ -310,7 +310,9 @@ const FaqSection = ({ t }: any) => {
                     data-src="/img/img_1.png"
                     alt="Image"
                   />
-                  <a className="btn v4">{t('pricingfaq.telBtn')}</a>
+                  <a href="tel:027986000" className="btn v4">
+                    {t('pricingfaq.telBtn')}
+                  </a>
                 </div>
               </div>
               <div className="col-md-4 col-12">
@@ -320,7 +322,9 @@ const FaqSection = ({ t }: any) => {
                     data-src="/img/img_2.png"
                     alt="Image"
                   />
-                  <a className="btn v4">{t('pricingfaq.contactBtn')}</a>
+                  <Link href="/contact">
+                    <a className="btn v4">{t('pricingfaq.contactBtn')}</a>
+                  </Link>
                 </div>
               </div>
               <div className="col-md-4 col-12">

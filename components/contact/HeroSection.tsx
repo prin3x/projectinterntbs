@@ -125,11 +125,16 @@ const HeroSection = ({ t }: any) => {
             <div className="row no-gutters">
               <div className="col-lg-5">
                 <div className="contact__left">
-                  <img
-                    src="/img/contact.png"
-                    className="img-fluid left__img"
-                    alt=""
-                  />
+                  <a
+                    href="https://goo.gl/maps/LrntacVbBFvyB5Uv6"
+                    target="_blank"
+                  >
+                    <img
+                      src="/img/contact.png"
+                      className="img-fluid left__img"
+                      alt=""
+                    />
+                  </a>
 
                   <h3>{t('contacthero.contact.header')}</h3>
                   <ul>

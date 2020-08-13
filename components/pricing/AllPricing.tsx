@@ -1,12 +1,12 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
 import numeral from 'numeral';
-import TagManager from 'react-gtm-module'
+import TagManager from 'react-gtm-module';
 import classnames from 'classnames';
 import Cookie from 'js-cookie';
-import appConfig from '../../appConfig'
+import appConfig from '../../appConfig';
 
 const SenderActive = -1;
 
@@ -14,13 +14,16 @@ const BuyPackage = (packageItem: ProductPackage) => {
   let domain = 'localhost';
 
   if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
-  else if (appConfig.APP_ENV === appConfig.internalTest) domain = '.1mobyline.com';
+  else if (appConfig.APP_ENV === appConfig.internalTest)
+    domain = '.1mobyline.com';
 
-  Cookie.set('packageId', packageItem.productId.toString(),{domain})
-  window.location.replace(`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment`)
+  Cookie.set('packageId', packageItem.productId.toString(), { domain });
+  window.location.replace(
+    `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment`
+  );
 };
 const showPackage = (packages: Product[], t: Function) => {
-  let itemPackages:any = [];
+  let itemPackages: any = [];
   for (let item in packages) {
     let productItem = packages[item];
     let itemNo = item + 1;
@@ -49,7 +52,9 @@ const showPackage = (packages: Product[], t: Function) => {
           <div className="row">
             <div className="col-12">
               <div className="pricing__content">
-                <div className="arrow-down"><img src="/img/arrow_down.png" alt=""/></div>
+                <div className="arrow-down">
+                  <img src="/img/arrow_down.png" alt="" />
+                </div>
                 <img
                   src="/img/shape_triangle.png"
                   className="shape__box"
@@ -62,7 +67,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     <h3>
                       {numeral(
                         productItem.standard.amount /
-                        productItem.standard.credit
+                          productItem.standard.credit
                       ).format('0.00')}
                       {` `}
                       <span>
@@ -112,7 +117,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     <h3>
                       {numeral(
                         productItem.corporate.amount /
-                        productItem.corporate.credit
+                          productItem.corporate.credit
                       ).format('0.00')}{' '}
                       <span>
                         {t('pricingallpricing.bath')}/
@@ -166,13 +171,13 @@ const showPackage = (packages: Product[], t: Function) => {
 };
 
 const AllPricing = ({ t, packages }: any) => {
-  React.useEffect(() => { 
+  React.useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
         event: 'purchase',
         action: 'intent',
-      }
-    })
+      },
+    });
   }, []);
 
   return (
@@ -221,7 +226,9 @@ const AllPricing = ({ t, packages }: any) => {
 
             <div className="pricing__bottom d-flex align-items-center justify-content-center">
               <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
-              <a className="btn v3">{t('pricingallpricing.sellBtn')}</a>
+              <Link href="/contact">
+                <a className="btn v3">{t('pricingallpricing.sellBtn')}</a>
+              </Link>
             </div>
           </div>
         </div>
