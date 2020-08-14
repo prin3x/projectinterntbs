@@ -1,7 +1,38 @@
 import { withTranslation, Link } from '../i18n';
 import PropTypes from 'prop-types';
+
 const Footer = ({ t }: any) => (
   <div className="footer_section">
+    <div id="fb-root"></div>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v8.0'
+          });
+        };
+
+        (function(d, s, id) {
+          console.log('FB WTF');
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));`,
+      }}
+    />
+    {
+      //@ts-ignore
+      <div
+        className="fb-customerchat"
+        data-page_id="237856750321365"
+        data-theme_color="#0084ff"
+        data-logged_in_greeting="Hi! How can we help you?"
+        data-logged_out_greeting="Hi! How can we help you?"
+      ></div>
+    }
     <div className="container">
       <div className="row">
         <div className="col-md-3 col-6">
@@ -15,9 +46,7 @@ const Footer = ({ t }: any) => (
               </li>
               <li>
                 <Link href="/product">
-                  <a >
-                    {t('footer.pricing')}
-                  </a>
+                  <a>{t('footer.pricing')}</a>
                 </Link>
               </li>
             </ul>

@@ -1,8 +1,42 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import TestQuickregister from '../quickregister/testQuickregister';
+import CountUp from 'react-countup';
 const SmsSectionV2 = ({ t }: any) => {
+  const [numStart, setnumStart] = useState(4662190879);
+  const [numEnd, setnumEnd] = useState(0);
+  const [duration, setDuration] = useState(0);
+  useEffect(() => {
+    let startDate = 1597104000;
+    let dayAt = 300000;
+    // let end = 1597363200;
+    // 1 day = 86400
+    //page id 237856750321365
+    // app id 2043805689192909
+    let curTime = Math.floor(Date.now() / 1000);
+    console.log('WTF : ', (curTime - startDate) / 86400);
+    let remain =
+      (Math.ceil((curTime - startDate) / 86400) -
+        (curTime - startDate) / 86400) *
+      86400 *
+      7;
+
+    console.log('remain : ', remain);
+    console.log(
+      'start  >>>>>>>>>> : ',
+      numStart + Math.ceil(dayAt * ((curTime - startDate) / 86400))
+    );
+
+    setnumStart(numStart + Math.ceil(dayAt * ((curTime - startDate) / 86400)));
+
+    console.log(
+      'end : ',
+      numStart + dayAt * Math.ceil((curTime - startDate) / 86400)
+    );
+    setnumEnd(numStart + dayAt * Math.ceil((curTime - startDate) / 86400));
+    setDuration(remain);
+  }, []);
   return (
     <div
       className="sms_section lazyload"
@@ -22,7 +56,17 @@ const SmsSectionV2 = ({ t }: any) => {
                 <div className="col-md-12">
                   <div className="sms_feature_item">
                     <p>{t('homesms.title')}</p>
-                    <h2>4,662,190,879</h2>
+                    {duration !== 0 && (
+                      <h2>
+                        <CountUp
+                          className="account-balance"
+                          start={numStart}
+                          end={numEnd}
+                          duration={duration}
+                        />
+                      </h2>
+                    )}
+                    {/* <h2>4,662,190,879</h2> */}
                   </div>
                 </div>
                 <div className="col-md-6">
@@ -56,4 +100,4 @@ SmsSectionV2.getInitialProps = async () => ({
 SmsSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomeSmsSection')(SmsSectionV2);
+export default withTranslation('HomeSmsSection')(React.memo(SmsSectionV2));
