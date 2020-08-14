@@ -1,15 +1,10 @@
 import { withTranslation, Link } from '../i18n';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 const Footer = ({ t }: any) => {
   useEffect(() => {}, []);
   return (
     <div className="footer_section">
-      <MessengerCustomerChat
-        pageId={process.env.NEXT_PUBLIC_FB_PAGEID}
-        appId={process.env.NEXT_PUBLIC_FB_APPID}
-      />
       <div className="container" id="footer">
         <div className="row">
           <div className="col-md-3 col-6">
