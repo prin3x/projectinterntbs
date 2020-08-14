@@ -12,28 +12,24 @@ const SmsSectionV2 = ({ t }: any) => {
     let dayAt = 300000;
     // let end = 1597363200;
     // 1 day = 86400
-    //page id 237856750321365
-    // app id 2043805689192909
+
     let curTime = Math.floor(Date.now() / 1000);
-    console.log('WTF : ', (curTime - startDate) / 86400);
+    // console.log('WTF : ', (curTime - startDate) / 86400);
     let remain =
       (Math.ceil((curTime - startDate) / 86400) -
         (curTime - startDate) / 86400) *
       86400 *
       7;
-
-    console.log('remain : ', remain);
-    console.log(
-      'start  >>>>>>>>>> : ',
-      numStart + Math.ceil(dayAt * ((curTime - startDate) / 86400))
-    );
-
+    // console.log('remain : ', remain);
+    // console.log(
+    //   'start  >>>>>>>>>> : ',
+    //   numStart + Math.ceil(dayAt * ((curTime - startDate) / 86400))
+    // );
     setnumStart(numStart + Math.ceil(dayAt * ((curTime - startDate) / 86400)));
-
-    console.log(
-      'end : ',
-      numStart + dayAt * Math.ceil((curTime - startDate) / 86400)
-    );
+    // console.log(
+    //   'end : ',
+    //   numStart + dayAt * Math.ceil((curTime - startDate) / 86400)
+    // );
     setnumEnd(numStart + dayAt * Math.ceil((curTime - startDate) / 86400));
     setDuration(remain);
   }, []);
