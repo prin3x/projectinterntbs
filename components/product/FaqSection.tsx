@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const FaqSection = ({ t }: any) => (
   <div
     className="faq_section lazyload"
-    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_3.png`}
   >
     <div className="container">
       <div className="row">
