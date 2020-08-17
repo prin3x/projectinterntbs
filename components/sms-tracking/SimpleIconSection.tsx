@@ -12,12 +12,16 @@ const SimpleIconSectionV2 = ({ t }: any) => (
         </div>
         <div className="col-md-12">
           <div className="icon_wrapper">
-            <img className="arrow_bg" src="/img/arrow_bg.png" alt="Image" />
+            <img
+              className="arrow_bg"
+              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_bg.png`}
+              alt="Image"
+            />
             <div className="simple_icon_wrapper">
               <div className="simple_icon smsTrakingpage">
                 <img
                   className="lazyload"
-                  data-src="/img/img_12.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_12.png`}
                   alt="Image"
                 />
                 <p
@@ -29,7 +33,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
               <div className="simple_icon smsTrakingpage">
                 <img
                   className="lazyload"
-                  data-src="/img/img_4.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_4.png`}
                   alt="Image"
                 />
                 <p
@@ -41,7 +45,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
               <div className="simple_icon smsTrakingpage">
                 <img
                   className="lazyload"
-                  data-src="/img/img_13.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_13.png`}
                   alt="Image"
                 />
                 <p
@@ -53,7 +57,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
               {/* <div className="simple_icon">
                 <img
                   className="lazyload"
-                  data-src="/img/img_14.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_14.png`}
                   alt="Image"
                 />
                 <p>
@@ -65,7 +69,7 @@ const SimpleIconSectionV2 = ({ t }: any) => (
               <div className="simple_icon smsTrakingpage">
                 <img
                   className="lazyload"
-                  data-src="/img/img_17.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_17.png`}
                   alt="Image"
                 />
                 <p

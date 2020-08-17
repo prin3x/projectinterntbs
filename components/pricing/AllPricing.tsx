@@ -53,10 +53,13 @@ const showPackage = (packages: Product[], t: Function) => {
             <div className="col-12">
               <div className="pricing__content">
                 <div className="arrow-down">
-                  <img src="/img/arrow_down.png" alt="" />
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_down.png`}
+                    alt=""
+                  />
                 </div>
                 <img
-                  src="/img/shape_triangle.png"
+                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/shape_triangle.png`}
                   className="shape__box"
                   alt=""
                 />
@@ -184,8 +187,7 @@ const AllPricing = ({ t, packages }: any) => {
     <div
       className="all__pricing accordion lazyload"
       id="accordion"
-      // style={{ backgroundImage: 'url(/img/pricing_bg.png)' }}
-      data-bgset="/img/pricing_bg.png"
+      data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/pricing_bg.png`}
     >
       <div className="container priceTable">
         <div className="row">

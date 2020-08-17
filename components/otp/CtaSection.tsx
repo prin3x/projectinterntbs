@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 const CtaSectionV2 = ({ t }: any) => (
   <div
     className="cta_section v2 lazyload"
-    // style={{ backgroundImage: 'url(/img/bg_10.png)' }}
-    data-bgset="/img/bg_10.png"
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
   >
     <div className="container">
       <div className="row align-items-center">

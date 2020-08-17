@@ -70,14 +70,8 @@ const SimpleSliderSection = ({ t }: any) => {
                 <object
                   ref={mainImage}
                   type="image/svg+xml"
-                  data="/img/TBS-home-feature01.svg"
+                  data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/TBS-home-feature01.svg`}
                 ></object>
-                {/* <img
-                  ref={mainImage}
-                  className="lazyload"
-                  data-src="/img/img_23.png"
-                  alt="Image"
-                /> */}
                 <style jsx>{`
                   .fade-enter {
                     opacity: 0;
@@ -142,7 +136,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.1.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/User01.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User01.png`}
                     alt="Image"
                   />
                   <p>
@@ -160,11 +154,8 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/TBS-home-feature01.svg
-                    {/* <object
-                      type="image/svg+xml"
-                      data="/img/TBS-home-feature01.svg"
-                    ></object> */}
+                    {process.env.NEXT_PUBLIC_BASE_ASSET +
+                      '/img/TBS-home-feature01.svg'}
                   </span>
                 </div>
               </div>
@@ -173,7 +164,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.2.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/User02.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User02.png`}
                     alt="Image"
                   />
                   <p>
@@ -191,11 +182,8 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/TBS-home-feature02.svg
-                    {/* <object
-                      type="image/svg+xml"
-                      data="/img/TBS-home-feature02.svg"
-                    ></object> */}
+                    {process.env.NEXT_PUBLIC_BASE_ASSET +
+                      '/img/TBS-home-feature02.svg'}
                   </span>
                 </div>
               </div>
@@ -204,7 +192,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.3.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/User03.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User03.png`}
                     alt="Image"
                   />
                   <p>{t('homesimpleslider.item.3.desc')}</p>
@@ -215,11 +203,8 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/TBS-home-feature03.svg
-                    {/* <object
-                      type="image/svg+xml"
-                      data="/img/TBS-home-feature03.svg"
-                    ></object> */}
+                    {process.env.NEXT_PUBLIC_BASE_ASSET +
+                      '/img/TBS-home-feature03.svg'}
                   </span>
                 </div>
               </div>
@@ -228,7 +213,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.4.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/User04.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User04.png`}
                     alt="Image"
                   />
                   <p>
@@ -246,11 +231,8 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/TBS-home-feature04.svg
-                    {/* <object
-                      type="image/svg+xml"
-                      data="/img/TBS-home-feature04.svg"
-                    ></object> */}
+                    {process.env.NEXT_PUBLIC_BASE_ASSET +
+                      '/img/TBS-home-feature04.svg'}
                   </span>
                 </div>
               </div>
@@ -259,7 +241,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   <h4>{t('homesimpleslider.item.5.title')}</h4>
                   <img
                     className="lazyload"
-                    data-src="/img/User05.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User05.png`}
                     alt="Image"
                   />
                   <p>
@@ -277,11 +259,8 @@ const SimpleSliderSection = ({ t }: any) => {
                     {t('homesimpleslider.testBtn')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
-                    /img/TBS-home-feature05.svg
-                    {/* <object
-                      type="image/svg+xml"
-                      data="/img/TBS-home-feature05.svg"
-                    ></object> */}
+                    {process.env.NEXT_PUBLIC_BASE_ASSET +
+                      '/img/TBS-home-feature05.svg'}
                   </span>
                 </div>
               </div>

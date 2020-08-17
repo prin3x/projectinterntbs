@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 const FaqSection = ({ t }: any) => (
   <div
     className="faq_section lazyload"
-    // style={{ backgroundImage: 'url(/img/bg_3.png)' }}
-    data-bgset="/img/bg_3.png"
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
   >
     <div className="container">
       <div className="row">
@@ -295,7 +294,7 @@ const FaqSection = ({ t }: any) => (
               <div className="service_feature_item">
                 <img
                   className="lazyload"
-                  data-src="/img/img_1.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_1.png`}
                   alt="Image"
                 />
                 <a href="tel:027986000" className="btn v4">
@@ -307,7 +306,7 @@ const FaqSection = ({ t }: any) => (
               <div className="service_feature_item">
                 <img
                   className="lazyload"
-                  data-src="/img/img_2.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                   alt="Image"
                 />
                 <Link href="/contact">
@@ -319,7 +318,7 @@ const FaqSection = ({ t }: any) => (
               <div className="service_feature_item">
                 <img
                   className="lazyload"
-                  data-src="/img/img_3.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
                   alt="Image"
                 />
                 <a className="btn v4">{t('productfaq.fbBrn')}</a>

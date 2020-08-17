@@ -130,7 +130,7 @@ const HeroSection = ({ t }: any) => {
                     target="_blank"
                   >
                     <img
-                      src="/img/contact.png"
+                      src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/contact.png`}
                       className="img-fluid left__img"
                       alt=""
                     />
@@ -141,7 +141,7 @@ const HeroSection = ({ t }: any) => {
                     <li style={{ marginTop: '10px' }}>
                       <img
                         className="lazyload"
-                        data-src="/img/location.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/location.png`}
                         alt=""
                       />
                       <p
@@ -153,7 +153,7 @@ const HeroSection = ({ t }: any) => {
                     <li>
                       <img
                         className="lazyload"
-                        data-src="/img/call.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/call.png`}
                         alt=""
                       />
                       <p>{t('contacthero.contact.phone')}</p>
@@ -161,7 +161,7 @@ const HeroSection = ({ t }: any) => {
                     <li>
                       <img
                         className="lazyload"
-                        data-src="/img/calendar.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/calendar.png`}
                         alt=""
                       />
                       <p>{t('contacthero.contact.fax')}</p>
@@ -169,7 +169,7 @@ const HeroSection = ({ t }: any) => {
                     <li>
                       <img
                         className="lazyload"
-                        data-src="/img/mail_2.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail_2.png`}
                         alt=""
                       />
                       <p>contact@thaibulksms.com</p>
@@ -177,7 +177,7 @@ const HeroSection = ({ t }: any) => {
                     <li>
                       <img
                         className="lazyload"
-                        data-src="/img/clock.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/clock.png`}
                         alt=""
                       />
                       <p>{t('contacthero.contact.time')}</p>

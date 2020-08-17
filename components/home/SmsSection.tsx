@@ -36,8 +36,7 @@ const SmsSectionV2 = ({ t }: any) => {
   return (
     <div
       className="sms_section lazyload"
-      // style={{ backgroundImage: 'url(/img/promo_bg.png)' }}
-      data-bgset="/img/promo_bg.png"
+      data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
     >
       <div className="container">
         <div className="row">

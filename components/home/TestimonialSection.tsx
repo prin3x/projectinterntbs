@@ -55,7 +55,7 @@ const TestimonialSection = ({ t }: any) => (
                   {/* <div className="client_img">
                     <img
                       className="lazyload"
-                      data-src="/img/client_1.png"
+                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/client_1.png`}
                       alt="Image"
                     />
                   </div> */}
@@ -75,7 +75,7 @@ const TestimonialSection = ({ t }: any) => (
                   {/* <div className="client_img">
                     <img
                       className="lazyload"
-                      data-src="/img/client_1.png"
+                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/client_1.png`}
                       alt="Image"
                     />
                   </div> */}
@@ -95,7 +95,7 @@ const TestimonialSection = ({ t }: any) => (
                   {/* <div className="client_img">
                     <img
                       className="lazyload"
-                      data-src="/img/client_1.png"
+                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/client_1.png`}
                       alt="Image"
                     />
                   </div> */}
@@ -115,7 +115,7 @@ const TestimonialSection = ({ t }: any) => (
                   <div className="client_img">
                     <img
                       className="lazyload"
-                      data-src="/img/client_1.png"
+                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/client_1.png`}
                       alt="Image"
                     />
                   </div>

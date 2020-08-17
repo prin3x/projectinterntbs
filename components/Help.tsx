@@ -4,7 +4,11 @@ const Help = ({ t }: any) => (
   <div className="info__box__wrapper d-none d-xl-block">
     <button type="button" className="btn v8">
       <span>
-        <img className="lazyload" data-src="/img/icon_14.png" alt="" />
+        <img
+          className="lazyload"
+          data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_14.png`}
+          alt=""
+        />
       </span>
       <p dangerouslySetInnerHTML={{ __html: t('hepl.lable') }}></p>
     </button>

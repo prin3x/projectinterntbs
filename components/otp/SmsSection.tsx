@@ -12,12 +12,10 @@ const SmsSectionV3 = ({ t }: any) => (
         </div>
         <div className="col-lg-7">
           <div className="newsletter_img">
-            <object type="image/svg+xml" data="/img/img-credit.svg"></object>
-            {/* <img
-              className="lazyload"
-              data-src="/img/device_2.png"
-              alt="Image"
-            /> */}
+            <object
+              type="image/svg+xml"
+              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-credit.svg`}
+            ></object>
           </div>
         </div>
       </div>

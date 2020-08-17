@@ -76,7 +76,7 @@ const Footer = ({ t }: any) => {
                   <img
                     className="lazyload"
                     style={{ maxWidth: '25px', marginLeft: '20px' }}
-                    data-src="/img/fb.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                     alt="Image"
                   />
                 </h4>
@@ -88,14 +88,14 @@ const Footer = ({ t }: any) => {
               <a href="tel:027986000">
                 <img
                   className="lazyload"
-                  data-src="/img/phone.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   alt="Image"
                 />
                 02-798-6000
               </a>
               <a href="mailto:contact@thaibulksms.com">
-                <img className="lazyload" data-src="/img/mail.png" alt="" />
-                contact@thaibulksms.com
+                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}{' '}
+                alt="" /> contact@thaibulksms.com
               </a>
             </div>
           </div>
@@ -109,7 +109,7 @@ const Footer = ({ t }: any) => {
                     <a>
                       <img
                         className="lazyload"
-                        data-src="/img/logo_2.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_2.png`}
                         alt="Image"
                       />
                     </a>
@@ -120,7 +120,7 @@ const Footer = ({ t }: any) => {
                     <a href="tel:027986000">
                       <img
                         className="lazyload"
-                        data-src="/img/phone.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                         alt="Image"
                       />
                       02-798-6000
@@ -128,7 +128,7 @@ const Footer = ({ t }: any) => {
                     <a href="mailto:contact@thaibulksms.com">
                       <img
                         className="lazyload"
-                        data-src="/img/mail.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         alt=""
                       />
                       contact@thaibulksms.com

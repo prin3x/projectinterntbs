@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 const PromoSection = ({ t }: any) => (
   <div
     className="promo_section lazyload"
-    // style={{ backgroundImage: 'url(/img/bg_5.png)' }}
-    data-bgset="/img/bg_5.png"
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_5.png`}
   >
     <div className="container">
       <div className="row">
@@ -32,14 +31,9 @@ const PromoSection = ({ t }: any) => (
             <div className="promo_img">
               <object
                 type="image/svg+xml"
-                data="/img/img-sms.svg"
+                data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-sms.svg`}
                 className="lazyload"
               ></object>
-              {/* <img
-                className="lazyload"
-                data-src="/img/img-sms.svg"
-                alt="Image"
-              /> */}
               <a
                 href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
                 className="btn v2"
@@ -61,14 +55,9 @@ const PromoSection = ({ t }: any) => (
             <div className="promo_img">
               <object
                 type="image/svg+xml"
-                data="/img/img-api.svg"
+                data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-api.svg`}
                 className="lazyload"
               ></object>
-              {/* <img
-                className="lazyload"
-                data-src="/img/img-api.svg"
-                alt="Image"
-              /> */}
               <a
                 href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
                 className="btn v2"
@@ -93,10 +82,9 @@ const PromoSection = ({ t }: any) => (
           <div className="promo_item_three_img">
             <object
               type="image/svg+xml"
-              data="/img/img-airplane.svg"
+              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-airplane.svg`}
               className="lazyload"
             ></object>
-            {/* <img className="lazyload" data-src="/img/plane.png" alt="Image" /> */}
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
@@ -139,7 +127,7 @@ const PromoSection = ({ t }: any) => (
               <div className="service_feature_item">
                 <img
                   className="lazyload"
-                  data-src="/img/img_4.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_4.png`}
                   alt="Image"
                 />
                 <p>{t('productpromo.section.3.box.1')}</p>
@@ -149,7 +137,7 @@ const PromoSection = ({ t }: any) => (
               <div className="service_feature_item">
                 <img
                   className="lazyload"
-                  data-src="/img/img_5.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_5.png`}
                   alt="Image"
                 />
                 <p>{t('productpromo.section.3.box.2')}</p>
@@ -159,7 +147,7 @@ const PromoSection = ({ t }: any) => (
               <div className="service_feature_item">
                 <img
                   className="lazyload"
-                  data-src="/img/img_6.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_6.png`}
                   alt="Image"
                 />
                 <p>{t('productpromo.section.3.box.3')}</p>
@@ -173,10 +161,9 @@ const PromoSection = ({ t }: any) => (
           <div className="promo_item_three_img">
             <object
               type="image/svg+xml"
-              data="/img/img-credit.svg"
+              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-credit.svg`}
               className="lazyload"
             ></object>
-            {/* <img className="lazyload" data-src="/img/device.png" alt="Image" /> */}
           </div>
         </div>
         <div className="col-lg-6 col-md-12">

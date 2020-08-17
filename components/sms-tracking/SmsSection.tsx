@@ -16,7 +16,11 @@ const SmsSectionV4 = ({ t }: any) => (
         </div>
         <div className="col-lg-7">
           <div className="newsletter_img">
-            <img className="lazyload" data-src="/img/img_21.png" alt="Image" />
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_21.png`}
+              alt="Image"
+            />
           </div>
         </div>
       </div>

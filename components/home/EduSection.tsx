@@ -16,7 +16,7 @@ const EduSection = ({ t }: any) => (
               <div className="edu_box">
                 <img
                   className="lazyload"
-                  data-src="/img/img_7.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_7.png`}
                   alt="Image"
                 />
                 <div className="edu_box_text">
@@ -30,7 +30,7 @@ const EduSection = ({ t }: any) => (
                   <div className="edu_box">
                     <img
                       className="lazyload"
-                      data-src="/img/img_8.png"
+                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_8.png`}
                       alt="Image"
                     />
                     <div className="edu_box_text">
@@ -42,7 +42,7 @@ const EduSection = ({ t }: any) => (
                   <div className="edu_box">
                     <img
                       className="lazyload"
-                      data-src="/img/img_9.png"
+                      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_9.png`}
                       alt="Image"
                     />
                     <div className="edu_box_text">

@@ -16,7 +16,7 @@ const SimpleIconSection = ({ t }: any) => (
             <div className="check_img">
               <img
                 className="lazyload"
-                data-src="/img/check_icon.png"
+                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/check_icon.png`}
                 alt="Image"
               />
             </div>
@@ -30,7 +30,7 @@ const SimpleIconSection = ({ t }: any) => (
             <div className="check_img">
               <img
                 className="lazyload"
-                data-src="/img/check_icon.png"
+                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/check_icon.png`}
                 alt="Image"
               />
             </div>
@@ -44,7 +44,7 @@ const SimpleIconSection = ({ t }: any) => (
             <div className="check_img">
               <img
                 className="lazyload"
-                data-src="/img/check_icon.png"
+                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/check_icon.png`}
                 alt="Image"
               />
             </div>
@@ -58,7 +58,7 @@ const SimpleIconSection = ({ t }: any) => (
             <div className="check_img">
               <img
                 className="lazyload"
-                data-src="/img/check_icon.png"
+                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/check_icon.png`}
                 alt="Image"
               />
             </div>
@@ -82,7 +82,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icn-api01.svg"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api01.svg`}
                   alt="Image"
                 />
               </div>
@@ -91,7 +91,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icn-api02.svg"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api03.svg`}
                   alt="Image"
                 />
               </div>
@@ -100,7 +100,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icn-api03.svg"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api03.svg`}
                   alt="Image"
                 />
               </div>
@@ -109,7 +109,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icn-api04.svg"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api04.svg`}
                   alt="Image"
                 />
               </div>
@@ -118,7 +118,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icn-api05.svg"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api05.svg`}
                   alt="Image"
                 />
               </div>
@@ -127,7 +127,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icn-api06.svg"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api06.svg`}
                   alt="Image"
                 />
               </div>
@@ -136,7 +136,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icn-api07.svg"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api07.svg`}
                   alt="Image"
                 />
               </div>
@@ -145,7 +145,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/icn-api08.svg"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api08.svg`}
                   alt="Image"
                 />
               </div>
@@ -155,7 +155,11 @@ const SimpleIconSection = ({ t }: any) => (
         <div className="col-md-12 text-center">
           <a className="lang_link" href="https://tbs.readme.io/reference">
             {t('otpsimpleicon.apilink')}
-            <img className="lazyload" data-src="/img/arrow_5.png" alt="Image" />
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_5.png`}
+              alt="Image"
+            />
           </a>
         </div>
       </div>

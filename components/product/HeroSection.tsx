@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 const HeroSection = ({ t }: any) => (
   <div
     className="hero_section lazyload"
-    // style={{ backgroundImage: 'url(/img/hero_bg.png)' }}
-    data-bgset="/img/hero_bg.png"
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/hero_bg.png`}
   >
     <img
       className="hero_curve lazyload"
-      data-src="/img/curve_1.png"
+      data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/curve_1.png`}
       alt="Image"
     />
     <div className="container">
@@ -25,20 +24,19 @@ const HeroSection = ({ t }: any) => (
           <div className="hero_img_one">
             <object
               type="image/svg+xml"
-              data="/img/banner-product.svg"
+              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/banner-product.svg`}
             ></object>
-            {/* <img
-              className="lazyload"
-              data-src="/img/banner-product.svg"
-              alt="Image"
-            /> */}
           </div>
         </div>
       </div>
       <div className="row align-items-center hero_bottom_one">
         <div className="col-lg-6">
           <div className="hero_img_two">
-            <img className="lazyload" data-src="/img/hero_2.png" alt="Image" />
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/hero_2.png`}
+              alt="Image"
+            />
           </div>
         </div>
         <div className="col-lg-6">
@@ -54,13 +52,6 @@ const HeroSection = ({ t }: any) => (
               }}
             ></h2>
             <p>{t('producthero.section.2.title3')}</p>
-            {/* <Link href="/">
-              <a>
-                <p style={{ color: '#31b1e7' }}>
-                  {t('producthero.section.2.link')}
-                </p>
-              </a>
-            </Link> */}
           </div>
         </div>
       </div>

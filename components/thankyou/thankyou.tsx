@@ -4,7 +4,10 @@ const ThankyouComponents = ({ t }: any) => (
   <div className="register_section">
     <div className="finish-regis">
       <div className="img-finish-regis">
-        <object type="image/svg+xml" data="/img/img-thankyou.svg"></object>
+        <object
+          type="image/svg+xml"
+          data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-thankyou.svg`}
+        ></object>
       </div>
       <h2>{t('thankyou.title')}</h2>
       <p

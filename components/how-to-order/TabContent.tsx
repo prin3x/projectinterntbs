@@ -10,8 +10,7 @@ const TabContent = ({ t }: any) => {
   return (
     <div
       className="tab__content faq_section lazyload"
-      // style={{ backgroundImage: 'url(/img/bg_3.png)' }}
-      data-bgset="/img/bg_3.png"
+      data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_3.png`}
     >
       <div className="container">
         <div className="row">
@@ -29,7 +28,7 @@ const TabContent = ({ t }: any) => {
                         <span className="serial__number">1</span>
                         <img
                           className="img-fluid lazyload"
-                          data-src="/img/o1.png"
+                          data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o1.png`}
                           alt=""
                         />
                       </div>
@@ -60,7 +59,7 @@ const TabContent = ({ t }: any) => {
                         <span className="serial__number">2</span>
                         <img
                           className="img-fluid lazyload"
-                          data-src="/img/o2.png"
+                          data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o2.png`}
                           alt=""
                         />
                       </div>
@@ -81,7 +80,7 @@ const TabContent = ({ t }: any) => {
                         <span className="serial__number">3</span>
                         <img
                           className="img-fluid lazyload"
-                          data-src="/img/o3.png"
+                          data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o3.png`}
                           alt=""
                         />
                       </div>
@@ -113,7 +112,7 @@ const TabContent = ({ t }: any) => {
                         <span className="serial__number">4</span>
                         <img
                           className="img-fluid lazyload"
-                          data-src="/img/o4.png"
+                          data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o4.png`}
                           alt=""
                         />
                       </div>
@@ -134,7 +133,7 @@ const TabContent = ({ t }: any) => {
                         <span className="serial__number">5</span>
                         <img
                           className="img-fluid lazyload"
-                          data-src="/img/o5.png"
+                          data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o5.png`}
                           alt=""
                         />
                       </div>
@@ -155,7 +154,7 @@ const TabContent = ({ t }: any) => {
                         <span className="serial__number">6</span>
                         <img
                           className="img-fluid lazyload"
-                          data-src="/img/o6.png"
+                          data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o6.png`}
                           alt=""
                         />
                       </div>
@@ -192,7 +191,7 @@ const TabContent = ({ t }: any) => {
                                 <div className="info__icon mr-0">
                                   <img
                                     className="lazyload"
-                                    data-src="/img/icon_13.png"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_13.png`}
                                     alt=""
                                   />
                                 </div>
@@ -227,7 +226,7 @@ const TabContent = ({ t }: any) => {
                                 <div className="info__icon mr-0">
                                   <img
                                     className="lazyload"
-                                    data-src="/img/icon_24.png"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_24.png`}
                                     alt=""
                                   />
                                 </div>
@@ -274,7 +273,7 @@ const TabContent = ({ t }: any) => {
                                 <div className="info__icon mr-0">
                                   <img
                                     className="lazyload"
-                                    data-src="/img/icon_25.png"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_25.png`}
                                     alt=""
                                   />
                                 </div>
@@ -326,7 +325,7 @@ const TabContent = ({ t }: any) => {
                 <div className="service_feature_item">
                   <img
                     className="lazyload"
-                    data-src="/img/img_1.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_1.png`}
                     alt="Image"
                   />
                   <a href="tel:027986000" className="btn v4">
@@ -338,7 +337,7 @@ const TabContent = ({ t }: any) => {
                 <div className="service_feature_item">
                   <img
                     className="lazyload"
-                    data-src="/img/img_2.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                     alt="Image"
                   />
                   <Link href="/contact">
@@ -352,7 +351,7 @@ const TabContent = ({ t }: any) => {
                 <div className="service_feature_item">
                   <img
                     className="lazyload"
-                    data-src="/img/img_3.png"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
                     alt="Image"
                   />
                   <a className="btn v4">{t('howtoordertabcontent.fbBrn')}</a>

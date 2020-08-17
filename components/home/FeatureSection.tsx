@@ -16,7 +16,7 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src="/img/icon_1.png"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_1.png`}
               alt="Image"
             />
             <div className="single_feature_text">
@@ -33,7 +33,7 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src="/img/icon_2.png"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_2.png`}
               alt="Image"
             />
             <div className="single_feature_text">
@@ -50,7 +50,7 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src="/img/icon_3.png"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_3.png`}
               alt="Image"
             />
             <div className="single_feature_text">
@@ -67,7 +67,7 @@ const FeatureSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src="/img/icon_4.png"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_4.png`}
               alt="Image"
             />
             <div className="single_feature_text">

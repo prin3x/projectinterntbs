@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 const TrackSection = ({ t }: any) => (
   <div
     className="track_section lazyload"
-    // style={{ backgroundImage: 'url(/img/bg_7.png)' }}
-    data-bgset="/img/bg_7.png"
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_7.png`}
   >
     <div className="container">
       <div className="row track_top">
@@ -16,8 +15,11 @@ const TrackSection = ({ t }: any) => (
         </div>
         <div className="col-md-6 col-md-pull-6">
           <div className="track_img">
-            {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
-            <img className="lazyload" data-src="/img/img_22.png" alt="Image" />
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_22.png`}
+              alt="Image"
+            />
           </div>
         </div>
       </div>

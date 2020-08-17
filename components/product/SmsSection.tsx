@@ -10,8 +10,7 @@ const SmsSection = ({ t }: any) => {
   return (
     <div
       className="sms_section productsms lazyload"
-      // style={{ backgroundImage: 'url(/img/promo_bg.png' }}
-      data-bgset="/img/promo_bg.png"
+      data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
     >
       <div className="container">
         <div className="row">
@@ -49,7 +48,7 @@ const SmsSection = ({ t }: any) => {
                     <a onClick={() => setIsOpen(true)}>
                       <img
                         className="lazyload"
-                        data-src="/img/play_icon.png"
+                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/play_icon.png`}
                         alt="Image"
                       />
                       {t('productsms.sendfastBtn')}

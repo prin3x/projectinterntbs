@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 const SimpleSection = ({ t }: any) => (
   <div
     className="simple_section lazyload"
-    // style={{ backgroundImage: 'url(/img/bg_4.png)' }}
-    data-bgset="/img/bg_4.png"
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_4.png`}
   >
     <div className="container">
       <div className="row">

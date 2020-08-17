@@ -7,8 +7,7 @@ const PricingSection = ({ t }: any) => {
   return (
     <div
       className="pricing-section position-relative pricing__top lazyload"
-      // style={{ backgroundImage: 'url(/img/bg_11.png)' }}
-      data-bgset="/img/bg_11.png"
+      data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
     >
       <div className="container pricing">
         <h3 className="headPricing">ราคาแพ็กเกจ</h3>
@@ -104,12 +103,12 @@ const PricingSection = ({ t }: any) => {
 
       <img
         className="img-fluid bg__img img__1 lazyload"
-        data-src="/img/img_25.png"
+        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_25.png`}
         alt=""
       />
       <img
         className="img-fluid bg__img img__2 lazyload"
-        data-src="/img/img__11.png"
+        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__11.png`}
         alt=""
       />
     </div>

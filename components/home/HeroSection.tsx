@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 const HeroSectionV2 = ({ t }: any) => (
   <div
     className="hero_section v2 lazyload"
-    // style={{ backgroundImage: 'url(/img/hero_img_2.png)' }}
-    data-bgset="/img/hero_img_2.png"
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/hero_img_2.png`}
   >
     <div className="container">
       <div className="row align-item-center hero_top_one">

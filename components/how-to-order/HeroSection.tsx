@@ -26,7 +26,11 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-home"
                   aria-selected="true"
                 >
-                  <img className="lazyload" data-src="/img/main_3.png" alt="" />
+                  <img
+                    className="lazyload"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/main_3.png`}
+                    alt=""
+                  />
                   <span>{t('howtoorderhero.howtoorderBtn')}</span>
                 </a>
               </li>
@@ -40,7 +44,11 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-profile"
                   aria-selected="false"
                 >
-                  <img className="lazyload" data-src="/img/dollar.png" alt="" />
+                  <img
+                    className="lazyload"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/dollar.png`}
+                    alt=""
+                  />
                   <span>{t('howtoorderhero.paymentBtn')}</span>
                 </a>
               </li>

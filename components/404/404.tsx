@@ -4,12 +4,10 @@ const Components404 = () => (
   <div className="register_section">
     <div className="finish-regis">
       <div className="img-finish-regis">
-        <object type="image/svg+xml" data="/img/img-404.svg"></object>
-        {/* <img
-          className="lazyload"
-          data-src="/img/img-finish-regis.png"
-          alt="Image"
-        /> */}
+        <object
+          type="image/svg+xml"
+          data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-404.svg`}
+        ></object>
       </div>
       {/* <h2>{t('h1')}</h2>
       <p className="sub-text">{t('p1-1')}</p>
