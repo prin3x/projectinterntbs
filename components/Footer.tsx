@@ -94,8 +94,11 @@ const Footer = ({ t }: any) => {
                 02-798-6000
               </a>
               <a href="mailto:contact@thaibulksms.com">
-                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}{' '}
-                alt="" /> contact@thaibulksms.com
+                <img
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
+                  alt=""
+                />{' '}
+                contact@thaibulksms.com
               </a>
             </div>
           </div>
