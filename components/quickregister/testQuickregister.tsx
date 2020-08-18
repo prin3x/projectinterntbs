@@ -293,7 +293,7 @@ const TestQuickregister = ({ t }: any) => {
             )}
             {showModalpass && (
               <div
-                className=""
+                className="modal-pass"
                 style={{
                   textAlign: 'center',
                 }}
@@ -314,7 +314,6 @@ const TestQuickregister = ({ t }: any) => {
                       onChange={() => clearErrors2('resultStep2')}
                       id="pin"
                       name="pin"
-                      style={{ height: '48px', width: '236px' }}
                       type="password"
                       placeholder={t('homesms.modal.showModalpass.placeholder')}
                       className="input__box"
