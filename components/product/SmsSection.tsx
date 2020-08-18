@@ -4,9 +4,10 @@ import TestQuickregister from '../quickregister/testQuickregister';
 import 'react-modal-video/scss/modal-video.scss';
 import ModalVideo from 'react-modal-video';
 import { useState } from 'react';
+import Cookie from 'js-cookie';
 const SmsSection = ({ t }: any) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false);
   return (
     <div
       className="sms_section productsms lazyload"
@@ -59,7 +60,7 @@ const SmsSection = ({ t }: any) => {
             </div>
           </div>
         </div>
-        <TestQuickregister />
+        {!isLogin && <TestQuickregister />}
       </div>
       <style jsx>{`
         #overlay {

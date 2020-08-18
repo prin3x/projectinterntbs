@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import React, { useState, useEffect } from 'react';
 import TestQuickregister from '../quickregister/testQuickregister';
 import CountUp from 'react-countup';
+import Cookie from 'js-cookie';
 const SmsSectionV2 = ({ t }: any) => {
+  const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false);
   const [numStart, setnumStart] = useState(4662190879);
   const [numEnd, setnumEnd] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -82,7 +84,7 @@ const SmsSectionV2 = ({ t }: any) => {
             </div>
           </div>
         </div>
-        <TestQuickregister />
+        {!isLogin && <TestQuickregister />}
       </div>
     </div>
   );
