@@ -195,18 +195,6 @@ const TestQuickregister = ({ t }: any) => {
   function closeModal() {
     setIsOpen(false);
   }
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      width: '543px',
-      height: '300px',
-    },
-  };
   return (
     <>
       <div className="row">

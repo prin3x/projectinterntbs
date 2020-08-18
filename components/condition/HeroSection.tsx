@@ -1,8 +1,8 @@
-import { withTranslation } from "../../i18n";
-import PropTypes from "prop-types";
-import * as React from "react";
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import * as React from 'react';
 
-const HeroSection = ({ t }: any) => {
+const HeroSection = () => {
   React.useEffect(() => {}, []);
   return (
     <div className="container condition-wrap">
@@ -66,7 +66,7 @@ const HeroSection = ({ t }: any) => {
             </li>
             <li>มีเนื้อหาสาระที่บิดเบือนและไม่เป็นความจริง</li>
           </ul>
-          <h4 style={{ marginTop: "30px" }}>การคิดค่าบริการ และเครดิต</h4>
+          <h4 style={{ marginTop: '30px' }}>การคิดค่าบริการ และเครดิต</h4>
           <ul>
             <li>
               ผู้ใช้บริการยอมรับการคำนวณเครดิตในภาษาอังกฤษอยู่ที่ 160 ตัวอักษร
@@ -82,7 +82,7 @@ const HeroSection = ({ t }: any) => {
               ให้คิดปัดเพิ่มขึ้นเป็นอีก 1 จำนวน SMS ต่างหากด้วย
             </li>
           </ul>
-          <h4 style={{ marginTop: "30px" }}>การโอนย้ายเครดิต และขอเงินคืน</h4>
+          <h4 style={{ marginTop: '30px' }}>การโอนย้ายเครดิต และขอเงินคืน</h4>
           <ul>
             <li>
               ทางลูกค้าค้าตกลงที่จะตรวจสอบประเภทเครดิตในรายการสั่งซื้อก่อนทำการชำระเงินให้ถูกต้องทุกครั้ง
@@ -101,7 +101,7 @@ const HeroSection = ({ t }: any) => {
               ให้ลูกค้าทำการโอนย้ายเครดิตระหว่างบัญชีได้
             </li>
           </ul>
-          <h4 style={{ marginTop: "30px" }}>การคำนวณวันหมดอายุ</h4>
+          <h4 style={{ marginTop: '30px' }}>การคำนวณวันหมดอายุ</h4>
           <ul>
             <li>
               ทุกครั้งที่ลูกค้ามีการสั่งซื้อแพ็กเกจ
@@ -121,7 +121,7 @@ const HeroSection = ({ t }: any) => {
               (Main-Account)
             </li>
           </ul>
-          <h4 style={{ marginTop: "30px" }}>ชื่อผู้ส่ง</h4>
+          <h4 style={{ marginTop: '30px' }}>ชื่อผู้ส่ง</h4>
           <ul>
             <li>
               ทางบริษัทให้สิทธิ์ลูกค้าสามารถแจ้งความจำนงขอชื่อผู้ส่งได้
@@ -167,7 +167,7 @@ const HeroSection = ({ t }: any) => {
               ทันทีโดยไม่จำเป็นต้องแจ้งให้ผู้ใช้งานทราบ
             </li>
           </ul>
-          <h4 style={{ marginTop: "30px" }}>ชื่อผู้ส่งแบบ Whiltelist</h4>
+          <h4 style={{ marginTop: '30px' }}>ชื่อผู้ส่งแบบ Whiltelist</h4>
           <ul>
             <li>
               ทางบริษัทให้สิทธิ์ลูกค้าสามารถแจ้งความจำนงขอชื่อผู้ส่งแบบ
@@ -191,7 +191,7 @@ const HeroSection = ({ t }: any) => {
               โดยที่ไม่จำเป็นต้องแจ้งให้ลูกค้าทราบก่อน
             </li>
           </ul>
-          <h4 style={{ marginTop: "30px" }}>
+          <h4 style={{ marginTop: '30px' }}>
             บัญชีผู้ใช้หลัก และบัญชีผู้ใช้สำรอง
           </h4>
           <span className="bold-text">
@@ -226,7 +226,7 @@ const HeroSection = ({ t }: any) => {
               โดยที่ทางบัญชีผู้ใช้หลักจะต้องยอมรับคำตัดสินของทางบริษัทเป็นที่สิ้นสุด
             </li>
           </ul>
-          <h4 style={{ marginTop: "30px" }}>การระงับการให้บริการ</h4>
+          <h4 style={{ marginTop: '30px' }}>การระงับการให้บริการ</h4>
           <span className="bold-text">
             บริษัทฯ ขอสงวนสิทธิในการยกเลิกการเป็นสมาชิกของผู้ใช้บริการ
             ในกรณีต่างๆ ดังนี้
@@ -271,7 +271,7 @@ const HeroSection = ({ t }: any) => {
               เพื่อให้ลูกค้าได้มีสิทธิใช้บริการได้ครบถ้วนตามสิทธิที่ได้รับไว้
             </li>
           </ul>
-          <h4 style={{ marginTop: "30px" }}>นโยบายด้านความปลอดภัย</h4>
+          <h4 style={{ marginTop: '30px' }}>นโยบายด้านความปลอดภัย</h4>
           <ul>
             <li>
               กรณีใส่บัญชีผู้ใช้งานถูกต้องแต่รหัสผ่านผิดเกิน 5 ครั้ง (ภายใน 1
@@ -320,10 +320,10 @@ const HeroSection = ({ t }: any) => {
 };
 
 HeroSection.getInitialProps = async () => ({
-  namespacesRequired: ["ContactHeroSection"],
+  namespacesRequired: ['ContactHeroSection'],
 });
 
 HeroSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation("ContactHeroSection")(HeroSection);
+export default withTranslation('ContactHeroSection')(HeroSection);
