@@ -282,17 +282,21 @@ const TestQuickregister = ({ t }: any) => {
           isOpen={modalIsOpen}
           // onRequestClose={closeModal}
           onRequestClose={() => {}}
-          style={customStyles}
+          className="pass-style"
           contentLabel=""
         >
           <div className="" style={{ textAlign: 'right' }}>
-            <div style={{ width: '505px', height: '49px' }}>
-              <button style={{ float: 'right' }} onClick={closeModal}>
-                close
+            <div>
+              <button
+                style={{ float: 'right' }}
+                onClick={closeModal}
+                className="btn-close"
+              >
+                <i className="fas fa-times"></i>
               </button>
             </div>
             {showModalcaptcha && (
-              <div>
+              <div className="captcha-content">
                 <ReCAPTCHA
                   sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
                   onChange={setreCaptcha}
@@ -306,14 +310,14 @@ const TestQuickregister = ({ t }: any) => {
                   textAlign: 'center',
                 }}
               >
-                <h5 style={{ fontSize: '24px' }}>
+                <h5 className="pass-modal-text">
                   {t('homesms.modal.showModalpass.header')}
                 </h5>
                 <form
+                  className="form-wrap"
                   onSubmit={handleSubmitStep2(onSubmitStep2)}
-                  style={{ marginLeft: '55px' }}
                 >
-                  <div className="form__wrapper">
+                  <div className="form__wrapper form-password-wrap">
                     <input
                       ref={registerStep2({
                         required: true,
@@ -329,13 +333,7 @@ const TestQuickregister = ({ t }: any) => {
                     />
                     <button
                       type="submit"
-                      className="btn v8"
-                      style={{
-                        width: '158px',
-                        height: '48px',
-                        borderRadius: '0 15px 15px 0',
-                        padding: '15px 34px',
-                      }}
+                      className="btn v8 confirm-btn"
                       onClick={() => clearErrors2()}
                     >
                       {t('homesms.modal.showModalpass.submitBtn')}
@@ -349,17 +347,22 @@ const TestQuickregister = ({ t }: any) => {
             )}
             {showLogin && (
               <div
+                className="login-text"
                 style={{
                   textAlign: 'center',
                 }}
               >
-                <h5 style={{ fontSize: '24px' }}>
+                <h5 className="login-topic">
                   {t('homesms.modal.showLogin.header')}
                 </h5>
-                <p>{t('homesms.modal.showLogin.decs1')}</p>
-                <p>{t('homesms.modal.showLogin.decs2')}</p>
+                <p className="login-content">
+                  {t('homesms.modal.showLogin.decs1')}
+                </p>
+                <p className="login-content">
+                  {t('homesms.modal.showLogin.decs2')}
+                </p>
                 <button
-                  className="btn v2"
+                  className="btn v2 btn-show-login"
                   onClick={() => {
                     gotoLogin();
                   }}

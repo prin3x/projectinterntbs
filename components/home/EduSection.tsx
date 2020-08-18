@@ -4,15 +4,15 @@ const EduSection = ({ t }: any) => (
   <div className="edu_section">
     <div className="container">
       <div className="row align-items-center">
-        <div className="col-md-6 col-md-push-6">
+        <div className="col-lg-6 col-md-12 col-sm-12 col-md-push-6">
           <div className="edu_text">
             <h3>{t('homeedu.header')}</h3>
             <a href="http://www.thaibulksms.com/blog/">{t('homeedu.link')}</a>
           </div>
         </div>
-        <div className="col-md-6 col-md-pull-6">
+        <div className="col-lg-6 col-md-12 col-sm-12 col-md-pull-6">
           <div className="row align-items-center">
-            <div className="col-lg-6 col-md-4">
+            <div className="col-lg-6 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
               <div className="edu_box">
                 <img
                   className="lazyload"
@@ -24,9 +24,9 @@ const EduSection = ({ t }: any) => (
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 col-md-8">
+            <div className="col-lg-6 col-md-12">
               <div className="row">
-                <div className="col-lg-12 col-md-6">
+                <div className="col-lg-12 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                   <div className="edu_box">
                     <img
                       className="lazyload"
@@ -38,7 +38,7 @@ const EduSection = ({ t }: any) => (
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-12 col-md-6">
+                <div className="col-lg-12 col-md-6 offset-md-3 offset-lg-0 col-sm-10 offset-sm-1">
                   <div className="edu_box">
                     <img
                       className="lazyload"
