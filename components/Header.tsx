@@ -266,11 +266,18 @@ const Header = ({ t }: any) => {
                   </a>
                 </li>
                 <li>
-                  <Link href="/pricing">
-                    <a className="btn v1">
-                      {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                  {isLogin === true ? (
+                    <Link href="/pricing">
+                      <a className="btn v1">{t(`header.buy-` + 'b')}</a>
+                    </Link>
+                  ) : (
+                    <a
+                      className="btn v1"
+                      href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    >
+                      {t(`header.buy-` + 'a')}
                     </a>
-                  </Link>
+                  )}
                 </li>
               </ul>
             </div>
