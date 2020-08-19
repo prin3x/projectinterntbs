@@ -30,6 +30,7 @@ const TestQuickregister = ({ t }: any) => {
   const [msisdn, setMsisdn] = useState('');
   const [tempDatastep1, setTempDatastep1] = useState({ msisdn: '' });
   const [welcome_token, setWelcomeToken] = useState('');
+  const [testDesc, setTestDesc] = useState('-1');
   useEffect(() => {
     Modal.setAppElement('#ElementModal');
   }, []);
@@ -123,6 +124,7 @@ const TestQuickregister = ({ t }: any) => {
         action: 'confirm_password',
       },
     });
+    setTestDesc('-2');
     setWelcomeToken(resultStep2.welcome_token);
     setShowModalpass(false);
     setShowInputstep1(false);
@@ -204,7 +206,7 @@ const TestQuickregister = ({ t }: any) => {
               <div className="col-lg-6 col-md-12">
                 <div className="sms_form_text">
                   <h4>{t('homesms.test.header')}</h4>
-                  <p>{t('homesms.test.desc')}</p>
+                  <p>{t('homesms.test.desc' + testDesc)}</p>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
@@ -214,12 +216,14 @@ const TestQuickregister = ({ t }: any) => {
                       <input
                         ref={registerStep1({
                           pattern: /^[0][6||8-9][0-9]{8}$/i,
+                          maxLength: 10,
                         })}
                         id="msisdn"
                         name="msisdn"
                         type="text"
                         placeholder={t('homesms.test.telNumber')}
                         onChange={() => clearErrors1('resultStep1')}
+                        maxLength={10}
                       />
                       <button
                         className="btn v2"
@@ -229,7 +233,14 @@ const TestQuickregister = ({ t }: any) => {
                         {t('homesms.test.confirmBtn')}
                       </button>
                     </form>
-                    <div style={{ color: 'red' }}>
+                    <div
+                      style={{
+                        color: 'red',
+                        textAlign: 'left',
+                        marginTop: '9px',
+                        marginLeft: '8px',
+                      }}
+                    >
                       {t(handleErorrStep1(errrorsStep1))}
                     </div>
                   </div>
