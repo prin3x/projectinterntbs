@@ -1,7 +1,7 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { sendContact } from '../../services/contact/contact.service';
 import Swal from 'sweetalert2';
@@ -24,11 +24,6 @@ type Inputs = {
 const HeroSection = ({ t }: any) => {
   const [wordhead, setWordhead] = useState('contacthero.form.problem.1');
   const [successbtn, setSuccessbtn] = useState(false);
-  // const recaptchaRef = useRef({
-  //   reset: function () {
-  //     return;
-  //   },
-  // });
   let captcha: any;
   const setCaptchaRef = (ref: any) => {
     if (ref) {
