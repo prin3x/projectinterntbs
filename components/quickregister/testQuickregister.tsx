@@ -212,7 +212,10 @@ const TestQuickregister = ({ t }: any) => {
               <div className="col-lg-6 col-md-12">
                 {showInputstep1 && (
                   <div className="sms_form_field">
-                    <form onSubmit={handleSubmitStep1(onSubmitStep1)}>
+                    <form
+                      onSubmit={handleSubmitStep1(onSubmitStep1)}
+                      className="error-text-box"
+                    >
                       <input
                         ref={registerStep1({
                           pattern: /^[0][6||8-9][0-9]{8}$/i,
@@ -226,7 +229,7 @@ const TestQuickregister = ({ t }: any) => {
                         maxLength={10}
                       />
                       <button
-                        className="btn v2"
+                        className="btn v2 sms-btn-text"
                         type="submit"
                         onClick={() => clearErrors1()}
                       >
@@ -236,10 +239,8 @@ const TestQuickregister = ({ t }: any) => {
                     <div
                       style={{
                         color: 'red',
-                        textAlign: 'left',
-                        marginTop: '9px',
-                        marginLeft: '8px',
                       }}
+                      className="sms-error-text"
                     >
                       {t(handleErorrStep1(errrorsStep1))}
                     </div>
@@ -266,7 +267,7 @@ const TestQuickregister = ({ t }: any) => {
                         {t('homesms.test.testBtn')}
                       </button>
                     </form>
-                    <div style={{ color: 'red' }}>
+                    <div style={{ color: 'red' }} className="sms-error-text">
                       {t(handleErorrStep3(errrorsStep3))}
                     </div>
                   </div>
