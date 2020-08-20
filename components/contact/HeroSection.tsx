@@ -1,18 +1,20 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
-// import { sendContact } from '../../services/contact/contact.service';
+import { sendContact } from '../../services/contact/contact.service';
+import Swal from 'sweetalert2';
 const menuClick = () => {
   var elDivnice = document.getElementsByClassName('devnice-select')[0];
   if (elDivnice.classList.contains('open')) elDivnice.classList.remove('open');
   else elDivnice.classList.add('open');
 };
 type Inputs = {
-  head: string;
+  contactType: string;
   firstnname: string;
   lastname: string;
+  companyName: string;
   email: string;
   phone: string;
   desc: string;
@@ -21,6 +23,7 @@ type Inputs = {
 };
 const HeroSection = ({ t }: any) => {
   const [wordhead, setWordhead] = useState('contacthero.form.problem.1');
+  const [successbtn, setSuccessbtn] = useState(false);
   // const recaptchaRef = useRef({
   //   reset: function () {
   //     return;
@@ -28,7 +31,6 @@ const HeroSection = ({ t }: any) => {
   // });
   let captcha: any;
   const setCaptchaRef = (ref: any) => {
-    console.log(captcha);
     if (ref) {
       return (captcha = ref);
     }
@@ -38,27 +40,28 @@ const HeroSection = ({ t }: any) => {
   >({
     defaultValues: {
       confirm: true,
-      head: '1',
+      contactType: '1',
     },
   });
   const onSubmit = async (data: any) => {
     console.log(data);
-    // const user = await sendContact(data);
-    // console.log('user : ', user);
-    // if (user.error.code !== '') {
-    //   if (user.error.code === 'registerdto.recaptcha.invalid') {
-    //     if (typeof recaptchaRef.current === 'object') {
-    //       captcha.reset();
-    //     }
-    //   }
-    //   setError('res', {
-    //     type: user.error.code,
-    //     message: '',
-    //   });
-    // } else {
-    //   console.log('========================');
-    //   Router.push('/register/success');
-    // }
+    const result = await sendContact(data);
+    console.log('result :: ', result);
+    if (result.code !== '') {
+      captcha.reset();
+      Swal.fire({
+        icon: 'warning',
+        title: t(result.code),
+        // text: t('contacthero.Swal.decseerror'),
+      });
+      return;
+    }
+    setSuccessbtn(true);
+    Swal.fire({
+      icon: 'success',
+      title: t('contacthero.Swal.titlesuccess'),
+      // text: t('contacthero.Swal.decsesuccess'),
+    });
   };
   const handleErorr = (error: any) => {
     console.log(error);
@@ -205,7 +208,7 @@ const HeroSection = ({ t }: any) => {
                           className="option"
                           data-value=""
                           onClick={() => {
-                            setValue('head', '1', {
+                            setValue('contactType', '1', {
                               shouldValidate: true,
                             });
                             setWordhead('contacthero.form.problem.1');
@@ -217,7 +220,7 @@ const HeroSection = ({ t }: any) => {
                           className="option "
                           data-value=""
                           onClick={() => {
-                            setValue('head', '2', {
+                            setValue('contactType', '2', {
                               shouldValidate: true,
                             });
                             setWordhead('contacthero.form.problem.2');
@@ -225,38 +228,14 @@ const HeroSection = ({ t }: any) => {
                         >
                           {t('contacthero.form.problem.2')}
                         </li>
-                        <li
-                          className="option "
-                          data-value=""
-                          onClick={() => {
-                            setValue('head', '3', {
-                              shouldValidate: true,
-                            });
-                            setWordhead('contacthero.form.problem.3');
-                          }}
-                        >
-                          {t('contacthero.form.problem.3')}
-                        </li>
-                        <li
-                          className="option "
-                          data-value=""
-                          onClick={() => {
-                            setValue('head', '4', {
-                              shouldValidate: true,
-                            });
-                            setWordhead('contacthero.form.problem.4');
-                          }}
-                        >
-                          {t('contacthero.form.problem.4')}
-                        </li>
                       </ul>
                     </div>
                     <input
                       ref={register({
                         required: true,
                       })}
-                      id="head"
-                      name="head"
+                      id="contactType"
+                      name="contactType"
                       type="hidden"
                     />
                     <input
@@ -275,6 +254,14 @@ const HeroSection = ({ t }: any) => {
                       type="text"
                       className="input__box v2"
                       placeholder={t('contacthero.form.lastname')}
+                    />
+                    <input
+                      ref={register()}
+                      id="companyName"
+                      name="companyName"
+                      type="text"
+                      className="input__box v2"
+                      placeholder={t('contacthero.form.companyName')}
                     />
                     <input
                       ref={register({
@@ -342,7 +329,11 @@ const HeroSection = ({ t }: any) => {
                       className="button__wrapper text-center"
                       style={{ marginTop: '50px' }}
                     >
-                      <button type="submit" className="btn v8">
+                      <button
+                        type="submit"
+                        className="btn v8"
+                        disabled={successbtn}
+                      >
                         {t('contacthero.form.submitBtn')}
                       </button>
                     </div>
