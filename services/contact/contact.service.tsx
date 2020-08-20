@@ -17,15 +17,10 @@ export async function sendContact(param: any) {
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/contact',
       dataSend
     );
-
-    console.log('resultAPI : ', resultAPI);
-    // if (resultAPI.status !== 200 && resultAPI.status !== 201) {
-    //   return {
-    //     accID: '',
-    //     data: {},
-    //     error: { code: 'registerdto.fail', erromessagerText: '' },
-    //   };
-    // }
+    console.log(resultAPI);
+    if (resultAPI.status !== 200 && resultAPI.status !== 201) {
+      return { code: '400', errorMessageText: '' };
+    }
 
     return { code: '', errorMessageText: '' };
   } catch (error) {

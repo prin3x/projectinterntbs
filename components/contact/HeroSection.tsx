@@ -44,27 +44,22 @@ const HeroSection = ({ t }: any) => {
     },
   });
   const onSubmit = async (data: any) => {
-    console.log(data);
     const result = await sendContact(data);
-    console.log('result :: ', result);
     if (result.code !== '') {
       captcha.reset();
       Swal.fire({
         icon: 'warning',
-        title: t(result.code),
-        // text: t('contacthero.Swal.decseerror'),
+        html: t('contacthero.' + result.code),
       });
       return;
     }
     setSuccessbtn(true);
     Swal.fire({
       icon: 'success',
-      title: t('contacthero.Swal.titlesuccess'),
-      // text: t('contacthero.Swal.decsesuccess'),
+      text: t('contacthero.Swal.titlesuccess'),
     });
   };
   const handleErorr = (error: any) => {
-    console.log(error);
     if (error.firstname) {
       return 'contacthero.validate.firstname.' + error.firstname.type;
     }
