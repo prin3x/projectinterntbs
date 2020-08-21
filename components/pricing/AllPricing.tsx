@@ -8,7 +8,7 @@ import classnames from 'classnames';
 import Cookie from 'js-cookie';
 import appConfig from '../../appConfig';
 
-const SenderActive = -1;
+const SenderActive = 5;
 
 const BuyPackage = (packageItem: ProductPackage) => {
   let domain = 'localhost';

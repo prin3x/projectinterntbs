@@ -2,7 +2,7 @@ export const seo = {
   openGraph: {
     url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/condition`,
     type: 'website',
-    title: 'ช่องทางติดต่อทีมงาน | ThaiBulkSMS',
+    title: 'เงื่อนไขข้อตกลงการใช้บริการ | ThaiBulkSMS',
     description: '',
     images: [
       {
