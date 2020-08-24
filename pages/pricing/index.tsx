@@ -11,21 +11,22 @@ import {
   PricingProps,
   PackageAll,
 } from '../../services/shopping/pricing.model';
-import AppConfig from '../../appConfig'
+import AppConfig from '../../appConfig';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/pricing';
 const Pricing: any = ({ t, packages }: PricingProps) => {
   return (
     <Layout>
       <Head>
-        <title>{t('title')}</title>
-        <meta name="title" content={t('title')} />
-        <meta name="description" content={t('description')} />
         <meta name="keywords" content={t('keywords')} />
         <meta name="author" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <NextSeo openGraph={seo.openGraph} />
       </Head>
+      <NextSeo
+        openGraph={seo.openGraph}
+        title={t('title')}
+        description={t('description')}
+      />
       <div className="page_wrapper">
         <PricingSection />
         <AllPricing packages={packages} />
@@ -40,14 +41,13 @@ Pricing.getInitialProps = async () => {
   const params: PackageAll = {
     filter: AppConfig.PRODUCT_PACKAGE,
   };
-  let packageAll
+  let packageAll;
 
   try {
     packageAll = await ProductService.GetPackageFilter(params);
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-
 
   return {
     packages: packageAll ? packageAll.packages : {},

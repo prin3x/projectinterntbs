@@ -3,8 +3,9 @@ export const seo = {
     url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/product`,
     type: 'website',
     title:
-      'ผู้ให้บริการอันดับ 1 การส่งข้อความผ่านอินเทอร์เน็ต ครบวงจร | ThaiBulkSMS',
-    description: '',
+      'รวมแพ็กเกจราคาสุดคุ้มของ ThaiBulkSMS ในราคาเริ่มต้นเพียงแค่ 0.28 บาท - ทดลองส่งข้อความฟรี 20 เครดิต | ThaiBulkSMS',
+    description:
+      'คุณภาพและบริการที่ดีที่สุด ด้วยประสบการณ์กว่า 10 ปี | ส่ง SMS สุดเสถียรทุกเครือข่าย ถึงมือผู้รับ - ทดลองส่งข้อความ 20 เครดิต',
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg'`,

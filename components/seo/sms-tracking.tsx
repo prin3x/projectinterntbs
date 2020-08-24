@@ -4,7 +4,8 @@ export const seo = {
     type: 'website',
     title:
       'วัดผลและติดตามสถานะการเปิดอ่านด้วยบริการ SMS Tracking | ThaiBulkSMS',
-    description: '',
+    description:
+      'ติดตามสถานะและวัดผลการเปิดอ่านรายบุคคล สามารถดูรายงานได้หลังจากการส่งทันที ลดต้นทุนและวัดผลได้อย่างแม่นยำ',
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg'`,

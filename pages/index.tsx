@@ -13,40 +13,21 @@ import CtaSection from '../components/home/CtaSection';
 import { withTranslation } from '../i18n';
 import BacktoTop from '../components/BacktoTop';
 import Head from 'next/head';
-// import { NextSeo } from 'next-seo';
-// import { seo } from '../components/seo/home';
+import { NextSeo } from 'next-seo';
+import { seo } from '../components/seo/home';
 const Homepage = ({ t }: any) => (
   <React.Fragment>
     <Layout>
       <Head>
-        <title>{t('title')}</title>
-        <meta name="title" content={t('title')} />
-        <meta name="description" content={t('description')} />
         <meta name="keywords" content={t('keywords')} />
         <meta name="author" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* <NextSeo openGraph={seo} /> */}
-        {/* <meta property="og:url" content={process.env.NEXT_PUBLIC_DOMAIN_URL} />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="บริการส่ง SMS ครบวงจร ส่งง่าย ถึงมือผู้รับ| ThaiBulkSMS"
-        />
-        <meta property="og:description" content="" />
-        <meta
-          property="og:image"
-          content="https://d1vb0eqohs6ps7.cloudfront.net/img/demoog.jpg"
-        />
-        <meta property="og:site_name" content="https://thaibulksms.com" />
-        <meta property="og:image:secure_url" content="" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="600" />
-        <meta property="og:image:height" content="600" />
-        <meta name="twitter:site" content="" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="" />
-        <meta name="twitter:domain" content="" /> */}
       </Head>
+      <NextSeo
+        openGraph={seo.openGraph}
+        title={t('title')}
+        description={t('description')}
+      />
       {/* <Proloader /> */}
       <div className="page_wrapper">
         <HeroSection />

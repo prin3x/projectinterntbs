@@ -4,7 +4,8 @@ export const seo = {
     type: 'website',
     title:
       'บริการ OTP Ready-to-Use การส่งยืนยันตัวตนที่พร้อมใช้ทันที | ThaiBulkSMS',
-    description: '',
+    description:
+      'บริการส่ง OTP Ready-to-Use ส่งรหัสยืนยันตัวตนที่พร้อมใช้งานได้ทันที เพื่อความปลอดภัยในการทำธุรกรรมออนไลน์',
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg'`,

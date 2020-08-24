@@ -3,7 +3,8 @@ export const seo = {
     url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`,
     type: 'website',
     title: 'ช่องทางติดต่อทีมงาน | ThaiBulkSMS',
-    description: '',
+    description:
+      'หากคุณมีข้อสงสัยเกี่ยวกับผลิตภัณฑ์ แพ็กเกจ หรือมีปัญหาการส่ง SMS สามารถติดต่อเราได้ทันที เราพร้อมให้คำแนะนำและดูแลคุณ',
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg'`,
