@@ -116,7 +116,7 @@ const PromoSection = ({ t }: any) => (
               }}
             ></h3>
             <p>{t('productpromo.section.3.title')}</p>
-            <Link href="/sms-tracking">
+            <Link href="/product/sms-tracking">
               <a className="link">{t('productpromo.section.3.link')}</a>
             </Link>
           </div>
@@ -180,7 +180,7 @@ const PromoSection = ({ t }: any) => (
             >
               {t('productpromo.section.4.freeBtn')}
             </a>
-            <Link href="/otp">
+            <Link href="/product/otp">
               <a className="link">{t('productpromo.section.4.link')}</a>
             </Link>
             <h6

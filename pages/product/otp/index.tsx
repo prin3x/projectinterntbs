@@ -1,16 +1,16 @@
 import React from 'react';
-import Layout from '../../components/Layout';
+import Layout from '../../../components/Layout';
 // import Proloader from '../../components/Proloader';
-import HeroSection from '../../components/otp/HeroSection';
-import SmsSection from '../../components/otp/SmsSection';
-import SimpleIconSection from '../../components/otp/SimpleIconSection';
-import TrackSection from '../../components/otp/TrackSection';
-import CtaSection from '../../components/otp/CtaSection';
-import BacktoTop from '../../components/BacktoTop';
+import HeroSection from '../../../components/otp/HeroSection';
+import SmsSection from '../../../components/otp/SmsSection';
+import SimpleIconSection from '../../../components/otp/SimpleIconSection';
+import TrackSection from '../../../components/otp/TrackSection';
+import CtaSection from '../../../components/otp/CtaSection';
+import BacktoTop from '../../../components/BacktoTop';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import { seo } from '../../components/seo/otp';
-import { withTranslation } from '../../i18n';
+import { seo } from '../../../components/seo/otp';
+import { withTranslation } from '../../../i18n';
 const Otp = ({ t }: any) => (
   <Layout>
     <Head>

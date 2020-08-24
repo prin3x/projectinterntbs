@@ -1,6 +1,6 @@
 export const seo = {
   openGraph: {
-    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/sms-tracking`,
+    url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-tracking`,
     type: 'website',
     title:
       'วัดผลและติดตามสถานะการเปิดอ่านด้วยบริการ SMS Tracking | ThaiBulkSMS',
@@ -13,6 +13,6 @@ export const seo = {
         height: 600,
       },
     ],
-    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/sms-tracking`,
+    site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-tracking`,
   },
 };
