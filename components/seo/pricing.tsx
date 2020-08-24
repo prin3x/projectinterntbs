@@ -8,7 +8,7 @@ export const seo = {
       'แพ็กเกจราคาสุดคุ้มของ ThaiBulkSMS ราคาเริ่มต้นเพียง 0.28 บาท พร้อมฟีเจอร์ในการส่ง SMS ครบวงจร - ทดลองส่งข้อความฟรี 20 เครดิต',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg'`,
+        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg`,
         width: 800,
         height: 600,
       },

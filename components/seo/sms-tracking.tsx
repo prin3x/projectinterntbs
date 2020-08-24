@@ -8,7 +8,7 @@ export const seo = {
       'ติดตามสถานะและวัดผลการเปิดอ่านรายบุคคล สามารถดูรายงานได้หลังจากการส่งทันที ลดต้นทุนและวัดผลได้อย่างแม่นยำ',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg'`,
+        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg`,
         width: 800,
         height: 600,
       },
