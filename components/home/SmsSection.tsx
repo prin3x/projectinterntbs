@@ -60,6 +60,12 @@ const SmsSectionV2 = ({ t }: any) => {
                           start={numStart}
                           end={numEnd}
                           duration={duration}
+                          formattingFn={(number) => {
+                            return `${String(number).replace(
+                              /(\d)(?=(\d{3})+(?!\d))/g,
+                              '$1,'
+                            )}`;
+                          }}
                         />
                       </h2>
                     )}
