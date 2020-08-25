@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const PricingSection = ({ t }: any) => (
   <div className="pricing-section">
@@ -42,12 +42,14 @@ const PricingSection = ({ t }: any) => (
                 {t('homeproductpricing.package.standard.price')}{' '}
                 <span>{t('homeproductpricing.unit')}</span>
               </h2>
+              <Link href="/pricing">
               <a
-                href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
+                
                 className="btn v3"
               >
                 {t('homeproductpricing.viewPackageBtn')}
               </a>
+              </Link>
             </div>
             <div className="price_bottom_text">
               <p>{t('homeproductpricing.package.standard.suitable.title')}</p>
@@ -93,12 +95,14 @@ const PricingSection = ({ t }: any) => (
                 {t('homeproductpricing.package.corporate.price')}{' '}
                 <span>{t('homeproductpricing.unit')}</span>
               </h2>
+              <Link href="/pricing">
               <a
-                href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
+                
                 className="btn v3"
               >
                 {t('homeproductpricing.viewPackageBtn')}
               </a>
+              </Link>
             </div>
             <div className="price_bottom_text">
               <p>{t('homeproductpricing.package.corporate.suitable.title')}</p>

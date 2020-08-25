@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation,Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const HeroSectionV2 = ({ t }: any) => (
   <div
@@ -21,12 +21,14 @@ const HeroSectionV2 = ({ t }: any) => (
                 </a>
               </li>
               <li>
+              <Link href="/pricing">
                 <a
-                  href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
+                  
                   className="btn v5"
                 >
                   {t('homehero.viewPackageBtn')}
                 </a>
+                </Link>
               </li>
             </ul>
           </div>

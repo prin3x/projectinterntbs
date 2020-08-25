@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const CtaSection = ({ t }: any) => (
   <div className="cta_section">
@@ -20,12 +20,13 @@ const CtaSection = ({ t }: any) => (
               </a>
             </li>
             <li>
+            <Link href="/pricing">
               <a
-                href={`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/pricing`}
                 className="btn v5"
               >
                 {t('homecta.viewPackageBtn')}
               </a>
+              </Link>
             </li>
           </ul>
         </div>
