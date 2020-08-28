@@ -158,6 +158,10 @@
   .captcha-content {
     padding: 6% 7%;
   }
+  /* SMS Section Error*/
+  .sms_form {
+    padding: 60px 30px 75px 50px;
+  }
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
@@ -701,10 +705,11 @@
   .bg__img.img__2 {
     width: 25%;
   }
-
+  .nice-select.user_select .current {
+    font-size: 20px;
+  }
   .site-navbar .site-navigation .site-menu li > a,
   .header_contact_no a,
-  .nice-select.user_select .current,
   .menu_btn ul li {
     font-size: 16px;
   }
@@ -716,7 +721,7 @@
     padding-top: 10px;
   }
   .nice-select.user_select {
-    line-height: 26px;
+    line-height: 20px;
   }
   .hero_section.v2 .hero_text_one h1 {
     font-size: 46px;
@@ -1246,6 +1251,10 @@
   }
   .hero_section.v3 .hero_text_one span {
     font-size: 40px;
+  }
+  /* company page */
+  .input__box.v2.nice-select:after {
+    top: 50%;
   }
   /* Modal Style */
   .form-wrap {
@@ -1879,6 +1888,7 @@
   /* error text style */
   .sms-error-text {
     left: 5%;
+    font-size: 14px;
   }
 }
 
@@ -2000,7 +2010,7 @@
   }
   .input-txt01 {
     width: 100%;
-    padding: 1% 2%;
+    padding: 2.5% 2%;
     font-size: 18px;
     border-radius: 15px;
     border: 2px solid #b2bbc3;
@@ -2655,6 +2665,7 @@
   }
   .sms-error-text {
     left: 6%;
+    font-size: 14px;
   }
 }
 
@@ -3332,8 +3343,11 @@
   /* error text style */
   .sms-error-text {
     position: absolute;
-    bottom: -45%;
+    bottom: -95%;
     left: 4%;
+  }
+  .sms_form {
+    padding: 50px 30px 85px 50px;
   }
 }
 
@@ -3598,7 +3612,7 @@
   }
 
   .sms_form {
-    padding: 30px 20px 30px 20px;
+    padding: 50px 30px 50px 30px;
     -webkit-transform: translateY(25px);
     -ms-transform: translateY(25px);
     transform: translateY(25px);
@@ -3614,7 +3628,7 @@
   }
 
   .testimonial_section {
-    padding: 170px 0 100px;
+    padding: 200px 0 100px;
   }
 
   .sms_feature_item p {
@@ -4272,8 +4286,8 @@
   .input-twocolumn .input-txt02 {
     width: 100%;
     padding: 5%;
-    font-size: 16px;
-    border: 1px solid #b2bbc3;
+    font-size: 18px;
+    border: 2px solid #b2bbc3;
     margin: 10px auto;
   }
   .sec-checkbox .container {
@@ -4657,7 +4671,11 @@
   .usertypeBranch {
     margin: 10px 0 10px !important;
     width: 100% !important;
-    height: 50px !important;
+    height: 60px !important;
+  }
+  /* individual page */
+  .input-twocolumn div.input-with-error {
+    width: 100%;
   }
   /* Modal Style */
   .pass-style {
@@ -4680,11 +4698,11 @@
   /* error text style */
   .sms-error-text {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 3%;
   }
   .sms_form_field input {
-    margin-bottom: 40px;
+    margin-bottom: 65px;
   }
 }
 
@@ -4891,7 +4909,7 @@
     margin-bottom: 20px;
   }
   .testimonial_section {
-    padding: 240px 0 100px;
+    padding: 270px 0 100px;
   }
   .client_img {
     width: 70px;
@@ -5584,6 +5602,24 @@
   .box__wrapper .box__body h6 {
     text-align: left;
   }
+  /* individual page */
+  .input__box.v2.nice-select:after {
+    top: 45%;
+    right: 17px;
+  }
+  .nice-select.user_select .current {
+    font-size: 18px;
+  }
+  .nice-select.user_select {
+    height: 15px;
+  }
+  /* company page */
+  .usertypeBranch {
+    font-size: 16px;
+  }
+  .usertypeBranch {
+    height: 53px !important;
+  }
   /* Condition page */
   h2.condition-header {
     font-size: 24px;
@@ -5640,16 +5676,22 @@
   /* error text style */
   .sms-error-text {
     position: absolute;
-    top: 39%;
+    top: 35%;
     left: 4%;
   }
-  .sms_form_field input,
-  .sms-error-text {
+  .sms_form_field input {
     font-size: 14px;
+    margin-bottom: 55px;
+  }
+  .sms-error-text {
+    font-size: 12px;
   }
   .sms_form_text h4 {
     font-size: 16px;
     margin-bottom: 9px;
+  }
+  .sms_form {
+    padding: 50px 30px 45px 30px;
   }
 }
 @media only screen and (min-width: 414px) {
@@ -5668,6 +5710,20 @@
   /* Captcha style */
   .captcha-content {
     width: 90%;
+  }
+  .input-txt01 {
+    padding: 5%;
+  }
+  /* company page */
+  .company-id {
+    flex-direction: column;
+  }
+  .company-id input {
+    width: 100%;
+  }
+  .company-id .btn.v2 {
+    min-width: 180px;
+    margin-bottom: 3%;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 375px) {
@@ -5705,7 +5761,7 @@
     font-size: 20px;
   }
   .testimonial_section {
-    padding: 250px 0 100px;
+    padding: 270px 0 100px;
   }
   /* Modal style */
   .pass-style {
@@ -5746,5 +5802,6 @@
   }
   .sms_form {
     width: 100%;
+    padding: 40px 20px 40px 20px;
   }
 }
