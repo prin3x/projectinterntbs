@@ -228,6 +228,14 @@ const TestQuickregister = ({ t }: any) => {
                         onChange={() => clearErrors1('resultStep1')}
                         maxLength={10}
                       />
+                      <div
+                        style={{
+                          color: 'red',
+                        }}
+                        className="sms-error-text"
+                      >
+                        {t(handleErorrStep1(errrorsStep1))}
+                      </div>
                       <button
                         className="btn v2 sms-btn-text"
                         type="submit"
@@ -236,14 +244,6 @@ const TestQuickregister = ({ t }: any) => {
                         {t('homesms.test.confirmBtn')}
                       </button>
                     </form>
-                    <div
-                      style={{
-                        color: 'red',
-                      }}
-                      className="sms-error-text"
-                    >
-                      {t(handleErorrStep1(errrorsStep1))}
-                    </div>
                   </div>
                 )}
                 {showInputstep3 && (
@@ -259,6 +259,9 @@ const TestQuickregister = ({ t }: any) => {
                         disabled={true}
                         value={msisdn}
                       />
+                      <div style={{ color: 'red' }} className="sms-error-text">
+                        {t(handleErorrStep3(errrorsStep3))}
+                      </div>
                       <button
                         className="btn v2"
                         type="submit"
@@ -267,9 +270,6 @@ const TestQuickregister = ({ t }: any) => {
                         {t('homesms.test.testBtn')}
                       </button>
                     </form>
-                    <div style={{ color: 'red' }} className="sms-error-text">
-                      {t(handleErorrStep3(errrorsStep3))}
-                    </div>
                   </div>
                 )}
               </div>
