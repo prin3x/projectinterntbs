@@ -1,17 +1,17 @@
-import { withTranslation } from '../../i18n';
+import Cookie from 'js-cookie';
 import PropTypes from 'prop-types';
-import { useForm } from 'react-hook-form';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import TagManager from 'react-gtm-module';
+import { useForm } from 'react-hook-form';
 import Modal from 'react-modal';
-import Cookie from 'js-cookie';
+import appConfig from '../../appConfig';
+import { withTranslation } from '../../i18n';
 import {
   quickRegisterStep1,
   quickRegisterStep2,
   quickRegisterStep3,
 } from '../../services/user/user.service';
-import appConfig from '../../appConfig';
 type Inputs = {
   msisdn: string;
   pin: string;
@@ -181,13 +181,10 @@ const TestQuickregister = ({ t }: any) => {
   const gotoLogin = () => {
     let domain = 'localhost';
     if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
-    else if (appConfig.APP_ENV === appConfig.internalTest)
-      domain = '.1mobyline.com';
+    else if (appConfig.APP_ENV === appConfig.internalTest) domain = '.1mobyline.com';
 
     Cookie.set('TBS_username', msisdn || '', { expires: 0.15, domain });
-    window.location.replace(
-      'https://account.ngrok.1mobyline.com/register/quickregister'
-    );
+    window.location.replace(`${appConfig.WEB_URL_ACCOUNT}/register/quickregister`);
   };
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
@@ -268,7 +265,29 @@ const TestQuickregister = ({ t }: any) => {
                       </button>
                     </form>
                     <div style={{ color: 'red' }} className="sms-error-text">
-                      {t(handleErorrStep3(errrorsStep3))}
+                      {errrorsStep3 &&
+                      errrorsStep3.resultStep3?.type ===
+                        'quickregisterthirdstepdto.key.expire' ? (
+                        <>
+                          {t(
+                            'homesms.resultStep3.quickregisterthirdstepdto.key.expireLine1',
+                          )}
+                          <br />
+                          {t(
+                            'homesms.resultStep3.quickregisterthirdstepdto.key.expireLine2_1',
+                          )}{' '}
+                          <a href={`${appConfig.WEB_URL_ACCOUNT}/log-in`}>
+                            {t(
+                              'homesms.resultStep3.quickregisterthirdstepdto.key.expireLine2_2',
+                            )}
+                          </a>{' '}
+                          {t(
+                            'homesms.resultStep3.quickregisterthirdstepdto.key.expireLine2_3',
+                          )}
+                        </>
+                      ) : (
+                        t(handleErorrStep3(errrorsStep3))
+                      )}
                     </div>
                   </div>
                 )}
@@ -313,10 +332,7 @@ const TestQuickregister = ({ t }: any) => {
                 <h5 className="pass-modal-text">
                   {t('homesms.modal.showModalpass.header')}
                 </h5>
-                <form
-                  className="form-wrap"
-                  onSubmit={handleSubmitStep2(onSubmitStep2)}
-                >
+                <form className="form-wrap" onSubmit={handleSubmitStep2(onSubmitStep2)}>
                   <div className="form__wrapper form-password-wrap">
                     <input
                       ref={registerStep2({
@@ -339,9 +355,7 @@ const TestQuickregister = ({ t }: any) => {
                     </button>
                   </div>
                 </form>
-                <div style={{ color: 'red' }}>
-                  {t(handleErorrStep2(errrorsStep2))}
-                </div>
+                <div style={{ color: 'red' }}>{t(handleErorrStep2(errrorsStep2))}</div>
               </div>
             )}
             {showLogin && (
@@ -351,15 +365,9 @@ const TestQuickregister = ({ t }: any) => {
                   textAlign: 'center',
                 }}
               >
-                <h5 className="login-topic">
-                  {t('homesms.modal.showLogin.header')}
-                </h5>
-                <p className="login-content">
-                  {t('homesms.modal.showLogin.decs1')}
-                </p>
-                <p className="login-content">
-                  {t('homesms.modal.showLogin.decs2')}
-                </p>
+                <h5 className="login-topic">{t('homesms.modal.showLogin.header')}</h5>
+                <p className="login-content">{t('homesms.modal.showLogin.decs1')}</p>
+                <p className="login-content">{t('homesms.modal.showLogin.decs2')}</p>
                 <button
                   className="btn v2 btn-show-login"
                   onClick={() => {

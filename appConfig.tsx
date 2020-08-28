@@ -7,4 +7,5 @@ export default {
   PRODUCT_PACKAGE: process.env.NEXT_PUBLIC_PRODUCT_PACKAGE || '',
   API_URL_ACCOUNT: process.env.NEXT_PUBLIC_API_URL_ACCOUNT || '',
   APP_ENV: process.env.NEXT_PUBLIC_APP_ENV || 'development',
+  WEB_URL_ACCOUNT: process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT || '',
 };
