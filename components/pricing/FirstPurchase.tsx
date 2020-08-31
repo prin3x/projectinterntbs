@@ -194,8 +194,13 @@ const FirstPurchase = ({ t, packages }: any) => {
   }, [router])
 
   const firstPurchase = async (dpd: string) => {
-    console.log(dpd)
-    // CheckFirstPurchase()
+    try {
+      await CheckFirstPurchase(dpd)
+    } catch (error) {
+      console.error(error)
+      router.push('/pricing')
+    }
+    
   }
   return (
     <div

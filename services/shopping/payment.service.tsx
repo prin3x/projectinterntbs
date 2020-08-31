@@ -55,7 +55,7 @@ export async function QrRenew(data: QrData) {
   return res.data
 }
 
-export async function CheckFirstPurchase() {
-  const res = await axios.get(ApiCheckFirstPurchase, { params: { tokenFirstPurchase: '111' } })
+export async function CheckFirstPurchase(dpd: string) {
+  const res = await axios.post(ApiCheckFirstPurchase, { tokenFirstPurchase: dpd })
   return res.data
 }
