@@ -11,45 +11,51 @@ const ApiQrPaymentSubmit = `${AppConfig.API_URL_SHOPPING}/payment/qr-confirm`
 const ApiQrShow = `${AppConfig.API_URL_SHOPPING}/payment/qr`
 const ApiQrCheckPay = `${AppConfig.API_URL_SHOPPING}/payment/qr-pay`
 const ApiQrRenew = `${AppConfig.API_URL_SHOPPING}/payment/qr-renew`
-export async function GetAddress ():Promise<UserAddress>{
+const ApiCheckFirstPurchase = `${AppConfig.API_URL_SHOPPING}/payment/check-first-purchase`
+export async function GetAddress(): Promise<UserAddress> {
   const res = await axios.get(ApiUserAddress);
-  const data:UserAddress = res.data
+  const data: UserAddress = res.data
   return data;
 
 }
 
-export async function UpdateAddress (data:UpdateUserAddress){
-  const res = await axios.put(ApiUpdateUserAddress,data)
+export async function UpdateAddress(data: UpdateUserAddress) {
+  const res = await axios.put(ApiUpdateUserAddress, data)
   return res
 }
 
 
-export async function BankTransferSubmit(data: FormBodyPayment){
-  const res = await axios.post(ApiBankTransferSubmit,data)
+export async function BankTransferSubmit(data: FormBodyPayment) {
+  const res = await axios.post(ApiBankTransferSubmit, data)
   return res.data
 }
 
-export async function Credit2C2PPaymentSubmit(data: FormBodyPayment){
-  const res = await axios.post(ApiCredit2C2PPaymentSubmit,data)
+export async function Credit2C2PPaymentSubmit(data: FormBodyPayment) {
+  const res = await axios.post(ApiCredit2C2PPaymentSubmit, data)
   return res.data
 }
 
-export async function QrPaymentSubmit(data: FormBodyPayment){
-  const res = await axios.post(ApiQrPaymentSubmit,data)
+export async function QrPaymentSubmit(data: FormBodyPayment) {
+  const res = await axios.post(ApiQrPaymentSubmit, data)
   return res.data
 }
 
-export async function QrShow(data: QrData){
-  const res = await axios.post(ApiQrShow,data)
+export async function QrShow(data: QrData) {
+  const res = await axios.post(ApiQrShow, data)
   return res.data
 }
 
-export async function QrCheckPay(data: QrData){
-  const res = await axios.post(ApiQrCheckPay,data)
+export async function QrCheckPay(data: QrData) {
+  const res = await axios.post(ApiQrCheckPay, data)
   return res.data
 }
 
-export async function QrRenew(data: QrData){
-  const res = await axios.post(ApiQrRenew,data)
+export async function QrRenew(data: QrData) {
+  const res = await axios.post(ApiQrRenew, data)
+  return res.data
+}
+
+export async function CheckFirstPurchase() {
+  const res = await axios.get(ApiCheckFirstPurchase, { params: { tokenFirstPurchase: '111' } })
   return res.data
 }
