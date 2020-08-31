@@ -195,7 +195,7 @@ const FirstPurchase = ({ t, packages }: any) => {
 
   const firstPurchase = async (dpd: string) => {
     console.log(dpd)
-    CheckFirstPurchase()
+    // CheckFirstPurchase()
   }
   return (
     <div
