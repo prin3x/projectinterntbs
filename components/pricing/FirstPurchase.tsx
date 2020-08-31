@@ -184,11 +184,10 @@ const FirstPurchase = ({ t, packages }: any) => {
         action: 'intent',
       },
     });
-  }, []);
 
-
-  React.useEffect(() => {
     const dpd: any = router.query.dpd
+    
+    if (!dpd) return
     firstPurchase(dpd)
 
   }, [router])
@@ -200,7 +199,7 @@ const FirstPurchase = ({ t, packages }: any) => {
       console.error(error)
       router.push('/pricing')
     }
-    
+
   }
   return (
     <div
