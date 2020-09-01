@@ -189,7 +189,9 @@ const showPackage = (packages: Product[], t: Function) => {
                   </div>
                   <div className="col-sm-2 col-md-1 text-center devribbon-container ">
                     <div className="pack-img">
-                      <img src="http://localhost:3000/img/extra-package.png"></img>
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/extra-package.png`}
+                      ></img>
                       <div className="pack-text">
                         <p>
                           <b>Extra</b>
