@@ -42,12 +42,9 @@ class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.0/css/nice-select.css"
             rel="stylesheet"
           />
+          <link href={`http://localhost:3000/css/style.css`} rel="stylesheet" />
           <link
-            href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/style.css`}
-            rel="stylesheet"
-          />
-          <link
-            href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/responsive.css`}
+            href={`http://localhost:3000/css/responsive.css`}
             rel="stylesheet"
           />
           <link

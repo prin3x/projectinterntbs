@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 import { CheckFirstPurchase } from '../../services/shopping/payment.service';
 
 const SenderActive = 5;
+const SenderBegin = 1;
 
 const BuyPackage = (packageItem: ProductPackage) => {
   let domain = 'localhost';
@@ -42,6 +43,16 @@ const showPackage = (packages: Product[], t: Function) => {
         aria-controls={`collapse${itemNo}`}
       >
         <div className="col-md-4 box">
+          {productItem.corporate.sender === SenderActive && (
+            <div className="parent">
+              <h4 className="ribbon">{t('pricingallpricing.bestsell')}</h4>
+            </div>
+          )}{' '}
+          {productItem.corporate.sender === SenderBegin && (
+            <div className="parent">
+              <h4 className="ribbon">{t('pricingallpricing.begin')}</h4>
+            </div>
+          )}
           <div className="left__box">
             <h3>{numeral(productItem.amount).format('0,0')}</h3>
             <span>
@@ -65,14 +76,14 @@ const showPackage = (packages: Product[], t: Function) => {
                   className="shape__box"
                   alt=""
                 />
-                <div className="row">
-                  <div className="col-sm-6 text-center">
+                <div className="row ribbon-container">
+                  <div className="col-lg-4 offset-lg-1 col-sm-5 text-center">
                     <h4 className="d-md-none">Standard</h4>
-
+                    <p className="p-line-through">0.99</p>
                     <h3>
                       {numeral(
                         productItem.standard.amount /
-                        productItem.standard.credit
+                          productItem.standard.credit
                       ).format('0.00')}
                       {` `}
                       <span>
@@ -90,6 +101,12 @@ const showPackage = (packages: Product[], t: Function) => {
                       )}
                       data-parent="#accordion"
                     >
+                      <div className="sender__box1 div-line-through2">
+                        <p className="p-line-through2">
+                          <span className="none">99,999</span>{' '}
+                          <span className="up"> +20% UP </span>
+                        </p>
+                      </div>
                       <div className="sender__box1">
                         <span>{t('pricingallpricing.quantity')}</span>
                         <span className="theme__text">
@@ -116,13 +133,13 @@ const showPackage = (packages: Product[], t: Function) => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-sm-6 text-center">
+                  <div className="col-lg-6 col-sm-5 text-center">
                     <h4 className="d-md-none">Corporate</h4>
-
+                    <p className="p-line-through">0.99</p>
                     <h3>
                       {numeral(
                         productItem.corporate.amount /
-                        productItem.corporate.credit
+                          productItem.corporate.credit
                       ).format('0.00')}{' '}
                       <span>
                         {t('pricingallpricing.bath')}/
@@ -139,6 +156,12 @@ const showPackage = (packages: Product[], t: Function) => {
                       )}
                       data-parent="#accordion"
                     >
+                      <div className="sender__box1 div-line-through2">
+                        <p className="p-line-through2">
+                          <span className="none">99,999</span>{' '}
+                          <span className="up"> +20% UP </span>
+                        </p>
+                      </div>
                       <div className="sender__box1">
                         <span>{t('pricingallpricing.quantity')}</span>
                         <span className="theme__text">
@@ -164,6 +187,17 @@ const showPackage = (packages: Product[], t: Function) => {
                       </div>
                     </div>
                   </div>
+                  <div className="col-sm-2 col-md-1 text-center devribbon-container ">
+                    <div className="pack-img">
+                      <img src="http://localhost:3000/img/extra-package.png"></img>
+                      <div className="pack-text">
+                        <p>
+                          <b>Extra</b>
+                          <br /> Top-Up!!!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -176,7 +210,7 @@ const showPackage = (packages: Product[], t: Function) => {
 };
 
 const FirstPurchase = ({ t, packages }: any) => {
-  const router = useRouter()
+  const router = useRouter();
   React.useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
@@ -185,22 +219,20 @@ const FirstPurchase = ({ t, packages }: any) => {
       },
     });
 
-    const dpd: any = router.query.dpd
-    
-    if (!dpd) return
-    firstPurchase(dpd)
+    const dpd: any = router.query.dpd;
 
-  }, [router])
+    if (!dpd) return;
+    firstPurchase(dpd);
+  }, [router]);
 
   const firstPurchase = async (dpd: string) => {
     try {
-      await CheckFirstPurchase(dpd)
+      await CheckFirstPurchase(dpd);
     } catch (error) {
-      console.error(error)
-      router.push('/pricing')
+      console.error(error);
+      router.push('/pricing');
     }
-
-  }
+  };
   return (
     <div
       className="all__pricing accordion lazyload"

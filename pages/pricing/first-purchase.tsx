@@ -42,7 +42,7 @@ Pricing.getInitialProps = async () => {
     filter: AppConfig.FIRST_PURCHASE_PRODUCT_PACKAGE,
   };
   let packageAll;
-console.log(params)
+  console.log(params);
   try {
     packageAll = await ProductService.GetPackageFilter(params);
   } catch (error) {
