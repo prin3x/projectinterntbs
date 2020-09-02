@@ -25,10 +25,11 @@ const BuyPackage = (packageItem: ProductPackage) => {
     `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment`
   );
 };
-const showPackage = (packages: Product[], t: Function) => {
+const showPackage = (packagesNormal: Product[], packages: Product[], t: Function) => {
   let itemPackages: any = [];
   for (let item in packages) {
     let productItem = packages[item];
+    let productItemNormal = packagesNormal[item]
     let itemNo = item + 1;
     itemPackages.push(
       <div
@@ -79,11 +80,11 @@ const showPackage = (packages: Product[], t: Function) => {
                 <div className="row ribbon-container">
                   <div className="col-lg-4 offset-lg-1 col-sm-5 text-center">
                     <h4 className="d-md-none">Standard</h4>
-                    <p className="p-line-through">0.99</p>
+                    <p className="p-line-through">{numeral(productItemNormal.standard.amount / productItemNormal.standard.credit).format('0.00')}</p>
                     <h3>
                       {numeral(
                         productItem.standard.amount /
-                          productItem.standard.credit
+                        productItem.standard.credit
                       ).format('0.00')}
                       {` `}
                       <span>
@@ -103,7 +104,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     >
                       <div className="sender__box1 div-line-through2">
                         <p className="p-line-through2">
-                          <span className="none">99,999</span>{' '}
+                          <span className="none">{numeral(productItemNormal.standard.credit).format('0,0')}</span>{' '}
                           <span className="up"> +20% UP </span>
                         </p>
                       </div>
@@ -135,11 +136,11 @@ const showPackage = (packages: Product[], t: Function) => {
                   </div>
                   <div className="col-lg-6 col-sm-5 text-center">
                     <h4 className="d-md-none">Corporate</h4>
-                    <p className="p-line-through">0.99</p>
+                    <p className="p-line-through">{numeral(productItemNormal.corporate.amount / productItemNormal.corporate.credit).format('0.00')}</p>
                     <h3>
                       {numeral(
                         productItem.corporate.amount /
-                          productItem.corporate.credit
+                        productItem.corporate.credit
                       ).format('0.00')}{' '}
                       <span>
                         {t('pricingallpricing.bath')}/
@@ -158,7 +159,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     >
                       <div className="sender__box1 div-line-through2">
                         <p className="p-line-through2">
-                          <span className="none">99,999</span>{' '}
+                          <span className="none">{numeral(productItemNormal.corporate.credit).format('0,0')}</span>{' '}
                           <span className="up"> +20% UP </span>
                         </p>
                       </div>
@@ -211,8 +212,9 @@ const showPackage = (packages: Product[], t: Function) => {
   return itemPackages;
 };
 
-const FirstPurchase = ({ t, packages }: any) => {
+const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
   const router = useRouter();
+  const [showProduct, setShowProduct] = React.useState(false)
   React.useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
@@ -224,6 +226,7 @@ const FirstPurchase = ({ t, packages }: any) => {
     const dpd: any = router.query.dpd;
 
     if (!dpd) return;
+    setShowProduct(dpd ? true : false)
     firstPurchase(dpd);
   }, [router]);
 
@@ -268,7 +271,7 @@ const FirstPurchase = ({ t, packages }: any) => {
               </div>
             </div>
 
-            {showPackage(packages, t)}
+            {showProduct ? showPackage(packagesNormal, packages, t) : null}
           </div>
 
           <div className="col-12 text-center pricing__bottom__content">

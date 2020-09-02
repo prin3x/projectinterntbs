@@ -19,6 +19,7 @@ export interface Product {
 export interface PricingProps {
   t: Function;
   packages: ProductPackage[];
+  packagesNormal: ProductPackage[];
   test: string;
 }
 

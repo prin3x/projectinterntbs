@@ -14,7 +14,7 @@ import {
 import AppConfig from '../../appConfig';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/pricing';
-const Pricing: any = ({ t, packages }: PricingProps) => {
+const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
   return (
     <Layout>
       <Head>
@@ -29,7 +29,7 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
       />
       <div className="page_wrapper">
         <PricingSection />
-        <FirstPurchase packages={packages} />
+        <FirstPurchase packages={packages} packagesNormal={packagesNormal} />
         <FaqSection />
       </div>
       <BacktoTop />
@@ -41,16 +41,26 @@ Pricing.getInitialProps = async () => {
   const params: PackageAll = {
     filter: AppConfig.FIRST_PURCHASE_PRODUCT_PACKAGE,
   };
+  const paramsNormal: PackageAll = {
+    filter: AppConfig.PRODUCT_PACKAGE,
+  };
+
+
   let packageAll;
-  console.log(params);
+  let packageAllNormal;
+ 
+  
+
   try {
     packageAll = await ProductService.GetPackageFilter(params);
+    packageAllNormal = await ProductService.GetPackageFilter(paramsNormal);
   } catch (error) {
     console.error(error);
   }
 
   return {
     packages: packageAll ? packageAll.packages : {},
+    packagesNormal: packageAllNormal ? packageAllNormal.packages : {},
     namespacesRequired: ['PricingMeta'],
   };
 };
