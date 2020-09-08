@@ -333,7 +333,9 @@ const FaqSection = ({ t }: any) => {
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
                     alt="Image"
                   />
-                  <a className="btn v4">{t('pricingfaq.fbBrn')}</a>
+                  <a href="mailto:contact@thaibulksms.com" className="btn v4">
+                    {t('pricingfaq.fbBrn')}
+                  </a>
                 </div>
               </div>
             </div>

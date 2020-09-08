@@ -42,12 +42,9 @@ const TabContent = ({ t }: any) => {
                         <p>
                           {t('howtoordertabcontent.content.1.desc1')}
                           <Link href="/pricing">
-                          <a
-                            
-                            className="theme__text link mt-0"
-                          >
-                            {t('howtoordertabcontent.content.1.desc2')}
-                          </a>
+                            <a className="theme__text link mt-0">
+                              {t('howtoordertabcontent.content.1.desc2')}
+                            </a>
                           </Link>
                           {t('howtoordertabcontent.content.1.desc3')}
                         </p>
@@ -356,7 +353,9 @@ const TabContent = ({ t }: any) => {
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
                     alt="Image"
                   />
-                  <a className="btn v4">{t('howtoordertabcontent.fbBrn')}</a>
+                  <a href="mailto:contact@thaibulksms.com" className="btn v4">
+                    {t('howtoordertabcontent.fbBrn')}
+                  </a>
                 </div>
               </div>
             </div>

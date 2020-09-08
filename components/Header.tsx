@@ -150,9 +150,12 @@ const Header = ({ t }: any) => {
                     </ul>
                   </li> */}
                   <li>
-                    <Link href="/Documentation">
-                      <a className="active">{t('header.documentation')}</a>
-                    </Link>
+                    <a
+                      href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
+                      className="active"
+                    >
+                      {t('header.documentation')}
+                    </a>
                   </li>
                   <li>
                     <Link href="/contact">
@@ -236,11 +239,12 @@ const Header = ({ t }: any) => {
                       </ul>
                     </li> */}
                     <li>
-                      <Link href="/Documentation">
-                        <a className="active closemenu">
-                          {t('header.documentation')}
-                        </a>
-                      </Link>
+                      <a
+                        href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
+                        className="active closemenu"
+                      >
+                        {t('header.documentation')}
+                      </a>
                     </li>
                     <li>
                       <Link href="/contact">
