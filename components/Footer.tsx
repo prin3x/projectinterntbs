@@ -147,10 +147,14 @@ const Footer = ({ t }: any) => {
                 <div className="col-xl-6 col-lg-12 col-md-12">
                   <ul className="footer_menu">
                     <li>
-                      <a>Terms and Conditions</a>
+                      <Link href="/condition">
+                        <a>Terms and Conditions</a>
+                      </Link>
                     </li>
                     <li>
-                      <a>Privacy Policy</a>
+                      <Link href="/condition">
+                        <a>Privacy Policy</a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
