@@ -151,6 +151,7 @@ const Header = ({ t }: any) => {
                   </li> */}
                   <li>
                     <a
+                      target="_blank"
                       href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
                       className="active"
                     >
@@ -240,6 +241,7 @@ const Header = ({ t }: any) => {
                     </li> */}
                     <li>
                       <a
+                        target="_blank"
                         href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
                         className="active closemenu"
                       >
