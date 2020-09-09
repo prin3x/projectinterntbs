@@ -17,7 +17,7 @@ const TrackSectionV2 = ({ t }: any) => (
           <div className="track_img">
             <object
               type="image/svg+xml"
-              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/otp1_animate.svg"`}
+              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/otp1_animate.svg`}
             ></object>
           </div>
         </div>
