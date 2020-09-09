@@ -267,7 +267,11 @@ const HeroSection = ({ t }: any) => {
                     <input
                       ref={register({
                         required: true,
-                        pattern: /^[0][6||8-9][0-9]{8}$/i,
+                        validate: {
+                          pattern: (value) =>
+                            /^[0][6||8-9][0-9]{8}$/i.test(value) ||
+                            /^[0][2][0-9]{7}$/i.test(value),
+                        },
                       })}
                       id="phone"
                       name="phone"
