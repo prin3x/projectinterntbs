@@ -11,7 +11,8 @@ const TabContent = ({ t }: any) => {
   React.useEffect(() => {
     setTab($('#pills-profile-tab'));
     Modal.setAppElement('#ElementModal');
-  }, [tab]);
+    // }, [tab]);
+  }, []);
 
   return (
     <div

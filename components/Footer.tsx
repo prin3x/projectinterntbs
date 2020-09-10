@@ -61,9 +61,13 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Documentation">
-                    <a>{t('footer.documentation')}</a>
-                  </Link>
+                  <a
+                    target="_blank"
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
+                    className="active closemenu"
+                  >
+                    {t('footer.documentation')}
+                  </a>
                 </li>
               </ul>
             </div>
