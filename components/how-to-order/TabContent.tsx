@@ -404,7 +404,9 @@ const TabContent = ({ t }: any) => {
             <div className="box__wrapper">
               <div className="box__header">
                 <h5>
-                  {t('PaymentbankHeroSection:paymentbankhero.howtopay.header')}
+                  {t(
+                    'PaymentbankHeroSection:paymentbankhero.howtopay.headermodal'
+                  )}
                 </h5>
               </div>
               <div className="box__body">
@@ -433,11 +435,9 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4>
                       2.
-                      <a className="theme__text link">
-                        {t(
-                          'PaymentbankHeroSection:paymentbankhero.howtopay.step.2'
-                        )}
-                      </a>
+                      {t(
+                        'PaymentbankHeroSection:paymentbankhero.howtopay.step.2'
+                      )}
                     </h4>
                   </div>
 
@@ -485,7 +485,9 @@ const TabContent = ({ t }: any) => {
             <div className="box__wrapper">
               <div className="box__header">
                 <h5>
-                  {t('PaymentqrHeroSection:paymentqrhero.howtopayqr.header')}
+                  {t(
+                    'PaymentqrHeroSection:paymentqrhero.howtopayqr.headermodal'
+                  )}
                 </h5>
               </div>
               <div className="box__body">
@@ -571,7 +573,11 @@ const TabContent = ({ t }: any) => {
           {showModalcredit && (
             <div className="box__wrapper">
               <div className="box__header">
-                <h5>ขั้นตอนการชำระด้วยบัตรเครดิต</h5>
+                <h5>
+                  {t(
+                    'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.headermodal'
+                  )}
+                </h5>
               </div>
               <div className="box__body">
                 <div
@@ -584,10 +590,13 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_26.png"
                       alt=""
                     />
-                    <h4>
-                      1. เมื่อเลือกชำระด้วยบัตรเครดิต ระบบจะพาไปที่เว็บไซต์ของ
-                      2C2P โดยอัตโนมัติ
-                    </h4>
+                    <h4
+                      dangerouslySetInnerHTML={{
+                        __html: t(
+                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.1'
+                        ),
+                      }}
+                    ></h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -596,7 +605,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_27.png"
                       alt=""
                     />
-                    <h4>2. ตรวจสอบราคาที่ต้องชำระ และกรอกข้อมูลบัตรเครดิต</h4>
+                    <h4>
+                      {t(
+                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.2'
+                      )}
+                    </h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -605,7 +618,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_28.png"
                       alt=""
                     />
-                    <h4>3. กรอก OTP เพื่อยืนยันตัวตน และกดยืนยันการชำระ</h4>
+                    <h4>
+                      {t(
+                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.3'
+                      )}
+                    </h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -614,10 +631,13 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_29.png"
                       alt=""
                     />
-                    <h4>
-                      4. เมื่อชำระสำเร็จ ระบบจะพาคุณกลับมาที่เว็บไซต์
-                      ThaiBulkSMS โดยอัตโนมัติ
-                    </h4>
+                    <h4
+                      dangerouslySetInnerHTML={{
+                        __html: t(
+                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.1'
+                        ),
+                      }}
+                    ></h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -626,7 +646,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_30.png"
                       alt=""
                     />
-                    <h4>5. สามารถใช้งานเครดิตใหม่ส่ง SMS ได้ทันที</h4>
+                    <h4>
+                      {t(
+                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.5'
+                      )}
+                    </h4>
                   </div>
                 </div>
               </div>
@@ -653,4 +677,5 @@ export default withTranslation([
   'How-to-orderTabContent',
   'PaymentbankHeroSection',
   'PaymentqrHeroSection',
+  'PaymentcreditHeroSection',
 ])(TabContent);
