@@ -229,7 +229,7 @@ const AllPricing = ({ t, packages }: any) => {
             <div className="pricing__bottom d-flex align-items-center justify-content-center">
               <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
               <Link href="/contact">
-                <a className="btn v3">{t('pricingallpricing.sellBtn')}</a>
+                <a className="btn v7">{t('pricingallpricing.sellBtn')}</a>
               </Link>
             </div>
           </div>
