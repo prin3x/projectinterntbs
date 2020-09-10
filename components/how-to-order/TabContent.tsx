@@ -1,6 +1,6 @@
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 const TabContent = ({ t }: any) => {
   const [tab, setTab] = React.useState<any>();
@@ -11,8 +11,7 @@ const TabContent = ({ t }: any) => {
   React.useEffect(() => {
     setTab($('#pills-profile-tab'));
     Modal.setAppElement('#ElementModal');
-    // }, [tab]);
-  }, []);
+  }, [tab]);
 
   return (
     <div
