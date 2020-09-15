@@ -14,6 +14,7 @@ compile:
         - aws
         - thaibulksms
     script:
+        - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-staging.env .env
         - rimraf out
         - yarn
         - yarn build
@@ -31,6 +32,7 @@ compile_production:
         - aws
         - thaibulksms
     script:
+        - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-production.env .env
         - rimraf out
         - yarn
         - yarn build
