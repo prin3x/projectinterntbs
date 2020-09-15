@@ -16,6 +16,7 @@ compile:
     script:
         - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-staging.env /tmp/thaibulksms-frontend-next-staging.env
         - cp /tmp/thaibulksms-frontend-next-staging.env .env
+        - export $(grep -v '^#' .env | xargs)
         - rimraf out
         - yarn
         - yarn build
@@ -35,6 +36,7 @@ compile_production:
     script:
         - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-production.env /tmp/thaibulksms-frontend-next-production.env
         - cp /tmp/thaibulksms-frontend-next-production.env .env
+        - export $(grep -v '^#' .env | xargs)
         - rimraf out
         - yarn
         - yarn build
