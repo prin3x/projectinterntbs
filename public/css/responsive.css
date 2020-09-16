@@ -2844,11 +2844,17 @@
     top: 2px;
   }
 
-  .menu_btn,
+  .menu_btn {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+  }
+  .menu_btn ul li {
+    margin: 30px 20px 0 0;
+  }
   .site-menu {
     display: none !important;
   }
-
   .main-menu {
     display: none;
     visibility: hidden;

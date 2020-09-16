@@ -256,6 +256,25 @@ const Header = ({ t }: any) => {
                       </Link>
                     </li>
                   </ul>
+                  <div className="menu_btn">
+                    <ul>
+                      <li>
+                        <a
+                          href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in`}
+                          className="loginLink"
+                        >
+                          {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                        </a>
+                      </li>
+                      <li>
+                        <Link href="/pricing">
+                          <a className="btn v1">
+                            {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
