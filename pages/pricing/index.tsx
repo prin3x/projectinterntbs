@@ -8,10 +8,9 @@ import Head from 'next/head';
 import { withTranslation } from '../../i18n';
 import * as ProductService from '../../services/shopping/product.service';
 import {
-  PricingProps,
-  PackageAll,
+  PricingProps
 } from '../../services/shopping/pricing.model';
-import AppConfig from '../../appConfig';
+
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/pricing';
 const Pricing: any = ({ t, packages }: PricingProps) => {
@@ -38,13 +37,13 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
 };
 
 Pricing.getInitialProps = async () => {
-  const params: PackageAll = {
-    filter: AppConfig.PRODUCT_PACKAGE,
-  };
+  // const params: PackageAll = {
+  //   filter: AppConfig.PRODUCT_PACKAGE,
+  // };
   let packageAll;
 
   try {
-    packageAll = await ProductService.GetPackageFilter(params);
+    packageAll = await ProductService.GetPackageNormal();
   } catch (error) {
     console.error(error);
   }

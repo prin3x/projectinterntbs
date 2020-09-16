@@ -23,11 +23,6 @@ export interface PricingProps {
   test: string;
 }
 
-export interface PackageAll {
-  filter: string;
-}
-
-
 export interface ProductBuy {
   productId: number,
   productName: string,
