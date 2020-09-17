@@ -11,14 +11,14 @@ const CtaSectionV2 = ({ t }: any) => (
           <div className="cta-text">
             <h3 dangerouslySetInnerHTML={{ __html: t('otpcta.title') }}></h3>
             <a
-              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v7"
             >
               {t('otpcta.freeBtn')}
             </a>
             <p>
               {t('otpcta.footer1')}
-              <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in`}>
+              <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
                 {t('otpcta.login')}
               </a>{' '}
               {t('otpcta.footer2')}

@@ -148,7 +148,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     </Link> */}
                   </p>
                   <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
                     {t('homesimpleslider.testBtn')}
@@ -176,7 +176,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     </Link> */}
                   </p>
                   <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
                     {t('homesimpleslider.testBtn')}
@@ -197,7 +197,7 @@ const SimpleSliderSection = ({ t }: any) => {
                   />
                   <p>{t('homesimpleslider.item.3.desc')}</p>
                   <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
                     {t('homesimpleslider.testBtn')}
@@ -225,7 +225,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     </Link> */}
                   </p>
                   <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
                     {t('homesimpleslider.testBtn')}
@@ -253,7 +253,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     </Link> */}
                   </p>
                   <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
                     {t('homesimpleslider.testBtn')}

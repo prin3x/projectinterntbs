@@ -260,7 +260,7 @@ const Header = ({ t }: any) => {
                     <ul>
                       <li>
                         <a
-                          href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in`}
+                          href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                           className="loginLink"
                         >
                           {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
@@ -284,7 +284,7 @@ const Header = ({ t }: any) => {
               <ul>
                 <li>
                   <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in`}
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                     className="loginLink"
                   >
                     {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
@@ -298,7 +298,7 @@ const Header = ({ t }: any) => {
                   ) : (
                     <a
                       className="btn v1"
-                      href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                      href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     >
                       {t(`header.buy-` + 'a')}
                     </a>
