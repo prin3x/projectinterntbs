@@ -19,7 +19,7 @@ const BuyPackage = (packageItem: ProductPackage) => {
 
   Cookie.set('packageId', packageItem.productId.toString(), { domain });
   window.location.replace(
-    `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment`
+    `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment/`
   );
 };
 const showPackage = (packages: Product[], t: Function) => {
