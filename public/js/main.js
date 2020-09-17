@@ -7,16 +7,28 @@
   });
 
   // sticky
-  var wind = $(window);
-  var sticky = $('.header-bar-area');
-  wind.on('scroll', function () {
-    var scroll = wind.scrollTop();
-    if (scroll < 100) {
-      sticky.removeClass('sticky');
-    } else {
-      sticky.addClass('sticky');
-    }
-  });
+  // var wind = $(window);
+  // var sticky = $('.header-bar-area');
+  // wind.on('scroll', function () {
+  //   var scroll = wind.scrollTop();
+  //   if (scroll < 100) {
+  //     sticky.removeClass('sticky');
+  //   } else {
+  //     sticky.addClass('sticky');
+  //   }
+  // });
+
+  // sticky  box
+  // var wind = $(window);
+  // var sticky__box = $('.side__box');
+  // wind.on('scroll', function () {
+  //   var scroll = wind.scrollTop();
+  //   if (scroll < 300) {
+  //     sticky__box.removeClass('sticky__box');
+  //   } else {
+  //     sticky__box.addClass('sticky__box');
+  //   }
+  // });
 
   $('body').on('click', '.js-menu-toggle', function (e) {
     var $this = $(this);
@@ -28,6 +40,15 @@
     } else {
       $('body').addClass('offcanvas-menu');
       $this.addClass('active');
+    }
+  });
+  $('body').on('click', '.page_wrapper, .closemenu', function (e) {
+    // var $this = $(this);
+    // e.preventDefault();
+
+    if ($('body').hasClass('offcanvas-menu')) {
+      $('body').removeClass('offcanvas-menu');
+      // $this.removeClass('active');
     }
   });
 
@@ -86,11 +107,11 @@
   // -----------------------------------*/
   // $('select').niceSelect();
   // $('.user_select').niceSelect();
-  $('.user_select').on('click', function (event) {
-    event.preventDefault();
-    if ($(this).hasClass('open')) $(this).removeClass('open');
-    else $(this).addClass('open');
-  });
+  // $('.user_select').on('click', function (event) {
+  //   event.preventDefault();
+  //   if ($(this).hasClass('open')) $(this).removeClass('open');
+  //   else $(this).addClass('open');
+  // });
 
   // /*=========================
   //   OwlCarousel START

@@ -1,0 +1,16 @@
+{
+  "footer": {
+    "service": "บริการ",
+    "highlight": "จุดเด่น",
+    "pricing": "ราคา",
+    "database": "คลังข้อมูล",
+    "knowledge": "ความรู้",
+    "example": "ตัวอย่างการใช้",
+    "successstories": "เรื่องราวความสำเร็จ",
+    "smsbasic": "SMS เบื้องต้น",
+    "support": "ซัพพอร์ต",
+    "howtoorder": "วิธีสั่งซื้อ",
+    "documentation": "สำหรับนักพัฒนา",
+    "about": "Follow Us"
+  }
+}
