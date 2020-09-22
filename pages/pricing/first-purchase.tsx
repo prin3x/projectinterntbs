@@ -36,10 +36,33 @@ const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
   );
 };
 
-Pricing.getInitialProps = async () => {
+// Pricing.getInitialProps = async () => {
 
 
 
+//   let packageAll;
+//   let packageAllNormal;
+
+
+
+//   try {
+//     packageAll = await ProductService.GetPackageFirstPurchase();
+//     packageAllNormal = await ProductService.GetPackageNormal();
+//   } catch (error) {
+//     console.error(error);
+//   }
+
+//   return {
+//     packages: packageAll ? packageAll.packages : {},
+//     packagesNormal: packageAllNormal ? packageAllNormal.packages : {},
+//     namespacesRequired: ['PricingMeta'],
+//   };
+// };
+
+
+export default withTranslation('PricingMeta')(Pricing);
+
+export const getStaticProps = async () => {
   let packageAll;
   let packageAllNormal;
 
@@ -53,18 +76,10 @@ Pricing.getInitialProps = async () => {
   }
 
   return {
-    packages: packageAll ? packageAll.packages : {},
-    packagesNormal: packageAllNormal ? packageAllNormal.packages : {},
-    namespacesRequired: ['PricingMeta'],
+    props: {
+      packages: packageAll ? packageAll.packages : {},
+      packagesNormal: packageAllNormal ? packageAllNormal.packages : {},
+      namespacesRequired: ['PricingMeta'],
+    }
   };
-};
-
-// Pricing.getServerSideProps = async () => {
-//   const params: PackageAll = {
-//     filter: '136,137,138,139,140,141,142,143'
-//   }
-//   const packageAll = await ProductService.getPackageAll(params)
-//   console.log('ok',packageAll)
-//   return { props: { packageAll} }
-// }
-export default withTranslation('PricingMeta')(Pricing);
+}

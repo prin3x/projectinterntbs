@@ -36,23 +36,23 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
   );
 };
 
-Pricing.getInitialProps = async () => {
-  // const params: PackageAll = {
-  //   filter: AppConfig.PRODUCT_PACKAGE,
-  // };
-  let packageAll;
+// Pricing.getInitialProps = async () => {
+//   // const params: PackageAll = {
+//   //   filter: AppConfig.PRODUCT_PACKAGE,
+//   // };
+//   let packageAll;
 
-  try {
-    packageAll = await ProductService.GetPackageNormal();
-  } catch (error) {
-    console.error(error);
-  }
+//   try {
+//     packageAll = await ProductService.GetPackageNormal();
+//   } catch (error) {
+//     console.error(error);
+//   }
 
-  return {
-    packages: packageAll ? packageAll.packages : {},
-    namespacesRequired: ['PricingMeta'],
-  };
-};
+//   return {
+//     packages: packageAll ? packageAll.packages : {},
+//     namespacesRequired: ['PricingMeta'],
+//   };
+// };
 
 // Pricing.getServerSideProps = async () => {
 //   const params: PackageAll = {
@@ -63,3 +63,20 @@ Pricing.getInitialProps = async () => {
 //   return { props: { packageAll} }
 // }
 export default withTranslation('PricingMeta')(Pricing);
+
+export const getStaticProps = async () => {
+  let packageAll;
+
+  try {
+    packageAll = await ProductService.GetPackageNormal();
+  } catch (error) {
+    console.error(error);
+  }
+
+  return {
+    props: {
+      packages: packageAll ? packageAll.packages : {},
+      namespacesRequired: ['PricingMeta'],
+    }
+  };
+}
