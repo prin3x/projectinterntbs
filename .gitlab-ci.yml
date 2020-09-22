@@ -1,0 +1,47 @@
+before_script:
+    - echo $PWD
+    - id
+
+stages:
+    - build
+    - build_production
+
+compile:
+    stage: build
+    only:
+        - staging
+    tags:
+        - aws
+        - thaibulksms
+    script:
+        - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-staging.env /tmp/thaibulksms-frontend-next-staging.env
+        - cp /tmp/thaibulksms-frontend-next-staging.env .env
+        - export $(grep -v '^#' .env | xargs)
+        - rimraf out
+        - yarn
+        - yarn build
+        - sudo -u www-data rsync -ar out/* /var/www/staging/thaibulksms-frontend-next
+    cache:
+        paths:
+            - node_modules/
+            - .next/
+
+compile_production:
+    stage: build_production
+    only:
+        - master
+    tags:
+        - aws
+        - thaibulksms
+    script:
+        - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-production.env /tmp/thaibulksms-frontend-next-production.env
+        - cp /tmp/thaibulksms-frontend-next-production.env .env
+        - export $(grep -v '^#' .env | xargs)
+        - rimraf out
+        - yarn
+        - yarn build
+        - sudo -u www-data rsync -ar out/* /var/www/thaibulksms-frontend-next
+    cache:
+        paths:
+            - node_modules/
+            - .next/

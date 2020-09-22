@@ -121,7 +121,7 @@ const PricingSection = ({ t }: any) => (
             {/* <span>{t('span5')}</span> */}
             <h3>{t('homeproductpricing.footer')}</h3>
             <a
-              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v3"
             >
               {t('homeproductpricing.freeBtn')}

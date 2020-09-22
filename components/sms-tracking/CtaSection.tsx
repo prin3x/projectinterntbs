@@ -15,14 +15,14 @@ const CtaSectionV3 = ({ t }: any) => (
               }}
             ></h3>
             <a
-              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v7"
             >
               {t('sms-trackingctasection.freeBtn')}
             </a>
             <p>
               {t('sms-trackingctasection.lablelogin1')}{' '}
-              <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in`}>
+              <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
                 {t('sms-trackingctasection.lablelogin2')}
               </a>{' '}
               {t('sms-trackingctasection.lablelogin3')}

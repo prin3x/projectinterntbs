@@ -13,7 +13,7 @@ const CtaSection = ({ t }: any) => (
           <ul className="cta-btn before-footer">
             <li>
               <a
-                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                 className="btn v3"
               >
                 {t('homecta.freeBtn')}

@@ -31,7 +31,7 @@ const SmsSectionV3 = ({ t }: any) => (
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
                   <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v8"
                   >
                     {t('otpsms.freeBtn')}

@@ -35,7 +35,7 @@ const PromoSection = ({ t }: any) => (
                 className="lazyload"
               ></object>
               <a
-                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                 className="btn v2"
               >
                 {t('productpromo.section.1.freeBtn')}
@@ -59,7 +59,7 @@ const PromoSection = ({ t }: any) => (
                 className="lazyload"
               ></object>
               <a
-                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                 className="btn v2"
               >
                 {t('productpromo.section.1.developerBtn')}
@@ -175,7 +175,7 @@ const PromoSection = ({ t }: any) => (
             ></h3>
             <p>{t('productpromo.section.4.title')}</p>
             <a
-              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v2"
             >
               {t('productpromo.section.4.freeBtn')}
