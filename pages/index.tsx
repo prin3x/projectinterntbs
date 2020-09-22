@@ -44,7 +44,14 @@ const Homepage = ({ t }: any) => (
     </Layout>
   </React.Fragment>
 );
-Homepage.getInitialProps = async () => ({
-  namespacesRequired: ['HomeMeta'],
-});
+// Homepage.getInitialProps = async () => ({
+//   namespacesRequired: ['HomeMeta'],
+// });
 export default withTranslation('HomeMeta')(Homepage);
+export const getStaticProps = async () => {
+  return ({
+    props: {
+      namespacesRequired: ['HomeMeta'],
+    },
+  })
+}

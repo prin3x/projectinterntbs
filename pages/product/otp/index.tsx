@@ -34,7 +34,14 @@ const Otp = ({ t }: any) => (
     <BacktoTop />
   </Layout>
 );
-Otp.getInitialProps = async () => ({
-  namespacesRequired: ['OtpMeta'],
-});
+// Otp.getInitialProps = async () => ({
+//   namespacesRequired: ['OtpMeta'],
+// });
 export default withTranslation('OtpMeta')(Otp);
+export const getStaticProps = async () => {
+  return ({
+    props: {
+      namespacesRequired: ['OtpMeta'],
+    },
+  })
+}

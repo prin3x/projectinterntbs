@@ -40,7 +40,14 @@ const Contact = ({ t }: any) => (
     <BacktoTop />
   </Layout>
 );
-Contact.getInitialProps = async () => ({
-  namespacesRequired: ['ContactMeta'],
-});
+// Contact.getInitialProps = async () => ({
+//   namespacesRequired: ['ContactMeta'],
+// });
 export default withTranslation('ContactMeta')(Contact);
+export const getStaticProps = async () => {
+  return ({
+    props: {
+      namespacesRequired: ['ContactMeta'],
+    },
+  })
+}

@@ -40,7 +40,14 @@ const Condition = ({ t }: any) => (
     <BacktoTop />
   </Layout>
 );
-Condition.getInitialProps = async () => ({
-  namespacesRequired: ['ConditionMeta'],
-});
+// Condition.getInitialProps = async () => ({
+//   namespacesRequired: ['ConditionMeta'],
+// });
 export default withTranslation('ConditionMeta')(Condition);
+export const getStaticProps = async () => {
+  return ({
+    props: {
+      namespacesRequired: ['ConditionMeta'],
+    },
+  })
+}

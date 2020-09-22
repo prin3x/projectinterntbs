@@ -27,7 +27,14 @@ const Order = ({ t }: any) => (
     <BacktoTop />
   </Layout>
 );
-Order.getInitialProps = async () => ({
-  namespacesRequired: ['How-to-orderMeta'],
-});
+// Order.getInitialProps = async () => ({
+//   namespacesRequired: ['How-to-orderMeta'],
+// });
 export default withTranslation('How-to-orderMeta')(Order);
+export const getStaticProps = async () => {
+  return ({
+    props: {
+      namespacesRequired: ['How-to-orderMeta'],
+    },
+  })
+}

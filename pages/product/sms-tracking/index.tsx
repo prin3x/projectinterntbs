@@ -34,7 +34,14 @@ const Smstracking = ({ t }: any) => (
     <BacktoTop />
   </Layout>
 );
-Smstracking.getInitialProps = async () => ({
-  namespacesRequired: ['Sms-trackingMeta'],
-});
+// Smstracking.getInitialProps = async () => ({
+//   namespacesRequired: ['Sms-trackingMeta'],
+// });
 export default withTranslation('Sms-trackingMeta')(Smstracking);
+export const getStaticProps = async () => {
+  return ({
+    props: {
+      namespacesRequired: ['Sms-trackingMeta'],
+    },
+  })
+}

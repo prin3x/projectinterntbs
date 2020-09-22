@@ -38,7 +38,16 @@ const Product = ({ t }: any) => (
     <BacktoTop />
   </Layout>
 );
-Product.getInitialProps = async () => ({
-  namespacesRequired: ['ProductMeta'],
-});
+// Product.getInitialProps = async () => ({
+//   namespacesRequired: ['ProductMeta'],
+// });
 export default withTranslation('ProductMeta')(Product);
+
+export const getStaticProps = async () => {
+  return ({
+    props: {
+      namespacesRequired: ['ProductMeta'],
+    },
+  })
+}
+
