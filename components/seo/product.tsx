@@ -8,7 +8,7 @@ export const seo = {
       'คุณภาพและบริการที่ดีที่สุด ด้วยประสบการณ์กว่า 10 ปี | ส่ง SMS สุดเสถียรทุกเครือข่าย ถึงมือผู้รับ - ทดลองส่งข้อความ 20 เครดิต',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg`,
+        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Product.jpg`,
         width: 800,
         height: 600,
       },

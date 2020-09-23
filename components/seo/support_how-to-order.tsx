@@ -8,7 +8,7 @@ export const seo = {
       'ชำระเงินได้หลากหลายช่องทาง พร้อมอธิบายขั้นตอนการซื้อเครดิตส่งข้อความง่าย ๆ ที่คุณสามารถสั่งซื้อได้ด้วยตนเอง ภายใน 5 นาที',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg`,
+        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Home.jpg`,
         width: 800,
         height: 600,
       },

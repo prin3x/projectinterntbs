@@ -6,7 +6,7 @@ export const seo = {
     description: '',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg`,
+        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Home.jpg`,
         width: 800,
         height: 600,
       },
