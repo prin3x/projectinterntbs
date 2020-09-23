@@ -8,7 +8,7 @@ export const seo = {
       'บริการส่ง OTP Ready-to-Use ส่งรหัสยืนยันตัวตนที่พร้อมใช้งานได้ทันที เพื่อความปลอดภัยในการทำธุรกรรมออนไลน์',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/demoog.jpg`,
+        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Product-OTP.jpg`,
         width: 800,
         height: 600,
       },
