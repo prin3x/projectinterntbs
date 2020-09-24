@@ -297,7 +297,7 @@ const HeroSection = ({ t }: any) => {
                     />
                     <ReCAPTCHA
                       ref={(r) => setCaptchaRef(r)}
-                      sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
+                      sitekey={`${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_KEY}`}
                       onChange={setreCaptcha}
                     />
                     <label className="checkbox-wrapper">
