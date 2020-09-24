@@ -1,10 +1,10 @@
-import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-import ReCAPTCHA from 'react-google-recaptcha';
 import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
-import { sendContact } from '../../services/contact/contact.service';
 import Swal from 'sweetalert2';
+import { withTranslation } from '../../i18n';
+import { sendContact } from '../../services/contact/contact.service';
 const menuClick = () => {
   var elDivnice = document.getElementsByClassName('devnice-select')[0];
   if (elDivnice.classList.contains('open')) elDivnice.classList.remove('open');
@@ -12,7 +12,7 @@ const menuClick = () => {
 };
 type Inputs = {
   contactType: string;
-  firstnname: string;
+  firstname: string;
   lastname: string;
   companyName: string;
   email: string;
@@ -30,25 +30,37 @@ const HeroSection = ({ t }: any) => {
       return (captcha = ref);
     }
   };
-  let { register, handleSubmit, setValue, clearErrors, errors } = useForm<
-    Inputs
-  >({
+  let { register, handleSubmit, setValue, clearErrors, errors, reset } = useForm<Inputs>({
     defaultValues: {
       confirm: true,
       contactType: '1',
     },
   });
   const onSubmit = async (data: any) => {
+    captcha.reset();
+
     const result = await sendContact(data);
     if (result.code !== '') {
-      captcha.reset();
       Swal.fire({
         icon: 'warning',
         html: t('contacthero.' + result.code),
       });
       return;
     }
-    setSuccessbtn(true);
+
+    reset({
+      contactType: '1',
+      firstname: '',
+      lastname: '',
+      companyName: '',
+      email: '',
+      phone: '',
+      desc: '',
+      confirm: true,
+    });
+    setWordhead('contacthero.form.problem.1');
+
+    setSuccessbtn(false);
     Swal.fire({
       icon: 'success',
       text: t('contacthero.Swal.titlesuccess'),
@@ -118,10 +130,7 @@ const HeroSection = ({ t }: any) => {
             <div className="row no-gutters">
               <div className="col-lg-5">
                 <div className="contact__left">
-                  <a
-                    href="https://goo.gl/maps/LrntacVbBFvyB5Uv6"
-                    target="_blank"
-                  >
+                  <a href="https://goo.gl/maps/LrntacVbBFvyB5Uv6" target="_blank">
                     <img
                       src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/contact.png`}
                       className="img-fluid left__img"
@@ -323,11 +332,7 @@ const HeroSection = ({ t }: any) => {
                       className="button__wrapper text-center"
                       style={{ marginTop: '50px' }}
                     >
-                      <button
-                        type="submit"
-                        className="btn v8"
-                        disabled={successbtn}
-                      >
+                      <button type="submit" className="btn v8" disabled={successbtn}>
                         {t('contacthero.form.submitBtn')}
                       </button>
                     </div>
