@@ -317,7 +317,7 @@ const TestQuickregister = ({ t }: any) => {
             {showModalcaptcha && (
               <div className="captcha-content">
                 <ReCAPTCHA
-                  sitekey="6LegfrMZAAAAAIgOUDbhgm0GDPrazMrke41ZDD-e"
+                  sitekey={`${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_KEY}`}
                   onChange={setreCaptcha}
                 />
               </div>

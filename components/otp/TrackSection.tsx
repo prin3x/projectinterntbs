@@ -1,5 +1,5 @@
-import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
+import { withTranslation } from '../../i18n';
 const TrackSection = ({ t }: any) => (
   <div
     className="track_section lazyload"
@@ -33,7 +33,9 @@ const TrackSection = ({ t }: any) => (
                     __html: t('otptrack.box.1.title'),
                   }}
                 ></h4>
-                <a className="btn v3">{t('otptrack.box.1.linkBtn')}</a>
+                <a className="btn v3" href="https://otp-manager.thaibulksms.com/login">
+                  {t('otptrack.box.1.linkBtn')}
+                </a>
               </div>
             </div>
             <div className="col-lg-6">
@@ -43,7 +45,10 @@ const TrackSection = ({ t }: any) => (
                     __html: t('otptrack.box.2.title'),
                   }}
                 ></h4>
-                <a className="btn v3" href="https://tbs.readme.io/reference">
+                <a
+                  className="btn v3"
+                  href="https://developer.thaibulksms.com/reference#otp"
+                >
                   {t('otptrack.box.2.linkBtn')}
                 </a>
               </div>

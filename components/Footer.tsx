@@ -1,6 +1,6 @@
-import { withTranslation, Link } from '../i18n';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
+import { Link, withTranslation } from '../i18n';
 const Footer = ({ t }: any) => {
   useEffect(() => {}, []);
   return (
@@ -17,7 +17,7 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/product">
+                  <Link href="/pricing">
                     <a>{t('footer.pricing')}</a>
                   </Link>
                 </li>
