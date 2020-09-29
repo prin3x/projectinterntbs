@@ -10,14 +10,13 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="true" />
+          <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700;800&display=swap" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700;800&display=swap"
             rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap"
-            rel="stylesheet"
-          />
+            href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" />
+
           <link
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             rel="stylesheet"
@@ -35,11 +34,12 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
             rel="stylesheet"
+
           />
           <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.0/css/nice-select.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.0/css/nice-select.min.css"
             rel="stylesheet"
           />
           <link
