@@ -16,13 +16,12 @@ const CtaSectionV2 = ({ t }: any) => (
             >
               {t('otpcta.freeBtn')}
             </a>
-            <p>
-              {t('otpcta.footer1')}
-              <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
-                {t('otpcta.login')}
-              </a>{' '}
-              {t('otpcta.footer2')}
-            </p>
+            <a
+              href={``}
+              className="btn otp2"
+            >
+              ล็อกอิน
+            </a>
           </div>
         </div>
       </div>
