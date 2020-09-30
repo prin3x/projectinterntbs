@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Link, withTranslation } from '../i18n';
 const Footer = ({ t }: any) => {
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
   return (
     <div className="footer_section">
       <div className="container" id="footer">
@@ -74,17 +74,19 @@ const Footer = ({ t }: any) => {
           </div>
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <a href="https://www.facebook.com/ThaiBulkSMS">
-                <h4>
-                  {t('footer.about')}
+
+              <h4>
+                {t('footer.about')}
+                <a href="https://www.facebook.com/ThaiBulkSMS" target="_blank">
                   <img
                     className="lazyload"
                     style={{ maxWidth: '25px', marginLeft: '20px' }}
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                     alt="Image"
                   />
-                </h4>
-              </a>
+                </a>
+              </h4>
+
             </div>
           </div>
           <div className="col-12 md-none">

@@ -146,11 +146,11 @@ class MyDocument extends Document {
           ></script>
           <script
             async
-            src="https://afarkas.github.io/lazysizes/plugins/bgset/ls.bgset.min.js"
+            src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/plugins/bgset/ls.bgset.min.js"
           ></script>
           <script
             async
-            src="https://afarkas.github.io/lazysizes/lazysizes.min.js"
+            src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"
           ></script>
           <script
             defer
