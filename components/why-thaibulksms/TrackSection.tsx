@@ -45,7 +45,7 @@ const TrackSection = ({ t }: any) => (
         <div className="col-md-6 col-md-pull-6">
           <div className="track_img mt-5">
             {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
-            <img className="lazyload" data-src="/img/img-whysupport.png" alt="Image" />
+            <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysupport.png`} alt="Image" />
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ const TrackSection = ({ t }: any) => (
         <div className="col-md-6 col-md-push-6">
           <div className="track_img mt-5">
             {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
-            <img className="lazyload" data-src="/img/img-whysecure.png" alt="Image" />
+            <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysecure.png`} alt="Image" />
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">

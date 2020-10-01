@@ -6,7 +6,7 @@ import TabContent from '../../components/faq/TabContent';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import { seo } from '../../components/seo/otp';
+import { seo } from '../../components/seo/why-thaibulksms';
 import { withTranslation } from '../../i18n';
 const FAQ = ({ t }: any) => (
   <Layout>
@@ -28,12 +28,12 @@ const FAQ = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('OtpMeta')(FAQ);
+export default withTranslation('FAQMeta')(FAQ);
 
 export const getStaticProps = async () => {
   return ({
     props: {
-      namespacesRequired: ['OtpMeta'],
+      namespacesRequired: ['FAQMeta'],
     },
   })
 }

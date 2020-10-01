@@ -38,12 +38,12 @@ const WhyThaibulksms = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('OtpMeta')(WhyThaibulksms);
+export default withTranslation('WhyThaibulksmsMeta')(WhyThaibulksms);
 
 export const getStaticProps = async () => {
   return ({
     props: {
-      namespacesRequired: ['OtpMeta'],
+      namespacesRequired: ['WhyThaibulksmsMeta'],
     },
   })
 }

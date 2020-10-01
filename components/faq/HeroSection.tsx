@@ -26,7 +26,7 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-sms"
                   aria-selected="true"
                 >
-                  <img className="lazyload" data-src="/img/main_3.png" alt="" />
+                  <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/main_3.png`} alt="" />
                   <span>SMS</span>
                 </a>
               </li>
@@ -40,7 +40,7 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-shopping"
                   aria-selected="false"
                 >
-                  <img className="lazyload" data-src="/img/icn-shopping.png" alt="" />
+                  <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-shopping.png`} alt="" />
                   <span>Shopping</span>
                 </a>
               </li>
@@ -54,7 +54,7 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-api"
                   aria-selected="false"
                 >
-                  <img className="lazyload" data-src="/img/icn-dev.png" alt="" />
+                  <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-dev.png`} alt="" />
                   <span>Api Developer</span>
                 </a>
               </li>

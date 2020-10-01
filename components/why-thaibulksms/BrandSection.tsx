@@ -17,7 +17,7 @@ const WhyBrandSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/logo-brand01.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand01.png`}
                   alt="Image"
                 />
               </div>
@@ -26,7 +26,7 @@ const WhyBrandSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/logo-brand02.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand02.png`}
                   alt="Image"
                 />
               </div>
@@ -35,7 +35,7 @@ const WhyBrandSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/logo-brand03.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand03.png`}
                   alt="Image"
                 />
               </div>
@@ -44,7 +44,7 @@ const WhyBrandSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/logo-brand04.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand04.png`}
                   alt="Image"
                 />
               </div>
@@ -53,7 +53,7 @@ const WhyBrandSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/logo-brand05.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand05.png`}
                   alt="Image"
                 />
               </div>
@@ -62,7 +62,7 @@ const WhyBrandSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/logo-brand06.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand06.png`}
                   alt="Image"
                 />
               </div>
@@ -71,7 +71,7 @@ const WhyBrandSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/logo-brand07.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand07.png`}
                   alt="Image"
                 />
               </div>
@@ -80,7 +80,7 @@ const WhyBrandSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src="/img/logo-brand08.png"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand08.png`}
                   alt="Image"
                 />
               </div>
@@ -103,7 +103,7 @@ const WhyBrandSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src="/img/icon-why01.png"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-why01.png`}
               alt="Image"
             />
             <div className="single_feature_text">
@@ -116,7 +116,7 @@ const WhyBrandSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src="/img/icon-why02.png"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-why02.png`}
               alt="Image"
             />
             <div className="single_feature_text">
@@ -129,7 +129,7 @@ const WhyBrandSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src="/img/icon-why03.png"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-why03.png`}
               alt="Image"
             />
             <div className="single_feature_text">
