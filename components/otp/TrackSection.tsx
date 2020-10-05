@@ -33,7 +33,7 @@ const TrackSection = ({ t }: any) => (
                     __html: t('otptrack.box.1.title'),
                   }}
                 ></h4>
-                <a className="btn v3" href="https://otp-manager.thaibulksms.com/login">
+                <a target="_blank" className="btn v3" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/Thaibulksms-otp.pdf`}>
                   {t('otptrack.box.1.linkBtn')}
                 </a>
               </div>
@@ -46,6 +46,7 @@ const TrackSection = ({ t }: any) => (
                   }}
                 ></h4>
                 <a
+                  target="_blank"
                   className="btn v3"
                   href="https://developer.thaibulksms.com/reference#otp"
                 >

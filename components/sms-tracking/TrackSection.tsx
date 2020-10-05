@@ -33,7 +33,7 @@ const TrackSectionV2 = ({ t }: any) => (
                   }}
                 ></h4>
                
-                  <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/Thaibuilsms-otp.pdf`} className="btn v3">
+                  <a target="_blank" href="https://bit.ly/3cWg40U" className="btn v3">
                     {t('sms-trackingtracksection.campaignBtn')}
                   </a>
               
