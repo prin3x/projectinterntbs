@@ -17,8 +17,9 @@ const CtaSectionV2 = ({ t }: any) => (
               {t('otpcta.freeBtn')}
             </a>
             <a
-              href={``}
+              href={`https://otp-manager.thaibulksms.com/login`}
               className="btn otp2"
+              target="_blank"
             >
               ล็อกอิน
             </a>

@@ -37,8 +37,9 @@ const SmsSectionV3 = ({ t }: any) => (
                     {t('otpsms.freeBtn')}
                   </a>
                   <a
-                    href={``}
+                    href={`https://otp-manager.thaibulksms.com/login`}
                     className="btn otp"
+                    target="_blank"
                   >
                     ล็อกอิน
                   </a>
