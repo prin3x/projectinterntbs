@@ -100,10 +100,26 @@ const Header = ({ t }: any) => {
             <div className="site-navbar">
               <nav className="site-navigation text-center">
                 <ul className="site-menu js-clone-nav d-none d-lg-block">
-                  <li>
+                  <li className="has-children">
                     <Link href="/product">
                       <a className="active">{t('header.product')}</a>
                     </Link>
+                    <ul className="dropdown">
+                      <li className="listsub">
+                        <Link href="/product/sms-tracking">
+                          <a>
+                            <h6>SMS Tracking</h6>
+                            <p className="txtSub">วัดผลแคมเปญ SMS แม่นยำ ไม่เสียงบการตลาดไปโดยเปล่าประโยชน์</p>
+                          </a>
+                        </Link>
+                        <Link href="/product/otp">
+                          <a>
+                            <h6>OTP Service</h6>
+                            <p className="txtSub">ระบบส่ง OTP พร้อมใช้ เพิ่มความปลอดภัยไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <Link href="/pricing">
@@ -180,12 +196,33 @@ const Header = ({ t }: any) => {
                 </div>
                 <div className="site-mobile-menu-body">
                   <ul className="site-nav-wrap">
-                    <li>
+                    <li className="has-children">
+                      <span
+                        className="arrow-collapse collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseItem0"
+                      ></span>
                       <Link href="/product">
                         <a className="active closemenu">
                           {t('header.product')}
                         </a>
                       </Link>
+                      <ul className="collapse" id="collapseItem0">
+                        <li>
+                          <Link href="/product/sms-tracking">
+                            <a  className="closemenu">
+                              <h6>SMS Tracking</h6>
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/product/otp">
+                            <a  className="closemenu">
+                              <h6>OTP Service</h6>
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <Link href="/pricing">

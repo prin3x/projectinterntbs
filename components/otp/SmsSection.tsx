@@ -36,6 +36,12 @@ const SmsSectionV3 = ({ t }: any) => (
                   >
                     {t('otpsms.freeBtn')}
                   </a>
+                  <a
+                    href={``}
+                    className="btn otp"
+                  >
+                    ล็อกอิน
+                  </a>
                 </div>
               </div>
             </div>
