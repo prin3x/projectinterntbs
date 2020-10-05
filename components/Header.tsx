@@ -197,11 +197,11 @@ const Header = ({ t }: any) => {
                 <div className="site-mobile-menu-body">
                   <ul className="site-nav-wrap">
                     <li className="has-children">
-                      <span
+                      {/* <span
                         className="arrow-collapse collapsed"
                         data-toggle="collapse"
                         data-target="#collapseItem0"
-                      ></span>
+                      ></span> */}
                       <Link href="/product">
                         <a className="active closemenu">
                           {t('header.product')}
