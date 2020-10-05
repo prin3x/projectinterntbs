@@ -1,7 +1,7 @@
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
-import Modal from 'react-modal';
+import React from 'react';
+
 import CollapseItem from './CollapseItem';
 
 const listItemSMS = [
@@ -51,7 +51,7 @@ const listItemAPI = [
 ]
 
 const TabContent = ({ t }: any) => {
-  const [tab, setTab] = React.useState<any>();
+  const [, setTab] = React.useState<any>();
   React.useEffect(() => {
     setTab($('#pills-profile-tab'));
     // }, [tab]);

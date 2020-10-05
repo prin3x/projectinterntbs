@@ -16,7 +16,7 @@ const HeroSectionWhy = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12 col-12">
           <div className="hero_text_one v2">
-            <h1>ทำไมถึงควรใช้บริการส่งSMS<br />ของ <span>ThaiBulkSMS</span></h1>
+            <h1>{t('ทำไมถึงควรใช้บริการส่งSMS')}<br />ของ <span>ThaiBulkSMS</span></h1>
           </div>
         </div>
       </div>

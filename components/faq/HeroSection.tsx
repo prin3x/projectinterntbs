@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import * as React from "react";
 
 const HeroSection = ({ t }: any) => {
-  React.useEffect(() => {}, []);
+  React.useEffect(() => { }, []);
   return (
     <div className="hero_section hero_section_2">
       <div className="container">
         <div className="row justify-content-center hero_top_one">
           <div className="col-12 text-center">
-            <h3 className="section__title">สวัสดี, มีอะไรให้เราช่วยมั้ย ?</h3>
+            <h3 className="section__title">{t('สวัสดี, มีอะไรให้เราช่วยมั้ย ?')}</h3>
 
             <ul
               className="nav nav-pills tab__toggle"

@@ -6,7 +6,7 @@ const WhyPriceSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>จะเน้นราคาถูก หรือได้ฟีเจอร์ครบก็เลือกได้ตามต้องการ</h3>
+            <h3>{t(`จะเน้นราคาถูก หรือได้ฟีเจอร์ครบก็เลือกได้ตามต้องการ`)}</h3>
           </div>
         </div>
         <div className="row justify-content-xl-center col-xl-10 offset-xl-1 m-80">

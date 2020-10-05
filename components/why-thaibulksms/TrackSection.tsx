@@ -6,7 +6,7 @@ const TrackSection = ({ t }: any) => (
       <div className="row track_top">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>ใช้งานง่าย ไม่ว่าคุณจะเป็น User แบบไหน</h3>
+            <h3>{t('ใช้งานง่าย ไม่ว่าคุณจะเป็น User แบบไหน')}</h3>
           </div>
         </div>
         <div className="col-lg-12 m-80">
@@ -61,7 +61,7 @@ const TrackSection = ({ t }: any) => (
             <h3>เก็บรักษาข้อมูลอย่างปลอดภัย ด้วยมาตรฐาน Internet Banking</h3>
             <p>ด้วยระบบรักษาความปลอดภัย SSL ที่เป็นมาตรฐานสูงสุดซึ่งใช้ใน Internet Banking ต่าง ๆ เพื่อให้มั่นใจได้ว่าเมื่อเข้าใช้งาน ThaiBulkSMS จะได้รับความปลอดภัยเหมือนใช้ Internet Banking</p>
           </div>
-          
+
         </div>
       </div>
     </div>
