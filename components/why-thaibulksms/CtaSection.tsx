@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const CtaSectionV2 = ({ t }: any) => (
   <div
@@ -11,7 +11,10 @@ const CtaSectionV2 = ({ t }: any) => (
         <div className=" col-lg-12">
           <div className="cta-text">
             <h3>{t(`เพิ่มความสำเร็จให้ SMS Marketing`)}<br />ด้วย SMS Provider อันดับ 1 ของไทย</h3>
-            <div><a className="btn v7 Whybtn">ทดลองใช้ฟรี</a><a className="btn v7">ดูราคาแพ็กเกจ</a></div>
+            <div>
+              <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`} className="btn v7 Whybtn">ทดลองใช้ฟรี</a>
+              <Link href="/pricing"><a className="btn v7">ดูราคาแพ็กเกจ</a></Link>
+            </div>
 
           </div>
         </div>

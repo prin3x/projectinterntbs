@@ -139,7 +139,7 @@ const WhyBrandSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-md-12 text-center mt-80">
-          <a className="btn v3">ทดลองส่งฟรี</a>
+          <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`} className="btn v3">ทดลองส่งฟรี</a>
         </div>
       </div>
     </div>

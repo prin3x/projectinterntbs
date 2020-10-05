@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 const WhyPriceSection = ({ t }: any) => (
   <div className="simple_icon_section v2 bg-whyBottom">
@@ -92,10 +92,12 @@ const WhyPriceSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-md-12 text-center">
-          <a className="btn v3">เรียนรู้เพิ่มเติมเกี่ยวกับฟีเจอร์</a>
+          <Link href="/product">
+            <a className="btn v3">เรียนรู้เพิ่มเติมเกี่ยวกับฟีเจอร์</a>
+          </Link>
         </div>
       </div>
-      
+
     </div>
   </div>
 );

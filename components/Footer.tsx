@@ -77,7 +77,7 @@ const Footer = ({ t }: any) => {
           </div>
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>Company</h4>
+              <h4>เกี่ยวกับบริษัท</h4>
               <ul>
                 <li>
                   <Link href="/why-thaibulksms">ทำไมต้อง ThaibulkSMS</Link>

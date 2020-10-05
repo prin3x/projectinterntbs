@@ -32,7 +32,7 @@ const TrackSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-md-12 text-center">
-          <a className="btn v3">ทดลองส่งฟรี</a>
+          <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`} className="btn v3">ทดลองส่งฟรี</a>
         </div>
       </div>
       <div className="row m-80">
