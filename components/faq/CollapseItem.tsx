@@ -10,7 +10,7 @@ const CollapseItem = (props: any) => {
             <div className="card-header" role="tab" id={`headingOne${item.type}${item.index}`}>
                 <a
                     data-toggle="collapse"
-                    data-parent="#accordionEx"
+                    data-parent={item.keyId}
                     href={`#collapseOne${item.type}${item.index}`}
                     aria-expanded="false"
                     aria-controls={`collapseOne${item.type}${item.index}`}
@@ -27,7 +27,7 @@ const CollapseItem = (props: any) => {
                 className="collapse"
                 role="tabpanel"
                 aria-labelledby={`headingOne${item.type}${item.index}`}
-                data-parent="#accordionEx"
+                data-parent={item.keyId}
             >
                 <div className="card-body faqAnswer">
                     <p dangerouslySetInnerHTML={{ __html: item.answer }} className="txtFAQ"></p>

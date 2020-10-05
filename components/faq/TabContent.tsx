@@ -1,6 +1,7 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import React from 'react';
+import ProductFaqSection from './FaqSection'
 
 import CollapseItem from './CollapseItem';
 
@@ -73,40 +74,40 @@ const TabContent = ({ t }: any) => {
               >
                 <div className="row">
                   <div className="col-lg-12">
-                    <h3 className="faqHead">ประเภทข้อความ</h3>
+                    <h3 className="faqHead">{t('ประเภทข้อความ')}</h3>
                     <div
                       className="accordion md-accordion"
-                      id="accordionEx"
+                      id="accordionEx1"
                       role="tablist"
                       aria-multiselectable="true"
                     >
 
                       {listItemSMS.map((value, key) => {
-                        return <CollapseItem item={{ ...value, index: key + 1, type: "typeSms" }} key={key + 1} />
+                        return <CollapseItem item={{ ...value, index: key + 1, type: "typeSms", keyId: '#accordionEx1' }} key={key + 1} />
                       })}
                     </div>
                     <h3 className="faqHead spaceTop">คำถามทั่วไป</h3>
                     <div
                       className="accordion md-accordion"
-                      id="accordionEx"
+                      id="accordionEx2"
                       role="tablist"
                       aria-multiselectable="true"
                     >
 
                       {listItemNorm.map((value, key) => {
-                        return <CollapseItem item={{ ...value, index: key + 1, type: "SmsNorm" }} key={key + 1} />
+                        return <CollapseItem item={{ ...value, index: key + 1, type: "SmsNorm", keyId: '#accordionEx2' }} key={key + 1} />
                       })}
                     </div>
                     <h3 className="faqHead spaceTop">ฟีเจอร์ของข้อความ</h3>
                     <div
                       className="accordion md-accordion"
-                      id="accordionEx"
+                      id="accordionEx3"
                       role="tablist"
                       aria-multiselectable="true"
                     >
 
                       {listItemFeature.map((value, key) => {
-                        return <CollapseItem item={{ ...value, index: key + 1, type: "SmsFeature" }} key={key + 1} />
+                        return <CollapseItem item={{ ...value, index: key + 1, type: "SmsFeature", keyId: '#accordionEx3' }} key={key + 1} />
                       })}
                     </div>
                   </div>
@@ -122,13 +123,13 @@ const TabContent = ({ t }: any) => {
                     <h3 className="faqHead">คำถามทั่วไป</h3>
                     <div
                       className="accordion md-accordion"
-                      id="accordionEx"
+                      id="accordionEx4"
                       role="tablist"
                       aria-multiselectable="true"
                     >
 
                       {listItemshopping.map((value, key) => {
-                        return <CollapseItem item={{ ...value, index: key + 1, type: "shopping" }} key={key + 1} />
+                        return <CollapseItem item={{ ...value, index: key + 1, type: "shopping", keyId: '#accordionEx4' }} key={key + 1} />
                       })}
                     </div>
                   </div>
@@ -144,13 +145,13 @@ const TabContent = ({ t }: any) => {
                     <h3 className="faqHead">คำถามทั่วไป</h3>
                     <div
                       className="accordion md-accordion"
-                      id="accordionEx"
+                      id="accordionEx5"
                       role="tablist"
                       aria-multiselectable="true"
                     >
 
                       {listItemAPI.map((value, key) => {
-                        return <CollapseItem item={{ ...value, index: key + 1, type: "APIDev" }} key={key + 1} />
+                        return <CollapseItem item={{ ...value, index: key + 1, type: "APIDev", keyId: '#accordionEx5' }} key={key + 1} />
                       })}
                     </div>
                   </div>
@@ -159,8 +160,9 @@ const TabContent = ({ t }: any) => {
             </div>
           </div>
         </div>
+        <ProductFaqSection />
 
-        <div className="row align-items-center link__box">
+        {/* <div className="row align-items-center link__box">
           <div className="col-xl-5 col-lg-12">
             <div className="faq_bottom_text">
               <h3>{t('howtoordertabcontent.question')}</h3>
@@ -209,7 +211,7 @@ const TabContent = ({ t }: any) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
     </div>
