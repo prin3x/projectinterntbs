@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
-import SmartSmsConsoleContentSection from '../../../components/smart-sms-console/ContentSelect'
+import SmartSmsConsoleContentSection from '../../../components/smart-sms-console/ContentSelect';
 
-import SmsSection from '../../../components/otp/SmsSection';
-import SimpleIconSection from '../../../components/otp/SimpleIconSection';
-import TrackSection from '../../../components/otp/TrackSection';
-import CtaSection from '../../../components/otp/CtaSection';
+import SmsSection from '../../../components/smart-sms-console/SmsSection';
+import SimpleIconSection from '../../../components/smart-sms-console/SimpleIconSection';
+import OtherFeature from '../../../components/smart-sms-console/OtherFeature';
+import CtaSection from '../../../components/smart-sms-console/CtaSection';
 import BacktoTop from '../../../components/BacktoTop';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../../components/seo/smart-sms-console';
@@ -28,7 +28,7 @@ const SmartSmsConsole = ({ t }: any) => (
       <SmartSmsConsoleContentSection />
       <SmsSection />
       <SimpleIconSection />
-      <TrackSection />
+      <OtherFeature />
       <CtaSection />
 
     </div>
