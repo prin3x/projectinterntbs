@@ -19,7 +19,6 @@ const CtaSectionV2 = ({ }: any) => (
             <a
               href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
               className="btn otp2"
-              target="_blank"
             >
               ล็อกอิน
             </a>

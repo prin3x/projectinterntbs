@@ -40,7 +40,6 @@ const SmsSectionV3 = ({ }: any) => (
                   <a
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                     className="btn otp"
-                    target="_blank"
                   >
                     ล็อกอิน
                   </a>
