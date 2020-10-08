@@ -11,11 +11,12 @@ const SmsSectionV3 = ({ }: any) => (
           </div>
         </div>
         <div className="col-lg-7">
-          <div className="newsletter_img">
-            <object
-              type="image/svg+xml"
-              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-credit.svg`}
-            ></object>
+          <div className="newsletter_img mt-5">
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-bulksms-01.png`}
+              alt="Image"
+            />
           </div>
         </div>
       </div>
@@ -23,12 +24,12 @@ const SmsSectionV3 = ({ }: any) => (
         <div className="col-md-12">
           <div className="sms_form v2">
             <div className="row align-items-center">
-              <div className="col-lg-8 col-md-12">
+              <div className="col-lg-7 col-md-12">
                 <div className="sms_form_text">
                   <h4>ลองใช้ Smart SMS Console เพื่อส่ง SMS ผ่านเว็บไซต์ด้วยตนเอง</h4>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-12">
+              <div className="col-lg-5 col-md-12">
                 <div className="sms_form_field">
                   <a
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}

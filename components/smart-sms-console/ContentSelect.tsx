@@ -12,13 +12,13 @@ const SmartSmsConsoleContentSection = ({ t }: any) => (
             <div className="hero_img_one">
                 <object
                 type="image/svg+xml"
-                data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-otp.svg`}
+                data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-hero-bulk.svg`}
                 ></object>
             </div>
             </div>
             <div className="col-lg-6 col-md-12 col-12">
             <div className="hero_text_one v2">
-                <h1><span>ส่ง SMS ผ่านเว็บไซต์</span> ได้ด้วยตนเอง<br />ส่งง่าย วัดผลการส่งได้รวดเร็ว</h1>
+                <h1><span>ส่ง SMS ผ่านเว็บไซต์</span> ได้ด้วยตนเอง ส่งง่าย วัดผลการส่งได้รวดเร็ว</h1>
             </div>
             </div>
         </div>

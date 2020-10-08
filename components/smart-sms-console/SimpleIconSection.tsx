@@ -7,12 +7,12 @@ const SimpleIconSection = ({ t }: any) => (
     <div className="container">
       <div className="row align-items-center row_pad">
         <div className="col-lg-6 col-md-12">
-          <div className="promo_item_three_img">
-            <object
-              type="image/svg+xml"
-              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-airplane.svg`}
+          <div className="promo_item_three_img m-80">
+            <img
               className="lazyload"
-            ></object>
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-bulksms-02.png`}
+              alt="Image"
+            />
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
@@ -35,12 +35,12 @@ const SimpleIconSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_1.png`}
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-bulkSMS01.png`}
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>ตั้งเวลาส่งได้หลากหลาย</h4>
-              <p>ตั้งเวลาส่งล่วงหน้าตามต้องการ มีรายงานการตั้งเวลาให้เช็กความถูกต้อง</p>
+              <h4>รายงานสถานะการเปิดอ่านข้อความ</h4>
+              <p>รู้ได้ทันทีว่าผู้รับเปิดอ่านข้อความหรือไม่<br />(ผ่านการใช้งาน <span>SMS Tracking</span>)</p>
             </div>
           </div>
         </div>
@@ -48,12 +48,12 @@ const SimpleIconSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_2.png`}
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-bulkSMS02.png`}
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>ระบบ Phonebook</h4>
-              <p>บันทึกเบอร์ลงสมุดโทรศัพท์ในระบบได้ เลือกส่งได้ง่ายกว่า</p>
+              <h4>รายงานสถานะการส่งโดยละเอียด</h4>
+              <p>โดยดูสถานะการส่งของแต่ละเบอร์ได้ ทำให้รู้ว่าข้อความไหนบ้างที่ส่งไม่ถึงผู้รับ</p>
             </div>
           </div>
         </div>
@@ -61,24 +61,24 @@ const SimpleIconSection = ({ t }: any) => (
           <div className="single_feature_item">
             <img
               className="lazyload size-img"
-              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_3.png`}
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-bulkSMS03.png`}
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>แจ้งเตือนเครดิตใกล้หมด</h4>
-              <p>แจ้งเตือนทางอีเมลเมื่อเครดิตเหลือน้อยกว่าที่กำหนด โดยสามารถตั้งค่าเองได้</p>
+              <h4>รายงานการส่งย้อนหลัง</h4>
+              <p>เลือกดูรายงานข้อมูลการส่งย้อนหลังได้</p>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
       <div className="row align-items-center">
         <div className="col-lg-6 col-md-12">
-          <div className="promo_item_three_img">
-            <object
-              type="image/svg+xml"
-              data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-credit.svg`}
+          <div className="promo_item_three_img m-80">
+            <img
               className="lazyload"
-            ></object>
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-bulksms-03.png`}
+              alt="Image"
+            />
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
