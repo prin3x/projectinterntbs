@@ -38,7 +38,7 @@ const SmsSectionV3 = ({ }: any) => (
                     ทดลองใช้ฟรี
                   </a>
                   <a
-                    href={`https://otp-manager.thaibulksms.com/login`}
+                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                     className="btn otp"
                     target="_blank"
                   >
