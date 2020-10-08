@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-const SimpleIconSection = ({ t }: any) => (
+const SimpleIconSection = ({  }: any) => (
   <div
     className="promo_section lazyload"
   >

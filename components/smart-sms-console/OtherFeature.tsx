@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-const TrackSection = ({ t }: any) => (
+const TrackSection = ({  }: any) => (
   <div
     className="track_section lazyload"
     data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_7.png`}
