@@ -106,6 +106,12 @@ const Header = ({ t }: any) => {
                     </Link>
                     <ul className="dropdown">
                       <li className="listsub">
+                        <Link href="/product/smart-sms-console">
+                          <a>
+                            <h6>Smart SMS Console</h6>
+                            <p className="txtSub">ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง ส่งง่าย วัดผลการส่งได้รวดเร็ว</p>
+                          </a>
+                        </Link>
                         <Link href="/product/sms-tracking">
                           <a>
                             <h6>SMS Tracking</h6>
@@ -208,6 +214,13 @@ const Header = ({ t }: any) => {
                         </a>
                       </Link>
                       <ul className="collapse" id="collapseItem0">
+                        <li>
+                          <Link href="/product/smart-sms-console">
+                            <a  className="closemenu">
+                              <h6>Smart SMS Console</h6>
+                            </a>
+                          </Link>
+                        </li>
                         <li>
                           <Link href="/product/sms-tracking">
                             <a  className="closemenu">
