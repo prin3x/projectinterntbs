@@ -27,7 +27,7 @@ const HeroSection = ({ t }: any) => {
                   aria-selected="true"
                 >
                   <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/main_3.png`} alt="" />
-                  <span>SMS</span>
+                  <span>คำถามทั่วไป</span>
                 </a>
               </li>
               <li className="nav-item" role="presentation">
@@ -41,7 +41,7 @@ const HeroSection = ({ t }: any) => {
                   aria-selected="false"
                 >
                   <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-shopping.png`} alt="" />
-                  <span>Shopping</span>
+                  <span>การซื้อ และการชำระเงิน</span>
                 </a>
               </li>
               <li className="nav-item" role="presentation">
@@ -55,7 +55,7 @@ const HeroSection = ({ t }: any) => {
                   aria-selected="false"
                 >
                   <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-dev.png`} alt="" />
-                  <span>Api Developer</span>
+                  <span>ปัญหาทางเทคนิค</span>
                 </a>
               </li>
             </ul>
