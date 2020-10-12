@@ -91,7 +91,7 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api03.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api02.svg`}
                   alt="Image"
                 />
               </div>
