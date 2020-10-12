@@ -23,7 +23,7 @@ const Footer = ({ t }: any) => {
                 </li>
                 <li>
                   <Link href="/pricing/otp">
-                    <a>OTP Serive</a>
+                    <a>OTP Service</a>
                   </Link>
                 </li>
               </ul>
