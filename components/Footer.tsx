@@ -12,13 +12,18 @@ const Footer = ({ t }: any) => {
               <h4>{t('footer.service')}</h4>
               <ul>
                 <li>
-                  <Link href="/product">
-                    <a>{t('footer.highlight')}</a>
+                  <Link href="/product/smart-sms-console">
+                    <a>Smart SMS Console</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing">
-                    <a>{t('footer.pricing')}</a>
+                  <Link href="/pricing/sms-tracking">
+                    <a>SMS Tracking</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing/otp">
+                    <a>OTP Serive</a>
                   </Link>
                 </li>
               </ul>
@@ -68,6 +73,28 @@ const Footer = ({ t }: any) => {
                   >
                     {t('footer.documentation')}
                   </a>
+                </li>
+                <li>
+                  <Link href="/support/how-to-order">
+                    <a>คำถามที่พบบ่อย</a>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-md-3 col-6">
+            <div className="footer_widget">
+              <h4>เกี่ยวกับเรา</h4>
+              <ul>
+                <li>
+                  <Link href="/support/how-to-order">
+                    <a>ทำไมถึงต้องเป็น ThaiBulkSMS</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact">
+                    <a>ติดต่อเรา</a>
+                  </Link>
                 </li>
               </ul>
             </div>
