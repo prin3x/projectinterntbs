@@ -77,11 +77,6 @@ const Footer = ({ t }: any) => {
                     {t('footer.documentation')}
                   </a>
                 </li>
-                <li>
-                  <Link href="/support/how-to-order">
-                    <a>คำถามที่พบบ่อย</a>
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
@@ -90,7 +85,7 @@ const Footer = ({ t }: any) => {
               <h4>เกี่ยวกับเรา</h4>
               <ul>
                 <li>
-                  <Link href="/support/how-to-order">
+                  <Link href="/why-thaibulksms">
                     <a>ทำไมถึงต้องเป็น ThaiBulkSMS</a>
                   </Link>
                 </li>
@@ -103,15 +98,6 @@ const Footer = ({ t }: any) => {
             </div>
           </div>
           <div className="col-md-3 col-6">
-            <div className="footer_widget">
-              <h4>เกี่ยวกับบริษัท</h4>
-              <ul>
-                <li>
-                  <Link href="/why-thaibulksms">ทำไมต้อง ThaibulkSMS</Link>
-                </li>
-              </ul>
-            </div>
-            <br />
             <div className="footer_widget">
 
               <h4>
