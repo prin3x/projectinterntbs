@@ -61,6 +61,9 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/faq">คำถามที่พบบ่อย</Link>
+                </li>
+                <li>
                   <a
                     target="_blank"
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
@@ -73,6 +76,15 @@ const Footer = ({ t }: any) => {
             </div>
           </div>
           <div className="col-md-3 col-6">
+            <div className="footer_widget">
+              <h4>เกี่ยวกับบริษัท</h4>
+              <ul>
+                <li>
+                  <Link href="/why-thaibulksms">ทำไมต้อง ThaibulkSMS</Link>
+                </li>
+              </ul>
+            </div>
+            <br />
             <div className="footer_widget">
 
               <h4>
