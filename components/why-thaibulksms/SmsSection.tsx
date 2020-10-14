@@ -7,7 +7,7 @@ const SmsSectionV3 = ({ t }: any) => (
         <div className="col-lg-5">
           <div className="newsletter_text">
             <h3>{t('SMS Communication Platform อันดับ 1 ของไทย มีตัวตนตรวจสอบได้')}</h3>
-            <p>ThaiBulkSMS เป็น SMS Communication Platform ที่ได้รับการรับรองจาก กสทช. คุณจึงวางใจได้ว่า เมื่อซื้อเครดิตสำหรับส่ง SMS กับเราแล้ว จะสามารถใช้บริการได้จนครบ ไม่มีการปิดบริการไปโดยติดต่อไม่ได้</p>
+            <p>ThaiBulkSMS เป็นผู้ให้บริการ SMS Communication Platform ที่ได้รับการรับรองจาก กสทช. ที่เปิดให้บริการมามากกว่า 10 ปี คุณจึงวางใจในคุณภาพบริการของเราได้อย่างแน่นอน</p>
           </div>
         </div>
         <div className="col-lg-7">

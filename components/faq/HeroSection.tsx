@@ -26,7 +26,7 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-sms"
                   aria-selected="true"
                 >
-                  <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/main_3.png`} alt="" />
+                  <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-question.png`} alt="" />
                   <span>คำถามทั่วไป</span>
                 </a>
               </li>

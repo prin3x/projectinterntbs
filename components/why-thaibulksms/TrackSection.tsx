@@ -9,7 +9,7 @@ const TrackSection = ({ t }: any) => (
             <h3>{t('ใช้งานง่าย ไม่ว่าคุณจะเป็น User แบบไหน')}</h3>
           </div>
         </div>
-        <div className="col-lg-12 m-80">
+        <div className="col-lg-12 m-40">
           <div className="row">
             <div className="col-lg-4">
               <div className="track_box whyBox">
@@ -36,16 +36,16 @@ const TrackSection = ({ t }: any) => (
         </div>
       </div>
       <div className="row m-80">
-        <div className="col-md-6 col-md-push-6">
-          <div className="track_text mt-5">
-            <h3>พร้อมซัพพอร์ต โดยทีมงานผู้เชี่ยวชาญ</h3>
-            <p>จึงทำให้มั่นใจได้ว่าหากระบบเกิดปัญหา ทางเราจะสามารถแก้ไขให้คุณได้อย่างทันท่วงที ไม่ว่าจะเป็นด้าน Hardware หรือ Software ก็ตาม</p>
-          </div>
-        </div>
-        <div className="col-md-6 col-md-pull-6">
+        <div className="col-md-6">
           <div className="track_img mt-5">
             {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
             <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysupport.png`} alt="Image" />
+          </div>
+        </div>
+        <div className="col-md-6">
+          <div className="track_text mt-5">
+            <h3>พร้อมซัพพอร์ต โดยทีมงานผู้เชี่ยวชาญ</h3>
+            <p>จึงทำให้มั่นใจได้ว่าหากระบบเกิดปัญหา ทางเราจะสามารถแก้ไขให้คุณได้อย่างทันท่วงที ไม่ว่าจะเป็นด้าน Hardware หรือ Software ก็ตาม</p>
           </div>
         </div>
       </div>

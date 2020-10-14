@@ -48,7 +48,7 @@ const PricingSection = ({ t }: any) => {
                 <span>{t('pricingpricing.start')}</span>
                 <h2 style={{ fontSize: '72px', fontWeight: 500 }}>
                   {t('pricingpricing.package.standard.price')}
-                  <span style={{ marginLeft: '1px' }}>
+                  <span style={{ marginLeft: '10px' }}>
                     {t('pricingpricing.unit')}
                   </span>
                 </h2>
@@ -91,7 +91,7 @@ const PricingSection = ({ t }: any) => {
                 <span>{t('pricingpricing.start')}</span>
                 <h2 style={{ fontSize: '72px', fontWeight: 500 }}>
                   {t('pricingpricing.package.corporate.price')}
-                  <span style={{ marginLeft: '1px' }}>
+                  <span style={{ marginLeft: '10px' }}>
                     {t('pricingpricing.unit')}
                   </span>
                 </h2>

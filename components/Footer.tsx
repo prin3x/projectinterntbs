@@ -86,7 +86,7 @@ const Footer = ({ t }: any) => {
               <ul>
                 <li>
                   <Link href="/why-thaibulksms">
-                    <a>ทำไมถึงต้องเป็น ThaiBulkSMS</a>
+                    <a>ทำไมต้อง ThaiBulkSMS</a>
                   </Link>
                 </li>
                 <li>

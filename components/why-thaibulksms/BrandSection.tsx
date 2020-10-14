@@ -10,7 +10,7 @@ const WhyBrandSection = ({ t }: any) => (
           </div>
         </div>
       </div>
-      <div className="row single_lang_wrap WhyBrand">
+      <div className="row single_lang_wrap WhyBrand m-80">
         <div className="col-xl-10 offset-xl-1">
           <div className="row ">
             <div className="col-lg-3 col-md-3 col-3">
@@ -23,7 +23,7 @@ const WhyBrandSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang why-brand">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand02.png`}
@@ -32,7 +32,7 @@ const WhyBrandSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang why-brand">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand03.png`}
@@ -41,7 +41,7 @@ const WhyBrandSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang why-brand">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand04.png`}
@@ -50,7 +50,7 @@ const WhyBrandSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang why-brand">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand05.png`}
@@ -59,7 +59,7 @@ const WhyBrandSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang why-brand">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand06.png`}
@@ -68,7 +68,7 @@ const WhyBrandSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang why-brand">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand07.png`}

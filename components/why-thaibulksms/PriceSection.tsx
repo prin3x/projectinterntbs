@@ -9,7 +9,7 @@ const WhyPriceSection = ({ t }: any) => (
             <h3>{t(`จะเน้นราคาถูก หรือได้ฟีเจอร์ครบก็เลือกได้ตามต้องการ`)}</h3>
           </div>
         </div>
-        <div className="row justify-content-xl-center col-xl-10 offset-xl-1 m-80">
+        <div className="row justify-content-xl-center col-xl-10 offset-xl-1 m-40">
           <div className="col-lg-6 col-md-6">
             <div
               className="pricing_box m-0 pricing_box1 whyPrice"
@@ -40,10 +40,10 @@ const WhyPriceSection = ({ t }: any) => (
                 </li>
               </ul>
               <div className="price_plan">
-                <span>เริ่มต้นที่</span>
+                <span>ราคาดีที่สุดเพียง</span>
                 <h2>
                   0.28
-                  <span style={{ marginLeft: '1px' }}>
+                  <span style={{ marginLeft: '10px' }}>
                     บาท / SMS
                   </span>
                 </h2>
@@ -80,10 +80,10 @@ const WhyPriceSection = ({ t }: any) => (
                 </li>
               </ul>
               <div className="price_plan">
-                <span>เริ่มต้นที่</span>
+                <span>ราคาดีที่สุดเพียง</span>
                 <h2>
                   0.34
-                  <span style={{ marginLeft: '1px' }}>
+                  <span style={{ marginLeft: '10px' }}>
                     บาท / SMS
                   </span>
                 </h2>
