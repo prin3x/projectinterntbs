@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 
 
 const ContentSection = ({ t }: any) => (
-    <div className="container condition-wrap">
+    <div 
+    className="hero_section v3 lazyload"
+    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-resource.jpg`}
+    >
       <h2 className="condition-header">aaaaa</h2>
       <div className="col-lg-12">
         <div className="condition-text">
