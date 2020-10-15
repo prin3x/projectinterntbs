@@ -9,7 +9,7 @@ const Footer = ({ t }: any) => {
         <div className="row">
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>{t('footer.service')}</h4>
+            <Link href="/product"><a><h4>{t('footer.service')}</h4></a></Link>
               <ul>
                 <li>
                   <Link href="/product/smart-sms-console">
@@ -17,12 +17,12 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing/sms-tracking">
+                  <Link href="/product/sms-tracking">
                     <a>SMS Tracking</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing/otp">
+                  <Link href="/product/otp">
                     <a>OTP Service</a>
                   </Link>
                 </li>
@@ -66,7 +66,7 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/faq">คำถามที่พบบ่อย</Link>
+                  <Link href="/support/faq">คำถามที่พบบ่อย</Link>
                 </li>
                 <li>
                   <a
@@ -120,6 +120,7 @@ const Footer = ({ t }: any) => {
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   alt="Image"
                 />
                 02-798-6000
@@ -127,7 +128,8 @@ const Footer = ({ t }: any) => {
               <a href="mailto:contact@thaibulksms.com">
                 <img
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                  alt=""
+                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
+                  alt="Image"
                 />{' '}
                 contact@thaibulksms.com
               </a>
@@ -154,6 +156,7 @@ const Footer = ({ t }: any) => {
                     <a href="tel:027986000">
                       <img
                         className="lazyload"
+                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                         alt="Image"
                       />
@@ -162,6 +165,7 @@ const Footer = ({ t }: any) => {
                     <a href="mailto:contact@thaibulksms.com">
                       <img
                         className="lazyload"
+                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         alt=""
                       />
