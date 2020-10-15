@@ -9,7 +9,7 @@ const WhyPriceSection = ({ t }: any) => (
             <h3>{t(`จะเน้นราคาถูก หรือได้ฟีเจอร์ครบก็เลือกได้ตามต้องการ`)}</h3>
           </div>
         </div>
-        <div className="row justify-content-xl-center col-xl-10 offset-xl-1 m-40">
+        <div className="row justify-content-xl-center col-xl-10 offset-xl-1 m-80">
           <div className="col-lg-6 col-md-6">
             <div
               className="pricing_box m-0 pricing_box1 whyPrice"
@@ -93,7 +93,11 @@ const WhyPriceSection = ({ t }: any) => (
         </div>
         <div className="col-md-12 text-center">
           <Link href="/product">
-            <a className="btn v3">เรียนรู้เพิ่มเติมเกี่ยวกับฟีเจอร์</a>
+            <a className="btn v3 whyPricing">เรียนรู้เพิ่มเติม</a>
+          </Link>
+
+          <Link href="/pricing">
+            <a className="btn v5 whyPricing">ดูราคาแพ็กเกจ</a>
           </Link>
         </div>
       </div>
