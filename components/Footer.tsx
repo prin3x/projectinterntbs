@@ -9,16 +9,21 @@ const Footer = ({ t }: any) => {
         <div className="row">
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>{t('footer.service')}</h4>
+            <Link href="/product"><a><h4>{t('footer.service')}</h4></a></Link>
               <ul>
                 <li>
-                  <Link href="/product">
-                    <a>{t('footer.highlight')}</a>
+                  <Link href="/product/smart-sms-console">
+                    <a>Smart SMS Console</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing">
-                    <a>{t('footer.pricing')}</a>
+                  <Link href="/product/sms-tracking">
+                    <a>SMS Tracking</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/product/otp">
+                    <a>OTP Service</a>
                   </Link>
                 </li>
               </ul>
@@ -61,6 +66,9 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/support/faq">คำถามที่พบบ่อย</Link>
+                </li>
+                <li>
                   <a
                     target="_blank"
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
@@ -68,6 +76,23 @@ const Footer = ({ t }: any) => {
                   >
                     {t('footer.documentation')}
                   </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-md-3 col-6">
+            <div className="footer_widget">
+              <h4>เกี่ยวกับเรา</h4>
+              <ul>
+                <li>
+                  <Link href="/why-thaibulksms">
+                    <a>ทำไมต้อง ThaiBulkSMS</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact">
+                    <a>ติดต่อเรา</a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -95,6 +120,7 @@ const Footer = ({ t }: any) => {
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                   alt="Image"
                 />
                 02-798-6000
@@ -102,7 +128,8 @@ const Footer = ({ t }: any) => {
               <a href="mailto:contact@thaibulksms.com">
                 <img
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                  alt=""
+                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
+                  alt="Image"
                 />{' '}
                 contact@thaibulksms.com
               </a>
@@ -129,6 +156,7 @@ const Footer = ({ t }: any) => {
                     <a href="tel:027986000">
                       <img
                         className="lazyload"
+                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                         alt="Image"
                       />
@@ -137,6 +165,7 @@ const Footer = ({ t }: any) => {
                     <a href="mailto:contact@thaibulksms.com">
                       <img
                         className="lazyload"
+                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         alt=""
                       />

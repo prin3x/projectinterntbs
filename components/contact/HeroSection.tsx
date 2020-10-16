@@ -158,7 +158,7 @@ const HeroSection = ({ t }: any) => {
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/call.png`}
                         alt=""
                       />
-                      <p>{t('contacthero.contact.phone')}</p>
+                      <p><a href="tel:027986000">{t('contacthero.contact.phone')}</a></p>
                     </li>
                     <li>
                       <img
@@ -174,7 +174,7 @@ const HeroSection = ({ t }: any) => {
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail_2.png`}
                         alt=""
                       />
-                      <p>contact@thaibulksms.com</p>
+                      <p><a href="mailto:contact@thaibulksms.com">contact@thaibulksms.com</a></p>
                     </li>
                     <li>
                       <img
