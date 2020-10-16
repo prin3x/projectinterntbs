@@ -38,9 +38,9 @@ const listItemAPI = [
 ]
 
 const TabContent = ({ t }: any) => {
-  const [, setTab] = React.useState<any>();
+  // const [, setTab] = React.useState<any>();
   React.useEffect(() => {
-    setTab($('#pills-profile-tab'));
+    // setTab($('#pills-profile-tab'));
     // }, [tab]);
   }, []);
 
