@@ -4,6 +4,10 @@ const CtaSection = ({ t }: any) => (
   <div className="cta_section">
     <div className="container">
       <div className="row align-items-center">
+        <div className="col-xl-12">
+        </div>
+      </div>
+      <div className="row align-items-center">
         <div className="col-xl-6 col-lg-12">
           <div className="cta-text">
             <h3 dangerouslySetInnerHTML={{ __html: t('homecta.header') }}></h3>

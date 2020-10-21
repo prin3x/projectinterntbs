@@ -6,7 +6,9 @@ import BacktoTop from '../../components/BacktoTop';
 import Layout from '../../components/Layout';
 import { withTranslation } from '../../i18n';
 import { seo } from '../../components/seo/resource';
-import HeroSection from '../../components/resource/HeroSection'
+import HeroSection from '../../components/resource/HeroSection';
+import ContentSection from '../../components/resource/ContentSection';
+import CtaSection from '../../components/resource/CtaSection'
 const Resource = ({ t }: any) => (
     <Layout>
         <Head>
@@ -22,6 +24,8 @@ const Resource = ({ t }: any) => (
 
         <div className="page_wrapper">
             <HeroSection />
+            <ContentSection />
+            <CtaSection />
             <Help />
         </div>
 
