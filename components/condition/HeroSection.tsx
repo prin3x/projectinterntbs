@@ -7,6 +7,7 @@ const HeroSection = ({ t }: any) => {
   return (
     <div className="container condition-wrap">
       <h2 className="condition-header">{t('conditionhero.header')}</h2>
+      <p className="condition-text">{t('conditionhero.subheader')}</p>
       <div className="col-lg-12">
         <div className="condition-text">
           <h4>{t('conditionhero.purpose.header')}</h4>
@@ -25,6 +26,14 @@ const HeroSection = ({ t }: any) => {
               __html: t('conditionhero.servicecharge.content'),
             }}
           ></ul>
+          <h4 style={{ marginTop: '30px' }}>
+            {t('conditionhero.reservation.header')}
+          </h4>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t('conditionhero.reservation.content'),
+            }}
+          ></p>
           <h4 style={{ marginTop: '30px' }}>
             {t('conditionhero.transfer.header')}
           </h4>
@@ -81,8 +90,21 @@ const HeroSection = ({ t }: any) => {
               __html: t('conditionhero.policy.content'),
             }}
           ></ul>
+          <h4 style={{ marginTop: '30px' }}>
+            {t('conditionhero.contact.header')}
+          </h4>
+          <ul
+            dangerouslySetInnerHTML={{
+              __html: t('conditionhero.contact.content'),
+            }}
+          ></ul>
+          <h4 style={{ marginTop: '30px' }}>
+            {t('conditionhero.spec.header')}
+          </h4>
+          <span className="bold-text">{t('conditionhero.spec.desc')}</span>  
         </div>
       </div>
+      <p  style={{ marginTop: '30px' }} className="condition-text">{t('conditionhero.effective')}</p>
     </div>
   );
 };
