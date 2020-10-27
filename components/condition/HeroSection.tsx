@@ -1,6 +1,6 @@
-import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
+import { withTranslation } from '../../i18n';
 
 const HeroSection = ({ t }: any) => {
   React.useEffect(() => {}, []);
@@ -18,57 +18,43 @@ const HeroSection = ({ t }: any) => {
               __html: t('conditionhero.purpose.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.servicecharge.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.servicecharge.header')}</h4>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.servicecharge.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.reservation.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.reservation.header')}</h4>
           <p
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.reservation.content'),
             }}
           ></p>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.transfer.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.transfer.header')}</h4>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.transfer.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.calexpire.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.calexpire.header')}</h4>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.calexpire.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.sender.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.sender.header')}</h4>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.sender.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.whiltelist.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.whiltelist.header')}</h4>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.whiltelist.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.account.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.account.header')}</h4>
           <span className="bold-text">{t('conditionhero.account.desc')}</span>
           <ul
             dangerouslySetInnerHTML={{
@@ -82,29 +68,25 @@ const HeroSection = ({ t }: any) => {
               __html: t('conditionhero.ban.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.policy.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.policy.header')}</h4>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.policy.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.contact.header')}
-          </h4>
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.contact.header')}</h4>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.contact.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>
-            {t('conditionhero.spec.header')}
-          </h4>
-          <span className="bold-text">{t('conditionhero.spec.desc')}</span>  
+          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.spec.header')}</h4>
+          <p>{t('conditionhero.spec.desc')}</p>
         </div>
       </div>
-      <p  style={{ marginTop: '30px' }} className="condition-text">{t('conditionhero.effective')}</p>
+      <p style={{ marginTop: '30px' }} className="condition-text">
+        {t('conditionhero.effective')}
+      </p>
     </div>
   );
 };
