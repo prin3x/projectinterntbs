@@ -1,3 +1,4 @@
+import * as fbq from 'fbq';
 import Cookie from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
@@ -55,6 +56,14 @@ const TestQuickregister = ({ t }: any) => {
         action: 'confirm_number',
       },
     });
+
+    if (
+      !fbq.trackCustom(appConfig.facebookConversionTracking.quickRegister.confirmNumber)
+    )
+      console.warn(
+        `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmNumber} failed.`,
+      );
+
     setMsisdn(resultStep1.data.msisdn);
     setShowModalpass(true);
   };
@@ -124,6 +133,14 @@ const TestQuickregister = ({ t }: any) => {
         action: 'confirm_password',
       },
     });
+
+    if (
+      !fbq.trackCustom(appConfig.facebookConversionTracking.quickRegister.confirmPassword)
+    )
+      console.warn(
+        `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmPassword} failed.`,
+      );
+
     setTestDesc('-2');
     setWelcomeToken(resultStep2.welcome_token);
     setShowModalpass(false);

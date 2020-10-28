@@ -3252,6 +3252,11 @@ fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
+fbq@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/fbq/-/fbq-0.1.4.tgz#38218b16b3229fd023703e81872c2281bb59f524"
+  integrity sha512-jRxVTLfoBFMumjjQD+96eZ/44AIGZWXfmEITNikzFM+XDOfrRg49ilb98/P4CvtbalrkJvOHG0FxfT8IOcuD8w==
+
 figgy-pudding@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
