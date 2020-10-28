@@ -6,9 +6,9 @@ import Layout from '../../../components/Layout';
 import CtaSection from '../../../components/lbs/CtaSection';
 // import Proloader from '../../components/Proloader';
 import HeroSection from '../../../components/lbs/HeroSection';
-import SimpleIconSection from '../../../components/lbs/SimpleIconSection';
+import DesSection from '../../../components/lbs/DesSection';
 import SmsSection from '../../../components/lbs/SmsSection';
-import TrackSection from '../../../components/lbs/TrackSection';
+import AdvantagesSection from '../../../components/lbs/AdvantagesSection';
 import { seo } from '../../../components/seo/lbs';
 import { withTranslation } from '../../../i18n';
 
@@ -28,8 +28,8 @@ const Lbs = ({ t }: any) => (
     <div className="page_wrapper">
       <HeroSection />
       <SmsSection />
-      <SimpleIconSection />
-      <TrackSection />
+      <DesSection />
+      <AdvantagesSection />
       <CtaSection />
     </div>
     <BacktoTop />

@@ -6,9 +6,9 @@ import Layout from '../../components/Layout';
 import CtaSection from '../../components/reseller/CtaSection';
 // import Proloader from '../components/Proloader';
 import HeroSection from '../../components/reseller/HeroSection';
-import SimpleIconSection from '../../components/reseller/SimpleIconSection';
+import DesSection from '../../components/reseller/DesSection';
 import SmsSection from '../../components/reseller/SmsSection';
-import TrackSection from '../../components/reseller/TrackSection';
+import AdvantagesSection from '../../components/reseller/AdvantagesSection';
 import { seo } from '../../components/seo/reseller';
 import { withTranslation } from '../../i18n';
 
@@ -28,8 +28,8 @@ const Reseller = ({ t }: any) => (
     <div className="page_wrapper">
       <HeroSection />
       <SmsSection />
-      <SimpleIconSection />
-      <TrackSection />
+      <DesSection />
+      <AdvantagesSection />
       <CtaSection />
     </div>
     <BacktoTop />
