@@ -7,7 +7,6 @@ import CtaSection from '../../../components/global-sms/CtaSection';
 import HeroSection from '../../../components/global-sms/HeroSection';
 import DesSection from '../../../components/global-sms/DesSection';
 import SmsSection from '../../../components/global-sms/SmsSection';
-import AdvantagesSection from '../../../components/global-sms/AdvantagesSection';
 import Layout from '../../../components/Layout';
 import { seo } from '../../../components/seo/global-sms';
 import { withTranslation } from '../../../i18n';
@@ -29,7 +28,6 @@ const GlobalSMS = ({ t }: any) => (
       <HeroSection />
       <SmsSection />
       <DesSection />
-      <AdvantagesSection />
       <CtaSection />
     </div>
     <BacktoTop />

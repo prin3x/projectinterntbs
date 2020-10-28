@@ -17,7 +17,7 @@ const HeroSectionV3 = ({  }: any) => (
           </div>
           <div className="col-lg-6 col-md-12 col-12">
               <div className="hero_text_one v2">
-                  <h1><span>เข้าถึงกลุ่มเป้าหมายในพื้นที่</span><br />ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</h1>
+                  <h1><span>SMS Reseller</span><br />บริการสำหรับผู้ค้าปลีกที่ต้องการนำ SMS ไปจำหน่ายต่อ ในราคาที่ดีกว่าเดิม</h1>
               </div>
           </div>
         </div>

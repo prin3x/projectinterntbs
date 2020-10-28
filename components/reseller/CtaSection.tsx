@@ -9,7 +9,7 @@ const CtaSectionV2 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className=" col-lg-12">
           <div className="cta-text">
-            <h3>ใช้ SMS Location-Based Service<br />ส่งเสริมการขายในพื้นที่</h3>
+            <h3>มั่นใจได้ว่า คุณจะได้ราคา<br />และสิทธิพิเศษต่าง ๆ ดีกว่าที่อื่น</h3>
             <a
               href={``}
               className="btn v7"

@@ -6,15 +6,15 @@ const SmsSectionV3 = ({  }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3>ไม่จำเป็นต้องมีหมายเลขโทรศัพท์ในการส่ง</h3>
-            <p>สามารถส่งข้อความได้ทันที เมื่อกลุ่มเป้าหมายเข้ามายังบริเวณที่กำหนดไว้ เข้าถึงกลุ่มเป้าหมายได้ง่ายขึ้น เหมาะสำหรับธุรกิจที่ต้องการเกิดการขายทันทีในพื้นที่ออฟไลน์</p>
+            <h3>ราคาคุ้มค่า ดีกว่าหน้าเว็บ</h3>
+            <p>เมื่อเป็นตัวแทนจำหน่าย ไม่ว่าจะซื้อ SMS ปริมาณใดก็ตาม คุณจะได้ราคา Special Rate ที่ดีกว่าหน้าเว็บ เหมาะกับธุรกิจ Software House หรือ Digital Agency</p>
           </div>
         </div>
         <div className="col-lg-7">
           <div className="newsletter_img">
             <img
               className="lazyload"
-              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-lbs-01.png`}
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-reseller01.png`}
               alt="Image"
             />
           </div>
@@ -26,7 +26,7 @@ const SmsSectionV3 = ({  }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>เข้าถึงลูกค้าอย่างไร พิสูจน์ได้ด้วยตนเอง</h4>
+                  <h4>สนใจเป็นตัวแทนจำหน่ายกับ ThaiBulkSMS</h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
@@ -35,7 +35,7 @@ const SmsSectionV3 = ({  }: any) => (
                     href={``}
                     className="btn v8"
                   >
-                    ให้เราช่วยแนะนำ
+                    ขอใบเสนอราคา
                   </a>
                 </div>
               </div>

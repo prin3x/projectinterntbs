@@ -17,7 +17,7 @@ const HeroSectionV3 = ({  }: any) => (
           </div>
           <div className="col-lg-6 col-md-12 col-12">
               <div className="hero_text_one v2">
-                  <h1><span>เข้าถึงกลุ่มเป้าหมายในพื้นที่</span><br />ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</h1>
+                  <h1><span>ส่ง SMS และ OTP</span><br />ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</h1>
               </div>
           </div>
         </div>
