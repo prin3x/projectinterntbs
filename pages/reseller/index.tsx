@@ -36,11 +36,11 @@ const Reseller = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('OtpMeta')(Reseller);
+export default withTranslation('ResellerMeta')(Reseller);
 export const getStaticProps = async () => {
   return {
     props: {
-      namespacesRequired: ['OtpMeta'],
+      namespacesRequired: ['ResellerMeta'],
     },
   };
 };

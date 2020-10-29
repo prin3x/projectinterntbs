@@ -36,11 +36,11 @@ const GlobalSMS = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('OtpMeta')(GlobalSMS);
+export default withTranslation('GlobalSMSMeta')(GlobalSMS);
 export const getStaticProps = async () => {
   return {
     props: {
-      namespacesRequired: ['OtpMeta'],
+      namespacesRequired: ['GlobalSMSMeta'],
     },
   };
 };

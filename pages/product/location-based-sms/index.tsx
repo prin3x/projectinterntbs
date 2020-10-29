@@ -3,16 +3,16 @@ import Head from 'next/head';
 import React from 'react';
 import BacktoTop from '../../../components/BacktoTop';
 import Layout from '../../../components/Layout';
-import CtaSection from '../../../components/lbs/CtaSection';
+import CtaSection from '../../../components/location-based-sms/CtaSection';
 // import Proloader from '../../components/Proloader';
-import HeroSection from '../../../components/lbs/HeroSection';
-import SimpleIconSection from '../../../components/lbs/SimpleIconSection';
-import SmsSection from '../../../components/lbs/SmsSection';
-import TrackSection from '../../../components/lbs/TrackSection';
-import { seo } from '../../../components/seo/lbs';
+import HeroSection from '../../../components/location-based-sms/HeroSection';
+import SimpleIconSection from '../../../components/location-based-sms/SimpleIconSection';
+import SmsSection from '../../../components/location-based-sms/SmsSection';
+import TrackSection from '../../../components/location-based-sms/TrackSection';
+import { seo } from '../../../components/seo/location-based-sms';
 import { withTranslation } from '../../../i18n';
 
-const Lbs = ({ t }: any) => (
+const LocationBasedSMS = ({ t }: any) => (
   <Layout>
     <Head>
       <meta name="keywords" content={t('keywords')} />
@@ -36,11 +36,11 @@ const Lbs = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('OtpMeta')(Lbs);
+export default withTranslation('LocationBasedSMSMeta')(LocationBasedSMS);
 export const getStaticProps = async () => {
   return {
     props: {
-      namespacesRequired: ['OtpMeta'],
+      namespacesRequired: ['LocationBasedSMSMeta'],
     },
   };
 };
