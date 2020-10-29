@@ -9,19 +9,12 @@ const CtaSectionV2 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className=" col-lg-12">
           <div className="cta-text">
-            <h3 dangerouslySetInnerHTML={{ __html: t('otpcta.title') }}></h3>
+            <h3>ส่ง SMS และ OTP ได้ทั่วโลก<br />ส่งถึงไว ในราคาที่คุ้มค่า</h3>
             <a
-              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+              href={``}
               className="btn v7"
             >
-              {t('otpcta.freeBtn')}
-            </a>
-            <a
-              href={`https://otp-manager.thaibulksms.com/login`}
-              className="btn otp2"
-              target="_blank"
-            >
-              ล็อกอิน
+              สอบถามเพิ่มเติม
             </a>
           </div>
         </div>

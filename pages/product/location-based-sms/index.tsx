@@ -3,12 +3,11 @@ import Head from 'next/head';
 import React from 'react';
 import BacktoTop from '../../../components/BacktoTop';
 import Layout from '../../../components/Layout';
+import AdvantagesSection from '../../../components/location-based-sms/AdvantagesSection';
 import CtaSection from '../../../components/location-based-sms/CtaSection';
-// import Proloader from '../../components/Proloader';
+import DesSection from '../../../components/location-based-sms/DesSection';
 import HeroSection from '../../../components/location-based-sms/HeroSection';
-import SimpleIconSection from '../../../components/location-based-sms/SimpleIconSection';
 import SmsSection from '../../../components/location-based-sms/SmsSection';
-import TrackSection from '../../../components/location-based-sms/TrackSection';
 import { seo } from '../../../components/seo/location-based-sms';
 import { withTranslation } from '../../../i18n';
 
@@ -28,8 +27,8 @@ const LocationBasedSMS = ({ t }: any) => (
     <div className="page_wrapper">
       <HeroSection />
       <SmsSection />
-      <SimpleIconSection />
-      <TrackSection />
+      <DesSection />
+      <AdvantagesSection />
       <CtaSection />
     </div>
     <BacktoTop />

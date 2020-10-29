@@ -9,20 +9,19 @@ const CtaSectionV2 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className=" col-lg-12">
           <div className="cta-text">
-            <h3 dangerouslySetInnerHTML={{ __html: t('otpcta.title') }}></h3>
+            <h3>มั่นใจได้ว่า คุณจะได้ราคา<br />และสิทธิพิเศษต่าง ๆ ดีกว่าที่อื่น</h3>
             <a
-              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+              href={``}
               className="btn v7"
             >
-              {t('otpcta.freeBtn')}
+              สอบถามเพิ่มเติม
             </a>
-            <a
-              href={`https://otp-manager.thaibulksms.com/login`}
-              className="btn otp2"
-              target="_blank"
-            >
-              ล็อกอิน
-            </a>
+            <p>
+              หรือ ติดต่อ{' '}
+              <a href={`tel:02-798-6000`}>
+               02-798-6000
+              </a>
+            </p>
           </div>
         </div>
       </div>

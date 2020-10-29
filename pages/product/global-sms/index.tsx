@@ -3,11 +3,9 @@ import Head from 'next/head';
 import React from 'react';
 import BacktoTop from '../../../components/BacktoTop';
 import CtaSection from '../../../components/global-sms/CtaSection';
-// import Proloader from '../../components/Proloader';
+import DesSection from '../../../components/global-sms/DesSection';
 import HeroSection from '../../../components/global-sms/HeroSection';
-import SimpleIconSection from '../../../components/global-sms/SimpleIconSection';
 import SmsSection from '../../../components/global-sms/SmsSection';
-import TrackSection from '../../../components/global-sms/TrackSection';
 import Layout from '../../../components/Layout';
 import { seo } from '../../../components/seo/global-sms';
 import { withTranslation } from '../../../i18n';
@@ -28,8 +26,7 @@ const GlobalSMS = ({ t }: any) => (
     <div className="page_wrapper">
       <HeroSection />
       <SmsSection />
-      <SimpleIconSection />
-      <TrackSection />
+      <DesSection />
       <CtaSection />
     </div>
     <BacktoTop />
