@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-const TrackSection = ({  }: any) => (
+const TrackSection = ({ t }: any) => (
   <div
     className="track_section lazyload"
     data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_7.png`}
@@ -9,8 +9,8 @@ const TrackSection = ({  }: any) => (
       <div className="row track_top m-40">
         <div className="col-md-6 col-md-push-6">
           <div className="track_text">
-            <h3>กำหนดกลุ่มเป้าหมายเองได้</h3>
-            <p>เข้าถึงลูกค้าได้อย่างมีประสิทธิภาพมากขึ้น และประหยัดงบประมาณในการส่ง เพราะกำหนดส่งไปยังกลุ่มเป้าหมายที่ต้องการได้ เช่น เพศ อายุ หรือผู้ที่มีกำลังซื้อสูง เป็นต้น</p>
+            <h3>{t('LocationBasedSMSPage:advantagesSection.title-align-right')}</h3>
+            <p>{t('LocationBasedSMSPage:advantagesSection.description-align-right')}</p>
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">
@@ -26,8 +26,8 @@ const TrackSection = ({  }: any) => (
       <div className="row track_top m-40">
         <div className="col-md-6">
           <div className="track_text">
-            <h3>เกิดการขายทันทีในพื้นที่ของคุณ</h3>
-            <p>เข้าถึงอย่างรวดเร็ว ทำให้กลายเป็นตัวเลือกแรก ๆ ในการเลือกซื้อของกลุ่มเป้าหมาย โดยเฉพาะอย่างยิ่งในพื้นที่ที่มีการแข่งขันสูง เช่น ห้างสรรพสินค้า การออกบูธจัดแสดง เป็นต้น</p>
+            <h3>{t('LocationBasedSMSPage:advantagesSection.title-align-left')}</h3>
+            <p>{t('LocationBasedSMSPage:advantagesSection.description-align-left')}</p>
           </div>
         </div>
         <div className="col-md-6">
@@ -44,10 +44,10 @@ const TrackSection = ({  }: any) => (
   </div>
 );
 TrackSection.getInitialProps = async () => ({
-  namespacesRequired: ['OtpTrackSection'],
+  namespacesRequired: ['LocationBasedSMSPage'],
 });
 
 TrackSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpTrackSection')(TrackSection);
+export default withTranslation('LocationBasedSMSPage')(TrackSection);
