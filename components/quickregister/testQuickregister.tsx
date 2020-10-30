@@ -57,12 +57,18 @@ const TestQuickregister = ({ t }: any) => {
       },
     });
 
-    if (
-      !fbq.trackCustom(appConfig.facebookConversionTracking.quickRegister.confirmNumber)
-    )
-      console.warn(
-        `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmNumber} failed.`,
-      );
+    (function fbqReady() {
+      if ((window as any).fbq !== undefined)
+        if (
+          !fbq.trackCustom(
+            appConfig.facebookConversionTracking.quickRegister.confirmNumber,
+          )
+        )
+          console.warn(
+            `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmNumber} failed.`,
+          );
+        else setTimeout(fbqReady, 3000);
+    })();
 
     setMsisdn(resultStep1.data.msisdn);
     setShowModalpass(true);
@@ -134,12 +140,18 @@ const TestQuickregister = ({ t }: any) => {
       },
     });
 
-    if (
-      !fbq.trackCustom(appConfig.facebookConversionTracking.quickRegister.confirmPassword)
-    )
-      console.warn(
-        `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmPassword} failed.`,
-      );
+    (function fbqReady() {
+      if ((window as any).fbq !== undefined)
+        if (
+          !fbq.trackCustom(
+            appConfig.facebookConversionTracking.quickRegister.confirmPassword,
+          )
+        )
+          console.warn(
+            `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmPassword} failed.`,
+          );
+        else setTimeout(fbqReady, 3000);
+    })();
 
     setTestDesc('-2');
     setWelcomeToken(resultStep2.welcome_token);
