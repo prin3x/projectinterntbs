@@ -1,13 +1,17 @@
-import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const SmsSectionV3 = ({  }: any) => (
+import { withTranslation } from '../../i18n';
+const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3>การันตีส่ง SMS ได้ทั่วโลก ส่งไว ติดตามผลการส่งได้</h3>
-            <p>ส่ง SMS ครอบคลุม 200 ประเทศ ส่งได้รวดเร็วฉับไวด้วยระบบเลือกช่องทางส่งอัจฉริยะ (Intelligent Routing) พร้อมรายงานการส่งที่ให้คุณมั่นใจได้ว่าข้อความถึงมือผู้รับแน่นอน</p>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: t('GlobalSMSPage:smsSection.title'),
+              }}
+            ></h3>
+            <p>{t('GlobalSMSPage:smsSection.description')}</p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -26,16 +30,13 @@ const SmsSectionV3 = ({  }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>ต้องการส่ง SMS ไปให้ลูกค้าต่างประเทศ</h4>
+                  <h4>{t('GlobalSMSPage:smsSection.title-on-box')}</h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
-                  <a
-                    href={``}
-                    className="btn v8"
-                  >
-                    ติดต่อฝ่ายขาย
+                  <a href={``} className="btn v8">
+                    {t('GlobalSMSPage:smsSection.button-on-box')}
                   </a>
                 </div>
               </div>
@@ -48,10 +49,10 @@ const SmsSectionV3 = ({  }: any) => (
 );
 
 SmsSectionV3.getInitialProps = async () => ({
-  namespacesRequired: ['OtpSmsSection'],
+  namespacesRequired: ['GlobalSMSPage'],
 });
 
 SmsSectionV3.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpSmsSection')(SmsSectionV3);
+export default withTranslation('GlobalSMSPage')(SmsSectionV3);
