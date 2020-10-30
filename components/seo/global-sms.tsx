@@ -7,7 +7,7 @@ export const seo = {
       'บริการส่งข้อความไปยังต่างประเทศได้มากกว่า 200 ประเทศทั่วโลก สามารถส่งได้ทุกเครือข่าย พร้อมให้คำปรึกษาโดยผู้เชี่ยวชาญตลอด 24/7',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Home.jpg`,
+        url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Global-SMS.jpg`,
         width: 800,
         height: 600,
       },

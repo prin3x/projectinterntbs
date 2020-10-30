@@ -1,13 +1,13 @@
-import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const SmsSectionV3 = ({  }: any) => (
+import { withTranslation } from '../../i18n';
+const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3>ราคาคุ้มค่า ดีกว่าหน้าเว็บ</h3>
-            <p>เมื่อเป็นตัวแทนจำหน่าย ไม่ว่าจะซื้อ SMS ปริมาณใดก็ตาม คุณจะได้ราคา Special Rate ที่ดีกว่าหน้าเว็บ เหมาะกับธุรกิจ Software House หรือ Digital Agency</p>
+            <h3>{t('ResellerPage:smsSection.title')}</h3>
+            <p>{t('ResellerPage:smsSection.description')}</p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -26,16 +26,13 @@ const SmsSectionV3 = ({  }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>สนใจเป็นตัวแทนจำหน่ายกับ ThaiBulkSMS</h4>
+                  <h4>{t('ResellerPage:smsSection.title-on-box')}</h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
-                  <a
-                    href={``}
-                    className="btn v8"
-                  >
-                    ขอใบเสนอราคา
+                  <a href={``} className="btn v8">
+                    {t('ResellerPage:smsSection.button-on-box')}
                   </a>
                 </div>
               </div>
@@ -48,10 +45,10 @@ const SmsSectionV3 = ({  }: any) => (
 );
 
 SmsSectionV3.getInitialProps = async () => ({
-  namespacesRequired: ['OtpSmsSection'],
+  namespacesRequired: ['ResellerPage'],
 });
 
 SmsSectionV3.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpSmsSection')(SmsSectionV3);
+export default withTranslation('ResellerPage')(SmsSectionV3);
