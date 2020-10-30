@@ -20,8 +20,8 @@ const Reseller = ({ t }: any) => (
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('ResellerPage:meta.title')}
+      description={t('ResellerPage:meta.description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">
@@ -35,11 +35,11 @@ const Reseller = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('ResellerMeta')(Reseller);
+export default withTranslation('ResellerPage')(Reseller);
 export const getStaticProps = async () => {
   return {
     props: {
-      namespacesRequired: ['ResellerMeta'],
+      namespacesRequired: ['ResellerPage'],
     },
   };
 };

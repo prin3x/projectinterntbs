@@ -19,8 +19,8 @@ const GlobalSMS = ({ t }: any) => (
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('GlobalSMSPage:meta.title')}
+      description={t('GlobalSMSPage:meta.description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">
@@ -33,11 +33,11 @@ const GlobalSMS = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('GlobalSMSMeta')(GlobalSMS);
+export default withTranslation('GlobalSMSPage')(GlobalSMS);
 export const getStaticProps = async () => {
   return {
     props: {
-      namespacesRequired: ['GlobalSMSMeta'],
+      namespacesRequired: ['GlobalSMSPage'],
     },
   };
 };

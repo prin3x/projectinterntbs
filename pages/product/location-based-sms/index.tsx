@@ -20,8 +20,8 @@ const LocationBasedSMS = ({ t }: any) => (
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('LocationBasedSMSPage:meta.title')}
+      description={t('LocationBasedSMSPage:meta.description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">
@@ -35,11 +35,11 @@ const LocationBasedSMS = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('LocationBasedSMSMeta')(LocationBasedSMS);
+export default withTranslation('LocationBasedSMSPage')(LocationBasedSMS);
 export const getStaticProps = async () => {
   return {
     props: {
-      namespacesRequired: ['LocationBasedSMSMeta'],
+      namespacesRequired: ['LocationBasedSMSPage'],
     },
   };
 };
