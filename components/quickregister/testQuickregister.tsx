@@ -58,7 +58,7 @@ const TestQuickregister = ({ t }: any) => {
     });
 
     (function fbqReady() {
-      if ((window as any).fbq !== undefined)
+      if ((window as any).fbq !== undefined) {
         if (
           !fbq.trackCustom(
             appConfig.facebookConversionTracking.quickRegister.confirmNumber,
@@ -67,7 +67,7 @@ const TestQuickregister = ({ t }: any) => {
           console.warn(
             `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmNumber} failed.`,
           );
-        else setTimeout(fbqReady, 3000);
+      } else setTimeout(fbqReady, 3000);
     })();
 
     setMsisdn(resultStep1.data.msisdn);
@@ -141,7 +141,7 @@ const TestQuickregister = ({ t }: any) => {
     });
 
     (function fbqReady() {
-      if ((window as any).fbq !== undefined)
+      if ((window as any).fbq !== undefined) {
         if (
           !fbq.trackCustom(
             appConfig.facebookConversionTracking.quickRegister.confirmPassword,
@@ -150,7 +150,7 @@ const TestQuickregister = ({ t }: any) => {
           console.warn(
             `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmPassword} failed.`,
           );
-        else setTimeout(fbqReady, 3000);
+      } else setTimeout(fbqReady, 3000);
     })();
 
     setTestDesc('-2');
