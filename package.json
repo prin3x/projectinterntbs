@@ -44,6 +44,7 @@
     "sass": "^1.26.5",
     "serve": "^11.3.0",
     "sweetalert2": "^9.17.0",
+    "use-clipboard-copy": "^0.1.2",
     "webpack": "^4.43.0"
   },
   "devDependencies": {

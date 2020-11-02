@@ -1,18 +1,33 @@
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
+import { useClipboard } from "use-clipboard-copy";
 import Modal from 'react-modal';
+import appConfig from '../../appConfig';
 const TabContent = ({ t }: any) => {
   const [tab, setTab] = React.useState<any>();
   const [showModalbank, setShowModalbank] = useState(false);
   const [showModalqr, setShowModalqr] = useState(false);
   const [showModalcredit, setShowModalcredit] = useState(false);
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const clipboard = useClipboard();
   React.useEffect(() => {
     setTab($('#pills-profile-tab'));
     Modal.setAppElement('#ElementModal');
     // }, [tab]);
   }, []);
+
+  const onClipboard = (text: string) => {
+    clipboard.copy(text)
+    Swal.fire({
+      position: 'top',
+      icon: 'success',
+      title: 'คุณได้คัดลอกบัญชีธนาคารสำเร็จ',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
 
   return (
     <div
@@ -236,7 +251,7 @@ const TabContent = ({ t }: any) => {
                                 <div className="info__icon mr-0">
                                   <img
                                     className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_24.png`}
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_24_1.png`}
                                     alt=""
                                   />
                                 </div>
@@ -287,7 +302,7 @@ const TabContent = ({ t }: any) => {
                                 <div className="info__icon mr-0">
                                   <img
                                     className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_25.png`}
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_25_1.png`}
                                     alt=""
                                   />
                                 </div>
@@ -317,6 +332,218 @@ const TabContent = ({ t }: any) => {
                                     'howtoordertabcontent.payment.creditwait.link'
                                   )}
                                 </a>
+                                <div className="row">
+                                  <div className="col-12">
+                                    <hr className="bank-howtoOrder"></hr>
+                                  </div>
+                                  <div className="col-md-6">
+                                    <div className="item__box__2 d-flex align-items-start">
+                                      <img
+                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__1.png`}
+                                        alt=""
+                                        style={{ marginRight: '20px' }}
+                                      />
+
+                                      <div className="textBankHow">
+                                        <p style={{ marginBottom: '10px' }}>
+                                          ธนาคารไทยพาณิชย์
+                                        </p>
+
+                                        <div className="d-flex">
+                                          <div style={{ marginRight: '20px' }}>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              ประเภทบัญชี
+                                            </p>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              เลขบัญชี
+                                            </p>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              ชื่อบัญชี
+                                            </p>
+                                          </div>
+
+                                          <div>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                            >
+                                              ออมทรัพย์
+                                            </p>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                              onClick={() => onClipboard('2503000721')}
+                                            >
+                                              250-3-00072-1
+                                            </p>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                            >
+                                              บริษัท วันม๊อบบี้ จำกัด
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="col-md-6">
+                                    <div className="item__box__2 d-flex align-items-start">
+                                      <img
+                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__2.png`}
+                                        alt=""
+                                        style={{ marginRight: '20px' }}
+                                      />
+
+                                      <div className="textBankHow">
+                                        <p style={{ marginBottom: '10px' }}>
+                                          ธนาคารกสิกรไทย
+                                        </p>
+
+                                        <div className="d-flex">
+                                          <div style={{ marginRight: '20px' }}>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              ประเภทบัญชี
+                                            </p>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              เลขบัญชี
+                                            </p>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              ชื่อบัญชี
+                                            </p>
+                                          </div>
+
+                                          <div>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                            >
+                                              ออมทรัพย์
+                                            </p>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                              onClick={() => onClipboard('9962074089')}
+                                            >
+                                              996-2-07408-9
+                                            </p>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                            >
+                                              บริษัท วันม๊อบบี้ จำกัด
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="col-md-6">
+                                    <div className="item__box__2 d-flex align-items-start">
+                                      <img
+                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__3.png`}
+                                        alt=""
+                                        style={{ marginRight: '20px' }}
+                                      />
+
+                                      <div className="textBankHow">
+                                        <p style={{ marginBottom: '10px' }}>
+                                          ธนาคารกรุงเทพ
+                                        </p>
+
+                                        <div className="d-flex">
+                                          <div style={{ marginRight: '20px' }}>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              ประเภทบัญชี
+                                            </p>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              เลขบัญชี
+                                            </p>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              ชื่อบัญชี
+                                            </p>
+                                          </div>
+
+                                          <div>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                            >
+                                              ออมทรัพย์
+                                            </p>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                              onClick={() => onClipboard('0667054423')}
+                                            >
+                                              066-7-05442-3
+                                            </p>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                            >
+                                              บริษัท วันม๊อบบี้ จำกัด
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div className="col-md-6">
+                                    <div className="item__box__2 d-flex align-items-start">
+                                      <img
+                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__4.png`}
+                                        alt=""
+                                        style={{ marginRight: '20px' }}
+                                      />
+
+                                      <div className="textBankHow">
+                                        <p style={{ marginBottom: '10px' }}>
+                                          ธนาคารกรุงศรีอยุธยา
+                                        </p>
+
+                                        <div className="d-flex">
+                                          <div style={{ marginRight: '20px' }}>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              ประเภทบัญชี
+                                            </p>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              เลขบัญชี
+                                            </p>
+                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                              ชื่อบัญชี
+                                            </p>
+                                          </div>
+
+                                          <div>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                            >
+                                              ออมทรัพย์
+                                            </p>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                              onClick={() => onClipboard('6731015765')}
+                                            >
+                                              673-1-01576-5
+                                            </p>
+                                            <p
+                                              style={{ fontWeight: 400 }}
+                                              className="theme__text"
+                                            >
+                                              บริษัท วันม๊อบบี้ จำกัด
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -634,7 +861,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.1'
+                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.4'
                         ),
                       }}
                     ></h4>
