@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Reseller ร่วมเป็นตัวแทนจำหน่ายกับ ThaiBulkSMS",
+    "description": "บริการสำหรับผู้ค้าปลีก สนใจเป็นตัวแทนจำหน่าย SMS กับเรา ได้ในราคาสุดพิเศษ และข้อเสนอต่าง ๆ มีให้อย่างไม่จำกัด",
+    "keywords": ""
+  },
+
+  "heroSection": {
+    "title": "<span>SMS Reseller</span><br />บริการสำหรับผู้ค้าปลีกที่ต้องการนำ SMS ไปจำหน่ายต่อ ในราคาที่ดีกว่าเดิม"
+  },
+
+  "smsSection": {
+    "title": "ราคาคุ้มค่า ดีกว่าหน้าเว็บ",
+    "description": "เมื่อเป็นตัวแทนจำหน่าย ไม่ว่าจะซื้อ SMS ปริมาณใดก็ตาม คุณจะได้ราคา Special Rate ที่ดีกว่าหน้าเว็บ เหมาะกับธุรกิจ Software House หรือ Digital Agency",
+    "title-on-box": "สนใจเป็นตัวแทนจำหน่ายกับ ThaiBulkSMS",
+    "button-on-box": "ขอใบเสนอราคา"
+  },
+
+  "desSection": {
+    "title": "เลือกได้ ระหว่าง Prepaid และ Postpaid",
+    "description": "หมดกังวลเรื่องการบริหารงบประมาณ เพราะสามารถกำหนดการจ่ายด้วยตนเอง",
+    "title-left-box": "<span>เติมเครดิต</span><br />(Prepaid)",
+    "title-right-box": "<span>จ่ายแบบรายเดือน</span><br />(Postpaid)"
+  },
+
+  "advantagesSection": {
+    "title": "ข้อเสนอสุดพิเศษ มีให้แบบ Unlimited",
+    "description": "ไม่จำกัดจำนวน Sender Name และจำนวนบัญชีผู้ใช้รายย่อย มอบให้พิเศษสำหรับตัวแทนจำหน่ายเช่นคุณเท่านั้น"
+  },
+
+  "ctaSection": {
+    "title": "มั่นใจได้ว่า คุณจะได้ราคา<br />และสิทธิพิเศษต่าง ๆ ดีกว่าที่อื่น",
+    "button": "สอบถามเพิ่มเติม",
+    "description": "หรือ ติดต่อ <a href=\"tel:02-798-6000\">02-798-6000</a>"
+  }
+}
