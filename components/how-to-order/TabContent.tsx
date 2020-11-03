@@ -1,10 +1,9 @@
-import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import Swal from 'sweetalert2';
-import { useClipboard } from "use-clipboard-copy";
 import Modal from 'react-modal';
-import appConfig from '../../appConfig';
+import Swal from 'sweetalert2';
+import { useClipboard } from 'use-clipboard-copy';
+import { Link, withTranslation } from '../../i18n';
 const TabContent = ({ t }: any) => {
   const [tab, setTab] = React.useState<any>();
   const [showModalbank, setShowModalbank] = useState(false);
@@ -19,15 +18,15 @@ const TabContent = ({ t }: any) => {
   }, []);
 
   const onClipboard = (text: string) => {
-    clipboard.copy(text)
+    clipboard.copy(text);
     Swal.fire({
       position: 'top',
       icon: 'success',
       title: 'คุณได้คัดลอกบัญชีธนาคารสำเร็จ',
       showConfirmButton: false,
-      timer: 1500
-    })
-  }
+      timer: 1500,
+    });
+  };
 
   return (
     <div
@@ -38,11 +37,7 @@ const TabContent = ({ t }: any) => {
         <div className="row">
           <div className="col-12">
             <div className="tab-content" id="pills-tabContent">
-              <div
-                className="tab-pane fade show active"
-                id="pills-home"
-                role="tabpanel"
-              >
+              <div className="tab-pane fade show active" id="pills-home" role="tabpanel">
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="d-flex align-items-start icon__box__wrapper">
@@ -200,9 +195,7 @@ const TabContent = ({ t }: any) => {
                   <div className="col-lg-8">
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>
-                          {t('howtoordertabcontent.payment.creditnow.header')}
-                        </h5>
+                        <h5>{t('howtoordertabcontent.payment.creditnow.header')}</h5>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -219,14 +212,14 @@ const TabContent = ({ t }: any) => {
                                 <h5
                                   dangerouslySetInnerHTML={{
                                     __html: t(
-                                      'howtoordertabcontent.payment.creditnow.qrcodetitle'
+                                      'howtoordertabcontent.payment.creditnow.qrcodetitle',
                                     ),
                                   }}
                                 ></h5>
                                 <p
                                   dangerouslySetInnerHTML={{
                                     __html: t(
-                                      'howtoordertabcontent.payment.creditnow.qrcodedesc'
+                                      'howtoordertabcontent.payment.creditnow.qrcodedesc',
                                     ),
                                   }}
                                 ></p>
@@ -239,9 +232,7 @@ const TabContent = ({ t }: any) => {
                                     setShowModalqr(true);
                                   }}
                                 >
-                                  {t(
-                                    'howtoordertabcontent.payment.creditnow.qrcodelink'
-                                  )}
+                                  {t('howtoordertabcontent.payment.creditnow.qrcodelink')}
                                 </a>
                               </div>
                             </div>
@@ -257,13 +248,13 @@ const TabContent = ({ t }: any) => {
                                 </div>
                                 <h5>
                                   {t(
-                                    'howtoordertabcontent.payment.creditnow.creditcradtitile'
+                                    'howtoordertabcontent.payment.creditnow.creditcradtitile',
                                   )}
                                 </h5>
                                 <p
                                   dangerouslySetInnerHTML={{
                                     __html: t(
-                                      'howtoordertabcontent.payment.creditnow.creditcraddecs'
+                                      'howtoordertabcontent.payment.creditnow.creditcraddecs',
                                     ),
                                   }}
                                 ></p>
@@ -278,7 +269,7 @@ const TabContent = ({ t }: any) => {
                                   }}
                                 >
                                   {t(
-                                    'howtoordertabcontent.payment.creditnow.creditcradlink'
+                                    'howtoordertabcontent.payment.creditnow.creditcradlink',
                                   )}
                                 </a>
                               </div>
@@ -290,9 +281,7 @@ const TabContent = ({ t }: any) => {
 
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>
-                          {t('howtoordertabcontent.payment.creditwait.header')}
-                        </h5>
+                        <h5>{t('howtoordertabcontent.payment.creditwait.header')}</h5>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -307,14 +296,12 @@ const TabContent = ({ t }: any) => {
                                   />
                                 </div>
                                 <h5 className="mt-4">
-                                  {t(
-                                    'howtoordertabcontent.payment.creditwait.title'
-                                  )}
+                                  {t('howtoordertabcontent.payment.creditwait.title')}
                                 </h5>
                                 <p
                                   dangerouslySetInnerHTML={{
                                     __html: t(
-                                      'howtoordertabcontent.payment.creditwait.desc'
+                                      'howtoordertabcontent.payment.creditwait.desc',
                                     ),
                                   }}
                                 ></p>
@@ -328,9 +315,7 @@ const TabContent = ({ t }: any) => {
                                     setShowModalbank(true);
                                   }}
                                 >
-                                  {t(
-                                    'howtoordertabcontent.payment.creditwait.link'
-                                  )}
+                                  {t('howtoordertabcontent.payment.creditwait.link')}
                                 </a>
                                 <div className="row">
                                   <div className="col-12">
@@ -351,13 +336,28 @@ const TabContent = ({ t }: any) => {
 
                                         <div className="d-flex">
                                           <div style={{ marginRight: '20px' }}>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               ประเภทบัญชี
                                             </p>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               เลขบัญชี
                                             </p>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               ชื่อบัญชี
                                             </p>
                                           </div>
@@ -403,13 +403,28 @@ const TabContent = ({ t }: any) => {
 
                                         <div className="d-flex">
                                           <div style={{ marginRight: '20px' }}>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               ประเภทบัญชี
                                             </p>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               เลขบัญชี
                                             </p>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               ชื่อบัญชี
                                             </p>
                                           </div>
@@ -455,13 +470,28 @@ const TabContent = ({ t }: any) => {
 
                                         <div className="d-flex">
                                           <div style={{ marginRight: '20px' }}>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               ประเภทบัญชี
                                             </p>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               เลขบัญชี
                                             </p>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               ชื่อบัญชี
                                             </p>
                                           </div>
@@ -507,13 +537,28 @@ const TabContent = ({ t }: any) => {
 
                                         <div className="d-flex">
                                           <div style={{ marginRight: '20px' }}>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               ประเภทบัญชี
                                             </p>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               เลขบัญชี
                                             </p>
-                                            <p style={{ fontWeight: 400, color: '#5b6e80' }}>
+                                            <p
+                                              style={{
+                                                fontWeight: 400,
+                                                color: '#5b6e80',
+                                              }}
+                                            >
                                               ชื่อบัญชี
                                             </p>
                                           </div>
@@ -586,9 +631,7 @@ const TabContent = ({ t }: any) => {
                     alt="Image"
                   />
                   <Link href="/contact">
-                    <a className="btn v4">
-                      {t('howtoordertabcontent.contactBtn')}
-                    </a>
+                    <a className="btn v4">{t('howtoordertabcontent.contactBtn')}</a>
                   </Link>
                 </div>
               </div>
@@ -631,9 +674,7 @@ const TabContent = ({ t }: any) => {
             <div className="box__wrapper">
               <div className="box__header">
                 <h5>
-                  {t(
-                    'PaymentbankHeroSection:paymentbankhero.howtopay.headermodal'
-                  )}
+                  {t('PaymentbankHeroSection:paymentbankhero.howtopay.headermodal')}
                 </h5>
               </div>
               <div className="box__body">
@@ -647,11 +688,7 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_20.png"
                       alt=""
                     />
-                    <h4>
-                      {t(
-                        'PaymentbankHeroSection:paymentbankhero.howtopay.step.1'
-                      )}
-                    </h4>
+                    <h4>{t('PaymentbankHeroSection:paymentbankhero.howtopay.step.1')}</h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -662,9 +699,7 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4>
                       2.
-                      {t(
-                        'PaymentbankHeroSection:paymentbankhero.howtopay.step.2'
-                      )}
+                      {t('PaymentbankHeroSection:paymentbankhero.howtopay.step.2')}
                     </h4>
                   </div>
 
@@ -677,7 +712,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentbankHeroSection:paymentbankhero.howtopay.step.3'
+                          'PaymentbankHeroSection:paymentbankhero.howtopay.step.3',
                         ),
                       }}
                     >
@@ -696,7 +731,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentbankHeroSection:paymentbankhero.howtopay.step.4'
+                          'PaymentbankHeroSection:paymentbankhero.howtopay.step.4',
                         ),
                       }}
                     >
@@ -711,11 +746,7 @@ const TabContent = ({ t }: any) => {
           {showModalqr && (
             <div className="box__wrapper">
               <div className="box__header">
-                <h5>
-                  {t(
-                    'PaymentqrHeroSection:paymentqrhero.howtopayqr.headermodal'
-                  )}
-                </h5>
+                <h5>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.headermodal')}</h5>
               </div>
               <div className="box__body">
                 <div
@@ -730,9 +761,7 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4
                       dangerouslySetInnerHTML={{
-                        __html: t(
-                          'PaymentqrHeroSection:paymentqrhero.howtopayqr.step.1'
-                        ),
+                        __html: t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.1'),
                       }}
                     >
                       {/* 1. {t('PaymentqrHeroSection:paymentqrhero.h8')}
@@ -747,11 +776,7 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_16.png"
                       alt=""
                     />
-                    <h4>
-                      {t(
-                        'PaymentqrHeroSection:paymentqrhero.howtopayqr.step.2'
-                      )}
-                    </h4>
+                    <h4>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.2')}</h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -760,11 +785,7 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_17.png"
                       alt=""
                     />
-                    <h4>
-                      {t(
-                        'PaymentqrHeroSection:paymentqrhero.howtopayqr.step.3'
-                      )}
-                    </h4>
+                    <h4>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.3')}</h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -773,11 +794,7 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_18.png"
                       alt=""
                     />
-                    <h4>
-                      {t(
-                        'PaymentqrHeroSection:paymentqrhero.howtopayqr.step.4'
-                      )}
-                    </h4>
+                    <h4>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.4')}</h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -786,11 +803,7 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_19.png"
                       alt=""
                     />
-                    <h4>
-                      {t(
-                        'PaymentqrHeroSection:paymentqrhero.howtopayqr.step.5'
-                      )}
-                    </h4>
+                    <h4>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.5')}</h4>
                   </div>
                 </div>
               </div>
@@ -802,7 +815,7 @@ const TabContent = ({ t }: any) => {
               <div className="box__header">
                 <h5>
                   {t(
-                    'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.headermodal'
+                    'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.headermodal',
                   )}
                 </h5>
               </div>
@@ -820,7 +833,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.1'
+                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.1',
                         ),
                       }}
                     ></h4>
@@ -834,7 +847,7 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4>
                       {t(
-                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.2'
+                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.2',
                       )}
                     </h4>
                   </div>
@@ -847,7 +860,7 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4>
                       {t(
-                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.3'
+                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.3',
                       )}
                     </h4>
                   </div>
@@ -861,7 +874,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.4'
+                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.4',
                         ),
                       }}
                     ></h4>
@@ -875,7 +888,7 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4>
                       {t(
-                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.5'
+                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.5',
                       )}
                     </h4>
                   </div>
