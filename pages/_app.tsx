@@ -1,16 +1,18 @@
+import axios from 'axios';
+import * as fbq from 'fbq';
+import Cookie from 'js-cookie';
+import { DefaultSeo } from 'next-seo';
 import App from 'next/app';
 import Router, { useRouter } from 'next/router';
-import { appWithTranslation, i18n } from '../i18n';
 import React, { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
-import Proloader from '../components/Proloader';
-import { StoreContextProvider } from '../components/context/store';
 import AppConfig from '../appConfig';
-import axios from 'axios';
-import Cookie from 'js-cookie';
-import { checktoken } from '../services/user/user.service';
-import { DefaultSeo } from 'next-seo';
+import { StoreContextProvider } from '../components/context/store';
+import Proloader from '../components/Proloader';
 import { seo } from '../components/seo/defaultseo';
+import { appWithTranslation, i18n } from '../i18n';
+import { checktoken } from '../services/user/user.service';
+
 const tagManagerArgs = {
   gtmId: AppConfig.GTM_CODE || '',
 };
@@ -89,7 +91,7 @@ axios.interceptors.response.use(
       Router.push('/log-in');
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 function MyApp({ Component, pageProps }: any) {
@@ -103,6 +105,10 @@ function MyApp({ Component, pageProps }: any) {
   };
   useEffect(() => {
     TagManager.initialize(tagManagerArgs);
+
+    if (!fbq.init(AppConfig.facebookConversionTracking.PIXEL_ID))
+      console.warn('fbq init failed.');
+
     handleRouteChange(router.pathname);
     Router.events.on('routeChangeStart', handleRouteChange);
     return () => {

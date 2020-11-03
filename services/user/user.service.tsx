@@ -1,12 +1,12 @@
 import axios from 'axios';
+import Cookie from 'js-cookie';
 import {
   AuthLogin,
-  Register,
   QuickRegisterStep1,
   QuickRegisterStep2,
   QuickRegisterStep3,
+  Register,
 } from './user.model';
-import Cookie from 'js-cookie';
 // ------------------  login --------------------------------------------
 export async function login(param: any): Promise<AuthLogin> {
   try {
@@ -29,7 +29,7 @@ export async function login(param: any): Promise<AuthLogin> {
     // return loginFail();
     let resultAPI = await axios.post(
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/auth',
-      sendData
+      sendData,
     );
     // let resultAPI = await axios.get(
     //   'https://api.github.com/repos/vercel/next.js'
@@ -49,10 +49,7 @@ export async function login(param: any): Promise<AuthLogin> {
       },
     };
     if (data.isCompletedProfile) {
-      localStorage.setItem(
-        'TBS_token',
-        JSON.stringify({ token: loginResponse.token })
-      );
+      localStorage.setItem('TBS_token', JSON.stringify({ token: loginResponse.token }));
       Cookie.set('TBS_token', loginResponse.token, { expires: 0.15 });
       Cookie.set('PASSCODE', loginResponse.passcode, { expires: 0.15 });
     }
@@ -74,10 +71,7 @@ export async function checktoken(): Promise<boolean> {
       return false;
     }
     const objlocalStorage = JSON.parse(strlocalStorage);
-    if (
-      objlocalStorage.token === '' ||
-      Object.keys(objlocalStorage).length === 0
-    ) {
+    if (objlocalStorage.token === '' || Object.keys(objlocalStorage).length === 0) {
       logout();
       return false;
     }
@@ -160,7 +154,7 @@ export async function registerUser(param: any): Promise<Register> {
     }
     let resultAPI = await axios.post(
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user',
-      sendData
+      sendData,
     );
 
     console.log('resultAPI : ', resultAPI);
@@ -179,7 +173,7 @@ export async function registerUser(param: any): Promise<Register> {
     };
     localStorage.setItem(
       'TBS_resendRegisterSMSToken',
-      JSON.stringify({ token: data.resendRegisterSMSToken })
+      JSON.stringify({ token: data.resendRegisterSMSToken }),
     );
     return dataRegister;
   } catch (error) {
@@ -206,7 +200,7 @@ export async function resendRegister() {
   try {
     let resultAPI = await axios.post(
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/resend-register-sms',
-      { resend_register_sms_token }
+      { resend_register_sms_token },
     );
 
     console.log(resultAPI);
@@ -232,9 +226,7 @@ export async function resendRegister() {
     };
   }
 }
-export async function quickRegisterStep1(
-  param: any
-): Promise<QuickRegisterStep1> {
+export async function quickRegisterStep1(param: any): Promise<QuickRegisterStep1> {
   // let dataRegister = {
   //   data: { msisdn: '0804606546' },
   //   error: { code: '', erromessagerText: '' },
@@ -244,7 +236,7 @@ export async function quickRegisterStep1(
     let { msisdn, recaptcha } = param;
     let resultAPI = await axios.post(
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/1',
-      { msisdn, recaptcha }
+      { msisdn, recaptcha },
     );
 
     console.log('resultAPI : ', resultAPI);
@@ -268,9 +260,7 @@ export async function quickRegisterStep1(
     return { data: { msisdn: '' }, error: errorData };
   }
 }
-export async function quickRegisterStep2(
-  param: any
-): Promise<QuickRegisterStep2> {
+export async function quickRegisterStep2(param: any): Promise<QuickRegisterStep2> {
   // return {
   //   welcome_token: 'f7640778-8539-453c-85ed-e0bc5a1e0057',
   //   data: {},
@@ -278,20 +268,17 @@ export async function quickRegisterStep2(
   // };
   try {
     let { msisdn, pin } = param;
-    const cookieGclid = Cookie.get('gclid');
-    let sendData = {};
-    if (cookieGclid === undefined) {
-      sendData = { msisdn, pin };
-    } else {
-      sendData = {
-        msisdn,
-        pin,
-        gclid: cookieGclid,
-      };
-    }
+    const gclid = Cookie.get('gclid');
+    const fbclid = Cookie.get('_fbc');
+    const sendData = {
+      msisdn,
+      pin,
+      gclid,
+      fbclid,
+    };
     let resultAPI = await axios.post(
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/2',
-      sendData
+      sendData,
     );
 
     console.log('resultAPI : ', resultAPI);
@@ -320,9 +307,7 @@ export async function quickRegisterStep2(
     return { welcome_token: '', data: {}, error: errorData };
   }
 }
-export async function quickRegisterStep3(
-  param: any
-): Promise<QuickRegisterStep3> {
+export async function quickRegisterStep3(param: any): Promise<QuickRegisterStep3> {
   // return {
   //   data: { welcomeToken: 'test_welcome_token' },
   //   error: { code: '', erromessagerText: '' },
@@ -331,7 +316,7 @@ export async function quickRegisterStep3(
     let { welcome_token } = param;
     let resultAPI = await axios.post(
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/3',
-      { welcome_token }
+      { welcome_token },
     );
 
     console.log('resultAPI : ', resultAPI);
