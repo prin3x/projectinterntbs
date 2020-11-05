@@ -125,6 +125,25 @@ const Header = ({ t }: any) => {
                           </a>
                         </Link>
                       </li>
+                      <li className="listsub">
+                        <Link href="/product/location-based-sms">
+                          <a>
+                            <h6>Location Based SMS</h6>
+                            <p className="txtSub">เข้าถึงกลุ่มเป้าหมายในพื้นที่ ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</p>
+                          </a>
+                        </Link>
+                        <Link href="/product/global-sms">
+                          <a>
+                            <h6>Global SMS</h6>
+                            <p className="txtSub">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
+                          </a>
+                        </Link>
+                        <Link href="">
+                          <a>
+                            
+                          </a>
+                        </Link>
+                      </li>
                     </ul>
                   </li>
                   <li>
