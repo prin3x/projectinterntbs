@@ -6,65 +6,33 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('otpsimpleicon.otpheader')}</h3>
+            <h3>คู่มือการเชื่อมต่อ API</h3>
           </div>
         </div>
       </div>
-      <div className="row feature_checklist_wrap">
-        <div className="col-lg-3 col-md-6 col-12">
-          <div className="feature_checklist">
-            <div className="check_img">
-              <img
-                className="lazyload"
-                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/check_icon.png`}
-                alt="Image"
-              />
-            </div>
-            <div className="check_text">
-              <p>{t('otpsimpleicon.setting1')}</p>
-            </div>
+      <div className="row m-40">
+        <div className="col-lg-6">
+          <div className="track_box apipage">
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
+              alt="Image"
+            />
+            <p>API Manual</p>
+            <h4>Thai Version</h4>
+            <a href="">[Download]</a>
           </div>
         </div>
-        <div className="col-lg-3 col-md-6 col-12">
-          <div className="feature_checklist">
-            <div className="check_img">
-              <img
-                className="lazyload"
-                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/check_icon.png`}
-                alt="Image"
-              />
-            </div>
-            <div className="check_text">
-              <p>{t('otpsimpleicon.setting2')}</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-6 col-12">
-          <div className="feature_checklist">
-            <div className="check_img">
-              <img
-                className="lazyload"
-                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/check_icon.png`}
-                alt="Image"
-              />
-            </div>
-            <div className="check_text">
-              <p>{t('otpsimpleicon.setting3')}</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-6 col-12">
-          <div className="feature_checklist">
-            <div className="check_img">
-              <img
-                className="lazyload"
-                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/check_icon.png`}
-                alt="Image"
-              />
-            </div>
-            <div className="check_text">
-              <p>{t('otpsimpleicon.setting4')}</p>
-            </div>
+        <div className="col-lg-6">
+          <div className="track_box apipage v2">
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api02.png`}
+              alt="Image"
+            />
+            <p>API Manual</p>
+            <h4>English Version</h4>
+            <a href="">[Download]</a>
           </div>
         </div>
       </div>

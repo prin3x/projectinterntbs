@@ -9,7 +9,6 @@ import CtaSection from '../../../components/sms-api/CtaSection';
 import HeroSection from '../../../components/sms-api/HeroSection';
 import SimpleIconSection from '../../../components/sms-api/SimpleIconSection';
 import SmsSection from '../../../components/sms-api/SmsSection';
-import TrackSection from '../../../components/sms-api/TrackSection';
 import { withTranslation } from '../../../i18n';
 const SMS_API = ({ t }: any) => (
   <Layout>
@@ -28,7 +27,6 @@ const SMS_API = ({ t }: any) => (
       <HeroSection />
       <SmsSection />
       <SimpleIconSection />
-      <TrackSection />
       <CtaSection />
     </div>
     <BacktoTop />

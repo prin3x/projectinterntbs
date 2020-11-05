@@ -9,7 +9,7 @@ const CtaSectionV2 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className=" col-lg-12">
           <div className="cta-text">
-            <h3 dangerouslySetInnerHTML={{ __html: t('otpcta.title') }}></h3>
+            <h3>ต้องการใช้ SMS โดยเชื่อมต่อ API</h3>
             <a
               href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v7"
@@ -21,7 +21,7 @@ const CtaSectionV2 = ({ t }: any) => (
               className="btn otp2"
               target="_blank"
             >
-              ล็อกอิน
+              สอบถามเพิ่มเติม
             </a>
           </div>
         </div>
