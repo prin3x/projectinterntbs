@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
+
 const SimpleIconSection = ({ t }: any) => (
   <div className="simple_icon_section v2">
     <div className="container">
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>คู่มือการเชื่อมต่อ API</h3>
+            <h3>{t('SMSAPIPage:simpleIconSection.title')}</h3>
           </div>
         </div>
       </div>
@@ -18,9 +19,9 @@ const SimpleIconSection = ({ t }: any) => (
               data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
               alt="Image"
             />
-            <p>API Manual</p>
-            <h4>Thai Version</h4>
-            <a href="">[Download]</a>
+            <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-left-box')}</p>
+            <h4>{t('SMSAPIPage:simpleIconSection.title-left-box')}</h4>
+            <a href="">{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
           </div>
         </div>
         <div className="col-lg-6">
@@ -30,16 +31,16 @@ const SimpleIconSection = ({ t }: any) => (
               data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api02.png`}
               alt="Image"
             />
-            <p>API Manual</p>
-            <h4>English Version</h4>
-            <a href="">[Download]</a>
+            <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-right-box')}</p>
+            <h4>{t('SMSAPIPage:simpleIconSection.title-right-box')}</h4>
+            <a href="">{t('SMSAPIPage:simpleIconSection.button-right-box')}</a>
           </div>
         </div>
       </div>
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('otpsimpleicon.apiheader')}</h3>
+            <h3>{t('SMSAPIPage:simpleIconSection.title-bottom-box')}</h3>
           </div>
         </div>
       </div>
@@ -122,7 +123,7 @@ const SimpleIconSection = ({ t }: any) => (
         </div>
         <div className="col-md-12 text-center">
           <a className="lang_link" href="https://developer.thaibulksms.com/reference#otp">
-            {t('otpsimpleicon.apilink')}
+            {t('SMSAPIPage:simpleIconSection.button-bottom-box')}
             <img
               className="lazyload"
               data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_5.png`}
@@ -134,11 +135,13 @@ const SimpleIconSection = ({ t }: any) => (
     </div>
   </div>
 );
+
 SimpleIconSection.getInitialProps = async () => ({
-  namespacesRequired: ['OtpSimpleIconSection'],
+  namespacesRequired: ['SMSAPIPage'],
 });
 
 SimpleIconSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpSimpleIconSection')(SimpleIconSection);
+
+export default withTranslation('SMSAPIPage')(SimpleIconSection);

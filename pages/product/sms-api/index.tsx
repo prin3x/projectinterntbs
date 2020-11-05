@@ -5,11 +5,11 @@ import BacktoTop from '../../../components/BacktoTop';
 import Layout from '../../../components/Layout';
 import { seo } from '../../../components/seo/sms-api';
 import CtaSection from '../../../components/sms-api/CtaSection';
-// import Proloader from '../../components/Proloader';
 import HeroSection from '../../../components/sms-api/HeroSection';
 import SimpleIconSection from '../../../components/sms-api/SimpleIconSection';
 import SmsSection from '../../../components/sms-api/SmsSection';
 import { withTranslation } from '../../../i18n';
+
 const SMS_API = ({ t }: any) => (
   <Layout>
     <Head>
@@ -19,10 +19,9 @@ const SMS_API = ({ t }: any) => (
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('SMSAPIPage:meta.title')}
+      description={t('SMSAPIPage:meta.description')}
     />
-    {/* <Proloader /> */}
     <div className="page_wrapper">
       <HeroSection />
       <SmsSection />
@@ -32,14 +31,12 @@ const SMS_API = ({ t }: any) => (
     <BacktoTop />
   </Layout>
 );
-// Otp.getInitialProps = async () => ({
-//   namespacesRequired: ['OtpMeta'],
-// });
-export default withTranslation('OtpMeta')(SMS_API);
+
+export default withTranslation('SMSAPIPage')(SMS_API);
 export const getStaticProps = async () => {
   return {
     props: {
-      namespacesRequired: ['OtpMeta'],
+      namespacesRequired: ['SMSAPIPage'],
     },
   };
 };
