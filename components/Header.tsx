@@ -138,10 +138,9 @@ const Header = ({ t }: any) => {
                             <p className="txtSub">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
                           </a>
                         </Link>
-                        <Link href="/product/sms-api">
+                        <Link href="">
                           <a>
-                            <h6>SMS API</h6>
-                            <p className="txtSub">เพียงใช้งาน SMS API คุณก็ส่งข้อความได้บนแพลตฟอร์มของตนเอง</p>
+                            
                           </a>
                         </Link>
                       </li>
@@ -252,27 +251,6 @@ const Header = ({ t }: any) => {
                           <Link href="/product/otp">
                             <a  className="closemenu">
                               <h6>OTP Service</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/product/location-based-sms">
-                            <a  className="closemenu">
-                              <h6>Location Based SMS</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/product/global-sms">
-                            <a  className="closemenu">
-                              <h6>Global SMS</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/product/sms-api">
-                            <a  className="closemenu">
-                              <h6>SMS API</h6>
                             </a>
                           </Link>
                         </li>

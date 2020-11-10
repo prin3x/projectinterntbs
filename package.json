@@ -24,7 +24,7 @@
     "express": "^4.17.1",
     "fbq": "^0.1.4",
     "js-cookie": "^2.2.1",
-    "next": "9.4.1",
+    "next": "9.5.3",
     "next-i18next": "^4.4.2",
     "next-seo": "^4.7.3",
     "node-sass": "^4.14.1",
@@ -44,6 +44,7 @@
     "sass": "^1.26.5",
     "serve": "^11.3.0",
     "sweetalert2": "^9.17.0",
+    "swiper": "^6.3.5",
     "use-clipboard-copy": "^0.1.2",
     "webpack": "^4.43.0"
   },

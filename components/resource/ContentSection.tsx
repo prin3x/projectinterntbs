@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-const ContentSection = () => (
+import Link from 'next/link'
+import { format } from 'date-fns'
+import { parseFromTimeZone } from 'date-fns-timezone'
+import AppConfig from '../../appConfig';
+const ContentSection = ({ Posts }: any) => (
   <div className="resource_section">
     <div className="container">
       <div className="row align-items-center">
@@ -8,30 +12,26 @@ const ContentSection = () => (
           <div className="secKnowledge">
             <div className="headSection">
               <h3>ความรู้</h3>
-              <a href="">ดูทั้งหมด</a>
+              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
             </div>
             <div className="Knowledge">
-              <div className="secArticle">
-                <div className="img-article"></div>
-                <div className="text-article">
-                  <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                  <p>20-04-2020</p>
-                </div>
-              </div>
-              <div className="secArticle">
-                <div className="img-article"></div>
-                <div className="text-article">
-                  <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                  <p>20-04-2020</p>
-                </div>
-              </div>
-              <div className="secArticle">
-                <div className="img-article"></div>
-                <div className="text-article">
-                  <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                  <p>20-04-2020</p>
-                </div>
-              </div>
+              { //knowledge
+                !Posts.knowledge || Posts.knowledge.map((item, key) => (
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                    <a>
+                      <div className="secArticle" key={key}>
+                        <div className="img-article"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="text-article">
+                          <h4>{item.name}</h4>
+                          <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+                ))
+              }
+
+
             </div>
           </div>
         </div>
@@ -41,58 +41,74 @@ const ContentSection = () => (
           <div className="secUsecase">
             <div className="headSection">
               <h3>ตัวอย่างการใช้งาน</h3>
-              <a href="">ดูทั้งหมด</a>
+              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
             </div>
-            <div className="hilight">
-              <div className="img-hilight"></div>
-              <div className="text-hilight">
-                <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                <p>20-04-2020</p>
-              </div>
-            </div>
-            <div className="secArticle">
-              <div className="img-article"></div>
-              <div className="text-article">
-                <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                <p>20-04-2020</p>
-              </div>
-            </div>
-            <div className="secArticle">
-              <div className="img-article"></div>
-              <div className="text-article">
-                <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                <p>20-04-2020</p>
-              </div>
-            </div>
+            { //example
+              !Posts.example || Posts.example.map((item, key) => {
+
+                return key === 0 ?
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                    <a>
+                      <div className="hilight" key={key}>
+                        <div className="img-hilight"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="text-hilight">
+                          <h4>{item.name}</h4>
+                          <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+                  :
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                    <a>
+                      <div className="secArticle" key={key}>
+                        <div className="img-article"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="text-article">
+                          <h4>{item.name}</h4>
+                          <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+              })
+            }
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="secUsecase">
             <div className="headSection">
               <h3>เรื่องราวความสำเร็จ</h3>
-              <a href="">ดูทั้งหมด</a>
+              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
             </div>
-            <div className="hilight">
-              <div className="img-hilight"></div>
-              <div className="text-hilight">
-                <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                <p>20-04-2020</p>
-              </div>
-            </div>
-            <div className="secArticle">
-              <div className="img-article"></div>
-              <div className="text-article">
-                <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                <p>20-04-2020</p>
-              </div>
-            </div>
-            <div className="secArticle">
-              <div className="img-article"></div>
-              <div className="text-article">
-                <h4>ห้ามพลาด!! เทรนด์การตลาด ปี 2020</h4>
-                <p>20-04-2020</p>
-              </div>
-            </div>
+            { //successStory
+              !Posts.successStory || Posts.successStory.map((item, key) => {
+
+                return key === 0 ?
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                    <a>
+                      <div className="hilight" key={key}>
+                        <div className="img-hilight"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="text-hilight">
+                          <h4>{item.name}</h4>
+                          <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+                  :
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                    <a>
+                      <div className="secArticle" key={key}>
+                        <div className="img-article"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="text-article">
+                          <h4>{item.name}</h4>
+                          <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+              })
+            }
           </div>
         </div>
       </div>
