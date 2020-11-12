@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
+import Link from 'next/link'
 const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
     <div className="container">
@@ -37,12 +38,13 @@ const SmsSectionV3 = ({ t }: any) => (
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
+                  <Link href="/contact">
                   <a
-                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v8"
                   >
                     {t('SMSAPIPage:smsSection.button-on-box')}
                   </a>
+                  </Link>
                 </div>
               </div>
             </div>
