@@ -112,10 +112,10 @@ const Header = ({ t }: any) => {
                             <p className="txtSub">ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง ส่งง่าย วัดผลการส่งได้รวดเร็ว</p>
                           </a>
                         </Link>
-                        <Link href="/product/sms-tracking">
+                        <Link href="/product/sms-api">
                           <a>
-                            <h6>SMS Tracking</h6>
-                            <p className="txtSub">วัดผลแคมเปญ SMS แม่นยำ ไม่เสียงบการตลาดไปโดยเปล่าประโยชน์</p>
+                            <h6>SMS API</h6>
+                            <p className="txtSub">เพียงใช้งาน SMS API คุณก็ส่งข้อความได้บนแพลตฟอร์มของตนเอง</p>
                           </a>
                         </Link>
                         <Link href="/product/otp">
@@ -126,10 +126,10 @@ const Header = ({ t }: any) => {
                         </Link>
                       </li>
                       <li className="listsub">
-                        <Link href="/product/location-based-sms">
+                        <Link href="/product/sms-tracking">
                           <a>
-                            <h6>Location Based SMS</h6>
-                            <p className="txtSub">เข้าถึงกลุ่มเป้าหมายในพื้นที่ ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</p>
+                            <h6>SMS Tracking</h6>
+                            <p className="txtSub">วัดผลแคมเปญ SMS แม่นยำ ไม่เสียงบการตลาดไปโดยเปล่าประโยชน์</p>
                           </a>
                         </Link>
                         <Link href="/product/global-sms">
@@ -138,10 +138,10 @@ const Header = ({ t }: any) => {
                             <p className="txtSub">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
                           </a>
                         </Link>
-                        <Link href="/product/sms-api">
+                        <Link href="/product/location-based-sms">
                           <a>
-                            <h6>SMS API</h6>
-                            <p className="txtSub">เพียงใช้งาน SMS API คุณก็ส่งข้อความได้บนแพลตฟอร์มของตนเอง</p>
+                            <h6>Location Based SMS</h6>
+                            <p className="txtSub">เข้าถึงกลุ่มเป้าหมายในพื้นที่ ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</p>
                           </a>
                         </Link>
                       </li>
@@ -236,42 +236,42 @@ const Header = ({ t }: any) => {
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/product/smart-sms-console">
-                            <a  className="closemenu">
+                            <a className="closemenu">
                               <h6>Smart SMS Console</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/product/sms-tracking">
-                            <a  className="closemenu">
+                            <a className="closemenu">
                               <h6>SMS Tracking</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/product/otp">
-                            <a  className="closemenu">
+                            <a className="closemenu">
                               <h6>OTP Service</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/product/location-based-sms">
-                            <a  className="closemenu">
+                            <a className="closemenu">
                               <h6>Location Based SMS</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/product/global-sms">
-                            <a  className="closemenu">
+                            <a className="closemenu">
                               <h6>Global SMS</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/product/sms-api">
-                            <a  className="closemenu">
+                            <a className="closemenu">
                               <h6>SMS API</h6>
                             </a>
                           </Link>
@@ -387,13 +387,13 @@ const Header = ({ t }: any) => {
                       <a className="btn v1">{t(`header.buy-` + 'b')}</a>
                     </Link>
                   ) : (
-                    <a
-                      className="btn v1"
-                      href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                    >
-                      {t(`header.buy-` + 'a')}
-                    </a>
-                  )}
+                      <a
+                        className="btn v1"
+                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                      >
+                        {t(`header.buy-` + 'a')}
+                      </a>
+                    )}
                 </li>
               </ul>
             </div>

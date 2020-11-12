@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
+import Link from 'next/link'
 const CtaSectionV2 = ({ t }: any) => (
   <div
     className="cta_section v2 lazyload"
@@ -16,9 +17,11 @@ const CtaSectionV2 = ({ t }: any) => (
             >
               {t('SMSAPIPage:ctaSection.button-left')}
             </a>
-            <a href="" className="btn otp2" target="_blank">
-              {t('SMSAPIPage:ctaSection.button-right')}
-            </a>
+            <Link href="/contact">
+              <a  className="btn otp2">
+                {t('SMSAPIPage:ctaSection.button-right')}
+              </a>
+            </Link>
           </div>
         </div>
       </div>
