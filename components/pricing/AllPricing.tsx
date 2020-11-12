@@ -7,6 +7,8 @@ import TagManager from 'react-gtm-module';
 import classnames from 'classnames';
 import Cookie from 'js-cookie';
 import appConfig from '../../appConfig';
+import Swal from 'sweetalert2'
+import { decodeTBSToken } from '../../services/user/user.service';
 
 const SenderActive = 5;
 
@@ -17,10 +19,23 @@ const BuyPackage = (packageItem: ProductPackage) => {
   else if (appConfig.APP_ENV === appConfig.internalTest)
     domain = '.1mobyline.com';
 
+  const decodeToken = decodeTBSToken()
+  if (decodeToken && decodeToken.isSubaccount) {
+    Swal.fire({
+      title: 'แจ้งเตือน',
+      html: "<p style='font-size:15px;'>บัญชีของคุณเป็นบัญชีผู้ใช้สำรองไม่สามารถทำรายการสั่งซื้อได้ กรุณาติดต่อผู้ดูแลบัญชีผู้ใช้หลักของคุณเพื่อดำเนินการ</p>",
+      allowOutsideClick: false,
+      confirmButtonText: 'ปิด',
+    })
+    return
+  }
+
+
   Cookie.set('packageId', packageItem.productId.toString(), { domain });
   window.location.replace(
     `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment/`
   );
+
 };
 const showPackage = (packages: Product[], t: Function) => {
   let itemPackages: any = [];
@@ -70,7 +85,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     <h3>
                       {numeral(
                         productItem.standard.amount /
-                          productItem.standard.credit
+                        productItem.standard.credit
                       ).format('0.00')}
                       {` `}
                       <span>
@@ -120,7 +135,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     <h3>
                       {numeral(
                         productItem.corporate.amount /
-                          productItem.corporate.credit
+                        productItem.corporate.credit
                       ).format('0.00')}{' '}
                       <span>
                         {t('pricingallpricing.bath')}/

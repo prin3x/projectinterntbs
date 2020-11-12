@@ -37,7 +37,7 @@ const TabContent = ({ t }: any) => {
         <div className="row">
           <div className="col-12">
             <div className="tab-content" id="pills-tabContent">
-              <div className="tab-pane fade show active" id="pills-home" role="tabpanel">
+              <div className="tab-pane fade" id="pills-home" role="tabpanel">
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="d-flex align-items-start icon__box__wrapper">
@@ -187,7 +187,7 @@ const TabContent = ({ t }: any) => {
                 </div>
               </div>
               <div
-                className="tab-pane fade second__tab"
+                className="tab-pane fade show active second__tab"
                 id="pills-profile"
                 role="tabpanel"
               >
