@@ -56,11 +56,11 @@ const showPackage = (packages: Product[], t: Function) => {
       >
         <div className="col-md-4 box">
           {productItem.corporate.sender === SenderActive ? <div className="parent">
-            <h4 className="ribbon">สุดคุ้ม</h4>
+            <h4 className="ribbon">ขายดี</h4>
           </div> : null
           }
-          {parseInt(item) === 0 ? <div className="parent">
-            <h4 className="ribbon">ขายดี</h4>
+          {parseInt(item) === 1 ? <div className="parent">
+            <h4 className="ribbon">สำหรับมือใหม่</h4>
           </div> : null
           }
 
