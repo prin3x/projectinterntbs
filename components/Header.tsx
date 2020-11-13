@@ -242,9 +242,9 @@ const Header = ({ t }: any) => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/product/sms-tracking">
+                          <Link href="/product/sms-api">
                             <a className="closemenu">
-                              <h6>SMS Tracking</h6>
+                              <h6>SMS API</h6>
                             </a>
                           </Link>
                         </li>
@@ -256,9 +256,9 @@ const Header = ({ t }: any) => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/product/location-based-sms">
+                          <Link href="/product/sms-tracking">
                             <a className="closemenu">
-                              <h6>Location Based SMS</h6>
+                              <h6>SMS Tracking</h6>
                             </a>
                           </Link>
                         </li>
@@ -270,9 +270,9 @@ const Header = ({ t }: any) => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/product/sms-api">
+                          <Link href="/product/location-based-sms">
                             <a className="closemenu">
-                              <h6>SMS API</h6>
+                              <h6>Location Based SMS</h6>
                             </a>
                           </Link>
                         </li>
