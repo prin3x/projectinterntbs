@@ -299,11 +299,11 @@ const Header = ({ t }: any) => {
                       </ul>
                     </li>
                     <li className="has-children">
-                      <a className="active">เกียวกับบริษัท</a>
+                      <a className="active">ซัพพอร์ต</a>
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/pricing">
-                            <a className="closemenu">
+                            <a>
                               {t('header.pricing')}
                             </a>
                           </Link>
@@ -332,7 +332,7 @@ const Header = ({ t }: any) => {
                       </a>
                     </li>
                     <li className="has-children">
-                      <a className="active">ซัพพอร์ต</a>
+                      <a className="active">เกียวกับบริษัท</a>
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/why-thaibulksms">
@@ -341,7 +341,7 @@ const Header = ({ t }: any) => {
                         </li>
                         <li>
                           <Link href="/contact">
-                            <a className="closemenu">
+                            <a>
                               {t('header.contact')}
                             </a>
                           </Link>
