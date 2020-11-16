@@ -154,15 +154,15 @@ const Header = ({ t }: any) => {
                   </li>
                   <li className="has-children">
                     <a className="active">ซัพพอร์ต</a>
-                    <ul className="dropdown" style={{ minWidth: '200px', left: '-30%' }}>
+                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
                       <li>
                         <Link href="/support/how-to-order">
-                          <a >{t('header.howtoorder')}</a>
+                          <a><h6>{t('header.howtoorder')}</h6></a>
                         </Link>
                       </li>
                       <li>
                         <Link href="/support/faq">
-                          <a >คำถามที่พบบ่อย</a>
+                          <a ><h6>คำถามที่พบบ่อย</h6></a>
                         </Link>
                       </li>
                     </ul>
@@ -212,15 +212,15 @@ const Header = ({ t }: any) => {
                   </li>
                   <li className="has-children">
                     <a className="active">เกียวกับบริษัท</a>
-                    <ul className="dropdown" style={{ minWidth: '200px', left: '-30%' }}>
+                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
                       <li>
                         <Link href="/why-thaibulksms">
-                          <a>ทำไมต้อง ThaiBulkSMS</a>
+                          <a><h6>ทำไมต้อง ThaiBulkSMS</h6></a>
                         </Link>
                       </li>
                       <li>
                         <Link href="/contact">
-                          <a className="active">{t('header.contact')}</a>
+                          <a><h6>{t('header.contact')}</h6></a>
                         </Link>
                       </li>
                     </ul>
@@ -298,13 +298,20 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </li>
+                    <li>
+                      <Link href="/pricing">
+                        <a className="active closemenu">
+                          {t('header.pricing')}
+                        </a>
+                      </Link>
+                    </li>
                     <li className="has-children">
                       <a className="active">ซัพพอร์ต</a>
                       <ul className="collapse" id="collapseItem0">
                         <li>
-                          <Link href="/pricing">
+                          <Link href="/support/how-to-order">
                             <a>
-                              {t('header.pricing')}
+                              {t('header.howtoorder')}
                             </a>
                           </Link>
                         </li>
@@ -315,13 +322,7 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </li>
-                    <li>
-                      <Link href="/support/how-to-order">
-                        <a className="active closemenu">
-                          {t('header.howtoorder')}
-                        </a>
-                      </Link>
-                    </li>
+
                     <li>
                       <a
                         target="_blank"
