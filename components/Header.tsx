@@ -152,10 +152,20 @@ const Header = ({ t }: any) => {
                       <a className="active">{t('header.pricing')}</a>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/support/how-to-order">
-                      <a className="active">{t('header.howtoorder')}</a>
-                    </Link>
+                  <li className="has-children">
+                    <a className="active">ซัพพอร์ต</a>
+                    <ul className="dropdown" style={{ minWidth: '200px', left: '-30%' }}>
+                      <li>
+                        <Link href="/support/how-to-order">
+                          <a className="active">{t('header.howtoorder')}</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/support/faq">
+                          <a className="active">คำถามที่พบบ่อย</a>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                   {/* <li className="has-children">
                     <a className="active" >
@@ -200,10 +210,20 @@ const Header = ({ t }: any) => {
                       {t('header.documentation')}
                     </a>
                   </li>
-                  <li>
-                    <Link href="/contact">
-                      <a className="active">{t('header.contact')}</a>
-                    </Link>
+                  <li className="has-children">
+                    <a className="active">เกียวกับบริษัท</a>
+                    <ul className="dropdown" style={{ minWidth: '200px', left: '-30%' }}>
+                      <li>
+                        <Link href="/why-thaibulksms">
+                          <a>ทำไมต้อง ThaiBulkSMS</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">
+                          <a className="active">{t('header.contact')}</a>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </nav>
