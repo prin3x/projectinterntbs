@@ -6,7 +6,28 @@ import {
   QuickRegisterStep2,
   QuickRegisterStep3,
   Register,
+  AuthData
 } from './user.model';
+import * as jwt from 'jsonwebtoken';
+const TBSToken = 'TBS_token';
+export function decodeTBSToken(): AuthData | undefined {
+  const tbsToken = Cookie.get(TBSToken);
+  let decoded: any = {} as AuthData;
+
+  if (!tbsToken) {
+    logout();
+    return undefined;
+  }
+
+  try {
+    decoded = jwt.decode(tbsToken) as AuthData;
+  } catch (e) {
+    console.log(e);
+    return undefined;
+  }
+
+  return decoded;
+}
 // ------------------  login --------------------------------------------
 export async function login(param: any): Promise<AuthLogin> {
   try {

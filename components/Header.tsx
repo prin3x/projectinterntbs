@@ -112,16 +112,36 @@ const Header = ({ t }: any) => {
                             <p className="txtSub">ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง ส่งง่าย วัดผลการส่งได้รวดเร็ว</p>
                           </a>
                         </Link>
-                        <Link href="/product/sms-tracking">
+                        <Link href="/product/sms-api">
                           <a>
-                            <h6>SMS Tracking</h6>
-                            <p className="txtSub">วัดผลแคมเปญ SMS แม่นยำ ไม่เสียงบการตลาดไปโดยเปล่าประโยชน์</p>
+                            <h6>SMS API</h6>
+                            <p className="txtSub">เพียงใช้งาน SMS API คุณก็ส่งข้อความได้บนแพลตฟอร์มของตนเอง</p>
                           </a>
                         </Link>
                         <Link href="/product/otp">
                           <a>
                             <h6>OTP Service</h6>
                             <p className="txtSub">ระบบส่ง OTP พร้อมใช้ เพิ่มความปลอดภัยไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                          </a>
+                        </Link>
+                      </li>
+                      <li className="listsub">
+                        <Link href="/product/sms-tracking">
+                          <a>
+                            <h6>SMS Tracking</h6>
+                            <p className="txtSub">วัดผลแคมเปญ SMS แม่นยำ ไม่เสียงบการตลาดไปโดยเปล่าประโยชน์</p>
+                          </a>
+                        </Link>
+                        <Link href="/product/global-sms">
+                          <a>
+                            <h6>Global SMS</h6>
+                            <p className="txtSub">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
+                          </a>
+                        </Link>
+                        <Link href="/product/location-based-sms">
+                          <a>
+                            <h6>Location Based SMS</h6>
+                            <p className="txtSub">เข้าถึงกลุ่มเป้าหมายในพื้นที่ ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</p>
                           </a>
                         </Link>
                       </li>
@@ -132,10 +152,20 @@ const Header = ({ t }: any) => {
                       <a className="active">{t('header.pricing')}</a>
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/support/how-to-order">
-                      <a className="active">{t('header.howtoorder')}</a>
-                    </Link>
+                  <li className="has-children">
+                    <a className="active">ซัพพอร์ต</a>
+                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
+                      <li>
+                        <Link href="/support/how-to-order">
+                          <a><h6>{t('header.howtoorder')}</h6></a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/support/faq">
+                          <a ><h6>คำถามที่พบบ่อย</h6></a>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                   {/* <li className="has-children">
                     <a className="active" >
@@ -180,10 +210,20 @@ const Header = ({ t }: any) => {
                       {t('header.documentation')}
                     </a>
                   </li>
-                  <li>
-                    <Link href="/contact">
-                      <a className="active">{t('header.contact')}</a>
-                    </Link>
+                  <li className="has-children">
+                    <a className="active">เกียวกับบริษัท</a>
+                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
+                      <li>
+                        <Link href="/why-thaibulksms">
+                          <a><h6>ทำไมต้อง ThaiBulkSMS</h6></a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">
+                          <a><h6>{t('header.contact')}</h6></a>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </nav>
@@ -216,22 +256,43 @@ const Header = ({ t }: any) => {
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/product/smart-sms-console">
-                            <a  className="closemenu">
+                            <a className="closemenu">
                               <h6>Smart SMS Console</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/product/sms-tracking">
-                            <a  className="closemenu">
-                              <h6>SMS Tracking</h6>
+                          <Link href="/product/sms-api">
+                            <a className="closemenu">
+                              <h6>SMS API</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/product/otp">
-                            <a  className="closemenu">
+                            <a className="closemenu">
                               <h6>OTP Service</h6>
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/product/sms-tracking">
+                            <a className="closemenu">
+                              <h6>SMS Tracking</h6>
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/product/global-sms">
+                            <a className="closemenu">
+                              <h6>Global SMS</h6>
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/product/location-based-sms">
+                            <a className="closemenu">
+                              <h6>Location Based SMS</h6>
                             </a>
                           </Link>
                         </li>
@@ -244,51 +305,24 @@ const Header = ({ t }: any) => {
                         </a>
                       </Link>
                     </li>
-                    <li>
-                      <Link href="/support/how-to-order">
-                        <a className="active closemenu">
-                          {t('header.howtoorder')}
-                        </a>
-                      </Link>
-                    </li>
-                    {/* <li className="has-children">
-                      <span
-                        className="arrow-collapse collapsed"
-                        data-toggle="collapse"
-                        data-target="#collapseItem0"
-                      ></span>
-                      <a className="active">{t('header.database')}</a>
+                    <li className="has-children">
+                      <a className="active">ซัพพอร์ต</a>
                       <ul className="collapse" id="collapseItem0">
                         <li>
-                          <Link href="/ResourcesLanding">
-                            <a  className="closemenu">
-                              <h6>{t('header.resources')}</h6>
+                          <Link href="/support/how-to-order">
+                            <a>
+                              {t('header.howtoorder')}
                             </a>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/KnowledgeListing">
-                            <a  className="closemenu">
-                              <h6>{t('header.knowledge')}</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/UseCasesListing">
-                            <a  className="closemenu">
-                              <h6>{t('header.example')}</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/SuccessStoriesListing">
-                            <a  className="closemenu">
-                              <h6>{t('header.successstories')}</h6>
-                            </a>
+                          <Link href="/support/faq">
+                            <a >คำถามที่พบบ่อย</a>
                           </Link>
                         </li>
                       </ul>
-                    </li> */}
+                    </li>
+
                     <li>
                       <a
                         target="_blank"
@@ -298,12 +332,22 @@ const Header = ({ t }: any) => {
                         {t('header.documentation')}
                       </a>
                     </li>
-                    <li>
-                      <Link href="/contact">
-                        <a className="active closemenu">
-                          {t('header.contact')}
-                        </a>
-                      </Link>
+                    <li className="has-children">
+                      <a className="active">เกียวกับบริษัท</a>
+                      <ul className="collapse" id="collapseItem0">
+                        <li>
+                          <Link href="/why-thaibulksms">
+                            <a>ทำไมต้อง ThaiBulkSMS</a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/contact">
+                            <a>
+                              {t('header.contact')}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                   <div className="menu_btn">
@@ -346,13 +390,13 @@ const Header = ({ t }: any) => {
                       <a className="btn v1">{t(`header.buy-` + 'b')}</a>
                     </Link>
                   ) : (
-                    <a
-                      className="btn v1"
-                      href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                    >
-                      {t(`header.buy-` + 'a')}
-                    </a>
-                  )}
+                      <a
+                        className="btn v1"
+                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                      >
+                        {t(`header.buy-` + 'a')}
+                      </a>
+                    )}
                 </li>
               </ul>
             </div>

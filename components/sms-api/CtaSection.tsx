@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-const CtaSectionV2 = ({}: any) => (
+import Link from 'next/link'
+const CtaSectionV2 = ({ t }: any) => (
   <div
     className="cta_section v2 lazyload"
     data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
@@ -9,34 +10,31 @@ const CtaSectionV2 = ({}: any) => (
       <div className="row align-items-center">
         <div className=" col-lg-12">
           <div className="cta-text">
-            <h3>
-              ส่งข้อความผ่านเว็บ ThaiBulkSMS ได้ง่าย
-              <br />
-              ทำเองได้ ไม่ต้องพึ่ง Developer
-            </h3>
+            <h3>{t('SMSAPIPage:ctaSection.title')}</h3>
             <a
               href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v7"
             >
-              ทดลองใช้ฟรี
+              {t('SMSAPIPage:ctaSection.button-left')}
             </a>
-            <a
-              href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-              className="btn otp2"
-            >
-              ล็อกอิน
-            </a>
+            <Link href="/contact">
+              <a  className="btn otp2">
+                {t('SMSAPIPage:ctaSection.button-right')}
+              </a>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   </div>
 );
+
 CtaSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['OtpCtaSection'],
+  namespacesRequired: ['SMSAPIPage'],
 });
 
 CtaSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpCtaSection')(CtaSectionV2);
+
+export default withTranslation('SMSAPIPage')(CtaSectionV2);
