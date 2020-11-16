@@ -157,12 +157,12 @@ const Header = ({ t }: any) => {
                     <ul className="dropdown" style={{ minWidth: '200px', left: '-30%' }}>
                       <li>
                         <Link href="/support/how-to-order">
-                          <a className="active">{t('header.howtoorder')}</a>
+                          <a >{t('header.howtoorder')}</a>
                         </Link>
                       </li>
                       <li>
                         <Link href="/support/faq">
-                          <a className="active">คำถามที่พบบ่อย</a>
+                          <a >คำถามที่พบบ่อย</a>
                         </Link>
                       </li>
                     </ul>
@@ -298,12 +298,22 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </li>
-                    <li>
-                      <Link href="/pricing">
-                        <a className="active closemenu">
-                          {t('header.pricing')}
-                        </a>
-                      </Link>
+                    <li className="has-children">
+                      <a className="active">เกียวกับบริษัท</a>
+                      <ul className="collapse" id="collapseItem0">
+                        <li>
+                          <Link href="/pricing">
+                            <a className="closemenu">
+                              {t('header.pricing')}
+                            </a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/support/faq">
+                            <a >คำถามที่พบบ่อย</a>
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <Link href="/support/how-to-order">
@@ -312,44 +322,6 @@ const Header = ({ t }: any) => {
                         </a>
                       </Link>
                     </li>
-                    {/* <li className="has-children">
-                      <span
-                        className="arrow-collapse collapsed"
-                        data-toggle="collapse"
-                        data-target="#collapseItem0"
-                      ></span>
-                      <a className="active">{t('header.database')}</a>
-                      <ul className="collapse" id="collapseItem0">
-                        <li>
-                          <Link href="/ResourcesLanding">
-                            <a  className="closemenu">
-                              <h6>{t('header.resources')}</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/KnowledgeListing">
-                            <a  className="closemenu">
-                              <h6>{t('header.knowledge')}</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/UseCasesListing">
-                            <a  className="closemenu">
-                              <h6>{t('header.example')}</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/SuccessStoriesListing">
-                            <a  className="closemenu">
-                              <h6>{t('header.successstories')}</h6>
-                            </a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </li> */}
                     <li>
                       <a
                         target="_blank"
@@ -359,12 +331,22 @@ const Header = ({ t }: any) => {
                         {t('header.documentation')}
                       </a>
                     </li>
-                    <li>
-                      <Link href="/contact">
-                        <a className="active closemenu">
-                          {t('header.contact')}
-                        </a>
-                      </Link>
+                    <li className="has-children">
+                      <a className="active">ซัพพอร์ต</a>
+                      <ul className="collapse" id="collapseItem0">
+                        <li>
+                          <Link href="/why-thaibulksms">
+                            <a>ทำไมต้อง ThaiBulkSMS</a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/contact">
+                            <a className="closemenu">
+                              {t('header.contact')}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                   <div className="menu_btn">
