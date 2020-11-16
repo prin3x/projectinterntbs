@@ -1,6 +1,6 @@
 {
   "header": {
-    "product": "บริการ",
+    "product": "ผลิตภัณฑ์",
     "pricing": "ราคา",
     "howtoorder": "วิธีสั่งซื้อ",
     "database": "คลังข้อมูล",
@@ -11,7 +11,7 @@
     "documentation": "สำหรับนักพัฒนา",
     "contact": "ติดต่อเรา",
     "login-a": "ล็อกอิน",
-    "login-b": "ส่ง SMS",
+    "login-b": "เข้าใช้ระบบ",
     "logout": "Logout",
     "buy-a": "ทดลองส่งฟรี",
     "buy-b": "ซื้อเลย"

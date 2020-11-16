@@ -2,18 +2,32 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Link, withTranslation } from '../i18n';
 const Footer = ({ t }: any) => {
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
   return (
     <div className="footer_section">
       <div className="container" id="footer">
         <div className="row">
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-            <Link href="/product"><a><h4>{t('footer.service')}</h4></a></Link>
+              <Link href="/product">
+                <a>
+                  <h4>{t('footer.service')}</h4>
+                </a>
+              </Link>
               <ul>
                 <li>
                   <Link href="/product/smart-sms-console">
                     <a>Smart SMS Console</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/product/sms-api">
+                    <a>SMS API</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/product/otp">
+                    <a>OTP Service</a>
                   </Link>
                 </li>
                 <li>
@@ -22,8 +36,13 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/product/otp">
-                    <a>OTP Service</a>
+                  <Link href="/product/global-sms">
+                    <a>Global SMS</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/product/location-based-sms">
+                    <a>Location Based SMS</a>
                   </Link>
                 </li>
               </ul>
@@ -90,6 +109,11 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/reseller">
+                    <a>SMS Reseller</a>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/contact">
                     <a>ติดต่อเรา</a>
                   </Link>
@@ -99,7 +123,6 @@ const Footer = ({ t }: any) => {
           </div>
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-
               <h4>
                 {t('footer.about')}
                 <a href="https://www.facebook.com/ThaiBulkSMS" target="_blank">
@@ -111,7 +134,6 @@ const Footer = ({ t }: any) => {
                   />
                 </a>
               </h4>
-
             </div>
           </div>
           <div className="col-12 md-none">
