@@ -1,5 +1,5 @@
-import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
+import { Link, withTranslation } from '../../i18n';
 const WhyPriceSection = ({ t }: any) => (
   <div className="simple_icon_section v2 bg-whyBottom">
     <div className="container">
@@ -18,13 +18,11 @@ const WhyPriceSection = ({ t }: any) => (
                 backgroundColor: '#fff',
               }}
             >
-              <h3>
-                Standard Package
-              </h3>
+              <h3>Standard Package</h3>
               <ul className="pricing_feature">
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>ราคาถูกกว่า</p>
+                  <p>ส่งข้อความราคาถูกกว่า</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
@@ -40,12 +38,10 @@ const WhyPriceSection = ({ t }: any) => (
                 </li>
               </ul>
               <div className="price_plan">
-                <span>ราคาดีที่สุดเพียง</span>
+                <span>ราคา SMS ดีที่สุดเพียง</span>
                 <h2>
                   0.28
-                  <span style={{ marginLeft: '10px' }}>
-                    บาท / SMS
-                  </span>
+                  <span style={{ marginLeft: '10px' }}>บาท / SMS</span>
                 </h2>
               </div>
             </div>
@@ -58,9 +54,7 @@ const WhyPriceSection = ({ t }: any) => (
                 backgroundColor: '#fff',
               }}
             >
-              <h3>
-                Corporate Package
-              </h3>
+              <h3>Corporate Package</h3>
               <ul className="pricing_feature">
                 <li>
                   <i className="far fa-check-circle"></i>
@@ -80,12 +74,10 @@ const WhyPriceSection = ({ t }: any) => (
                 </li>
               </ul>
               <div className="price_plan">
-                <span>ราคาดีที่สุดเพียง</span>
+                <span>ราคา SMS ดีที่สุดเพียง</span>
                 <h2>
                   0.34
-                  <span style={{ marginLeft: '10px' }}>
-                    บาท / SMS
-                  </span>
+                  <span style={{ marginLeft: '10px' }}>บาท / SMS</span>
                 </h2>
               </div>
             </div>
@@ -101,7 +93,6 @@ const WhyPriceSection = ({ t }: any) => (
           </Link>
         </div>
       </div>
-
     </div>
   </div>
 );

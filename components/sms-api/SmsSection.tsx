@@ -7,19 +7,21 @@ const SmsSectionV3 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3
+            <h3>{t('SMSAPIPage:smsSection.title')}</h3>
+            <p>{t('SMSAPIPage:smsSection.description')}</p>
+            <ul
+              className="api-des"
               dangerouslySetInnerHTML={{
-                __html: t('GlobalSMSPage:smsSection.title'),
+                __html: t('SMSAPIPage:smsSection.detail'),
               }}
-            ></h3>
-            <p>{t('GlobalSMSPage:smsSection.description')}</p>
+            ></ul>
           </div>
         </div>
         <div className="col-lg-7">
           <div className="newsletter_img">
             <img
               className="lazyload"
-              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-global01.png`}
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-aw-api01.png`}
               alt="Image"
             />
           </div>
@@ -31,15 +33,17 @@ const SmsSectionV3 = ({ t }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>{t('GlobalSMSPage:smsSection.title-on-box')}</h4>
+                  <h4>{t('SMSAPIPage:smsSection.title-on-box')}</h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
                   <Link href="/contact">
-                    <a className="btn v8">
-                      {t('GlobalSMSPage:smsSection.button-on-box')}
-                    </a>
+                  <a
+                    className="btn v8"
+                  >
+                    {t('SMSAPIPage:smsSection.button-on-box')}
+                  </a>
                   </Link>
                 </div>
               </div>
@@ -52,10 +56,10 @@ const SmsSectionV3 = ({ t }: any) => (
 );
 
 SmsSectionV3.getInitialProps = async () => ({
-  namespacesRequired: ['GlobalSMSPage'],
+  namespacesRequired: ['SMSAPIPage'],
 });
 
 SmsSectionV3.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('GlobalSMSPage')(SmsSectionV3);
+export default withTranslation('SMSAPIPage')(SmsSectionV3);
