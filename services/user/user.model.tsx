@@ -1,3 +1,16 @@
+export interface AuthData {
+  aud: string;
+  exp: number;
+  expire: string;
+  iat: number;
+  isTrial: true;
+  iss: string;
+  joinDate: string;
+  sub: string;
+  username: string;
+  isSubaccount: boolean;
+}
+
 export interface AuthLogin {
   token: string;
   isCompletedProfile: string;
@@ -74,12 +87,12 @@ export interface UserAddress {
   shipToAddress: ShipToAddress
 }
 
-export enum UserType{
+export enum UserType {
   Company = 'company',
   Individual = 'individual'
 }
 
-export interface UpdateUserAddress{
+export interface UpdateUserAddress {
   type: string,
   ship_to_contact_point: string,
   ship_to_address: string,

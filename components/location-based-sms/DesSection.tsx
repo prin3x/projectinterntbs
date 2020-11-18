@@ -35,7 +35,7 @@ const SimpleIconSection = ({ t }: any) => (
             <h4>
               <span>{t('LocationBasedSMSPage:desSection.title-right-box')}</span>
             </h4>
-            <p>{t('LocationBasedSMSPage:desSection.description-left-box')}</p>
+            <p>{t('LocationBasedSMSPage:desSection.description-right-box')}</p>
           </div>
         </div>
       </div>

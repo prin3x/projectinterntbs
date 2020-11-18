@@ -21,13 +21,28 @@ const Footer = ({ t }: any) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/product/sms-tracking">
-                    <a>SMS Tracking</a>
+                  <Link href="/product/sms-api">
+                    <a>SMS API</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/product/otp">
                     <a>OTP Service</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/product/sms-tracking">
+                    <a>SMS Tracking</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/product/global-sms">
+                    <a>Global SMS</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/product/location-based-sms">
+                    <a>Location Based SMS</a>
                   </Link>
                 </li>
               </ul>

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
+import Link from 'next/link'
 const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
     <div className="container">
@@ -35,9 +36,11 @@ const SmsSectionV3 = ({ t }: any) => (
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
-                  <a href={``} className="btn v8">
-                    {t('GlobalSMSPage:smsSection.button-on-box')}
-                  </a>
+                  <Link href="/contact">
+                    <a className="btn v8">
+                      {t('GlobalSMSPage:smsSection.button-on-box')}
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -12,21 +12,21 @@
   "smsSection": {
     "title": "SMS API สำหรับ Developer",
     "description": "เชื่อมต่อด้วยภาษาที่คุณเลือก ด้วยระบบ API ของ ThaiBulkSMS",
-    "detail": "<li>มั่นใจ เชื่อถือได้ เรื่องความเสถียร</li><li>รับรองความปลอดภัยในการเชื่อมต่อ API</li><li>เชื่อมต่อง่ายด้วยตนเอง ภายใน 5 นาที</li><li>รองรับการใช้งานมากกว่า 10 ภาษา</li>",
+    "detail": "<li><div>มั่นใจ เชื่อถือได้ เรื่องความเสถียร</div></li><li><div>รับรองความปลอดภัยในการเชื่อมต่อ API</div></li><li><div>เชื่อมต่อง่ายด้วยตนเอง ภายใน 5 นาที</div></li><li><div>รองรับการใช้งานมากกว่า 10 ภาษา</div></li>",
     "title-on-box": "ติดปัญหาหรือมีข้อสงสัยเกี่ยวกับการเชื่อมต่อ API",
     "button-on-box": "สอบถามผู้เชี่ยวชาญ"
   },
 
   "simpleIconSection": {
-    "title": "คู่มือการเชื่อมต่อ API",
-    "breadcrumb-left-box": "API Manual",
+    "title": "คู่มือการเชื่อมต่อ SMS API",
+    "breadcrumb-left-box": "SMS API Manual",
     "title-left-box": "Thai Version",
-    "button-left-box": "[Download]",
-    "breadcrumb-right-box": "API Manual",
+    "button-left-box": "[ดาวน์โหลด]",
+    "breadcrumb-right-box": "SMS API Manual",
     "title-right-box": "English Version",
-    "button-right-box": "[Download]",
-    "title-bottom-box": "สามารถใช้งานได้ หลากหลายภาษา",
-    "button-bottom-box": "เรียนรู้เพิ่มเติมเกี่ยวกับ OTP API"
+    "button-right-box": "[ดาวน์โหลด]",
+    "title-bottom-box": "เชื่อมต่อ SMS API ได้หลากหลายภาษา",
+    "button-bottom-box": "ดาวน์โหลดตัวอย่างโค้ดเพิ่มเติม"
   },
 
   "ctaSection": {
