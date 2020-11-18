@@ -73,7 +73,7 @@ const tagManagerArgs = {
 
 axios.interceptors.request.use((config) => {
   const jwtToken = Cookie.get('TBS_token');
-  if (jwtToken !== null) {
+  if (jwtToken) {
     config.headers['Authorization'] = `Bearer ${jwtToken}`;
   }
   return config;
