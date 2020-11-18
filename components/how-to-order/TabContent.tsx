@@ -4,6 +4,9 @@ import Modal from 'react-modal';
 import Swal from 'sweetalert2';
 import { useClipboard } from 'use-clipboard-copy';
 import { Link, withTranslation } from '../../i18n';
+import { useRouter } from 'next/router';
+
+const classnames = require('classnames');
 const TabContent = ({ t }: any) => {
   const [tab, setTab] = React.useState<any>();
   const [showModalbank, setShowModalbank] = useState(false);
@@ -11,11 +14,20 @@ const TabContent = ({ t }: any) => {
   const [showModalcredit, setShowModalcredit] = useState(false);
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const clipboard = useClipboard();
+  const [defaultTab, setDefaultTab] = React.useState('pills-home')
+  const router = useRouter()
+
   React.useEffect(() => {
+    if (!router.query.tab) {
+      console.warn('have not tab')
+      return
+    }
+
+    setDefaultTab(`${router.query.tab}`)
     setTab($('#pills-profile-tab'));
     Modal.setAppElement('#ElementModal');
     // }, [tab]);
-  }, []);
+  }, [router, setDefaultTab]);
 
   const onClipboard = (text: string) => {
     clipboard.copy(text);
@@ -37,7 +49,7 @@ const TabContent = ({ t }: any) => {
         <div className="row">
           <div className="col-12">
             <div className="tab-content" id="pills-tabContent">
-              <div className="tab-pane fade" id="pills-home" role="tabpanel">
+              <div className={classnames('tab-pane fade', { active: defaultTab === 'pills-home' }, { show: defaultTab === 'pills-home' })} id="pills-home" role="tabpanel">
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="d-flex align-items-start icon__box__wrapper">
@@ -187,7 +199,8 @@ const TabContent = ({ t }: any) => {
                 </div>
               </div>
               <div
-                className="tab-pane fade show active second__tab"
+                className={classnames('tab-pane fade second__tab', { active: defaultTab === 'pills-profile' }, { show: defaultTab === 'pills-profile' })}
+                // className="tab-pane fade second__tab" 
                 id="pills-profile"
                 role="tabpanel"
               >
@@ -654,7 +667,7 @@ const TabContent = ({ t }: any) => {
       <div id="ElementModal">
         <Modal
           isOpen={modalIsOpen}
-          onRequestClose={() => {}}
+          onRequestClose={() => { }}
           className="modalClass"
           contentLabel=""
         >
