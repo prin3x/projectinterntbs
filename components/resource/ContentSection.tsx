@@ -20,7 +20,7 @@ const ContentSection = ({ Posts }: any) => (
                   <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
                     <a>
                       <div className="secArticle" key={key}>
-                        <div className="img-article"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="img-article"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-article">
                           <h4>{item.name}</h4>
                           <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
@@ -50,7 +50,7 @@ const ContentSection = ({ Posts }: any) => (
                   <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
                     <a>
                       <div className="hilight" key={key}>
-                        <div className="img-hilight"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="img-hilight"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-hilight">
                           <h4>{item.name}</h4>
                           <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
@@ -62,7 +62,7 @@ const ContentSection = ({ Posts }: any) => (
                   <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
                     <a>
                       <div className="secArticle" key={key}>
-                        <div className="img-article"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="img-article"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-article">
                           <h4>{item.name}</h4>
                           <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
@@ -87,7 +87,7 @@ const ContentSection = ({ Posts }: any) => (
                   <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
                     <a>
                       <div className="hilight" key={key}>
-                        <div className="img-hilight"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="img-hilight"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-hilight">
                           <h4>{item.name}</h4>
                           <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
@@ -99,7 +99,7 @@ const ContentSection = ({ Posts }: any) => (
                   <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
                     <a>
                       <div className="secArticle" key={key}>
-                        <div className="img-article"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="img-article"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-article">
                           <h4>{item.name}</h4>
                           <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>

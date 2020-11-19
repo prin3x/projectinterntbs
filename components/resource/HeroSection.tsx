@@ -16,7 +16,7 @@ const ContentSection = ({ Posts }: any) => (
   <div
     className="hero_section lazyload"
     data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-resource.jpg`}
-  >{console.log(Posts)}
+  >
     <div className="container">
       <div className="row justify-content-center hero_top_one">
         <div className="col-12 text-center">
