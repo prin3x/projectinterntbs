@@ -6,10 +6,7 @@ import { parseFromTimeZone } from 'date-fns-timezone'
 import { withTranslation } from '../../i18n';
 
 // Import Swiper styles
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-import 'swiper/components/scrollbar/scrollbar.scss';
+
 
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 const ContentSection = ({ Posts }: any) => (
