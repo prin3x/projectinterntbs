@@ -40,7 +40,7 @@ const ContentSection = ({ Posts }: any) => (
                   <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
                     <a>
                       <div className="sliderResource">
-                        <div className="imgSlider"><img src={item.cover_image.url} alt={item.name} /></div>
+                        <div className="imgSlider"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="textSlider">
                           <h4>{item.name}</h4>
                           <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
