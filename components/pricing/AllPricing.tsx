@@ -65,7 +65,7 @@ const showPackage = (packages: Product[], t: Function) => {
           }
 
           <div className="left__box">
-            <h3>{numeral(productItem.amount).format('0,0')}</h3>
+        <h3>{numeral(productItem.amount).format('0,0')}{` `}<span>บาท</span></h3>
             <span>
               {t('pricingallpricing.life')} {`${productItem.period} `}
               {t('pricingallpricing.month')}

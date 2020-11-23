@@ -205,7 +205,7 @@ const TabContent = ({ t }: any) => {
                 role="tabpanel"
               >
                 <div className="row justify-content-center paymentImg">
-                  <div className="col-lg-8">
+                  <div className="col-lg-10">
                     <div className="box__wrapper">
                       <div className="box__header">
                         <h5>{t('howtoordertabcontent.payment.creditnow.header')}</h5>
