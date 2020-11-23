@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "title": "SMS API | ThaiBulkSMS",
+    "description": "SMS API",
+    "keywords": ""
+  },
+
+  "heroSection": {
+    "title": "<span>เพียงใช้งาน SMS API</span><br />คุณก็ส่งข้อความได้บนแพลตฟอร์มของตนเอง"
+  },
+
+  "smsSection": {
+    "title": "SMS API สำหรับ Developer",
+    "description": "เชื่อมต่อด้วยภาษาที่คุณเลือก ด้วยระบบ API ของ ThaiBulkSMS",
+    "detail": "<li><div>มั่นใจ เชื่อถือได้ เรื่องความเสถียร</div></li><li><div>รับรองความปลอดภัยในการเชื่อมต่อ API</div></li><li><div>เชื่อมต่อง่ายด้วยตนเอง ภายใน 5 นาที</div></li><li><div>รองรับการใช้งานมากกว่า 10 ภาษา</div></li>",
+    "title-on-box": "ติดปัญหาหรือมีข้อสงสัยเกี่ยวกับการเชื่อมต่อ API",
+    "button-on-box": "สอบถามผู้เชี่ยวชาญ"
+  },
+
+  "simpleIconSection": {
+    "title": "คู่มือการเชื่อมต่อ SMS API",
+    "breadcrumb-left-box": "SMS API Manual",
+    "title-left-box": "Thai Version",
+    "button-left-box": "[ดาวน์โหลด]",
+    "breadcrumb-right-box": "SMS API Manual",
+    "title-right-box": "English Version",
+    "button-right-box": "[ดาวน์โหลด]",
+    "title-bottom-box": "เชื่อมต่อ SMS API ได้หลากหลายภาษา",
+    "button-bottom-box": "ดาวน์โหลดตัวอย่างโค้ดเพิ่มเติม"
+  },
+
+  "ctaSection": {
+    "title": "ต้องการใช้ SMS โดยเชื่อมต่อ API",
+    "button-left": "ทดลองใช้ฟรี",
+    "button-right": "สอบถามเพิ่มเติม"
+  }
+}
