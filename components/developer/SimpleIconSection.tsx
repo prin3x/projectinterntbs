@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 
 const SimpleIconSection = ({ t }: any) => (
   <div className="hero_section v3 lazyload" data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}>
