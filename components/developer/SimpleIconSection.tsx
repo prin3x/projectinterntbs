@@ -1,46 +1,74 @@
 import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 
 const SimpleIconSection = ({ t }: any) => (
-  <div className="simple_icon_section v2">
+  <div className="hero_section v3 lazyload" data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}>
     <div className="container">
-      <div className="row">
-        <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
-          <div className="simple_icon_title">
+      <div className="row mt-80">
+        <div className="col-xl-8 col-md-12 mt-80">
+          <div className="simple_icon_title dev-page">
             <h3>{t('SMSAPIPage:simpleIconSection.title')}</h3>
+            <div className="row m-40">
+              <div className="col-lg-6">
+                <div className="track_box apipage">
+                  <img
+                    className="lazyload"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
+                    alt="Image"
+                  />
+                  <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-left-box')}</p>
+                  <h4>{t('SMSAPIPage:simpleIconSection.title-left-box')}</h4>
+                  <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_TH.pdf`}>{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="track_box apipage v2">
+                  <img
+                    className="lazyload"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api02.png`}
+                    alt="Image"
+                  />
+                  <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-right-box')}</p>
+                  <h4>{t('SMSAPIPage:simpleIconSection.title-right-box')}</h4>
+                  <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_EN.pdf`}>{t('SMSAPIPage:simpleIconSection.button-right-box')}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-xl-4 col-md-12 mt-80">
+          <div className="simple_icon_title  dev-page">
+            <h3>คู่มือการใช้งาน OTP Service</h3>
+            <div className="row m-40">
+              <div className="col-lg-12">
+                <div className="track_box apipage">
+                  <img
+                    className="lazyload"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
+                    alt="Image"
+                  />
+                  <p>OTP Service Manual</p>
+                  <h4>{t('SMSAPIPage:simpleIconSection.title-left-box')}</h4>
+                  <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_TH.pdf`}>{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="row m-40">
-        <div className="col-lg-6">
-          <div className="track_box apipage">
-            <img
-              className="lazyload"
-              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
-              alt="Image"
-            />
-            <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-left-box')}</p>
-            <h4>{t('SMSAPIPage:simpleIconSection.title-left-box')}</h4>
-            <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_TH.pdf`}>{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="track_box apipage v2">
-            <img
-              className="lazyload"
-              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api02.png`}
-              alt="Image"
-            />
-            <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-right-box')}</p>
-            <h4>{t('SMSAPIPage:simpleIconSection.title-right-box')}</h4>
-            <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_EN.pdf`}>{t('SMSAPIPage:simpleIconSection.button-right-box')}</a>
-          </div>
+      
+      <div className="row">
+        <div className="col-xl-12 btn-api-ref">
+          <Link href="/contact">
+            <a className="btn v3">ดู API Reference</a>
+          </Link>
         </div>
       </div>
+
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('SMSAPIPage:simpleIconSection.title-bottom-box')}</h3>
+            <h3>ตัวอย่าง SDK</h3>
             <p>ดาวน์โหลดตัวอย่าง SDK ภาษาที่คุณต้องการ</p>
           </div>
         </div>
@@ -52,85 +80,123 @@ const SimpleIconSection = ({ t }: any) => (
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api01.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang01.svg`}
                   alt="Image"
                 />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api02.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang02.svg`}
                   alt="Image"
                 />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api03.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang03.svg`}
                   alt="Image"
                 />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api04.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang04.svg`}
                   alt="Image"
                 />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api05.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang05.svg`}
                   alt="Image"
                 />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api06.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang06.svg`}
                   alt="Image"
                 />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api07.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang07.svg`}
                   alt="Image"
                 />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api08.svg`}
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang08.svg`}
                   alt="Image"
                 />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3 col-3">
+              <div className="single_lang">
+                <img
+                  className="lazyload"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang09.svg`}
+                  alt="Image"
+                />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3 col-3">
+              <div className="single_lang">
+                <img
+                  className="lazyload"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang10.svg`}
+                  alt="Image"
+                />
+                <a className="lang_link" target="_blank" href="">
+                  [ดาวน์โหลด]
+                </a>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col-md-12 text-center">
-          <a className="lang_link" target="_blank" href="https://drive.google.com/drive/folders/1VzLngYTjT49vOBHQlGHnQQF_ALGE2irQ?usp=sharing">
-            {t('SMSAPIPage:simpleIconSection.button-bottom-box')}
-            <img
-              className="lazyload"
-              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_5.png`}
-              alt="Image"
-            />
-          </a>
         </div>
       </div>
     </div>

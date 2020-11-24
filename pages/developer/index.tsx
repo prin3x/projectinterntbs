@@ -5,9 +5,7 @@ import BacktoTop from '../../components/BacktoTop';
 import Layout from '../../components/Layout';
 import { seo } from '../../components/seo/developer';
 import CtaSection from '../../components/developer/CtaSection';
-import HeroSection from '../../components/developer/HeroSection';
 import SimpleIconSection from '../../components/developer/SimpleIconSection';
-import SmsSection from '../../components/developer/SmsSection';
 import { withTranslation } from '../../i18n';
 
 const Developer = ({ t }: any) => (
@@ -23,8 +21,6 @@ const Developer = ({ t }: any) => (
       description={t('DeveloperPage:meta.description')}
     />
     <div className="page_wrapper">
-      <HeroSection />
-      <SmsSection />
       <SimpleIconSection />
       <CtaSection />
     </div>
