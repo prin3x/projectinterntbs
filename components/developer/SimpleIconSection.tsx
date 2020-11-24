@@ -49,7 +49,7 @@ const SimpleIconSection = ({ t }: any) => (
                   />
                   <p>OTP Service Manual</p>
                   <h4>{t('SMSAPIPage:simpleIconSection.title-left-box')}</h4>
-                  <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_TH.pdf`}>{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
+                  <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/Thaibulksms-otp.pdf`}>{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
                 </div>
               </div>
             </div>
@@ -59,9 +59,9 @@ const SimpleIconSection = ({ t }: any) => (
       
       <div className="row">
         <div className="col-xl-12 btn-api-ref">
-          <Link href="/contact">
-            <a className="btn v3">ดู API Reference</a>
-          </Link>
+         
+            <a className="btn v3" target="_blank" href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}>ดู API Reference</a>
+    
         </div>
       </div>
 
@@ -83,7 +83,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang01.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-PHP.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -95,7 +95,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang02.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-VB.NET.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -107,7 +107,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang03.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-C.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -119,7 +119,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang04.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-C++.NET.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -131,7 +131,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang05.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-CShap.NET.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -143,7 +143,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang06.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-ObjC.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -155,7 +155,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang07.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaiBulkSMS_ClassicASP_NoParser.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -167,7 +167,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang08.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-ActionScript.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -179,7 +179,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang09.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Python.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
@@ -191,7 +191,7 @@ const SimpleIconSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang10.svg`}
                   alt="Image"
                 />
-                <a className="lang_link" target="_blank" href="">
+                <a className="lang_link" target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-JavaScript.zip`}>
                   [ดาวน์โหลด]
                 </a>
               </div>
