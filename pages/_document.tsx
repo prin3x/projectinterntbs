@@ -52,6 +52,7 @@ class MyDocument extends Document {
             href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/responsive.css`}
             rel="stylesheet"
           />
+          <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
           <link
             rel="apple-touch-icon"
             sizes="57x57"
