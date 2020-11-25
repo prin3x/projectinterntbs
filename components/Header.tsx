@@ -281,26 +281,7 @@ const Header = ({ t }: any) => {
                         </a>
                       </Link>
                     </li>
-                    {/* <li className="has-children">
-                      <Link href="/resource"><a className="closemenu">คลังข้อมูล</a></Link>
-                      <ul className="collapse" id="collapseItem0">
-                        <li>
-                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
-                            <a>ความรู้</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}>
-                            <a>ตัวอย่างการใช้งาน</a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
-                            <a>เรื่องราวความสำเร็จ</a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </li> */}
+
                     <li className="has-children">
                       <a className="active">ซัพพอร์ต</a>
                       <ul className="collapse" id="collapseItem0">
@@ -319,14 +300,24 @@ const Header = ({ t }: any) => {
                       </ul>
                     </li>
 
-                    <li>
-                      <a
-                        target="_blank"
-                        href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
-                        className="active closemenu"
-                      >
-                        {t('header.documentation')}
-                      </a>
+                    <li className="has-children">
+                      <a className="active">{t('header.documentation')}</a>
+                      <ul className="collapse" id="collapseItem0">
+                        <li>
+                          <Link href="/developer">
+                            <a>ดาวน์โหลดคู่มือ</a>
+                          </Link>
+                        </li>
+                        <li>
+                          <a
+                            target="_blank"
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
+                            className="active closemenu"
+                          >
+                            API Reference
+                          </a>
+                        </li>
+                      </ul>
                     </li>
                     <li className="has-children">
                       <a className="active">เกียวกับบริษัท</a>

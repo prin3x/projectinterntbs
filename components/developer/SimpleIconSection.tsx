@@ -67,7 +67,7 @@ const SimpleIconSection = ({ t }: any) => (
 
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
-          <div className="simple_icon_title">
+          <div className="simple_icon_title dev-page">
             <h3>ตัวอย่าง SDK</h3>
             <p>ดาวน์โหลดตัวอย่าง SDK ภาษาที่คุณต้องการ</p>
           </div>
@@ -77,7 +77,7 @@ const SimpleIconSection = ({ t }: any) => (
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
           <div className="row ">
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang01.svg`}
@@ -89,7 +89,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang02.svg`}
@@ -101,7 +101,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang03.svg`}
@@ -113,7 +113,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang04.svg`}
@@ -125,7 +125,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang05.svg`}
@@ -137,7 +137,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang06.svg`}
@@ -149,7 +149,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang07.svg`}
@@ -161,7 +161,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang08.svg`}
@@ -173,7 +173,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang09.svg`}
@@ -185,7 +185,7 @@ const SimpleIconSection = ({ t }: any) => (
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-3">
-              <div className="single_lang">
+              <div className="single_lang dev-page">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang10.svg`}
