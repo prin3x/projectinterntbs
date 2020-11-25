@@ -5,7 +5,7 @@ const SimpleIconSection = ({ t }: any) => (
   <div className="hero_section v3 lazyload" data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}>
     <div className="container">
       <div className="row mt-80">
-        <div className="col-xl-8 col-md-12 mt-80">
+        <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
           <div className="simple_icon_title dev-page">
             <h3>{t('SMSAPIPage:simpleIconSection.title')}</h3>
             <div className="row m-40">
@@ -36,11 +36,11 @@ const SimpleIconSection = ({ t }: any) => (
             </div>
           </div>
         </div>
-        <div className="col-xl-4 col-md-12 mt-80">
+        <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
           <div className="simple_icon_title  dev-page">
             <h3>คู่มือการใช้งาน OTP Service</h3>
             <div className="row m-40">
-              <div className="col-lg-12">
+              <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12">
                 <div className="track_box apipage">
                   <img
                     className="lazyload"
