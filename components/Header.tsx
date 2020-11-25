@@ -284,17 +284,17 @@ const Header = ({ t }: any) => {
 
                     <li className="has-children">
                       <a className="active">ซัพพอร์ต</a>
-                      <ul className="collapse" id="collapseItem0">
+                      <ul className="collapse" id="collapseItem1">
                         <li>
                           <Link href="/support/how-to-order">
-                            <a>
-                              {t('header.howtoorder')}
+                            <a className="closemenu">
+                              <h6>{t('header.howtoorder')}</h6>
                             </a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/support/faq">
-                            <a >คำถามที่พบบ่อย</a>
+                            <a className="closemenu"><h6>คำถามที่พบบ่อย</h6></a>
                           </Link>
                         </li>
                       </ul>
@@ -302,10 +302,10 @@ const Header = ({ t }: any) => {
 
                     <li className="has-children">
                       <a className="active">{t('header.documentation')}</a>
-                      <ul className="collapse" id="collapseItem0">
+                      <ul className="collapse" id="collapseItem2">
                         <li>
                           <Link href="/developer">
-                            <a>ดาวน์โหลดคู่มือ</a>
+                            <a className="closemenu"><h6>ดาวน์โหลดคู่มือ</h6></a>
                           </Link>
                         </li>
                         <li>
@@ -314,23 +314,23 @@ const Header = ({ t }: any) => {
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
                             className="active closemenu"
                           >
-                            API Reference
+                            <h6>API Reference</h6>
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li className="has-children">
                       <a className="active">เกียวกับบริษัท</a>
-                      <ul className="collapse" id="collapseItem0">
+                      <ul className="collapse" id="collapseItem3">
                         <li>
                           <Link href="/why-thaibulksms">
-                            <a>ทำไมต้อง ThaiBulkSMS</a>
+                            <a className="closemenu"><h6>ทำไมต้อง ThaiBulkSMS</h6></a>
                           </Link>
                         </li>
                         <li>
                           <Link href="/contact">
-                            <a>
-                              {t('header.contact')}
+                            <a className="closemenu">
+                              <h6> {t('header.contact')}</h6>
                             </a>
                           </Link>
                         </li>
