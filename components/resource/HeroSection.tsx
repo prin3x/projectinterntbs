@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import { format } from 'date-fns'
 import { parseFromTimeZone } from 'date-fns-timezone'
+import Link from 'next/link'
 import { withTranslation } from '../../i18n';
-
+import AppConfig from '../../appConfig';
 // Import Swiper styles
 
 
@@ -30,19 +31,23 @@ const ContentSection = ({ Posts }: any) => (
               loop={true}
               navigation={true}
               pagination={true}
-              // scrollbar={{ draggable: true }}
-              // onSwiper={(swiper) => console.log(swiper)}
-              // onSlideChange={() => console.log('slide change')}
+            // scrollbar={{ draggable: true }}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
             >
               {!Posts.highligth || Posts.highligth.map((item, key) => {
                 return <SwiperSlide key={key}>
-                  <div className="sliderResource">
-                    <div className="imgSlider"><img src={item.cover_image.url} alt={item.name} /></div>
-                    <div className="textSlider">
-                      <h4>{item.name}</h4>
-                      <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
-                    </div>
-                  </div>
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                    <a>
+                      <div className="sliderResource">
+                        <div className="imgSlider"><img src={item.banner_image_top.url} alt={item.name} /></div>
+                        <div className="textSlider">
+                          <h4>{item.name}</h4>
+                          <p>{format(parseFromTimeZone(item.published_at, { timeZone: 'Asia/Bangkok' }), 'dd MMM yyyy')}</p>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
                 </SwiperSlide>;
               })}
             </Swiper>
