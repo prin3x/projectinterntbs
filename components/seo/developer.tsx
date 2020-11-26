@@ -2,8 +2,8 @@ export const seo = {
     openGraph: {
       url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/developer`,
       type: 'website',
-      title: 'Developer | ThaiBulkSMS',
-      description: 'Developer',
+      title: 'คู่มือสำหรับนักพัฒนา | ThaiBulkSMS',
+      description: 'รวบรวมคู่มือที่เป็นประโยชน์สำหรับนักพัฒนา เพื่อเป็นแนวทางในการเขียนโปรแกรม',
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Home.jpg`,

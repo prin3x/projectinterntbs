@@ -181,7 +181,7 @@ const Header = ({ t }: any) => {
                           target="_blank"
                           href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
                         >
-                          <h6>API Reference</h6>
+                          <h6>API References</h6>
                         </a>
                       </li>
                     </ul>
@@ -314,7 +314,7 @@ const Header = ({ t }: any) => {
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
                             className="active closemenu"
                           >
-                            <h6>API Reference</h6>
+                            <h6>API References</h6>
                           </a>
                         </li>
                       </ul>
