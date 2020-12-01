@@ -296,7 +296,7 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </li>
-                    
+
                     <li>
                       <Link href="/pricing">
                         <a className="closemenu">
@@ -310,17 +310,17 @@ const Header = ({ t }: any) => {
                       <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
-                            <a>ความรู้</a>
+                            <a><h6>ความรู้</h6></a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}>
-                            <a>ตัวอย่างการใช้งาน</a>
+                            <a><h6>ตัวอย่างการใช้งาน</h6></a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
-                            <a>เรื่องราวความสำเร็จ</a>
+                            <a><h6>เรื่องราวความสำเร็จ</h6></a>
                           </Link>
                         </li>
                       </ul>
