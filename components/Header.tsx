@@ -209,7 +209,7 @@ const Header = ({ t }: any) => {
                     </ul>
                   </li>
                   <li className="has-children">
-                    <a className="active">เกียวกับบริษัท</a>
+                    <a className="active">เกี่ยวกับบริษัท</a>
                     <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
                       <li>
                         <Link href="/why-thaibulksms">
@@ -363,7 +363,7 @@ const Header = ({ t }: any) => {
                       </ul>
                     </li>
                     <li className="has-children">
-                      <a className="active">เกียวกับบริษัท</a>
+                      <a className="active">เกี่ยวกับบริษัท</a>
                       <ul className="collapse" id="collapseItem3">
                         <li>
                           <Link href="/why-thaibulksms">
