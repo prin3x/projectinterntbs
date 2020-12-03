@@ -6,11 +6,11 @@ const HeroSection = ({ t }: any) => {
   React.useEffect(() => {}, []);
   return (
     <div className="container condition-wrap">
-      <h2 className="condition-header">{t('conditionhero.header')}</h2>
+      <h1 className="condition-header">{t('conditionhero.header')}</h1>
       <p className="condition-text">{t('conditionhero.subheader')}</p>
       <div className="col-lg-12">
         <div className="condition-text">
-          <h4>{t('conditionhero.purpose.header')}</h4>
+          <h2>{t('conditionhero.purpose.header')}</h2>
           {t('conditionhero.purpose.desc')}
           <br /> <br />
           <ul
@@ -18,69 +18,69 @@ const HeroSection = ({ t }: any) => {
               __html: t('conditionhero.purpose.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.servicecharge.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.servicecharge.header')}</h2>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.servicecharge.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.reservation.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.reservation.header')}</h2>
           <p
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.reservation.content'),
             }}
           ></p>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.transfer.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.transfer.header')}</h2>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.transfer.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.calexpire.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.calexpire.header')}</h2>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.calexpire.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.sender.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.sender.header')}</h2>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.sender.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.whiltelist.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.whiltelist.header')}</h2>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.whiltelist.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.account.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.account.header')}</h2>
           <span className="bold-text">{t('conditionhero.account.desc')}</span>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.account.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.ban.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.ban.header')}</h2>
           <span className="bold-text">{t('conditionhero.ban.desc')}</span>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.ban.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.policy.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.policy.header')}</h2>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.policy.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.contact.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.contact.header')}</h2>
           <ul
             dangerouslySetInnerHTML={{
               __html: t('conditionhero.contact.content'),
             }}
           ></ul>
-          <h4 style={{ marginTop: '30px' }}>{t('conditionhero.spec.header')}</h4>
+          <h2 style={{ marginTop: '30px' }}>{t('conditionhero.spec.header')}</h2>
           <p>{t('conditionhero.spec.desc')}</p>
         </div>
       </div>
