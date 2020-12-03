@@ -3,9 +3,9 @@ export const seo = {
     url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing`,
     type: 'website',
     title:
-      'รวมแพ็กเกจราคาสุดคุ้มของ ThaiBulkSMS ในราคาเริ่มต้นเพียงแค่ 0.28 บาท - ทดลองส่งข้อความฟรี 20 เครดิต | ThaiBulkSMS',
+      'แพ็กเกจ ราคา SMS สุดคุ้ม เริ่มต้นที่ 0.28 บาท | ThaiBulkSMS',
     description:
-      'แพ็กเกจราคาสุดคุ้มของ ThaiBulkSMS ราคาเริ่มต้นเพียง 0.28 บาท พร้อมฟีเจอร์ในการส่ง SMS ครบวงจร - ทดลองส่งข้อความฟรี 20 เครดิต',
+      'รวมแพ็กเกจราคา SMS สุดคุ้มของ ThaiBulkSMS เริ่มต้นเพียงแค่ 0.28 บาท',
     images: [
       {
         url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Home.jpg`,
