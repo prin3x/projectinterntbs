@@ -152,7 +152,29 @@ const Header = ({ t }: any) => {
                       <a className="active">{t('header.pricing')}</a>
                     </Link>
                   </li>
+                  <li className="has-children">
+                    <Link href="/resource">
+                      <a className="active">คลังข้อมูล</a>
+                    </Link>
+                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
+                      <li>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
+                          <a><h6>ความรู้</h6></a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}>
+                          <a><h6>ตัวอย่างการใช้งาน</h6></a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
+                          <a><h6>เรื่องราวความสำเร็จ</h6></a>
+                        </Link>
+                      </li>
 
+                    </ul>
+                  </li>
                   <li className="has-children">
                     <a className="active">ซัพพอร์ต</a>
                     <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
@@ -187,7 +209,7 @@ const Header = ({ t }: any) => {
                     </ul>
                   </li>
                   <li className="has-children">
-                    <a className="active">เกียวกับบริษัท</a>
+                    <a className="active">เกี่ยวกับบริษัท</a>
                     <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
                       <li>
                         <Link href="/why-thaibulksms">
@@ -274,6 +296,7 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </li>
+
                     <li>
                       <Link href="/pricing">
                         <a className="closemenu">
@@ -282,6 +305,26 @@ const Header = ({ t }: any) => {
                       </Link>
                     </li>
 
+                    <li className="has-children">
+                      <Link href="/resource"><a className="closemenu">คลังข้อมูล</a></Link>
+                      <ul className="collapse" id="collapseItem0">
+                        <li>
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
+                            <a><h6>ความรู้</h6></a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}>
+                            <a><h6>ตัวอย่างการใช้งาน</h6></a>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
+                            <a><h6>เรื่องราวความสำเร็จ</h6></a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
                     <li className="has-children">
                       <a className="active">ซัพพอร์ต</a>
                       <ul className="collapse" id="collapseItem1">
@@ -320,7 +363,7 @@ const Header = ({ t }: any) => {
                       </ul>
                     </li>
                     <li className="has-children">
-                      <a className="active">เกียวกับบริษัท</a>
+                      <a className="active">เกี่ยวกับบริษัท</a>
                       <ul className="collapse" id="collapseItem3">
                         <li>
                           <Link href="/why-thaibulksms">
