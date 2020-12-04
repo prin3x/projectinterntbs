@@ -60,7 +60,7 @@ const TabContent = ({ t }: any) => {
               >
                 <div className="row">
                   <div className="col-lg-12">
-                    <h3 className="faqHead">{t('คำถามทั่วไป')}</h3>
+                    <h1 className="faqHead textHeadFaq">{t('คำถามทั่วไป')}</h1>
                     <div
                       className="accordion md-accordion"
                       id="accordionEx1"

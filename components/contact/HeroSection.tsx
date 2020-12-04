@@ -122,7 +122,7 @@ const HeroSection = ({ t }: any) => {
       `}</style>
       <div className="row justify-content-center hero_top_one">
         <div className="col-12 text-center">
-          <h3 className="section__title">{t('contacthero.header')}</h3>
+          <h1 className="section__title">{t('contacthero.header')}</h1>
         </div>
 
         <div className="col-12">

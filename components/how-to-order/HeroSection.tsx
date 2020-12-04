@@ -24,7 +24,7 @@ const HeroSection = ({ t }: any) => {
       <div className="container">
         <div className="row justify-content-center hero_top_one">
           <div className="col-12 text-center">
-            <h3 className="section__title">{t('howtoorderhero.header')}</h3>
+            <h1 className="section__title">{t('howtoorderhero.header')}</h1>
     
             <ul
               className="nav nav-pills tab__toggle"
