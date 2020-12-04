@@ -208,7 +208,7 @@ const TabContent = ({ t }: any) => {
                   <div className="col-lg-10">
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>{t('howtoordertabcontent.payment.creditnow.header')}</h5>
+                        <h2>{t('howtoordertabcontent.payment.creditnow.header')}</h2>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -222,13 +222,13 @@ const TabContent = ({ t }: any) => {
                                     alt=""
                                   />
                                 </div>
-                                <h5
+                                <h2
                                   dangerouslySetInnerHTML={{
                                     __html: t(
                                       'howtoordertabcontent.payment.creditnow.qrcodetitle',
                                     ),
                                   }}
-                                ></h5>
+                                ></h2>
                                 <p
                                   dangerouslySetInnerHTML={{
                                     __html: t(
