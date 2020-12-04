@@ -222,13 +222,13 @@ const TabContent = ({ t }: any) => {
                                     alt=""
                                   />
                                 </div>
-                                <h2
+                                <h5
                                   dangerouslySetInnerHTML={{
                                     __html: t(
                                       'howtoordertabcontent.payment.creditnow.qrcodetitle',
                                     ),
                                   }}
-                                ></h2>
+                                ></h5>
                                 <p
                                   dangerouslySetInnerHTML={{
                                     __html: t(
