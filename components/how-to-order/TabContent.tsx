@@ -401,7 +401,7 @@ const TabContent = ({ t }: any) => {
                                     </div>
                                   </div>
 
-                                  {/* <div className="col-md-6">
+                                  <div className="col-md-6">
                                     <div className="item__box__2 d-flex align-items-start">
                                       <img
                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__2.png`}
@@ -466,7 +466,7 @@ const TabContent = ({ t }: any) => {
                                         </div>
                                       </div>
                                     </div>
-                                  </div> */}
+                                  </div>
 
                                   <div className="col-md-6">
                                     <div className="item__box__2 d-flex align-items-start">
