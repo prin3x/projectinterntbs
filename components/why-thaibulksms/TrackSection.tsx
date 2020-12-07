@@ -5,8 +5,8 @@ const TrackSection = ({ t }: any) => (
     <div className="container">
       <div className="row track_top">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
-          <div className="simple_icon_title">
-            <h3>{t('ใช้งานง่าย ไม่ว่าคุณจะเป็น User แบบไหน')}</h3>
+          <div className="simple_icon_title space_why_thaibulksms">
+            <h3 className="space_why_thaibulksms">{t('ใช้งานง่าย ไม่ว่าคุณจะเป็น User แบบไหน')}</h3>
           </div>
         </div>
         <div className="col-lg-12 m-40">
