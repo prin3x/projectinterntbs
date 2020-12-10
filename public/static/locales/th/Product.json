@@ -1,0 +1,83 @@
+{
+    "meta": {
+        "title": "บริการส่งข้อความ ครบวงจร ส่งง่าย ถึงมือผู้รับ | ThaiBulkSMS",
+        "description": "บริการส่งข้อความ ด้วยคุณภาพและบริการที่ดีที่สุด ส่ง SMS สุดเสถียรทุกเครือข่าย ถึงมือผู้รับ - ทดลองส่งข้อความ 20 เครดิต",
+        "keywords": ""
+    },
+    "HeroSection": {
+        "<span>Improve the results of SMS campaigns</span><p> with Thailand’s No.1 </p><h1>SMS Communication Platform</h1>": "<span>เพิ่มความสำเร็จให้แคมเปญ SMS ด้วย</span><h1>SMS Communication Platform</h1><p>อันดับ 1 ของไทย</p>",
+        "A complete SMS sending service with large coverage, easy sending process and trusted by various businesses": "บริการส่งข้อความด้วย SMS ครบวงจร ครอบคลุม ส่งง่าย หลากหลายธุรกิจมั่นใจ",
+        "<span>SMS Communication Platform.</span><br>Thailand’s No.1 SMS sending company": "<span>SMS Communication Platform </span><br>บริษัทส่ง SMS อันดับ 1 ของไทย",
+        "This is why you can trust the service of ThaiBulkSMS just like how multiple leading businesses trust us.": "คุณจึงสามารถเชื่อมั่นในการให้บริการของ ThaiBulkSMS ได้เหมือนที่หลากหลายธุรกิจชั้นนำต่างก็ให้ความไว้วางใจ"
+    },
+    "SmsSection": {
+        "Sending OTP without delays. Running your campaigns without interruptions.": "ส่ง OTP ไม่ดีเลย์ รันแคมเปญไม่สะดุด",
+        "ThaiBulkSMS uses an Intelligent Routing system to automatically select the fastest sending channel, so you  can be confident in the speed and stability of every instance of SMS sending.": "ThaiBulkSMS ใช้ระบบ Intelligent Routing ในการเลือกช่องทางส่งที่เร็วที่สุดให้โดยอัตโนมัติ คุณจึงมั่นใจได้ในความเร็วและความเสถียรของทุกการส่ง SMS",
+        "The average number of SMS sent / day": "จำนวนการส่ง SMS โดยเฉลี่ย / วัน",
+        "The average amount of time taken to send SMS": "ระยะเวลาการส่ง SMS โดยเฉลี่ย",
+        "Seconds": "วินาที",
+        "Why can we send SMS so quickly?": "ทำไมเราถึงส่งไว?"
+    },
+    "PromoSection": {
+        "A complete set of features meeting the needs of both marketers and developers": "ฟีเจอร์ครบ ตอบโจทย์ทั้ง<br/>Marketer และ Developer",
+        "The user experience is designed to meet your requirements.": "ออกแบบ User Experience มาอย่างรู้ใจ",
+        "Easy sending​ ​ and fast measurement of results​ ​ thanks to smart reports": "ส่งง่าย วัดผลการส่งได้รวดเร็ว<br/>ด้วยรายงานที่ชาญฉลาด",
+        "xxxxxxxxxxxxxxxx": "xxxxxxxxxxxxxxxx",
+        "Try for free": "ทดลองใช้ฟรี",
+        "Instant credit refunds if messages fail to reach the recipients": "คืนเครดิตทันที ถ้าส่งไม่ถึงผู้รับ",
+        "Confirmation at the recipient’s mobile phone is available for checking whether or not the SMS have arrived at the recipient’s end. If the SMS fail to reach the recipients due to being blocked by anti-spam systems, the phone being switched off, the phone having run out of memory or other causes, we will refund the credits to you.": "ตรวจสอบได้ถึงมือถือปลายทาง ว่า SMS ส่งถึงมือถือผู้รับหรือไม่ หากส่งไม่ถึง เช่น ติด Anti-Spam, ปิดเครื่อง, โทรศัพท์ข้อมูลเต็ม ฯลฯ ทางเราจะคืนเครดิตให้คุณ",
+        "These features are available only for <span>the Corporate SMS package</span>": "ฟีเจอร์นี้สำหรับ<span>แพ็กเกจ Corporate SMS</span> เท่านั้น",
+        "Measuring the results of your campaign accurately <br>with SMS Tracking": "วัดผลแคมเปญแม่นยำ<br>ด้วย SMS Tracking",
+        "Instantly follow through on customers or target groups after pressing send. Also possible to check whether or not the recipient has read your messages.": "ติดตามลูกค้าหรือกลุ่มเป้าหมายได้ทันทีหลังจาก ที่กดส่งข้อความ พร้อมเช็กสถานะได้ว่าปลายทาง เปิดอ่านข้อความของเราแล้วหรือยัง",
+        "How does SMS tracking work?": "SMS Tracking ทำงานอย่างไร? >",
+        "Know who has or has not opened your messages.": "รู้ว่าใครเปิด หรือไม่เปิดข้อความ",
+        "Know your campaign’s conversion rate.": "รู้ Conversion ของแคมเปญ",
+        "Use the data to conduct lead scoring.": "นำข้อมูลไปทำ Lead Scoring ได้",
+        "An OTP system that is ready to use <br>and requires no extra programming": "ระบบส่ง OTP แบบพร้อมใช้<br>ไม่ต้องเขียนโปรแกรมเพิ่ม",
+        "Helping developers to work more easily and conveniently. The initial set-up requires just a few clicks, then the codes for using with API will instantly be ready.": "ให้ Developer ทำงานง่ายและสะดวกขึ้น เพราะเพียงเซ็ตอัพ เบื้องต้นไม่กี่คลิก ก็ได้โค้ดสำหรับนำไปใช้กับ API ได้ทันที",
+        "Read more about OTP Ready-to-Use>": "อ่านเพิ่มเติมเกี่ยวกับ OTP Ready-to-Use >",
+        "These features are available only for <span>the Corporate SMS package</span>": "ฟีเจอร์นี้สำหรับ<span>แพ็กเกจ Corporate SMS</span> เท่านั้น"
+    },
+    "SimpleSection": {
+        "Complete set of basic features for SMS sending": "ครบทุกฟีเจอร์พื้นฐาน ของการส่ง SMS",
+        "Sending results can be checked instantly.": "ตรวจสอบผลการส่งได้ทันที",
+        "Maximum allowance of 5 messages being sent consecutively": "ส่งได้ยาวสูงสุด 5 ข้อความ",
+        "Various ways of setting the time of sending": "ตั้งเวลาส่งได้หลากหลาย",
+        "Detailed reports of sending are provided.": "มีรายงานการส่งแบบละเอียด",
+        "The sender’s name can be specified.": "กำหนด Sender Name ได้",
+        "The sending status is clearly specified.": "สถานะการส่งที่ระบุชัดเจน",
+        "Block list system": "ระบบ Block List",
+        "Phonebook": "Phonebook",
+        "Templates are provided.": "มี Template ให้"
+    },
+    "PricingSection": {
+        "Packages and pricing": "แพ็กเกจและราคา",
+        "STANDARD SMS": "STANDARD SMS",
+        "for cheap SMS sending": "ส่ง SMS ได้ในราคาถูก",
+        "Cheaper prices for SMS sending": "ส่งข้อความราคาถูกกว่า",
+        "Sending reports are available.": "ดูรายงานการส่งได้",
+        "All basic features are available.": "ใช้งานฟีเจอร์พื้นฐานได้ครบถ้วน",
+        "Tools for measuring campaign results are provided.": "มีเครื่องมือวัดผลแคมเปญ",
+        "Best SMS pricing, only": "ราคา SMS ดีที่สุดเพียง",
+        "0.28": "0.28",
+        "baht/message": "บาท / ข้อความ",
+        "View package prices": "ดูราคาแพ็กเกจ",
+        "Who is this for?": "เหมาะกับใคร?",
+        "Those who focus on high amounts of SMS sending": "ผู้ที่เน้นปริมาณการส่งจำนวนมาก ๆ",
+        "Those who prioritize the price": "ผู้ที่คำนึงถึงราคาเป็นหลัก",
+        "Those at the early stages of usage": "ผู้ที่เพิ่งเริ่มต้นใช้งาน",
+        "Those who constantly update the database of recipients’ phone numbers": "ผู้ที่อัพเดตฐานข้อมูลเบอร์ผู้รับอย่างต่อเนื่อง",
+        "CORPORATE SMS": "CORPORATE SMS",
+        "Credits are refunded if the messages fail to reach the recipients.": "คืนเครดิตถ้าส่งไม่ถึงผู้รับ",
+        "Every feature of Standard SMS": "ทุกฟีเจอร์ของ Standard SMS",
+        "A ready-to-use OTP sending system": "ส่ง OTP ด้วยระบบพร้อมใช้",
+        "Credit refunds if the messages fail to reach the recipients": "คืนเครดิตถ้าส่งไม่ถึงผู้รับ",
+        "More detailed information on sending status": "เช็กสถานะการส่งได้ละเอียดยิ่งกว่า",
+        "0.34": "0.34",
+        "Those looking to send OTP or transactional SMS": "ผู้ที่นำไปใช้ส่ง OTP หรือ Transactional SMS",
+        "Those looking to send OTP without having to set up their own system": "ผู้ที่ต้องการส่ง OTP โดยไม่อยากทำระบบเอง",
+        "Those wishing to know whether or not the messages have reached the recipients": "ผู้ที่ต้องการทราบผลการส่งว่าถึงผู้รับหรือไม่",
+        "Not sure yet which package to choose? We can offer you a free SMS sending trial.": "ยังไม่แน่ใจว่าจะเลือกแพ็กเกจไหน เราให้คุณทดลองส่งก่อนได้",
+        "Try SMS sending for free": "ทดลองส่งฟรี"
+    }
+}

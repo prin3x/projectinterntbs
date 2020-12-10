@@ -43,8 +43,8 @@ const Header = ({ t }: any) => {
               <div className="header_contact_no">
                 <a href="tel:027986000">02-798-6000</a>
               </div>
-              <div className="header_select" style={{ display: 'none' }}>
-                <select className="user_select" style={{ display: 'none' }}>
+              <div className="header_select" style={{ display: '' }}>
+                <select className="user_select" style={{ display: '' }}>
                   <option>Th</option>
                   <option>En</option>
                 </select>
@@ -102,7 +102,7 @@ const Header = ({ t }: any) => {
                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                   <li className="has-children">
                     <Link href="/product">
-                      <a className="active">{t('header.product')}</a>
+                      <a className="active">{t('header::product')}</a>
                     </Link>
                     <ul className="dropdown">
                       <li className="listsub">
@@ -149,7 +149,7 @@ const Header = ({ t }: any) => {
                   </li>
                   <li>
                     <Link href="/pricing">
-                      <a className="active">{t('header.pricing')}</a>
+                      <a className="active">{t('header::pricing')}</a>
                     </Link>
                   </li>
                   <li className="has-children">
@@ -180,7 +180,7 @@ const Header = ({ t }: any) => {
                     <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
                       <li>
                         <Link href="/support/how-to-order">
-                          <a><h6>{t('header.howtoorder')}</h6></a>
+                          <a><h6>{t('header::howtoorder')}</h6></a>
                         </Link>
                       </li>
                       <li>
@@ -191,7 +191,7 @@ const Header = ({ t }: any) => {
                     </ul>
                   </li>
                   <li className="has-children">
-                    <a className="active">{t('header.documentation')}</a>
+                    <a className="active">{t('header::documentation')}</a>
                     <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
                       <li>
                         <Link href="/developer">
@@ -218,7 +218,7 @@ const Header = ({ t }: any) => {
                       </li>
                       <li>
                         <Link href="/contact">
-                          <a><h6>{t('header.contact')}</h6></a>
+                          <a><h6>{t('header::contact')}</h6></a>
                         </Link>
                       </li>
                     </ul>
@@ -248,7 +248,7 @@ const Header = ({ t }: any) => {
                       ></span> */}
                       <Link href="/product">
                         <a className="active closemenu">
-                          {t('header.product')}
+                          {t('header::product')}
                         </a>
                       </Link>
                       <ul className="collapse" id="collapseItem0">
@@ -300,7 +300,7 @@ const Header = ({ t }: any) => {
                     <li>
                       <Link href="/pricing">
                         <a className="closemenu">
-                          {t('header.pricing')}
+                          {t('header::pricing')}
                         </a>
                       </Link>
                     </li>
@@ -331,7 +331,7 @@ const Header = ({ t }: any) => {
                         <li>
                           <Link href="/support/how-to-order">
                             <a className="closemenu">
-                              <h6>{t('header.howtoorder')}</h6>
+                              <h6>{t('header::howtoorder')}</h6>
                             </a>
                           </Link>
                         </li>
@@ -344,7 +344,7 @@ const Header = ({ t }: any) => {
                     </li>
 
                     <li className="has-children">
-                      <a className="active">{t('header.documentation')}</a>
+                      <a className="active">{t('header::documentation')}</a>
                       <ul className="collapse" id="collapseItem2">
                         <li>
                           <Link href="/developer">
@@ -373,7 +373,7 @@ const Header = ({ t }: any) => {
                         <li>
                           <Link href="/contact">
                             <a className="closemenu">
-                              <h6> {t('header.contact')}</h6>
+                              <h6> {t('header::contact')}</h6>
                             </a>
                           </Link>
                         </li>
@@ -387,13 +387,13 @@ const Header = ({ t }: any) => {
                           href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                           className="loginLink"
                         >
-                          {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                          {t('header::login-' + (isLogin === true ? 'b' : 'a'))}
                         </a>
                       </li>
                       <li>
                         <Link href="/pricing">
                           <a className="btn v1">
-                            {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                            {t(`header::buy-` + (isLogin === true ? 'b' : 'a'))}
                           </a>
                         </Link>
                       </li>
@@ -411,20 +411,20 @@ const Header = ({ t }: any) => {
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                     className="loginLink"
                   >
-                    {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                    {t('header::login-' + (isLogin === true ? 'b' : 'a'))}
                   </a>
                 </li>
                 <li>
                   {isLogin === true ? (
                     <Link href="/pricing">
-                      <a className="btn v1">{t(`header.buy-` + 'b')}</a>
+                      <a className="btn v1">{t(`header::buy-` + 'b')}</a>
                     </Link>
                   ) : (
                       <a
                         className="btn v1"
                         href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                       >
-                        {t(`header.buy-` + 'a')}
+                        {t(`header::buy-` + 'a')}
                       </a>
                     )}
                 </li>
@@ -437,11 +437,11 @@ const Header = ({ t }: any) => {
   );
 };
 Header.getInitialProps = async () => {
-  namespacesRequired: ['header'];
+  namespacesRequired: ['Header'];
 };
 
 Header.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withTranslation('header')(Header);
+export default withTranslation('Header')(Header);

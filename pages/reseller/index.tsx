@@ -20,8 +20,8 @@ const Reseller = ({ t }: any) => (
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('ResellerPage:meta.title')}
-      description={t('ResellerPage:meta.description')}
+      title={t('ResellerPage:::meta::title')}
+      description={t('ResellerPage:::meta::description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">

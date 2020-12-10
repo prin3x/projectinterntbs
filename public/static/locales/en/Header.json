@@ -10,8 +10,10 @@
     "successstories": "Success Stories Listing",
     "documentation": "Developer",
     "contact": "Contact",
-    "login": "Login",
+    "login-a": "Login",
+    "login-b": "Login",
     "logout": "Logout",
-    "buy": "Buy"
+    "buy-a": "Buy",
+    "buy-b": "Buy"
   }
 }

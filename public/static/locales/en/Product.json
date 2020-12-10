@@ -1,0 +1,83 @@
+{
+    "meta": {
+        "title": "บริการส่งข้อความ ครบวงจร ส่งง่าย ถึงมือผู้รับ | ThaiBulkSMS",
+        "description": "บริการส่งข้อความ ด้วยคุณภาพและบริการที่ดีที่สุด ส่ง SMS สุดเสถียรทุกเครือข่าย ถึงมือผู้รับ - ทดลองส่งข้อความ 20 เครดิต",
+        "keywords": ""
+    },
+    "HeroSection": {
+        "<span>Improve the results of SMS campaigns</span><p> with Thailand’s No.1 </p><h1>SMS Communication Platform</h1>": "<span>Improve the results of SMS campaigns</span><p> with Thailand’s No.1 </p><h1>SMS Communication Platform</h1>",
+        "A complete SMS sending service with large coverage, easy sending process and trusted by various businesses": "A complete SMS sending service with large coverage, easy sending process and trusted by various businesses",
+        "<span>SMS Communication Platform.</span><br>Thailand’s No.1 SMS sending company": "<span>SMS Communication Platform.</span><br>Thailand’s No.1 SMS sending company",
+        "This is why you can trust the service of ThaiBulkSMS just like how multiple leading businesses trust us.": "This is why you can trust the service of ThaiBulkSMS just like how multiple leading businesses trust us."
+    },
+    "SmsSection": {
+        "Sending OTP without delays. Running your campaigns without interruptions.": "Sending OTP without delays. Running your campaigns without interruptions.",
+        "ThaiBulkSMS uses an Intelligent Routing system to automatically select the fastest sending channel, so you  can be confident in the speed and stability of every instance of SMS sending.": "ThaiBulkSMS uses an Intelligent Routing system to automatically select the fastest sending channel, so you  can be confident in the speed and stability of every instance of SMS sending.",
+        "The average number of SMS sent / day": "The average number of SMS sent / day",
+        "The average amount of time taken to send SMS": "The average amount of time taken to send SMS",
+        "Seconds": "Seconds",
+        "Why can we send SMS so quickly?": "Why can we send SMS so quickly?"
+    },
+    "PromoSection": {
+        "A complete set of features meeting the needs of both marketers and developers": "A complete set of features meeting the needs of both marketers and developers",
+        "The user experience is designed to meet your requirements.": "The user experience is designed to meet your requirements.",
+        "Easy sending​ ​ and fast measurement of results​ ​ thanks to smart reports": "Easy sending​ ​ and fast measurement of results​ ​ thanks to smart reports",
+        "xxxxxxxxxxxxxxxx": "xxxxxxxxxxxxxxxx",
+        "Try for free": "Try for free",
+        "Instant credit refunds if messages fail to reach the recipients": "Instant credit refunds if messages fail to reach the recipients",
+        "Confirmation at the recipient’s mobile phone is available for checking whether or not the SMS have arrived at the recipient’s end. If the SMS fail to reach the recipients due to being blocked by anti-spam systems, the phone being switched off, the phone having run out of memory or other causes, we will refund the credits to you.": "Confirmation at the recipient’s mobile phone is available for checking whether or not the SMS have arrived at the recipient’s end. If the SMS fail to reach the recipients due to being blocked by anti-spam systems, the phone being switched off, the phone having run out of memory or other causes, we will refund the credits to you.",
+        "These features are available only for <span>the Corporate SMS package</span>": "These features are available only for <span>the Corporate SMS package</span>",
+        "Measuring the results of your campaign accurately <br>with SMS Tracking": "Measuring the results of your campaign accurately <br>with SMS Tracking",
+        "Instantly follow through on customers or target groups after pressing send. Also possible to check whether or not the recipient has read your messages.": "Instantly follow through on customers or target groups after pressing send. Also possible to check whether or not the recipient has read your messages.",
+        "How does SMS tracking work?": "How does SMS tracking work? >",
+        "Know who has or has not opened your messages.": "Know who has or has not opened your messages.",
+        "Know your campaign’s conversion rate.": "Know your campaign’s conversion rate.",
+        "Use the data to conduct lead scoring.": "Use the data to conduct lead scoring.",
+        "An OTP system that is ready to use <br>and requires no extra programming": "An OTP system that is ready to use <br>and requires no extra programming",
+        "Helping developers to work more easily and conveniently. The initial set-up requires just a few clicks, then the codes for using with API will instantly be ready.": "Helping developers to work more easily and conveniently. The initial set-up requires just a few clicks, then the codes for using with API will instantly be ready.",
+        "Read more about OTP Ready-to-Use>": "Read more about OTP Ready-to-Use>",
+        "These features are available only for <span>the Corporate SMS package</span>": "These features are available only for <span>the Corporate SMS package</span>"
+    },
+    "SimpleSection": {
+        "Complete set of basic features for SMS sending": "Complete set of basic features for SMS sending",
+        "Sending results can be checked instantly.": "Sending results can be checked instantly.",
+        "Maximum allowance of 5 messages being sent consecutively": "Maximum allowance of 5 messages being sent consecutively",
+        "Various ways of setting the time of sending": "Various ways of setting the time of sending",
+        "Detailed reports of sending are provided.": "Detailed reports of sending are provided.",
+        "The sender’s name can be specified.": "The sender’s name can be specified.",
+        "The sending status is clearly specified.": "The sending status is clearly specified.",
+        "Block list system": "Block list system",
+        "Phonebook": "Phonebook",
+        "Templates are provided.": "Templates are provided."
+    },
+    "PricingSection": {
+        "Packages and pricing": "Packages and pricing",
+        "STANDARD SMS": "STANDARD SMS",
+        "for cheap SMS sending": "for cheap SMS sending",
+        "Cheaper prices for SMS sending": "Cheaper prices for SMS sending",
+        "Sending reports are available.": "Sending reports are available.",
+        "All basic features are available.": "All basic features are available.",
+        "Tools for measuring campaign results are provided.": "Tools for measuring campaign results are provided.",
+        "Best SMS pricing, only": "Best SMS pricing, only",
+        "0.28": "0.28",
+        "baht/message": "baht/message",
+        "View package prices": "View package prices",
+        "Who is this for?": "Who is this for?",
+        "Those who focus on high amounts of SMS sending": "Those who focus on high amounts of SMS sending",
+        "Those who prioritize the price": "Those who prioritize the price",
+        "Those at the early stages of usage": "Those at the early stages of usage",
+        "Those who constantly update the database of recipients’ phone numbers": "Those who constantly update the database of recipients’ phone numbers",
+        "CORPORATE SMS": "CORPORATE SMS",
+        "Credits are refunded if the messages fail to reach the recipients.": "Credits are refunded if the messages fail to reach the recipients.",
+        "Every feature of Standard SMS": "Every feature of Standard SMS",
+        "A ready-to-use OTP sending system": "A ready-to-use OTP sending system",
+        "Credit refunds if the messages fail to reach the recipients": "Credit refunds if the messages fail to reach the recipients",
+        "More detailed information on sending status": "More detailed information on sending status",
+        "0.34": "0.34",
+        "Those looking to send OTP or transactional SMS": "Those looking to send OTP or transactional SMS",
+        "Those looking to send OTP without having to set up their own system": "Those looking to send OTP without having to set up their own system",
+        "Those wishing to know whether or not the messages have reached the recipients": "Those wishing to know whether or not the messages have reached the recipients",
+        "Not sure yet which package to choose? We can offer you a free SMS sending trial.": "Not sure yet which package to choose? We can offer you a free SMS sending trial.",
+        "Try SMS sending for free": "Try SMS sending for free"
+    }
+}
