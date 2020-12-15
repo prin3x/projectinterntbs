@@ -41,7 +41,7 @@ const HeroSection = ({ t }: any) => {
                   aria-selected="false"
                 >
                   <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-shopping.png`} alt="" />
-                  <span>การซื้อ และการชำระเงิน</span>
+                  <span>การซื้อ <br className="tep_menu_support_pay" />และการชำระเงิน</span>
                 </a>
               </li>
               <li className="nav-item" role="presentation">
