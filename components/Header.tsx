@@ -3,6 +3,13 @@ import { i18n, withTranslation, Link } from '../i18n';
 import React, { useState, useRef, useEffect } from 'react';
 import Cookie from 'js-cookie';
 
+const HeaderTopMenuMobile = () => (
+  <div className="site-mobile-menu-header">
+    <div className="site-mobile-menu-close  js-menu-toggle">
+      <span className="ion-ios-close-empty"></span>{' '}
+    </div>
+  </div>
+);
 const Header = ({ t }: any) => {
   const lang = i18n.language;
   const [isLogin, setIsLogin] = useState(Cookie.get('PASSCODE') ? true : false);
@@ -233,25 +240,68 @@ const Header = ({ t }: any) => {
                 </a>
               </div>
               <div className="site-mobile-menu">
-                <div className="site-mobile-menu-header">
+                {/* <div className="site-mobile-menu-header">
                   <div className="site-mobile-menu-close  js-menu-toggle">
                     <span className="ion-ios-close-empty"></span>{' '}
                   </div>
-                </div>
+                </div> */}
+                <HeaderTopMenuMobile />
                 <div className="site-mobile-menu-body">
                   <ul className="site-nav-wrap">
                     <li className="has-children">
-                      {/* <span
+                      <a className="show-site-sub-menu" data-name="product">
+                        {t('header.product')}
+                      </a>
+                    </li>
+                  </ul>
+                  <ul className="site-nav-wrap">
+                    <li className="has-children">
+                      <a className="show-site-sub-menu" data-name="pricing">
+                        {t('header.pricing')}
+                      </a>
+                    </li>
+                  </ul>
+                  <ul className="site-nav-wrap">
+                    <li className="has-children">
+                      <a className="show-site-sub-menu" data-name="resource">
+                        คลังข้อมูล
+                      </a>
+                    </li>
+                  </ul>
+                  <ul className="site-nav-wrap">
+                    <li className="has-children">
+                      <a className="show-site-sub-menu" data-name="support">
+                        ซัพพอร์ต
+                      </a>
+                    </li>
+                  </ul>
+                  <ul className="site-nav-wrap">
+                    <li className="has-children">
+                      <a className="show-site-sub-menu" data-name="documentation">
+                        {t('header.documentation')}
+                      </a>
+                    </li>
+                  </ul>
+                  <ul className="site-nav-wrap">
+                    <li className="has-children">
+                      <a className="show-site-sub-menu" data-name="aboutme">
+                        เกี่ยวกับบริษัท
+                      </a>
+                    </li>
+                  </ul>
+                  {/* <ul className="site-nav-wrap"> */}
+                  {/* <li className="has-children"> */}
+                  {/* <span
                         className="arrow-collapse collapsed"
                         data-toggle="collapse"
                         data-target="#collapseItem0"
                       ></span> */}
-                      <Link href="/product">
+                  {/* <Link href="/product">
                         <a className="active closemenu">
                           {t('header.product')}
                         </a>
-                      </Link>
-                      <ul className="collapse" id="collapseItem0">
+                      </Link> */}
+                  {/* <ul className="collapse" id="collapseItem0">
                         <li>
                           <Link href="/product/smart-sms-console">
                             <a className="closemenu">
@@ -294,10 +344,10 @@ const Header = ({ t }: any) => {
                             </a>
                           </Link>
                         </li>
-                      </ul>
-                    </li>
+                      </ul> */}
+                  {/* </li> */}
 
-                    <li>
+                  {/* <li>
                       <Link href="/pricing">
                         <a className="closemenu">
                           {t('header.pricing')}
@@ -379,7 +429,7 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </li>
-                  </ul>
+                  </ul> */}
                   <div className="menu_btn">
                     <ul>
                       <li>
@@ -401,8 +451,255 @@ const Header = ({ t }: any) => {
                   </div>
                 </div>
               </div>
+              {/* new sub menu mobile */}
+              <div id="product">
+                <div className="site-sub-menu">
+                  <HeaderTopMenuMobile />
+                  <div className="block_detail_menu_mobile">
+                    <h5 className="show-site-sub-menu head-site-sub-menu">{t('header.product')}</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>จุดเด่นผลิตภัณฑ์</a>
+                      </li>
+                    </ul>
+                    <h5 className="head-site-sub-menu">สำหรับการตลาด</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>Smart SMS Console</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>SMS Tracking</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>Location Based SMS</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>Global SMS</a>
+                      </li>
+                    </ul>
+                    <h5 className="head-site-sub-menu">สำหรับนักพัฒนา</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>SMS API</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>OTP Service</a>
+                      </li>
+                    </ul>
+                    <div className="menu_btn">
+                      <ul>
+                        <li>
+                          <a
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
+                            className="loginLink"
+                          >
+                            {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                          </a>
+                        </li>
+                        <li>
+                          <Link href="/pricing">
+                            <a className="btn v1">
+                              {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="resource">
+                <div className="site-sub-menu">
+                  <HeaderTopMenuMobile />
+                  <div className="block_detail_menu_mobile">
+                    <h5 className="show-site-sub-menu head-site-sub-menu">คลังข้อมูล</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>คลังข้อมูล</a>
+                      </li>
+                    </ul>
+                    <h5 className="head-site-sub-menu">บทความ</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>ความรู้</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>ตัวอย่างการใช้งาน</a>
+                      </li>
+                    </ul>
+                    <h5 className="head-site-sub-menu">การศึกษา</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>เรื่องราวความสำเร็จ</a>
+                      </li>
+                    </ul>
+                    <div className="menu_btn">
+                      <ul>
+                        <li>
+                          <a
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
+                            className="loginLink"
+                          >
+                            {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                          </a>
+                        </li>
+                        <li>
+                          <Link href="/pricing">
+                            <a className="btn v1">
+                              {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="support">
+                <div className="site-sub-menu">
+                  <HeaderTopMenuMobile />
+                  <div className="block_detail_menu_mobile">
+                    <h5 className="show-site-sub-menu head-site-sub-menu">ซัพพอร์ต</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>{t('header.howtoorder')}</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>คำถามที่พบบ่อย</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>{t('header.contact')}</a>
+                      </li>
+                    </ul>
+                    <div className="margin-top-sub-menu">
+                      <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <a>02-789-000</a>
+                        </li>
+                        <li className="sub-head-menu">
+                          <a>content@thaibulksms.com</a>
+                        </li>
+                        <li className="sub-head-menu">
+                          <a>ThaiBulkSMS</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="menu_btn">
+                      <ul>
+                        <li>
+                          <a
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
+                            className="loginLink"
+                          >
+                            {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                          </a>
+                        </li>
+                        <li>
+                          <Link href="/pricing">
+                            <a className="btn v1">
+                              {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="documentation">
+                <div className="site-sub-menu">
+                  <HeaderTopMenuMobile />
+                  <div className="block_detail_menu_mobile">
+                    <h5 className="show-site-sub-menu head-site-sub-menu">{t('header.documentation')}</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>ดาวน์โหลดคู่มือ</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>ดาวน์โหลดตัวอย่าง SDK</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>API References</a>
+                      </li>
+                    </ul>
+                    <div className="menu_btn">
+                      <ul>
+                        <li>
+                          <a
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
+                            className="loginLink"
+                          >
+                            {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                          </a>
+                        </li>
+                        <li>
+                          <Link href="/pricing">
+                            <a className="btn v1">
+                              {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="aboutme">
+                <div className="site-sub-menu">
+                  <HeaderTopMenuMobile />
+                  <div className="block_detail_menu_mobile">
+                    <h5 className="show-site-sub-menu head-site-sub-menu">เกี่ยวกับบริษัท</h5>
+                    <ul className="title-sub-menu">
+                      <li className="sub-head-menu">
+                        <a>ทำไมต้อง ThaiBulkSMS</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>ติดต่อเรา</a>
+                      </li>
+                      <li className="sub-head-menu">
+                        <a>Reseller Program</a>
+                      </li>
+                    </ul>
+                    <div className="margin-top-sub-menu">
+                      <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <a>02-789-000</a>
+                        </li>
+                        <li className="sub-head-menu">
+                          <a>content@thaibulksms.com</a>
+                        </li>
+                        <li className="sub-head-menu">
+                          <a>ThaiBulkSMS</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="menu_btn">
+                      <ul>
+                        <li>
+                          <a
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
+                            className="loginLink"
+                          >
+                            {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                          </a>
+                        </li>
+                        <li>
+                          <Link href="/pricing">
+                            <a className="btn v1">
+                              {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          {/* end new sub menu mobile */}
           <div className="col-lg-3 lg-none">
             <div className="menu_btn">
               <ul>
