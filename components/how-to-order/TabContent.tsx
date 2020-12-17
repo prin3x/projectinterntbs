@@ -208,7 +208,7 @@ const TabContent = ({ t }: any) => {
                   <div className="col-lg-10">
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>{t('howtoordertabcontent.payment.creditnow.header')}</h5>
+                        <h2>{t('howtoordertabcontent.payment.creditnow.header')}</h2>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -294,7 +294,7 @@ const TabContent = ({ t }: any) => {
 
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>{t('howtoordertabcontent.payment.creditwait.header')}</h5>
+                        <h2>{t('howtoordertabcontent.payment.creditwait.header')}</h2>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -761,7 +761,7 @@ const TabContent = ({ t }: any) => {
               <div className="box__header">
                 <h5>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.headermodal')}</h5>
               </div>
-              <div className="box__body">
+              <div className="box__body type__scroll">
                 <div
                   className="box__content border-0"
                   style={{ backgroundColor: '#f1f8f9' }}
@@ -832,7 +832,7 @@ const TabContent = ({ t }: any) => {
                   )}
                 </h5>
               </div>
-              <div className="box__body">
+              <div className="box__body type__scroll">
                 <div
                   className="box__content border-0"
                   style={{ backgroundColor: '#f1f8f9' }}

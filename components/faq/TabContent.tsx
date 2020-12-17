@@ -30,7 +30,7 @@ const listItemshopping = [
 
 const listItemAPI = [
   { question: 'การใช้งาน SMS กับ ThaiBulkSMS สามารถรองรับได้กี่ภาษา', answer: 'สามารถรองรับได้ทุกภาษา เช่น PHP Javascript Python และอื่น ๆ ตามละเอียดดังนี้ <a href="https://developer.thaibulksms.com/reference" target="_blank">https://developer.thaibulksms.com/reference</a>' },
-  { question: 'การใช้งาน OTP Ready to use มีขั้นตอนยังไงบ้าง', answer: 'สามารถรองรับได้ทุกภาษา เช่น PHP Javascript Python และอื่น ๆ ตามละเอียดดังนี้ <a href="https://developer.thaibulksms.com/reference" target="_blank">https://developer.thaibulksms.com/reference</a>' },
+  { question: 'การใช้งาน OTP Ready to use มีขั้นตอนยังไงบ้าง', answer: 'สามารถดูรายละเอียดขั้นตอนการใช้ได้ที่ <a href="https://assets.thaibulksms.com/documents/Thaibulksms-otp.pdf" target="_blank">https://assets.thaibulksms.com/documents/Thaibulksms-otp.pdf</a>' },
   { question: 'ความเร็ว Success Rate ทั้ง Standard SMS กับ Corporate SMS ต่างกันหรือไม่', answer: 'ไม่แตกต่างกัน โดยจะเป็นการส่งข้อความด้วย Gateway ที่ดีที่สุดของเราเหมือนกัน' },
   { question: 'OTP จะสามารถส่งเข้าทุกเบอร์หรือไม่ แม้กระทั่งผู้ใช้งานมีการบล็อค SMS ไว้', answer: 'ถ้าลูกค้าใช้งาน <span>OTP Ready to use</span>  สามารถส่งไปยังทุกเบอร์ได้ เพราะทางเราได้เปิดบริการ <span>Whitelist</span> ไว้ให้อัตโนมัติแล้ว แต่ถ้าส่งผ่านการเขียนโปรแกรม OTP ของทางลูกค้าเอง ชื่อ sender name ของทางลูกค้าจะต้องแจ้งขอ <span>Whitelist</span> เพิ่มเติมก่อน เพื่อให้ส่งผ่านไปยังเบอร์ที่แจ้งบล็อคไว้ได้' },
   { question: 'กรณีเจอ Anti-Spam หมายเลขปลายทางได้แจ้งเครือข่ายงดรับข้อความผ่านช่องทางนี้ สามารถแก้ไขปัญหาอย่างไรได้บ้าง', answer: 'ท่านสามารถติดต่อขอรับแบบฟอร์มขอชื่อผู้ส่ง <span>Whitelist</span> เพื่อให้ทางเราประสานกับทางเครือข่ายให้ได้ ทั้งนี้เครือข่ายจะเป็นผู้พิจารณา ว่าชื่อดังกล่าวสามารถใช้งานแบบ <span>Whitelist</span> ได้หรือไม่' },
@@ -60,7 +60,7 @@ const TabContent = ({ t }: any) => {
               >
                 <div className="row">
                   <div className="col-lg-12">
-                    <h3 className="faqHead">{t('คำถามทั่วไป')}</h3>
+                    <h1 className="faqHead textHeadFaq">{t('คำถามทั่วไป')}</h1>
                     <div
                       className="accordion md-accordion"
                       id="accordionEx1"
