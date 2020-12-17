@@ -255,10 +255,12 @@ const Header = ({ t }: any) => {
                     </li>
                   </ul>
                   <ul className="site-nav-wrap">
-                    <li className="has-children">
-                      <a className="show-site-sub-menu" data-name="pricing">
-                        {t('header.pricing')}
-                      </a>
+                    <li className="">
+                      <Link href="/pricing">
+                        <a className="closemenu">
+                          {t('header.pricing')}
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                   <ul className="site-nav-wrap">
@@ -435,14 +437,14 @@ const Header = ({ t }: any) => {
                       <li>
                         <a
                           href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-                          className="loginLink"
+                          className="loginLink closemenu"
                         >
                           {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
                         </a>
                       </li>
                       <li>
                         <Link href="/pricing">
-                          <a className="btn v1">
+                          <a className="btn v1 closemenu">
                             {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
                           </a>
                         </Link>
@@ -459,31 +461,43 @@ const Header = ({ t }: any) => {
                     <h5 className="show-site-sub-menu head-site-sub-menu">{t('header.product')}</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>จุดเด่นผลิตภัณฑ์</a>
+                        <a className="closemenu">จุดเด่นผลิตภัณฑ์</a>
                       </li>
                     </ul>
                     <h5 className="head-site-sub-menu">สำหรับการตลาด</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>Smart SMS Console</a>
+                        <Link href="/product/smart-sms-console">
+                          <a className="closemenu">Smart SMS Console</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>SMS Tracking</a>
+                        <Link href="/product/sms-tracking">
+                          <a className="closemenu">SMS Tracking</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>Location Based SMS</a>
+                        <Link href="/product/location-based-sms">
+                          <a className="closemenu">Location Based SMS</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>Global SMS</a>
+                        <Link href="/product/global-sms">
+                          <a className="closemenu">Global SMS</a>
+                        </Link>
                       </li>
                     </ul>
                     <h5 className="head-site-sub-menu">สำหรับนักพัฒนา</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>SMS API</a>
+                        <Link href="/product/sms-api">
+                          <a className="closemenu">SMS API</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>OTP Service</a>
+                        <Link href="/product/otp">
+                          <a className="closemenu">OTP Service</a>
+                        </Link>
                       </li>
                     </ul>
                     <div className="menu_btn">
@@ -491,14 +505,14 @@ const Header = ({ t }: any) => {
                         <li>
                           <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-                            className="loginLink"
+                            className="loginLink closemenu"
                           >
                             {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
                           </a>
                         </li>
                         <li>
                           <Link href="/pricing">
-                            <a className="btn v1">
+                            <a className="btn v1 closemenu">
                               {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
                             </a>
                           </Link>
@@ -515,22 +529,30 @@ const Header = ({ t }: any) => {
                     <h5 className="show-site-sub-menu head-site-sub-menu">คลังข้อมูล</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>คลังข้อมูล</a>
+                        <Link href="/resource">
+                          <a className="closemenu">คลังข้อมูล</a>
+                        </Link>
                       </li>
                     </ul>
                     <h5 className="head-site-sub-menu">บทความ</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>ความรู้</a>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
+                          <a className="closemenu">ความรู้</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>ตัวอย่างการใช้งาน</a>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}>
+                          <a className="closemenu">ตัวอย่างการใช้งาน</a>
+                        </Link>
                       </li>
                     </ul>
                     <h5 className="head-site-sub-menu">การศึกษา</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>เรื่องราวความสำเร็จ</a>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
+                          <a className="closemenu">เรื่องราวความสำเร็จ</a>
+                        </Link>
                       </li>
                     </ul>
                     <div className="menu_btn">
@@ -538,14 +560,14 @@ const Header = ({ t }: any) => {
                         <li>
                           <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-                            className="loginLink"
+                            className="loginLink closemenu"
                           >
                             {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
                           </a>
                         </li>
                         <li>
                           <Link href="/pricing">
-                            <a className="btn v1">
+                            <a className="btn v1 closemenu">
                               {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
                             </a>
                           </Link>
@@ -562,13 +584,19 @@ const Header = ({ t }: any) => {
                     <h5 className="show-site-sub-menu head-site-sub-menu">ซัพพอร์ต</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>{t('header.howtoorder')}</a>
+                        <Link href="/support/how-to-order">
+                          <a className="closemenu">{t('header.howtoorder')}</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>คำถามที่พบบ่อย</a>
+                        <Link href="/support/faq">
+                          <a className="closemenu">คำถามที่พบบ่อย</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>{t('header.contact')}</a>
+                        <Link href="/contact">
+                          <a className="closemenu">{t('header.contact')}</a>
+                        </Link>
                       </li>
                     </ul>
                     <div className="margin-top-sub-menu">
@@ -590,14 +618,14 @@ const Header = ({ t }: any) => {
                         <li>
                           <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-                            className="loginLink"
+                            className="loginLink closemenu"
                           >
                             {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
                           </a>
                         </li>
                         <li>
                           <Link href="/pricing">
-                            <a className="btn v1">
+                            <a className="btn v1 closemenu">
                               {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
                             </a>
                           </Link>
@@ -614,13 +642,17 @@ const Header = ({ t }: any) => {
                     <h5 className="show-site-sub-menu head-site-sub-menu">{t('header.documentation')}</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>ดาวน์โหลดคู่มือ</a>
+                        <Link href="/developer">
+                          <a className="closemenu">ดาวน์โหลดคู่มือ</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>ดาวน์โหลดตัวอย่าง SDK</a>
+                        <a className="closemenu">ดาวน์โหลดตัวอย่าง SDK</a>
                       </li>
                       <li className="sub-head-menu">
-                        <a>API References</a>
+                        <Link href="https://developer.thaibulksms.com">
+                          <a className="closemenu">API References</a>
+                        </Link>
                       </li>
                     </ul>
                     <div className="menu_btn">
@@ -628,14 +660,14 @@ const Header = ({ t }: any) => {
                         <li>
                           <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-                            className="loginLink"
+                            className="loginLink closemenu"
                           >
                             {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
                           </a>
                         </li>
                         <li>
                           <Link href="/pricing">
-                            <a className="btn v1">
+                            <a className="btn v1 closemenu">
                               {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
                             </a>
                           </Link>
@@ -652,13 +684,17 @@ const Header = ({ t }: any) => {
                     <h5 className="show-site-sub-menu head-site-sub-menu">เกี่ยวกับบริษัท</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a>ทำไมต้อง ThaiBulkSMS</a>
+                        <Link href="/why-thaibulksms">
+                          <a className="closemenu">ทำไมต้อง ThaiBulkSMS</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>ติดต่อเรา</a>
+                        <Link href="/contact">
+                          <a className="closemenu">ติดต่อเรา</a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a>Reseller Program</a>
+                        <a className="closemenu">Reseller Program</a>
                       </li>
                     </ul>
                     <div className="margin-top-sub-menu">
@@ -680,14 +716,14 @@ const Header = ({ t }: any) => {
                         <li>
                           <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-                            className="loginLink"
+                            className="loginLink closemenu"
                           >
                             {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
                           </a>
                         </li>
                         <li>
                           <Link href="/pricing">
-                            <a className="btn v1">
+                            <a className="btn v1 closemenu">
                               {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
                             </a>
                           </Link>
