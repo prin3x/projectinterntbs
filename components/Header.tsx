@@ -500,7 +500,7 @@ const Header = ({ t }: any) => {
                         </Link>
                       </li>
                     </ul>
-                    <div className="menu_btn">
+                    <div className="menu_btn menu_btn_margin_bottom ">
                       <ul>
                         <li>
                           <a
