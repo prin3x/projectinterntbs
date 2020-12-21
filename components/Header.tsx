@@ -106,6 +106,145 @@ const Header = ({ t }: any) => {
                     </Link>
                     <ul className="dropdown">
                       <li className="listsub">
+                        <Link href="/product/sms-tracking">
+                          <a className="">
+                            <img
+                              className="new_icon_menu_top"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                              alt="box"
+                            />
+                            <h6>จุดเด่นผลิตภัณฑ์</h6>
+                            <p className="txtSub">ตอบโจทย์ทั้งนักการตลาดและนักพัฒนา</p>
+                          </a>
+                          {/* <a>
+                            <div className="row">
+                              <div className="col-2">
+                                <img
+                                  className="new_icon_menu_top"
+                                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                  alt="box"
+                                />
+                              </div>
+                              <div className="col-10">
+                                <h6>จุดเด่นผลิตภัณฑ์</h6>
+                                <p className="txtSub">ตอบโจทย์ทั้งนักการตลาดและนักพัฒนา</p>
+                              </div>
+                            </div>
+                          </a> */}
+                        </Link>
+                      </li>
+                      <h6 style={{ marginLeft: '30px' }}>สำหรับนักการตลาด</h6>
+                      <li className="listsub">
+                        <Link href="/product/global-sms">
+                          <a>
+                            <div className="row">
+                              <div className="col-4">
+                                <img
+                                  className="new_icon_menu_top"
+                                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                  alt="box"
+                                />
+                              </div>
+                              <div className="col-8">
+                                <h6>Smart SMS Console</h6>
+                                <p className="txtSub">ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง</p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
+                        <Link href="/product/location-based-sms">
+                          <a>
+                            <div className="row">
+                              <div className="col-4">
+                                <img
+                                  className="new_icon_menu_top"
+                                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                  alt="box"
+                                />
+                              </div>
+                              <div className="col-8">
+                                <h6>Location Based SMS</h6>
+                                <p className="txtSub">ส่งข้อความหากลุ่มเป้าหมายในพื้นที่ ที่ไม่ต้องใช้เบอร์</p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
+                      </li>
+                      <li className="listsub">
+                        <Link href="/product/global-sms">
+                          <a>
+                            <div className="row">
+                              <div className="col-4">
+                                <img
+                                  className="new_icon_menu_top"
+                                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                  alt="box"
+                                />
+                              </div>
+                              <div className="col-8">
+                                <h6>SMS Tracking</h6>
+                                <p className="txtSub">วัดผลแคมเปญ SMS แม่นยำ</p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
+                        <Link href="/product/location-based-sms">
+                          <a>
+                            <div className="row">
+                              <div className="col-4">
+                                <img
+                                  className="new_icon_menu_top"
+                                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                  alt="box"
+                                />
+                              </div>
+                              <div className="col-8">
+                                <h6>Global SMS</h6>
+                                <p className="txtSub">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
+                      </li>
+                      <h6 style={{ marginLeft: '30px' }}>สำหรับนักพัฒนา</h6>
+                      <li className="listsub">
+                        <Link href="">
+                          <a>
+                            <div className="row">
+                              <div className="col-4">
+                                <img
+                                  className="new_icon_menu_top"
+                                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                  alt="box"
+                                />
+                              </div>
+                              <div className="col-8">
+                                <h6>SMS API</h6>
+                                <p className="txtSub">ส่งข้อความได้บทแพลตฟอร์มของตนเอง</p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
+                        <Link href="">
+                          <a>
+                            <div className="row">
+                              <div className="col-4">
+                                <img
+                                  className="new_icon_menu_top"
+                                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                  alt="box"
+                                />
+                              </div>
+                              <div className="col-8">
+                                <h6>OTP Service</h6>
+                                <p className="txtSub">ระบบส่ง OTP พร้อมใช้ ไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                              </div>
+                            </div>
+                          </a>
+                        </Link>
+                      </li>
+
+                      {/* <li className="listsub">
                         <Link href="/product/smart-sms-console">
                           <a>
                             <h6>Smart SMS Console</h6>
@@ -144,7 +283,7 @@ const Header = ({ t }: any) => {
                             <p className="txtSub">เข้าถึงกลุ่มเป้าหมายในพื้นที่ ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</p>
                           </a>
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                   <li>
@@ -156,8 +295,48 @@ const Header = ({ t }: any) => {
                     <Link href="/resource">
                       <a className="active">คลังข้อมูล</a>
                     </Link>
-                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
-                      <li>
+                    <ul className="dropdown" style={{ minWidth: '260px', left: '-300%' }}>
+                      <li className="listsub">
+                        <div className="col-6">
+                          <Link href="">
+                            <a>
+                              <div className="row">
+                                <div className="col-3">
+                                  <img
+                                    className=""
+                                    src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                    alt="box"
+                                  />
+                                </div>
+                                <div className="col-9">
+                                  <h6>OTP Service</h6>
+                                  <p className="txtSub">ระบบส่ง OTP พร้อมใช้ ไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                                </div>
+                              </div>
+                            </a>
+                          </Link>
+                        </div>
+                        <div className="col-6">
+                          <Link href="">
+                            <a>
+                              <div className="row">
+                                <div className="col-5">
+                                  <img
+                                    className="new_icon_menu_top"
+                                    src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box.png`}
+                                    alt="box"
+                                  />
+                                </div>
+                                <div className="col-7">
+                                  <h6>OTP Service</h6>
+                                  <p className="txtSub">ระบบส่ง OTP พร้อมใช้ ไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                                </div>
+                              </div>
+                            </a>
+                          </Link>
+                        </div>
+                      </li>
+                      {/* <li>
                         <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
                           <a><h6>ความรู้</h6></a>
                         </Link>
@@ -171,8 +350,7 @@ const Header = ({ t }: any) => {
                         <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
                           <a><h6>เรื่องราวความสำเร็จ</h6></a>
                         </Link>
-                      </li>
-
+                      </li> */}
                     </ul>
                   </li>
                   <li className="has-children">
