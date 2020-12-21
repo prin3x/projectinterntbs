@@ -515,7 +515,7 @@ const Header = ({ t }: any) => {
                     </ul>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <Link href="/product/">
+                        <Link href="/product">
                           <a className="closemenu">
                             <img
                               className="icon-title-menu-mobile"
@@ -745,7 +745,7 @@ const Header = ({ t }: any) => {
                       <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
-                          <a>
+                          <a href="tel:027986000">
                             <img
                               className="icon-title-menu-mobile"
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
@@ -755,17 +755,17 @@ const Header = ({ t }: any) => {
                           </a>
                         </li>
                         <li className="sub-head-menu">
-                          <a>
+                          <a href="mailto:contact@thaibulksms.com">
                             <img
                               className="icon-title-menu-mobile"
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                               alt="box-test.png"
                             />
-                            content@thaibulksms.com
+                            contact@thaibulksms.com
                           </a>
                         </li>
                         <li className="sub-head-menu">
-                          <a>
+                          <a href="https://www.facebook.com/ThaiBulkSMS">
                             <img
                               className="icon-title-menu-mobile"
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
@@ -810,14 +810,16 @@ const Header = ({ t }: any) => {
                         </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a className="closemenu">
-                          <img
-                            className="icon-title-menu-mobile"
-                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
-                            alt="box-test.png"
-                          />
-                          ดาวน์โหลดตัวอย่าง SDK
-                        </a>
+                        <Link href="/developer#ex_sdk">
+                          <a className="closemenu">
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
+                              alt="box-test.png"
+                            />
+                            ดาวน์โหลดตัวอย่าง SDK
+                          </a>
+                        </Link>
                       </li>
                       <li className="sub-head-menu">
                         <Link href="https://developer.thaibulksms.com">
@@ -894,7 +896,7 @@ const Header = ({ t }: any) => {
                       <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
-                          <a>
+                          <a href="tel:027986000">
                             <img
                               className="icon-title-menu-mobile"
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
@@ -904,17 +906,17 @@ const Header = ({ t }: any) => {
                           </a>
                         </li>
                         <li className="sub-head-menu">
-                          <a>
+                          <a href="mailto:contact@thaibulksms.com">
                             <img
                               className="icon-title-menu-mobile"
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                               alt="box-test.png"
                             />
-                            content@thaibulksms.com
+                            contact@thaibulksms.com
                           </a>
                         </li>
                         <li className="sub-head-menu">
-                          <a>
+                          <a href="https://www.facebook.com/ThaiBulkSMS">
                             <img
                               className="icon-title-menu-mobile"
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
