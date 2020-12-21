@@ -1,14 +1,22 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-import Link from 'next/link'
+import Link from 'next/link';
 const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3>{t('LocationBasedSMSPage:smsSection.title')}</h3>
-            <p>{t('LocationBasedSMSPage:smsSection.description')}</p>
+            <h3>
+              {t(
+                'SmsSection::Send messages even without phone numbers when the target group enters the determined area,'
+              )}
+            </h3>
+            <p>
+              {t(
+                'SmsSection::making reaching your target group an easier matter. Suitable for businesses who wish to immediately stimulate sales in offline areas.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -27,14 +35,18 @@ const SmsSectionV3 = ({ t }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>{t('LocationBasedSMSPage:smsSection.title-on-box')}</h4>
+                  <h4>
+                    {t(
+                      'SmsSection::How can customers be reached? Prove this on your own.'
+                    )}
+                  </h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
                   <Link href="/contact">
                     <a className="btn v8">
-                      {t('LocationBasedSMSPage:smsSection.button-on-box')}
+                      {t('SmsSection::Let us advise you')}
                     </a>
                   </Link>
                 </div>

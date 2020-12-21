@@ -11,10 +11,16 @@ const PromoSection = ({ t }: any) => (
           <div className="promo_text">
             <h2
               dangerouslySetInnerHTML={{
-                __html: t('PromoSection::A complete set of features meeting the needs of both marketers and developers'),
+                __html: t(
+                  'PromoSection::A complete set of features meeting the needs of both marketers and developers'
+                ),
               }}
             ></h2>
-            <p>{t('PromoSection::The user experience is designed to meet your requirements.')}</p>
+            <p>
+              {t(
+                'PromoSection::The user experience is designed to meet your requirements.'
+              )}
+            </p>
           </div>
         </div>
       </div>
@@ -24,7 +30,9 @@ const PromoSection = ({ t }: any) => (
             <div className="promo_title">
               <p
                 dangerouslySetInnerHTML={{
-                  __html: t('PromoSection::Easy sending​ ​ and fast measurement of results​ ​ thanks to smart reports'),
+                  __html: t(
+                    'PromoSection::Easy sending​ ​ and fast measurement of results​ ​ thanks to smart reports'
+                  ),
                 }}
               ></p>
             </div>
@@ -48,7 +56,9 @@ const PromoSection = ({ t }: any) => (
             <div className="promo_title">
               <p
                 dangerouslySetInnerHTML={{
-                  __html: t('PromoSection::xxxxxxxxxxxxxxxx'),
+                  __html: t(
+                    'PromoSection::Easily connect to APIS, using over 10 languages'
+                  ),
                 }}
               ></p>
             </div>
@@ -89,10 +99,16 @@ const PromoSection = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="service_feature_text">
-            <h3>{t('PromoSection::Instant credit refunds if messages fail to reach the recipients')}</h3>
+            <h3>
+              {t(
+                'PromoSection::Instant credit refunds if messages fail to reach the recipients'
+              )}
+            </h3>
             <p
               dangerouslySetInnerHTML={{
-                __html: t('PromoSection::Confirmation at the recipient’s mobile phone is available for checking whether or not the SMS have arrived at the recipient’s end. If the SMS fail to reach the recipients due to being blocked by anti-spam systems, the phone being switched off, the phone having run out of memory or other causes, we will refund the credits to you.'),
+                __html: t(
+                  'PromoSection::Confirmation at the recipient’s mobile phone is available for checking whether or not the SMS have arrived at the recipient’s end. If the SMS fail to reach the recipients due to being blocked by anti-spam systems, the phone being switched off, the phone having run out of memory or other causes, we will refund the credits to you.'
+                ),
               }}
             ></p>
             {/* <a className="link" >
@@ -101,7 +117,9 @@ const PromoSection = ({ t }: any) => (
             <h6
               className="promo_link"
               dangerouslySetInnerHTML={{
-                __html: t('PromoSection::These features are available only for <span>the Corporate SMS package</span>'),
+                __html: t(
+                  'PromoSection::These features are available only for <span>the Corporate SMS package</span>'
+                ),
               }}
             ></h6>
           </div>
@@ -112,12 +130,20 @@ const PromoSection = ({ t }: any) => (
           <div className="service_feature_text">
             <h3
               dangerouslySetInnerHTML={{
-                __html: t('PromoSection::Measuring the results of your campaign accurately <br>with SMS Tracking'),
+                __html: t(
+                  'PromoSection::Measuring the results of your campaign accurately <br>with SMS Tracking'
+                ),
               }}
             ></h3>
-            <p>{t('PromoSection::Instantly follow through on customers or target groups after pressing send. Also possible to check whether or not the recipient has read your messages.')}</p>
+            <p>
+              {t(
+                'PromoSection::Instantly follow through on customers or target groups after pressing send. Also possible to check whether or not the recipient has read your messages.'
+              )}
+            </p>
             <Link href="/product/sms-tracking">
-              <a className="link">{t('PromoSection::How does SMS tracking work?')}</a>
+              <a className="link">
+                {t('PromoSection::How does SMS tracking work?')}
+              </a>
             </Link>
           </div>
         </div>
@@ -130,7 +156,11 @@ const PromoSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_4.png`}
                   alt="Image"
                 />
-                <p>{t('PromoSection::Know who has or has not opened your messages.')}</p>
+                <p>
+                  {t(
+                    'PromoSection::Know who has or has not opened your messages.'
+                  )}
+                </p>
               </div>
             </div>
             <div className="col-md-4 col-12">
@@ -140,7 +170,9 @@ const PromoSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_5.png`}
                   alt="Image"
                 />
-                <p>{t('PromoSection::Know your campaign’s conversion rate.')}</p>
+                <p>
+                  {t('PromoSection::Know your campaign’s conversion rate.')}
+                </p>
               </div>
             </div>
             <div className="col-md-4 col-12">
@@ -150,7 +182,9 @@ const PromoSection = ({ t }: any) => (
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_6.png`}
                   alt="Image"
                 />
-                <p>{t('PromoSection::Use the data to conduct lead scoring.')}</p>
+                <p>
+                  {t('PromoSection::Use the data to conduct lead scoring.')}
+                </p>
               </div>
             </div>
           </div>
@@ -170,10 +204,16 @@ const PromoSection = ({ t }: any) => (
           <div className="service_feature_text">
             <h3
               dangerouslySetInnerHTML={{
-                __html: t('PromoSection::An OTP system that is ready to use <br>and requires no extra programming'),
+                __html: t(
+                  'PromoSection::An OTP system that is ready to use <br>and requires no extra programming'
+                ),
               }}
             ></h3>
-            <p>{t('PromoSection::Helping developers to work more easily and conveniently. The initial set-up requires just a few clicks, then the codes for using with API will instantly be ready.')}</p>
+            <p>
+              {t(
+                'PromoSection::Helping developers to work more easily and conveniently. The initial set-up requires just a few clicks, then the codes for using with API will instantly be ready.'
+              )}
+            </p>
             <a
               href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v2"
@@ -181,12 +221,16 @@ const PromoSection = ({ t }: any) => (
               {t('PromoSection::Try for free')}
             </a>
             <Link href="/product/otp">
-              <a className="link">{t('PromoSection::Read more about OTP Ready-to-Use>')}</a>
+              <a className="link">
+                {t('PromoSection::Read more about OTP Ready-to-Use>')}
+              </a>
             </Link>
             <h6
               className="promo_link"
               dangerouslySetInnerHTML={{
-                __html: t('PromoSection::These features are available only for <span>the Corporate SMS package</span>'),
+                __html: t(
+                  'PromoSection::These features are available only for <span>the Corporate SMS package</span>'
+                ),
               }}
             ></h6>
           </div>

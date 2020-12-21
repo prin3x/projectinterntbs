@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Reseller ร่วมเป็นตัวแทนจำหน่ายกับ ThaiBulkSMS",
+    "description": "บริการสำหรับผู้ค้าปลีก สนใจเป็นตัวแทนจำหน่าย SMS กับเรา ได้ในราคาสุดพิเศษ และข้อเสนอต่าง ๆ มีให้อย่างไม่จำกัด",
+    "keywords": ""
+  },
+
+  "HeroSection": {
+    "<span>SMS Reseller</span><br/> a special program for ThaiBulkSMS resellers": "<span>SMS Reseller</span><br/> a special program for ThaiBulkSMS resellers"
+  },
+
+  "SmsSection": {
+    "Valuable prices at better rates than on the web page.": "Valuable prices at better rates than on the web page.",
+    "When you become a reseller, you will receive superior Special Rate prices that are suitable for Software House or Digital Agency businesses.": "When you become a reseller, you will receive superior Special Rate prices that are suitable for Software House or Digital Agency businesses.",
+    "Interested in becoming a ThaiBulkSMS reseller?": "Interested in becoming a ThaiBulkSMS reseller?",
+    "Request a quotation slip": "Request a quotation slip"
+  },
+
+  "DesSection": {
+    "Select your payment method, between Prepaid or Postpaid": "Select your payment method, between Prepaid or Postpaid",
+    "Be worry-free about budget management, as you can choose your method of payment.": "Be worry-free about budget management, as you can choose your method of payment.",
+    "<span>Add credit</span><br />(Prepaid)": "<span>Add credit</span><br />(Prepaid)",
+    "<span>Pay monthly</span><br />(Postpaid)": "<span>Pay monthly</span><br />(Postpaid)"
+  },
+
+  "AdvantagesSection": {
+    "The most special offers are granted on an Unlimited basis": "The most special offers are granted on an Unlimited basis",
+    "No limit to the number of Sender Names and reserve accounts. These special offers are made only for resellers like you.": "No limit to the number of Sender Names and reserve accounts. These special offers are made only for resellers like you."
+  },
+
+  "CtaSection": {
+    "Rest assured that you will receive prices <br/>and various special benefits that are superior to those of other places.": "Rest assured that you will receive prices <br/>and various special benefits that are superior to those of other places.",
+    "Additional inquiries": "Additional inquiries",
+    "Or, call <a href=\"tel:02-798-6000\">02-798-6000</a>": "Or, call <a href=\"tel:02-798-6000\">02-798-6000</a>"
+  }
+}

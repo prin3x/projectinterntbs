@@ -12,7 +12,9 @@ const SliderSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h3 className="section_title">{t('productslider.header')} </h3>
+          <h3 className="section_title">
+            {t('SliderSection::SMS can be used for multiple purposes.')}{' '}
+          </h3>
         </div>
       </div>
       <div className="row">
@@ -46,36 +48,75 @@ const SliderSection = ({ t }: any) => (
           >
             <div className="item">
               <div className="slider_item">
-                <h3>{t('productslider.item.1.title')}</h3>
-                <p>{t('productslider.item.1.desc')}</p>
+                <h3>
+                  {t(
+                    'SliderSection::Notification of special privileges for members'
+                  )}
+                </h3>
+                <p>
+                  {t(
+                    'SliderSection::It is possible to send a notification of special privileges to a specific customer by name. Plus, it is possible to check whether the customer has opened the special privileges link or not.'
+                  )}
+                </p>
                 {/* <a >{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>{t('productslider.item.2.title')}</h3>
-                <p>{t('productslider.item.2.desc')}</p>
+                <h3>{t('SliderSection::Notification of expiry date')}</h3>
+                <p>
+                  {t(
+                    'SliderSection::It is possible to send an SMS notifying the expiry date to customers automatically once the API is connected to the existing database.'
+                  )}
+                </p>
                 {/* <a >{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>{t('productslider.item.3.title')}</h3>
-                <p>{t('productslider.item.3.desc')}</p>
+                <h3>{t('SliderSection::Sending identity verification OTP')}</h3>
+                <p>
+                  {t(
+                    'SliderSection::Sending a one-time-use password to increase the customers’ security when conducting online transactions'
+                  )}
+                </p>
                 {/* <a >{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>{t('productslider.item.4.title')}</h3>
-                <p>{t('productslider.item.4.desc')}</p>
+                <h3>{t('SliderSection::Notification of delivery status')}</h3>
+                <p>
+                  {t(
+                    'SliderSection::Sending an SMS notifying the delivery status to customers in real-time automatically once the API is connected to the existing database.'
+                  )}
+                </p>
                 {/* <a >{t('a1')}</a> */}
               </div>
             </div>
             <div className="item">
               <div className="slider_item">
-                <h3>{t('productslider.item.5.title')}</h3>
-                <p>{t('productslider.item.5.desc')}</p>
+                <h3>
+                  {t(
+                    'SliderSection::Notification of special privileges for members'
+                  )}
+                </h3>
+                <p>
+                  {t(
+                    'SliderSection::It is possible to send a notification of special privileges to a specific customer by name. Plus, it is possible to check whether the customer has opened the special privileges link or not.'
+                  )}
+                </p>
+                {/* <a >{t('a1')}</a> */}
+              </div>
+            </div>
+            <div className="item">
+              <div className="slider_item">
+                <h3>{t('SliderSection::Promotion of marketing activities')}</h3>
+                <p>
+                  {t(
+                    'SliderSection::Easy group messaging for promotional purposes. It is also simple to follow up on each customer’s clicks on the promotional links.'
+                  )}
+                </p>
                 {/* <a >{t('a1')}</a> */}
               </div>
             </div>
@@ -84,15 +125,15 @@ const SliderSection = ({ t }: any) => (
       </div>
     </div>
     {/* <p style={{ textAlign: 'center', marginTop: '50px', color: '#31b1e7' }}>
-      {t('productslider.exampleBtn')}
+      {t('SliderSection::exampleBtn')}
     </p> */}
   </div>
 );
 SliderSection.getInitialProps = async () => ({
-  namespacesRequired: ['ProductSliderSection'],
+  namespacesRequired: ['Product'],
 });
 
 SliderSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('ProductSliderSection')(SliderSection);
+export default withTranslation('Product')(SliderSection);

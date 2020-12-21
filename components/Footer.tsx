@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Link, withTranslation } from '../i18n';
 const Footer = ({ t }: any) => {
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
   return (
     <div className="footer_section">
       <div className="container" id="footer">
@@ -11,7 +11,7 @@ const Footer = ({ t }: any) => {
             <div className="footer_widget">
               <Link href="/product">
                 <a>
-                  <h4>{t('footer.service')}</h4>
+                  <h4>{t('footer::Services')}</h4>
                 </a>
               </Link>
               <ul>
@@ -77,18 +77,20 @@ const Footer = ({ t }: any) => {
         </div> */}
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>{t('footer.support')}</h4>
+              <h4>{t('footer::Support')}</h4>
               <ul>
                 <li>
                   <Link href="/support/how-to-order">
-                    <a>{t('footer.howtoorder')}</a>
+                    <a>{t('footer::Ordering Methods')}</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/support/faq">คำถามที่พบบ่อย</Link>
+                  <Link href="/support/faq">
+                    {t('footer::Frequently Asked Questions')}
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/developer">ดาวน์โหลดคู่มือ</Link>
+                  <Link href="/developer">{t('footer::For Developers')}</Link>
                 </li>
                 <li>
                   <a
@@ -104,11 +106,11 @@ const Footer = ({ t }: any) => {
           </div>
           <div className="col-md-3 col-6">
             <div className="footer_widget">
-              <h4>เกี่ยวกับเรา</h4>
+              <h4>{t('footer::About Us')}</h4>
               <ul>
                 <li>
                   <Link href="/why-thaibulksms">
-                    <a>ทำไมต้อง ThaiBulkSMS</a>
+                    <a>{t('footer::Why use ThaiBulkSMS?')}</a>
                   </Link>
                 </li>
                 <li>
@@ -118,7 +120,7 @@ const Footer = ({ t }: any) => {
                 </li>
                 <li>
                   <Link href="/contact">
-                    <a>ติดต่อเรา</a>
+                    <a>{t('footer::Contact us')}</a>
                   </Link>
                 </li>
               </ul>
@@ -127,7 +129,7 @@ const Footer = ({ t }: any) => {
           <div className="col-md-3 col-6">
             <div className="footer_widget">
               <h4>
-                {t('footer.about')}
+                {t('footer::Follow Us')}
                 <a href="https://www.facebook.com/ThaiBulkSMS" target="_blank">
                   <img
                     className="lazyload"

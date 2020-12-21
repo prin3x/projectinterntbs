@@ -8,25 +8,39 @@ const SimpleSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h2 className="simple_title">{t('SimpleSection::Complete set of basic features for SMS sending')}</h2>
+          <h2 className="simple_title">
+            {t('SimpleSection::Complete set of basic features for SMS sending')}
+          </h2>
         </div>
         <div className="col-md-12">
           <ul className="simple_feature_list">
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('SimpleSection::Sending results can be checked instantly.')}</p>
+              <p>
+                {t('SimpleSection::Sending results can be checked instantly.')}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('SimpleSection::Maximum allowance of 5 messages being sent consecutively')}</p>
+              <p>
+                {t(
+                  'SimpleSection::Maximum allowance of 5 messages being sent consecutively'
+                )}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('SimpleSection::Various ways of setting the time of sending')}</p>
+              <p>
+                {t(
+                  'SimpleSection::Various ways of setting the time of sending'
+                )}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('SimpleSection::Detailed reports of sending are provided.')}</p>
+              <p>
+                {t('SimpleSection::Detailed reports of sending are provided.')}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
@@ -34,7 +48,9 @@ const SimpleSection = ({ t }: any) => (
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('SimpleSection::The sending status is clearly specified.')}</p>
+              <p>
+                {t('SimpleSection::The sending status is clearly specified.')}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>

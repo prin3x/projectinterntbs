@@ -11,21 +11,23 @@ const CtaSectionV3 = ({ t }: any) => (
           <div className="cta-text">
             <h3
               dangerouslySetInnerHTML={{
-                __html: t('sms-trackingctasection.title'),
+                __html: t(
+                  'CtaSection::Avoid ineffective Marketing budget wastage <br/>through SMS Tracking.'
+                ),
               }}
             ></h3>
             <a
               href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v7"
             >
-              {t('sms-trackingctasection.freeBtn')}
+              {t('CtaSection::Free trial')}
             </a>
             <p>
-              {t('sms-trackingctasection.lablelogin1')}{' '}
+              {t('CtaSection::Or')}{' '}
               <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
-                {t('sms-trackingctasection.lablelogin2')}
+                {t('CtaSection::log in')}
               </a>{' '}
-              {t('sms-trackingctasection.lablelogin3')}
+              {t('CtaSection::, if you already have an account')}
             </p>
           </div>
         </div>
@@ -34,10 +36,10 @@ const CtaSectionV3 = ({ t }: any) => (
   </div>
 );
 CtaSectionV3.getInitialProps = async () => ({
-  namespacesRequired: ['Sms-trackingCtaSection'],
+  namespacesRequired: ['Sms-tracking'],
 });
 
 CtaSectionV3.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Sms-trackingCtaSection')(CtaSectionV3);
+export default withTranslation('Sms-tracking')(CtaSectionV3);

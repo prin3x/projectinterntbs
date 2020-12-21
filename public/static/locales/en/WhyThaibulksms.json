@@ -1,0 +1,68 @@
+{
+    "meta":{
+        "title": "ผู้เชี่ยวชาญบริการด้าน SMS มานานกว่า 10 ปี | ThaiBulkSMS",
+        "description": "ผู้ให้บริการส่ง SMS อันดับ 1 ของไทย มั่นใจได้ว่าคุณจะได้รับสิ่งที่ดีที่สุด และคุณยังสามารถส่งข้อความได้ด้วยตนเอง โดยไม่ผ่านตัวกลาง",
+        "keywords": ""
+    },
+    "HeroSection":{
+        "Why should I use the SMS messaging service of <span>ThaiBulkSMS?</span>":"Why should I use the SMS messaging service of <span>ThaiBulkSMS?</span>"
+    },
+    "SmsSection":{
+        "As Thailand’s Number 1 SMS Communication Platform, which can be personally confirmed,":"As Thailand’s Number 1 SMS Communication Platform, which can be personally confirmed,",
+        "ThaiBulkSMS provides the SMS Communication Platform that is certified by the National Broadcasting and Telecommunications Commission. We have been operating for over 10 years, so you can certainly rest assured in the quality of our service.":"ThaiBulkSMS provides the SMS Communication Platform that is certified by the National Broadcasting and Telecommunications Commission. We have been operating for over 10 years, so you can certainly rest assured in the quality of our service."
+    },
+    "BrandSection":{
+        "A leading, trustworthy brand: ThaiBulkSMS":"A leading, trustworthy brand: ThaiBulkSMS",
+        "Quick sending, rapid receipt, and confidently stable transmissions using Intelligent Routing":"Quick sending, rapid receipt, and confidently stable transmissions using Intelligent Routing",
+        "3 direct networks can be used for sending":"3 direct networks can be used for sending",
+        "Messaging therefore proceeds quickly and with high stability. No bottlenecks occur because we have many channels available for transmission.":"Messaging therefore proceeds quickly and with high stability. No bottlenecks occur because we have many channels available for transmission.",
+        "Selecting a transmission channel that corresponds with the network of the recipient number":"Selecting a transmission channel that corresponds with the network of the recipient number",
+        "We have a network inspection system for the number of the recipient, which filters SMS messages to be sent directly through that network, allowing quicker messaging.":"We have a network inspection system for the number of the recipient, which filters SMS messages to be sent directly through that network, allowing quicker messaging.",
+        "Automatic selection of the best channel":"Automatic selection of the best channel",
+        "If any channel experiences problems, the system is able to immediately shift messaging to other channels, in addition to having backup transmission systems.":"If any channel experiences problems, the system is able to immediately shift messaging to other channels, in addition to having backup transmission systems.",
+        "Free messaging trial":"Free messaging trial"
+    },
+    "PriceSection":{
+        "Focus on cheap prices or on full features can be selected according to your needs":"Focus on cheap prices or on full features can be selected according to your needs",
+        "Standard Package":"Standard Package",
+        "Cheaper messaging prices":"Cheaper messaging prices",
+        "Viewable messaging reports":"Viewable messaging reports",
+        "Complete basic feature operations":"Complete basic feature operations",
+        "Campaign analysis tools":"Campaign analysis tools",
+        "The best SMS price is available at only":"The best SMS price is available at only",
+        "baht / SMS":"บาท / SMS",
+        "Corporate Package":"Corporate Package",
+        "All the features of Standard SMS":"All the features of Standard SMS",
+        "OTP messaging with a Ready-to-use system":"OTP messaging with a Ready-to-use system",
+        "Credit refunds if recipients are unable to receive the messages":"Credit refunds if recipients are unable to receive the messages",
+        "More detailed messaging status checking":"More detailed messaging status checking",
+        "Learn more":"Learn more",
+        "View Package Prices":"View Package Prices"
+    },
+    "TrackSection":{
+        "Easily operated, no matter what category of User you are.":"Easily operated, no matter what category of User you are.",
+        "<span>For new users</span> who have yet to send SMS messages through the web.":"<span>For new users</span> who have yet to send SMS messages through the web.",
+        "Sending SMS messages through ThaiBulkSMS is free from complications and does not require technical knowledge. If you are stuck with problems, there are many channels that are ready to assist.":"Sending SMS messages through ThaiBulkSMS is free from complications and does not require technical knowledge. If you are stuck with problems, there are many channels that are ready to assist.",
+        "<span>For Marketers</span> who wish to analyze the effects of their SMS campaigns":"<span>For Marketers</span> who wish to analyze the effects of their SMS campaigns",
+        "Results analysis tools and easily understandable reports are available, leading to future analyses on whether the campaign was successful.":"Results analysis tools and easily understandable reports are available, leading to future analyses on whether the campaign was successful.",
+        "<span>For Developers</span> who write programs that link with APIs":"<span>For Developers</span> who write programs that link with APIs",
+        "Easy to code programs that link with APIs; a variety of languages are supported, and a system that supports OTP sending is included.":"Easy to code programs that link with APIs; a variety of languages are supported, and a system that supports OTP sending is included.",
+        "Try Sending Messages for Free":"Try Sending Messages for Free",
+        "Included with support from a team of specialists":"Included with support from a team of specialists",
+        "This creates confidence that if the system experiences problems, we can immediately fix the situation for you, regardless of whether it is a Hardware or Software issue.":"This creates confidence that if the system experiences problems, we can immediately fix the situation for you, regardless of whether it is a Hardware or Software issue.",
+        "Safely preserve your data with Internet Banking standards.":"Safely preserve your data with Internet Banking standards.",
+        "With an SSL security system that has the highest standards used in various Internet Banking platforms, you can rest assured that your use of ThaiBulkSMS will receive the same level of safety as that of Internet Banking.":"With an SSL security system that has the highest standards used in various Internet Banking platforms, you can rest assured that your use of ThaiBulkSMS will receive the same level of safety as that of Internet Banking."
+    },
+    "CtaSection":{
+        "Increase successes with SMS Marketing <br/>through Thailand’s number 1 SMS Provider.":"Increase successes with SMS Marketing <br/>through Thailand’s number 1 SMS Provider.",
+        "Try for free":"Try for free",
+        "View Package Prices":"View Package Prices"
+    },
+    "FaqSection":{
+        "Do you still have questions?":"Do you still have questions?",
+        "Select your most convenient contact channel":"Select your most convenient contact channel",
+        "Contact an officer":"Contact an officer",
+        "The officer will contact you back":"The officer will contact you back",
+        "Email":"Email"
+    }
+}

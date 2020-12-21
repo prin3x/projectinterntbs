@@ -44,10 +44,9 @@ const Product = ({ t }: any) => (
 export default withTranslation('Product')(Product);
 
 export const getStaticProps = async () => {
-  return ({
+  return {
     props: {
       namespacesRequired: ['Product'],
     },
-  })
-}
-
+  };
+};

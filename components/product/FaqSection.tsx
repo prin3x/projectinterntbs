@@ -8,7 +8,9 @@ const FaqSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h2 className="section_title">{t('productfaq.header')}</h2>
+          <h2 className="section_title">
+            {t('FaqSection::Frequently Asked Questions')}
+          </h2>
         </div>
       </div>
       <div className="row">
@@ -31,7 +33,9 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.1.title')}
+                    {t(
+                      'FaqSection::What are the differences between Standard SMS and Corporate SMS packages?'
+                    )}
                   </h5>
                 </a>
               </div>
@@ -45,7 +49,9 @@ const FaqSection = ({ t }: any) => (
                 <div className="card-body">
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: t('productfaq.faq.1.desc'),
+                      __html: t(
+                        'FaqSection::<b>The Standard SMS</b><br/> package includes benefits such as cheaper costs of SMS sending, easy SMS sending, reports on SMS sending, a complete set of basic features, and tools for measuring campaign results.<br/><b>The Corporate SMS</b><br/>package includes every feature of the Standard SMS package while also providing additional features which are: access to a ready-to-use OTP sending system, credit refunds if the messages fail to reach the recipients, and the ability to check the sending status in a more detailed manner.'
+                      ),
                     }}
                   ></p>
                 </div>
@@ -64,7 +70,9 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.2.title')}
+                    {t(
+                      'FaqSection::Are sending speeds and success rates of the Standard SMS and Corporate SMS packages different?'
+                    )}
                   </h5>
                 </a>
               </div>
@@ -76,7 +84,7 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.2.desc')}</p>
+                  <p>{t('FaqSection::No.')}</p>
                 </div>
               </div>
             </div>
@@ -93,7 +101,9 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.3.title')}
+                    {t(
+                      'FaqSection::Can the sender’s name be set to a custom name?'
+                    )}
                   </h5>
                 </a>
               </div>
@@ -107,7 +117,9 @@ const FaqSection = ({ t }: any) => (
                 <div className="card-body">
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: t('productfaq.faq.3.desc'),
+                      __html: t(
+                        'FaqSection::It is possible. If you wish to set a custom name as the sender’s name, you are required to purchase a package with a minimum price of 3,000 THB and up. The number of custom names allowed depending on the package chosen. The details can be found here: <a href="https://www.thaibulksms.com/pricing" >https://www.thaibulksms.com/pricing</a>'
+                      ),
                     }}
                   ></p>
                 </div>
@@ -126,7 +138,9 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.4.title')}
+                    {t(
+                      'FaqSection::Which API languages does ThaiBulkSMS support?'
+                    )}
                   </h5>
                 </a>
               </div>
@@ -140,7 +154,9 @@ const FaqSection = ({ t }: any) => (
                 <div className="card-body">
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: t('productfaq.faq.4.desc'),
+                      __html: t(
+                        'FaqSection::More than 10 languages are supported including PHP, Java, Python, and others as listed here:<a href="https://frontend.thaibulksms.com/api" >https://frontend.thaibulksms.com/api</a>'
+                      ),
                     }}
                   ></p>
                 </div>
@@ -167,7 +183,9 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.5.title')}
+                    {t(
+                      'FaqSection::Can OTP be delivered to every recipient, even those who have set their systems to block SMS?'
+                    )}
                   </h5>
                 </a>
               </div>
@@ -181,7 +199,9 @@ const FaqSection = ({ t }: any) => (
                 <div className="card-body">
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: t('productfaq.faq.5.desc'),
+                      __html: t(
+                        'FaqSection::If the customer is using our OTP Ready-to-Use system, the SMS can be delivered to such recipients. But if the customer is using the customer’s system with custom sender names, a whitelist request must be submitted to allow those custom sender names to be able to reach the numbers which turned on the blocking function.'
+                      ),
                     }}
                   ></p>
                 </div>
@@ -200,7 +220,9 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.6.title')}
+                    {t(
+                      'FaqSection::When encountering an anti-spam system (the recipient requested to block SMS from this channel), what can be done about it?'
+                    )}
                   </h5>
                 </a>
               </div>
@@ -212,7 +234,11 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx2"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.6.desc')}</p>
+                  <p>
+                    {t(
+                      'FaqSection::You can contact us to request a whitelist form for senders. We will then get in touch with the networks. The networks will decide whether a sender can be allowed on the whitelist.'
+                    )}
+                  </p>
                 </div>
               </div>
             </div>
@@ -229,7 +255,9 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.7.title')}
+                    {t(
+                      'FaqSection::What is the maximum number of characters allowed per 1 message, and are there any other restrictions?'
+                    )}
                   </h5>
                 </a>
               </div>
@@ -243,7 +271,9 @@ const FaqSection = ({ t }: any) => (
                 <div className="card-body">
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: t('productfaq.faq.7.desc'),
+                      __html: t(
+                        'FaqSection::For messages in <b>Thai</b>, 70 characters are allowed per 1 credit (1 message)/number. Messages with 71-134 characters cost 2 credits (2 consecutive messages)/number. Messages with 135-201 characters cost 3 credits (3 consecutive messages)/number.        <br>For messages in <b>English</b>, 160 characters are allowed per 1 credit (1 message)/number. Messages with 161-306 characters cost 2 credits (2 messages)/number. Messages with 307-459 characters cost 3 credits (3 messages)/number.<br>*A message with both Thai and English characters will be counted as a Thai message.<br>*Caution: if an English message contains special characters that exist in the Thai keyboard, the message will be counted as a Thai message for crediting purposes.'
+                      ),
                     }}
                   ></p>
                 </div>
@@ -262,7 +292,9 @@ const FaqSection = ({ t }: any) => (
                   <span className="close ion-ios-arrow-down"></span>
                   <span className="open ion-ios-arrow-up"></span>
                   <h5 className="mb-0 faq_header">
-                    {t('productfaq.faq.8.title')}
+                    {t(
+                      'FaqSection::In the event that the end recipient has closed their machine, will the message be sent?'
+                    )}
                   </h5>
                 </a>
               </div>
@@ -274,7 +306,11 @@ const FaqSection = ({ t }: any) => (
                 data-parent="#accordionEx2"
               >
                 <div className="card-body">
-                  <p>{t('productfaq.faq.8.desc')}</p>
+                  <p>
+                    {t(
+                      'FaqSection::The system will continue to Resend until the end recipient has opened their machine. If their status has updated, this means that the Resend process has finished, but this cannot be inspected under a Standard SMS package.'
+                    )}
+                  </p>
                 </div>
               </div>
             </div>
@@ -284,8 +320,10 @@ const FaqSection = ({ t }: any) => (
       <div className="row align-items-center mt-80">
         <div className="col-xl-5 col-lg-12">
           <div className="faq_bottom_text">
-            <h3>{t('productfaq.question')}</h3>
-            <p>{t('productfaq.questiontitle')}</p>
+            <h3>{t('FaqSection::Still have further questions?')}</h3>
+            <p>
+              {t('FaqSection::Choose your most convenient way to contact us.')}
+            </p>
           </div>
         </div>
         <div className="col-xl-7 col-12-7">
@@ -298,7 +336,7 @@ const FaqSection = ({ t }: any) => (
                   alt="Image"
                 />
                 <a href="tel:027986000" className="btn v4">
-                  {t('productfaq.telBtn')}
+                  {t('FaqSection::Contact our staff')}
                 </a>
               </div>
             </div>
@@ -310,7 +348,9 @@ const FaqSection = ({ t }: any) => (
                   alt="Image"
                 />
                 <Link href="/contact">
-                  <a className="btn v4">{t('productfaq.contactBtn')}</a>
+                  <a className="btn v4">
+                    {t('FaqSection::Call back service by staff')}
+                  </a>
                 </Link>
               </div>
             </div>
@@ -322,7 +362,7 @@ const FaqSection = ({ t }: any) => (
                   alt="Image"
                 />
                 <a href="mailto:contact@thaibulksms.com" className="btn v4">
-                  {t('productfaq.fbBrn')}
+                  {t('FaqSection::E-mail')}
                 </a>
               </div>
             </div>
@@ -333,11 +373,11 @@ const FaqSection = ({ t }: any) => (
   </div>
 );
 FaqSection.getInitialProps = async () => ({
-  namespacesRequired: ['ProductFaqSection'],
+  namespacesRequired: ['Product'],
 });
 
 FaqSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('ProductFaqSection')(FaqSection);
+export default withTranslation('Product')(FaqSection);
 // export default FaqSection;

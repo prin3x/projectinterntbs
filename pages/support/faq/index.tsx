@@ -11,10 +11,10 @@ import { withTranslation } from '../../../i18n';
 const FAQ = ({ t }: any) => (
   <Layout>
     <Head>
-      <title>{t('title')}</title>
-      <meta name="title" content={t('title')} />
-      <meta name="description" content={t('description')} />
-      <meta name="keywords" content={t('keywords')} />
+      <title>{t('meta::title')}</title>
+      <meta name="title" content={t('meta::title')} />
+      <meta name="description" content={t('meta::description')} />
+      <meta name="keywords" content={t('meta::keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <NextSeo openGraph={seo.openGraph} />
@@ -28,12 +28,12 @@ const FAQ = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('FAQMeta')(FAQ);
+export default withTranslation('FAQ')(FAQ);
 
 export const getStaticProps = async () => {
-  return ({
+  return {
     props: {
-      namespacesRequired: ['FAQMeta'],
+      namespacesRequired: ['FAQ'],
     },
-  })
-}
+  };
+};

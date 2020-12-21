@@ -1,15 +1,17 @@
-import { withTranslation } from "../../i18n";
-import PropTypes from "prop-types";
-import * as React from "react";
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import * as React from 'react';
 
 const HeroSection = ({ t }: any) => {
-  React.useEffect(() => { }, []);
+  React.useEffect(() => {}, []);
   return (
     <div className="hero_section hero_section_2">
       <div className="container">
         <div className="row justify-content-center hero_top_one">
           <div className="col-12 text-center">
-            <h3 className="section__title">{t('สวัสดี, มีอะไรให้เราช่วยมั้ย ?')}</h3>
+            <h3 className="section__title">
+              {t('HeroSection::Hello, would you like some help?')}
+            </h3>
 
             <ul
               className="nav nav-pills tab__toggle"
@@ -26,8 +28,12 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-sms"
                   aria-selected="true"
                 >
-                  <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-question.png`} alt="" />
-                  <span>คำถามทั่วไป</span>
+                  <img
+                    className="lazyload"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-question.png`}
+                    alt=""
+                  />
+                  <span>{t('HeroSection::General questions')}</span>
                 </a>
               </li>
               <li className="nav-item" role="presentation">
@@ -40,8 +46,12 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-shopping"
                   aria-selected="false"
                 >
-                  <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-shopping.png`} alt="" />
-                  <span>การซื้อ และการชำระเงิน</span>
+                  <img
+                    className="lazyload"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-shopping.png`}
+                    alt=""
+                  />
+                  <span>{t('HeroSection::Purchasing and payment')}</span>
                 </a>
               </li>
               <li className="nav-item" role="presentation">
@@ -54,8 +64,12 @@ const HeroSection = ({ t }: any) => {
                   aria-controls="pills-api"
                   aria-selected="false"
                 >
-                  <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-dev.png`} alt="" />
-                  <span>ปัญหาทางเทคนิค</span>
+                  <img
+                    className="lazyload"
+                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-dev.png`}
+                    alt=""
+                  />
+                  <span>{t('HeroSection::Technical problems')}</span>
                 </a>
               </li>
             </ul>
@@ -67,10 +81,10 @@ const HeroSection = ({ t }: any) => {
 };
 
 HeroSection.getInitialProps = async () => ({
-  namespacesRequired: ["FAQHeroSection"],
+  namespacesRequired: ['FAQ'],
 });
 
 HeroSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation("FAQHeroSection")(HeroSection);
+export default withTranslation('FAQ')(HeroSection);

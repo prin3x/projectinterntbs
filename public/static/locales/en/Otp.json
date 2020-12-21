@@ -1,0 +1,40 @@
+{
+  "meta":{
+    "title": "บริการส่งข้อความยืนยันตัวตน OTP Ready-to-Use | ThaiBulkSMS",
+    "description": "บริการส่งข้อความ OTP Ready-to-Use ส่งข้อความยืนยันตัวตนที่พร้อมใช้งานได้ทันที เพื่อความปลอดภัยในการทำธุรกรรมออนไลน์",
+    "keywords": ""
+  },
+  "HeroSection":{
+    "An <span>OTP transmission service</span> that is ready to use<br/>, increases security and does<br/> not require additional programming.":"An <span>OTP transmission service</span> that is ready to use<br/>, increases security and does<br/> not require additional programming.",
+    "This feature is only available for the <span>Corporate Package.</span>":"This feature is only available for the <span>Corporate Package.</span>"
+  },
+  "SmsSection":{
+    "Easy checkups: in only a few clicks,<br/> the OTP can be sent.":"Easy checkups: in only a few clicks,<br/> the OTP can be sent.",
+    "You can send OTP self-verification messages to increase customer security without writing additional programs. Simply set the values for only a few steps, and a code will be ready for use with the API, which quickens Developer workflows.":"You can send OTP self-verification messages to increase customer security without writing additional programs. Simply set the values for only a few steps, and a code will be ready for use with the API, which quickens Developer workflows.",
+    "Immediately test the ready-to-use OTP transmission system":"Immediately test the ready-to-use OTP transmission system",
+    "Try for free":"Try for free",
+    "Login":"Login"
+  },
+  "SimpleIconSection":{
+    "The OTP message can be set as desired":"The OTP message can be set as desired",
+    "Your business name can be set as desired":"Your business name can be set as desired",
+    "The number of digits can be set as desired":"The number of digits can be set as desired",
+    "The message Template can be set as desired":"The message Template can be set as desired",
+    "The password Expiration time can be set as desired":"The password Expiration time can be set as desired",
+    "The system can function in a variety of languages.":"The system can function in a variety of languages.",
+    "Learn more about the OTP API":"Learn more about the OTP API"
+  },
+  "TrackSection":{
+    "Know the full confirmation status of every entry.":"Know the full confirmation status of every entry.",
+    "OTP password self-confirmation statuses are fully viewable for every entry, whether they are successful or have expired.":"OTP password self-confirmation statuses are fully viewable for every entry, whether they are successful or have expired.",
+    "Operation of the OTP transmission system can only be used on the <span>Corporate SMS package</span>":"Operation of the OTP transmission system can only be used on the <span>Corporate SMS package</span>",
+    "Usage Manual":"Usage Manual",
+    "xxx":"xxx",
+    "Learn more":"Learn more"
+  },
+  "ctaSection": {
+    "Send OTPs with a ready-to-use system that does not require time wasted in programming.": "Send OTPs with a ready-to-use system that does not require time wasted in programming.",
+    "Try for free": "Try for free",
+    "Login": "Login"
+  }
+}

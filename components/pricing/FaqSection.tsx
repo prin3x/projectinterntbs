@@ -12,7 +12,9 @@ const FaqSection = ({ t }: any) => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h2 className="section_title">{t('pricingfaq.header')}</h2>
+            <h2 className="section_title">
+              {t('FaqSection::Frequently Asked Questions')}
+            </h2>
           </div>
         </div>
         <div className="row">
@@ -35,7 +37,9 @@ const FaqSection = ({ t }: any) => {
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">
-                      {t('pricingfaq.faq.1.title')}
+                      {t(
+                        'FaqSection::What are the differences between Standard SMS and Corporate SMS packages?'
+                      )}
                     </h5>
                   </a>
                 </div>
@@ -49,7 +53,9 @@ const FaqSection = ({ t }: any) => {
                   <div className="card-body">
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: t('pricingfaq.faq.1.desc'),
+                        __html: t(
+                          'FaqSection::<b>The Standard SMS</b><br/> package includes benefits such as cheaper costs of SMS sending, easy SMS sending, reports on SMS sending, a complete set of basic features, and tools for measuring campaign results.<br/><b>The Corporate SMS</b><br/>package includes every feature of the Standard SMS package while also providing additional features which are: access to a ready-to-use OTP sending system, credit refunds if the messages fail to reach the recipients, and the ability to check the sending status in a more detailed manner.'
+                        ),
                       }}
                     ></p>
                   </div>
@@ -68,7 +74,7 @@ const FaqSection = ({ t }: any) => {
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">
-                      {t('pricingfaq.faq.2.title')}
+                      {t('FaqSection::What payment methods are available?')}
                     </h5>
                   </a>
                 </div>
@@ -82,7 +88,9 @@ const FaqSection = ({ t }: any) => {
                   <div className="card-body">
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: t('pricingfaq.faq.2.desc'),
+                        __html: t(
+                          'FaqSection::We accept 3 payment methods:<br/>1. Scanning the QR code<br/>2. Online credit card payment<br/>3. Bank transfer<br/>*In case of a bank transfer, the customer needs to notify us of the transfer on the website every time.'
+                        ),
                       }}
                     ></p>
                   </div>
@@ -101,7 +109,9 @@ const FaqSection = ({ t }: any) => {
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">
-                      {t('pricingfaq.faq.3.title')}
+                      {t(
+                        'FaqSection::Which payment methods allow instant usage of credits?'
+                      )}
                     </h5>
                   </a>
                 </div>
@@ -113,7 +123,11 @@ const FaqSection = ({ t }: any) => {
                   data-parent="#accordionEx"
                 >
                   <div className="card-body">
-                    <p>{t('pricingfaq.faq.3.desc')}</p>
+                    <p>
+                      {t(
+                        'FaqSection::Scanning the QR code and online credit card payment.'
+                      )}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -130,7 +144,9 @@ const FaqSection = ({ t }: any) => {
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">
-                      {t('pricingfaq.faq.4.title')}
+                      {t(
+                        'FaqSection::After making the bank transfer, how can I notify you of the transfer?'
+                      )}
                     </h5>
                   </a>
                 </div>
@@ -144,7 +160,9 @@ const FaqSection = ({ t }: any) => {
                   <div className="card-body">
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: t('pricingfaq.faq.4.desc'),
+                        __html: t(
+                          'FaqSection::You can notify us via the website instantly by following these steps:<br/>1. After logging in, hover your mouse over the “add credit” menu. An option named “notification of payment” will be available.<br/>2. Tell us the details of the transfer and attach the payment slip or other kinds of evidence of the transfer. Once our staff members have confirmed the details, the credits will be added to your account.'
+                        ),
                       }}
                     ></p>
                   </div>
@@ -171,7 +189,7 @@ const FaqSection = ({ t }: any) => {
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">
-                      {t('pricingfaq.faq.5.title')}
+                      {t('FaqSection::How can I request a tax invoice?')}
                     </h5>
                   </a>
                 </div>
@@ -185,7 +203,9 @@ const FaqSection = ({ t }: any) => {
                   <div className="card-body">
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: t('pricingfaq.faq.5.desc'),
+                        __html: t(
+                          'FaqSection::Please send your user name, details of your company, name/address, and the taxpayer’s identification number to <a href = "mailto: contact@thaibulksms.com">contact@thaibulksms.com</a>'
+                        ),
                       }}
                     ></p>
                   </div>
@@ -204,7 +224,9 @@ const FaqSection = ({ t }: any) => {
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">
-                      {t('pricingfaq.faq.6.title')}
+                      {t(
+                        'FaqSection::What if I wish to purchase more SMS sending credits than specified in the packages?'
+                      )}
                     </h5>
                   </a>
                 </div>
@@ -218,7 +240,9 @@ const FaqSection = ({ t }: any) => {
                   <div className="card-body">
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: t('pricingfaq.faq.6.desc'),
+                        __html: t(
+                          'FaqSection::Please contact our sales team at <a href = "https://www.thaibulksms.com/contact">https://www.thaibulksms.com/contact</a> and provide us with your desired number of SMS and the type of usage.'
+                        ),
                       }}
                     ></p>
                   </div>
@@ -237,7 +261,9 @@ const FaqSection = ({ t }: any) => {
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">
-                      {t('pricingfaq.faq.7.title')}
+                      {t(
+                        'FaqSection::Can I use both the Standard SMS and Corporate SMS packages at the same time?'
+                      )}
                     </h5>
                   </a>
                 </div>
@@ -251,7 +277,9 @@ const FaqSection = ({ t }: any) => {
                   <div className="card-body">
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: t('pricingfaq.faq.7.desc'),
+                        __html: t(
+                          'FaqSection::They can be used at the same time but the credits are separate.<br/> <b>When using the web-based interface</b>, you can switch packages in the menu on the right side of <a href = "https://member.thaibulksms.com">https://member.thaibulksms.com</a>.<br/> <b>When using API</b>, add the parameter &force=standard to force the message to be sent using the Standard package and add the parameter &force=premium to force the message to be sent using the Corporate package.'
+                        ),
                       }}
                     ></p>
                   </div>
@@ -270,7 +298,9 @@ const FaqSection = ({ t }: any) => {
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">
-                      {t('pricingfaq.faq.8.title')}
+                      {t(
+                        'FaqSection::What is the maximum number of characters allowed per 1 message, and are there any other restrictions?'
+                      )}
                     </h5>
                   </a>
                 </div>
@@ -284,7 +314,9 @@ const FaqSection = ({ t }: any) => {
                   <div className="card-body">
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: t('pricingfaq.faq.8.desc'),
+                        __html: t(
+                          'FaqSection::For messages in <b>Thai</b>, 70 characters are allowed per 1 credit (1 message)/number. Messages with 71-134 characters cost 2 credits (2 consecutive messages)/number. Messages with 135-201 characters cost 3 credits (3 consecutive messages)/number.        <br>For messages in <b>English</b>, 160 characters are allowed per 1 credit (1 message)/number. Messages with 161-306 characters cost 2 credits (2 messages)/number. Messages with 307-459 characters cost 3 credits (3 messages)/number.<br>*A message with both Thai and English characters will be counted as a Thai message.<br>*Caution: if an English message contains special characters that exist in the Thai keyboard, the message will be counted as a Thai message for crediting purposes.'
+                        ),
                       }}
                     ></p>
                   </div>
@@ -296,8 +328,12 @@ const FaqSection = ({ t }: any) => {
         <div className="row align-items-center mt-80">
           <div className="col-xl-5 col-lg-12">
             <div className="faq_bottom_text">
-              <h3>{t('pricingfaq.question')}</h3>
-              <p>{t('pricingfaq.questiontitle')}</p>
+              <h3>{t('FaqSection::Still have further questions?')}</h3>
+              <p>
+                {t(
+                  'FaqSection::Choose your most convenient way to contact us.'
+                )}
+              </p>
             </div>
           </div>
           <div className="col-xl-7 col-12-7">
@@ -310,7 +346,7 @@ const FaqSection = ({ t }: any) => {
                     alt="Image"
                   />
                   <a href="tel:027986000" className="btn v4">
-                    {t('pricingfaq.telBtn')}
+                    {t('FaqSection::Contact our staff')}
                   </a>
                 </div>
               </div>
@@ -322,7 +358,9 @@ const FaqSection = ({ t }: any) => {
                     alt="Image"
                   />
                   <Link href="/contact">
-                    <a className="btn v4">{t('pricingfaq.contactBtn')}</a>
+                    <a className="btn v4">
+                      {t('FaqSection::Call back service by staff')}
+                    </a>
                   </Link>
                 </div>
               </div>
@@ -334,7 +372,7 @@ const FaqSection = ({ t }: any) => {
                     alt="Image"
                   />
                   <a href="mailto:contact@thaibulksms.com" className="btn v4">
-                    {t('pricingfaq.fbBrn')}
+                    {t('FaqSection::E-mail')}
                   </a>
                 </div>
               </div>
@@ -347,10 +385,10 @@ const FaqSection = ({ t }: any) => {
 };
 
 FaqSection.getInitialProps = async () => ({
-  namespacesRequired: ['PricingFaqSection'],
+  namespacesRequired: ['Pricing'],
 });
 
 FaqSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('PricingFaqSection')(FaqSection);
+export default withTranslation('Pricing')(FaqSection);

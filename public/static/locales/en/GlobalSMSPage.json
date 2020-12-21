@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "title": "บริการส่งข้อความไปยังต่างประเทศ | ThaiBulkSMS",
+    "description": "บริการส่งข้อความไปยังต่างประเทศได้มากกว่า 200 ประเทศทั่วโลก สามารถส่งได้ทุกเครือข่าย พร้อมให้คำปรึกษาโดยผู้เชี่ยวชาญตลอด 24/7",
+    "keywords": ""
+  },
+
+  "HeroSection": {
+    "<span>Send SMS and OTP messages</span><br/> globally at valuable prices.": "<span>Send SMS and OTP messages</span><br/> globally at valuable prices."
+  },
+
+  "SmsSection": {
+    "SMS messages are guaranteed to be sent around the world.<br /> Rapid sending and follow-up results,": "SMS messages are guaranteed to be sent around the world.<br /> Rapid sending and follow-up results,",
+    "with a coverage of 200 countries. Fast and efficient sending through Intelligent Routing channel systems, complete with sending reports that provide you with the confidence that the message will certainly reach the recipient.": "with a coverage of 200 countries. Fast and efficient sending through Intelligent Routing channel systems, complete with sending reports that provide you with the confidence that the message will certainly reach the recipient.",
+    "I wish to send SMS messages to customers in foreign countries": "I wish to send SMS messages to customers in foreign countries",
+    "Contact Sales": "Contact Sales"
+  },
+
+  "DesSection": {
+    "Select payment methods between Prepaid and Postpaid": "Select payment methods between Prepaid and Postpaid",
+    "Remove any worries about budget management, as you can choose the method of payment on your own.": "Remove any worries about budget management, as you can choose the method of payment on your own.",
+    "Support for messages in every language": "Support for messages in every language",
+    "No matter what language your message is in, you can be free from worries, because when it is sent through our systems, the recipient will receive a message that is easy to read and shows your intended content.": "No matter what language your message is in, you can be free from worries, because when it is sent through our systems, the recipient will receive a message that is easy to read and shows your intended content.",
+    "Complete with support from a team of specialists": "Complete with support from a team of specialists",
+    "If you require help or advice in sending SMS messages internationally, we have specialists who are ready to support you.": "If you require help or advice in sending SMS messages internationally, we have specialists who are ready to support you."
+  },
+
+  "CtaSection": {
+    "Send SMS and OTP messages globally,<br /> quickly, and at value prices.": "Send SMS and OTP messages globally,<br /> quickly, and at value prices.",
+    "Additional inquiries": "Additional inquiries"
+  }
+}

@@ -20,7 +20,9 @@ const HeroSectionV3 = ({ t }: any) => (
           <div className="hero_text_one v2">
             <h1
               dangerouslySetInnerHTML={{
-                __html: t('SMSAPIPage:heroSection.title'),
+                __html: t(
+                  'heroSection::<span>Simply by using SMS API</span><br />, you can send messages on your own platform.'
+                ),
               }}
             ></h1>
           </div>

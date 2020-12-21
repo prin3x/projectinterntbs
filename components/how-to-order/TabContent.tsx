@@ -14,16 +14,16 @@ const TabContent = ({ t }: any) => {
   const [showModalcredit, setShowModalcredit] = useState(false);
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const clipboard = useClipboard();
-  const [defaultTab, setDefaultTab] = React.useState('pills-home')
-  const router = useRouter()
+  const [defaultTab, setDefaultTab] = React.useState('pills-home');
+  const router = useRouter();
 
   React.useEffect(() => {
     if (!router.query.tab) {
-      console.warn('have not tab')
-      return
+      console.warn('have not tab');
+      return;
     }
 
-    setDefaultTab(`${router.query.tab}`)
+    setDefaultTab(`${router.query.tab}`);
     setTab($('#pills-profile-tab'));
     Modal.setAppElement('#ElementModal');
     // }, [tab]);
@@ -34,7 +34,10 @@ const TabContent = ({ t }: any) => {
     Swal.fire({
       position: 'top',
       icon: 'success',
-      title: 'คุณได้คัดลอกบัญชีธนาคารสำเร็จ',
+      // title: 'คุณได้คัดลอกบัญชีธนาคารสำเร็จ',
+      title: t(
+        'TabContent::You have successfully copied the bank account details.'
+      ),
       showConfirmButton: false,
       timer: 1500,
     });
@@ -49,7 +52,15 @@ const TabContent = ({ t }: any) => {
         <div className="row">
           <div className="col-12">
             <div className="tab-content" id="pills-tabContent">
-              <div className={classnames('tab-pane fade', { active: defaultTab === 'pills-home' }, { show: defaultTab === 'pills-home' })} id="pills-home" role="tabpanel">
+              <div
+                className={classnames(
+                  'tab-pane fade',
+                  { active: defaultTab === 'pills-home' },
+                  { show: defaultTab === 'pills-home' }
+                )}
+                id="pills-home"
+                role="tabpanel"
+              >
                 <div className="row">
                   <div className="col-lg-6">
                     <div className="d-flex align-items-start icon__box__wrapper">
@@ -62,20 +73,24 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('howtoordertabcontent.content.1.title')}</h4>
+                        <h4>{t('TabContent::Choose your desired package.')}</h4>
                         {/* <p
                           dangerouslySetInnerHTML={{
-                            __html: t('howtoordertabcontent.content.1.desc'),
+                            __html: t('TabContent::content.1.desc'),
                           }}
                         ></p> */}
                         <p>
-                          {t('howtoordertabcontent.content.1.desc1')}
+                          {t(
+                            'TabContent::Once you have found your ideal package on the'
+                          )}
                           <Link href="/pricing">
                             <a className="theme__text link mt-0">
-                              {t('howtoordertabcontent.content.1.desc2')}
+                              {t('TabContent::package prices page')}
                             </a>
                           </Link>
-                          {t('howtoordertabcontent.content.1.desc3')}
+                          {t(
+                            'TabContent::, click the "Buy Now" button to begin the ordering process.'
+                          )}
                         </p>
                       </div>
                     </div>
@@ -92,10 +107,16 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('howtoordertabcontent.content.2.title')}</h4>
+                        <h4>
+                          {t(
+                            'TabContent::Enter the details for placing the order'
+                          )}
+                        </h4>
                         <p
                           dangerouslySetInnerHTML={{
-                            __html: t('howtoordertabcontent.content.2.desc'),
+                            __html: t(
+                              'TabContent::If you have not logged in, the system will prompt you to log in. A first-time buyer will need to enter their details.'
+                            ),
                           }}
                         ></p>
                       </div>
@@ -113,21 +134,23 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('howtoordertabcontent.content.3.title')}</h4>
+                        <h4>{t('TabContent::Choose the desired payment')}</h4>
                         {/* <p
                           dangerouslySetInnerHTML={{
-                            __html: t('howtoordertabcontent.content.3.desc'),
+                            __html: t('TabContent::content.3.desc'),
                           }}
                         ></p> */}
                         <p>
-                          {t('howtoordertabcontent.content.3.desc1')}{' '}
+                          {t(
+                            'TabContent::method from these 3 methods: QR Code, credit card, and bank transfer.'
+                          )}{' '}
                           <a
                             onClick={() => {
                               tab?.tab('show');
                             }}
                             className="theme__text link mt-0"
                           >
-                            {t('howtoordertabcontent.content.3.desc2')}
+                            {t('TabContent::Please see the details here.')}
                           </a>
                         </p>
                       </div>
@@ -145,10 +168,16 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('howtoordertabcontent.content.4.title')}</h4>
+                        <h4>
+                          {t(
+                            'TabContent::Make the payment within the specified time limit.'
+                          )}
+                        </h4>
                         <p
                           dangerouslySetInnerHTML={{
-                            __html: t('howtoordertabcontent.content.4.desc'),
+                            __html: t(
+                              'TabContent::If you fail to make the payment within the specified time limit, the system will cancel the order immediately.'
+                            ),
                           }}
                         ></p>
                       </div>
@@ -166,10 +195,14 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('howtoordertabcontent.content.5.title')}</h4>
+                        <h4>
+                          {t('TabContent::Wait for the confirmation email.')}
+                        </h4>
                         <p
                           dangerouslySetInnerHTML={{
-                            __html: t('howtoordertabcontent.content.5.desc'),
+                            __html: t(
+                              'TabContent::Once the payment is completed, you will receive a confirmation email as proof of payment.'
+                            ),
                           }}
                         ></p>
                       </div>
@@ -187,10 +220,12 @@ const TabContent = ({ t }: any) => {
                         />
                       </div>
                       <div className="serial__content">
-                        <h4>{t('howtoordertabcontent.content.6.title')}</h4>
+                        <h4>{t('TabContent::Begin using the service')}</h4>
                         <p
                           dangerouslySetInnerHTML={{
-                            __html: t('howtoordertabcontent.content.6.desc'),
+                            __html: t(
+                              'TabContent::instantly in case of QR code or credit card payments. If using bank transfer, a transfer notification needs to be sent to us and our staff will carry out the confirmation process. The credits will be available after the confirmation.'
+                            ),
                           }}
                         ></p>
                       </div>
@@ -199,8 +234,12 @@ const TabContent = ({ t }: any) => {
                 </div>
               </div>
               <div
-                className={classnames('tab-pane fade second__tab', { active: defaultTab === 'pills-profile' }, { show: defaultTab === 'pills-profile' })}
-                // className="tab-pane fade second__tab" 
+                className={classnames(
+                  'tab-pane fade second__tab',
+                  { active: defaultTab === 'pills-profile' },
+                  { show: defaultTab === 'pills-profile' }
+                )}
+                // className="tab-pane fade second__tab"
                 id="pills-profile"
                 role="tabpanel"
               >
@@ -208,7 +247,11 @@ const TabContent = ({ t }: any) => {
                   <div className="col-lg-10">
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h2>{t('howtoordertabcontent.payment.creditnow.header')}</h2>
+                        <h2>
+                          {t(
+                            'TabContent::Instantly use the credits upon the completion of payments.'
+                          )}
+                        </h2>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -225,14 +268,14 @@ const TabContent = ({ t }: any) => {
                                 <h5
                                   dangerouslySetInnerHTML={{
                                     __html: t(
-                                      'howtoordertabcontent.payment.creditnow.qrcodetitle',
+                                      'TabContent::QR code payments <br/>are available for every bank.'
                                     ),
                                   }}
                                 ></h5>
                                 <p
                                   dangerouslySetInnerHTML={{
                                     __html: t(
-                                      'howtoordertabcontent.payment.creditnow.qrcodedesc',
+                                      'TabContent::Compatible with every bank. <br/>No fees are charged.'
                                     ),
                                   }}
                                 ></p>
@@ -245,7 +288,7 @@ const TabContent = ({ t }: any) => {
                                     setShowModalqr(true);
                                   }}
                                 >
-                                  {t('howtoordertabcontent.payment.creditnow.qrcodelink')}
+                                  {t('TabContent::Payment instructions')}
                                 </a>
                               </div>
                             </div>
@@ -259,15 +302,11 @@ const TabContent = ({ t }: any) => {
                                     alt=""
                                   />
                                 </div>
-                                <h5>
-                                  {t(
-                                    'howtoordertabcontent.payment.creditnow.creditcradtitile',
-                                  )}
-                                </h5>
+                                <h5>{t('TabContent::Credit card payment')}</h5>
                                 <p
                                   dangerouslySetInnerHTML={{
                                     __html: t(
-                                      'howtoordertabcontent.payment.creditnow.creditcraddecs',
+                                      'TabContent::Highest level of security.<br/> No fees are charged.'
                                     ),
                                   }}
                                 ></p>
@@ -281,9 +320,7 @@ const TabContent = ({ t }: any) => {
                                     setShowModalcredit(true);
                                   }}
                                 >
-                                  {t(
-                                    'howtoordertabcontent.payment.creditnow.creditcradlink',
-                                  )}
+                                  {t('TabContent::Payment instructions')}
                                 </a>
                               </div>
                             </div>
@@ -294,7 +331,11 @@ const TabContent = ({ t }: any) => {
 
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>{t('howtoordertabcontent.payment.creditwait.header')}</h5>
+                        <h5>
+                          {t(
+                            'TabContent::Pay and wait for confirmation by our staff'
+                          )}
+                        </h5>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
@@ -309,12 +350,12 @@ const TabContent = ({ t }: any) => {
                                   />
                                 </div>
                                 <h5 className="mt-4">
-                                  {t('howtoordertabcontent.payment.creditwait.title')}
+                                  {t('TabContent::Bank transfer')}
                                 </h5>
                                 <p
                                   dangerouslySetInnerHTML={{
                                     __html: t(
-                                      'howtoordertabcontent.payment.creditwait.desc',
+                                      'TabContent::Notify us of the payment and wait for the confirmation by our staff.<br/>After the confirmation, the credits can be used.'
                                     ),
                                   }}
                                 ></p>
@@ -328,7 +369,7 @@ const TabContent = ({ t }: any) => {
                                     setShowModalbank(true);
                                   }}
                                 >
-                                  {t('howtoordertabcontent.payment.creditwait.link')}
+                                  {t('TabContent::Payment instructions')}
                                 </a>
                                 <div className="row">
                                   <div className="col-12">
@@ -344,7 +385,9 @@ const TabContent = ({ t }: any) => {
 
                                       <div className="textBankHow">
                                         <p style={{ marginBottom: '10px' }}>
-                                          ธนาคารไทยพาณิชย์
+                                          {t(
+                                            'TabContent::Siam Commercial Bank'
+                                          )}
                                         </p>
 
                                         <div className="d-flex">
@@ -355,7 +398,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              ประเภทบัญชี
+                                              {t('TabContent::Account type')}
                                             </p>
                                             <p
                                               style={{
@@ -363,7 +406,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              เลขบัญชี
+                                              {t('TabContent::Account number')}
                                             </p>
                                             <p
                                               style={{
@@ -371,7 +414,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              ชื่อบัญชี
+                                              {t('TabContent::Account name')}
                                             </p>
                                           </div>
 
@@ -380,12 +423,14 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              ออมทรัพย์
+                                              {t('TabContent::Savings account')}
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
-                                              onClick={() => onClipboard('2503000721')}
+                                              onClick={() =>
+                                                onClipboard('2503000721')
+                                              }
                                             >
                                               250-3-00072-1
                                             </p>
@@ -393,7 +438,9 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              บริษัท วันม๊อบบี้ จำกัด
+                                              {t(
+                                                'TabContent::One Mobi Company Limited'
+                                              )}
                                             </p>
                                           </div>
                                         </div>
@@ -411,7 +458,7 @@ const TabContent = ({ t }: any) => {
 
                                       <div className="textBankHow">
                                         <p style={{ marginBottom: '10px' }}>
-                                          ธนาคารกสิกรไทย
+                                          {t('TabContent::Kasikorn bank')}
                                         </p>
 
                                         <div className="d-flex">
@@ -422,7 +469,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              ประเภทบัญชี
+                                              {t('TabContent::Account type')}
                                             </p>
                                             <p
                                               style={{
@@ -430,7 +477,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              เลขบัญชี
+                                              {t('TabContent::Account number')}
                                             </p>
                                             <p
                                               style={{
@@ -438,7 +485,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              ชื่อบัญชี
+                                              {t('TabContent::Account name')}
                                             </p>
                                           </div>
 
@@ -447,12 +494,14 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              ออมทรัพย์
+                                              {t('TabContent::Savings account')}
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
-                                              onClick={() => onClipboard('9962074089')}
+                                              onClick={() =>
+                                                onClipboard('9962074089')
+                                              }
                                             >
                                               996-2-07408-9
                                             </p>
@@ -460,7 +509,9 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              บริษัท วันม๊อบบี้ จำกัด
+                                              {t(
+                                                'TabContent::One Mobi Company Limited'
+                                              )}
                                             </p>
                                           </div>
                                         </div>
@@ -478,7 +529,7 @@ const TabContent = ({ t }: any) => {
 
                                       <div className="textBankHow">
                                         <p style={{ marginBottom: '10px' }}>
-                                          ธนาคารกรุงเทพ
+                                          {t('TabContent::Bangkok Bank')}
                                         </p>
 
                                         <div className="d-flex">
@@ -489,7 +540,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              ประเภทบัญชี
+                                              {t('TabContent::Account type')}
                                             </p>
                                             <p
                                               style={{
@@ -497,7 +548,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              เลขบัญชี
+                                              {t('TabContent::Account number')}
                                             </p>
                                             <p
                                               style={{
@@ -505,7 +556,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              ชื่อบัญชี
+                                              {t('TabContent::Account name')}
                                             </p>
                                           </div>
 
@@ -514,12 +565,14 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              ออมทรัพย์
+                                              {t('TabContent::Savings account')}
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
-                                              onClick={() => onClipboard('0667054423')}
+                                              onClick={() =>
+                                                onClipboard('0667054423')
+                                              }
                                             >
                                               066-7-05442-3
                                             </p>
@@ -527,7 +580,9 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              บริษัท วันม๊อบบี้ จำกัด
+                                              {t(
+                                                'TabContent::One Mobi Company Limited'
+                                              )}
                                             </p>
                                           </div>
                                         </div>
@@ -545,7 +600,7 @@ const TabContent = ({ t }: any) => {
 
                                       <div className="textBankHow">
                                         <p style={{ marginBottom: '10px' }}>
-                                          ธนาคารกรุงศรีอยุธยา
+                                          {t('TabContent::Krungsri Bank')}
                                         </p>
 
                                         <div className="d-flex">
@@ -556,7 +611,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              ประเภทบัญชี
+                                              {t('TabContent::Account type')}
                                             </p>
                                             <p
                                               style={{
@@ -564,7 +619,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              เลขบัญชี
+                                              {t('TabContent::Account number')}
                                             </p>
                                             <p
                                               style={{
@@ -572,7 +627,7 @@ const TabContent = ({ t }: any) => {
                                                 color: '#5b6e80',
                                               }}
                                             >
-                                              ชื่อบัญชี
+                                              {t('TabContent::Account name')}
                                             </p>
                                           </div>
 
@@ -581,12 +636,14 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              ออมทรัพย์
+                                              {t('TabContent::Savings account')}
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
-                                              onClick={() => onClipboard('6731015765')}
+                                              onClick={() =>
+                                                onClipboard('6731015765')
+                                              }
                                             >
                                               673-1-01576-5
                                             </p>
@@ -594,7 +651,9 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              บริษัท วันม๊อบบี้ จำกัด
+                                              {t(
+                                                'TabContent::One Mobi Company Limited'
+                                              )}
                                             </p>
                                           </div>
                                         </div>
@@ -618,8 +677,12 @@ const TabContent = ({ t }: any) => {
         <div className="row align-items-center link__box">
           <div className="col-xl-5 col-lg-12">
             <div className="faq_bottom_text">
-              <h3>{t('howtoordertabcontent.question')}</h3>
-              <p>{t('howtoordertabcontent.questiontitle')}</p>
+              <h3>{t('TabContent::Still have further questions?')}</h3>
+              <p>
+                {t(
+                  'TabContent::Choose your most convenient way to contact us.'
+                )}
+              </p>
             </div>
           </div>
           <div className="col-xl-7 col-12-7">
@@ -632,7 +695,7 @@ const TabContent = ({ t }: any) => {
                     alt="Image"
                   />
                   <a href="tel:027986000" className="btn v4">
-                    {t('howtoordertabcontent.telBtn')}
+                    {t('TabContent::Contact our staff')}
                   </a>
                 </div>
               </div>
@@ -644,7 +707,9 @@ const TabContent = ({ t }: any) => {
                     alt="Image"
                   />
                   <Link href="/contact">
-                    <a className="btn v4">{t('howtoordertabcontent.contactBtn')}</a>
+                    <a className="btn v4">
+                      {t('TabContent::Call back service by staff')}
+                    </a>
                   </Link>
                 </div>
               </div>
@@ -656,7 +721,7 @@ const TabContent = ({ t }: any) => {
                     alt="Image"
                   />
                   <a href="mailto:contact@thaibulksms.com" className="btn v4">
-                    {t('howtoordertabcontent.fbBrn')}
+                    {t('TabContent::E-mail')}
                   </a>
                 </div>
               </div>
@@ -667,7 +732,7 @@ const TabContent = ({ t }: any) => {
       <div id="ElementModal">
         <Modal
           isOpen={modalIsOpen}
-          onRequestClose={() => { }}
+          onRequestClose={() => {}}
           className="modalClass"
           contentLabel=""
         >
@@ -687,7 +752,7 @@ const TabContent = ({ t }: any) => {
             <div className="box__wrapper">
               <div className="box__header">
                 <h5>
-                  {t('PaymentbankHeroSection:paymentbankhero.howtopay.headermodal')}
+                  {t('TabContent::Instructions for payment by bank transfer')}
                 </h5>
               </div>
               <div className="box__body">
@@ -701,7 +766,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_20.png"
                       alt=""
                     />
-                    <h4>{t('PaymentbankHeroSection:paymentbankhero.howtopay.step.1')}</h4>
+                    <h4>
+                      {t(
+                        'TabContent::1. Transfer the required amount to the specified bank account.'
+                      )}
+                    </h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -711,8 +780,9 @@ const TabContent = ({ t }: any) => {
                       alt=""
                     />
                     <h4>
-                      2.
-                      {t('PaymentbankHeroSection:paymentbankhero.howtopay.step.2')}
+                      {t(
+                        'TabContent::2. Notify us of the payment via the system.'
+                      )}
                     </h4>
                   </div>
 
@@ -725,7 +795,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentbankHeroSection:paymentbankhero.howtopay.step.3',
+                          'TabContent::3. Wait for confirmation from our staff. The process will take no more than 24 hours.'
                         ),
                       }}
                     >
@@ -744,7 +814,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentbankHeroSection:paymentbankhero.howtopay.step.4',
+                          'TabContent::4. Once the payment is confirmed, you can use the credits to send SMS.'
                         ),
                       }}
                     >
@@ -759,7 +829,7 @@ const TabContent = ({ t }: any) => {
           {showModalqr && (
             <div className="box__wrapper">
               <div className="box__header">
-                <h5>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.headermodal')}</h5>
+                <h5>{t('TabContent::Instructions for QR code payment')}</h5>
               </div>
               <div className="box__body type__scroll">
                 <div
@@ -774,10 +844,12 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4
                       dangerouslySetInnerHTML={{
-                        __html: t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.1'),
+                        __html: t(
+                          'TabContent::1. Open the bank’s application and go to the “Scan QR Code” menu.'
+                        ),
                       }}
                     >
-                      {/* 1. {t('PaymentqrHeroSection:paymentqrhero.h8')}
+                      {/* 1. {t('TabContent::paymentqrhero.h8')}
               <br />
               QR Code */}
                     </h4>
@@ -789,7 +861,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_16.png"
                       alt=""
                     />
-                    <h4>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.2')}</h4>
+                    <h4>
+                      {t(
+                        'TabContent::2. Use your phone to scan the QR code on the screen.'
+                      )}
+                    </h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -798,7 +874,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_17.png"
                       alt=""
                     />
-                    <h4>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.3')}</h4>
+                    <h4>
+                      {t(
+                        'TabContent::3. Or you can choose to save the QR code as an image and upload it in the bank’s application to pay.'
+                      )}
+                    </h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -807,7 +887,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_18.png"
                       alt=""
                     />
-                    <h4>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.4')}</h4>
+                    <h4>
+                      {t(
+                        'TabContent::4. Check that all the details are correct, then confirm the payment.'
+                      )}
+                    </h4>
                   </div>
 
                   <div className="d-flex align-items-center item__box">
@@ -816,7 +900,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_19.png"
                       alt=""
                     />
-                    <h4>{t('PaymentqrHeroSection:paymentqrhero.howtopayqr.step.5')}</h4>
+                    <h4>
+                      {t(
+                        'TabContent::5. After the payment is completed, the system will update your status automatically. You can now use the newly purchased credits to send SMS.'
+                      )}
+                    </h4>
                   </div>
                 </div>
               </div>
@@ -826,11 +914,7 @@ const TabContent = ({ t }: any) => {
           {showModalcredit && (
             <div className="box__wrapper">
               <div className="box__header">
-                <h5>
-                  {t(
-                    'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.headermodal',
-                  )}
-                </h5>
+                <h5>{t('TabContent::Instructions for credit card payment')}</h5>
               </div>
               <div className="box__body type__scroll">
                 <div
@@ -846,7 +930,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.1',
+                          'TabContent::1. When you choose to pay by credit card, the system will automatically take you to the 2C2P website.'
                         ),
                       }}
                     ></h4>
@@ -860,7 +944,7 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4>
                       {t(
-                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.2',
+                        'TabContent::2. Check the price and enter your credit card details.'
                       )}
                     </h4>
                   </div>
@@ -873,7 +957,7 @@ const TabContent = ({ t }: any) => {
                     />
                     <h4>
                       {t(
-                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.3',
+                        'TabContent::3. Enter OTP for identity verification, then click confirm.'
                       )}
                     </h4>
                   </div>
@@ -887,7 +971,7 @@ const TabContent = ({ t }: any) => {
                     <h4
                       dangerouslySetInnerHTML={{
                         __html: t(
-                          'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.4',
+                          'TabContent::4. After the payment is completed, the system will take you back to the ThaiBulkSMS website automatically.'
                         ),
                       }}
                     ></h4>
@@ -899,11 +983,7 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_30.png"
                       alt=""
                     />
-                    <h4>
-                      {t(
-                        'PaymentcreditHeroSection:paymentcredithero.howtopaycredit.step.5',
-                      )}
-                    </h4>
+                    <h4>{t('TabContent::5. ')}</h4>
                   </div>
                 </div>
               </div>
@@ -916,19 +996,10 @@ const TabContent = ({ t }: any) => {
 };
 
 TabContent.getInitialProps = async () => ({
-  namespacesRequired: [
-    'How-to-orderTabContent',
-    'PaymentbankHeroSection',
-    'PaymentqrHeroSection',
-  ],
+  namespacesRequired: ['How-to-order'],
 });
 
 TabContent.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation([
-  'How-to-orderTabContent',
-  'PaymentbankHeroSection',
-  'PaymentqrHeroSection',
-  'PaymentcreditHeroSection',
-])(TabContent);
+export default withTranslation(['How-to-order'])(TabContent);

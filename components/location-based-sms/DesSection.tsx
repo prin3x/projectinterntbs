@@ -6,8 +6,12 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('LocationBasedSMSPage:desSection.title')}</h3>
-            <p>{t('LocationBasedSMSPage:desSection.description')}</p>
+            <h3>{t('DesSection::Specify your desired area')}</h3>
+            <p>
+              {t(
+                'DesSection::Regardless of location, the area can receive messages so long as it has a phone signal. The transmission area can be specified under 2 categories'
+              )}
+            </p>
           </div>
         </div>
       </div>
@@ -20,9 +24,13 @@ const SimpleIconSection = ({ t }: any) => (
               alt="Image"
             />
             <h4>
-              <span>{t('LocationBasedSMSPage:desSection.title-left-box')}</span>
+              <span>{t('DesSection::Areas in important locations')}</span>
             </h4>
-            <p>{t('LocationBasedSMSPage:desSection.description-left-box')}</p>
+            <p>
+              {t(
+                'DesSection::Messages can be sent in important areas or locations throughout the country, such as airports, shopping centers, or product exhibition centers.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-lg-6">
@@ -33,9 +41,15 @@ const SimpleIconSection = ({ t }: any) => (
               alt="Image"
             />
             <h4>
-              <span>{t('LocationBasedSMSPage:desSection.title-right-box')}</span>
+              <span>
+                {t('DesSection::Self-determined transmission areas.')}
+              </span>
             </h4>
-            <p>{t('LocationBasedSMSPage:desSection.description-right-box')}</p>
+            <p>
+              {t(
+                'DesSection::The area can be determined by latitude, longitude, and the intended message transmission borders.'
+              )}
+            </p>
           </div>
         </div>
       </div>

@@ -17,8 +17,8 @@ const Order = ({ t }: any) => (
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('meta::title')}
+      description={t('meta::description')}
     />
     <div className="page_wrapper">
       <HeroSection />
@@ -30,11 +30,11 @@ const Order = ({ t }: any) => (
 // Order.getInitialProps = async () => ({
 //   namespacesRequired: ['How-to-orderMeta'],
 // });
-export default withTranslation('How-to-orderMeta')(Order);
+export default withTranslation('How-to-order')(Order);
 export const getStaticProps = async () => {
-  return ({
+  return {
     props: {
-      namespacesRequired: ['How-to-orderMeta'],
+      namespacesRequired: ['How-to-order'],
     },
-  })
-}
+  };
+};
