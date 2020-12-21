@@ -32,14 +32,14 @@ const HeaderLoginMenuMobile = ({ t }: any, isLogin: boolean) => {
         <li>
           <a
             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
-            className="btn v5 loginLink closemenu"
+            className="btn v5 btn-sum-menu-mobile loginLink closemenu"
           >
             {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
           </a>
         </li>
         <li>
           <Link href="/pricing">
-            <a className="btn v3 closemenu">
+            <a className="btn v3 btn-sum-menu-mobile closemenu">
               {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
             </a>
           </Link>
@@ -515,14 +515,16 @@ const Header = ({ t }: any) => {
                     </ul>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
-                        <a className="closemenu">
-                          <img
-                            className="icon-title-menu-mobile"
-                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
-                            alt="box-test.png"
-                          />
-                          จุดเด่นผลิตภัณฑ์
-                        </a>
+                        <Link href="/product/">
+                          <a className="closemenu">
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
+                              alt="box-test.png"
+                            />
+                            จุดเด่นผลิตภัณฑ์
+                          </a>
+                        </Link>
                       </li>
                     </ul>
                     <h5 className="head-site-sub-menu">สำหรับการตลาด</h5>
@@ -743,13 +745,34 @@ const Header = ({ t }: any) => {
                       <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
-                          <a>02-789-000</a>
+                          <a>
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
+                              alt="box-test.png"
+                            />
+                            02-789-000
+                          </a>
                         </li>
                         <li className="sub-head-menu">
-                          <a>content@thaibulksms.com</a>
+                          <a>
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
+                              alt="box-test.png"
+                            />
+                            content@thaibulksms.com
+                          </a>
                         </li>
                         <li className="sub-head-menu">
-                          <a>ThaiBulkSMS</a>
+                          <a>
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
+                              alt="box-test.png"
+                            />
+                            ThaiBulkSMS
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -782,7 +805,6 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
                               alt="box-test.png"
                             />
-                            {t('header.howtoorder')}
                             ดาวน์โหลดคู่มือ
                           </a>
                         </Link>
@@ -794,7 +816,6 @@ const Header = ({ t }: any) => {
                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
                             alt="box-test.png"
                           />
-                          {t('header.howtoorder')}
                           ดาวน์โหลดตัวอย่าง SDK
                         </a>
                       </li>
@@ -806,7 +827,6 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
                               alt="box-test.png"
                             />
-                            {t('header.howtoorder')}
                             API References
                           </a>
                         </Link>
@@ -858,27 +878,50 @@ const Header = ({ t }: any) => {
                         </Link>
                       </li>
                       <li className="sub-head-menu">
-                        <a className="closemenu">
-                          <img
-                            className="icon-title-menu-mobile"
-                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
-                            alt="box-test.png"
-                          />
-                          Reseller Program
-                        </a>
+                        <Link href="/reseller/">
+                          <a className="closemenu">
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/box-test.png`}
+                              alt="box-test.png"
+                            />
+                            Reseller Program
+                          </a>
+                        </Link>
                       </li>
                     </ul>
                     <div className="margin-top-sub-menu">
                       <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
-                          <a>02-789-000</a>
+                          <a>
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
+                              alt="box-test.png"
+                            />
+                            02-789-000
+                          </a>
                         </li>
                         <li className="sub-head-menu">
-                          <a>content@thaibulksms.com</a>
+                          <a>
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
+                              alt="box-test.png"
+                            />
+                            content@thaibulksms.com
+                          </a>
                         </li>
                         <li className="sub-head-menu">
-                          <a>ThaiBulkSMS</a>
+                          <a>
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
+                              alt="box-test.png"
+                            />
+                            ThaiBulkSMS
+                          </a>
                         </li>
                       </ul>
                     </div>
