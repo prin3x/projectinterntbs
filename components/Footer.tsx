@@ -150,13 +150,13 @@ const Footer = ({ t }: any) => {
                 />
                 02-798-6000
               </a>
-              <a href={`<!--email_off-->mailto:contact@thaibulksms.com<!--/email_off-->`}>
+              <a href="mailto:contact@thaibulksms.com">
                 <img
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                   alt="Image"
                 />{' '}
-                {`<!--email_off-->contact@thaibulksms.com<!--/email_off-->`}
+                contact@thaibulksms.com
               </a>
             </div>
           </div>
@@ -194,7 +194,7 @@ const Footer = ({ t }: any) => {
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                         alt=""
                       />
-                      contact@thaibulksms.com
+                      <span dangerouslySetInnerHTML={{__html: '<!--email_off-->contact@thaibulksms.com<!--/email_off-->'}}></span>
                     </a>
                   </div>
                 </div>
