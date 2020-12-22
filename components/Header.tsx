@@ -146,11 +146,65 @@ const Header = ({ t }: any) => {
               <nav className="site-navigation text-center">
                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                   <li className="has-children">
-                    <Link href="/product">
+                    <span className="active new_title_hover">{t('header.product')}</span>
+                    {/* <Link href="/product">
                       <a className="active">{t('header.product')}</a>
-                    </Link>
+                    </Link> */}
                     <ul className="dropdown">
                       <li className="listsub">
+                        <Link href="/product">
+                          <a className="new_icon_title_menu_pro01" style={{marginBottom: '0px' }}>
+                            <h6 className="text_title_left">จุดเด่นผลิตภัณฑ์</h6>
+                            <p className="txtSub text_sub_left">ตอบโจทย์ทั้งนักการตลาดและนักพัฒนา</p>
+                          </a>
+                        </Link>
+                      </li>
+                      <h6 style={{ marginLeft: '30px' }}>สำหรับนักการตลาด</h6>
+                      <li className="listsub" style={{ width: '700px' }} >
+                        <Link href="/product/smart-sms-console">
+                          <a className="new_icon_title_menu_pro02" style={{ marginTop: '0px', marginBottom: '0px' }}>
+                            <h6 className="text_title_left">Smart SMS Console</h6>
+                            <p className="txtSub text_sub_left">ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง</p>
+                          </a>
+                        </Link>
+                        <Link href="/product/location-based-sms">
+                          <a className="new_icon_title_menu_pro04" style={{ marginTop: '0px', marginBottom: '0px' }}>
+                            <h6 className="text_title_left">Location Based SMS</h6>
+                            <p className="txtSub text_sub_left">ส่งข้อความหากลุ่มเป้าหมายในพื้นที่ ที่ไม่ต้องใช้เบอร์</p>
+                          </a>
+                        </Link>
+                      </li>
+                      <li className="listsub" style={{ width: '700px' }}>
+                        <Link href="/product/sms-tracking">
+                          <a className="new_icon_title_menu_pro03" style={{ marginTop: '0px' }}>
+                            <h6 className="text_title_left">SMS Tracking</h6>
+                            <p className="txtSub text_sub_left">วัดผลแคมเปญ SMS แม่นยำ</p>
+                          </a>
+                        </Link>
+                        <Link href="/product/global-sms">
+                          <a className="new_icon_title_menu_pro05" style={{ marginTop: '0px' }}>
+                            <h6 className="text_title_left">Global SMS</h6>
+                            <p className="txtSub text_sub_left">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
+                          </a>
+                        </Link>
+                      </li>
+                      <h6 style={{ marginLeft: '30px' }}>สำหรับนักพัฒนา</h6>
+                      <li className="listsub" style={{ width: '700px' }}>
+                        <Link href="/product/sms-api">
+                          <a className="new_icon_title_menu_pro06" style={{ marginTop: '0px' }}>
+                            <h6 className="text_title_left">SMS API</h6>
+                            <p className="txtSub text_sub_left">ส่งข้อความได้บทแพลตฟอร์มของตนเอง</p>
+                          </a>
+                        </Link>
+                        <Link href="/product/otp">
+                          <a className="new_icon_title_menu_pro07" style={{ marginTop: '0px' }}>
+                            <h6 className="text_title_left">OTP Service</h6>
+                            <p className="txtSub text_sub_left">ระบบส่ง OTP พร้อมใช้ ไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                          </a>
+                        </Link>
+                      </li>
+
+                      {/* <li className="listsub">
                         <Link href="/product/smart-sms-console">
                           <a>
                             <h6>Smart SMS Console</h6>
@@ -189,20 +243,107 @@ const Header = ({ t }: any) => {
                             <p className="txtSub">เข้าถึงกลุ่มเป้าหมายในพื้นที่ ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</p>
                           </a>
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                   <li>
                     <Link href="/pricing">
-                      <a className="active">{t('header.pricing')}</a>
+                      {/* <a className="active new_title_hover">{t('header.pricing')}</a> */}
+                      <span className="active new_title_hover">{t('header.pricing')}</span>
                     </Link>
                   </li>
                   <li className="has-children">
-                    <Link href="/resource">
+                    <span className="active new_title_hover">คลังข้อมูล</span>
+                    {/* <Link href="/resource">
                       <a className="active">คลังข้อมูล</a>
-                    </Link>
-                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
-                      <li>
+                    </Link> */}
+                    <div className="dropdown" style={{ minWidth: '800px', left: '-300%', padding: '30px 20px', }}>
+                      <div className="row">
+                        <div className="col-6">
+                          <ul>
+                            <li className="">
+                              <Link href="/resource">
+                                <span className="new_icon_title_menu_resource01">
+                                  <h6 className="text_title_left">คลังข้อมูล</h6>
+                                  <p className="txtSub text_sub_left">หน้ารวมคลังข้อมูล</p>
+                                </span>
+                              </Link>
+                            </li>
+                            <h6 style={{ margin: '20px 0px 20px 20px' }}>บทความ</h6>
+                            <li style={{ paddingBottom: '20px' }}>
+                              <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} >
+                                <span className="new_icon_title_menu_resource02">
+                                  <h6 className="text_title_left">ความรู้</h6>
+                                  <p className="txtSub text_sub_left">เทคนิคและความรู้ที่เกี่ยวข้อง SMS และต้านการตลาด</p>
+                                </span>
+                              </Link>
+                            </li>
+                            <li style={{ paddingBottom: '20px' }}>
+                              <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} >
+                                <span className="new_icon_title_menu_resource03">
+                                  <h6 className="text_title_left">ตัวอย่างการใช้งาน</h6>
+                                  <p className="txtSub text_sub_left">ตัวอย่างการนำ SMS ไปใช้งานในธุรกิจ</p>
+                                </span>
+                              </Link>
+                            </li>
+                            <h6 style={{ margin: '0px 0px 20px 20px' }}>กรณีศึกษา</h6>
+                            <li style={{ paddingBottom: '20px' }}>
+                              <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} >
+                                <span className="new_icon_title_menu_resource04">
+                                  <h6 className="text_title_left">เรื่องราวความสำเร็จ</h6>
+                                  <p className="txtSub text_sub_left">ของลูกค้าชั้นนำมากมายที่ใช้บริการ ThaiBulkSMS</p>
+                                </span>
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="col-6">
+                          <ul>
+                            <h6 style={{ margin: '0px 0px 20px 0px' }}>แนะนำ</h6>
+                            <div className="row" style={{ marginTop: '20px' }}>
+                              <div className="col-4" style={{ border: '1px solid', borderRadius: '10px' }} >
+
+                              </div>
+                              <div className="col-8"> 
+                                <h6>สร้างยอดขายได้ทันที่ ด้วย SMS Location-Based Service</h6>
+                              </div>
+                            </div>
+                            <div className="row" style={{ marginTop: '20px' }}>
+                              <div className="col-4" style={{ border: '1px solid', borderRadius: '10px' }} >
+
+                              </div>
+                              <div className="col-8"> 
+                                <h6>สร้างยอดขายได้ทันที่ ด้วย SMS Location-Based Service</h6>
+                              </div>
+                            </div>
+                            <div className="row" style={{ marginTop: '20px' }}>
+                              <div className="col-4" style={{ border: '1px solid', borderRadius: '10px' }} >
+
+                              </div>
+                              <div className="col-8"> 
+                                <h6>สร้างยอดขายได้ทันที่ ด้วย SMS Location-Based Service</h6>
+                              </div>
+                            </div>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    {/* <ul className="dropdown" style={{ minWidth: '260px', left: '-300%' }}>
+                      <li className="listsub">
+                        <Link href="">
+                          <a className="new_icon_title_menu">
+                            <h6 className="text_title_left">OTP Service</h6>
+                            <p className="txtSub text_sub_left">ระบบส่ง OTP พร้อมใช้ ไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                          </a>
+                        </Link>
+                        <Link href="">
+                          <a className="new_icon_title_menu">
+                            <h6 className="text_title_left">OTP Service</h6>
+                            <p className="txtSub text_sub_left">ระบบส่ง OTP พร้อมใช้ ไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                          </a>
+                        </Link>
+                      </li> */}
+                    {/* <li>
                         <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
                           <a><h6>ความรู้</h6></a>
                         </Link>
@@ -216,13 +357,71 @@ const Header = ({ t }: any) => {
                         <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
                           <a><h6>เรื่องราวความสำเร็จ</h6></a>
                         </Link>
-                      </li>
-
-                    </ul>
+                      </li> */}
+                    {/* </ul> */}
                   </li>
                   <li className="has-children">
-                    <a className="active">ซัพพอร์ต</a>
-                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
+                    <span className="active new_title_hover">ซัพพอร์ต</span>
+                    {/* <a className="active">ซัพพอร์ต</a> */}
+                    <div className="dropdown dropdown_padding_0" style={{ minWidth: '700px', left: '-400%'}}>
+                      <div className="row">
+                        <div className="col-7" style={{ padding: '20px' }}>
+                          <ul>
+                            <li style={{ marginTop: '20px', paddingBottom: '30px' }}>
+                              <Link href="/support/how-to-order">
+                                <span className="new_icon_title_menu_support01">
+                                  <h6 className="text_title_left">วิธีการสั่งซื้อ</h6>
+                                  <p className="txtSub text_sub_left">ขั้นตอนการสั่งซื้อของแต่ละช่องทางชำระ</p>
+                                </span>
+                              </Link>
+                            </li>
+                            <li style={{ paddingBottom: '30px' }}>
+                              <Link href="/support/faq">
+                                <span className="new_icon_title_menu_support02">
+                                  <h6 className="text_title_left">คำถามที่พบบ่อย</h6>
+                                  <p className="txtSub text_sub_left">เกี่ยวกับการสั่งซื้อ ปัญหาเทคนิค และการใช้งานทั่วไป</p>
+                                </span>
+                              </Link>
+                            </li>
+                            <li style={{ paddingBottom: '30px' }}>
+                              <Link href="/contact">
+                                <span className="new_icon_title_menu_support03">
+                                  <h6 className="text_title_left">ติดต่อเรา</h6>
+                                  <p className="txtSub text_sub_left">ข้อมูลติดต่อ ThaiBulkSMS</p>
+                                </span>
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="col-5" style={{ backgroundColor: '#eeeeee', paddingTop: '30px' }}>
+                          <ul>
+                            <h6 style={{ margin: '0px 0px 20px 20px' }}>ช่องทางติดต่อ</h6>
+                            <li>
+                              <Link href="tel:027986000">
+                                <h6 className="new_text_contact_phone">
+                                  <span className="new_text_margin_left">02-789-6000</span>
+                                </h6>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="mailto:contact@thaibulksms.com">
+                                <h6 className="new_text_contact_mail">
+                                  <span className="new_text_margin_left">contact@thaibulksms.com</span>
+                                </h6>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="https://www.facebook.com/ThaiBulkSMS">
+                                <h6 className="new_text_contact_fb">
+                                  <span className="new_text_margin_left">ThaiBulkSMS</span>
+                                </h6>
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    {/* <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
                       <li>
                         <Link href="/support/how-to-order">
                           <a><h6>{t('header.howtoorder')}</h6></a>
@@ -233,12 +432,39 @@ const Header = ({ t }: any) => {
                           <a ><h6>คำถามที่พบบ่อย</h6></a>
                         </Link>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
                   <li className="has-children">
-                    <a className="active">{t('header.documentation')}</a>
-                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
-                      <li>
+                    <Link href="">
+                      <span className="active new_title_hover">{t('header.documentation')}</span>
+                    </Link>
+                    {/* <a className="active">{t('header.documentation')}</a> */}
+                    <ul className="dropdown" style={{ minWidth: '360px', left: '-100%' }}>
+                      <li style={{ paddingTop: '20px', paddingBottom: '20px', width: '390px' }}>
+                        <Link href="/developer">
+                          <span className="new_icon_title_menu_dev01">
+                            <h6 className="text_title_left">ดาวน์โหลดคู่มือ</h6>
+                            <p className="txtSub text_sub_left">คู่มือการเชื่อมต่อ SMS API และการใช้งาน OTP Service</p>
+                          </span>
+                        </Link>
+                      </li>
+                      <li style={{ paddingBottom: '20px' }}>
+                        <Link href="/developer">
+                          <span className="new_icon_title_menu_dev02">
+                            <h6 className="text_title_left">ดาวน์โหลดตัวอย่าง SDK</h6>
+                            <p className="txtSub text_sub_left">เลือกดาวน์โหลดได้ตามภาษาที่ต้องการ</p>
+                          </span>
+                        </Link>
+                      </li>
+                      <li style={{ paddingBottom: '20px' }}>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}>
+                          <span className="new_icon_title_menu_dev03">
+                            <h6 className="text_title_left">API References</h6>
+                            <p className="txtSub text_sub_left">ครอบคลุมทั้ง SMS API และ OTP API</p>
+                          </span>
+                        </Link>
+                      </li>
+                      {/* <li>
                         <Link href="/developer">
                           <a ><h6>ดาวน์โหลดคู่มือ</h6></a>
                         </Link>
@@ -250,12 +476,71 @@ const Header = ({ t }: any) => {
                         >
                           <h6>API References</h6>
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                   <li className="has-children">
-                    <a className="active">เกี่ยวกับบริษัท</a>
-                    <ul className="dropdown" style={{ minWidth: '260px', left: '-30%' }}>
+                    <span className="active new_title_hover">เกี่ยวกับบริษัท</span>
+                    {/* <a className="active">เกี่ยวกับบริษัท</a> */}
+                    <div className="dropdown dropdown_padding_0" style={{ minWidth: '700px', left: '-300%' }}>
+                      <div className="row">
+                        <div className="col-7" style={{ padding: '20px' }}>
+                          <ul>
+                            <li style={{ paddingTop: '20px', paddingBottom: '20px', width: '390px' }}>
+                              <Link href="/why-thaibulksms">
+                                <span className="new_icon_title_menu_about01">
+                                  <h6 className="text_title_left">ทำไมต้อง ThaiBulkSMS</h6>
+                                  <p className="txtSub text_sub_left">ส่ง SMS กับ ThaiBulkSMS ดีกว่าที่อื่นยังไง</p>
+                                </span>
+                              </Link>
+                            </li>
+                            <li style={{ paddingBottom: '20px' }}>
+                              <Link href="/contact">
+                                <span className="new_icon_title_menu_about02">
+                                  <h6 className="text_title_left">ติดต่อเรา</h6>
+                                  <p className="txtSub text_sub_left">ข้อมูลติดต่อ ThaiBulkSMS</p>
+                                </span>
+                              </Link>
+                            </li>
+                            <li style={{ paddingBottom: '20px' }}>
+                              <Link href="/reseller">
+                                <span className="new_icon_title_menu_about03">
+                                  <h6 className="text_title_left">Reseller Program</h6>
+                                  <p className="txtSub text_sub_left">โปรแกรมพิเศษสำหรับตัวแทนจำหน่ายของ ThaiBulkSMS</p>
+                                </span>
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                        <div className="col-5" style={{ backgroundColor: '#eeeeee', paddingTop: '20px' }}>
+                          <ul>
+                            <h6 style={{ margin: '10px 0px 20px 20px' }}>ช่องทางติดต่อ</h6>
+                            <li>
+                              <Link href="tel:027986000">
+                                <h6 className="new_text_contact_phone">
+                                  <span className="new_text_margin_left">02-789-6000</span>
+                                </h6>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="mailto:contact@thaibulksms.com">
+                                <h6 className="new_text_contact_mail">
+                                  <span className="new_text_margin_left">contact@thaibulksms.com</span>
+                                </h6>
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="https://www.facebook.com/ThaiBulkSMS">
+                                <h6 className="new_text_contact_fb">
+                                  <span className="new_text_margin_left">ThaiBulkSMS</span>
+                                </h6>
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    {/* <ul className="dropdown" style={{ minWidth: '800px', left: '-200%' }}>
                       <li>
                         <Link href="/why-thaibulksms">
                           <a><h6>ทำไมต้อง ThaiBulkSMS</h6></a>
@@ -266,7 +551,7 @@ const Header = ({ t }: any) => {
                           <a><h6>{t('header.contact')}</h6></a>
                         </Link>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
                 </ul>
               </nav>

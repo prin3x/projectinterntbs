@@ -294,7 +294,7 @@ const TabContent = ({ t }: any) => {
 
                     <div className="box__wrapper">
                       <div className="box__header">
-                        <h5>{t('howtoordertabcontent.payment.creditwait.header')}</h5>
+                        <h2>{t('howtoordertabcontent.payment.creditwait.header')}</h2>
                       </div>
                       <div className="box__body">
                         <div className="box__content border-0">
