@@ -57,7 +57,7 @@ const SimpleIconSection = ({ t }: any) => (
         </div>
       </div>
       
-      <div className="row">
+      <div className="row" id="ex_sdk">
         <div className="col-xl-12 btn-api-ref">
          
             <a className="btn v3" target="_blank" href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}>ดู API References</a>
@@ -65,7 +65,7 @@ const SimpleIconSection = ({ t }: any) => (
         </div>
       </div>
 
-      <div className="row" id="ex_sdk">
+      <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title dev-page">
             <h3>ดาวน์โหลดตัวอย่าง</h3>

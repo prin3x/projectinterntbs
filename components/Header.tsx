@@ -449,7 +449,7 @@ const Header = ({ t }: any) => {
                         </Link>
                       </li>
                       <li style={{ paddingBottom: '20px' }}>
-                        <Link href="/developer">
+                        <Link href="/developer/#ex_sdk">
                           <span className="new_icon_title_menu_dev02">
                             <h6 className="text_title_left">ดาวน์โหลดตัวอย่าง SDK</h6>
                             <p className="txtSub text_sub_left">เลือกดาวน์โหลดได้ตามภาษาที่ต้องการ</p>
