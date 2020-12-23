@@ -156,7 +156,7 @@ const Footer = ({ t }: any) => {
                   src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                   alt="Image"
                 />{' '}
-                contact@thaibulksms.com
+                <span dangerouslySetInnerHTML={{__html: '<!--email_off-->contact@thaibulksms.com<!--/email_off-->'}}></span>
               </a>
             </div>
           </div>
