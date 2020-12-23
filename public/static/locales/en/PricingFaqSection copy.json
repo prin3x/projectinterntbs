@@ -20,7 +20,7 @@
       },
       "5": {
         "title": "ENต้องการขอใบกำกับภาษี ต้องทำอย่างไร",
-        "desc": "ENสามารถทำได้ โดยการส่ง Username รายละเอียดบริษัท ชื่อ/ที่อยู่ และหมายเลขประจำตัวผู้เสียภาษีที่ต้องการ มาทาง <a href = \"mailto: contact@thaibulksms.com\">contact@thaibulksms.com</a>"
+        "desc": "ENสามารถทำได้ โดยการส่ง Username รายละเอียดบริษัท ชื่อ/ที่อยู่ และหมายเลขประจำตัวผู้เสียภาษีที่ต้องการ มาทาง <a href = \"mailto: contact@thaibulksms.com\"><!--email_off-->contact@thaibulksms.com<!--/email_off--></a>"
       },
       "6": {
         "title": "ENหากต้องการซื้อจำนวนมากกว่าที่ระบุในแพ็กเกจ สามารถทำอย่างไรได้บ้าง",
