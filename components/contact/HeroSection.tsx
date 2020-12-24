@@ -174,7 +174,7 @@ const HeroSection = ({ t }: any) => {
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail_2.png`}
                         alt=""
                       />
-                      <p><a href="mailto:contact@thaibulksms.com">contact@thaibulksms.com</a></p>
+                      <p><a href="mailto:contact@thaibulksms.com"><label dangerouslySetInnerHTML={{__html: '<!--email_off-->contact@thaibulksms.com<!--/email_off-->'}}></label></a></p>
                     </li>
                     <li>
                       <img
