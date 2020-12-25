@@ -193,7 +193,7 @@ const Header = ({ t }: any) => {
                         <Link href="/product/sms-api">
                           <a className="new_icon_title_menu_pro06 icon_logo_new_menu_width" style={{ marginTop: '0px' }}>
                             <h6 className="text_title_left">SMS API</h6>
-                            <p className="txtSub text_sub_left">ส่งข้อความได้บทแพลตฟอร์มของตนเอง</p>
+                            <p className="txtSub text_sub_left">ส่งข้อความได้บนแพลตฟอร์มของตนเอง</p>
                           </a>
                         </Link>
                         <Link href="/product/otp">
