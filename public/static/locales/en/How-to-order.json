@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "ช่องทางและขั้นตอนวิธีการซื้อเครดิต | ThaiBulkSMS",
-    "description": "ชำระเงินได้หลากหลายช่องทาง พร้อมอธิบายขั้นตอนการซื้อเครดิตส่งข้อความง่าย ๆ ที่คุณสามารถสั่งซื้อได้ด้วยตนเอง ภายใน 5 นาที",
+    "title": "Channels and steps for credit purchases | ThaiBulkSMS",
+    "description": "Pay using a variety of channels, complete with explanations on the steps for buying credits to easily send messages, which can be ordered on your own within 5 minutes.",
     "keywords": ""
   },
   "HeroSection":{
@@ -59,7 +59,7 @@
     "2. Check the price and enter your credit card details.":"2. Check the price and enter your credit card details.",
     "3. Enter OTP for identity verification, then click confirm.":"3. Enter OTP for identity verification, then click confirm.",
     "4. After the payment is completed, the system will take you back to the ThaiBulkSMS website automatically.":"4. After the payment is completed, the system will take you back to the ThaiBulkSMS website automatically.",
-    "5. ":"5. ",
+    "5. You can use the new credit to send an SMS now.":"5. You can use the new credit to send an SMS now.",
     "Instructions for payment by bank transfer":"Instructions for payment by bank transfer",
     "1. Transfer the required amount to the specified bank account.":"1. Transfer the required amount to the specified bank account.",
     "2. Notify us of the payment via the system.":"2. Notify us of the payment via the system.",

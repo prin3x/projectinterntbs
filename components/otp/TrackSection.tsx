@@ -58,7 +58,9 @@ const TrackSection = ({ t }: any) => (
               <div className="track_box v2">
                 <h4
                   dangerouslySetInnerHTML={{
-                    __html: t('TrackSection::xxx'),
+                    __html: t(
+                      'TrackSection::If you have your OTP, you can connect with API as well.'
+                    ),
                   }}
                 ></h4>
                 <a

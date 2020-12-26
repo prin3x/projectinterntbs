@@ -10,8 +10,8 @@ import { seo } from '../../components/seo/support_how-to-order';
 const Order = ({ t }: any) => (
   <Layout>
     <Head>
-      <meta name="description" content={t('description')} />
-      <meta name="keywords" content={t('keywords')} />
+      <meta name="description" content={t('meta::description')} />
+      <meta name="keywords" content={t('meta::keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>

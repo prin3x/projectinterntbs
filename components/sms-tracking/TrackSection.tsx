@@ -48,7 +48,7 @@ const TrackSectionV2 = ({ t }: any) => (
                   href="https://bit.ly/3cWg40U"
                   className="btn v3"
                 >
-                  {t('TrackSection::xxxxx')}
+                  {t('TrackSection::Step of use')}
                 </a>
               </div>
             </div>

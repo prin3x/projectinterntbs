@@ -423,7 +423,7 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              {t('TabContent::Savings account')}
+                                              {t('TabContent::Savings')}
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
@@ -494,7 +494,7 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              {t('TabContent::Savings account')}
+                                              {t('TabContent::Savings')}
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
@@ -565,7 +565,7 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              {t('TabContent::Savings account')}
+                                              {t('TabContent::Savings')}
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
@@ -636,7 +636,7 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                             >
-                                              {t('TabContent::Savings account')}
+                                              {t('TabContent::Savings')}
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
@@ -983,7 +983,11 @@ const TabContent = ({ t }: any) => {
                       data-src="/img/icon_30.png"
                       alt=""
                     />
-                    <h4>{t('TabContent::5. ')}</h4>
+                    <h4>
+                      {t(
+                        'TabContent::5. You can use the new credit to send an SMS now.'
+                      )}
+                    </h4>
                   </div>
                 </div>
               </div>

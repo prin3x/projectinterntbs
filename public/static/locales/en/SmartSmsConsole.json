@@ -1,7 +1,7 @@
 {
   "meta":{
-    "title": "Smart SMS Console - ส่ง SMS ด้วยตนเอง | Thaibulksms",
-    "description": "ส่ง SMS ด้วยตนเอง ไม่ต้องผ่านตัวกลาง ด้วยระบบ Smart SMS Console เพื่อเพิ่มความสะดวกและรวดเร็วในการใช้งานยิ่งขึ้น",
+    "title": "Send your own messages on the web by using Smart SMS Console | ThaiBulkSMS",
+    "description": "Send SMS messages on your own through the web, and link to the SMS API using the Smart SMS Console system to increase your accessibility and operating speed.",
     "keywords": "Smart Sms Console"
   },
   "SmartSmsConsoleContentSection":{

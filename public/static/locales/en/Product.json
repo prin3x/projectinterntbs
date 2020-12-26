@@ -1,7 +1,7 @@
 {
     "meta": {
-        "title": "บริการส่งข้อความ ครบวงจร ส่งง่าย ถึงมือผู้รับ | ThaiBulkSMS",
-        "description": "บริการส่งข้อความ ด้วยคุณภาพและบริการที่ดีที่สุด ส่ง SMS สุดเสถียรทุกเครือข่าย ถึงมือผู้รับ - ทดลองส่งข้อความ 20 เครดิต",
+        "title": "Full message sending services: Easily sent to the recipient | ThaiBulkSMS",
+        "description": "Message sending services with the best quality and service. Send SMS messages at stable rates through every network into the recipient’s hands – test sending an SMS for 20 credits.",
         "keywords": ""
     },
     "HeroSection": {
@@ -35,8 +35,7 @@
         "Use the data to conduct lead scoring.": "Use the data to conduct lead scoring.",
         "An OTP system that is ready to use <br>and requires no extra programming": "An OTP system that is ready to use <br>and requires no extra programming",
         "Helping developers to work more easily and conveniently. The initial set-up requires just a few clicks, then the codes for using with API will instantly be ready.": "Helping developers to work more easily and conveniently. The initial set-up requires just a few clicks, then the codes for using with API will instantly be ready.",
-        "Read more about OTP Ready-to-Use>": "Read more about OTP Ready-to-Use>",
-        "These features are available only for <span>the Corporate SMS package</span>": "These features are available only for <span>the Corporate SMS package</span>"
+        "Read more about OTP Ready-to-Use>": "Read more about OTP Ready-to-Use>"
     },
     "SimpleSection": {
         "Complete set of basic features for SMS sending": "Complete set of basic features for SMS sending",
@@ -90,8 +89,6 @@
         "Sending a one-time-use password to increase the customers’ security when conducting online transactions":"Sending a one-time-use password to increase the customers’ security when conducting online transactions",
         "Notification of delivery status":"Notification of delivery status",
         "Sending an SMS notifying the delivery status to customers in real-time automatically once the API is connected to the existing database.":"Sending an SMS notifying the delivery status to customers in real-time automatically once the API is connected to the existing database.",
-        "Notification of special privileges for members":"Notification of special privileges for members",
-        "It is possible to send a notification of special privileges to a specific customer by name. Plus, it is possible to check whether the customer has opened the special privileges link or not.":"It is possible to send a notification of special privileges to a specific customer by name. Plus, it is possible to check whether the customer has opened the special privileges link or not.",
         "Promotion of marketing activities":"Promotion of marketing activities",
         "Easy group messaging for promotional purposes. It is also simple to follow up on each customer’s clicks on the promotional links.":"Easy group messaging for promotional purposes. It is also simple to follow up on each customer’s clicks on the promotional links."
     },

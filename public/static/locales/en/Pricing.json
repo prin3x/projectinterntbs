@@ -1,7 +1,7 @@
 {
     "meta": {
-        "title": "แพ็กเกจ ราคา SMS สุดคุ้ม เริ่มต้นที่ 0.28 บาท | ThaiBulkSMS",
-        "description": "แพ็กเกจราคา SMS ราคาถูกของ ThaiBulkSMS เริ่มต้นเพียง 0.28 บาท พร้อมฟีเจอร์ในการส่ง ครบวงจร",
+        "title": "Valuable SMS packages with a starting price of 0.28 baht | ThaiBulkSMS",
+        "description": "Cheap SMS package pricing from ThaiBulkSMS begins at only 0.28 baht and is complete with sending features.",
         "keywords": ""
     },
     "PricingSection":{
@@ -33,7 +33,8 @@
         "Bestsellers":"Bestsellers",
         "• Package prices do not include VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.":"• Package prices do not include VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.",
         "Not found your ideal choice yet?":"Not found your ideal choice yet?",
-        "Contact our sales team":"Contact our sales team"
+        "Contact our sales team":"Contact our sales team",
+        "Baht":"Baht"
     },
     "FaqSection":{
         "Frequently Asked Questions":"Frequently Asked Questions",

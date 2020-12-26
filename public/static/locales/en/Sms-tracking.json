@@ -1,7 +1,7 @@
 {
   "meta":{
-    "title": "บริการ SMS Tracking ติดตามสถานะการเปิดอ่าน | ThaiBulkSMS",
-    "description": "ติดตามสถานะและวัดผลการเปิดอ่านรายบุคคล สามารถดูรายงานได้หลังจากการส่งทันที ลดต้นทุนและวัดผลได้อย่างแม่นยำ",
+    "title": "SMS Tracking services: Track opened and read statuses | ThaiBulkSMS",
+    "description": "Follow the status and measure the results of individual message opening and reading. The report is immediately accessible after sending, decreasing costs, and accurately measuring results.",
     "keywords": ""
   },
   "HeroSection":{
@@ -26,7 +26,7 @@
     "Follow up on individual-level statuses to know which recipients are interested in you.":"Follow up on individual-level statuses to know which recipients are interested in you.",
     "SMS Tracking follows the status of message opening at the individual level, allowing you to know who frequently opens their messages and is suitable for Marketing. This reduces your costs by preventing you from wasting funds by sending messages to individuals who never open their messages.":"SMS Tracking follows the status of message opening at the individual level, allowing you to know who frequently opens their messages and is suitable for Marketing. This reduces your costs by preventing you from wasting funds by sending messages to individuals who never open their messages.",
     "<span>Step-by-Step SMS Tracking</span><br/> Campaign Creation Tutorial":"<span>Step-by-Step SMS Tracking</span><br/> Campaign Creation Tutorial",
-    "xxxxx":"xxxxx"
+    "Step of use":"Step of use"
   },
   "CtaSection":{
     "Avoid ineffective Marketing budget wastage <br/>through SMS Tracking.": "Avoid ineffective Marketing budget wastage <br/>through SMS Tracking.",

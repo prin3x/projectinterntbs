@@ -35,8 +35,7 @@
         "Use the data to conduct lead scoring.": "นำข้อมูลไปทำ Lead Scoring ได้",
         "An OTP system that is ready to use <br>and requires no extra programming": "ระบบส่ง OTP แบบพร้อมใช้<br>ไม่ต้องเขียนโปรแกรมเพิ่ม",
         "Helping developers to work more easily and conveniently. The initial set-up requires just a few clicks, then the codes for using with API will instantly be ready.": "ให้ Developer ทำงานง่ายและสะดวกขึ้น เพราะเพียงเซ็ตอัพ เบื้องต้นไม่กี่คลิก ก็ได้โค้ดสำหรับนำไปใช้กับ API ได้ทันที",
-        "Read more about OTP Ready-to-Use>": "อ่านเพิ่มเติมเกี่ยวกับ OTP Ready-to-Use >",
-        "These features are available only for <span>the Corporate SMS package</span>": "ฟีเจอร์นี้สำหรับ<span>แพ็กเกจ Corporate SMS</span> เท่านั้น"
+        "Read more about OTP Ready-to-Use>": "อ่านเพิ่มเติมเกี่ยวกับ OTP Ready-to-Use >"
     },
     "SimpleSection": {
         "Complete set of basic features for SMS sending": "ครบทุกฟีเจอร์พื้นฐาน ของการส่ง SMS",
@@ -90,8 +89,6 @@
         "Sending a one-time-use password to increase the customers’ security when conducting online transactions":"ส่งรหัสผ่านแบบใช้ครั้งเดียว เพื่อเพิ่มความปลอดภัยให้ลูกค้าในการทำธุรกรรมทางอินเทอร์เน็ต",
         "Notification of delivery status":"แจ้งสถานะการขนส่ง",
         "Sending an SMS notifying the delivery status to customers in real-time automatically once the API is connected to the existing database.":"ส่ง SMS แจ้งอัพเดตสถานะการขนส่งให้ลูกค้าได้แบบเรียลไทม์ เมื่อเชื่อม API กับฐานข้อมูลที่มี",
-        "Notification of special privileges for members":"แจ้งสิทธิพิเศษ สำหรับสมาชิก",
-        "It is possible to send a notification of special privileges to a specific customer by name. Plus, it is possible to check whether the customer has opened the special privileges link or not.":"มอบสิทธิพิเศษแบบระบุชื่อให้ลูกค้าได้ และยังติดตามได้ว่าลูกค้าเปิดลิ้งก์สิทธิพิเศษแล้วหรือยัง",
         "Promotion of marketing activities":"โปรโมตกิจกรรมการตลาด",
         "Easy group messaging for promotional purposes. It is also simple to follow up on each customer’s clicks on the promotional links.":"ส่งข้อความแบบกลุ่ม เป็นโปรโมชั่นให้กับลูกค้าได้ง่าย ๆ และยังสามารถติดตามการคลิกลิ้งก์โปรโมชั่นของลูกค้าแต่ละคนได้"
     },

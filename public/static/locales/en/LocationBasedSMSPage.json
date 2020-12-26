@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Location Based Service ส่งข้อความระบุสถานที่ | ThaiBulkSMS",
-    "description": "ส่ง SMS แบบระบุพื้นที่ (LBS) ไม่จำเป็นต้องมีหมายเลขโทรศัพท์ สามารถส่งได้ตามจุดพื้นที่สำคัญต่าง ๆ หรือกำหนดพื้นที่ที่ต้องการได้เอง",
+    "title": "Location Based Service: send location-specified messages | ThaiBulkSMS",
+    "description": "Send location-based SMS (LBS) messages that do not require phone numbers. Messages can be sent according to various important areas or can be set in your specified areas.",
     "keywords": ""
   },
 
