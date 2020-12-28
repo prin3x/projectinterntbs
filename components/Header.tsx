@@ -6,7 +6,7 @@ import Cookie from 'js-cookie';
 const HeaderTopMenuMobile = () => (
   <div className="site-mobile-menu-header">
     <div className="row">
-      <div className="col-8" style={{marginTop: '0px', paddingLeft: '35px', paddingTop: '20px'}}>
+      <div className="col-8" style={{ marginTop: '0px', paddingLeft: '35px', paddingTop: '20px' }}>
         <Link href="/">
           <a className="navbar-brand p-0 m-0 img-logo-title-menu-mobile closemenu">
             <img
@@ -17,7 +17,7 @@ const HeaderTopMenuMobile = () => (
           </a>
         </Link>
       </div>
-      <div className="col-4" style={{paddingRight: '35px'}}>
+      <div className="col-4" style={{ paddingRight: '35px' }}>
         <div className="site-mobile-menu-close  js-menu-toggle">
           <span className="ion-ios-close-empty"></span>{' '}
         </div>
@@ -153,51 +153,51 @@ const Header = ({ t }: any) => {
                     <ul className="dropdown">
                       <li className="listsub">
                         <Link href="/product">
-                          <a className="new_icon_title_menu_pro01 icon_logo_new_menu_width" style={{marginBottom: '0px' }}>
+                          <a className="new_icon_title_menu_pro01 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">จุดเด่นผลิตภัณฑ์</h6>
                             <p className="txtSub text_sub_left">ตอบโจทย์ทั้งนักการตลาดและนักพัฒนา</p>
                           </a>
                         </Link>
                       </li>
-                      <h6 style={{ marginLeft: '30px' }}>สำหรับนักการตลาด</h6>
-                      <li className="listsub" style={{ width: '700px' }} >
+                      <h6 className="title_menu_left">สำหรับนักการตลาด</h6>
+                      <li className="listsub li_width_700">
                         <Link href="/product/smart-sms-console">
-                          <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width" style={{ marginTop: '0px', marginBottom: '0px' }}>
+                          <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                             <h6 className="text_title_left">Smart SMS Console</h6>
                             <p className="txtSub text_sub_left">ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง</p>
                           </a>
                         </Link>
                         <Link href="/product/location-based-sms">
-                          <a className="new_icon_title_menu_pro04 icon_logo_new_menu_width" style={{ marginTop: '0px', marginBottom: '0px' }}>
+                          <a className="new_icon_title_menu_pro04 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                             <h6 className="text_title_left">Location Based SMS</h6>
                             <p className="txtSub text_sub_left">ส่งข้อความหากลุ่มเป้าหมายในพื้นที่ ที่ไม่ต้องใช้เบอร์</p>
                           </a>
                         </Link>
                       </li>
-                      <li className="listsub" style={{ width: '700px' }}>
+                      <li className="listsub li_width_700">
                         <Link href="/product/sms-tracking">
-                          <a className="new_icon_title_menu_pro03 icon_logo_new_menu_width" style={{ marginTop: '0px' }}>
+                          <a className="new_icon_title_menu_pro03 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">SMS Tracking</h6>
                             <p className="txtSub text_sub_left">วัดผลแคมเปญ SMS แม่นยำ</p>
                           </a>
                         </Link>
                         <Link href="/product/global-sms">
-                          <a className="new_icon_title_menu_pro05 icon_logo_new_menu_width" style={{ marginTop: '0px' }}>
+                          <a className="new_icon_title_menu_pro05 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">Global SMS</h6>
                             <p className="txtSub text_sub_left">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
                           </a>
                         </Link>
                       </li>
-                      <h6 style={{ marginLeft: '30px' }}>สำหรับนักพัฒนา</h6>
-                      <li className="listsub" style={{ width: '700px' }}>
+                      <h6 className="title_menu_left">สำหรับนักพัฒนา</h6>
+                      <li className="listsub li_width_700">
                         <Link href="/product/sms-api">
-                          <a className="new_icon_title_menu_pro06 icon_logo_new_menu_width" style={{ marginTop: '0px' }}>
+                          <a className="new_icon_title_menu_pro06 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">SMS API</h6>
                             <p className="txtSub text_sub_left">ส่งข้อความได้บนแพลตฟอร์มของตนเอง</p>
                           </a>
                         </Link>
                         <Link href="/product/otp">
-                          <a className="new_icon_title_menu_pro07 icon_logo_new_menu_width" style={{ marginTop: '0px' }}>
+                          <a className="new_icon_title_menu_pro07 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">OTP Service</h6>
                             <p className="txtSub text_sub_left">ระบบส่ง OTP พร้อมใช้ ไม่ต้องเขียนโปรแกรมเพิ่ม</p>
                           </a>
@@ -257,9 +257,9 @@ const Header = ({ t }: any) => {
                     {/* <Link href="/resource">
                       <a className="active">คลังข้อมูล</a>
                     </Link> */}
-                    <div className="dropdown dropdown_padding_0" style={{ minWidth: '800px', left: '-300%'}}>
+                    <div className="dropdown dropdown_padding_0 box_menu_resource">
                       <div className="row">
-                        <div className="col-6" style={{ padding: '30px 20px 20px 20px' }}>
+                        <div className="col-6 resource_padding_col6">
                           <ul>
                             <li className="">
                               <Link href="/resource">
@@ -269,8 +269,8 @@ const Header = ({ t }: any) => {
                                 </span>
                               </Link>
                             </li>
-                            <h6 style={{ margin: '20px 0px 20px 20px' }}>บทความ</h6>
-                            <li style={{ paddingBottom: '20px' }}>
+                            <h6 className="title_sub_menu_resource1">บทความ</h6>
+                            <li className="li_padding_bottom20">
                               <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} >
                                 <span className="new_icon_title_menu_resource02 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">ความรู้</h6>
@@ -278,7 +278,7 @@ const Header = ({ t }: any) => {
                                 </span>
                               </Link>
                             </li>
-                            <li style={{ paddingBottom: '20px' }}>
+                            <li className="li_padding_bottom20">
                               <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} >
                                 <span className="new_icon_title_menu_resource03 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">ตัวอย่างการใช้งาน</h6>
@@ -286,8 +286,8 @@ const Header = ({ t }: any) => {
                                 </span>
                               </Link>
                             </li>
-                            <h6 style={{ margin: '0px 0px 20px 20px' }}>กรณีศึกษา</h6>
-                            <li style={{ paddingBottom: '20px' }}>
+                            <h6 className="title_sub_menu_resource2">กรณีศึกษา</h6>
+                            <li className="li_padding_bottom20">
                               <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} >
                                 <span className="new_icon_title_menu_resource04 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">เรื่องราวความสำเร็จ</h6>
@@ -297,30 +297,30 @@ const Header = ({ t }: any) => {
                             </li>
                           </ul>
                         </div>
-                        <div className="col-6" style={{ padding: '30px', backgroundColor: '#eeeeee' }}>
+                        <div className="col-6 bg_menu">
                           <ul>
-                            <h6 style={{ margin: '0px 0px 20px 0px' }}>แนะนำ</h6>
-                            <div className="row" style={{ marginTop: '20px' }}>
-                              <div className="col-4" style={{ border: '1px solid', borderRadius: '10px', backgroundColor: '#fff' }} >
+                            <h6 className="title_sub_menu_resource3">แนะนำ</h6>
+                            <div className="row row_margin_top_20">
+                              <div className="col-4 block_content" >
 
                               </div>
-                              <div className="col-8"> 
+                              <div className="col-8">
                                 <h6>สร้างยอดขายได้ทันที่ ด้วย SMS Location-Based Service</h6>
                               </div>
                             </div>
-                            <div className="row" style={{ marginTop: '20px' }}>
-                              <div className="col-4" style={{ border: '1px solid', borderRadius: '10px', backgroundColor: '#fff' }} >
+                            <div className="row row_margin_top_20">
+                              <div className="col-4 block_content" >
 
                               </div>
-                              <div className="col-8"> 
+                              <div className="col-8">
                                 <h6>สร้างยอดขายได้ทันที่ ด้วย SMS Location-Based Service</h6>
                               </div>
                             </div>
-                            <div className="row" style={{ marginTop: '20px' }}>
-                              <div className="col-4" style={{ border: '1px solid', borderRadius: '10px', backgroundColor: '#fff' }} >
+                            <div className="row row_margin_top_20">
+                              <div className="col-4 block_content" >
 
                               </div>
-                              <div className="col-8"> 
+                              <div className="col-8">
                                 <h6>สร้างยอดขายได้ทันที่ ด้วย SMS Location-Based Service</h6>
                               </div>
                             </div>
@@ -363,11 +363,11 @@ const Header = ({ t }: any) => {
                   <li className="has-children">
                     <span className="active new_title_hover">ซัพพอร์ต</span>
                     {/* <a className="active">ซัพพอร์ต</a> */}
-                    <div className="dropdown dropdown_padding_0" style={{ minWidth: '700px', left: '-400%'}}>
+                    <div className="dropdown dropdown_padding_0 box_menu_support">
                       <div className="row">
-                        <div className="col-7" style={{ padding: '20px' }}>
+                        <div className="col-7 menu_support_padding_20">
                           <ul>
-                            <li style={{ marginTop: '20px', paddingBottom: '30px' }}>
+                            <li className="title_menu_margin_top_20 title_menu_padding_bottom_30">
                               <Link href="/support/how-to-order">
                                 <span className="new_icon_title_menu_support01 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">วิธีการสั่งซื้อ</h6>
@@ -375,7 +375,7 @@ const Header = ({ t }: any) => {
                                 </span>
                               </Link>
                             </li>
-                            <li style={{ paddingBottom: '30px' }}>
+                            <li className="title_menu_padding_bottom_30">
                               <Link href="/support/faq">
                                 <span className="new_icon_title_menu_support02 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">คำถามที่พบบ่อย</h6>
@@ -383,7 +383,7 @@ const Header = ({ t }: any) => {
                                 </span>
                               </Link>
                             </li>
-                            <li style={{ paddingBottom: '30px' }}>
+                            <li className="title_menu_padding_bottom_30">
                               <Link href="/contact">
                                 <span className="new_icon_title_menu_support03 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">ติดต่อเรา</h6>
@@ -393,9 +393,9 @@ const Header = ({ t }: any) => {
                             </li>
                           </ul>
                         </div>
-                        <div className="col-5" style={{ backgroundColor: '#eeeeee', paddingTop: '30px' }}>
+                        <div className="col-5 bg_menu">
                           <ul>
-                            <h6 style={{ margin: '0px 0px 20px 20px' }}>ช่องทางติดต่อ</h6>
+                            <h6 className="title_sub_menu_resource2">ช่องทางติดต่อ</h6>
                             <li>
                               <Link href="tel:027986000">
                                 <h6 className="new_text_contact_phone">
@@ -439,8 +439,8 @@ const Header = ({ t }: any) => {
                       <span className="active new_title_hover">{t('header.documentation')}</span>
                     </Link>
                     {/* <a className="active">{t('header.documentation')}</a> */}
-                    <ul className="dropdown" style={{ minWidth: '360px', left: '-100%' }}>
-                      <li style={{ paddingTop: '20px', paddingBottom: '20px', width: '390px' }}>
+                    <ul className="dropdown box_menu_developer">
+                      <li className="menu_dev_padding_bottom_top_20">
                         <Link href="/developer">
                           <span className="new_icon_title_menu_dev01 icon_logo_new_menu_width">
                             <h6 className="text_title_left">ดาวน์โหลดคู่มือ</h6>
@@ -448,7 +448,7 @@ const Header = ({ t }: any) => {
                           </span>
                         </Link>
                       </li>
-                      <li style={{ paddingBottom: '20px' }}>
+                      <li className="menu_dev_padding_20">
                         <Link href="/developer/#ex_sdk">
                           <span className="new_icon_title_menu_dev02 icon_logo_new_menu_width">
                             <h6 className="text_title_left">ดาวน์โหลดตัวอย่าง SDK</h6>
@@ -456,7 +456,7 @@ const Header = ({ t }: any) => {
                           </span>
                         </Link>
                       </li>
-                      <li style={{ paddingBottom: '20px' }}>
+                      <li className="menu_dev_padding_20">
                         <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}>
                           <span className="new_icon_title_menu_dev03 icon_logo_new_menu_width">
                             <h6 className="text_title_left">API References</h6>
@@ -482,11 +482,11 @@ const Header = ({ t }: any) => {
                   <li className="has-children">
                     <span className="active new_title_hover">เกี่ยวกับบริษัท</span>
                     {/* <a className="active">เกี่ยวกับบริษัท</a> */}
-                    <div className="dropdown dropdown_padding_0" style={{ minWidth: '700px', left: '-300%' }}>
+                    <div className="dropdown dropdown_padding_0 box_menu_why_thaibulksms">
                       <div className="row">
-                        <div className="col-7" style={{ padding: '20px' }}>
+                        <div className="col-7 menu_support_padding_20">
                           <ul>
-                            <li style={{ paddingTop: '20px', paddingBottom: '20px', width: '390px' }}>
+                            <li className="menu_dev_padding_bottom_top_20">
                               <Link href="/why-thaibulksms">
                                 <span className="new_icon_title_menu_about01 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">ทำไมต้อง ThaiBulkSMS</h6>
@@ -494,7 +494,7 @@ const Header = ({ t }: any) => {
                                 </span>
                               </Link>
                             </li>
-                            <li style={{ paddingBottom: '20px' }}>
+                            <li className="li_padding_bottom20">
                               <Link href="/contact">
                                 <span className="new_icon_title_menu_about02 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">ติดต่อเรา</h6>
@@ -502,7 +502,7 @@ const Header = ({ t }: any) => {
                                 </span>
                               </Link>
                             </li>
-                            <li style={{ paddingBottom: '20px' }}>
+                            <li className="li_padding_bottom20">
                               <Link href="/reseller">
                                 <span className="new_icon_title_menu_about03 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">Reseller Program</h6>
@@ -512,9 +512,9 @@ const Header = ({ t }: any) => {
                             </li>
                           </ul>
                         </div>
-                        <div className="col-5" style={{ backgroundColor: '#eeeeee', paddingTop: '20px' }}>
+                        <div className="col-5 bg_menu">
                           <ul>
-                            <h6 style={{ margin: '10px 0px 20px 20px' }}>ช่องทางติดต่อ</h6>
+                            <h6 className="title_sub_menu_resource2">ช่องทางติดต่อ</h6>
                             <li>
                               <Link href="tel:027986000">
                                 <h6 className="new_text_contact_phone">
