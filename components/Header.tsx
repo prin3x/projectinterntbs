@@ -130,7 +130,7 @@ const Header = ({ t }: any) => {
           </div>
         </div>
         <div className="row align-items-center">
-          <div className="col-lg-2 col-md-6 col-9">
+          <div className="col-lg-3 col-md-6 col-9">
             <Link href="/">
               <a className="navbar-brand p-0 m-0">
                 <img
@@ -141,7 +141,7 @@ const Header = ({ t }: any) => {
               </a>
             </Link>
           </div>
-          <div className="col-lg-7 col-md-6 col-3 text-right">
+          <div className="col-lg-6 col-md-6 col-3 text-right">
             <div className="site-navbar">
               <nav className="site-navigation text-center">
                 <ul className="site-menu js-clone-nav d-none d-lg-block">
