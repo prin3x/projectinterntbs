@@ -6,8 +6,8 @@ const SimpleIconSection = ({ t }: any) => (
     <div className="container">
       <div className="row mt-80">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
-          <div className="simple_icon_title dev-page">
-            <h3>{t('SMSAPIPage:simpleIconSection.title')}</h3>
+          <div className="simple_icon_title dev-page edit_seo">
+            <h1 className="edit_text_seo">{t('SMSAPIPage:simpleIconSection.title')}</h1>
             <div className="row m-40">
               <div className="col-lg-6">
                 <div className="track_box apipage">
@@ -37,8 +37,8 @@ const SimpleIconSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
-          <div className="simple_icon_title  dev-page">
-            <h3>คู่มือการใช้งาน OTP Service</h3>
+          <div className="simple_icon_title dev-page edit_seo">
+            <h1 className="edit_text_seo">คู่มือการใช้งาน OTP Service</h1>
             <div className="row m-40">
               <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12">
                 <div className="track_box apipage">
@@ -67,8 +67,8 @@ const SimpleIconSection = ({ t }: any) => (
 
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
-          <div className="simple_icon_title dev-page">
-            <h3>ดาวน์โหลดตัวอย่าง</h3>
+          <div className="simple_icon_title dev-page edit_seo">
+            <h1 className="edit_text_seo">ดาวน์โหลดตัวอย่าง</h1>
             <p>ดาวน์โหลดตัวอย่าง SDK ภาษาที่คุณต้องการ</p>
           </div>
         </div>
