@@ -975,8 +975,8 @@ const Header = ({ t }: any) => {
               <div id="support">
                 <div className="site-sub-menu">
                   <HeaderTopMenuMobile />
-                  <div className="block_detail_menu_mobile">
-                    <ul className="show-site-sub-menu title-menu-mobile">
+                  <div className="block_detail_menu_mobile padding_bottom_right">
+                    <ul className="show-site-sub-menu title-menu-mobile padding_left_right_new_sub_menu_25">
                       <li className="title-menu-mobile arrow-back-to-menu-mobile">
                         <img
                           className="arrow-back-to-menu-mobile"
@@ -988,7 +988,7 @@ const Header = ({ t }: any) => {
                         <h5 className="head-site-sub-menu">ซัพพอร์ต</h5>
                       </li>
                     </ul>
-                    <ul className="title-sub-menu">
+                    <ul className="title-sub-menu padding_left_right_new_sub_menu_25">
                       <li className="sub-head-menu">
                         <Link href="/support/how-to-order">
                           <a className="closemenu">
@@ -1061,7 +1061,7 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </div>
-                    <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
+                      <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                   </div>
                 </div>
               </div>
