@@ -11,7 +11,7 @@ const ContentSection = ({ Posts }: any) => (
         <div className="col-lg-12">
           <div className="secKnowledge">
             <div className="headSection">
-              <h3>ความรู้</h3>
+              <h2 className="edit_text_seo">ความรู้</h2>
               <Link href={`${AppConfig.WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
             </div>
             <div className="Knowledge">
@@ -40,7 +40,7 @@ const ContentSection = ({ Posts }: any) => (
         <div className="col-lg-6 col-md-12">
           <div className="secUsecase">
             <div className="headSection">
-              <h3>ตัวอย่างการใช้งาน</h3>
+              <h2 className="edit_text_seo">ตัวอย่างการใช้งาน</h2>
               <Link href={`${AppConfig.WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
             </div>
             { //example
@@ -77,7 +77,7 @@ const ContentSection = ({ Posts }: any) => (
         <div className="col-lg-6 col-md-12">
           <div className="secUsecase">
             <div className="headSection">
-              <h3>เรื่องราวความสำเร็จ</h3>
+              <h2 className="edit_text_seo">เรื่องราวความสำเร็จ</h2>
               <Link href={`${AppConfig.WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
             </div>
             { //successStory
