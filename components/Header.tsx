@@ -249,7 +249,7 @@ const Header = ({ t }: any) => {
                   <li>
                     <Link href="/pricing">
                       {/* <a className="active new_title_hover">{t('header.pricing')}</a> */}
-                      <span className="active new_title_hover">{t('header.pricing')}</span>
+                      <a className="active new_title_hover">{t('header.pricing')}</a>
                     </Link>
                   </li>
                   <li className="has-children">
