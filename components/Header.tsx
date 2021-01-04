@@ -1061,7 +1061,7 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </div>
-                      <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
+                    <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                   </div>
                 </div>
               </div>
@@ -1252,9 +1252,9 @@ const Header = ({ t }: any) => {
     </div>
   );
 };
-Header.getInitialProps = async () => {
-  namespacesRequired: ['header'];
-};
+Header.getInitialProps = async () => ({
+  namespacesRequired: ['header']
+});
 
 Header.propTypes = {
   t: PropTypes.func.isRequired,

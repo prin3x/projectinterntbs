@@ -17,9 +17,9 @@ const ContentSection = ({ Posts }: any) => (
             <div className="Knowledge">
               { //knowledge
                 !Posts.knowledge || Posts.knowledge.map((item, key) => (
-                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`} key={key}>
                     <a>
-                      <div className="secArticle" key={key}>
+                      <div className="secArticle">
                         <div className="img-article"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-article">
                           <h4>{item.name}</h4>
@@ -47,9 +47,9 @@ const ContentSection = ({ Posts }: any) => (
               !Posts.example || Posts.example.map((item, key) => {
 
                 return key === 0 ?
-                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`} key={key}>
                     <a>
-                      <div className="hilight" key={key}>
+                      <div className="hilight">
                         <div className="img-hilight"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-hilight">
                           <h4>{item.name}</h4>
@@ -59,9 +59,9 @@ const ContentSection = ({ Posts }: any) => (
                     </a>
                   </Link>
                   :
-                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`} key={key}>
                     <a>
-                      <div className="secArticle" key={key}>
+                      <div className="secArticle">
                         <div className="img-article"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-article">
                           <h4>{item.name}</h4>
@@ -84,9 +84,9 @@ const ContentSection = ({ Posts }: any) => (
               !Posts.successStory || Posts.successStory.map((item, key) => {
 
                 return key === 0 ?
-                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`} key={key}>
                     <a>
-                      <div className="hilight" key={key}>
+                      <div className="hilight">
                         <div className="img-hilight"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-hilight">
                           <h4>{item.name}</h4>
@@ -96,9 +96,9 @@ const ContentSection = ({ Posts }: any) => (
                     </a>
                   </Link>
                   :
-                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}>
+                  <Link href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`} as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`} key={key}>
                     <a>
-                      <div className="secArticle" key={key}>
+                      <div className="secArticle">
                         <div className="img-article"><img src={item.banner_image_top.url} alt={item.name} /></div>
                         <div className="text-article">
                           <h4>{item.name}</h4>
