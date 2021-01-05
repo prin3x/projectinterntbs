@@ -257,7 +257,47 @@ const Header = ({ t }: any) => {
                     {/* <Link href="/resource">
                       <a className="active">คลังข้อมูล</a>
                     </Link> */}
-                    <div className="dropdown dropdown_padding_0 box_menu_resource">
+                    <div className="dropdown box_menu_developer">
+                      <ul>
+                        <li className="title_menu_margin_top_20">
+                          <Link href="/resource">
+                            <span className="new_icon_title_menu_resource01 icon_logo_new_menu_width">
+                              <h6 className="text_title_left">คลังข้อมูล</h6>
+                              <p className="txtSub text_sub_left">หน้ารวมคลังข้อมูล</p>
+                            </span>
+                          </Link>
+                        </li>
+                        <h6 className="title_sub_menu_resource1">บทความ</h6>
+                        <li className="li_padding_bottom20">
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} >
+                            <span className="new_icon_title_menu_resource02 icon_logo_new_menu_width">
+                              <h6 className="text_title_left">ความรู้</h6>
+                              <p className="txtSub text_sub_left">เทคนิคและความรู้ที่เกี่ยวข้อง SMS และต้านการตลาด</p>
+                            </span>
+                          </Link>
+                        </li>
+                        <li className="li_padding_bottom20">
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} >
+                            <span className="new_icon_title_menu_resource03 icon_logo_new_menu_width">
+                              <h6 className="text_title_left">ตัวอย่างการใช้งาน</h6>
+                              <p className="txtSub text_sub_left">ตัวอย่างการนำ SMS ไปใช้งานในธุรกิจ</p>
+                            </span>
+                          </Link>
+                        </li>
+                        <h6 className="title_sub_menu_resource2">กรณีศึกษา</h6>
+                        <li className="li_padding_bottom20">
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} >
+                            <span className="new_icon_title_menu_resource04 icon_logo_new_menu_width">
+                              <h6 className="text_title_left">เรื่องราวความสำเร็จ</h6>
+                              <p className="txtSub text_sub_left">ของลูกค้าชั้นนำมากมายที่ใช้บริการ ThaiBulkSMS</p>
+                            </span>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* เมนูใหม่ */}
+
+                    {/* <div className="dropdown dropdown_padding_0 box_menu_resource">
                       <div className="row">
                         <div className="col-6 resource_padding_col6">
                           <ul>
@@ -327,7 +367,10 @@ const Header = ({ t }: any) => {
                           </ul>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
+
+                    {/* สิ้นสุดเมนูใหม่ */}
+
                     {/* <ul className="dropdown" style={{ minWidth: '260px', left: '-300%' }}>
                       <li className="listsub">
                         <Link href="">
