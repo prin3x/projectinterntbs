@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-import Link from 'next/link'
+import Link from 'next/link';
 const CtaSectionV2 = ({ t }: any) => (
   <div
     className="cta_section v2 lazyload"
@@ -12,13 +12,13 @@ const CtaSectionV2 = ({ t }: any) => (
           <div className="cta-text">
             <h3
               dangerouslySetInnerHTML={{
-                __html: t('GlobalSMSPage:ctaSection.title'),
+                __html: t(
+                  'CtaSection::Send SMS and OTP messages globally,<br /> quickly, and at value prices.'
+                ),
               }}
             ></h3>
             <Link href="/contact">
-              <a className="btn v7">
-                {t('GlobalSMSPage:ctaSection.button')}
-              </a>
+              <a className="btn v7">{t('CtaSection::Additional inquiries')}</a>
             </Link>
           </div>
         </div>

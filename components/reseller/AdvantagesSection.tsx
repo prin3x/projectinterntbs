@@ -9,8 +9,16 @@ const TrackSection = ({ t }: any) => (
       <div className="row track_top m-40">
         <div className="col-md-6 col-md-push-6">
           <div className="track_text">
-            <h3>{t('ResellerPage:advantagesSection.title')}</h3>
-            <p>{t('ResellerPage:advantagesSection.description')}</p>
+            <h3>
+              {t(
+                'AdvantagesSection::The most special offers are granted on an Unlimited basis'
+              )}
+            </h3>
+            <p>
+              {t(
+                'AdvantagesSection::No limit to the number of Sender Names and reserve accounts. These special offers are made only for resellers like you.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">

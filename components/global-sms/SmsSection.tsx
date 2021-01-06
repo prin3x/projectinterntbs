@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-import Link from 'next/link'
+import Link from 'next/link';
 const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
     <div className="container">
@@ -9,10 +9,16 @@ const SmsSectionV3 = ({ t }: any) => (
           <div className="newsletter_text">
             <h3
               dangerouslySetInnerHTML={{
-                __html: t('GlobalSMSPage:smsSection.title'),
+                __html: t(
+                  'SmsSection::SMS messages are guaranteed to be sent around the world.<br /> Rapid sending and follow-up results,'
+                ),
               }}
             ></h3>
-            <p>{t('GlobalSMSPage:smsSection.description')}</p>
+            <p>
+              {t(
+                'SmsSection::with a coverage of 200 countries. Fast and efficient sending through Intelligent Routing channel systems, complete with sending reports that provide you with the confidence that the message will certainly reach the recipient.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -31,15 +37,17 @@ const SmsSectionV3 = ({ t }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>{t('GlobalSMSPage:smsSection.title-on-box')}</h4>
+                  <h4>
+                    {t(
+                      'SmsSection::I wish to send SMS messages to customers in foreign countries'
+                    )}
+                  </h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
                   <Link href="/contact">
-                    <a className="btn v8">
-                      {t('GlobalSMSPage:smsSection.button-on-box')}
-                    </a>
+                    <a className="btn v8">{t('SmsSection::Contact Sales')}</a>
                   </Link>
                 </div>
               </div>

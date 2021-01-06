@@ -34,13 +34,19 @@ const HeaderLoginMenuMobile = ({ t }: any, isLogin: boolean) => {
             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
             className="btn v5 btn-sum-menu-mobile loginLink closemenu"
           >
-            {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+            {t(
+              'header::' +
+              (isLogin === true ? 'Enter the system' : 'Login')
+            )}
           </a>
         </li>
         <li>
           <Link href="/pricing">
             <a className="btn v3 btn-sum-menu-mobile closemenu">
-              {t(`header.buy-` + (isLogin === true ? 'b' : 'a'))}
+              {t(
+                `header::` +
+                (isLogin === true ? 'Buy' : 'Free trial')
+              )}
             </a>
           </Link>
         </li>
@@ -146,10 +152,7 @@ const Header = ({ t }: any) => {
               <nav className="site-navigation text-center">
                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                   <li className="has-children">
-                    <span className="active new_title_hover">{t('header.product')}</span>
-                    {/* <Link href="/product">
-                      <a className="active">{t('header.product')}</a>
-                    </Link> */}
+                    <span className="active new_title_hover">{t('header::Products')}</span>
                     <ul className="dropdown">
                       <li className="listsub">
                         <Link href="/product">
@@ -164,13 +167,21 @@ const Header = ({ t }: any) => {
                         <Link href="/product/smart-sms-console">
                           <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                             <h6 className="text_title_left">Smart SMS Console</h6>
-                            <p className="txtSub text_sub_left">ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง</p>
+                            <p className="txtSub text_sub_left">
+                              {t(
+                                'header::Send SMS messages on your own through a website. Easy to send and can be quickly analyzed.'
+                              )}
+                            </p>
                           </a>
                         </Link>
                         <Link href="/product/location-based-sms">
                           <a className="new_icon_title_menu_pro04 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                             <h6 className="text_title_left">Location Based SMS</h6>
-                            <p className="txtSub text_sub_left">ส่งข้อความหากลุ่มเป้าหมายในพื้นที่ ที่ไม่ต้องใช้เบอร์</p>
+                            <p className="txtSub text_sub_left">
+                              {t(
+                                'header::Enter your target group within specific areas. Send messages immediately without requiring phone numbers.'
+                              )}
+                            </p>
                           </a>
                         </Link>
                       </li>
@@ -178,13 +189,21 @@ const Header = ({ t }: any) => {
                         <Link href="/product/sms-tracking">
                           <a className="new_icon_title_menu_pro03 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">SMS Tracking</h6>
-                            <p className="txtSub text_sub_left">วัดผลแคมเปญ SMS แม่นยำ</p>
+                            <p className="txtSub text_sub_left">
+                              {t(
+                                'header::Accurate SMS Campaign results that do not waste your marketing budget.'
+                              )}
+                            </p>
                           </a>
                         </Link>
                         <Link href="/product/global-sms">
                           <a className="new_icon_title_menu_pro05 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">Global SMS</h6>
-                            <p className="txtSub text_sub_left">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
+                            <p className="txtSub text_sub_left">
+                              {t(
+                                'header::Send SMS and OTP messages globally at valuable prices.'
+                              )}
+                            </p>
                           </a>
                         </Link>
                       </li>
@@ -193,70 +212,33 @@ const Header = ({ t }: any) => {
                         <Link href="/product/sms-api">
                           <a className="new_icon_title_menu_pro06 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">SMS API</h6>
-                            <p className="txtSub text_sub_left">ส่งข้อความได้บนแพลตฟอร์มของตนเอง</p>
+                            <p className="txtSub text_sub_left">
+                              {t(
+                                'header::Simply by using SMS API, you can send messages through your platform.'
+                              )}
+                            </p>
                           </a>
                         </Link>
                         <Link href="/product/otp">
                           <a className="new_icon_title_menu_pro07 icon_logo_new_menu_width title_menu_margin_top_0">
                             <h6 className="text_title_left">OTP Service</h6>
-                            <p className="txtSub text_sub_left">ระบบส่ง OTP พร้อมใช้ ไม่ต้องเขียนโปรแกรมเพิ่ม</p>
+                            <p className="txtSub text_sub_left">
+                              {t(
+                                'header::A secure, ready-to-use OTP Service that does not require additional programming.'
+                              )}
+                            </p>
                           </a>
                         </Link>
                       </li>
-
-                      {/* <li className="listsub">
-                        <Link href="/product/smart-sms-console">
-                          <a>
-                            <h6>Smart SMS Console</h6>
-                            <p className="txtSub">ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง ส่งง่าย วัดผลการส่งได้รวดเร็ว</p>
-                          </a>
-                        </Link>
-                        <Link href="/product/sms-api">
-                          <a>
-                            <h6>SMS API</h6>
-                            <p className="txtSub">เพียงใช้งาน SMS API คุณก็ส่งข้อความได้บนแพลตฟอร์มของตนเอง</p>
-                          </a>
-                        </Link>
-                        <Link href="/product/otp">
-                          <a>
-                            <h6>OTP Service</h6>
-                            <p className="txtSub">ระบบส่ง OTP พร้อมใช้ เพิ่มความปลอดภัยไม่ต้องเขียนโปรแกรมเพิ่ม</p>
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="listsub">
-                        <Link href="/product/sms-tracking">
-                          <a>
-                            <h6>SMS Tracking</h6>
-                            <p className="txtSub">วัดผลแคมเปญ SMS แม่นยำ ไม่เสียงบการตลาดไปโดยเปล่าประโยชน์</p>
-                          </a>
-                        </Link>
-                        <Link href="/product/global-sms">
-                          <a>
-                            <h6>Global SMS</h6>
-                            <p className="txtSub">ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า</p>
-                          </a>
-                        </Link>
-                        <Link href="/product/location-based-sms">
-                          <a>
-                            <h6>Location Based SMS</h6>
-                            <p className="txtSub">เข้าถึงกลุ่มเป้าหมายในพื้นที่ ส่งข้อความได้ทันที ไม่ต้องใช้เบอร์</p>
-                          </a>
-                        </Link>
-                      </li> */}
                     </ul>
                   </li>
                   <li>
                     <Link href="/pricing">
-                      {/* <a className="active new_title_hover">{t('header.pricing')}</a> */}
-                      <a className="active new_title_hover">{t('header.pricing')}</a>
+                      <a className="active new_title_hover">{t('header::Pricing')}</a>
                     </Link>
                   </li>
                   <li className="has-children">
-                    <span className="active new_title_hover">คลังข้อมูล</span>
-                    {/* <Link href="/resource">
-                      <a className="active">คลังข้อมูล</a>
-                    </Link> */}
+                    <span className="active new_title_hover">{t('header::Database')}</span>
                     <div className="dropdown box_menu_developer">
                       <ul>
                         <li className="title_menu_margin_top_20">
@@ -271,7 +253,7 @@ const Header = ({ t }: any) => {
                         <li className="li_padding_bottom20">
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} >
                             <span className="new_icon_title_menu_resource02 icon_logo_new_menu_width">
-                              <h6 className="text_title_left">ความรู้</h6>
+                              <h6 className="text_title_left">{t('header::Knowledge')}</h6>
                               <p className="txtSub text_sub_left">เทคนิคและความรู้ที่เกี่ยวข้อง SMS และต้านการตลาด</p>
                             </span>
                           </Link>
@@ -279,7 +261,7 @@ const Header = ({ t }: any) => {
                         <li className="li_padding_bottom20">
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} >
                             <span className="new_icon_title_menu_resource03 icon_logo_new_menu_width">
-                              <h6 className="text_title_left">ตัวอย่างการใช้งาน</h6>
+                              <h6 className="text_title_left">{t('header::Example Operations')}</h6>
                               <p className="txtSub text_sub_left">ตัวอย่างการนำ SMS ไปใช้งานในธุรกิจ</p>
                             </span>
                           </Link>
@@ -288,7 +270,7 @@ const Header = ({ t }: any) => {
                         <li className="li_padding_bottom20">
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} >
                             <span className="new_icon_title_menu_resource04 icon_logo_new_menu_width">
-                              <h6 className="text_title_left">เรื่องราวความสำเร็จ</h6>
+                              <h6 className="text_title_left">{t('header::Success Stories')}</h6>
                               <p className="txtSub text_sub_left">ของลูกค้าชั้นนำมากมายที่ใช้บริการ ThaiBulkSMS</p>
                             </span>
                           </Link>
@@ -404,7 +386,7 @@ const Header = ({ t }: any) => {
                     {/* </ul> */}
                   </li>
                   <li className="has-children">
-                    <span className="active new_title_hover">ซัพพอร์ต</span>
+                    <span className="active new_title_hover">{t('header::Support')}</span>
                     {/* <a className="active">ซัพพอร์ต</a> */}
                     <div className="dropdown dropdown_padding_0 box_menu_support">
                       <div className="row">
@@ -413,7 +395,7 @@ const Header = ({ t }: any) => {
                             <li className="title_menu_margin_top_20 title_menu_padding_bottom_30">
                               <Link href="/support/how-to-order">
                                 <span className="new_icon_title_menu_support01 icon_logo_new_menu_width">
-                                  <h6 className="text_title_left">วิธีการสั่งซื้อ</h6>
+                                  <h6 className="text_title_left">{t('header::Ordering Methods')}</h6>
                                   <p className="txtSub text_sub_left">ขั้นตอนการสั่งซื้อของแต่ละช่องทางชำระ</p>
                                 </span>
                               </Link>
@@ -421,7 +403,7 @@ const Header = ({ t }: any) => {
                             <li className="title_menu_padding_bottom_30">
                               <Link href="/support/faq">
                                 <span className="new_icon_title_menu_support02 icon_logo_new_menu_width">
-                                  <h6 className="text_title_left">คำถามที่พบบ่อย</h6>
+                                  <h6 className="text_title_left">{t('header::Frequently Asked Questions')}</h6>
                                   <p className="txtSub text_sub_left">เกี่ยวกับการสั่งซื้อ ปัญหาเทคนิค และการใช้งานทั่วไป</p>
                                 </span>
                               </Link>
@@ -429,7 +411,7 @@ const Header = ({ t }: any) => {
                             <li className="title_menu_padding_bottom_30">
                               <Link href="/contact">
                                 <span className="new_icon_title_menu_support03 icon_logo_new_menu_width">
-                                  <h6 className="text_title_left">ติดต่อเรา</h6>
+                                  <h6 className="text_title_left">{t('header::Contact us')}</h6>
                                   <p className="txtSub text_sub_left">ข้อมูลติดต่อ ThaiBulkSMS</p>
                                 </span>
                               </Link>
@@ -479,14 +461,13 @@ const Header = ({ t }: any) => {
                   </li>
                   <li className="has-children">
                     <Link href="">
-                      <span className="active new_title_hover">{t('header.documentation')}</span>
+                      <span className="active new_title_hover">{t('header::For Developers')}</span>
                     </Link>
-                    {/* <a className="active">{t('header.documentation')}</a> */}
                     <ul className="dropdown box_menu_developer">
                       <li className="menu_dev_padding_bottom_top_20">
                         <Link href="/developer">
                           <span className="new_icon_title_menu_dev01 icon_logo_new_menu_width">
-                            <h6 className="text_title_left">ดาวน์โหลดคู่มือ</h6>
+                            <h6 className="text_title_left">{t('header::Download Guide')}</h6>
                             <p className="txtSub text_sub_left">คู่มือการเชื่อมต่อ SMS API และการใช้งาน OTP Service</p>
                           </span>
                         </Link>
@@ -507,24 +488,10 @@ const Header = ({ t }: any) => {
                           </span>
                         </Link>
                       </li>
-                      {/* <li>
-                        <Link href="/developer">
-                          <a ><h6>ดาวน์โหลดคู่มือ</h6></a>
-                        </Link>
-                      </li>
-                      <li>
-                        <a
-                          target="_blank"
-                          href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
-                        >
-                          <h6>API References</h6>
-                        </a>
-                      </li> */}
                     </ul>
                   </li>
                   <li className="has-children">
-                    <span className="active new_title_hover">เกี่ยวกับบริษัท</span>
-                    {/* <a className="active">เกี่ยวกับบริษัท</a> */}
+                    <span className="active new_title_hover">{t('header::About the Company')}</span>
                     <div className="dropdown dropdown_padding_0 box_menu_why_thaibulksms">
                       <div className="row">
                         <div className="col-7 menu_support_padding_20">
@@ -532,7 +499,7 @@ const Header = ({ t }: any) => {
                             <li className="menu_dev_padding_bottom_top_20">
                               <Link href="/why-thaibulksms">
                                 <span className="new_icon_title_menu_about01 icon_logo_new_menu_width">
-                                  <h6 className="text_title_left">ทำไมต้อง ThaiBulkSMS</h6>
+                                  <h6 className="text_title_left">{t('header::Why use ThaiBulkSMS?')}</h6>
                                   <p className="txtSub text_sub_left">ส่ง SMS กับ ThaiBulkSMS ดีกว่าที่อื่นยังไง</p>
                                 </span>
                               </Link>
@@ -540,7 +507,7 @@ const Header = ({ t }: any) => {
                             <li className="li_padding_bottom20">
                               <Link href="/contact">
                                 <span className="new_icon_title_menu_about02 icon_logo_new_menu_width">
-                                  <h6 className="text_title_left">ติดต่อเรา</h6>
+                                  <h6 className="text_title_left">{t('header::Contact us')}</h6>
                                   <p className="txtSub text_sub_left">ข้อมูลติดต่อ ThaiBulkSMS</p>
                                 </span>
                               </Link>
@@ -583,18 +550,6 @@ const Header = ({ t }: any) => {
                         </div>
                       </div>
                     </div>
-                    {/* <ul className="dropdown" style={{ minWidth: '800px', left: '-200%' }}>
-                      <li>
-                        <Link href="/why-thaibulksms">
-                          <a><h6>ทำไมต้อง ThaiBulkSMS</h6></a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/contact">
-                          <a><h6>{t('header.contact')}</h6></a>
-                        </Link>
-                      </li>
-                    </ul> */}
                   </li>
                 </ul>
               </nav>
@@ -630,12 +585,7 @@ const Header = ({ t }: any) => {
                   <ul className="title-sub-menu-mobile">
                     <li>
                       <span className="show-site-sub-menu block-link-title-menu-mobile" data-name="product">
-                        {t('header.product')}
-                        {/* <img
-                          className="arrow-go-to-menu-mobile"
-                          src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/right-arrow.png`}
-                          alt="right-arrow.png"
-                        />  */}
+                        {t('header::Products')}
                       </span>
                     </li>
                   </ul>
@@ -643,7 +593,7 @@ const Header = ({ t }: any) => {
                     <li className="">
                       <Link href="/pricing">
                         <a className="closemenu">
-                          {t('header.pricing')}
+                          {t('header::Pricing')}
                         </a>
                       </Link>
                     </li>
@@ -651,172 +601,31 @@ const Header = ({ t }: any) => {
                   <ul className="title-sub-menu-mobile">
                     <li className="">
                       <a className="show-site-sub-menu block-link-title-menu-mobile" data-name="resource">
-                        คลังข้อมูล
+                        {t('header::Database')}
                       </a>
                     </li>
                   </ul>
                   <ul className="title-sub-menu-mobile">
                     <li className="">
                       <a className="show-site-sub-menu block-link-title-menu-mobile" data-name="support">
-                        ซัพพอร์ต
+                        {t('header::Support')}
                       </a>
                     </li>
                   </ul>
                   <ul className="title-sub-menu-mobile">
                     <li className="">
                       <a className="show-site-sub-menu block-link-title-menu-mobile" data-name="documentation">
-                        {t('header.documentation')}
+                        {t('header::For Developers')}
                       </a>
                     </li>
                   </ul>
                   <ul className="title-sub-menu-mobile">
                     <li className="">
                       <a className="show-site-sub-menu block-link-title-menu-mobile" data-name="aboutme">
-                        เกี่ยวกับบริษัท
+                        {t('header::About the Company')}
                       </a>
                     </li>
                   </ul>
-                  {/* <ul className="site-nav-wrap"> */}
-                  {/* <li className="has-children"> */}
-                  {/* <span
-                        className="arrow-collapse collapsed"
-                        data-toggle="collapse"
-                        data-target="#collapseItem0"
-                      ></span> */}
-                  {/* <Link href="/product">
-                        <a className="active closemenu">
-                          {t('header.product')}
-                        </a>
-                      </Link> */}
-                  {/* <ul className="collapse" id="collapseItem0">
-                        <li>
-                          <Link href="/product/smart-sms-console">
-                            <a className="closemenu">
-                              <h6>Smart SMS Console</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/product/sms-api">
-                            <a className="closemenu">
-                              <h6>SMS API</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/product/otp">
-                            <a className="closemenu">
-                              <h6>OTP Service</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/product/sms-tracking">
-                            <a className="closemenu">
-                              <h6>SMS Tracking</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/product/global-sms">
-                            <a className="closemenu">
-                              <h6>Global SMS</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/product/location-based-sms">
-                            <a className="closemenu">
-                              <h6>Location Based SMS</h6>
-                            </a>
-                          </Link>
-                        </li>
-                      </ul> */}
-                  {/* </li> */}
-
-                  {/* <li>
-                      <Link href="/pricing">
-                        <a className="closemenu">
-                          {t('header.pricing')}
-                        </a>
-                      </Link>
-                    </li>
-
-                    <li className="has-children">
-                      <Link href="/resource"><a className="closemenu">คลังข้อมูล</a></Link>
-                      <ul className="collapse" id="collapseItem0">
-                        <li>
-                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
-                            <a><h6>ความรู้</h6></a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}>
-                            <a><h6>ตัวอย่างการใช้งาน</h6></a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
-                            <a><h6>เรื่องราวความสำเร็จ</h6></a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="has-children">
-                      <a className="active">ซัพพอร์ต</a>
-                      <ul className="collapse" id="collapseItem1">
-                        <li>
-                          <Link href="/support/how-to-order">
-                            <a className="closemenu">
-                              <h6>{t('header.howtoorder')}</h6>
-                            </a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/support/faq">
-                            <a className="closemenu"><h6>คำถามที่พบบ่อย</h6></a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li className="has-children">
-                      <a className="active">{t('header.documentation')}</a>
-                      <ul className="collapse" id="collapseItem2">
-                        <li>
-                          <Link href="/developer">
-                            <a className="closemenu"><h6>ดาวน์โหลดคู่มือ</h6></a>
-                          </Link>
-                        </li>
-                        <li>
-                          <a
-                            target="_blank"
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
-                            className="active closemenu"
-                          >
-                            <h6>API References</h6>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="has-children">
-                      <a className="active">เกี่ยวกับบริษัท</a>
-                      <ul className="collapse" id="collapseItem3">
-                        <li>
-                          <Link href="/why-thaibulksms">
-                            <a className="closemenu"><h6>ทำไมต้อง ThaiBulkSMS</h6></a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/contact">
-                            <a className="closemenu">
-                              <h6> {t('header.contact')}</h6>
-                            </a>
-                          </Link>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul> */}
                   <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                 </div>
               </div>
@@ -837,7 +646,7 @@ const Header = ({ t }: any) => {
                       </li>
                       <li className="title-menu-mobile">
                         <h5 className="head-site-sub-menu">
-                          {t('header.product')}
+                          {t('header::Products')}
                         </h5>
                       </li>
                     </ul>
@@ -906,7 +715,7 @@ const Header = ({ t }: any) => {
                         </Link>
                       </li>
                     </ul>
-                    <h5 className="head-site-sub-menu">สำหรับนักพัฒนา</h5>
+                    <h5 className="head-site-sub-menu">{t('header::For Developers')}</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
                         <Link href="/product/sms-api">
@@ -952,7 +761,7 @@ const Header = ({ t }: any) => {
                         />
                       </li>
                       <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">คลังข้อมูล</h5>
+                        <h5 className="head-site-sub-menu">{t('header::Database')}</h5>
                       </li>
                     </ul>
                     <ul className="title-sub-menu">
@@ -964,7 +773,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon01.svg`}
                               alt="menu-icon_resource-icon01.svg"
                             />
-                            คลังข้อมูล
+                            {t('header::Database')}
                           </a>
                         </Link>
                       </li>
@@ -979,7 +788,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon02.svg`}
                               alt="menu-icon_resource-icon02.svg"
                             />
-                            ความรู้
+                            {t('header::Knowledge')}
                           </a>
                         </Link>
                       </li>
@@ -991,7 +800,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon03.svg`}
                               alt="menu-icon_resource-icon03.svg"
                             />
-                            ตัวอย่างการใช้งาน
+                            {t('header::Example Operations')}
                           </a>
                         </Link>
                       </li>
@@ -1006,7 +815,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon04.svg`}
                               alt="menu-icon_resource-icon04.svg"
                             />
-                            เรื่องราวความสำเร็จ
+                            {t('header::Success Stories')}
                           </a>
                         </Link>
                       </li>
@@ -1028,7 +837,7 @@ const Header = ({ t }: any) => {
                         />
                       </li>
                       <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">ซัพพอร์ต</h5>
+                        <h5 className="head-site-sub-menu">{t('header::Support')}</h5>
                       </li>
                     </ul>
                     <ul className="title-sub-menu padding_left_right_new_sub_menu_25">
@@ -1040,7 +849,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon01.svg`}
                               alt="menu-icon_support-icon01.svg"
                             />
-                            {t('header.howtoorder')}
+                            {t('header::Ordering Methods')}
                           </a>
                         </Link>
                       </li>
@@ -1052,7 +861,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon02.svg`}
                               alt="menu-icon_support-icon02.svg"
                             />
-                            คำถามที่พบบ่อย
+                            {t('header::Frequently Asked Questions')}
                           </a>
                         </Link>
                       </li>
@@ -1064,7 +873,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon03.svg`}
                               alt="menu-icon_support-icon03.svg"
                             />
-                            {t('header.contact')}
+                            {t('header::Contact us')}
                           </a>
                         </Link>
                       </li>
@@ -1121,7 +930,7 @@ const Header = ({ t }: any) => {
                         />
                       </li>
                       <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">{t('header.documentation')}</h5>
+                        <h5 className="head-site-sub-menu">{t('header::For Developers')}</h5>
                       </li>
                     </ul>
                     <ul className="title-sub-menu">
@@ -1133,7 +942,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon01.svg`}
                               alt="menu-icon_Dev-icon01.svg"
                             />
-                            ดาวน์โหลดคู่มือ
+                            {t('header::Download Guide')}
                           </a>
                         </Link>
                       </li>
@@ -1179,7 +988,7 @@ const Header = ({ t }: any) => {
                         />
                       </li>
                       <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">เกี่ยวกับบริษัท</h5>
+                        <h5 className="head-site-sub-menu">{t('header::About the Company')}</h5>
                       </li>
                     </ul>
                     <ul className="title-sub-menu">
@@ -1191,7 +1000,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon01.svg`}
                               alt="menu-icon_about-icon01.svg"
                             />
-                            ทำไมต้อง ThaiBulkSMS
+                            {t('header::Why use ThaiBulkSMS?')}
                           </a>
                         </Link>
                       </li>
@@ -1203,7 +1012,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon02.svg`}
                               alt="menu-icon_about-icon02.svg"
                             />
-                            ติดต่อเรา
+                            {t('header::Contact us')}
                           </a>
                         </Link>
                       </li>
@@ -1270,20 +1079,23 @@ const Header = ({ t }: any) => {
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                     className="loginLink"
                   >
-                    {t('header.login-' + (isLogin === true ? 'b' : 'a'))}
+                    {t(
+                      'header::' +
+                      (isLogin === true ? 'Enter the system' : 'Login')
+                    )}
                   </a>
                 </li>
                 <li>
                   {isLogin === true ? (
                     <Link href="/pricing">
-                      <a className="btn v1">{t(`header.buy-` + 'b')}</a>
+                      <a className="btn v1">{t(`header::` + 'Buy')}</a>
                     </Link>
                   ) : (
                       <a
                         className="btn v1"
                         href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                       >
-                        {t(`header.buy-` + 'a')}
+                        {t(`header::` + 'Free trial')}
                       </a>
                     )}
                 </li>

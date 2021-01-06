@@ -10,12 +10,28 @@ const CtaSectionV2 = ({ t }: any) => (
       <div className="row align-items-center mt-5">
         <div className=" col-lg-12">
           <div className="cta-text">
-            <h3>{t(`เพิ่มความสำเร็จให้ SMS Marketing`)}<br />ด้วย SMS Provider อันดับ 1 ของไทย</h3>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: t(
+                  'CtaSection::Increase successes with SMS Marketing <br/>through Thailand’s number 1 SMS Provider.'
+                ),
+              }}
+            >
+              {/* {t(`เพิ่มความสำเร็จให้ SMS Marketing`)}
+              <br />
+              ด้วย SMS Provider อันดับ 1 ของไทย */}
+            </h3>
             <div>
-              <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`} className="btn v7 Whybtn">ทดลองใช้ฟรี</a>
-              <Link href="/pricing"><a className="btn v7">ดูราคาแพ็กเกจ</a></Link>
+              <a
+                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                className="btn v7 Whybtn"
+              >
+                {t('CtaSection::Try for free')}
+              </a>
+              <Link href="/pricing">
+                <a className="btn v7">{t('CtaSection::View Package Prices')}</a>
+              </Link>
             </div>
-
           </div>
         </div>
       </div>
@@ -23,10 +39,10 @@ const CtaSectionV2 = ({ t }: any) => (
   </div>
 );
 CtaSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['OtpCtaSection'],
+  namespacesRequired: ['WhyThaibulksms'],
 });
 
 CtaSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpCtaSection')(CtaSectionV2);
+export default withTranslation('WhyThaibulksms')(CtaSectionV2);

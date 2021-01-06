@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "title": "For Developers | ThaiBulkSMS",
+    "description": "A collection of information and handbooks which allow Developers to begin working more quickly on APIs."
+  },
+  "SimpleIconSection":{
+    "SMS API linking manual":"SMS API linking manual",
+    "Thai Manual":"Thai Manual",
+    "English Manual":"English Manual",
+    "[Download]":"[Download]",
+    "OTP Service Manual":"OTP Service Manual",
+    "API References":"API References",
+    "Download example":"Download example",
+    "Download the SDK example in the language that you require.":"Download the SDK example in the language that you require."
+  },
+    "CtaSection":{
+    "Immediately test the SMS API and OTP API":"Immediately test the SMS API and OTP API",
+    "Try for free":"Try for free",
+    "Additional inquiries":"Additional inquiries"
+  }
+}

@@ -6,8 +6,16 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('ResellerPage:desSection.title')}</h3>
-            <p>{t('ResellerPage:desSection.description')}</p>
+            <h3>
+              {t(
+                'DesSection::Select your payment method, between Prepaid or Postpaid'
+              )}
+            </h3>
+            <p>
+              {t(
+                'DesSection::Be worry-free about budget management, as you can choose your method of payment.'
+              )}
+            </p>
           </div>
         </div>
       </div>
@@ -21,7 +29,7 @@ const SimpleIconSection = ({ t }: any) => (
             />
             <h4
               dangerouslySetInnerHTML={{
-                __html: t('ResellerPage:desSection.title-left-box'),
+                __html: t('DesSection::<span>Add credit</span><br />(Prepaid)'),
               }}
             ></h4>
           </div>
@@ -35,7 +43,9 @@ const SimpleIconSection = ({ t }: any) => (
             />
             <h4
               dangerouslySetInnerHTML={{
-                __html: t('ResellerPage:desSection.title-right-box'),
+                __html: t(
+                  'DesSection::<span>Pay monthly</span><br />(Postpaid)'
+                ),
               }}
             ></h4>
           </div>

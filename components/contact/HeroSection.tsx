@@ -22,7 +22,9 @@ type Inputs = {
   confirm: boolean;
 };
 const HeroSection = ({ t }: any) => {
-  const [wordhead, setWordhead] = useState('contacthero.form.problem.1');
+  const [wordhead, setWordhead] = useState(
+    'HeroSection::Contact the sales department'
+  );
   const [successbtn, setSuccessbtn] = useState(false);
   let captcha: any;
   const setCaptchaRef = (ref: any) => {
@@ -30,7 +32,14 @@ const HeroSection = ({ t }: any) => {
       return (captcha = ref);
     }
   };
-  let { register, handleSubmit, setValue, clearErrors, errors, reset } = useForm<Inputs>({
+  let {
+    register,
+    handleSubmit,
+    setValue,
+    clearErrors,
+    errors,
+    reset,
+  } = useForm<Inputs>({
     defaultValues: {
       confirm: true,
       contactType: '1',
@@ -43,7 +52,7 @@ const HeroSection = ({ t }: any) => {
     if (result.code !== '') {
       Swal.fire({
         icon: 'warning',
-        html: t('contacthero.' + result.code),
+        html: t('HeroSection::' + result.code),
       });
       return;
     }
@@ -58,43 +67,43 @@ const HeroSection = ({ t }: any) => {
       desc: '',
       confirm: true,
     });
-    setWordhead('contacthero.form.problem.1');
+    setWordhead('HeroSection::Contact the sales department');
 
     setSuccessbtn(false);
     Swal.fire({
       icon: 'success',
-      text: t('contacthero.Swal.titlesuccess'),
+      text: t('HeroSection::Swal::titlesuccess'),
     });
   };
   const handleErorr = (error: any) => {
     if (error.firstname) {
-      return 'contacthero.validate.firstname.' + error.firstname.type;
+      return 'HeroSection::validate::firstname::' + error.firstname.type;
     }
     if (error.lastname) {
-      return 'contacthero.validate.lastname.' + error.lastname.type;
+      return 'HeroSection::validate::lastname::' + error.lastname.type;
     }
     if (error.phone) {
-      return 'contacthero.validate.phone.' + error.phone.type;
+      return 'HeroSection::validate::phone::' + error.phone.type;
     }
     if (error.email) {
-      return 'contacthero.validate.email.' + error.email.type;
+      return 'HeroSection::validate::email::' + error.email.type;
     }
     if (error.recaptcha) {
-      return 'contacthero.validate.recaptcha.' + error.recaptcha.type;
+      return 'HeroSection::validate::recaptcha::' + error.recaptcha.type;
     }
     if (error.confirm) {
-      return 'contacthero.validate.confirm.' + error.confirm.type;
+      return 'HeroSection::validate::confirm::' + error.confirm.type;
     }
     if (error.desc) {
-      return 'contacthero.validate.desc.' + error.desc.type;
+      return 'HeroSection::validate::desc::' + error.desc.type;
     }
     if (error.res) {
-      if (error.res.type !== '400') return 'contacthero.' + error.res.type;
-      return 'ErrorMessage:' + error.res.type;
+      if (error.res.type !== '400') return 'HeroSection::' + error.res.type;
+      return 'ErrorMessage:::' + error.res.type;
     }
 
     if (error.auth) {
-      return 'ErrorMessage:' + error.auth.type;
+      return 'ErrorMessage:::' + error.auth.type;
     }
   };
   const setreCaptcha = (value: any) => {
@@ -122,7 +131,7 @@ const HeroSection = ({ t }: any) => {
       `}</style>
       <div className="row justify-content-center hero_top_one">
         <div className="col-12 text-center">
-          <h1 className="section__title">{t('contacthero.header')}</h1>
+          <h1 className="section__title">{t('HeroSection::Contact us')}</h1>
         </div>
 
         <div className="col-12">
@@ -130,7 +139,10 @@ const HeroSection = ({ t }: any) => {
             <div className="row no-gutters">
               <div className="col-lg-5">
                 <div className="contact__left">
-                  <a href="https://goo.gl/maps/LrntacVbBFvyB5Uv6" target="_blank">
+                  <a
+                    href="https://goo.gl/maps/LrntacVbBFvyB5Uv6"
+                    target="_blank"
+                  >
                     <img
                       src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/contact.png`}
                       className="img-fluid left__img"
@@ -138,7 +150,7 @@ const HeroSection = ({ t }: any) => {
                     />
                   </a>
 
-                  <h3>{t('contacthero.contact.header')}</h3>
+                  <h3>{t('HeroSection::1MOBY Company Limited')}</h3>
                   <ul>
                     <li style={{ marginTop: '10px' }}>
                       <img
@@ -148,7 +160,9 @@ const HeroSection = ({ t }: any) => {
                       />
                       <p
                         dangerouslySetInnerHTML={{
-                          __html: t('contacthero.contact.address'),
+                          __html: t(
+                            'HeroSection::2521/10 Ladprao Road, Klong Chao Khun Singh Subdistrict, Wangthonglang District, Bangkok 10310'
+                          ),
                         }}
                       ></p>
                     </li>
@@ -158,7 +172,11 @@ const HeroSection = ({ t }: any) => {
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/call.png`}
                         alt=""
                       />
-                      <p><a href="tel:027986000">{t('contacthero.contact.phone')}</a></p>
+                      <p>
+                        <a href="tel:027986000">
+                          {t('HeroSection::0-2798-6000 extension 0')}
+                        </a>
+                      </p>
                     </li>
                     <li>
                       <img
@@ -166,7 +184,7 @@ const HeroSection = ({ t }: any) => {
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/calendar.png`}
                         alt=""
                       />
-                      <p>{t('contacthero.contact.fax')}</p>
+                      <p>{t('HeroSection::0-2798-6099')}</p>
                     </li>
                     <li>
                       <img
@@ -182,7 +200,9 @@ const HeroSection = ({ t }: any) => {
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/clock.png`}
                         alt=""
                       />
-                      <p>{t('contacthero.contact.time')}</p>
+                      <p>
+                        {t('HeroSection::8.30 – 17.30 hrs. (Monday – Friday)')}
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -210,10 +230,12 @@ const HeroSection = ({ t }: any) => {
                             setValue('contactType', '1', {
                               shouldValidate: true,
                             });
-                            setWordhead('contacthero.form.problem.1');
+                            setWordhead(
+                              'HeroSection::Contact the sales department'
+                            );
                           }}
                         >
-                          {t('contacthero.form.problem.1')}
+                          {t('HeroSection::Contact the sales department')}
                         </li>
                         <li
                           className="option "
@@ -222,10 +244,10 @@ const HeroSection = ({ t }: any) => {
                             setValue('contactType', '2', {
                               shouldValidate: true,
                             });
-                            setWordhead('contacthero.form.problem.2');
+                            setWordhead('HeroSection::Contact support');
                           }}
                         >
-                          {t('contacthero.form.problem.2')}
+                          {t('HeroSection::Contact support')}
                         </li>
                       </ul>
                     </div>
@@ -243,7 +265,7 @@ const HeroSection = ({ t }: any) => {
                       name="firstname"
                       type="text"
                       className="input__box v2"
-                      placeholder={t('contacthero.form.firstname')}
+                      placeholder={t('HeroSection::Real first name')}
                     />
 
                     <input
@@ -252,7 +274,7 @@ const HeroSection = ({ t }: any) => {
                       name="lastname"
                       type="text"
                       className="input__box v2"
-                      placeholder={t('contacthero.form.lastname')}
+                      placeholder={t('HeroSection::Surname')}
                     />
                     <input
                       ref={register()}
@@ -260,7 +282,7 @@ const HeroSection = ({ t }: any) => {
                       name="companyName"
                       type="text"
                       className="input__box v2"
-                      placeholder={t('contacthero.form.companyName')}
+                      placeholder={t('HeroSection::Company')}
                     />
                     <input
                       ref={register({
@@ -271,7 +293,7 @@ const HeroSection = ({ t }: any) => {
                       name="email"
                       type="text"
                       className="input__box v2"
-                      placeholder={t('contacthero.form.email')}
+                      placeholder={t('HeroSection::Email')}
                     />
                     <input
                       ref={register({
@@ -286,7 +308,7 @@ const HeroSection = ({ t }: any) => {
                       name="phone"
                       type="text"
                       className="input__box v2"
-                      placeholder={t('contacthero.form.phone')}
+                      placeholder={t('HeroSection::Phone number')}
                     />
 
                     <textarea
@@ -294,7 +316,7 @@ const HeroSection = ({ t }: any) => {
                       id="desc"
                       name="desc"
                       className="input__box v2"
-                      placeholder={t('contacthero.form.detail')}
+                      placeholder={t('HeroSection::Initial details')}
                     ></textarea>
                     <input
                       ref={register({
@@ -310,7 +332,7 @@ const HeroSection = ({ t }: any) => {
                       onChange={setreCaptcha}
                     />
                     <label className="checkbox-wrapper">
-                      {t('contacthero.form.checkbox')}
+                      {t('HeroSection::Confirm your contact from ThaiBulkSMS')}
                       <input
                         type="checkbox"
                         id="confirm"
@@ -332,8 +354,12 @@ const HeroSection = ({ t }: any) => {
                       className="button__wrapper text-center"
                       style={{ marginTop: '50px' }}
                     >
-                      <button type="submit" className="btn v8" disabled={successbtn}>
-                        {t('contacthero.form.submitBtn')}
+                      <button
+                        type="submit"
+                        className="btn v8"
+                        disabled={successbtn}
+                      >
+                        Contact Me
                       </button>
                     </div>
                   </form>
@@ -348,10 +374,10 @@ const HeroSection = ({ t }: any) => {
 };
 
 HeroSection.getInitialProps = async () => ({
-  namespacesRequired: ['ContactHeroSection'],
+  namespacesRequired: ['Contact'],
 });
 
 HeroSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('ContactHeroSection')(HeroSection);
+export default withTranslation('Contact')(HeroSection);

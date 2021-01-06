@@ -1,0 +1,111 @@
+{
+  "meta":{
+    "title": "Contact our team | ThaiBulkSMS",
+    "description": "If you have inquiries about the products, packages, or have problems with SMS message sending, you can contact us immediately. We are prepared to provide our advice and care for you.",
+    "keywords": ""
+  },
+  "HeroSection":{
+    "Contact us":"Contact us",
+    "Contact the sales department":"Contact the sales department",
+    "Contact support":"Contact support",
+    "1MOBY Company Limited":"1MOBY Company Limited",
+    "2521/10 Ladprao Road, Klong Chao Khun Singh Subdistrict, Wangthonglang District, Bangkok 10310":"2521/10 Ladprao Road, Klong Chao Khun Singh Subdistrict, Wangthonglang District, Bangkok 10310",
+    "0-2798-6000 extension 0":"0-2798-6000 extension 0",
+    "0-2798-6099":"0-2798-6099",
+    "8.30 – 17.30 hrs. (Monday – Friday)":"8.30 – 17.30 hrs. (Monday – Friday)",
+    "Real first name":"Real first name",
+    "Surname":"Surname",
+    "Company":"Company",
+    "Email":"Email",
+    "Phone number":"Phone number",
+    "Initial details":"Initial details",
+    "Confirm your contact from ThaiBulkSMS":"Confirm your contact from ThaiBulkSMS",
+    "validate": {
+      "firstname": {
+        "required": "กรุณากรอก ชื่อจริง"
+      },
+      "lastname": {
+        "required": "กรุณากรอก นามสกุล"
+      },
+      "phone": {
+        "required": "กรุณากรอก เบอร์โทรศัพท์",
+        "pattern": "โปรดใส่ หมายเลข ให้ถูกต้อง (ตัวเลขเท่านั้น)"
+      },
+      "email": {
+        "required": "กรุณากรอก อีเมลล์",
+        "pattern": "โปรดใส่ อีเมล์ ให้ถูกต้อง (อีเมล์เท่านั้น)"
+      },
+      "confirm": {
+        "required": "กรุณากรอก ยอมรับ"
+      },
+      "recaptcha": {
+        "required": "กรุณากรอก I'm not a robot"
+      },
+      "desc": {
+        "required": "กรุณากรอก รายละเอียดเบื้องต้น"
+      }
+    },
+    "Swal": {
+      "titleerror": "ไม่สามารถส่งได้",
+      "decseerror": "กรุณาลองใหม่",
+      "titlesuccess": "ได้รับข้อความเรียบร้อยแล้ว",
+      "decsesuccess": ""
+    },
+    "Not Found": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง",
+    "internal": {
+      "server": {
+        "error": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      }
+    },
+    "contactdto": {
+      "contactType": { "invalid": "กรุณาเลือกการติดต่อ" },
+      "firstname": {
+        "invalid": "กรอกเฉพาะตัวอักษรภาษาไทยหรือภาษาอังกฤษเท่านั้น"
+      },
+      "lastname": {
+        "invalid": "กรอกเฉพาะตัวอักษรภาษาไทยหรือภาษาอังกฤษเท่านั้น"
+      },
+      "tel": {
+        "invalid": "เบอร์มือถือไม่ถูกต้อง กรุณากรอกเป็นตัวเลขไม่เกิน 10 หลัก"
+      },
+      "email": { "invalid": "กรอกเฉพาะอีเมลเท่านั้น" },
+      "message": { "invalid": "กรอกเฉพาะตัวอักษรภาษาไทยหรือภาษาอังกฤษเท่านั้น" }
+    },
+    "recaptcha": { "invalid": "กรุณายืนยันตัวตน" },
+    "activecampaigncontactdto": {
+      "email": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "firstName": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "lastName": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "phone": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "title": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "description": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "contact": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "value": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "currency": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "group": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      },
+      "stage": {
+        "invalid": "ระบบเกิดความผิดพลาด <br/>กรุณารอสักครู่ แล้วลองใหม่อีกครั้ง"
+      }
+    }
+  }
+}

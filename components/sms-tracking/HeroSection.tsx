@@ -17,8 +17,10 @@ const HeroSectionV4 = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12 col-12">
           <div className="hero_text_one v2">
-            <span>{t('sms-trackinghero.header')}</span>
-            <h1>{t('sms-trackinghero.title')}</h1>
+            <span>{t('HeroSection::Accurate SMS campaign measurement')}</span>
+            <h1>
+              {t('HeroSection::results that prevent marketing budget wastage.')}
+            </h1>
             <p>{/* {t('p1')} <span>{t('span2')}</span> {t('p2')} */}</p>
           </div>
         </div>
@@ -27,10 +29,10 @@ const HeroSectionV4 = ({ t }: any) => (
   </div>
 );
 HeroSectionV4.getInitialProps = async () => ({
-  namespacesRequired: ['Sms-trackingHeroSection'],
+  namespacesRequired: ['Sms-tracking'],
 });
 
 HeroSectionV4.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Sms-trackingHeroSection')(HeroSectionV4);
+export default withTranslation('Sms-tracking')(HeroSectionV4);

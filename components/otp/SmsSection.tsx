@@ -6,8 +6,18 @@ const SmsSectionV3 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3 dangerouslySetInnerHTML={{ __html: t('otpsms.header') }}></h3>
-            <p>{t('otpsms.title')}</p>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: t(
+                  'SmsSection::Easy checkups: in only a few clicks,<br/> the OTP can be sent.'
+                ),
+              }}
+            ></h3>
+            <p>
+              {t(
+                'SmsSection::You can send OTP self-verification messages to increase customer security without writing additional programs. Simply set the values for only a few steps, and a code will be ready for use with the API, which quickens Developer workflows.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -25,7 +35,11 @@ const SmsSectionV3 = ({ t }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>{t('otpsms.freetitle')}</h4>
+                  <h4>
+                    {t(
+                      'SmsSection::Immediately test the ready-to-use OTP transmission system'
+                    )}
+                  </h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
@@ -34,14 +48,14 @@ const SmsSectionV3 = ({ t }: any) => (
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v8"
                   >
-                    {t('otpsms.freeBtn')}
+                    {t('SmsSection::Try for free')}
                   </a>
                   <a
                     href={`https://otp-manager.thaibulksms.com/login`}
                     className="btn otp"
                     target="_blank"
                   >
-                    ล็อกอิน
+                    {t('SmsSection::Login')}
                   </a>
                 </div>
               </div>
@@ -54,10 +68,10 @@ const SmsSectionV3 = ({ t }: any) => (
 );
 
 SmsSectionV3.getInitialProps = async () => ({
-  namespacesRequired: ['OtpSmsSection'],
+  namespacesRequired: ['Otp'],
 });
 
 SmsSectionV3.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpSmsSection')(SmsSectionV3);
+export default withTranslation('Otp')(SmsSectionV3);

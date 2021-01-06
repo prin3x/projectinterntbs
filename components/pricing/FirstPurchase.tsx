@@ -25,11 +25,15 @@ const BuyPackage = (packageItem: ProductPackage) => {
     `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment/`
   );
 };
-const showPackage = (packagesNormal: Product[], packages: Product[], t: Function) => {
+const showPackage = (
+  packagesNormal: Product[],
+  packages: Product[],
+  t: Function
+) => {
   let itemPackages: any = [];
   for (let item in packages) {
     let productItem = packages[item];
-    let productItemNormal = packagesNormal[item]
+    let productItemNormal = packagesNormal[item];
     let itemNo = item + 1;
     itemPackages.push(
       <div
@@ -46,19 +50,19 @@ const showPackage = (packagesNormal: Product[], packages: Product[], t: Function
         <div className="col-md-4 box">
           {productItem.corporate.sender === SenderActive && (
             <div className="parent">
-              <h4 className="ribbon">{t('pricingallpricing.bestsell')}</h4>
+              <h4 className="ribbon">{t('AllPricing::Bestsellers')}</h4>
             </div>
           )}{' '}
           {productItem.corporate.sender === SenderBegin && (
             <div className="parent">
-              <h4 className="ribbon">{t('pricingallpricing.begin')}</h4>
+              <h4 className="ribbon">{t('AllPricing::For beginners')}</h4>
             </div>
           )}
           <div className="left__box">
             <h3>{numeral(productItem.amount).format('0,0')}</h3>
             <span>
-              {t('pricingallpricing.life')} {`${productItem.period} `}
-              {t('pricingallpricing.month')}
+              {t('AllPricing::Duration of usage')} {`${productItem.period} `}
+              {t('AllPricing::months')}
             </span>
           </div>
         </div>
@@ -80,16 +84,21 @@ const showPackage = (packagesNormal: Product[], packages: Product[], t: Function
                 <div className="row ribbon-container">
                   <div className="col-lg-4 offset-lg-1 col-sm-5 text-center">
                     <h4 className="d-md-none">Standard</h4>
-                    <p className="p-line-through">{numeral(productItemNormal.standard.amount / productItemNormal.standard.credit).format('0.00')}</p>
+                    <p className="p-line-through">
+                      {numeral(
+                        productItemNormal.standard.amount /
+                          productItemNormal.standard.credit
+                      ).format('0.00')}
+                    </p>
                     <h3>
                       {numeral(
                         productItem.standard.amount /
-                        productItem.standard.credit
+                          productItem.standard.credit
                       ).format('0.00')}
                       {` `}
                       <span>
-                        {t('pricingallpricing.bath')}/
-                        {t('pricingallpricing.message')}
+                        {/* {t('AllPricing::bath')}/{t('AllPricing::message')} */}
+                        {t('AllPricing::Baht/message')}
                       </span>
                     </h3>
 
@@ -104,12 +113,16 @@ const showPackage = (packagesNormal: Product[], packages: Product[], t: Function
                     >
                       <div className="sender__box1 div-line-through2">
                         <p className="p-line-through2">
-                          <span className="none">{numeral(productItemNormal.standard.credit).format('0,0')}</span>{' '}
+                          <span className="none">
+                            {numeral(productItemNormal.standard.credit).format(
+                              '0,0'
+                            )}
+                          </span>{' '}
                           <span className="up"> +20% UP </span>
                         </p>
                       </div>
                       <div className="sender__box1">
-                        <span>{t('pricingallpricing.quantity')}</span>
+                        <span>{t('AllPricing::Number of messages')}</span>
                         <span className="theme__text">
                           {numeral(productItem.standard.credit).format('0,0')}
                         </span>
@@ -129,22 +142,27 @@ const showPackage = (packagesNormal: Product[], packages: Product[], t: Function
                           onClick={() => BuyPackage(productItem.standard)}
                           className="btn v8"
                         >
-                          {t('pricingallpricing.buyBtn')}
+                          {t('AllPricing::Buy now')}
                         </button>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-6 col-sm-5 text-center">
                     <h4 className="d-md-none">Corporate</h4>
-                    <p className="p-line-through">{numeral(productItemNormal.corporate.amount / productItemNormal.corporate.credit).format('0.00')}</p>
+                    <p className="p-line-through">
+                      {numeral(
+                        productItemNormal.corporate.amount /
+                          productItemNormal.corporate.credit
+                      ).format('0.00')}
+                    </p>
                     <h3>
                       {numeral(
                         productItem.corporate.amount /
-                        productItem.corporate.credit
+                          productItem.corporate.credit
                       ).format('0.00')}{' '}
                       <span>
-                        {t('pricingallpricing.bath')}/
-                        {t('pricingallpricing.message')}
+                        <span>{t('AllPricing::Baht/message')}</span>
+                        {/* {t('AllPricing::bath')}/{t('AllPricing::message')} */}
                       </span>
                     </h3>
 
@@ -159,12 +177,16 @@ const showPackage = (packagesNormal: Product[], packages: Product[], t: Function
                     >
                       <div className="sender__box1 div-line-through2">
                         <p className="p-line-through2">
-                          <span className="none">{numeral(productItemNormal.corporate.credit).format('0,0')}</span>{' '}
+                          <span className="none">
+                            {numeral(productItemNormal.corporate.credit).format(
+                              '0,0'
+                            )}
+                          </span>{' '}
                           <span className="up"> +20% UP </span>
                         </p>
                       </div>
                       <div className="sender__box1">
-                        <span>{t('pricingallpricing.quantity')}</span>
+                        <span>{t('AllPricing::Number of messages')}</span>
                         <span className="theme__text">
                           {numeral(productItem.corporate.credit).format('0,0')}
                         </span>
@@ -183,7 +205,7 @@ const showPackage = (packagesNormal: Product[], packages: Product[], t: Function
                           onClick={() => BuyPackage(productItem.corporate)}
                           className="btn v8"
                         >
-                          {t('pricingallpricing.buyBtn')}
+                          {t('AllPricing::Buy now')}
                         </button>
                       </div>
                     </div>
@@ -214,7 +236,7 @@ const showPackage = (packagesNormal: Product[], packages: Product[], t: Function
 
 const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
   const router = useRouter();
-  const [showProduct, setShowProduct] = React.useState(false)
+  const [showProduct, setShowProduct] = React.useState(false);
   React.useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
@@ -226,7 +248,7 @@ const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
     const dpd: any = router.query.dpd;
 
     if (!dpd) return;
-    setShowProduct(dpd ? true : false)
+    setShowProduct(dpd ? true : false);
     firstPurchase(dpd);
   }, [router]);
 
@@ -250,7 +272,7 @@ const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
             <div className="row no-gutters">
               <div className="col-md-4">
                 <div className="left__box left__box__top">
-                  <p>{t('pricingallpricing.column1')}</p>
+                  <p>{t('AllPricing::Package prices')}</p>
                 </div>
               </div>
               <div className="col-md-8">
@@ -259,10 +281,10 @@ const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
                     <div className="top__bar">
                       <div className="row">
                         <div className="col-6 text-center">
-                          <p>{t('pricingallpricing.column2')}</p>
+                          <p>{t('AllPricing::Standard SMS')}</p>
                         </div>
                         <div className="col-6 text-center">
-                          <p>{t('pricingallpricing.column3')}</p>
+                          <p>{t('AllPricing::Corporate SMS')}</p>
                         </div>
                       </div>
                     </div>
@@ -277,14 +299,20 @@ const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
           <div className="col-12 text-center pricing__bottom__content">
             <p
               dangerouslySetInnerHTML={{
-                __html: t('pricingallpricing.footertitle'),
+                __html: t(
+                  'AllPricing::• Package prices do not include VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.'
+                ),
               }}
             />
 
             <div className="pricing__bottom d-flex align-items-center justify-content-center">
-              <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
+              <h5 className="mr-5">
+                {t('AllPricing::Not found your ideal choice yet?')}
+              </h5>
               <Link href="/contact">
-                <a className="btn v3">{t('pricingallpricing.sellBtn')}</a>
+                <a className="btn v3">
+                  {t('AllPricing::Contact our sales team')}
+                </a>
               </Link>
             </div>
           </div>
@@ -295,10 +323,10 @@ const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
 };
 
 FirstPurchase.getInitialProps = async () => ({
-  namespacesRequired: ['PricingAllPricing'],
+  namespacesRequired: ['Pricing'],
 });
 
 FirstPurchase.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('PricingAllPricing')(React.memo(FirstPurchase));
+export default withTranslation('Pricing')(React.memo(FirstPurchase));
