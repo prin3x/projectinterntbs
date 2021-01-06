@@ -94,8 +94,8 @@ const Header = ({ t }: any) => {
               <div className="header_contact_no">
                 <a href="tel:027986000">02-798-6000</a>
               </div>
-              <div className="header_select" style={{ display: 'none' }}>
-                <select className="user_select" style={{ display: 'none' }}>
+              <div className="header_select">
+                <select className="user_select">
                   <option>Th</option>
                   <option>En</option>
                 </select>
