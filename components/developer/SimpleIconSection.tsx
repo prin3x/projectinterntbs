@@ -30,7 +30,7 @@ const SimpleIconSection = ({ t }: any) => (
                   />
                   <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-right-box')}</p>
                   <h4>{t('คู่มือภาษาอังกฤษ')}</h4>
-                  <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_EN.pdf`}>{t('SMSAPIPage:simpleIconSection.button-right-box')}</a>
+                  <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V2.0_EN.pdf`}>{t('SMSAPIPage:simpleIconSection.button-right-box')}</a>
                 </div>
               </div>
             </div>
