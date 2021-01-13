@@ -36,8 +36,6 @@ const Resource = ({ t, posts }: any) => (
 
 export default withTranslation('ResourceMeta')(Resource);
 export const getStaticProps = async () => {
-
-
     let LandingPage;
     try {
         LandingPage = await BlogService.GetLandingPage();
