@@ -996,7 +996,7 @@ const Header = ({ t }: any) => {
                         </Link>
                       </li>
                     </ul>
-                    <h5 className="head-site-sub-menu">การศึกษา</h5>
+                    <h5 className="head-site-sub-menu">กรณีศึกษา</h5>
                     <ul className="title-sub-menu">
                       <li className="sub-head-menu">
                         <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
@@ -1079,7 +1079,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                               alt="phone.png"
                             />
-                            02-789-000
+                            02-798-6000
                           </a>
                         </li>
                         <li className="sub-head-menu">
@@ -1169,8 +1169,8 @@ const Header = ({ t }: any) => {
               <div id="aboutme">
                 <div className="site-sub-menu">
                   <HeaderTopMenuMobile />
-                  <div className="block_detail_menu_mobile">
-                    <ul className="show-site-sub-menu title-menu-mobile">
+                  <div className="block_detail_menu_mobile padding_bottom_right">
+                    <ul className="show-site-sub-menu title-menu-mobile padding_left_right_new_sub_menu_25">
                       <li className="title-menu-mobile arrow-back-to-menu-mobile">
                         <img
                           className="arrow-back-to-menu-mobile"
@@ -1182,7 +1182,7 @@ const Header = ({ t }: any) => {
                         <h5 className="head-site-sub-menu">เกี่ยวกับบริษัท</h5>
                       </li>
                     </ul>
-                    <ul className="title-sub-menu">
+                    <ul className="title-sub-menu padding_left_right_new_sub_menu_25">
                       <li className="sub-head-menu">
                         <Link href="/why-thaibulksms">
                           <a className="closemenu">
@@ -1230,7 +1230,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                               alt="phone.png"
                             />
-                            02-789-000
+                            02-798-6000
                           </a>
                         </li>
                         <li className="sub-head-menu">
