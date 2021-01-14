@@ -18,7 +18,7 @@ const ContentSection = ({ Posts }: any) => (
     <div className="container">
       <div className="row justify-content-center hero_top_one">
         <div className="col-12 text-center">
-          <h3 className="section__title">คลังข้อมูล</h3>
+          <h1 className="section__title">คลังข้อมูล</h1>
           <div className="secSliderResource">
             <Swiper
 
