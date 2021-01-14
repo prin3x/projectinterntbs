@@ -28,7 +28,7 @@ const SimpleIconSection = ({ t }: any) => (
                   <h4>{t('SimpleIconSection::Thai Manual')}</h4>
                   <a
                     target="_blank"
-                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_TH.pdf`}
+                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V2.0_TH.pdf`}
                   >
                     {t('SimpleIconSection::[Download]')}
                   </a>
@@ -50,7 +50,7 @@ const SimpleIconSection = ({ t }: any) => (
                   <h4>{t('SimpleIconSection::English Manual')}</h4>
                   <a
                     target="_blank"
-                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_EN.pdf`}
+                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V2.0_EN.pdf`}
                   >
                     {t('SimpleIconSection::[Download]')}
                   </a>

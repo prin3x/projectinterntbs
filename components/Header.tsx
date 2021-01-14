@@ -25,7 +25,7 @@ const HeaderTopMenuMobile = () => (
     </div>
   </div>
 );
-const HeaderLoginMenuMobile = ({ t }: any, isLogin: boolean) => {
+const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
   return (
     <div className="menu_btn">
       <ul>
@@ -349,7 +349,7 @@ const Header = ({ t }: any) => {
                             <li>
                               <Link href="tel:027986000">
                                 <h6 className="new_text_contact_phone">
-                                  <span className="new_text_margin_left">02-789-6000</span>
+                                  <span className="new_text_margin_left">02-798-6000</span>
                                 </h6>
                               </Link>
                             </li>
@@ -441,7 +441,7 @@ const Header = ({ t }: any) => {
                             <li>
                               <Link href="tel:027986000">
                                 <h6 className="new_text_contact_phone">
-                                  <span className="new_text_margin_left">02-789-6000</span>
+                                  <span className="new_text_margin_left">02-798-6000</span>
                                 </h6>
                               </Link>
                             </li>
@@ -549,112 +549,114 @@ const Header = ({ t }: any) => {
                     <HeaderTopMenuMobile />
                   </div>
                   <div className="block_detail_menu_mobile">
-                    <ul className="show-site-sub-menu title-menu-mobile">
-                      <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                        <img
-                          className="arrow-back-to-menu-mobile"
-                          src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                          alt="left-arrow.png"
-                        />
-                      </li>
-                      <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">
-                          {t('header::Products')}
-                        </h5>
-                      </li>
-                    </ul>
-                    <ul className="title-sub-menu">
-                      <li className="sub-head-menu">
-                        <Link href="/product">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon01.svg`}
-                              alt="menu-icon_Product-icon01.svg"
-                            />
-                            จุดเด่นผลิตภัณฑ์
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                    <h5 className="head-site-sub-menu">สำหรับการตลาด</h5>
-                    <ul className="title-sub-menu">
-                      <li className="sub-head-menu">
-                        <Link href="/product/smart-sms-console">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon02.svg`}
-                              alt="menu-icon_Product-icon02.svg"
-                            />
-                            Smart SMS Console
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/product/sms-tracking">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon03.svg`}
-                              alt="menu-icon_Product-icon03.svg"
-                            />
-                            SMS Tracking
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/product/location-based-sms">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon04.svg`}
-                              alt="menu-icon_Product-icon04.svg"
-                            />
-                            Location Based SMS
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/product/global-sms">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon05.svg`}
-                              alt="menu-icon_Product-icon05.svg"
-                            />
-                            Global SMS
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                    <h5 className="head-site-sub-menu">{t('header::For Developers')}</h5>
-                    <ul className="title-sub-menu">
-                      <li className="sub-head-menu">
-                        <Link href="/product/sms-api">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon06.svg`}
-                              alt="menu-icon_Product-icon06.svg"
-                            />
-                            SMS API
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/product/otp">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon07.svg`}
-                              alt="menu-icon_Product-icon07.svg"
-                            />
-                            OTP Service
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
+                    <div className="padding_left_right_new_sub_menu_25">
+                      <ul className="show-site-sub-menu title-menu-mobile">
+                        <li className="title-menu-mobile arrow-back-to-menu-mobile">
+                          <img
+                            className="arrow-back-to-menu-mobile"
+                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
+                            alt="left-arrow.png"
+                          />
+                        </li>
+                        <li className="title-menu-mobile">
+                          <h5 className="head-site-sub-menu">
+                            {t('header::Products')}
+                          </h5>
+                        </li>
+                      </ul>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href="/product">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon01.svg`}
+                                alt="menu-icon_Product-icon01.svg"
+                              />
+                              จุดเด่นผลิตภัณฑ์
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                      <h5 className="head-site-sub-menu">สำหรับการตลาด</h5>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href="/product/smart-sms-console">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon02.svg`}
+                                alt="menu-icon_Product-icon02.svg"
+                              />
+                              Smart SMS Console
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/product/sms-tracking">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon03.svg`}
+                                alt="menu-icon_Product-icon03.svg"
+                              />
+                              SMS Tracking
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/product/location-based-sms">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon04.svg`}
+                                alt="menu-icon_Product-icon04.svg"
+                              />
+                              Location Based SMS
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/product/global-sms">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon05.svg`}
+                                alt="menu-icon_Product-icon05.svg"
+                              />
+                              Global SMS
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                      <h5 className="head-site-sub-menu">{t('header::For Developers')}</h5>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href="/product/sms-api">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon06.svg`}
+                                alt="menu-icon_Product-icon06.svg"
+                              />
+                              SMS API
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/product/otp">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon07.svg`}
+                                alt="menu-icon_Product-icon07.svg"
+                              />
+                              OTP Service
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                     <div className="menu_btn_margin_bottom">
                       <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                     </div>
@@ -665,74 +667,76 @@ const Header = ({ t }: any) => {
                 <div className="site-sub-menu">
                   <HeaderTopMenuMobile />
                   <div className="block_detail_menu_mobile">
-                    <ul className="show-site-sub-menu title-menu-mobile">
-                      <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                        <img
-                          className="arrow-back-to-menu-mobile"
-                          src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                          alt="left-arrow.png"
-                        />
-                      </li>
-                      <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">{t('header::Database')}</h5>
-                      </li>
-                    </ul>
-                    <ul className="title-sub-menu">
-                      <li className="sub-head-menu">
-                        <Link href="/resource">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon01.svg`}
-                              alt="menu-icon_resource-icon01.svg"
-                            />
-                            {t('header::Database')}
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                    <h5 className="head-site-sub-menu">บทความ</h5>
-                    <ul className="title-sub-menu">
-                      <li className="sub-head-menu">
-                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon02.svg`}
-                              alt="menu-icon_resource-icon02.svg"
-                            />
-                            {t('header::Knowledge')}
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}>
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon03.svg`}
-                              alt="menu-icon_resource-icon03.svg"
-                            />
-                            {t('header::Example Operations')}
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                    <h5 className="head-site-sub-menu">การศึกษา</h5>
-                    <ul className="title-sub-menu">
-                      <li className="sub-head-menu">
-                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon04.svg`}
-                              alt="menu-icon_resource-icon04.svg"
-                            />
-                            {t('header::Success Stories')}
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
+                    <div className="padding_left_right_new_sub_menu_25">
+                      <ul className="show-site-sub-menu title-menu-mobile">
+                        <li className="title-menu-mobile arrow-back-to-menu-mobile">
+                          <img
+                            className="arrow-back-to-menu-mobile"
+                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
+                            alt="left-arrow.png"
+                          />
+                        </li>
+                        <li className="title-menu-mobile">
+                          <h5 className="head-site-sub-menu">{t('header::Database')}</h5>
+                        </li>
+                      </ul>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href="/resource">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon01.svg`}
+                                alt="menu-icon_resource-icon01.svg"
+                              />
+                              {t('header::Database')}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                      <h5 className="head-site-sub-menu">บทความ</h5>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon02.svg`}
+                                alt="menu-icon_resource-icon02.svg"
+                              />
+                              {t('header::Knowledge')}
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}>
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon03.svg`}
+                                alt="menu-icon_resource-icon03.svg"
+                              />
+                              {t('header::Example Operations')}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                      <h5 className="head-site-sub-menu">กรณีศึกษา</h5>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon04.svg`}
+                                alt="menu-icon_resource-icon04.svg"
+                              />
+                              {t('header::Success Stories')}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                     <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                   </div>
                 </div>
@@ -740,58 +744,59 @@ const Header = ({ t }: any) => {
               <div id="support">
                 <div className="site-sub-menu">
                   <HeaderTopMenuMobile />
-                  <div className="block_detail_menu_mobile padding_bottom_right">
-                    <ul className="show-site-sub-menu title-menu-mobile padding_left_right_new_sub_menu_25">
-                      <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                        <img
-                          className="arrow-back-to-menu-mobile"
-                          src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                          alt="left-arrow.png"
-                        />
-                      </li>
-                      <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">{t('header::Support')}</h5>
-                      </li>
-                    </ul>
-                    <ul className="title-sub-menu padding_left_right_new_sub_menu_25">
-                      <li className="sub-head-menu">
-                        <Link href="/support/how-to-order">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon01.svg`}
-                              alt="menu-icon_support-icon01.svg"
-                            />
-                            {t('header::Ordering Methods')}
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/support/faq">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon02.svg`}
-                              alt="menu-icon_support-icon02.svg"
-                            />
-                            {t('header::Frequently Asked Questions')}
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/contact">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon03.svg`}
-                              alt="menu-icon_support-icon03.svg"
-                            />
-                            {t('header::Contact us')}
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                    <div className="margin-top-sub-menu">
+                  <div className="block_detail_menu_mobile">
+                    <div className="padding_left_right_new_sub_menu_25">
+                      <ul className="show-site-sub-menu title-menu-mobile">
+                        <li className="title-menu-mobile arrow-back-to-menu-mobile">
+                          <img
+                            className="arrow-back-to-menu-mobile"
+                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
+                            alt="left-arrow.png"
+                          />
+                        </li>
+                        <li className="title-menu-mobile">
+                          <h5 className="head-site-sub-menu">{t('header::Support')}</h5>
+                        </li>
+                      </ul>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href="/support/how-to-order">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon01.svg`}
+                                alt="menu-icon_support-icon01.svg"
+                              />
+                              {t('header::Ordering Methods')}
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/support/faq">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon02.svg`}
+                                alt="menu-icon_support-icon02.svg"
+                              />
+                              {t('header::Frequently Asked Questions')}
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/contact">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon03.svg`}
+                                alt="menu-icon_support-icon03.svg"
+                              />
+                              {t('header::Contact us')}
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div><div className="margin-top-sub-menu">
                       <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
@@ -801,7 +806,7 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                               alt="phone.png"
                             />
-                            02-789-000
+                            02-798-6000
                           </a>
                         </li>
                         <li className="sub-head-menu">
@@ -826,6 +831,7 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </div>
+
                     <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                   </div>
                 </div>
@@ -834,56 +840,58 @@ const Header = ({ t }: any) => {
                 <div className="site-sub-menu">
                   <HeaderTopMenuMobile />
                   <div className="block_detail_menu_mobile">
-                    <ul className="show-site-sub-menu title-menu-mobile">
-                      <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                        <img
-                          className="arrow-back-to-menu-mobile"
-                          src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                          alt="left-arrow.png"
-                        />
-                      </li>
-                      <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">{t('header::For Developers')}</h5>
-                      </li>
-                    </ul>
-                    <ul className="title-sub-menu">
-                      <li className="sub-head-menu">
-                        <Link href="/developer">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon01.svg`}
-                              alt="menu-icon_Dev-icon01.svg"
-                            />
-                            {t('header::Download Guide')}
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/developer#ex_sdk">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon02.svg`}
-                              alt="menu-icon_Dev-icon02.svg"
-                            />
-                            ดาวน์โหลดตัวอย่าง SDK
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="https://developer.thaibulksms.com">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon03.svg`}
-                              alt="menu-icon_Dev-icon03.svg"
-                            />
-                            API References
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
+                    <div className="padding_left_right_new_sub_menu_25">
+                      <ul className="show-site-sub-menu title-menu-mobile">
+                        <li className="title-menu-mobile arrow-back-to-menu-mobile">
+                          <img
+                            className="arrow-back-to-menu-mobile"
+                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
+                            alt="left-arrow.png"
+                          />
+                        </li>
+                        <li className="title-menu-mobile">
+                          <h5 className="head-site-sub-menu">{t('header::For Developers')}</h5>
+                        </li>
+                      </ul>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href="/developer">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon01.svg`}
+                                alt="menu-icon_Dev-icon01.svg"
+                              />
+                              {t('header::Download Guide')}
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/developer#ex_sdk">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon02.svg`}
+                                alt="menu-icon_Dev-icon02.svg"
+                              />
+                              ดาวน์โหลดตัวอย่าง SDK
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="https://developer.thaibulksms.com">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon03.svg`}
+                                alt="menu-icon_Dev-icon03.svg"
+                              />
+                              API References
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                     <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                   </div>
                 </div>
@@ -892,56 +900,58 @@ const Header = ({ t }: any) => {
                 <div className="site-sub-menu">
                   <HeaderTopMenuMobile />
                   <div className="block_detail_menu_mobile">
-                    <ul className="show-site-sub-menu title-menu-mobile">
-                      <li className="title-menu-mobile arrow-back-to-menu-mobile">
-                        <img
-                          className="arrow-back-to-menu-mobile"
-                          src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
-                          alt="left-arrow.png"
-                        />
-                      </li>
-                      <li className="title-menu-mobile">
-                        <h5 className="head-site-sub-menu">{t('header::About the Company')}</h5>
-                      </li>
-                    </ul>
-                    <ul className="title-sub-menu">
-                      <li className="sub-head-menu">
-                        <Link href="/why-thaibulksms">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon01.svg`}
-                              alt="menu-icon_about-icon01.svg"
-                            />
-                            {t('header::Why use ThaiBulkSMS?')}
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/contact">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon02.svg`}
-                              alt="menu-icon_about-icon02.svg"
-                            />
-                            {t('header::Contact us')}
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="sub-head-menu">
-                        <Link href="/reseller/">
-                          <a className="closemenu">
-                            <img
-                              className="icon-title-menu-mobile"
-                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon03.svg`}
-                              alt="menu-icon_about-icon03.svg"
-                            />
-                            Reseller Program
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
+                    <div className="padding_left_right_new_sub_menu_25">
+                      <ul className="show-site-sub-menu title-menu-mobile">
+                        <li className="title-menu-mobile arrow-back-to-menu-mobile">
+                          <img
+                            className="arrow-back-to-menu-mobile"
+                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
+                            alt="left-arrow.png"
+                          />
+                        </li>
+                        <li className="title-menu-mobile">
+                          <h5 className="head-site-sub-menu">{t('header::About the Company')}</h5>
+                        </li>
+                      </ul>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <Link href="/why-thaibulksms">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon01.svg`}
+                                alt="menu-icon_about-icon01.svg"
+                              />
+                              {t('header::Why use ThaiBulkSMS?')}
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/contact">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon02.svg`}
+                                alt="menu-icon_about-icon02.svg"
+                              />
+                              {t('header::Contact us')}
+                            </a>
+                          </Link>
+                        </li>
+                        <li className="sub-head-menu">
+                          <Link href="/reseller/">
+                            <a className="closemenu">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon03.svg`}
+                                alt="menu-icon_about-icon03.svg"
+                              />
+                              Reseller Program
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                     <div className="margin-top-sub-menu">
                       <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
                       <ul className="title-sub-menu">
@@ -952,8 +962,8 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                               alt="phone.png"
                             />
-                            02-789-000
-                          </a>
+                              02-798-6000
+                            </a>
                         </li>
                         <li className="sub-head-menu">
                           <a href="mailto:contact@thaibulksms.com">
@@ -962,8 +972,8 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                               alt="mail.png"
                             />
-                            contact@thaibulksms.com
-                          </a>
+                              contact@thaibulksms.com
+                            </a>
                         </li>
                         <li className="sub-head-menu">
                           <a href="https://www.facebook.com/ThaiBulkSMS">
@@ -972,8 +982,8 @@ const Header = ({ t }: any) => {
                               src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                               alt="fb.png"
                             />
-                            ThaiBulkSMS
-                          </a>
+                              ThaiBulkSMS
+                            </a>
                         </li>
                       </ul>
                     </div>
@@ -1017,7 +1027,7 @@ const Header = ({ t }: any) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 Header.getInitialProps = async () => ({
