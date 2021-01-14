@@ -442,7 +442,7 @@ const Header = ({ t }: any) => {
                             <li>
                               <Link href="tel:027986000">
                                 <h6 className="new_text_contact_phone">
-                                  <span className="new_text_margin_left">02-789-6000</span>
+                                  <span className="new_text_margin_left">02-798-6000</span>
                                 </h6>
                               </Link>
                             </li>
@@ -561,7 +561,7 @@ const Header = ({ t }: any) => {
                             <li>
                               <Link href="tel:027986000">
                                 <h6 className="new_text_contact_phone">
-                                  <span className="new_text_margin_left">02-789-6000</span>
+                                  <span className="new_text_margin_left">02-798-6000</span>
                                 </h6>
                               </Link>
                             </li>
