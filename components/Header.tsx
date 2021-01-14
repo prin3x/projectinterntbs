@@ -831,7 +831,6 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </div>
-
                     <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                   </div>
                 </div>
@@ -986,6 +985,41 @@ const Header = ({ t }: any) => {
                             </a>
                         </li>
                       </ul>
+                    </div>
+                      <div className="margin-top-sub-menu">
+                        <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
+                        <ul className="title-sub-menu">
+                          <li className="sub-head-menu">
+                            <a href="tel:027986000">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
+                                alt="phone.png"
+                              />
+                              02-798-6000
+                            </a>
+                          </li>
+                          <li className="sub-head-menu">
+                            <a href="mailto:contact@thaibulksms.com">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
+                                alt="mail.png"
+                              />
+                              contact@thaibulksms.com
+                            </a>
+                          </li>
+                          <li className="sub-head-menu">
+                            <a href="https://www.facebook.com/ThaiBulkSMS">
+                              <img
+                                className="icon-title-menu-mobile"
+                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
+                                alt="fb.png"
+                              />
+                              ThaiBulkSMS
+                            </a>
+                          </li>
+                        </ul>
                     </div>
                     <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                   </div>
