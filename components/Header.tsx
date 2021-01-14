@@ -25,7 +25,7 @@ const HeaderTopMenuMobile = () => (
     </div>
   </div>
 );
-const HeaderLoginMenuMobile = ({ t }: any, isLogin: boolean) => {
+const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
   return (
     <div className="menu_btn">
       <ul>
