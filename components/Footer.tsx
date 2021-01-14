@@ -131,7 +131,7 @@ const Footer = ({ t }: any) => {
                 <a href="https://www.facebook.com/ThaiBulkSMS" target="_blank">
                   <img
                     className="lazyload"
-                    style={{ maxWidth: '25px', marginLeft: '20px' }}
+                    style={{ maxWidth: '25px', marginLeft: '10px' }}
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                     alt="Image"
                   />
