@@ -7,7 +7,7 @@ const FeatureSection = ({ t }: any) => (
         <div className="col-md-12">
           <h3
             className="section_title"
-            dangerouslySetInnerHTML={{ __html: t('homefeature.header') }}
+            dangerouslySetInnerHTML={{ __html: t('FeatureSection::Why ThaiBulk SMS') }}
           ></h3>
         </div>
       </div>
@@ -20,10 +20,10 @@ const FeatureSection = ({ t }: any) => (
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>{t('homefeature.feature.1.title')}</h4>
+              <h4>{t('FeatureSection::No.1 SMS Platform')}</h4>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: t('homefeature.feature.1.desc'),
+                  __html: t('FeatureSection::Thailand’s no. 1 SMS service provider'),
                 }}
               ></p>
             </div>
@@ -37,10 +37,10 @@ const FeatureSection = ({ t }: any) => (
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>{t('homefeature.feature.2.title')}</h4>
+              <h4>{t('FeatureSection::Fast & Reliable')}</h4>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: t('homefeature.feature.2.desc'),
+                  __html: t('FeatureSection::The fastest channel for sending is chosen automatically, resulting in fast sending and reliable stability.'),
                 }}
               ></p>
             </div>
@@ -54,10 +54,10 @@ const FeatureSection = ({ t }: any) => (
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>{t('homefeature.feature.3.title')}</h4>
+              <h4>{t('FeatureSection::Smart Console')}</h4>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: t('homefeature.feature.3.desc'),
+                  __html: t('FeatureSection::The results of sending can be measured easily with smart reports.'),
                 }}
               ></p>
             </div>
@@ -71,10 +71,10 @@ const FeatureSection = ({ t }: any) => (
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>{t('homefeature.feature.4.title')}</h4>
+              <h4>{t('FeatureSection::Easily Integrated AP')}</h4>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: t('homefeature.feature.4.desc'),
+                  __html: t('FeatureSection::Easy to connect and support multiple languages.'),
                 }}
               ></p>
             </div>
@@ -85,10 +85,10 @@ const FeatureSection = ({ t }: any) => (
   </div>
 );
 FeatureSection.getInitialProps = async () => ({
-  namespacesRequired: ['HomeFeatureSection'],
+  namespacesRequired: ['Home'],
 });
 
 FeatureSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomeFeatureSection')(FeatureSection);
+export default withTranslation('Home')(FeatureSection);

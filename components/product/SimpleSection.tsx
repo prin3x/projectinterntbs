@@ -8,45 +8,61 @@ const SimpleSection = ({ t }: any) => (
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h2 className="simple_title">{t('homeproductsimple.header')}</h2>
+          <h2 className="simple_title">
+            {t('SimpleSection::Complete set of basic features for SMS sending')}
+          </h2>
         </div>
         <div className="col-md-12">
           <ul className="simple_feature_list">
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.1')}</p>
+              <p>
+                {t('SimpleSection::Sending results can be checked instantly.')}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.2')}</p>
+              <p>
+                {t(
+                  'SimpleSection::Maximum allowance of 5 messages being sent consecutively'
+                )}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.3')}</p>
+              <p>
+                {t(
+                  'SimpleSection::Various ways of setting the time of sending'
+                )}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.4')}</p>
+              <p>
+                {t('SimpleSection::Detailed reports of sending are provided.')}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.5')}</p>
+              <p>{t('SimpleSection::The sender’s name can be specified.')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.6')}</p>
+              <p>
+                {t('SimpleSection::The sending status is clearly specified.')}
+              </p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.7')}</p>
+              <p>{t('SimpleSection::Block list system')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.8')}</p>
+              <p>{t('SimpleSection::Phonebook')}</p>
             </li>
             <li>
               <i className="far fa-check-circle"></i>
-              <p>{t('homeproductsimple.feature.9')}</p>
+              <p>{t('SimpleSection::Templates are provided.')}</p>
             </li>
           </ul>
         </div>
@@ -55,10 +71,10 @@ const SimpleSection = ({ t }: any) => (
   </div>
 );
 SimpleSection.getInitialProps = async () => ({
-  namespacesRequired: ['ProductSimpleSection'],
+  namespacesRequired: ['Product'],
 });
 
 SimpleSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('ProductSimpleSection')(SimpleSection);
+export default withTranslation('Product')(SimpleSection);

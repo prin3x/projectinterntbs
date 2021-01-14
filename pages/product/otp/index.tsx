@@ -14,14 +14,14 @@ import { withTranslation } from '../../../i18n';
 const Otp = ({ t }: any) => (
   <Layout>
     <Head>
-      <meta name="keywords" content={t('keywords')} />
+      <meta name="keywords" content={t('meta::keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('meta::title')}
+      description={t('meta::description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">
@@ -37,11 +37,11 @@ const Otp = ({ t }: any) => (
 // Otp.getInitialProps = async () => ({
 //   namespacesRequired: ['OtpMeta'],
 // });
-export default withTranslation('OtpMeta')(Otp);
+export default withTranslation('Otp')(Otp);
 export const getStaticProps = async () => {
-  return ({
+  return {
     props: {
-      namespacesRequired: ['OtpMeta'],
+      namespacesRequired: ['Otp'],
     },
-  })
-}
+  };
+};

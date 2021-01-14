@@ -7,9 +7,7 @@ import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
 import * as ProductService from '../../services/shopping/product.service';
-import {
-  PricingProps
-} from '../../services/shopping/pricing.model';
+import { PricingProps } from '../../services/shopping/pricing.model';
 
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/pricing';
@@ -17,14 +15,14 @@ const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
   return (
     <Layout>
       <Head>
-        <meta name="keywords" content={t('keywords')} />
+        <meta name="keywords" content={t('meta::keywords')} />
         <meta name="author" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <NextSeo
         openGraph={seo.openGraph}
-        title={t('title')}
-        description={t('description')}
+        title={t('meta::title')}
+        description={t('meta::description')}
       />
       <div className="page_wrapper">
         <PricingSection />
@@ -38,12 +36,8 @@ const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
 
 // Pricing.getInitialProps = async () => {
 
-
-
 //   let packageAll;
 //   let packageAllNormal;
-
-
 
 //   try {
 //     packageAll = await ProductService.GetPackageFirstPurchase();
@@ -59,14 +53,11 @@ const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
 //   };
 // };
 
-
-export default withTranslation('PricingMeta')(Pricing);
+export default withTranslation('Pricing')(Pricing);
 
 export const getStaticProps = async () => {
   let packageAll;
   let packageAllNormal;
-
-
 
   try {
     packageAll = await ProductService.GetPackageFirstPurchase();
@@ -79,7 +70,7 @@ export const getStaticProps = async () => {
     props: {
       packages: packageAll ? packageAll.packages : {},
       packagesNormal: packageAllNormal ? packageAllNormal.packages : {},
-      namespacesRequired: ['PricingMeta'],
-    }
+      namespacesRequired: ['Pricing'],
+    },
   };
-}
+};

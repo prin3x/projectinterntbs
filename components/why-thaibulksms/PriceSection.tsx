@@ -6,7 +6,11 @@ const WhyPriceSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t(`จะเน้นราคาถูก หรือได้ฟีเจอร์ครบก็เลือกได้ตามต้องการ`)}</h3>
+            <h3>
+              {t(
+                'PriceSection::Focus on cheap prices or on full features can be selected according to your needs'
+              )}
+            </h3>
           </div>
         </div>
         <div className="row justify-content-xl-center col-xl-10 offset-xl-1 m-80">
@@ -18,30 +22,34 @@ const WhyPriceSection = ({ t }: any) => (
                 backgroundColor: '#fff',
               }}
             >
-              <h3>Standard Package</h3>
+              <h3>{t('PriceSection::Standard Package')}</h3>
               <ul className="pricing_feature">
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>ส่งข้อความราคาถูกกว่า</p>
+                  <p>{t('PriceSection::Cheaper messaging prices')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>ดูรายงานการส่งได้</p>
+                  <p>{t('PriceSection::Viewable messaging reports')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>ใช้งานฟีเจอร์พื้นฐานได้ครบถ้วน</p>
+                  <p>{t('PriceSection::Complete basic feature operations')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>มีเครื่องมือวัดผลแคมเปญ</p>
+                  <p>{t('PriceSection::Campaign analysis tools')}</p>
                 </li>
               </ul>
               <div className="price_plan">
-                <span>ราคา SMS ดีที่สุดเพียง</span>
+                <span>
+                  {t('PriceSection::The best SMS price is available at only')}
+                </span>
                 <h2>
                   0.28
-                  <span style={{ marginLeft: '10px' }}>บาท / SMS</span>
+                  <span style={{ marginLeft: '10px' }}>
+                    {t('PriceSection::baht / SMS')}
+                  </span>
                 </h2>
               </div>
             </div>
@@ -54,30 +62,44 @@ const WhyPriceSection = ({ t }: any) => (
                 backgroundColor: '#fff',
               }}
             >
-              <h3>Corporate Package</h3>
+              <h3>{t('PriceSection::Corporate Package')}</h3>
               <ul className="pricing_feature">
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>ทุกฟีเจอร์ของ Standard SMS</p>
+                  <p>{t('PriceSection::All the features of Standard SMS')}</p>
                 </li>
                 <li>
                   <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                  <p>ส่ง OTP ด้วยระบบพร้อมใช้</p>
+                  <p>
+                    {t(
+                      'PriceSection::OTP messaging with a Ready-to-use system'
+                    )}
+                  </p>
                 </li>
                 <li>
                   <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                  <p>คืนเครดิตถ้าส่งไม่ถึงผู้รับ</p>
+                  <p>
+                    {t(
+                      'PriceSection::Credit refunds if recipients are unable to receive the messages'
+                    )}
+                  </p>
                 </li>
                 <li>
                   <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                  <p>เช็กสถานะการส่งได้ละเอียดยิ่งกว่า</p>
+                  <p>
+                    {t('PriceSection::More detailed messaging status checking')}
+                  </p>
                 </li>
               </ul>
               <div className="price_plan">
-                <span>ราคา SMS ดีที่สุดเพียง</span>
+                <span>
+                  {t('PriceSection::The best SMS price is available at only')}
+                </span>
                 <h2>
                   0.34
-                  <span style={{ marginLeft: '10px' }}>บาท / SMS</span>
+                  <span style={{ marginLeft: '10px' }}>
+                    {t('PriceSection::baht / SMS')}
+                  </span>
                 </h2>
               </div>
             </div>
@@ -85,11 +107,13 @@ const WhyPriceSection = ({ t }: any) => (
         </div>
         <div className="col-md-12 text-center">
           <Link href="/product">
-            <a className="btn v3 whyPricing">เรียนรู้เพิ่มเติม</a>
+            <a className="btn v3 whyPricing">{t('PriceSection::Learn more')}</a>
           </Link>
 
           <Link href="/pricing">
-            <a className="btn v5 whyPricing">ดูราคาแพ็กเกจ</a>
+            <a className="btn v5 whyPricing">
+              {t('PriceSection::View Package Prices')}
+            </a>
           </Link>
         </div>
       </div>
@@ -98,10 +122,10 @@ const WhyPriceSection = ({ t }: any) => (
 );
 
 WhyPriceSection.getInitialProps = async () => ({
-  namespacesRequired: ['WhyPriceSection'],
+  namespacesRequired: ['WhyThaibulksms'],
 });
 
 WhyPriceSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('WhyPriceSection')(WhyPriceSection);
+export default withTranslation('WhyThaibulksms')(WhyPriceSection);

@@ -17,8 +17,8 @@ const SmsSection = ({ t }: any) => {
         <div className="row">
           <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 ">
             <div className="sms_text">
-              <h3>{t('productsms.header')}</h3>
-              <p>{t('productsms.title')}</p>
+              <h3>{t('SmsSection::Sending OTP without delays. Running your campaigns without interruptions.')}</h3>
+              <p>{t('SmsSection::ThaiBulkSMS uses an Intelligent Routing system to automatically select the fastest sending channel, so you  can be confident in the speed and stability of every instance of SMS sending.')}</p>
             </div>
           </div>
           <div className="col-md-12">
@@ -26,15 +26,15 @@ const SmsSection = ({ t }: any) => {
               <div className="row">
                 <div className="col-lg-4 col-md-6">
                   <div className="sms_feature_item">
-                    <p>{t('productsms.quantity')}</p>
+                    <p>{t('SmsSection::The average number of SMS sent / day')}</p>
                     <h3>300,000+</h3>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-6">
                   <div className="sms_feature_item">
-                    <p>{t('productsms.duration')}</p>
+                    <p>{t('SmsSection::The average amount of time taken to send SMS')}</p>
                     <h3>
-                      1.9 <span>{t('productsms.second')}</span>
+                      1.9 <span>{t('SmsSection::Seconds')}</span>
                     </h3>
                   </div>
                 </div>
@@ -52,7 +52,7 @@ const SmsSection = ({ t }: any) => {
                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/play_icon.png`}
                         alt="Image"
                       />
-                      {t('productsms.sendfastBtn')}
+                      {t('SmsSection::Why can we send SMS so quickly?')}
                     </a>
                   </div>
                 </div>
@@ -91,10 +91,10 @@ const SmsSection = ({ t }: any) => {
   );
 };
 SmsSection.getInitialProps = async () => ({
-  namespacesRequired: ['ProductSmsSection'],
+  namespacesRequired: ['Product'],
 });
 
 SmsSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('ProductSmsSection')(SmsSection);
+export default withTranslation('Product')(SmsSection);

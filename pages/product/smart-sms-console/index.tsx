@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '../../../components/Layout';
 import Head from 'next/head';
 import SmartSmsConsoleContentSection from '../../../components/smart-sms-console/ContentSelect';
-
 import SmsSection from '../../../components/smart-sms-console/SmsSection';
 import SimpleIconSection from '../../../components/smart-sms-console/SimpleIconSection';
 import OtherFeature from '../../../components/smart-sms-console/OtherFeature';
@@ -14,14 +13,14 @@ import { withTranslation } from '../../../i18n';
 const SmartSmsConsole = ({ t }: any) => (
   <Layout>
     <Head>
-      <meta name="keywords" content={t('keywords')} />
+      <meta name="keywords" content={t('meta::keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('meta::title')}
+      description={t('meta::description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">
@@ -30,7 +29,6 @@ const SmartSmsConsole = ({ t }: any) => (
       <SimpleIconSection />
       <OtherFeature />
       <CtaSection />
-
     </div>
     <BacktoTop />
   </Layout>
@@ -38,11 +36,11 @@ const SmartSmsConsole = ({ t }: any) => (
 // Otp.getInitialProps = async () => ({
 //   namespacesRequired: ['OtpMeta'],
 // });
-export default withTranslation('SmartSmsConsoleMeta')(SmartSmsConsole);
+export default withTranslation('SmartSmsConsole')(SmartSmsConsole);
 export const getStaticProps = async () => {
-  return ({
+  return {
     props: {
-      namespacesRequired: ['SmartSmsConsoleMeta'],
+      namespacesRequired: ['SmartSmsConsole'],
     },
-  })
-}
+  };
+};

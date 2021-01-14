@@ -7,7 +7,7 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('SMSAPIPage:simpleIconSection.title')}</h3>
+            <h3>{t('simpleIconSection::SMS API Connection Manual')}</h3>
           </div>
         </div>
       </div>
@@ -19,9 +19,14 @@ const SimpleIconSection = ({ t }: any) => (
               data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
               alt="Image"
             />
-            <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-left-box')}</p>
-            <h4>{t('SMSAPIPage:simpleIconSection.title-left-box')}</h4>
-            <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_TH.pdf`}>{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
+            <p>{t('simpleIconSection::SMS API Manua')}</p>
+            <h4>{t('simpleIconSection::Thai Version')}</h4>
+            <a
+              target="_blank"
+              href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_TH.pdf`}
+            >
+              {t('simpleIconSection::[Download]')}
+            </a>
           </div>
         </div>
         <div className="col-lg-6">
@@ -31,17 +36,30 @@ const SimpleIconSection = ({ t }: any) => (
               data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api02.png`}
               alt="Image"
             />
-            <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-right-box')}</p>
-            <h4>{t('SMSAPIPage:simpleIconSection.title-right-box')}</h4>
-            <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_EN.pdf`}>{t('SMSAPIPage:simpleIconSection.button-right-box')}</a>
+            <p>{t('simpleIconSection::SMS API Manual')}</p>
+            <h4>{t('simpleIconSection::English Version')}</h4>
+            <a
+              target="_blank"
+              href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_EN.pdf`}
+            >
+              {t('simpleIconSection::[Download]')}
+            </a>
           </div>
         </div>
       </div>
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('SMSAPIPage:simpleIconSection.title-bottom-box')}</h3>
-            <p>ดาวน์โหลดตัวอย่าง SDK ภาษาที่คุณต้องการ</p>
+            <h3>
+              {t(
+                'simpleIconSection::Connect to SMS API in a variety of languages.'
+              )}
+            </h3>
+            <p>
+              {t(
+                'simpleIconSection::Download the SDK example in the language that you require.'
+              )}
+            </p>
           </div>
         </div>
       </div>
@@ -123,8 +141,12 @@ const SimpleIconSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-md-12 text-center">
-          <a className="lang_link" target="_blank" href="https://drive.google.com/drive/folders/1VzLngYTjT49vOBHQlGHnQQF_ALGE2irQ?usp=sharing">
-            {t('SMSAPIPage:simpleIconSection.button-bottom-box')}
+          <a
+            className="lang_link"
+            target="_blank"
+            href="https://drive.google.com/drive/folders/1VzLngYTjT49vOBHQlGHnQQF_ALGE2irQ?usp=sharing"
+          >
+            {t('simpleIconSection::Download an additional code example')}
             <img
               className="lazyload"
               data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_5.png`}

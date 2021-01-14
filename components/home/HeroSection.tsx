@@ -9,15 +9,15 @@ const HeroSectionV2 = ({ t }: any) => (
       <div className="row align-item-center hero_top_one">
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="hero_text_one">
-            <h1>{t('homehero.title')}</h1>
-            <p>{t('homehero.desc')}</p>
+            <h1>{t('HeroSection::Meeting every one of your SMS sending needs.')}</h1>
+            <p>{t('HeroSection::SMS sending service capable of quick sending with reliable stability. Consultation is available at every step.')}</p>
             <ul className="cta-btn">
               <li>
                 <a
                   href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
                   className="btn v3"
                 >
-                  {t('homehero.freeBtn')}
+                  {t('HeroSection::Try SMS sending for free')}
                 </a>
               </li>
               <li>
@@ -26,7 +26,7 @@ const HeroSectionV2 = ({ t }: any) => (
                   
                   className="btn v5"
                 >
-                  {t('homehero.viewPackageBtn')}
+                  {t('HeroSection::View package prices')}
                 </a>
                 </Link>
               </li>
@@ -39,10 +39,10 @@ const HeroSectionV2 = ({ t }: any) => (
 );
 
 HeroSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['HomeHeroSection'],
+  namespacesRequired: ['Home'],
 });
 
 HeroSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomeHeroSection')(HeroSectionV2);
+export default withTranslation('Home')(HeroSectionV2);

@@ -6,8 +6,16 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('GlobalSMSPage:desSection.title')}</h3>
-            <p>{t('GlobalSMSPage:desSection.description')}</p>
+            <h3>
+              {t(
+                'DesSection::Select payment methods between Prepaid and Postpaid'
+              )}
+            </h3>
+            <p>
+              {t(
+                'DesSection::Remove any worries about budget management, as you can choose the method of payment on your own.'
+              )}
+            </p>
           </div>
         </div>
       </div>
@@ -20,9 +28,15 @@ const SimpleIconSection = ({ t }: any) => (
               alt="Image"
             />
             <h4>
-              <span>{t('GlobalSMSPage:desSection.title-left-box')}</span>
+              <span>
+                {t('DesSection::Support for messages in every language')}
+              </span>
             </h4>
-            <p>{t('GlobalSMSPage:desSection.description-left-box')}</p>
+            <p>
+              {t(
+                'DesSection::No matter what language your message is in, you can be free from worries, because when it is sent through our systems, the recipient will receive a message that is easy to read and shows your intended content.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-lg-6">
@@ -33,9 +47,17 @@ const SimpleIconSection = ({ t }: any) => (
               alt="Image"
             />
             <h4>
-              <span>{t('GlobalSMSPage:desSection.title-right-box')}</span>
+              <span>
+                {t(
+                  'DesSection::Complete with support from a team of specialists'
+                )}
+              </span>
             </h4>
-            <p>{t('GlobalSMSPage:desSection.description-right-box')}</p>
+            <p>
+              {t(
+                'DesSection::If you require help or advice in sending SMS messages internationally, we have specialists who are ready to support you.'
+              )}
+            </p>
           </div>
         </div>
       </div>

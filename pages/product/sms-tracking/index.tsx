@@ -14,14 +14,14 @@ import { seo } from '../../../components/seo/sms-tracking';
 const Smstracking = ({ t }: any) => (
   <Layout>
     <Head>
-      <meta name="keywords" content={t('keywords')} />
+      <meta name="keywords" content={t('meta::keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('meta::title')}
+      description={t('meta::description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">
@@ -37,11 +37,11 @@ const Smstracking = ({ t }: any) => (
 // Smstracking.getInitialProps = async () => ({
 //   namespacesRequired: ['Sms-trackingMeta'],
 // });
-export default withTranslation('Sms-trackingMeta')(Smstracking);
+export default withTranslation('Sms-tracking')(Smstracking);
 export const getStaticProps = async () => {
-  return ({
+  return {
     props: {
-      namespacesRequired: ['Sms-trackingMeta'],
+      namespacesRequired: ['Sms-tracking'],
     },
-  })
-}
+  };
+};

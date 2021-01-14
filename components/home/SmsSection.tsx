@@ -44,7 +44,7 @@ const SmsSectionV2 = ({ t }: any) => {
         <div className="row">
           <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 ">
             <div className="sms_text">
-              <h3>{t('homesms.header')}</h3>
+              <h3>{t('SmsSection::Be confident in every instance of SMS sending')}</h3>
             </div>
           </div>
           <div className="col-md-12">
@@ -52,7 +52,7 @@ const SmsSectionV2 = ({ t }: any) => {
               <div className="row">
                 <div className="col-md-12">
                   <div className="sms_feature_item">
-                    <p>{t('homesms.title')}</p>
+                    <p>{t('SmsSection::The number of SMS sent by us up to now')}</p>
                     {duration !== 0 && (
                       <h2>
                         <CountUp
@@ -74,15 +74,15 @@ const SmsSectionV2 = ({ t }: any) => {
                 </div>
                 <div className="col-md-6">
                   <div className="sms_feature_item">
-                    <p>{t('homesms.quantity')}</p>
+                    <p>{t('SmsSection::The number of SMS sending on average / day')}</p>
                     <h3>300,000+</h3>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="sms_feature_item">
-                    <p>{t('homesms.duration')}</p>
+                    <p>{t('SmsSection::The average amount of time taken to send SMS Seconds')}</p>
                     <h3>
-                      1.9 <span>{t('homesms.second')}</span>
+                      1.9 <span>{t('SmsSection::Seconds')}</span>
                     </h3>
                   </div>
                 </div>
@@ -97,10 +97,10 @@ const SmsSectionV2 = ({ t }: any) => {
 };
 
 SmsSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['HomeHeroSection'],
+  namespacesRequired: ['Home'],
 });
 
 SmsSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomeSmsSection')(React.memo(SmsSectionV2));
+export default withTranslation('Home')(React.memo(SmsSectionV2));
