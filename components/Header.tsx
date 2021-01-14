@@ -1065,11 +1065,11 @@ const Header = ({ t }: any) => {
   );
 };
 Header.getInitialProps = async () => ({
-  namespacesRequired: ['header']
+  namespacesRequired: ['Header']
 });
 
 Header.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default withTranslation('header')(Header);
+export default withTranslation('Header')(Header);
