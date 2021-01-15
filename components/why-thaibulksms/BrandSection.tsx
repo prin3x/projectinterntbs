@@ -13,7 +13,7 @@ const WhyBrandSection = ({ t }: any) => (
       <div className="row single_lang_wrap WhyBrand m-80">
         <div className="col-xl-10 offset-xl-1">
           <div className="row ">
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -22,7 +22,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -31,7 +31,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -40,7 +40,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -49,7 +49,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -58,7 +58,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -67,7 +67,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -76,7 +76,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
