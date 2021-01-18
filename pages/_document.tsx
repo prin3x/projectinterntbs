@@ -41,7 +41,7 @@ class MyDocument extends Document {
 
           />
           <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.0/css/nice-select.min.css"
+            href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/nice-select.min.css`}
             rel="stylesheet"
           />
           <link

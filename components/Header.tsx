@@ -85,6 +85,10 @@ const Header = ({ t }: any) => {
     };
   }, []);
 
+  const onSwitchLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    i18n.changeLanguage(e.currentTarget.value);
+  }
+
   return (
     <div ref={headerBar} className="header-bar-area position-fixed w-100 ">
       <div className="container">
@@ -95,42 +99,10 @@ const Header = ({ t }: any) => {
                 <a href="tel:027986000">02-798-6000</a>
               </div>
               <div className="header_select">
-                <select className="user_select">
-                  <option>Th</option>
-                  <option>En</option>
+                <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
+                  <option value="th">Th</option>
+                  <option value="en">En</option>
                 </select>
-                <div
-                  onClick={menuClick}
-                  className="nice-select user_select divnice"
-                >
-                  <span className="current">{lang}</span>
-                  <ul className="list">
-                    <li
-                      data-value="Th"
-                      // className="option th"
-                      className={
-                        lang == 'th' ? 'option th selected focus' : 'option th'
-                      }
-                      onClick={() => {
-                        i18n.changeLanguage('th');
-                      }}
-                    >
-                      Th
-                    </li>
-                    <li
-                      data-value="En"
-                      // className="option en"
-                      className={
-                        lang == 'en' ? 'option en selected focus' : 'option en'
-                      }
-                      onClick={() => {
-                        i18n.changeLanguage('en');
-                      }}
-                    >
-                      En
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
           </div>
@@ -467,6 +439,10 @@ const Header = ({ t }: any) => {
                 </ul>
               </nav>
               <div className="d-lg-none sm-right">
+                <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
+                  <option value="th">Th</option>
+                  <option value="en">En</option>
+                </select>
                 <a className="mobile-bar js-menu-toggle">
                   <span></span>
                   <span></span>
@@ -986,40 +962,40 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </div>
-                      <div className="margin-top-sub-menu">
-                        <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
-                        <ul className="title-sub-menu">
-                          <li className="sub-head-menu">
-                            <a href="tel:027986000">
-                              <img
-                                className="icon-title-menu-mobile"
-                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
-                                alt="phone.png"
-                              />
+                    <div className="margin-top-sub-menu">
+                      <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
+                      <ul className="title-sub-menu">
+                        <li className="sub-head-menu">
+                          <a href="tel:027986000">
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
+                              alt="phone.png"
+                            />
                               02-798-6000
                             </a>
-                          </li>
-                          <li className="sub-head-menu">
-                            <a href="mailto:contact@thaibulksms.com">
-                              <img
-                                className="icon-title-menu-mobile"
-                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
-                                alt="mail.png"
-                              />
+                        </li>
+                        <li className="sub-head-menu">
+                          <a href="mailto:contact@thaibulksms.com">
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
+                              alt="mail.png"
+                            />
                               contact@thaibulksms.com
                             </a>
-                          </li>
-                          <li className="sub-head-menu">
-                            <a href="https://www.facebook.com/ThaiBulkSMS">
-                              <img
-                                className="icon-title-menu-mobile"
-                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
-                                alt="fb.png"
-                              />
+                        </li>
+                        <li className="sub-head-menu">
+                          <a href="https://www.facebook.com/ThaiBulkSMS">
+                            <img
+                              className="icon-title-menu-mobile"
+                              src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
+                              alt="fb.png"
+                            />
                               ThaiBulkSMS
                             </a>
-                          </li>
-                        </ul>
+                        </li>
+                      </ul>
                     </div>
                     <HeaderLoginMenuMobile t={t} isLogin={isLogin} />
                   </div>
