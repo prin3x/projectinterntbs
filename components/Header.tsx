@@ -68,12 +68,12 @@ const Header = ({ t }: any) => {
       }
     }
   }
-  function menuClick() {
-    var elDivnice = document.getElementsByClassName('divnice')[0];
-    if (elDivnice.classList.contains('open'))
-      elDivnice.classList.remove('open');
-    else elDivnice.classList.add('open');
-  }
+  // function menuClick() {
+  //   var elDivnice = document.getElementsByClassName('divnice')[0];
+  //   if (elDivnice.classList.contains('open'))
+  //     elDivnice.classList.remove('open');
+  //   else elDivnice.classList.add('open');
+  // }
   useEffect(() => {
     // check Cookie Login
     if (Cookie.get('PASSCODE')) {
