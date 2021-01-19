@@ -41,7 +41,7 @@ class MyDocument extends Document {
 
           />
           <link
-            href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/nice-select.min.css`}
+            href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/nice-select.css`}
             rel="stylesheet"
           />
           <link
