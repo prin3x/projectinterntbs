@@ -13,63 +13,11 @@ import { seo } from '../components/seo/defaultseo';
 import { appWithTranslation, i18n } from '../i18n';
 import { checktoken } from '../services/user/user.service';
 
+import { fb } from '../utils/fb'
+
 const tagManagerArgs = {
   gtmId: AppConfig.GTM_CODE || '',
 };
-
-// class MyApp extends App {
-//   constructor(props: any) {
-//     super(props);
-
-//     axios.interceptors.request.use((config) => {
-//       const jwtToken = Cookie.get('TBS_token');
-//       if (jwtToken !== null) {
-//         config.headers['Authorization'] = `Bearer ${jwtToken}`;
-//       }
-//       return config;
-//     });
-
-//     axios.interceptors.response.use((res) => {
-//       // Any status code that lie within the range of 2xx cause this function to trigger
-//       return res;
-//     }, (error) => {
-//       // Any status codes that falls outside the range of 2xx cause this function to trigger
-//       const { status } = error.response;
-//       if(status === 401) {
-//         Router.push('/login');
-//       }
-//       return Promise.reject(error);
-//     });
-
-//   }
-//   static async getInitialProps(appContext: any) {
-//     const appProps = await App.getInitialProps(appContext);
-//     return { ...appProps };
-//   }
-
-//   componentDidMount() {
-//     if (!i18n.language) i18n.changeLanguage('th');
-//   }
-
-//   render() {
-//     const { Component, pageProps } = this.props;
-//     return (
-//       <>
-//         <StoreContextProvider>
-//           <Proloader />
-//           <Component {...pageProps} />
-//         </StoreContextProvider>
-//       </>
-//     );
-//   }
-// }
-//     axios.interceptors.request.use((config) => {
-//       const jwtToken = Cookie.get('TBS_token');
-//       if (jwtToken !== null) {
-//         config.headers['Authorization'] = `Bearer ${jwtToken}`;
-//       }
-//       return config;
-//     });
 
 axios.interceptors.request.use((config) => {
   const jwtToken = Cookie.get('TBS_token');
@@ -111,7 +59,12 @@ function MyApp({ Component, pageProps }: any) {
 
     handleRouteChange(router.pathname);
     Router.events.on('routeChangeStart', handleRouteChange);
+
+    let timeout = setTimeout(() => {
+      fb(FB => timeout && FB.XFBML.parse());
+    }, 2000);
     return () => {
+      clearTimeout(timeout);
       Router.events.off('routeChangeStart', handleRouteChange);
     };
   }, []);
