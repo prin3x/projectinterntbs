@@ -2,14 +2,14 @@ import Header from './Header';
 import Footer from './Footer';
 import { i18n } from '../i18n';
 import React, { useEffect } from 'react';
-import Head from 'next/head';
+// import Head from 'next/head';
 const Layout = (props: any) => {
   useEffect(() => {
     i18n.changeLanguage('th');
   }, []);
   return (
     <div>
-      <Head>
+      {/* <Head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -29,7 +29,7 @@ const Layout = (props: any) => {
             }(document, 'script', 'facebook-jssdk'));`,
           }}
         />
-      </Head>
+      </Head> */}
       <Header />
       {props.children}
       <Footer />
