@@ -1,12 +1,14 @@
 import React from 'react';
+import dynamic from 'next/dynamic'
 import Layout from '../../components/Layout';
 import HeroSection from '../../components/contact/HeroSection';
 import Help from '../../components/Help';
-import BacktoTop from '../../components/BacktoTop';
+// import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { withTranslation } from '../../i18n';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/contact';
+const BacktoTop = dynamic(() => import('../../components/BacktoTop'))
 const Contact = ({ t }: any) => (
   <Layout>
     <Head>
