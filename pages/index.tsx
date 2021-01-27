@@ -1,18 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic'
-// import Layout from '../components/Layout';
-// import Proloader from '../components/Proloader';
-// import HeroSection from '../components/home/HeroSection';
-// import PartnerSection from '../components/home/PartnerSection';
-// import FeatureSection from '../components/home/FeatureSection';
-// import SimpleSliderSection from '../components/home/SimpleSliderSection';
-// import GlobeSection from '../components/home/GlobeSection';
-// import SmsSection from '../components/home/SmsSection';
-// import TestimonialSection from '../components/home/TestimonialSection';
-// import EduSection from '../components/home/EduSection';
-// import CtaSection from '../components/home/CtaSection';
 import { withTranslation } from '../i18n';
-// import BacktoTop from '../components/BacktoTop';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../components/seo/home';
