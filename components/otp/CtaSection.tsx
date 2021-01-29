@@ -12,7 +12,7 @@ const CtaSectionV2 = ({ t }: any) => (
             <h3
               dangerouslySetInnerHTML={{
                 __html: t(
-                  'ctaSection::Send OTPs with a ready-to-use system that does not require time wasted in programming.'
+                  'ctaSection::Send OTP with a ready-to-use system that does not require time wasted in programming.'
                 ),
               }}
             ></h3>

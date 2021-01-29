@@ -129,12 +129,12 @@ const Header = ({ t }: any) => {
                       <li className="listsub">
                         <Link href="/product">
                           <a className="new_icon_title_menu_pro01 icon_logo_new_menu_width title_menu_margin_top_0">
-                            <h6 className="text_title_left">จุดเด่นผลิตภัณฑ์</h6>
-                            <p className="txtSub text_sub_left">ตอบโจทย์ทั้งนักการตลาดและนักพัฒนา</p>
+                            <h6 className="text_title_left">{t('header::Our Strength')}</h6>
+                            <p className="txtSub text_sub_left">{t('header::The best tools for marketer & developer')}</p>
                           </a>
                         </Link>
                       </li>
-                      <h6 className="title_menu_left">สำหรับนักการตลาด</h6>
+                      <h6 className="title_menu_left">{t('header::For Marketer')}</h6>
                       <li className="listsub li_width_700">
                         <Link href="/product/smart-sms-console">
                           <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
@@ -179,7 +179,7 @@ const Header = ({ t }: any) => {
                           </a>
                         </Link>
                       </li>
-                      <h6 className="title_menu_left">สำหรับนักพัฒนา</h6>
+                      <h6 className="title_menu_left">{t('header::For Developer')}</h6>
                       <li className="listsub li_width_700">
                         <Link href="/product/sms-api">
                           <a className="new_icon_title_menu_pro06 icon_logo_new_menu_width title_menu_margin_top_0">
@@ -216,17 +216,17 @@ const Header = ({ t }: any) => {
                         <li className="title_menu_margin_top_20">
                           <Link href="/resource">
                             <span className="new_icon_title_menu_resource01 icon_logo_new_menu_width">
-                              <h6 className="text_title_left">คลังข้อมูล</h6>
-                              <p className="txtSub text_sub_left">หน้ารวมคลังข้อมูล</p>
+                              <h6 className="text_title_left">{t('header::Resources')}</h6>
+                              <p className="txtSub text_sub_left">{t('header::List of Resources')}</p>
                             </span>
                           </Link>
                         </li>
-                        <h6 className="title_sub_menu_resource1">บทความ</h6>
+                        <h6 className="title_sub_menu_resource1">{t('header::Article')}</h6>
                         <li className="li_padding_bottom20">
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} >
                             <span className="new_icon_title_menu_resource02 icon_logo_new_menu_width">
                               <h6 className="text_title_left">{t('header::Knowledge')}</h6>
-                              <p className="txtSub text_sub_left">เทคนิคและความรู้ที่เกี่ยวข้อง SMS และต้านการตลาด</p>
+                              <p className="txtSub text_sub_left">{t('header::Strategy and knowledge about SMS and marketing')}</p>
                             </span>
                           </Link>
                         </li>
@@ -234,16 +234,16 @@ const Header = ({ t }: any) => {
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} >
                             <span className="new_icon_title_menu_resource03 icon_logo_new_menu_width">
                               <h6 className="text_title_left">{t('header::Example Operations')}</h6>
-                              <p className="txtSub text_sub_left">ตัวอย่างการนำ SMS ไปใช้งานในธุรกิจ</p>
+                              <p className="txtSub text_sub_left">{t('header::Example of using SMS in business')}</p>
                             </span>
                           </Link>
                         </li>
-                        <h6 className="title_sub_menu_resource2">กรณีศึกษา</h6>
+                        <h6 className="title_sub_menu_resource2">{t('header::Case Studies')}</h6>
                         <li className="li_padding_bottom20">
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} >
                             <span className="new_icon_title_menu_resource04 icon_logo_new_menu_width">
                               <h6 className="text_title_left">{t('header::Success Stories')}</h6>
-                              <p className="txtSub text_sub_left">ของลูกค้าชั้นนำมากมายที่ใช้บริการ ThaiBulkSMS</p>
+                              <p className="txtSub text_sub_left">{t('header::Case studies of many top customers who have used ThaiBulkSMS')}</p>
                             </span>
                           </Link>
                         </li>
@@ -293,7 +293,7 @@ const Header = ({ t }: any) => {
                               <Link href="/support/how-to-order">
                                 <span className="new_icon_title_menu_support01 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">{t('header::Ordering Methods')}</h6>
-                                  <p className="txtSub text_sub_left">ขั้นตอนการสั่งซื้อของแต่ละช่องทางชำระ</p>
+                                  <p className="txtSub text_sub_left">{t('header::Ordering process for each payment channel')}</p>
                                 </span>
                               </Link>
                             </li>
@@ -301,7 +301,7 @@ const Header = ({ t }: any) => {
                               <Link href="/support/faq">
                                 <span className="new_icon_title_menu_support02 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">{t('header::Frequently Asked Questions')}</h6>
-                                  <p className="txtSub text_sub_left">เกี่ยวกับการสั่งซื้อ ปัญหาเทคนิค และการใช้งานทั่วไป</p>
+                                  <p className="txtSub text_sub_left">{t('header::About ordering, general & technical problem')}</p>
                                 </span>
                               </Link>
                             </li>
@@ -309,7 +309,7 @@ const Header = ({ t }: any) => {
                               <Link href="/contact">
                                 <span className="new_icon_title_menu_support03 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">{t('header::Contact us')}</h6>
-                                  <p className="txtSub text_sub_left">ข้อมูลติดต่อ ThaiBulkSMS</p>
+                                  <p className="txtSub text_sub_left">{t('header::Contact to ThaiBulkSMS')}</p>
                                 </span>
                               </Link>
                             </li>
@@ -317,7 +317,7 @@ const Header = ({ t }: any) => {
                         </div>
                         <div className="col-5 bg_menu">
                           <ul>
-                            <h6 className="title_sub_menu_resource2">ช่องทางติดต่อ</h6>
+                            <h6 className="title_sub_menu_resource2">{t('header::Contact')}</h6>
                             <li>
                               <Link href="tel:027986000">
                                 <h6 className="new_text_contact_phone">
@@ -353,15 +353,15 @@ const Header = ({ t }: any) => {
                         <Link href="/developer">
                           <span className="new_icon_title_menu_dev01 icon_logo_new_menu_width">
                             <h6 className="text_title_left">{t('header::Download Guide')}</h6>
-                            <p className="txtSub text_sub_left">คู่มือการเชื่อมต่อ SMS API และการใช้งาน OTP Service</p>
+                            <p className="txtSub text_sub_left">{t('header::Manual for SMS API & OTP Service with example')}</p>
                           </span>
                         </Link>
                       </li>
                       <li className="menu_dev_padding_20">
                         <Link href="/developer/#ex_sdk">
                           <span className="new_icon_title_menu_dev02 icon_logo_new_menu_width">
-                            <h6 className="text_title_left">ดาวน์โหลดตัวอย่าง SDK</h6>
-                            <p className="txtSub text_sub_left">เลือกดาวน์โหลดได้ตามภาษาที่ต้องการ</p>
+                            <h6 className="text_title_left">{t('header::Download Example SDK')}</h6>
+                            <p className="txtSub text_sub_left">{t('header::Choose the programing language as you want')}</p>
                           </span>
                         </Link>
                       </li>
@@ -369,7 +369,7 @@ const Header = ({ t }: any) => {
                         <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}>
                           <span className="new_icon_title_menu_dev03 icon_logo_new_menu_width">
                             <h6 className="text_title_left">API References</h6>
-                            <p className="txtSub text_sub_left">ครอบคลุมทั้ง SMS API และ OTP API</p>
+                            <p className="txtSub text_sub_left">{t('header::Include SMS API and OTP API')}</p>
                           </span>
                         </Link>
                       </li>
@@ -385,7 +385,7 @@ const Header = ({ t }: any) => {
                               <Link href="/why-thaibulksms">
                                 <span className="new_icon_title_menu_about01 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">{t('header::Why use ThaiBulkSMS?')}</h6>
-                                  <p className="txtSub text_sub_left">ส่ง SMS กับ ThaiBulkSMS ดีกว่าที่อื่นยังไง</p>
+                                  <p className="txtSub text_sub_left">{t('header::How is sending SMS with ThaiBulkSMS better than others?')}</p>
                                 </span>
                               </Link>
                             </li>
@@ -393,7 +393,7 @@ const Header = ({ t }: any) => {
                               <Link href="/contact">
                                 <span className="new_icon_title_menu_about02 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">{t('header::Contact us')}</h6>
-                                  <p className="txtSub text_sub_left">ข้อมูลติดต่อ ThaiBulkSMS</p>
+                                  <p className="txtSub text_sub_left">{t('header::Contact to ThaiBulkSMS')}</p>
                                 </span>
                               </Link>
                             </li>
@@ -401,7 +401,7 @@ const Header = ({ t }: any) => {
                               <Link href="/reseller">
                                 <span className="new_icon_title_menu_about03 icon_logo_new_menu_width">
                                   <h6 className="text_title_left">Reseller Program</h6>
-                                  <p className="txtSub text_sub_left">โปรแกรมพิเศษสำหรับตัวแทนจำหน่ายของ ThaiBulkSMS</p>
+                                  <p className="txtSub text_sub_left">{t('header::Special reseller program from ThaiBulkSMS')}</p>
                                 </span>
                               </Link>
                             </li>
@@ -409,7 +409,7 @@ const Header = ({ t }: any) => {
                         </div>
                         <div className="col-5 bg_menu">
                           <ul>
-                            <h6 className="title_sub_menu_resource2">ช่องทางติดต่อ</h6>
+                            <h6 className="title_sub_menu_resource2">{t('header::Contact')}</h6>
                             <li>
                               <Link href="tel:027986000">
                                 <h6 className="new_text_contact_phone">
@@ -549,12 +549,12 @@ const Header = ({ t }: any) => {
                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon01.svg`}
                                 alt="menu-icon_Product-icon01.svg"
                               />
-                              จุดเด่นผลิตภัณฑ์
+                              {t('header::Our Strength')}
                             </a>
                           </Link>
                         </li>
                       </ul>
-                      <h5 className="head-site-sub-menu">สำหรับการตลาด</h5>
+                      <h5 className="head-site-sub-menu">{t('header::For Marketing')}</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
                           <Link href="/product/smart-sms-console">
@@ -670,7 +670,7 @@ const Header = ({ t }: any) => {
                           </Link>
                         </li>
                       </ul>
-                      <h5 className="head-site-sub-menu">บทความ</h5>
+                      <h5 className="head-site-sub-menu">{t('header::Article')}</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}>
@@ -697,7 +697,7 @@ const Header = ({ t }: any) => {
                           </Link>
                         </li>
                       </ul>
-                      <h5 className="head-site-sub-menu">กรณีศึกษา</h5>
+                      <h5 className="head-site-sub-menu">{t('header::Case Studies')}</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
                           <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}>
@@ -773,7 +773,7 @@ const Header = ({ t }: any) => {
                         </li>
                       </ul>
                     </div><div className="margin-top-sub-menu">
-                      <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
+                      <h5 className="head-site-sub-menu">{t('header::Contact')}</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
                           <a href="tel:027986000">
@@ -849,7 +849,7 @@ const Header = ({ t }: any) => {
                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon02.svg`}
                                 alt="menu-icon_Dev-icon02.svg"
                               />
-                              ดาวน์โหลดตัวอย่าง SDK
+                              {t('header::Download Example SDK')}
                             </a>
                           </Link>
                         </li>
@@ -928,7 +928,7 @@ const Header = ({ t }: any) => {
                       </ul>
                     </div>
                     <div className="margin-top-sub-menu">
-                      <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
+                      <h5 className="head-site-sub-menu">{t('header::Contact')}</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
                           <a href="tel:027986000">
@@ -963,7 +963,7 @@ const Header = ({ t }: any) => {
                       </ul>
                     </div>
                     <div className="margin-top-sub-menu">
-                      <h5 className="head-site-sub-menu">ช่องทางติดต่อ</h5>
+                      <h5 className="head-site-sub-menu">{t('header::Contact')}</h5>
                       <ul className="title-sub-menu">
                         <li className="sub-head-menu">
                           <a href="tel:027986000">

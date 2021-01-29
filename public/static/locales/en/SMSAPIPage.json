@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "SMS API | ThaiBulkSMS",
+    "description": "SMS API",
+    "keywords": ""
+  },
+
+  "heroSection": {
+    "<span>Simply by using SMS API</span><br />, you can send messages on your own platform.": "<span>Simply by using SMS API</span><br />, you can send messages on your own platform."
+  },
+
+  "smsSection": {
+    "SMS API for Developers": "SMS API for Developers",
+    "Connect using the language you selected with the ThaiBulkSMS API system.": "Connect using the language you selected with the ThaiBulkSMS API system.",
+    "<li><div>Confident and reputable regarding matters of stability.</div></li><li><div>API connection security guaranteed.</div></li><li><div>Easily connect on your own within 5 minutes. </div></li><li><div>Operates in over 10 languages.</div></li>": "<li><div>Confident and reputable regarding matters of stability.</div></li><li><div>API connection security guaranteed.</div></li><li><div>Easily connect on your own within 5 minutes. </div></li><li><div>Operates in over 10 languages.</div></li>",
+    "If you are stuck with any problems or have inquiries concerning API connection": "If you are stuck with any problems or have inquiries concerning API connection",
+    "Inquire with our specialists": "Inquire with our specialists"
+  },
+
+  "simpleIconSection": {
+    "SMS API Connection Manual": "SMS API Connection Manual",
+    "SMS API Manual": "SMS API Manual",
+    "Thai Version": "Thai Version",
+    "[Download]": "[Download]",
+    "English Version": "English Version",
+    "Connect to SMS API in a variety of languages.": "Connect to SMS API in a variety of languages.",
+    "Download the SDK example in the language that you require.": "ownload the SDK example in the language that you require.",
+    "Download an additional code example": "Download an additional code example"
+  },
+
+  "ctaSection": {
+    "I need to use SMS by connecting with the API": "I need to use SMS by connecting with the API",
+    "Test usage with a free trial": "Test usage with a free trial",
+    "Additional inquiries": "Additional inquiries"
+  }
+}

@@ -19,7 +19,7 @@ const SimpleIconSection = ({ t }: any) => (
               data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
               alt="Image"
             />
-            <p>{t('simpleIconSection::SMS API Manua')}</p>
+            <p>{t('simpleIconSection::SMS API Manual')}</p>
             <h4>{t('simpleIconSection::Thai Version')}</h4>
             <a
               target="_blank"

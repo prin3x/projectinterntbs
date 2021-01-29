@@ -23,7 +23,7 @@ const SimpleIconSection = ({ t }: any) => (
                     {/* {t(
                       'SimpleIconSection::Thai Manual'
                     )} */}
-                    SMS API Manua
+                    SMS API Manual
                   </p>
                   <h4>{t('SimpleIconSection::Thai Manual')}</h4>
                   <a
@@ -45,7 +45,7 @@ const SimpleIconSection = ({ t }: any) => (
                     {/* {t(
                       'SimpleIconSection::simpleIconSection.breadcrumb-right-box'
                     )} */}
-                    SMS API Manua
+                    SMS API Manual
                   </p>
                   <h4>{t('SimpleIconSection::English Manual')}</h4>
                   <a

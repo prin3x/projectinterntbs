@@ -10,14 +10,14 @@ import { seo } from '../../components/seo/condition';
 const Condition = ({ t }: any) => (
   <Layout>
     <Head>
-      <meta name="keywords" content={t('keywords')} />
+      <meta name="keywords" content={t('meta::keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('meta::title')}
+      description={t('meta::description')}
     />
     <div className="page_wrapper">
       <div
@@ -43,11 +43,11 @@ const Condition = ({ t }: any) => (
 // Condition.getInitialProps = async () => ({
 //   namespacesRequired: ['ConditionMeta'],
 // });
-export default withTranslation('ConditionMeta')(Condition);
+export default withTranslation('Condition')(Condition);
 export const getStaticProps = async () => {
   return ({
     props: {
-      namespacesRequired: ['ConditionMeta'],
+      namespacesRequired: ['Condition'],
     },
   })
 }
