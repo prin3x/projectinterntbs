@@ -1,7 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 // import { i18n } from '../i18n';
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 // import Head from 'next/head';
 const Layout = (props: any) => {
   // useEffect(() => {
