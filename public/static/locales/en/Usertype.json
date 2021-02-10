@@ -1,8 +1,8 @@
 {
   "usertype": {
-    "title": "ENกรอกข้อมูลสำหรับคำสั่งซื้อ",
-    "desc": "ENเลื่อกประเภทการจดธุรกิจ",
-    "personBtn": "ENบุคคลธรรมดา",
-    "corporationBtn": "ENนิติบุคคล"
+    "title": "Enter details for placing the order",
+    "desc": "Select business registration type",
+    "personBtn": "Ordinary Person",
+    "corporationBtn": "Juristic Person"
   }
 }
