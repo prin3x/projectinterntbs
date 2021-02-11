@@ -21,7 +21,7 @@ const SimpleIconSection = ({ t }: any) => (
             />
             <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-left-box')}</p>
             <h4>{t('SMSAPIPage:simpleIconSection.title-left-box')}</h4>
-            <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_TH.pdf`}>{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
+            <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V2.0_TH.pdf`}>{t('SMSAPIPage:simpleIconSection.button-left-box')}</a>
           </div>
         </div>
         <div className="col-lg-6">
@@ -33,7 +33,7 @@ const SimpleIconSection = ({ t }: any) => (
             />
             <p>{t('SMSAPIPage:simpleIconSection.breadcrumb-right-box')}</p>
             <h4>{t('SMSAPIPage:simpleIconSection.title-right-box')}</h4>
-            <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V1.7_EN.pdf`}>{t('SMSAPIPage:simpleIconSection.button-right-box')}</a>
+            <a target="_blank" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V2.0_EN.pdf`}>{t('SMSAPIPage:simpleIconSection.button-right-box')}</a>
           </div>
         </div>
       </div>
