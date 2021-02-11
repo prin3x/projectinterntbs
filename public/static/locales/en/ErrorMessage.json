@@ -1,14 +1,14 @@
 {
   "auth": {
     "user": {
-      "fail": "username/password ไม่ถูกต้อง",
-      "blocked": "ผู้ใช้งานถูกปิดการเข้าใช้งาน",
+      "fail": "Username / Password is incorrect",
+      "blocked": "The account is blocked",
       "multisession": "multisession"
     }
   },
   "system": {
-    "failure": "ไม่สามารถเข้าสู่ระบบได้ กรุณาลองใหม่อีกครั้ง"
+    "failure": "Can't login, please try again"
   },
-  "Bad Request": "username/password ไม่ถูกต้อง",
-  "400": "ไม่สามารถเข้าสู่ระบบได้ กรุณาลองใหม่อีกครั้ง"
+  "Bad Request": "Username / Password is incorrect",
+  "400": "Can't login, please try again"
 }

@@ -1,9 +1,9 @@
 {
   "thankyou": {
-    "title": "ขอบคุณสำหรับการสั่งซื้อ",
-    "desc": "คุณสามารถใช้เครดิตส่ง SMS ได้ทันที",
-    "loginBtn": "ล็อกอิน",
-    "resendsms": "ไม่ได้รับ SMS รหัสผ่าน?",
-    "linkresendsms": "ขอรหัสผ่านอีกครั้ง"
+    "title": "Thank you for ordering",
+    "desc": "You can spend credits to send SMS instanly.",
+    "loginBtn": "Login",
+    "resendsms": "Didn't receive password SMS ?",
+    "linkresendsms": "Request password again"
   }
 }

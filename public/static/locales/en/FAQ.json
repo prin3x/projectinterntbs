@@ -1,14 +1,14 @@
 {
     "meta": {
-        "title": "Frequently asked questions | ThaiBulkSMS",
+        "title": "FAQ - Frequently asked questions | ThaiBulkSMS",
         "description": "A collection of frequently asked questions about services, finances, technical problems, and others for you to find the quickest answers.",
         "keywords": "MESSAGE ,SMS ,FAQ"
     },
     "HeroSection":{
         "Hello, would you like some help?":"Hello, would you like some help?",
-        "General questions":"General questions",
-        "Purchasing and payment":"Purchasing and payment",
-        "Technical problems":"Technical problems",
+        "General questions":"General Questions",
+        "Purchasing and payment":"Ordering & Payment",
+        "Technical problems":"Technical Problems",
         "Is there a trial for the SMS sending service?":"Is there a trial for the SMS sending service?",
         "You can register for a trial at <a href=\"https://account.thaibulksms.com/register/\">https://account.thaibulksms.com/register/</a> Enter your details completely to receive 20 free SMS credits consisting of 10 Standard credits and 10 Corporate credits.":"You can register for a trial at <a href=\"https://account.thaibulksms.com/register/\">https://account.thaibulksms.com/register/</a> Enter your details completely to receive 20 free SMS credits consisting of 10 Standard credits and 10 Corporate credits.",
         "What are the maximum character limits per 1 message, and are there any other restrictions?":"What are the maximum character limits per 1 message, and are there any other restrictions?",
@@ -55,10 +55,10 @@
         "You can contact us for a <span>Whitelist</span> sender request form for us to coordinate with the network provider. Furthermore, the network provider will decide whether the aforementioned name will be allowed to function on the <span>Whitelist</span>.":"You can contact us for a <span>Whitelist</span> sender request form for us to coordinate with the network provider. Furthermore, the network provider will decide whether the aforementioned name will be allowed to function on the <span>Whitelist</span>.",
         "In the event that the end recipient has closed their machine, will the message be sent?":"In the event that the end recipient has closed their machine, will the message be sent?",
         "The system will continue to Resend until the end recipient has opened their machine. If their status has updated, this means that the Resend process has finished, but this cannot be inspected under a Standard SMS package.":"The system will continue to Resend until the end recipient has opened their machine. If their status has updated, this means that the Resend process has finished, but this cannot be inspected under a Standard SMS package.",
-        "Do you still have questions?":"Do you still have questions?",
-        "Select your most convenient contact channel":"Select your most convenient contact channel",
-        "Contact an officer":"Contact an officer",
-        "The officer will contact you back":"The officer will contact you back",
-        "Email":"Email"
+        "Do you still have questions?":"Still Have Questions?",
+        "Select your most convenient contact channel":"Choose your convenient channel to contact us",
+        "Contact an officer":"CONTACT US",
+        "The officer will contact you back":"CALL BACK SERVICE",
+        "Email":"E-MAIL"
     }
 }

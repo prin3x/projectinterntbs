@@ -1,21 +1,21 @@
 {
     "meta": {
-        "title": "SMS and marketing database | ThaiBulkSMS",
-        "description": "Increase your knowledge and important information related to SMS and Digital Marketing.",
+        "title": "SMS and marketing resources | ThaiBulkSMS",
+        "description": "Get more knowledge and important information about SMS and Digital Marketing",
         "keywords": ""
     },
     "HeroSection":{
-        "Database":"Database"
+        "Database":"Resources"
     },
     "ContentSection":{
         "Knowledge":"Knowledge",
         "View all":"View all",
-        "Example Operations":"Example Operations",
+        "Example Operations":"Usage Example",
         "Success Stories":"Success Stories"
     },
     "CtaSection":{
-        "Increase successes with SMS Marketing <br/>through Thailand’s number 1 SMS Provider.":"Increase successes with SMS Marketing <br/>through Thailand’s number 1 SMS Provider.",
-        "Try for free":"Try for free",
-        "View Package Prices":"View Package Prices"
+        "Increase successes with SMS Marketing <br/>through Thailand’s number 1 SMS Provider.":"Increase SMS Marketing success with<br/>Thailand’s number 1 SMS Provider",
+        "Try for free":"Try for FREE",
+        "View Package Prices":"View Packages"
     }
 }
