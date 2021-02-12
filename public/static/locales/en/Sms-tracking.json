@@ -11,11 +11,11 @@
   "SmsSection":{
     "Real-time status checking on whether or not the recipient has read the message.":"Check Reading Status in Real Time",
     "Free from issues where results cannot be measured after sending the SMS: sending with the Link feature through SMS Tracking allows you to accurately check the reading status, in addition to immediately following up on results after sending.":"No problem in sending SMS and cannot be measured. Because sending with Link via SMS Tracking feature will allow you to check SMS reading status precisely.",
-    "Word of mouth does not equal what the eye sees: test SMS Tracking on your own.":"Don't Believe until You Prove It ... Try SMS Tracking NOW!",
+    "Word of mouth does not equal what the eye sees: test SMS Tracking on your own.":"Don't Believe until You Prove It, Try SMS Tracking NOW!",
     "Free trial":"Free trial"
   },
   "SimpleIconSection":{
-    "Accurate campaign results measurement with tangible data":"Measure Campaign Accurately with Trustworthy Statistics",
+    "Accurate campaign results measurement with tangible data":"Measure Campaign Accurately <br/>with Trustworthy Statistics",
     "You can use data from the “Campaign results” of SMS Tracking for marketing analyses on how efficient and price-effective your SMS campaign was.":"You can use data from the “Campaign reports” of SMS Tracking to analyze marketing results of how successful your SMS campaign is and worth for your budget.",
     "Number of SMS messages sent to the recipient":"Recipient Volume that Received SMS",
     "Number of recipients who opened the message":"Recipient Volume that Read SMS",
