@@ -24,7 +24,7 @@
     "View the shipping status of each code, providing knowledge on which messages have not been collected by the recipients.":"Get sending status of each person, that makes know who doesn't receive the message",
     "Retroactive reporting":"Past sending report",
     "Able to retroactively select and view data reports.":"View SMS sending report in the past",
-    "Create your own sender name for business credibility":"Create Your Own Sender Name for Business Credibility",
+    "Create your own sender name for business credibility":"Create Your Own Sender Name <br/>for Business Credibility",
     "You can set your own Sender Name: aside from adding credibility once the message has been opened, this adds Branding to your business.":"You can set your own Sender Name. In addition to increasing credibility when reading messages, it also adds Branding to your business."
   },
   "OtherFeature":{

@@ -7,7 +7,7 @@
       "Meeting every one of your SMS sending needs." : "No.1 Top SMS Sending Provider",
       "SMS sending service capable of quick sending with reliable stability. Consultation is available at every step." : "SMS sending service, fast, stable, ready to give consultation at every step.",
       "Try SMS sending for free" : "Try for FREE",
-      "View package prices" : "Check Prices"
+      "View package prices" : "View Packages"
   },
   "PartnerSection": {
       "Leading brands that trust ThaiBulkSMS": "Many Leading Businesses Trust ThaiBulkSMS"
@@ -25,15 +25,15 @@
   },
   "SimpleSliderSection": {
       "Covering every purpose of SMS sending": "Send <span>SMS</span> to Your Client <br />as You Want",
-      "Promoting marketing activities": "Promote Marketing Activities ",
-      "On 20 June, extra discounts of up to 30% for organic products in the promotion. Click here to instantly receive the code.": "On 20 June, extra discounts of up to 30% for organic products in the promotion. Click here to instantly receive the code.",
+      "Promoting marketing activities": "Promote Marketing Activities",
+      "On 20 June, extra discounts of up to 30% for organic products in the promotion. Click here to instantly receive the code.": "On 20 June, Discount up to 30% for organic products, Get the code Now. Click!",
       "Notification of expiry date": "Notify Expiration",
       "Your car insurance is expiring in July 2020. Click here to extend your insurance.": "Your car insurance is expiring in July 2020. Click here to extend your insurance.",
       "OTP for identity verification": "Verify OTP",
       "Your OTP password is 345034 (Reference code YXCSF). Please use it for identity verification within 5 minutes": "Your OTP password is 345034 (Reference code YXCSF). Please use it for identity verification within 5 minutes",
       "Notification of delivery status": "Notify Shipping",
-      "Parcel no. ADJ0349234 is out for delivery. The parcel will be delivered in 1-3 working days. Click here to instantly receive the code.": "Parcel no. ADJ0349234 is out for delivery. The parcel will be delivered in 1-3 working days. Click here to instantly receive the code.",
-      "Notification of special privilege for members": "Announce Member's Special Deal ",
+      "Parcel no. ADJ0349234 is out for delivery. The parcel will be delivered in 1-3 working days. Click here to instantly receive the code.": "Parcel No. ADJ0349234 is in transit. Product will be shipped within 1-3 business days. Get code now. Click!",
+      "Notification of special privilege for members": "Notify Member's Privilege",
       "Today only, a 700.- coupon for Mr Natdanai. Click here to instantly receive the code.": "Today only, a 700.- coupon for Mr Natdanai. Click here to instantly receive the code.",
       "Try SMS sending for free": "Try for FREE"
   },
@@ -46,8 +46,8 @@
       "Be confident in every instance of SMS sending": "Guarantee Our Service with Impressive Statistics",
       "The number of SMS sent by us up to now": "Total SMS Sent Volume Up to Now",
       "The number of SMS sending on average / day": "SMS Sending Volume / Day",
-      "The average amount of time taken to send SMS Seconds": "SMS Sending Time",
-      "Seconds": "Seconds (Avg.)",
+      "The average amount of time taken to send SMS Seconds": "SMS Sending Speed (Avg.)",
+      "Seconds": "Sec.",
       "TestQuickregister": {
           "Try sending an SMS to your mobile phone now.": "Try Sending SMS to Your Phone",
           "Just type in your mobile number and verify your identity with the password you receive.": "Just type your mobile number & verify with received password",
