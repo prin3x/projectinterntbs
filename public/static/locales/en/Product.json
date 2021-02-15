@@ -11,7 +11,7 @@
         "This is why you can trust the service of ThaiBulkSMS just like how multiple leading businesses trust us.": "This is why you can trust ThaiBulkSMS services just like how multiple leading businesses trust us."
     },
     "SmsSection": {
-        "Sending OTP without delays. Running your campaigns without interruptions.": "Send OTP without Delays<br/>Run Campaigns without Interruptions",
+        "Sending OTP without delays. Running your campaigns without interruptions.": "Send OTP without Delays Run Campaigns without Interruptions",
         "ThaiBulkSMS uses an Intelligent Routing system to automatically select the fastest sending channel, so you  can be confident in the speed and stability of every instance of SMS sending.": "ThaiBulkSMS uses Intelligent Routing system to select the fastest sending channel automatically, so you can count on speed and stability.",
         "The average number of SMS sent / day": "SMS Sending Volume / Day",
         "The average amount of time taken to send SMS": "SMS Sending Speed (Avg.)",
@@ -24,7 +24,7 @@
         "Easy sending​ ​ and fast measurement of results​ ​ thanks to smart reports": "Easy Sending & Fast Measurement with Smart Report",
         "Easily connect to APIS, using over 10 languages": "Connect with API Easily, Over 10 Languages",
         "Try for free": "Try for FREE",
-        "Instant credit refunds if messages fail to reach the recipients": "Refund Credit Immediately <br/>if Sending Fails",
+        "Instant credit refunds if messages fail to reach the recipients": "Refund Credit Immediately if Sending Fails",
         "Confirmation at the recipient’s mobile phone is available for checking whether or not the SMS have arrived at the recipient’s end. If the SMS fail to reach the recipients due to being blocked by anti-spam systems, the phone being switched off, the phone having run out of memory or other causes, we will refund the credits to you.": "Our SMS service system can check sending results. We will refund credits, if results are failed such as blocked by anti-spam, the phone is switched off or run out of memory, etc.",
         "These features are available only for <span>the Corporate SMS package</span>": "This feature is available only for <span>Corporate SMS package</span>",
         "Measuring the results of your campaign accurately <br>with SMS Tracking": "Measure Campaign Accurately with SMS Tracking",
@@ -76,7 +76,7 @@
         "Those looking to send OTP or transactional SMS": "Send OTP or transactional SMS",
         "Those looking to send OTP without having to set up their own system": "Send OTP without set up own system",
         "Those wishing to know whether or not the messages have reached the recipients": "Check receiving status",
-        "Not sure yet which package to choose? We can offer you a free SMS sending trial.": "Not sure which package to choose? <br/>We can offer you a free SMS trial",
+        "Not sure yet which package to choose? We can offer you a free SMS sending trial.": "Not sure which package to choose? We can offer you a free SMS trial",
         "Try SMS sending for free": "Try SMS sending for FREE"
     },
     "SliderSection":{
