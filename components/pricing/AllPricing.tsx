@@ -253,17 +253,26 @@ const AllPricing = ({ t, packages }: any) => {
                 ),
               }}
             />
-
-            <div className="pricing__bottom d-flex align-items-center justify-content-center">
-              <h5 className="mr-5">
-                {t('AllPricing::Not found your ideal choice yet?')}
-              </h5>
-              <Link href="/contact">
-                <a className="btn v7">
-                  {t('AllPricing::Contact our sales team')}
-                </a>
-              </Link>
-            </div>
+            <div className="row">
+              <div className="col-md-10 offset-md-1 col-sm-12 offset-sm-0">
+                <div className="special-price">
+                  <div className="row align-items-center">
+                    <div className="col-lg-4 col-md-12">
+                      <h3>ได้ SMS ราคาถูกยิ่งกว่า เมื่อสั่งซื้อปริมาณมาก</h3>
+                      <button className="btn v2 sms-btn-text" type="submit">ติดต่อฝ่ายขาย</button>
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-sm-12">
+                      <p className="head-price">Standard SMS</p>
+                      <p><span>0.21</span> บาท/ข้อความ</p>
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-sm-12">
+                      <p className="head-price">Corporate SMS</p>
+                      <p><span>0.24</span> บาท/ข้อความ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>    
           </div>
         </div>
       </div>
