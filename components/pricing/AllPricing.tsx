@@ -1,4 +1,4 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
