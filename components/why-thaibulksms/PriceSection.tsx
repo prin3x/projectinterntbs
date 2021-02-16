@@ -46,7 +46,7 @@ const WhyPriceSection = ({ t }: any) => (
                   {t('PriceSection::The best SMS price is available at only')}
                 </span>
                 <h2>
-                  0.28
+                  0.21
                   <span style={{ marginLeft: '10px' }}>
                     {t('PriceSection::baht / SMS')}
                   </span>
@@ -96,7 +96,7 @@ const WhyPriceSection = ({ t }: any) => (
                   {t('PriceSection::The best SMS price is available at only')}
                 </span>
                 <h2>
-                  0.34
+                  0.24
                   <span style={{ marginLeft: '10px' }}>
                     {t('PriceSection::baht / SMS')}
                   </span>
