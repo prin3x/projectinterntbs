@@ -133,7 +133,11 @@ const SimpleSliderSection = ({ t }: any) => {
             >
               <div className="item">
                 <div className="simple_slider_item">
-                  <h4>{t('SimpleSliderSection::Promoting marketing activities')}</h4>
+                  <h4
+                    dangerouslySetInnerHTML={{
+                      __html: t('SimpleSliderSection::Promoting marketing activities'),
+                    }}>
+                  </h4>
                   <img
                     className="lazyload"
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User01.png`}

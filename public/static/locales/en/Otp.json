@@ -21,7 +21,7 @@
     "The number of digits can be set as desired":"Set OTP Code Length",
     "The message Template can be set as desired":"Select Message Templates",
     "The password Expiration time can be set as desired":"Set OTP Expired Time",
-    "The system can function in a variety of languages.":"Support Mutiple Languages",
+    "The system can function in a variety of languages.":"Support Multiple Languages",
     "Learn more about the OTP API":"Learn more about OTP API"
   },
   "TrackSection":{
