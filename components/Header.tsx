@@ -100,8 +100,8 @@ const Header = ({ t }: any) => {
               </div>
               <div className="header_select">
                 <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
-                  <option value="th">Th</option>
-                  <option value="en">En</option>
+                  <option value="th">TH</option>
+                  <option value="en">EN</option>
                 </select>
               </div>
             </div>
@@ -440,8 +440,8 @@ const Header = ({ t }: any) => {
               </nav>
               <div className="d-lg-none sm-right">
                 <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
-                  <option value="th">Th</option>
-                  <option value="en">En</option>
+                  <option value="th">TH</option>
+                  <option value="en">EN</option>
                 </select>
                 <a className="mobile-bar js-menu-toggle">
                   <span></span>
