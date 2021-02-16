@@ -61,7 +61,7 @@ const Header = ({ t }: any) => {
   function sticky() {
     var scroll = window.pageYOffset;
     if (headerBar.current !== null) {
-      if (scroll < 100) {
+      if (scroll < 40) {
         headerBar.current.classList.remove('sticky');
       } else {
         headerBar.current.classList.add('sticky');
