@@ -3,7 +3,7 @@ export const seo = {
     url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing`,
     type: 'website',
     title:
-      'แพ็กเกจ ราคา SMS สุดคุ้มค่า ตอบโจทย์ทุกการใช้งาน | ThaiBulkSMS',
+      'แพ็กเกจ ราคา SMS สุดคุ้มค่า เพียง 0.21 ตอบโจทย์ทุกการใช้งาน | ThaiBulkSMS',
     description:
       'แพ็กเกจราคา SMS ราคาถูกของ ThaiBulkSMS ราคาสุดคุ้มค่าทุกการใช้งาน พร้อมฟีเจอร์ในการส่ง ครบวงจร',
     images: [
