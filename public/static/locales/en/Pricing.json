@@ -11,7 +11,7 @@
         "Sending reports are available.":"SMS Sending reports",
         "All basic features are available.":"All basic features",
         "Tools for measuring campaign results are provided.":"Campaign measurement tools",
-        "Best SMS pricing, only":"Best SMS price, only",
+        "Best SMS pricing, only":"Special price only",
         "baht / message":"baht / message",
         "Credits are refunded if the messages fail to reach the recipients.":"Refund credits if sending fails",
         "Every feature of Standard SMS":"All Standard SMS features",
@@ -34,7 +34,10 @@
         "• Package prices do not include VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.":"• Package prices are Excluding VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.",
         "Not found your ideal choice yet?":"Not found your choice ?",
         "Contact our sales team":"Contact our sales team",
-        "Baht":"Baht"
+        "Baht":"Baht",
+        "Buy more, <br>Get discount more":"Buy more, <br>Get discount more",
+        "0.21":"0.21",
+        "0.24":"0.24"
     },
     "FaqSection":{
         "Frequently Asked Questions":"FAQ",

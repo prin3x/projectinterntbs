@@ -11,7 +11,7 @@
         "Sending reports are available.":"ดูรายงานการส่งได้",
         "All basic features are available.":"ใช้งานฟีเจอร์พื้นฐานได้ครบถ้วน",
         "Tools for measuring campaign results are provided.":"มีเครื่องมือวัดผลแคมเปญ",
-        "Best SMS pricing, only":"ราคา SMS ดีที่สุดเพียง",
+        "Best SMS pricing, only":"ราคาถูกเพียง",
         "baht / message":"บาท / ข้อความ",
         "Credits are refunded if the messages fail to reach the recipients.":"คืนเครดิตถ้าส่งไม่ถึงผู้รับ",
         "Every feature of Standard SMS":"ทุกฟีเจอร์ของ Standard SMS",
@@ -34,7 +34,10 @@
         "• Package prices do not include VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.":"• ราคาแพ็กเกจยังไม่รวมภาษีมูลค่าเพิ่ม <br>• กรณีต้องการหักภาษี ณ. ที่จ่าย 3% ต้องซื้อในนามนิติบุคคลเท่านั้น",
         "Not found your ideal choice yet?":"ยังไม่เจอที่ตรงกับความต้องการ?",
         "Contact our sales team":"ติดต่อฝ่ายขาย",
-        "Baht":"บาท"
+        "Baht":"บาท",
+        "Buy more, <br>Get discount more":"ได้ SMS ราคาถูกยิ่งกว่า <br>เมื่อสั่งซื้อปริมาณมาก",
+        "0.21":"0.21",
+        "0.24":"0.24"
     },
     "FaqSection":{
         "Frequently Asked Questions":"คำถามที่พบบ่อย",

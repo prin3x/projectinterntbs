@@ -99,7 +99,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     <h3>
                       {numeral(
                         productItem.standard.amount /
-                          productItem.standard.credit
+                        productItem.standard.credit
                       ).format('0.00')}
                       {` `}
                       <span>
@@ -149,7 +149,7 @@ const showPackage = (packages: Product[], t: Function) => {
                     <h3>
                       {numeral(
                         productItem.corporate.amount /
-                          productItem.corporate.credit
+                        productItem.corporate.credit
                       ).format('0.00')}{' '}
                       <span>{t('AllPricing::Baht/message')}</span>
                     </h3>
@@ -258,21 +258,26 @@ const AllPricing = ({ t, packages }: any) => {
                 <div className="special-price">
                   <div className="row align-items-center">
                     <div className="col-lg-4 col-md-12">
-                      <h3>ได้ SMS ราคาถูกยิ่งกว่า เมื่อสั่งซื้อปริมาณมาก</h3>
-                      <button className="btn v2 sms-btn-text" type="submit">ติดต่อฝ่ายขาย</button>
+                      <h3
+                        dangerouslySetInnerHTML={{
+                          __html: t('AllPricing::Buy more, <br>Get discount more'),
+                        }}
+                      >
+                      </h3>
+                      <button className="btn v2 sms-btn-text" type="submit">{t('AllPricing::Contact our sales team')}</button>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <p className="head-price">Standard SMS</p>
-                      <p><span>0.21</span> บาท/ข้อความ</p>
+                      <p><span>{t('AllPricing::0.21')}</span> {t('AllPricing::Baht/message')}</p>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <p className="head-price">Corporate SMS</p>
-                      <p><span>0.24</span> บาท/ข้อความ</p>
+                      <p><span>{t('AllPricing::0.24')}</span> {t('AllPricing::Baht/message')}</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>    
+            </div>
           </div>
         </div>
       </div>
