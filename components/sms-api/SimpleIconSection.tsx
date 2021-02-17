@@ -144,7 +144,7 @@ const SimpleIconSection = ({ t }: any) => (
           <a
             className="lang_link"
             target="_blank"
-            href="https://drive.google.com/drive/folders/1VzLngYTjT49vOBHQlGHnQQF_ALGE2irQ?usp=sharing"
+            href="/developer/#ex_sdk"
           >
             {t('simpleIconSection::Download an additional code example')}
             <img
