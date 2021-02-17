@@ -10,7 +10,7 @@ const PartnerSection = ({ t }: any) => (
       <div className="row">
         <div className="col-md-12">
           <h6 className="partner_title" style={{ textTransform: 'none' }}>
-            {t('homepartner.title')}
+            {t('PartnerSection::Leading brands that trust ThaiBulkSMS')}
           </h6>
         </div>
         <div className="col-md-12">
@@ -90,10 +90,10 @@ const PartnerSection = ({ t }: any) => (
   </div>
 );
 PartnerSection.getInitialProps = async () => ({
-  namespacesRequired: ['HomePartnerSection'],
+  namespacesRequired: ['Home'],
 });
 
 PartnerSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomePartnerSection')(PartnerSection);
+export default withTranslation('Home')(PartnerSection);

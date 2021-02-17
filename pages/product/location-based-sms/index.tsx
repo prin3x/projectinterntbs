@@ -14,14 +14,14 @@ import { withTranslation } from '../../../i18n';
 const LocationBasedSMS = ({ t }: any) => (
   <Layout>
     <Head>
-      <meta name="keywords" content={t('keywords')} />
+      <meta name="keywords" content={t('meta::keywords')} />
       <meta name="author" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('LocationBasedSMSPage:meta.title')}
-      description={t('LocationBasedSMSPage:meta.description')}
+      title={t('meta::title')}
+      description={t('meta::description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">

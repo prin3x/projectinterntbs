@@ -27,8 +27,8 @@ const Homepage = ({ t }: any) => (
       </Head>
       <NextSeo
         openGraph={seo.openGraph}
-        title={t('title')}
-        description={t('description')}
+        title={t('meta::title')}
+        description={t('meta::description')}
       />
       {/* <Proloader /> */}
       <div className="page_wrapper">
@@ -49,11 +49,11 @@ const Homepage = ({ t }: any) => (
 // Homepage.getInitialProps = async () => ({
 //   namespacesRequired: ['HomeMeta'],
 // });
-export default withTranslation('HomeMeta')(Homepage);
+export default withTranslation('Home')(Homepage);
 export const getStaticProps = async () => {
   return ({
     props: {
-      namespacesRequired: ['HomeMeta'],
+      namespacesRequired: ['Home'],
     },
   })
 }

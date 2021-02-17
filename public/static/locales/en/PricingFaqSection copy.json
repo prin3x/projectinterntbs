@@ -1,44 +1,44 @@
 {
   "pricingfaq": {
-    "header": "ENคำถามที่พบบ่อย",
+    "header": "FAQ",
     "faq": {
       "1": {
-        "title": "ENความแตกต่างระหว่างแพ็กเกจ Standard SMS และ Corporate SMS คืออะไร",
-        "desc": "EN<b>Standard SMS</b><br/> ส่ง SMS ในราคาถูกกว่า ส่งง่าย ดูรายงานการส่งได้ ใช้งานฟีเจอร์พื้นฐานได้ครบถ้วน และมีเครื่องมือวัดผลแคมเปญ<br/><b>Corporate SMS</b><br/>ใช้ได้ทุกฟีเจอร์ของ Standard SMS สิ่งที่เพิ่มเข้ามาจะเป็น การสามารถใช้งานระบบส่ง OTP แบบพร้อมใช้ได้ มีการคืนเครดิตถ้าส่งไม่ถึงผู้รับ และสามารถเช็กสถานะการส่งได้ละเอียดยิ่งกว่า"
+        "title": "What are the differences between Standard SMS and Corporate SMS packages?",
+        "desc": "<b>The Standard SMS</b><br/> package includes benefits such as cheaper costs of SMS sending, easy SMS sending, reports on SMS sending, a complete set of basic features, and tools for measuring campaign results.<br/><b>The Corporate SMS</b><br/>package includes every feature of the Standard SMS package while also providing additional features which are: access to a ready-to-use OTP sending system, credit refunds if the messages fail to reach the recipients, and the ability to check the sending status in a more detailed manner."
       },
       "2": {
-        "title": "ENสามารถชำระเงินได้ด้วยวิธีใดบ้าง",
-        "desc": "ENการชำระเงินสามารถทำได้ 3 วิธี<br/>1. สแกน QR Code 2. ชำระออนไลน์ด้วยบัตรเครดิต 3. โอนเงินผ่านทางบัญชีธนาคาร<br/>* ในกรณีที่โอนเงินผ่านทางบัญชีธนาคาร จะต้องทำการแจ้งโอนผ่านทางหน้าเว็บไซต์ด้วยทุกครั้ง"
+        "title": "What payment methods are available?",
+        "desc": "We accept 3 payment methods:<br/>1. Scanning the QR code<br/>2. Online credit card payment<br/>3. Bank transfer<br/>*In case of a bank transfer, the customer needs to notify us of the transfer on the website every time."
       },
       "3": {
-        "title": "ENช่องทางไหนที่ชำระแล้วใช้เครดิตได้ทันที",
-        "desc": "ENสแกนชำระผ่าน QR Code และชำระออนไลน์ด้วยบัตรเครดิต"
+        "title": "Which payment methods allow instant usage of credits?",
+        "desc": "Scanning the QR code and online credit card payment."
       },
       "4": {
-        "title": "ENหลังจากโอนเงินชำระค่าบริการเรียบร้อยแล้ว สามารถแจ้งโอนผ่านช่องทางใดได้บ้าง",
-        "desc": "ENลูกค้าสามารถแจ้งโอนผ่านทางหน้าเว็บไซต์ได้ทันที โดยทำได้ดังนี้<br/>1. หลังจากล็อกอิน ให้นำเมาส์ไปวางที่เมนู \"การเติมเครดิต\" จะมีให้เลือก \"แจ้งยืนยันการชำระเงิน\"<br/>2. แจ้งรายละเอียดการโอน พร้อมแนบสลิปหรือหลักฐานการโอนเข้ามา เมื่อเจ้าหน้าที่ตรวจสอบเรียบร้อยแล้ว ระบบจะทำการเติมเครดิตให้ทันที"
+        "title": "After making the bank transfer, how can I notify you of the transfer?",
+        "desc": "You can notify us via the website instantly by following these steps:<br/>1. After logging in, hover your mouse over the “add credit” menu. An option named “notification of payment” will be available.<br/>2. Tell us the details of the transfer and attach the payment slip or other kinds of evidence of the transfer. Once our staff members have confirmed the details, the credits will be added to your account."
       },
       "5": {
-        "title": "ENต้องการขอใบกำกับภาษี ต้องทำอย่างไร",
-        "desc": "ENสามารถทำได้ โดยการส่ง Username รายละเอียดบริษัท ชื่อ/ที่อยู่ และหมายเลขประจำตัวผู้เสียภาษีที่ต้องการ มาทาง <a href = \"mailto: contact@thaibulksms.com\"><!--email_off-->contact@thaibulksms.com<!--/email_off--></a>"
+        "title": "How can I request a tax invoice?",
+        "desc": "Please send your user name, details of your company, name/address, and the taxpayer’s identification number to <a href = \"mailto: contact@thaibulksms.com\">contact@thaibulksms.com</a>"
       },
       "6": {
-        "title": "ENหากต้องการซื้อจำนวนมากกว่าที่ระบุในแพ็กเกจ สามารถทำอย่างไรได้บ้าง",
-        "desc": "ENติดต่อฝ่ายขายได้ทาง <a href = \"https://www.thaibulksms.com/contact\">https://www.thaibulksms.com/contact</a> โดยแจ้งจำนวน SMS ที่ต้องการ และประเภทการใช้งาน"
+        "title": "What if I wish to purchase more SMS sending credits than specified in the packages?",
+        "desc": "Please contact our sales team at <a href = \"https://www.thaibulksms.com/contact\">https://www.thaibulksms.com/contact</a> and provide us with your desired number of SMS and the type of usage."
       },
       "7": {
-        "title": "ENหากต้องการใช้ Standard SMS และ Corporate SMS ควบคู่กันสามารถทำได้หรือไม่",
-        "desc": "ENสามารถใช้งานพร้อมกันได้ โดยคิดเครดิตแยกกัน</br><b>สำหรับ ส่งข้อความผ่านหน้าเว็บ</b> สามารถสลับแพ็กเกจได้ตรงเมนูขวาบนในหน้า <a href = \"https://member.thaibulksms.com\">https://member.thaibulksms.com</a><br/><b>สำหรับ ส่งข้อความผ่าน API</b> ส่ง parameter &force=standard เพื่อบังคับให้รายการนั้นส่งแบบ standard และใช้ &force=premium สำหรับบังคับให้ข้อความนั้นส่งแบบ Corporate"
+        "title": "Can I use both the Standard SMS and Corporate SMS packages at the same time?",
+        "desc": "They can be used at the same time but the credits are separate.<br/> <b>When using the web-based interface</b>, you can switch packages in the menu on the right side of <a href = \"https://member.thaibulksms.com\">https://member.thaibulksms.com</a>.<br/> <b>When using API</b>, add the parameter &force=standard to force the message to be sent using the Standard package and add the parameter &force=premium to force the message to be sent using the Corporate package."
       },
       "8": {
-        "title": "ENอยากทราบจำนวนตัวอักษรและข้อกำหนด ที่สามารถพิมพ์ได้ต่อ 1 ข้อความ",
-        "desc": "EN<b>ภาษาไทย</b> 70 ตัวอักษร คิด 1 เครดิต (1 ข้อความ) / หมายเลข, ระหว่าง 71-134 ตัวอักษร คิด 2 เครดิต (2 ข้อความต่อกัน) / หมายเลข, ระหว่าง 135 - 201 ตัวอักษร คิด 3 เครดิต (3 ข้อความต่อกัน) / หมายเลข<br/><b>ภาษาอังกฤษ</b> 160 ตัวอักษร คิด 1 เครดิต (1 ข้อความ) / หมายเลข , ระหว่าง 161 - 306 ตัวอักษร คิด 2 เครดิต (2 ข้อความ) / หมายเลข, ระหว่าง 307 - 459 ตัวอักษร คิด 3 เครดิต (3 ข้อความ) / หมายเลข<br/>* ในกรณีที่พิมพ์ภาษาไทยปนภาษาอังกฤษ ระบบจะใช้การนับแบบภาษาไทย<br/>* ข้อควรระวัง หากการส่งภาษาอังกฤษใช้อักขระพิเศษที่อยู่ในแป้นภาษาไทย เครดิตจะถูกนับเป็นแบบ ภาษาไทย"
+        "title": "What is the maximum number of characters allowed per 1 message, and are there any other restrictions?",
+        "desc": "For messages in <b>Thai</b>, 70 characters are allowed per 1 credit (1 message)/number. Messages with 71-134 characters cost 2 credits (2 consecutive messages)/number. Messages with 135-201 characters cost 3 credits (3 consecutive messages)/number. <br>For messages in <b>English</b>, 160 characters are allowed per 1 credit (1 message)/number. Messages with 161-306 characters cost 2 credits (2 messages)/number. Messages with 307-459 characters cost 3 credits (3 messages)/number.<br>*A message with both Thai and English characters will be counted as a Thai message.<br>*Caution: if an English message contains special characters that exist in the Thai keyboard, the message will be counted as a Thai message for crediting purposes."
       }
     },
-    "question": "ENยังคงมีข้อสงสัย ?",
-    "questiontitle": "ENเลือกช่องทางติดต่อที่คุณสะดวก",
-    "telBtn": "ENติดต่อเจ้าหน้าที่",
-    "contactBtn": "ENเจ้าหน้าที่ติดต่อกลับ",
-    "fbBrn": "ENอีเมล์"
+    "question": "Still Have Questions?",
+    "questiontitle": "Choose your convenient channel to contact us",
+    "telBtn": "CONTACT US",
+    "contactBtn": "CALL BACK SERVICE",
+    "fbBrn": "E-MAIL"
   }
 }

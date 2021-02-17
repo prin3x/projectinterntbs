@@ -17,8 +17,20 @@ const HeroSectionV3 = ({ t }: any) => (
         </div>
         <div className="col-lg-6 col-md-12 col-12">
           <div className="hero_text_one v2">
-            <h1 dangerouslySetInnerHTML={{ __html: t('otphero.title') }}></h1>
-            <p dangerouslySetInnerHTML={{ __html: t('otphero.footer') }}></p>
+            <h1
+              dangerouslySetInnerHTML={{
+                __html: t(
+                  'HeroSection::An <span>OTP transmission service</span> that is ready to use<br/>, increases security and does<br/> not require additional programming.'
+                ),
+              }}
+            ></h1>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t(
+                  'HeroSection::This feature is only available for the <span>Corporate Package.</span>'
+                ),
+              }}
+            ></p>
           </div>
         </div>
       </div>
@@ -26,10 +38,10 @@ const HeroSectionV3 = ({ t }: any) => (
   </div>
 );
 HeroSectionV3.getInitialProps = async () => ({
-  namespacesRequired: ['OtpHeroSection'],
+  namespacesRequired: ['Otp'],
 });
 
 HeroSectionV3.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpHeroSection')(HeroSectionV3);
+export default withTranslation('Otp')(HeroSectionV3);

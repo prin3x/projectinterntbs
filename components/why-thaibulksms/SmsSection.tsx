@@ -6,8 +6,16 @@ const SmsSectionV3 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3>{t('SMS Communication Platform อันดับ 1 ของไทย มีตัวตนตรวจสอบได้')}</h3>
-            <p>ThaiBulkSMS เป็นผู้ให้บริการ SMS Communication Platform ที่ได้รับการรับรองจาก กสทช. ที่เปิดให้บริการมามากกว่า 10 ปี คุณจึงวางใจในคุณภาพบริการของเราได้อย่างแน่นอน</p>
+            <h3>
+              {t(
+                'SmsSection::As Thailand’s Number 1 SMS Communication Platform, which can be personally confirmed,'
+              )}
+            </h3>
+            <p>
+              {t(
+                'SmsSection::ThaiBulkSMS provides the SMS Communication Platform that is certified by the National Broadcasting and Telecommunications Commission. We have been operating for over 10 years, so you can certainly rest assured in the quality of our service.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -20,16 +28,15 @@ const SmsSectionV3 = ({ t }: any) => (
           </div>
         </div>
       </div>
-
     </div>
   </div>
 );
 
 SmsSectionV3.getInitialProps = async () => ({
-  namespacesRequired: ['OtpSmsSection'],
+  namespacesRequired: ['WhyThaibulksms'],
 });
 
 SmsSectionV3.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpSmsSection')(SmsSectionV3);
+export default withTranslation('WhyThaibulksms')(SmsSectionV3);

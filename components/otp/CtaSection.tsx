@@ -9,19 +9,25 @@ const CtaSectionV2 = ({ t }: any) => (
       <div className="row align-items-center">
         <div className=" col-lg-12">
           <div className="cta-text">
-            <h3 dangerouslySetInnerHTML={{ __html: t('otpcta.title') }}></h3>
+            <h3
+              dangerouslySetInnerHTML={{
+                __html: t(
+                  'ctaSection::Send OTP with a ready-to-use system that does not require time wasted in programming.'
+                ),
+              }}
+            ></h3>
             <a
               href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
               className="btn v7"
             >
-              {t('otpcta.freeBtn')}
+              {t('ctaSection::Try for free')}
             </a>
             <a
               href={`https://otp-manager.thaibulksms.com/login`}
               className="btn otp2"
               target="_blank"
             >
-              ล็อกอิน
+              {t('ctaSection::Login')}
             </a>
           </div>
         </div>
@@ -30,10 +36,10 @@ const CtaSectionV2 = ({ t }: any) => (
   </div>
 );
 CtaSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['OtpCtaSection'],
+  namespacesRequired: ['Otp'],
 });
 
 CtaSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpCtaSection')(CtaSectionV2);
+export default withTranslation('Otp')(CtaSectionV2);

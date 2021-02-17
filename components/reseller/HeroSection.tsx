@@ -19,7 +19,9 @@ const HeroSectionV3 = ({ t }: any) => (
           <div className="hero_text_one v2">
             <h1
               dangerouslySetInnerHTML={{
-                __html: t('ResellerPage:heroSection.title'),
+                __html: t(
+                  'HeroSection::<span>SMS Reseller</span><br/> a special program for ThaiBulkSMS resellers'
+                ),
               }}
             ></h1>
           </div>

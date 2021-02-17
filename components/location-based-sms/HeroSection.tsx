@@ -19,7 +19,9 @@ const HeroSectionV3 = ({ t }: any) => (
           <div className="hero_text_one v2">
             <h1
               dangerouslySetInnerHTML={{
-                __html: t('LocationBasedSMSPage:heroSection.title'),
+                __html: t(
+                  'HeroSection::<span>Reach your target group with a location-based method.<span><br/> Instantly send messages without having to use phone numbers.'
+                ),
               }}
             ></h1>
           </div>

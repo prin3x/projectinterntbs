@@ -9,8 +9,16 @@ const TrackSectionV2 = ({ t }: any) => (
       <div className="row track_top">
         <div className="col-md-6 col-md-push-6">
           <div className="track_text">
-            <h3>{t('sms-trackingtracksection.title')}</h3>
-            <p>{t('sms-trackingtracksection.desc')}</p>
+            <h3>
+              {t(
+                'TrackSection::Follow up on individual-level statuses to know which recipients are interested in you.'
+              )}
+            </h3>
+            <p>
+              {t(
+                'TrackSection::SMS Tracking follows the status of message opening at the individual level, allowing you to know who frequently opens their messages and is suitable for Marketing. This reduces your costs by preventing you from wasting funds by sending messages to individuals who never open their messages.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">
@@ -29,25 +37,30 @@ const TrackSectionV2 = ({ t }: any) => (
               <div className="track_box">
                 <h4
                   dangerouslySetInnerHTML={{
-                    __html: t('sms-trackingtracksection.campaigntitle'),
+                    __html: t(
+                      'TrackSection::<span>Step-by-Step SMS Tracking</span><br/> Campaign Creation Tutorial'
+                    ),
                   }}
                 ></h4>
-               
-                  <a target="_blank" href="https://bit.ly/3cWg40U" className="btn v3">
-                    {t('sms-trackingtracksection.campaignBtn')}
-                  </a>
-              
+
+                <a
+                  target="_blank"
+                  href="https://bit.ly/3cWg40U"
+                  className="btn v3"
+                >
+                  {t('TrackSection::Step of use')}
+                </a>
               </div>
             </div>
             {/* <div className="col-lg-6">
               <div className="track_box v2">
                 <h4
                   dangerouslySetInnerHTML={{
-                    __html: t('sms-trackingtracksection.corporatepackagetitle'),
+                    __html: t('TrackSection::corporatepackagetitle'),
                   }}
                 ></h4>
                 <a className="btn v3">
-                  {t('sms-trackingtracksection.corporatepackageBtn')}
+                  {t('TrackSection::corporatepackageBtn')}
                 </a>
               </div>
             </div> */}
@@ -58,10 +71,10 @@ const TrackSectionV2 = ({ t }: any) => (
   </div>
 );
 TrackSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['Sms-trackingTrackSection'],
+  namespacesRequired: ['Sms-tracking'],
 });
 
 TrackSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Sms-trackingTrackSection')(TrackSectionV2);
+export default withTranslation('Sms-tracking')(TrackSectionV2);

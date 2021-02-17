@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-import Link from 'next/link'
-import { format } from 'date-fns'
-import { parseFromTimeZone } from 'date-fns-timezone'
+import Link from 'next/link';
+import { format } from 'date-fns';
+import { parseFromTimeZone } from 'date-fns-timezone';
 import AppConfig from '../../appConfig';
-const ContentSection = ({ Posts }: any) => (
+const ContentSection = ({ Posts, t }: any) => (
   <div className="resource_section">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-12">
           <div className="secKnowledge">
             <div className="headSection">
-              <h2 className="edit_text_seo">ความรู้</h2>
-              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
+              <h2 className="edit_text_seo">{t('ContentSection::Knowledge')}</h2>
+              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/ความรู้/1/`} passHref={true}><a>{t('ContentSection::View all')}</a></Link>
             </div>
             <div className="Knowledge">
               { //knowledge
@@ -30,8 +30,6 @@ const ContentSection = ({ Posts }: any) => (
                   </Link>
                 ))
               }
-
-
             </div>
           </div>
         </div>
@@ -40,8 +38,8 @@ const ContentSection = ({ Posts }: any) => (
         <div className="col-lg-6 col-md-12">
           <div className="secUsecase">
             <div className="headSection">
-              <h2 className="edit_text_seo">ตัวอย่างการใช้งาน</h2>
-              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
+              <h2 className="edit_text_seo">{t('ContentSection::Example Operations')}</h2>
+              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`} passHref={true}><a>{t('ContentSection::View all')}</a></Link>
             </div>
             { //example
               !Posts.example || Posts.example.map((item, key) => {
@@ -77,8 +75,8 @@ const ContentSection = ({ Posts }: any) => (
         <div className="col-lg-6 col-md-12">
           <div className="secUsecase">
             <div className="headSection">
-              <h2 className="edit_text_seo">เรื่องราวความสำเร็จ</h2>
-              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}><a>ดูทั้งหมด</a></Link>
+              <h2 className="edit_text_seo">{t('ContentSection::Success Stories')}</h2>
+              <Link href={`${AppConfig.WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`} passHref={true}><a>{t('ContentSection::View all')}</a></Link>
             </div>
             { //successStory
               !Posts.successStory || Posts.successStory.map((item, key) => {
@@ -116,10 +114,10 @@ const ContentSection = ({ Posts }: any) => (
   </div>
 );
 ContentSection.getInitialProps = async () => ({
-  namespacesRequired: ['ResourceSection'],
+  namespacesRequired: ['Resource'],
 });
 
 ContentSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('ResourceSection')(ContentSection);
+export default withTranslation('Resource')(ContentSection);

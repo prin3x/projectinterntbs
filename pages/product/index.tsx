@@ -22,8 +22,8 @@ const Product = ({ t }: any) => (
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('title')}
-      description={t('description')}
+      title={t('meta::title')}
+      description={t('meta::description')}
     />
     {/* <Proloader /> */}
     <div className="page_wrapper">
@@ -41,13 +41,12 @@ const Product = ({ t }: any) => (
 // Product.getInitialProps = async () => ({
 //   namespacesRequired: ['ProductMeta'],
 // });
-export default withTranslation('ProductMeta')(Product);
+export default withTranslation('Product')(Product);
 
 export const getStaticProps = async () => {
-  return ({
+  return {
     props: {
-      namespacesRequired: ['ProductMeta'],
+      namespacesRequired: ['Product'],
     },
-  })
-}
-
+  };
+};

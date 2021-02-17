@@ -1,9 +1,9 @@
 {
   "registerfinish": {
-    "title": "ENสร้างบัญชีสำเร็จ เริ่มทดลองส่งได้ทันที",
-    "desc": "ENระบบได้ส่งชื่อบัญชีผู้ใช้และรหัสผ่านไปทาง SMS<br/>สามารถใช้ล็อกอินเพื่อทดลองส่งได้ทันที",
-    "loginBtn": "ENล็อกอิน",
-    "resendsms": "ENไม่ได้รับ SMS รหัสผ่าน?",
-    "linkresendsms": "ENขอรหัสผ่านอีกครั้ง"
+    "title": "Created an account Successfully , Try sending free SMS now.",
+    "desc": "The system has sent username and password via SMS<br/>, can log in to try sending instantly",
+    "loginBtn": "Login",
+    "resendsms": "Didn't receive password SMS ?",
+    "linkresendsms": "Request password again"
   }
 }
