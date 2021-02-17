@@ -6,14 +6,16 @@ const WhyBrandSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('แบรนด์ชั้นนำที่วางใจ ThaiBulkSMS')}</h3>
+            <h3>
+              {t('BrandSection::A leading, trustworthy brand: ThaiBulkSMS')}
+            </h3>
           </div>
         </div>
       </div>
       <div className="row single_lang_wrap WhyBrand m-80">
         <div className="col-xl-10 offset-xl-1">
           <div className="row ">
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -22,7 +24,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -31,7 +33,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -40,7 +42,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -49,7 +51,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -58,7 +60,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -67,7 +69,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang why-brand">
                 <img
                   className="lazyload"
@@ -76,7 +78,7 @@ const WhyBrandSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -94,7 +96,11 @@ const WhyBrandSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>ส่งเร็ว ถึงไว มั่นใจได้ในความเสถียร ด้วยระบบ Intelligent Routing</h3>
+            <h3>
+              {t(
+                'BrandSection::Quick sending, rapid receipt, and confidently stable transmissions using Intelligent Routing'
+              )}
+            </h3>
           </div>
         </div>
       </div>
@@ -107,8 +113,14 @@ const WhyBrandSection = ({ t }: any) => (
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>ส่งผ่าน 3 เครือข่ายหลักโดยตรง</h4>
-              <p>การส่งจึงเป็นไปอย่างรวดเร็ว และมีความเสถียรสูง ไม่เกิดปัญหาคอขวดเพราะมีหลายช่องทางให้เลือกส่ง</p>
+              <h4>
+                {t('BrandSection::3 direct networks can be used for sending')}
+              </h4>
+              <p>
+                {t(
+                  'BrandSection::Messaging therefore proceeds quickly and with high stability. No bottlenecks occur because we have many channels available for transmission.'
+                )}
+              </p>
             </div>
           </div>
         </div>
@@ -120,8 +132,16 @@ const WhyBrandSection = ({ t }: any) => (
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>เลือกช่องทางส่งที่ตรงกับ เครือข่ายของเบอร์ผู้รับ</h4>
-              <p>เรามีระบบตรวจสอบเครือข่ายของเบอร์ผู้รับและจะคัดแยก SMS ให้ส่งผ่านเครือข่ายนั้นโดยตรง ซึ่งจะส่งได้เร็วกว่า</p>
+              <h4>
+                {t(
+                  'BrandSection::Selecting a transmission channel that corresponds with the network of the recipient number'
+                )}
+              </h4>
+              <p>
+                {t(
+                  'BrandSection::We have a network inspection system for the number of the recipient, which filters SMS messages to be sent directly through that network, allowing quicker messaging.'
+                )}
+              </p>
             </div>
           </div>
         </div>
@@ -133,13 +153,24 @@ const WhyBrandSection = ({ t }: any) => (
               alt="Image"
             />
             <div className="single_feature_text">
-              <h4>เลือกช่องทางส่งที่ดีที่สุดโดยอัตโนมัติ</h4>
-              <p>ถ้าหากช่องทางใดมีปัญหา ระบบจะสามารถย้ายการส่งไปยังช่องทางอื่นได้ทันที และยังมีระบบสำรองในการส่งอีกด้วย</p>
+              <h4>
+                {t('BrandSection::Automatic selection of the best channel')}
+              </h4>
+              <p>
+                {t(
+                  'BrandSection::If any channel experiences problems, the system is able to immediately shift messaging to other channels, in addition to having backup transmission systems.'
+                )}
+              </p>
             </div>
           </div>
         </div>
         <div className="col-md-12 text-center mt-80">
-          <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`} className="btn v3">ทดลองส่งฟรี</a>
+          <a
+            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+            className="btn v3"
+          >
+            {t('BrandSection::Free messaging trial')}
+          </a>
         </div>
       </div>
     </div>
@@ -147,10 +178,10 @@ const WhyBrandSection = ({ t }: any) => (
 );
 
 WhyBrandSection.getInitialProps = async () => ({
-  namespacesRequired: ['WhyBrandSection'],
+  namespacesRequired: ['WhyThaibulksms'],
 });
 
 WhyBrandSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('WhyBrandSection')(WhyBrandSection);
+export default withTranslation('WhyThaibulksms')(WhyBrandSection);

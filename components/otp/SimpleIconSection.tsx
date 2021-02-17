@@ -6,7 +6,9 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('otpsimpleicon.otpheader')}</h3>
+            <h3>
+              {t('SimpleIconSection::The OTP message can be set as desired')}
+            </h3>
           </div>
         </div>
       </div>
@@ -21,7 +23,11 @@ const SimpleIconSection = ({ t }: any) => (
               />
             </div>
             <div className="check_text">
-              <p>{t('otpsimpleicon.setting1')}</p>
+              <p>
+                {t(
+                  'SimpleIconSection::Your business name can be set as desired'
+                )}
+              </p>
             </div>
           </div>
         </div>
@@ -35,7 +41,11 @@ const SimpleIconSection = ({ t }: any) => (
               />
             </div>
             <div className="check_text">
-              <p>{t('otpsimpleicon.setting2')}</p>
+              <p>
+                {t(
+                  'SimpleIconSection::The number of digits can be set as desired'
+                )}
+              </p>
             </div>
           </div>
         </div>
@@ -49,7 +59,11 @@ const SimpleIconSection = ({ t }: any) => (
               />
             </div>
             <div className="check_text">
-              <p>{t('otpsimpleicon.setting3')}</p>
+              <p>
+                {t(
+                  'SimpleIconSection::The message Template can be set as desired'
+                )}
+              </p>
             </div>
           </div>
         </div>
@@ -63,7 +77,11 @@ const SimpleIconSection = ({ t }: any) => (
               />
             </div>
             <div className="check_text">
-              <p>{t('otpsimpleicon.setting4')}</p>
+              <p>
+                {t(
+                  'SimpleIconSection::The password Expiration time can be set as desired'
+                )}
+              </p>
             </div>
           </div>
         </div>
@@ -71,7 +89,11 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('otpsimpleicon.apiheader')}</h3>
+            <h3>
+              {t(
+                'SimpleIconSection::The system can function in a variety of languages.'
+              )}
+            </h3>
           </div>
         </div>
       </div>
@@ -153,8 +175,11 @@ const SimpleIconSection = ({ t }: any) => (
           </div>
         </div>
         <div className="col-md-12 text-center">
-          <a className="lang_link" href="https://developer.thaibulksms.com/reference#otp">
-            {t('otpsimpleicon.apilink')}
+          <a
+            className="lang_link"
+            href="https://developer.thaibulksms.com/reference#otp"
+          >
+            {t('SimpleIconSection::Learn more about the OTP API')}
             <img
               className="lazyload"
               data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_5.png`}
@@ -167,10 +192,10 @@ const SimpleIconSection = ({ t }: any) => (
   </div>
 );
 SimpleIconSection.getInitialProps = async () => ({
-  namespacesRequired: ['OtpSimpleIconSection'],
+  namespacesRequired: ['Otp'],
 });
 
 SimpleIconSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpSimpleIconSection')(SimpleIconSection);
+export default withTranslation('Otp')(SimpleIconSection);

@@ -16,7 +16,7 @@ const HeroSection = ({ t }: any) => (
           <div
             className="hero_text_one"
             dangerouslySetInnerHTML={{
-              __html: t('producthero.section.1.title'),
+              __html: t('HeroSection::<span>Improve the results of SMS campaigns</span><p> with Thailand’s No.1 </p><h1>SMS Communication Platform</h1>'),
             }}
           ></div>
         </div>
@@ -43,15 +43,15 @@ const HeroSection = ({ t }: any) => (
           <div className="hero_text_two">
             <span
               dangerouslySetInnerHTML={{
-                __html: t('producthero.section.2.title1'),
+                __html: t('HeroSection::A complete SMS sending service with large coverage, easy sending process and trusted by various businesses'),
               }}
             ></span>
             <h2
               dangerouslySetInnerHTML={{
-                __html: t('producthero.section.2.title2'),
+                __html: t('HeroSection::<span>SMS Communication Platform.</span><br>Thailand’s No.1 SMS sending company'),
               }}
             ></h2>
-            <p>{t('producthero.section.2.title3')}</p>
+            <p>{t('HeroSection::This is why you can trust the service of ThaiBulkSMS just like how multiple leading businesses trust us.')}</p>
           </div>
         </div>
       </div>
@@ -59,10 +59,10 @@ const HeroSection = ({ t }: any) => (
   </div>
 );
 HeroSection.getInitialProps = async () => ({
-  namespacesRequired: ['ProductHeroSection'],
+  namespacesRequired: ['Product'],
 });
 
 HeroSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('ProductHeroSection')(HeroSection);
+export default withTranslation('Product')(HeroSection);

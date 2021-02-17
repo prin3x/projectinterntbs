@@ -4,4 +4,6 @@ module.exports = new NextI18Next({
   serverLanguageDetection: false,
   defaultLanguage: 'th',
   otherLanguages: ['en', 'th'],
+  nsSeparator: ':::',
+  keySeparator: '::'
 });

@@ -1,4 +1,4 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
@@ -7,7 +7,7 @@ import TagManager from 'react-gtm-module';
 import classnames from 'classnames';
 import Cookie from 'js-cookie';
 import appConfig from '../../appConfig';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { decodeTBSToken } from '../../services/user/user.service';
 
 const SenderActive = 5;
@@ -19,23 +19,22 @@ const BuyPackage = (packageItem: ProductPackage) => {
   else if (appConfig.APP_ENV === appConfig.internalTest)
     domain = '.1mobyline.com';
 
-  const decodeToken = decodeTBSToken()
+  const decodeToken = decodeTBSToken();
   if (decodeToken && decodeToken.isSubaccount) {
     Swal.fire({
       title: 'แจ้งเตือน',
-      html: "<p style='font-size:15px;'>บัญชีของคุณเป็นบัญชีผู้ใช้สำรองไม่สามารถทำรายการสั่งซื้อได้ กรุณาติดต่อผู้ดูแลบัญชีผู้ใช้หลักของคุณเพื่อดำเนินการ</p>",
+      html:
+        "<p style='font-size:15px;'>บัญชีของคุณเป็นบัญชีผู้ใช้สำรองไม่สามารถทำรายการสั่งซื้อได้ กรุณาติดต่อผู้ดูแลบัญชีผู้ใช้หลักของคุณเพื่อดำเนินการ</p>",
       allowOutsideClick: false,
       confirmButtonText: 'ปิด',
-    })
-    return
+    });
+    return;
   }
-
 
   Cookie.set('packageId', packageItem.productId.toString(), { domain });
   window.location.replace(
     `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment/`
   );
-
 };
 const showPackage = (packages: Product[], t: Function) => {
   let itemPackages: any = [];
@@ -55,20 +54,26 @@ const showPackage = (packages: Product[], t: Function) => {
         aria-controls={`collapse${itemNo}`}
       >
         <div className="col-md-4 box">
-          {productItem.corporate.sender === SenderActive ? <div className="parent">
-            <h4 className="ribbon">ขายดี</h4>
-          </div> : null
-          }
-          {parseInt(item) === 1 ? <div className="parent">
-            <h4 className="ribbon">สำหรับมือใหม่</h4>
-          </div> : null
-          }
+          {productItem.corporate.sender === SenderActive ? (
+            <div className="parent">
+              <h4 className="ribbon">{t('AllPricing::Bestsellers')}</h4>
+            </div>
+          ) : null}
+          {parseInt(item) === 1 ? (
+            <div className="parent">
+              <h4 className="ribbon">{t('AllPricing::For beginners')}</h4>
+            </div>
+          ) : null}
 
           <div className="left__box">
-        <h3>{numeral(productItem.amount).format('0,0')}{` `}<span>บาท</span></h3>
+            <h3>
+              {numeral(productItem.amount).format('0,0')}
+              {` `}
+              <span>{t('AllPricing::Baht')}</span>
+            </h3>
             <span>
-              {t('pricingallpricing.life')} {`${productItem.period} `}
-              {t('pricingallpricing.month')}
+              {t('AllPricing::Duration of usage')} {`${productItem.period} `}
+              {t('AllPricing::months')}
             </span>
           </div>
         </div>
@@ -98,8 +103,8 @@ const showPackage = (packages: Product[], t: Function) => {
                       ).format('0.00')}
                       {` `}
                       <span>
-                        {t('pricingallpricing.bath')}/
-                        {t('pricingallpricing.message')}
+                        {/* {t('AllPricing::bath')}/{t('AllPricing::message')} */}
+                        {t('AllPricing::Baht/message')}
                       </span>
                     </h3>
 
@@ -113,7 +118,7 @@ const showPackage = (packages: Product[], t: Function) => {
                       data-parent="#accordion"
                     >
                       <div className="sender__box1">
-                        <span>{t('pricingallpricing.quantity')}</span>
+                        <span>{t('AllPricing::Number of messages')}</span>
                         <span className="theme__text">
                           {numeral(productItem.standard.credit).format('0,0')}
                         </span>
@@ -133,7 +138,7 @@ const showPackage = (packages: Product[], t: Function) => {
                           onClick={() => BuyPackage(productItem.standard)}
                           className="btn v8"
                         >
-                          {t('pricingallpricing.buyBtn')}
+                          {t('AllPricing::Buy now')}
                         </button>
                       </div>
                     </div>
@@ -146,10 +151,7 @@ const showPackage = (packages: Product[], t: Function) => {
                         productItem.corporate.amount /
                         productItem.corporate.credit
                       ).format('0.00')}{' '}
-                      <span>
-                        {t('pricingallpricing.bath')}/
-                        {t('pricingallpricing.message')}
-                      </span>
+                      <span>{t('AllPricing::Baht/message')}</span>
                     </h3>
 
                     <div
@@ -162,7 +164,7 @@ const showPackage = (packages: Product[], t: Function) => {
                       data-parent="#accordion"
                     >
                       <div className="sender__box1">
-                        <span>{t('pricingallpricing.quantity')}</span>
+                        <span>{t('AllPricing::Number of messages')}</span>
                         <span className="theme__text">
                           {numeral(productItem.corporate.credit).format('0,0')}
                         </span>
@@ -181,7 +183,7 @@ const showPackage = (packages: Product[], t: Function) => {
                           onClick={() => BuyPackage(productItem.corporate)}
                           className="btn v8"
                         >
-                          {t('pricingallpricing.buyBtn')}
+                          {t('AllPricing::Buy now')}
                         </button>
                       </div>
                     </div>
@@ -219,7 +221,7 @@ const AllPricing = ({ t, packages }: any) => {
             <div className="row no-gutters">
               <div className="col-md-4">
                 <div className="left__box left__box__top">
-                  <p>{t('pricingallpricing.column1')}</p>
+                  <p>{t('AllPricing::Package prices')}</p>
                 </div>
               </div>
               <div className="col-md-8">
@@ -228,10 +230,10 @@ const AllPricing = ({ t, packages }: any) => {
                     <div className="top__bar">
                       <div className="row">
                         <div className="col-6 text-center">
-                          <p>{t('pricingallpricing.column2')}</p>
+                          <p>{t('AllPricing::Standard SMS')}</p>
                         </div>
                         <div className="col-6 text-center">
-                          <p>{t('pricingallpricing.column3')}</p>
+                          <p>{t('AllPricing::Corporate SMS')}</p>
                         </div>
                       </div>
                     </div>
@@ -246,15 +248,35 @@ const AllPricing = ({ t, packages }: any) => {
           <div className="col-12 text-center pricing__bottom__content">
             <p
               dangerouslySetInnerHTML={{
-                __html: t('pricingallpricing.footertitle'),
+                __html: t(
+                  'AllPricing::• Package prices do not include VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.'
+                ),
               }}
             />
-
-            <div className="pricing__bottom d-flex align-items-center justify-content-center">
-              <h5 className="mr-5">{t('pricingallpricing.footheader')}</h5>
-              <Link href="/contact">
-                <a className="btn v7">{t('pricingallpricing.sellBtn')}</a>
-              </Link>
+            <div className="row">
+              <div className="col-md-10 offset-md-1 col-sm-12 offset-sm-0">
+                <div className="special-price">
+                  <div className="row align-items-center">
+                    <div className="col-lg-4 col-md-12">
+                      <h3
+                        dangerouslySetInnerHTML={{
+                          __html: t('AllPricing::Buy more, <br>Get discount more'),
+                        }}
+                      >
+                      </h3>
+                      <button className="btn v2 sms-btn-text" type="submit">{t('AllPricing::Contact our sales team')}</button>
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-sm-12">
+                      <p className="head-price">Standard SMS</p>
+                      <p><span>{t('AllPricing::0.21')}</span> {t('AllPricing::Baht/message')}</p>
+                    </div>
+                    <div className="col-lg-4 col-md-6 col-sm-12">
+                      <p className="head-price">Corporate SMS</p>
+                      <p><span>{t('AllPricing::0.24')}</span> {t('AllPricing::Baht/message')}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -264,10 +286,10 @@ const AllPricing = ({ t, packages }: any) => {
 };
 
 AllPricing.getInitialProps = async () => ({
-  namespacesRequired: ['PricingAllPricing'],
+  namespacesRequired: ['Pricing'],
 });
 
 AllPricing.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('PricingAllPricing')(React.memo(AllPricing));
+export default withTranslation('Pricing')(React.memo(AllPricing));

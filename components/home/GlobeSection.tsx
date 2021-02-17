@@ -7,11 +7,11 @@ const GlobeSection = ({ t }: any) => (
         <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
           <div className="globe_text">
             <h3
-              dangerouslySetInnerHTML={{ __html: t('homeglobe.header') }}
+              dangerouslySetInnerHTML={{ __html: t('GlobeSection::Free SMS and OTP sending worldwide at a great value price.') }}
             ></h3>
-            <p>{t('homeglobe.title')}</p>
+            <p>{t('GlobeSection::Covering more than 200 countries worldwide.')}</p>
             <Link href="/contact">
-              <a className="btn v3">{t('homeglobe.detailBtn')}</a>
+              <a className="btn v3">{t('GlobeSection::Contact us for more information')}</a>
             </Link>
           </div>
         </div>
@@ -30,10 +30,10 @@ const GlobeSection = ({ t }: any) => (
 );
 
 GlobeSection.getInitialProps = async () => ({
-  namespacesRequired: ['HomeHeroSection'],
+  namespacesRequired: ['Home'],
 });
 
 GlobeSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomeGlobeSection')(GlobeSection);
+export default withTranslation('Home')(GlobeSection);

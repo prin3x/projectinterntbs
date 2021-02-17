@@ -31,7 +31,7 @@ const TestQuickregister = ({ t }: any) => {
   const [msisdn, setMsisdn] = useState('');
   const [tempDatastep1, setTempDatastep1] = useState({ msisdn: '' });
   const [welcome_token, setWelcomeToken] = useState('');
-  const [testDesc, setTestDesc] = useState('-1');
+  const [testDesc, setTestDesc] = useState('Just type in your mobile number and verify your identity with the password you receive.');
   useEffect(() => {
     Modal.setAppElement('#ElementModal');
   }, []);
@@ -98,10 +98,10 @@ const TestQuickregister = ({ t }: any) => {
   };
   const handleErorrStep1 = (error: any) => {
     if (error.msisdn) {
-      return 'homesms.validate.msisdn.' + error.msisdn.type;
+      return 'SmsSection::TestQuickregister::validate::msisdn::' + error.msisdn.type;
     }
     if (error.resultStep1) {
-      return 'homesms.resultStep1.' + error.resultStep1.type;
+      return 'SmsSection::TestQuickregister::resultStep1::' + error.resultStep1.type;
     }
   };
   //================ end step 1
@@ -153,7 +153,7 @@ const TestQuickregister = ({ t }: any) => {
       } else setTimeout(fbqReady, 3000);
     })();
 
-    setTestDesc('-2');
+    setTestDesc('desc-2');
     setWelcomeToken(resultStep2.welcome_token);
     setShowModalpass(false);
     setShowInputstep1(false);
@@ -162,10 +162,10 @@ const TestQuickregister = ({ t }: any) => {
   };
   const handleErorrStep2 = (error: any) => {
     if (error.pin) {
-      return 'homesms.validate.pin.' + error.pin.type;
+      return 'SmsSection::TestQuickregister::validate::pin.' + error.pin.type;
     }
     if (error.resultStep2) {
-      return 'homesms.resultStep2.' + error.resultStep2.type;
+      return 'SmsSection::TestQuickregister::resultStep2::' + error.resultStep2.type;
     }
   };
   //================ end step 2
@@ -200,10 +200,10 @@ const TestQuickregister = ({ t }: any) => {
   };
   const handleErorrStep3 = (error: any) => {
     if (error.welcomeToken) {
-      return 'homesms.validate.welcomeToken.' + error.welcomeToken.type;
+      return 'SmsSection::TestQuickregister::validate::welcomeToken.' + error.welcomeToken.type;
     }
     if (error.resultStep3) {
-      return 'homesms.resultStep3.' + error.resultStep3.type;
+      return 'SmsSection::TestQuickregister::resultStep3.' + error.resultStep3.type;
     }
   };
   //================ end step 3
@@ -231,8 +231,8 @@ const TestQuickregister = ({ t }: any) => {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12">
                 <div className="sms_form_text">
-                  <h4>{t('homesms.test.header')}</h4>
-                  <p>{t('homesms.test.desc' + testDesc)}</p>
+                  <h4>{t('SmsSection::TestQuickregister::Try sending an SMS to your mobile phone now.')}</h4>
+                  <p>{t('SmsSection::TestQuickregister::' + testDesc)}</p>
                 </div>
               </div>
               <div className="col-lg-6 col-md-12">
@@ -250,7 +250,7 @@ const TestQuickregister = ({ t }: any) => {
                         id="msisdn"
                         name="msisdn"
                         type="text"
-                        placeholder={t('homesms.test.telNumber')}
+                        placeholder={t('SmsSection::TestQuickregister::Your mobile number')}
                         onChange={() => clearErrors1('resultStep1')}
                         maxLength={10}
                       />
@@ -267,7 +267,7 @@ const TestQuickregister = ({ t }: any) => {
                         type="submit"
                         onClick={() => clearErrors1()}
                       >
-                        {t('homesms.test.confirmBtn')}
+                        {t('SmsSection::TestQuickregister::Confirm number')}
                       </button>
                     </form>
                   </div>
@@ -291,19 +291,19 @@ const TestQuickregister = ({ t }: any) => {
                           'quickregisterthirdstepdto.key.expire' ? (
                           <>
                             {t(
-                              'homesms.resultStep3.quickregisterthirdstepdto.key.expireLine1',
+                              'SmsSection::TestQuickregister::resultStep3::quickregisterthirdstepdto::key::expireLine1',
                             )}
                             <br />
                             {t(
-                              'homesms.resultStep3.quickregisterthirdstepdto.key.expireLine2_1',
+                              'SmsSection::TestQuickregister::resultStep3::quickregisterthirdstepdto::key::expireLine2_1',
                             )}{' '}
                             <a href={`${appConfig.WEB_URL_ACCOUNT}/log-in`}>
                               {t(
-                                'homesms.resultStep3.quickregisterthirdstepdto.key.expireLine2_2',
+                                'SmsSection::TestQuickregister::resultStep3::quickregisterthirdstepdto::key::expireLine2_2',
                               )}
                             </a>{' '}
                             {t(
-                              'homesms.resultStep3.quickregisterthirdstepdto.key.expireLine2_3',
+                              'SmsSection::TestQuickregister::resultStep3::quickregisterthirdstepdto::key::expireLine2_3',
                             )}
                           </>
                         ) : (
@@ -315,7 +315,7 @@ const TestQuickregister = ({ t }: any) => {
                         type="submit"
                         onClick={() => clearErrors3()}
                       >
-                        {t('homesms.test.testBtn')}
+                        {t('SmsSection::TestQuickregister::Try SMS sending')}
                       </button>
                     </form>
                   </div>
@@ -359,7 +359,7 @@ const TestQuickregister = ({ t }: any) => {
                 }}
               >
                 <h5 className="pass-modal-text">
-                  {t('homesms.modal.showModalpass.header')}
+                  {t('SmsSection::TestQuickregister::modal::showModalpass::header')}
                 </h5>
                 <form className="form-wrap" onSubmit={handleSubmitStep2(onSubmitStep2)}>
                   <div className="form__wrapper form-password-wrap">
@@ -372,7 +372,7 @@ const TestQuickregister = ({ t }: any) => {
                       id="pin"
                       name="pin"
                       type="password"
-                      placeholder={t('homesms.modal.showModalpass.placeholder')}
+                      placeholder={t('SmsSection::TestQuickregister::modal::showModalpass::placeholder')}
                       className="input__box"
                     />
                     <button
@@ -380,7 +380,7 @@ const TestQuickregister = ({ t }: any) => {
                       className="btn v8 confirm-btn"
                       onClick={() => clearErrors2()}
                     >
-                      {t('homesms.modal.showModalpass.submitBtn')}
+                      {t('SmsSection::TestQuickregister::modal::showModalpass::submitBtn')}
                     </button>
                   </div>
                 </form>
@@ -394,16 +394,16 @@ const TestQuickregister = ({ t }: any) => {
                   textAlign: 'center',
                 }}
               >
-                <h5 className="login-topic">{t('homesms.modal.showLogin.header')}</h5>
-                <p className="login-content">{t('homesms.modal.showLogin.decs1')}</p>
-                <p className="login-content">{t('homesms.modal.showLogin.decs2')}</p>
+                <h5 className="login-topic">{t('SmsSection::TestQuickregister::modal::showLogin::header')}</h5>
+                <p className="login-content">{t('SmsSection::TestQuickregister::modal::showLogin::decs1')}</p>
+                <p className="login-content">{t('SmsSection::TestQuickregister::modal::showLogin::decs2')}</p>
                 <button
                   className="btn v2 btn-show-login"
                   onClick={() => {
                     gotoLogin();
                   }}
                 >
-                  {t('homesms.modal.showLogin.submitBtn')}
+                  {t('SmsSection::TestQuickregister::modal::showLogin::submitBtn')}
                 </button>
               </div>
             )}
@@ -415,10 +415,10 @@ const TestQuickregister = ({ t }: any) => {
 };
 
 TestQuickregister.getInitialProps = async () => ({
-  namespacesRequired: ['HomeHeroSection'],
+  namespacesRequired: ['Home'],
 });
 
 TestQuickregister.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomeSmsSection')(TestQuickregister);
+export default withTranslation('Home')(TestQuickregister);

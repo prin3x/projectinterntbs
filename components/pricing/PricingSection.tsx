@@ -10,7 +10,7 @@ const PricingSection = ({ t }: any) => {
       data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
     >
       <div className="container pricing">
-        <h1 className="headPricing">ราคาแพ็กเกจ</h1>
+        <h1 className="headPricing">{t('PricingSection::Package prices')}</h1>
         <div className="row justify-content-xl-end mt-80">
           <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
             <div
@@ -21,35 +21,41 @@ const PricingSection = ({ t }: any) => {
               }}
             >
               <h2 className="nameTypePackage" style={{ fontSize: '40px' }}>
-                {t('pricingpricing.package.standard.header')}
+                STANDARD SMS
               </h2>
               <p style={{ fontSize: '22px', color: '#5b6e80' }}>
-                {t('pricingpricing.package.standard.title')}
+                {t('PricingSection::Cheap SMS sending')}
               </p>
               <ul className="pricing_feature">
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('pricingpricing.package.standard.feature.1')}</p>
+                  <p>{t('PricingSection::Cheaper prices for SMS sending')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('pricingpricing.package.standard.feature.2')}</p>
+                  <p>{t('PricingSection::Sending reports are available.')}</p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('pricingpricing.package.standard.feature.3')}</p>
+                  <p>
+                    {t('PricingSection::All basic features are available.')}
+                  </p>
                 </li>
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('pricingpricing.package.standard.feature.4')}</p>
+                  <p>
+                    {t(
+                      'PricingSection::Tools for measuring campaign results are provided.'
+                    )}
+                  </p>
                 </li>
               </ul>
               <div className="price_plan">
-                <span>{t('pricingpricing.start')}</span>
+                <span>{t('PricingSection::Best SMS pricing, only')}</span>
                 <h2 style={{ fontSize: '72px', fontWeight: 500 }}>
-                  {t('pricingpricing.package.standard.price')}
+                  0.21
                   <span style={{ marginLeft: '10px' }}>
-                    {t('pricingpricing.unit')}
+                    {t('PricingSection::baht / message')}
                   </span>
                 </h2>
               </div>
@@ -64,35 +70,47 @@ const PricingSection = ({ t }: any) => {
               }}
             >
               <h2 className="nameTypePackage" style={{ fontSize: '40px' }}>
-                {t('pricingpricing.package.corporate.header')}
+                CORPORATE SMS
               </h2>
               <p style={{ fontSize: '22px', color: '#5b6e80' }}>
-                {t('pricingpricing.package.corporate.title')}
+                {t(
+                  'PricingSection::Credits are refunded if the messages fail to reach the recipients.'
+                )}
               </p>
               <ul className="pricing_feature">
                 <li>
                   <i className="far fa-check-circle"></i>
-                  <p>{t('pricingpricing.package.corporate.feature.1')}</p>
+                  <p>{t('PricingSection::Every feature of Standard SMS')}</p>
                 </li>
                 <li>
                   <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                  <p>{t('pricingpricing.package.corporate.feature.2')}</p>
+                  <p>
+                    {t('PricingSection::A ready-to-use OTP sending system')}
+                  </p>
                 </li>
                 <li>
                   <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                  <p>{t('pricingpricing.package.corporate.feature.3')}</p>
+                  <p>
+                    {t(
+                      'PricingSection::Credit refunds if the messages fail to reach the recipients'
+                    )}
+                  </p>
                 </li>
                 <li>
                   <i className="fa fa-plus-circle" aria-hidden="true"></i>
-                  <p>{t('pricingpricing.package.corporate.feature.4')}</p>
+                  <p>
+                    {t(
+                      'PricingSection::More detailed information on sending status'
+                    )}
+                  </p>
                 </li>
               </ul>
               <div className="price_plan">
-                <span>{t('pricingpricing.start')}</span>
+                <span>{t('PricingSection::Best SMS pricing, only')}</span>
                 <h2 style={{ fontSize: '72px', fontWeight: 500 }}>
-                  {t('pricingpricing.package.corporate.price')}
+                  0.24
                   <span style={{ marginLeft: '10px' }}>
-                    {t('pricingpricing.unit')}
+                    {t('PricingSection::baht / message')}
                   </span>
                 </h2>
               </div>
@@ -116,10 +134,10 @@ const PricingSection = ({ t }: any) => {
 };
 
 PricingSection.getInitialProps = async () => ({
-  namespacesRequired: ['PricingPricingSection'],
+  namespacesRequired: ['Pricing'],
 });
 
 PricingSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('PricingPricingSection')(PricingSection);
+export default withTranslation('Pricing')(PricingSection);

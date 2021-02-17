@@ -9,8 +9,14 @@ const TrackSection = ({ t }: any) => (
       <div className="row track_top m-40">
         <div className="col-md-6 col-md-push-6">
           <div className="track_text">
-            <h3>{t('LocationBasedSMSPage:advantagesSection.title-align-right')}</h3>
-            <p>{t('LocationBasedSMSPage:advantagesSection.description-align-right')}</p>
+            <h3>
+              {t('AdvantagesSection::Target groups can be self-specified')}
+            </h3>
+            <p>
+              {t(
+                'AdvantagesSection::Reach your customers with higher levels of effectiveness. Save your budget on messaging costs, as the targeted message demographic can be specified by categories such as sex, age, or high purchasing power individuals.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">
@@ -26,8 +32,14 @@ const TrackSection = ({ t }: any) => (
       <div className="row track_top m-40">
         <div className="col-md-6">
           <div className="track_text">
-            <h3>{t('LocationBasedSMSPage:advantagesSection.title-align-left')}</h3>
-            <p>{t('LocationBasedSMSPage:advantagesSection.description-align-left')}</p>
+            <h3>
+              {t('AdvantagesSection::Generate instant sales in your area')}
+            </h3>
+            <p>
+              {t(
+                'AdvantagesSection::The messages will be immediately sent when customers enter the specified areas. This increases the chances of closing easy sales, particularly in locations with high competition such as shopping centers and display booths.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-md-6">

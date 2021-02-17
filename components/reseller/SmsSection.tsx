@@ -1,14 +1,22 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-import Link from 'next/link'
+import Link from 'next/link';
 const SmsSectionV3 = ({ t }: any) => (
   <div className="sms_section v2 ">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-lg-5">
           <div className="newsletter_text">
-            <h3>{t('ResellerPage:smsSection.title')}</h3>
-            <p>{t('ResellerPage:smsSection.description')}</p>
+            <h3>
+              {t(
+                'SmsSection::Valuable prices at better rates than on the web page.'
+              )}
+            </h3>
+            <p>
+              {t(
+                'SmsSection::When you become a reseller, you will receive superior Special Rate prices that are suitable for Software House or Digital Agency businesses.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -27,14 +35,18 @@ const SmsSectionV3 = ({ t }: any) => (
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-12">
                 <div className="sms_form_text">
-                  <h4>{t('ResellerPage:smsSection.title-on-box')}</h4>
+                  <h4>
+                    {t(
+                      'SmsSection::Interested in becoming a ThaiBulkSMS reseller?'
+                    )}
+                  </h4>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="sms_form_field">
                   <Link href="/contact">
                     <a href={``} className="btn v8">
-                      {t('ResellerPage:smsSection.button-on-box')}
+                      {t('SmsSection::Request a quotation slip')}
                     </a>
                   </Link>
                 </div>

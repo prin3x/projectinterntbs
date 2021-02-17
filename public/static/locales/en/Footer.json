@@ -1,16 +1,15 @@
 {
   "footer": {
-    "service": "Product",
-    "highlight": "Features",
-    "pricing": "Pricing",
-    "database": "Blog",
-    "knowledge": "knowledge",
-    "example": "Use Cases",
-    "successstories": "Success Stories",
-    "smsbasic": "Intro to SNS",
-    "support": "Support",
-    "howtoorder": "How to order",
-    "documentation": "Developer",
-    "about": "Follow Us"
+    "Services": "Services",
+    "Support":"Support",
+    "Ordering Methods":"Ordering",
+    "Frequently Asked Questions":"FAQ",
+    "For Developers":"Developer",
+    "About Us":"About Us",
+    "Why use ThaiBulkSMS?":"Why ThaiBulkSMS?",
+    "Contact us":"Contact Us",
+    "Follow Us":"Follow Us",
+    "Terms and Conditions":"Terms and Conditions",
+    "Privacy Policy":"Privacy Policy"
   }
 }

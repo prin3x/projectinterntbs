@@ -6,46 +6,103 @@ const TrackSection = ({ t }: any) => (
       <div className="row track_top">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
           <div className="simple_icon_title space_why_thaibulksms">
-            <h3 className="space_why_thaibulksms">{t('ใช้งานง่าย ไม่ว่าคุณจะเป็น User แบบไหน')}</h3>
+            <h3 className="space_why_thaibulksms">
+              {t(
+                'TrackSection::Easily operated, no matter what category of User you are.'
+              )}
+            </h3>
           </div>
         </div>
         <div className="col-lg-12 m-40">
           <div className="row">
             <div className="col-lg-4">
               <div className="track_box whyBox">
-                <h4><span>มือใหม่</span> ไม่เคยส่ง SMS ผ่านเว็บมาก่อน</h4>
-                <p>การส่ง SMS ผ่าน ThaiBulkSMS ไม่ซับซ้อนแม้ไม่รู้เรื่องเทคนิคก็ส่งได้ หากติดปัญหาก็มีหลายช่องทางที่พร้อมช่วยเหลือ</p>
+                <h4
+                  dangerouslySetInnerHTML={{
+                    __html: t(
+                      'TrackSection::<span>For new users</span> who have yet to send SMS messages through the web.'
+                    ),
+                  }}
+                >
+                  {/* <span>มือใหม่</span> ไม่เคยส่ง SMS ผ่านเว็บมาก่อน */}
+                </h4>
+                <p>
+                  {t(
+                    'TrackSection::Sending SMS messages through ThaiBulkSMS is free from complications and does not require technical knowledge. If you are stuck with problems, there are many channels that are ready to assist.'
+                  )}
+                </p>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="track_box whyBox v2">
-                <h4><span>Marketer</span> ที่อยากวัดผลแคมเปญ SMS</h4>
-                <p>มีเครื่องมือวัดผลและรายงานที่เข้าใจง่าย ช่วยให้นำไปวิเคราะห์ต่อได้ว่า แคมเปญประสบความสำเร็จหรือไม่</p>
+                <h4
+                  dangerouslySetInnerHTML={{
+                    __html: t(
+                      'TrackSection::<span>For Marketers</span> who wish to analyze the effects of their SMS campaigns'
+                    ),
+                  }}
+                >
+                  {/* <span>Marketer</span> ที่อยากวัดผลแคมเปญ SMS */}
+                </h4>
+                <p>
+                  {t(
+                    'TrackSection::Results analysis tools and easily understandable reports are available, leading to future analyses on whether the campaign was successful.'
+                  )}
+                </p>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="track_box whyBox v2">
-                <h4><span>Developer</span> ที่ต้องเขียนโปรแกรมเชื่อมต่อ API</h4>
-                <p>เขียนโปรแกรมเชื่อมต่อกับ API ได้ง่าย รองรับหลากหลายภาษา และยังมีระบบพร้อมใช้สำหรับการส่ง OTP</p>
+                <h4
+                  dangerouslySetInnerHTML={{
+                    __html: t(
+                      'TrackSection::<span>For Developers</span> who write programs that link with APIs'
+                    ),
+                  }}
+                >
+                  {/* <span>Developer</span> ที่ต้องเขียนโปรแกรมเชื่อมต่อ API */}
+                </h4>
+                <p>
+                  {t(
+                    'TrackSection::Easy to code programs that link with APIs; a variety of languages are supported, and a system that supports OTP sending is included.'
+                  )}
+                </p>
               </div>
             </div>
           </div>
         </div>
         <div className="col-md-12 text-center">
-          <a href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`} className="btn v3">ทดลองส่งฟรี</a>
+          <a
+            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+            className="btn v3"
+          >
+            {t('TrackSection::Try Sending Messages for Free')}
+          </a>
         </div>
       </div>
       <div className="row m-80">
         <div className="col-md-6">
           <div className="track_img mt-5">
             {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
-            <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysupport.png`} alt="Image" />
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysupport.png`}
+              alt="Image"
+            />
           </div>
         </div>
         <div className="col-md-6">
           <div className="track_text mt-5">
-            <h3>พร้อมซัพพอร์ต โดยทีมงานผู้เชี่ยวชาญ</h3>
-            <p>จึงทำให้มั่นใจได้ว่าหากระบบเกิดปัญหา ทางเราจะสามารถแก้ไขให้คุณได้อย่างทันท่วงที ไม่ว่าจะเป็นด้าน Hardware หรือ Software ก็ตาม</p>
+            <h3>
+              {t(
+                'TrackSection::Included with support from a team of specialists'
+              )}
+            </h3>
+            <p>
+              {t(
+                'TrackSection::This creates confidence that if the system experiences problems, we can immediately fix the situation for you, regardless of whether it is a Hardware or Software issue.'
+              )}
+            </p>
           </div>
         </div>
       </div>
@@ -53,25 +110,36 @@ const TrackSection = ({ t }: any) => (
         <div className="col-md-6 col-md-push-6">
           <div className="track_img mt-5">
             {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
-            <img className="lazyload" data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysecure.png`} alt="Image" />
+            <img
+              className="lazyload"
+              data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysecure.png`}
+              alt="Image"
+            />
           </div>
         </div>
         <div className="col-md-6 col-md-pull-6">
           <div className="track_text mt-5">
-            <h3>เก็บรักษาข้อมูลอย่างปลอดภัย ด้วยมาตรฐาน Internet Banking</h3>
-            <p>ด้วยระบบรักษาความปลอดภัย SSL ที่เป็นมาตรฐานสูงสุดซึ่งใช้ใน Internet Banking ต่าง ๆ เพื่อให้มั่นใจได้ว่าเมื่อเข้าใช้งาน ThaiBulkSMS จะได้รับความปลอดภัยเหมือนใช้ Internet Banking</p>
+            <h3>
+              {t(
+                'TrackSection::Safely preserve your data with Internet Banking standards.'
+              )}
+            </h3>
+            <p>
+              {t(
+                'TrackSection::With an SSL security system that has the highest standards used in various Internet Banking platforms, you can rest assured that your use of ThaiBulkSMS will receive the same level of safety as that of Internet Banking.'
+              )}
+            </p>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 );
 TrackSection.getInitialProps = async () => ({
-  namespacesRequired: ['OtpTrackSection'],
+  namespacesRequired: ['WhyThaibulksms'],
 });
 
 TrackSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('OtpTrackSection')(TrackSection);
+export default withTranslation('WhyThaibulksms')(TrackSection);

@@ -62,7 +62,7 @@ const SimpleSliderSection = ({ t }: any) => {
               <div className="simple_slider_heading">
                 <h3
                   dangerouslySetInnerHTML={{
-                    __html: t('homesimpleslider.header'),
+                    __html: t('SimpleSliderSection::Covering every purpose of SMS sending'),
                   }}
                 ></h3>
               </div>
@@ -133,17 +133,21 @@ const SimpleSliderSection = ({ t }: any) => {
             >
               <div className="item">
                 <div className="simple_slider_item">
-                  <h4>{t('homesimpleslider.item.1.title')}</h4>
+                  <h4
+                    dangerouslySetInnerHTML={{
+                      __html: t('SimpleSliderSection::Promoting marketing activities'),
+                    }}>
+                  </h4>
                   <img
                     className="lazyload"
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User01.png`}
                     alt="Image"
                   />
                   <p>
-                    {t('homesimpleslider.item.1.desc')}
+                    {t('SimpleSliderSection::On 20 June, extra discounts of up to 30% for organic products in the promotion. Click here to instantly receive the code.')}
                     {/* <Link href="/">
                       <a >
-                        <span>{t('homesimpleslider.item.1.link')}</span>
+                        <span>{t('SimpleSliderSection.item.1.link')}</span>
                       </a>
                     </Link> */}
                   </p>
@@ -151,7 +155,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
-                    {t('homesimpleslider.testBtn')}
+                    {t('SimpleSliderSection::Try SMS sending for free')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
                     {process.env.NEXT_PUBLIC_BASE_ASSET +
@@ -161,17 +165,17 @@ const SimpleSliderSection = ({ t }: any) => {
               </div>
               <div className="item">
                 <div className="simple_slider_item">
-                  <h4>{t('homesimpleslider.item.2.title')}</h4>
+                  <h4>{t('SimpleSliderSection::Notification of expiry date')}</h4>
                   <img
                     className="lazyload"
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User02.png`}
                     alt="Image"
                   />
                   <p>
-                    {t('homesimpleslider.item.2.desc')}
+                    {t('SimpleSliderSection::Your car insurance is expiring in July 2020. Click here to extend your insurance.')}
                     {/* <Link href="/">
                       <a >
-                        <span>{t('homesimpleslider.item.2.link')}</span>
+                        <span>{t('SimpleSliderSection.item.2.link')}</span>
                       </a>
                     </Link> */}
                   </p>
@@ -179,7 +183,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
-                    {t('homesimpleslider.testBtn')}
+                    {t('SimpleSliderSection::Try SMS sending for free')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
                     {process.env.NEXT_PUBLIC_BASE_ASSET +
@@ -189,18 +193,18 @@ const SimpleSliderSection = ({ t }: any) => {
               </div>
               <div className="item">
                 <div className="simple_slider_item">
-                  <h4>{t('homesimpleslider.item.3.title')}</h4>
+                  <h4>{t('SimpleSliderSection::OTP for identity verification')}</h4>
                   <img
                     className="lazyload"
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User03.png`}
                     alt="Image"
                   />
-                  <p>{t('homesimpleslider.item.3.desc')}</p>
+                  <p>{t('SimpleSliderSection::Your OTP password is 345034 (Reference code YXCSF). Please use it for identity verification within 5 minutes')}</p>
                   <a
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
-                    {t('homesimpleslider.testBtn')}
+                    {t('SimpleSliderSection::Try SMS sending for free')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
                     {process.env.NEXT_PUBLIC_BASE_ASSET +
@@ -210,17 +214,17 @@ const SimpleSliderSection = ({ t }: any) => {
               </div>
               <div className="item">
                 <div className="simple_slider_item">
-                  <h4>{t('homesimpleslider.item.4.title')}</h4>
+                  <h4>{t('SimpleSliderSection::Notification of delivery status')}</h4>
                   <img
                     className="lazyload"
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User04.png`}
                     alt="Image"
                   />
                   <p>
-                    {t('homesimpleslider.item.4.desc')}
+                    {t('SimpleSliderSection::Parcel no. ADJ0349234 is out for delivery. The parcel will be delivered in 1-3 working days. Click here to instantly receive the code.')}
                     {/* <Link href="/">
                       <a >
-                        <span>{t('homesimpleslider.item.4.link')}</span>
+                        <span>{t('SimpleSliderSection.item.4.link')}</span>
                       </a>
                     </Link> */}
                   </p>
@@ -228,7 +232,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
-                    {t('homesimpleslider.testBtn')}
+                    {t('SimpleSliderSection::Try SMS sending for free')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
                     {process.env.NEXT_PUBLIC_BASE_ASSET +
@@ -238,17 +242,17 @@ const SimpleSliderSection = ({ t }: any) => {
               </div>
               <div className="item">
                 <div className="simple_slider_item a">
-                  <h4>{t('homesimpleslider.item.5.title')}</h4>
+                  <h4>{t('SimpleSliderSection::Notification of special privilege for members')}</h4>
                   <img
                     className="lazyload"
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User05.png`}
                     alt="Image"
                   />
                   <p>
-                    {t('homesimpleslider.item.5.desc')}
+                    {t('SimpleSliderSection::Today only, a 700.- coupon for Mr Natdanai. Click here to instantly receive the code.')}
                     {/* <Link href="/">
                       <a >
-                        <span>{t('homesimpleslider.item.5.link')}</span>
+                        <span>{t('SimpleSliderSection.item.5.link')}</span>
                       </a>
                     </Link> */}
                   </p>
@@ -256,7 +260,7 @@ const SimpleSliderSection = ({ t }: any) => {
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v9"
                   >
-                    {t('homesimpleslider.testBtn')}
+                    {t('SimpleSliderSection::Try SMS sending for free')}
                   </a>
                   <span className="linking" style={{ display: 'none' }}>
                     {process.env.NEXT_PUBLIC_BASE_ASSET +
@@ -266,7 +270,7 @@ const SimpleSliderSection = ({ t }: any) => {
               </div>
             </OwlCarousel>
             {/* <a  className="lang_link text-right pr-4">
-              {t('homesimpleslider.testBtn')}
+              {t('SimpleSliderSection::Try SMS sending for free')}
               <img
                 className="lazyload"
                 data-src="/img/arrow_3.png"
@@ -281,10 +285,10 @@ const SimpleSliderSection = ({ t }: any) => {
 };
 
 SimpleSliderSection.getInitialProps = async () => ({
-  namespacesRequired: ['HomeSimpleSliderSection'],
+  namespacesRequired: ['Home'],
 });
 
 SimpleSliderSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomeSimpleSliderSection')(SimpleSliderSection);
+export default withTranslation('Home')(SimpleSliderSection);

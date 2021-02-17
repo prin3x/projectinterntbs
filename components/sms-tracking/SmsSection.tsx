@@ -8,10 +8,16 @@ const SmsSectionV4 = ({ t }: any) => (
           <div className="newsletter_text">
             <h3
               dangerouslySetInnerHTML={{
-                __html: t('sms-trackingsmssection.title'),
+                __html: t(
+                  'SmsSection::Real-time status checking on whether or not the recipient has read the message.'
+                ),
               }}
             ></h3>
-            <p>{t('sms-trackingsmssection.desc')}</p>
+            <p>
+              {t(
+                'SmsSection::Free from issues where results cannot be measured after sending the SMS: sending with the Link feature through SMS Tracking allows you to accurately check the reading status, in addition to immediately following up on results after sending.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-lg-7">
@@ -32,7 +38,9 @@ const SmsSectionV4 = ({ t }: any) => (
                 <div className="sms_form_text">
                   <h4
                     dangerouslySetInnerHTML={{
-                      __html: t('sms-trackingsmssection.freetitle'),
+                      __html: t(
+                        'SmsSection::Word of mouth does not equal what the eye sees: test SMS Tracking on your own.'
+                      ),
                     }}
                   ></h4>
                 </div>
@@ -43,7 +51,7 @@ const SmsSectionV4 = ({ t }: any) => (
                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                     className="btn v8"
                   >
-                    {t('sms-trackingsmssection.freeBtn')}
+                    {t('SmsSection::Free trial')}
                   </a>
                 </div>
               </div>
@@ -55,10 +63,10 @@ const SmsSectionV4 = ({ t }: any) => (
   </div>
 );
 SmsSectionV4.getInitialProps = async () => ({
-  namespacesRequired: ['Sms-trackingSmsSection'],
+  namespacesRequired: ['Sms-tracking'],
 });
 
 SmsSectionV4.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Sms-trackingSmsSection')(SmsSectionV4);
+export default withTranslation('Sms-tracking')(SmsSectionV4);

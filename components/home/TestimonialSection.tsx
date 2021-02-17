@@ -11,7 +11,7 @@ const TestimonialSection = ({ t }: any) => (
         <div className="col-md-12">
           <h3
             className="section_title"
-            dangerouslySetInnerHTML={{ __html: t('hometestimonial.header') }}
+            dangerouslySetInnerHTML={{ __html: t('TestimonialSection::Customers who trust ThaiBulk SMS') }}
           >
             {/* {t('h1')} <span className="col_one">ThaiBulk</span>{' '}
             <span className="col_two">SMS</span> */}
@@ -49,7 +49,7 @@ const TestimonialSection = ({ t }: any) => (
             <div className="item">
               <div className="testimonial_item">
                 <p className="client_quote">
-                  {t('hometestimonial.item.1.content')}
+                  {t('TestimonialSection::ThaiBulkSMS is an SMS-sending service provider which makes sure that sending text messages to customers is very easy and convenient because the service allows us to send the messages by ourselves without having to go through an intermediary. Plus, reports on message sending are provided, enabling more accurate assessment of the results.')}
                 </p>
                 <div className="client_info">
                   {/* <div className="client_img">
@@ -60,7 +60,7 @@ const TestimonialSection = ({ t }: any) => (
                     />
                   </div> */}
                   <div className="client_name">
-                    <h6>{t('hometestimonial.item.1.credit')}</h6>
+                    <h6>{t('TestimonialSection::Syn Mun Kong Insurance PLC')}</h6>
                     {/* <p>{t('p2')}</p> */}
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const TestimonialSection = ({ t }: any) => (
             <div className="item">
               <div className="testimonial_item">
                 <p className="client_quote">
-                  {t('hometestimonial.item.2.content')}
+                  {t('TestimonialSection::The prices represent an excellent value considering the quality of the service. The service meets all our expectations including measurement of results, viewing of reports and controlling budgets which are adjustable in each month or until the credits run out.')}
                 </p>
                 <div className="client_info">
                   {/* <div className="client_img">
@@ -80,7 +80,7 @@ const TestimonialSection = ({ t }: any) => (
                     />
                   </div> */}
                   <div className="client_name">
-                    <h6>{t('hometestimonial.item.2.credit')}</h6>
+                    <h6>{t('TestimonialSection::Smart One Logistics Co., Ltd.')}</h6>
                     {/* <p>{t('p2')}</p> */}
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const TestimonialSection = ({ t }: any) => (
             <div className="item">
               <div className="testimonial_item">
                 <p className="client_quote">
-                  {t('hometestimonial.item.3.content')}
+                  {t('TestimonialSection::The service ensures that marketing by SMS can be executed easily and speedily. The staff are also available to provide helpful advice and rapid solutions to various problems.')}
                 </p>
                 <div className="client_info">
                   {/* <div className="client_img">
@@ -100,7 +100,7 @@ const TestimonialSection = ({ t }: any) => (
                     />
                   </div> */}
                   <div className="client_name">
-                    <h6>{t('hometestimonial.item.3.credit')}</h6>
+                    <h6>{t('TestimonialSection::National Housing Authority of Thailand')}</h6>
                     {/* <p>{t('p2')}</p> */}
                   </div>
                 </div>
@@ -109,7 +109,7 @@ const TestimonialSection = ({ t }: any) => (
             {/* <div className="item">
               <div className="testimonial_item">
                 <p className="client_quote">
-                  {t('hometestimonial.item.1.content')}
+                  {t('TestimonialSection::item.1.content')}
                 </p>
                 <div className="client_info">
                   <div className="client_img">
@@ -120,7 +120,7 @@ const TestimonialSection = ({ t }: any) => (
                     />
                   </div>
                   <div className="client_name">
-                    <h6>{t('hometestimonial.item.1.credit')}</h6>
+                    <h6>{t('TestimonialSection::item.1.credit')}</h6>
                     <p>{t('p2')}</p>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const TestimonialSection = ({ t }: any) => (
       <div className="row">
         <div className="col-md-12 text-center">
           {/* <Link href="/SuccessStoriesListing">
-            <a className="btn v6">{t('hometestimonial.storyBtn')}</a>
+            <a className="btn v6">{t('TestimonialSection::storyBtn')}</a>
           </Link> */}
         </div>
       </div>
@@ -140,10 +140,10 @@ const TestimonialSection = ({ t }: any) => (
   </div>
 );
 TestimonialSection.getInitialProps = async () => ({
-  namespacesRequired: ['HomeHeroSection'],
+  namespacesRequired: ['Home'],
 });
 
 TestimonialSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('HomeTestimonialSection')(TestimonialSection);
+export default withTranslation('Home')(TestimonialSection);

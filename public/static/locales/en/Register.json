@@ -1,12 +1,12 @@
 {
   "register": {
-    "header": "ENสร้างบัญชีผู้ใช้ เพื่อทดลองส่งฟรี",
-    "firstname": "ENชื่อ",
-    "lastname": "ENนามสกุล",
-    "phone": "ENเบอร์มือถือ",
-    "email": "ENอีเมล",
-    "rule": "ENยอมรับ ข้อกำหนดและเงื่อนไขการใช้บริการ",
-    "news": "ENต้องการรับข่าวสารจาก TBS ผ่านทางอีเมลและ SMS",
-    "createBtn": "ENสร้างบัญชีผู้ใช้"
+    "header": "Create an account for FREE trial",
+    "firstname": "First name",
+    "lastname": "Last name",
+    "phone": "Mobile number",
+    "email": "E-Mail",
+    "rule": "Accept terms and conditions of service",
+    "news": "I would like to receive news from ThaiBulkSMS via email and SMS.",
+    "createBtn": "Create account"
   }
 }

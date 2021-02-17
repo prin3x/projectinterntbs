@@ -1,34 +1,34 @@
 {
   "paymenthero": {
-    "header": "ENสั่งซื้อแพ็กเกจ",
+    "header": "Order package",
     "payment": {
-      "header": "ENเลือกช่องทางชำระเงิน",
+      "header": "Choose a payment method",
       "creditnow": {
-        "header": "ENชำระแล้วใช้เครดิตได้ทันที",
-        "qrcodetitle": "ENชำระผ่าน QR Code<br/>ใช้ได้ทุกธนาคาร",
-        "creditcradtitile": "ENชำระด้วยบัตรเครดิต"
+        "header": "Pay and spend credit immediately",
+        "qrcodetitle": "Pay with QR Code<br/>available all Thai banks",
+        "creditcradtitile": "Pay with Credit Card"
       },
       "creditwait": {
-        "header": "ENชำระแล้วต้องรอเจ้าหน้าที่ยืนยัน",
-        "title": "ENโอนเข้าบัญชีธนาคาร",
-        "desc": "ENต้องแจ้งโอนเงิน แล้วรอเจ้าหน้าที่ตรวจสอบ<br/>และยืนยันการโอน จึงจะใช้เครดิตได้"
+        "header": "Pay and wait for confirmation",
+        "title": "Bank transfer",
+        "desc": "Must inform the transfer then wait for our officer to check <br/> and confirm the transfer."
       }
     },
-    "taxheader": "ENต้องการให้จัดส่งใบกำกับภาษี",
-    "taxaddress": "ENที่อยู่สำหรับจัดส่ง",
-    "changeaddressBtn": "ENเปลี่ยนที่อยู่จัดส่ง",
+    "taxheader": "Want the tax invoice to be sent",
+    "taxaddress": "Address for shipping",
+    "changeaddressBtn": "Change shipping address",
     "form": {
-      "contact_point": "ชื่อผู้รับ",
-      "address": "ENที่อยู่ เช่น เลขที่, หมู่บ้าน, อาคาร, ซอย",
-      "street": "ENถนน",
-      "district": "ENแขวง / ตำบล",
-      "county": "ENเขต / อำเภอ",
-      "province": "ENจังหวัด",
-      "postcode": "ENรหัสไปรษณีย์",
-      "submitBtn": "ENยืนยันการเปลี่ยนที่อยู่จัดส่ง"
+      "contact_point": "Recipient name",
+      "address": "Address such as Number, Village, Building, Alley",
+      "street": "Road",
+      "district": "Subdistrict",
+      "county": "District",
+      "province": "Province",
+      "postcode": "Postcode",
+      "submitBtn": "Confirm change shipping address"
     },
     "note": {
-      "title": "ENหมายเหตุ",
+      "title": "Note",
       "rule": {
         "1": "EN• หากต้องการแก้ไขใบกำกับภาษี ให้ทำการแก้ไขภายในวันเดียวกับที่สั่งซื้อเท่านั้น",
         "2": "EN• กรณีที่มีการหักภาษี ณ ที่จ่าย ใบเสร็จ/ใบกำกับภาษีจะถูกส่งออกหลังจากทางบริษัทได้รับหนังสือหักฯ เรียบร้อยแล้วเท่านั้น",
@@ -38,26 +38,26 @@
         "6": "EN• รายละเอียดสำหรับการหักภาษี ณ ที่จ่าย"
       },
       "company": {
-        "companyname": "ENบริษัท วันม๊อบบี้ จำกัด",
-        "companyaddress": "EN<li>เลขที่ 2521/10 ถนนลาดพร้าว แขวงคลองเจ้าคุณสิงห์</li><li>เขตวังทองหลาง กทม 10310</li><li>เลขทะเบียนนิติบุคคลเลขที่ 0105550113634</li>"
+        "companyname": "1MOBY Company Limited",
+        "companyaddress": "<li>2521/10 Ladprao Road,</li><li>Klong Chao Khun Singh Subdistrict,</li><li>Wangthonglang District,</li><li>Bangkok, Thailand 10310</li><li>Corporate registration number : 0105550113634</li>"
       }
     },
     "taxinvoice": {
-      "title": "ENข้อมูลสำหรับออกใบกำกับภาษี",
-      "package": "ENแพ็กเกจ Standard Valued Pack",
-      "bath": "ENบาท",
-      "year": "ENปี",
-      "month": "ENเดือน",
-      "price": "ENราคา / ข้อความ",
-      "quantity": "ENจำนวนข้อความ",
-      "life": "ENอายุการใช้งาน",
-      "changepackage": "ENเปลี่ยนแพ็กเกจ",
-      "waitconfirmtitle": "ENชำระแล้วต้องรอเจ้าหน้าที่ยืนยัน",
-      "usecodeBtn": "ENใช้โค้ด",
-      "pricepackage": "ENราคาแพ็กเกจ",
-      "discount": "ENส่วนลดจากโค้ด",
-      "totalprice": "ENรวมทั้งหมด",
-      "confirepayment": "ENยืนยันการชำระ"
+      "title": "Information for issuing tax invoices",
+      "package": "\"Standard Valued Pack\" Package",
+      "bath": "Baht",
+      "year": "Year",
+      "month": "Month",
+      "price": "Price / Message",
+      "quantity": "Message volume",
+      "life": "Usage duration",
+      "changepackage": "Change package",
+      "waitconfirmtitle": "After payment has to wait for the staff to confirm",
+      "usecodeBtn": "Apply coupon",
+      "pricepackage": "Package price",
+      "discount": "Discount from coupon",
+      "totalprice": "Total Price",
+      "confirepayment": "Confirm payment"
     }
   }
 }

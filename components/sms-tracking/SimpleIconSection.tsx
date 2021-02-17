@@ -6,8 +6,16 @@ const SimpleIconSectionV2 = ({ t }: any) => (
       <div className="row">
         <div className="col-xl-10 offset-xl-1 col-md-12">
           <div className="simple_icon_title">
-            <h3>{t('sms-trackingsimpleicon.title')}</h3>
-            <p>{t('sms-trackingsimpleicon.desc')}</p>
+            <h3>
+              {t(
+                'SimpleIconSection::Accurate campaign results measurement with tangible data'
+              )}
+            </h3>
+            <p>
+              {t(
+                'SimpleIconSection::You can use data from the “Campaign results” of SMS Tracking for marketing analyses on how efficient and price-effective your SMS campaign was.'
+              )}
+            </p>
           </div>
         </div>
         <div className="col-md-12">
@@ -26,7 +34,9 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                 />
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: t('sms-trackingsimpleicon.feature.1'),
+                    __html: t(
+                      'SimpleIconSection::Number of SMS messages sent to the recipient'
+                    ),
                   }}
                 ></p>
               </div>
@@ -38,7 +48,9 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                 />
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: t('sms-trackingsimpleicon.feature.2'),
+                    __html: t(
+                      'SimpleIconSection::Number of recipients who opened the message'
+                    ),
                   }}
                 ></p>
               </div>
@@ -50,7 +62,9 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                 />
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: t('sms-trackingsimpleicon.feature.3'),
+                    __html: t(
+                      'SimpleIconSection::Number of people who opened the website from the SMS message'
+                    ),
                   }}
                 ></p>
               </div>
@@ -61,9 +75,9 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                   alt="Image"
                 />
                 <p>
-                  {t('sms-trackingsimpleicon.p5-1')}
+                  {t('SimpleIconSection::p5-1')}
                   <br />
-                  {t('sms-trackingsimpleicon.p5-2')}
+                  {t('SimpleIconSection::p5-2')}
                 </p>
               </div> */}
               <div className="simple_icon smsTrakingpage">
@@ -74,7 +88,9 @@ const SimpleIconSectionV2 = ({ t }: any) => (
                 />
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: t('sms-trackingsimpleicon.feature.4'),
+                    __html: t(
+                      'SimpleIconSection::Number of credits used in the campaign'
+                    ),
                   }}
                 ></p>
               </div>
@@ -102,12 +118,10 @@ const SimpleIconSectionV2 = ({ t }: any) => (
   </div>
 );
 SimpleIconSectionV2.getInitialProps = async () => ({
-  namespacesRequired: ['Sms-trackingSimpleIconSection'],
+  namespacesRequired: ['Sms-tracking'],
 });
 
 SimpleIconSectionV2.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Sms-trackingSimpleIconSection')(
-  SimpleIconSectionV2
-);
+export default withTranslation('Sms-tracking')(SimpleIconSectionV2);
