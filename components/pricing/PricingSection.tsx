@@ -52,7 +52,7 @@ const PricingSection = ({ t }: any) => {
               </ul>
               <div className="price_plan">
                 <span>{t('PricingSection::Best SMS pricing, only')}</span>
-                <h2 style={{ fontSize: '72px', fontWeight: 500 }}>
+                <h2 className="text_edit_en" style={{ fontWeight: 500 }}>
                   0.21
                   <span style={{ marginLeft: '10px' }}>
                     {t('PricingSection::baht / message')}
@@ -107,7 +107,7 @@ const PricingSection = ({ t }: any) => {
               </ul>
               <div className="price_plan">
                 <span>{t('PricingSection::Best SMS pricing, only')}</span>
-                <h2 style={{ fontSize: '72px', fontWeight: 500 }}>
+                <h2 className="text_edit_en" style={{ fontWeight: 500 }}>
                   0.24
                   <span style={{ marginLeft: '10px' }}>
                     {t('PricingSection::baht / message')}

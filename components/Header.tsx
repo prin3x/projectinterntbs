@@ -54,8 +54,23 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
     </div>
   )
 }
+
+const options = [
+  { value: 'TH', text: 'TH' },
+  { value: 'EN', text: 'EN' }
+]
+
+const MySelect = options.map((list) => {
+  return (
+    <option value={list.value}>{list.text}</option>
+  );
+});
+
 const Header = ({ t }: any) => {
-  const lang = i18n.language;
+  const [lang, setLang] = useState(Cookie.get('LANG') ?? i18n.language)
+  useEffect(() => {
+    onSwitchLanguage(lang)
+  }, [lang, setLang])
   const [isLogin, setIsLogin] = useState(Cookie.get('PASSCODE') ? true : false);
   const headerBar: any = useRef(null);
   function sticky() {
@@ -75,6 +90,9 @@ const Header = ({ t }: any) => {
   //   else elDivnice.classList.add('open');
   // }
   useEffect(() => {
+    if (lang) {
+      onSwitchLanguage(lang)
+    }
     // check Cookie Login
     if (Cookie.get('PASSCODE')) {
       setIsLogin(true);
@@ -85,8 +103,10 @@ const Header = ({ t }: any) => {
     };
   }, []);
 
-  const onSwitchLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(e.currentTarget.value);
+  const onSwitchLanguage = (value: string) => {
+    setLang(value)
+    Cookie.set('LANG', value);
+    i18n.changeLanguage(value.toLowerCase());
   }
 
   return (
@@ -99,9 +119,12 @@ const Header = ({ t }: any) => {
                 <a href="tel:027986000">02-798-6000</a>
               </div>
               <div className="header_select">
-                <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
+                {/* <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
                   <option value="th">TH</option>
                   <option value="en">EN</option>
+                </select> */}
+                <select className="user_select" onChange={(e) => onSwitchLanguage(e.currentTarget.value)} value={lang}>
+                  {MySelect}
                 </select>
               </div>
             </div>
@@ -439,9 +462,12 @@ const Header = ({ t }: any) => {
                 </ul>
               </nav>
               <div className="d-lg-none sm-right">
-                <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
+                {/* <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
                   <option value="th">TH</option>
                   <option value="en">EN</option>
+                </select> */}
+                <select className="user_select" onChange={(e) => onSwitchLanguage(e.currentTarget.value)} value={lang}>
+                  {MySelect}
                 </select>
                 <a className="mobile-bar js-menu-toggle">
                   <span></span>
