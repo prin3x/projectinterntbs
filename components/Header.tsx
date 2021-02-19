@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { i18n, withTranslation, Link } from '../i18n';
 import React, { useState, useRef, useEffect } from 'react';
 import Cookie from 'js-cookie';
+import appConfig from '../appConfig';
 
 const HeaderTopMenuMobile = () => (
   <div className="site-mobile-menu-header">
@@ -67,7 +68,7 @@ const MySelect = options.map((list) => {
 });
 
 const Header = ({ t }: any) => {
-  const [lang, setLang] = useState(Cookie.get('LANG') ?? i18n.language)
+  const [lang, setLang] = useState(Cookie.get('LANG') ?? i18n.language.toUpperCase())
   useEffect(() => {
     onSwitchLanguage(lang)
   }, [lang, setLang])
@@ -104,8 +105,16 @@ const Header = ({ t }: any) => {
   }, []);
 
   const onSwitchLanguage = (value: string) => {
-    setLang(value)
-    Cookie.set('LANG', value);
+    setLang(value);
+    let domain = 'localhost';
+    if (appConfig.APP_ENV === appConfig.production)
+      domain = '.thaibulksms.com';
+    else if (appConfig.APP_ENV === appConfig.internalTest)
+      domain = '.1mobyline.com';
+    Cookie.set('LANG', value, {
+      expires: 0.15,
+      domain,
+    });
     i18n.changeLanguage(value.toLowerCase());
   }
 
