@@ -92,7 +92,6 @@ const Header = ({ t }: any) => {
       if (Cookie.get('LANG') === undefined) {
         onSwitchLanguage('TH');
       } else {
-        console.log('cookies: ' + Cookie.get('LANG'));
         const textLang: any = Cookie.get('LANG');
         setLang(textLang);
         i18n.changeLanguage(textLang.toLowerCase());
