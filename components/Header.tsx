@@ -68,10 +68,7 @@ const MySelect = options.map((list) => {
 });
 
 const Header = ({ t }: any) => {
-  const [lang, setLang] = useState(Cookie.get('LANG') ?? i18n.language.toUpperCase())
-  useEffect(() => {
-    onSwitchLanguage(lang)
-  }, [lang, setLang])
+  const [lang, setLang] = useState('TH')
   const [isLogin, setIsLogin] = useState(Cookie.get('PASSCODE') ? true : false);
   const headerBar: any = useRef(null);
   function sticky() {
@@ -91,9 +88,17 @@ const Header = ({ t }: any) => {
   //   else elDivnice.classList.add('open');
   // }
   useEffect(() => {
-    if (lang) {
-      onSwitchLanguage(lang)
+    async function loadCookies() {
+      if (Cookie.get('LANG') === undefined) {
+        onSwitchLanguage('TH');
+      } else {
+        console.log('cookies: ' + Cookie.get('LANG'));
+        const textLang: any = Cookie.get('LANG');
+        setLang(textLang);
+        i18n.changeLanguage(textLang.toLowerCase());
+      }
     }
+    loadCookies();
     // check Cookie Login
     if (Cookie.get('PASSCODE')) {
       setIsLogin(true);
@@ -102,7 +107,7 @@ const Header = ({ t }: any) => {
     return () => {
       window.removeEventListener('scroll', sticky);
     };
-  }, []);
+  }, [setLang]);
 
   const onSwitchLanguage = (value: string) => {
     setLang(value);
