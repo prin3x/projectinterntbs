@@ -112,7 +112,6 @@ const Header = ({ t }: any) => {
     else if (appConfig.APP_ENV === appConfig.internalTest)
       domain = '.1mobyline.com';
     Cookie.set('LANG', value, {
-      expires: 0.15,
       domain,
     });
     i18n.changeLanguage(value.toLowerCase());
