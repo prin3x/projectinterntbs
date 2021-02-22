@@ -88,16 +88,13 @@ const Header = ({ t }: any) => {
   //   else elDivnice.classList.add('open');
   // }
   useEffect(() => {
-    // async function loadCookies() {
-    //   if (Cookie.get('LANG') === undefined) {
-    //     onSwitchLanguage('TH');
-    //   } else {
-    //     const textLang: any = Cookie.get('LANG');
-    //     setLang(textLang);
-    //     i18n.changeLanguage(textLang.toLowerCase());
-    //   }
-    // }
-    // loadCookies();
+    async function loadCookies() {
+      if (Cookie.get('LANG')) {
+        const textLang: any = Cookie.get('LANG');
+        setLang(textLang);
+      }
+    }
+    loadCookies();
     // check Cookie Login
     if (Cookie.get('PASSCODE')) {
       setIsLogin(true);
