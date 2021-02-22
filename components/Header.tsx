@@ -117,6 +117,7 @@ const Header = ({ t }: any) => {
       domain = '.1mobyline.com';
     Cookie.set('LANG', value, {
       domain,
+      expires: 7,
     });
     i18n.changeLanguage(value.toLowerCase());
   }
