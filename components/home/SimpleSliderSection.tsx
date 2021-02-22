@@ -291,4 +291,4 @@ SimpleSliderSection.getInitialProps = async () => ({
 SimpleSliderSection.propTypes = {
   t: PropTypes.func.isRequired,
 };
-export default withTranslation('Home')(SimpleSliderSection);
+export default withTranslation('Home')(React.memo(SimpleSliderSection));

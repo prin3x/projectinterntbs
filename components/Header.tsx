@@ -89,12 +89,9 @@ const Header = ({ t }: any) => {
   // }
   useEffect(() => {
     async function loadCookies() {
-      if (Cookie.get('LANG') === undefined) {
-        onSwitchLanguage('TH');
-      } else {
+      if (Cookie.get('LANG')) {
         const textLang: any = Cookie.get('LANG');
         setLang(textLang);
-        i18n.changeLanguage(textLang.toLowerCase());
       }
     }
     loadCookies();
