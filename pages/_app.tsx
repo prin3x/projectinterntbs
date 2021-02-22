@@ -43,7 +43,13 @@ axios.interceptors.response.use(
 );
 
 function MyApp({ Component, pageProps }: any) {
-  if (!i18n.language) i18n.changeLanguage('th');
+  let lang = Cookie.get('LANG');
+  if (lang === undefined) {
+    i18n.changeLanguage('th');
+  } else {
+    i18n.changeLanguage(lang.toLowerCase());
+  }
+  // if (!i18n.language) i18n.changeLanguage('th');
   const router = useRouter();
   const handleRouteChange = async (url: string) => {
     if ((await checktoken()) && url === '/log-in') {
