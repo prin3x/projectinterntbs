@@ -1,5 +1,5 @@
 import React from 'react';
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import { withTranslation } from '../i18n';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
