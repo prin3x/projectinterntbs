@@ -308,7 +308,7 @@ export async function quickRegisterStep2(param: any): Promise<QuickRegisterStep2
         welcome_token: '',
         data: {},
         error: {
-          code: 'quickregistersecondstepdto.fail',
+          code: 'quickregistersecondstepdto::fail',
           erromessagerText: '',
         },
       };

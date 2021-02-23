@@ -162,7 +162,7 @@ const TestQuickregister = ({ t }: any) => {
   };
   const handleErorrStep2 = (error: any) => {
     if (error.pin) {
-      return 'SmsSection::TestQuickregister::validate::pin.' + error.pin.type;
+      return 'SmsSection::TestQuickregister::validate::pin::' + error.pin.type;
     }
     if (error.resultStep2) {
       return 'SmsSection::TestQuickregister::resultStep2::' + error.resultStep2.type;
