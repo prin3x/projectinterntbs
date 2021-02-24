@@ -1,4 +1,4 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
@@ -264,7 +264,11 @@ const AllPricing = ({ t, packages }: any) => {
                         }}
                       >
                       </h3>
-                      <button className="btn v2 sms-btn-text" type="submit">{t('AllPricing::Contact our sales team')}</button>
+                      <Link href="/contact">
+                        <button className="btn v2 sms-btn-text">
+                          {t('AllPricing::Contact our sales team')}
+                        </button>
+                      </Link>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <p className="head-price">Standard SMS</p>

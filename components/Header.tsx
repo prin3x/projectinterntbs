@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { i18n, withTranslation, Link } from '../i18n';
 import React, { useState, useRef, useEffect } from 'react';
 import Cookie from 'js-cookie';
+import appConfig from '../appConfig';
 
 const HeaderTopMenuMobile = () => (
   <div className="site-mobile-menu-header">
@@ -54,8 +55,20 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
     </div>
   )
 }
+
+const options = [
+  { value: 'TH', text: 'TH' },
+  { value: 'EN', text: 'EN' }
+]
+
+const MySelect = options.map((list) => {
+  return (
+    <option value={list.value}>{list.text}</option>
+  );
+});
+
 const Header = ({ t }: any) => {
-  const lang = i18n.language;
+  const [lang, setLang] = useState('TH')
   const [isLogin, setIsLogin] = useState(Cookie.get('PASSCODE') ? true : false);
   const headerBar: any = useRef(null);
   function sticky() {
@@ -75,6 +88,13 @@ const Header = ({ t }: any) => {
   //   else elDivnice.classList.add('open');
   // }
   useEffect(() => {
+    async function loadCookies() {
+      if (Cookie.get('LANG')) {
+        const textLang: any = Cookie.get('LANG');
+        setLang(textLang);
+      }
+    }
+    loadCookies();
     // check Cookie Login
     if (Cookie.get('PASSCODE')) {
       setIsLogin(true);
@@ -83,10 +103,20 @@ const Header = ({ t }: any) => {
     return () => {
       window.removeEventListener('scroll', sticky);
     };
-  }, []);
+  }, [setLang]);
 
-  const onSwitchLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(e.currentTarget.value);
+  const onSwitchLanguage = (value: string) => {
+    setLang(value);
+    let domain = 'localhost';
+    if (appConfig.APP_ENV === appConfig.production)
+      domain = '.thaibulksms.com';
+    else if (appConfig.APP_ENV === appConfig.internalTest)
+      domain = '.1mobyline.com';
+    Cookie.set('LANG', value, {
+      domain,
+      expires: 7,
+    });
+    i18n.changeLanguage(value.toLowerCase());
   }
 
   return (
@@ -99,9 +129,12 @@ const Header = ({ t }: any) => {
                 <a href="tel:027986000">02-798-6000</a>
               </div>
               <div className="header_select">
-                <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
+                {/* <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
                   <option value="th">TH</option>
                   <option value="en">EN</option>
+                </select> */}
+                <select className="user_select" onChange={(e) => onSwitchLanguage(e.currentTarget.value)} value={lang}>
+                  {MySelect}
                 </select>
               </div>
             </div>
@@ -439,9 +472,12 @@ const Header = ({ t }: any) => {
                 </ul>
               </nav>
               <div className="d-lg-none sm-right">
-                <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
+                {/* <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
                   <option value="th">TH</option>
                   <option value="en">EN</option>
+                </select> */}
+                <select className="user_select" onChange={(e) => onSwitchLanguage(e.currentTarget.value)} value={lang}>
+                  {MySelect}
                 </select>
                 <a className="mobile-bar js-menu-toggle">
                   <span></span>

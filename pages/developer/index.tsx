@@ -17,8 +17,8 @@ const Developer = ({ t }: any) => (
     </Head>
     <NextSeo
       openGraph={seo.openGraph}
-      title={t('DeveloperPage:meta.title')}
-      description={t('DeveloperPage:meta.description')}
+      title={t('meta::title')}
+      description={t('meta::description')}
     />
     <div className="page_wrapper">
       <SimpleIconSection />
@@ -28,11 +28,11 @@ const Developer = ({ t }: any) => (
   </Layout>
 );
 
-export default withTranslation('DeveloperPage')(Developer);
+export default withTranslation('Developer')(Developer);
 export const getStaticProps = async () => {
   return {
     props: {
-      namespacesRequired: ['DeveloperPage'],
+      namespacesRequired: ['Developer'],
     },
   };
 };

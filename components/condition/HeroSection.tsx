@@ -10,7 +10,7 @@ const HeroSection = ({ t }: any) => {
       <p className="condition-text">{t('conditionhero::subheader')}</p>
       <div className="col-lg-12">
         <div className="condition-text">
-          <h2 className="textHeadCondition">{t('conditionhero::purpose.header')}</h2>
+          <h2 className="textHeadCondition">{t('conditionhero::purpose::header')}</h2>
           {t('conditionhero::purpose::desc')}
           <br /> <br />
           <ul
