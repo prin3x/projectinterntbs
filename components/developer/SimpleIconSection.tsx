@@ -224,7 +224,7 @@ const SimpleIconSection = ({ t }: any) => (
                 </a>
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang dev-page">
                 <img
                   className="lazyload"
@@ -239,7 +239,7 @@ const SimpleIconSection = ({ t }: any) => (
                   {t('SimpleIconSection::[Download]')}
                 </a>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang dev-page">
                 <img
@@ -256,7 +256,7 @@ const SimpleIconSection = ({ t }: any) => (
                 </a>
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang dev-page">
                 <img
                   className="lazyload"
@@ -267,6 +267,38 @@ const SimpleIconSection = ({ t }: any) => (
                   className="lang_link"
                   target="_blank"
                   href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-JavaScript.zip`}
+                >
+                  {t('SimpleIconSection::[Download]')}
+                </a>
+              </div>
+            </div> */}
+            <div className="col-lg-3 col-md-3 col-3">
+              <div className="single_lang dev-page">
+                <img
+                  className="lazyload"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-langGO.svg`}
+                  alt="Image"
+                />
+                <a
+                  className="lang_link"
+                  target="_blank"
+                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Go-lang.zip`}
+                >
+                  {t('SimpleIconSection::[Download]')}
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3 col-3">
+              <div className="single_lang dev-page">
+                <img
+                  className="lazyload"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-langJS.svg`}
+                  alt="Image"
+                />
+                <a
+                  className="lang_link"
+                  target="_blank"
+                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Nodejs.zip`}
                 >
                   {t('SimpleIconSection::[Download]')}
                 </a>
