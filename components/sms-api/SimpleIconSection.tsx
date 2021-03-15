@@ -75,7 +75,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -83,7 +83,7 @@ const SimpleIconSection = ({ t }: any) => (
                   alt="Image"
                 />
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
@@ -93,7 +93,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -110,8 +110,8 @@ const SimpleIconSection = ({ t }: any) => (
                   alt="Image"
                 />
               </div>
-            </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            </div> */}
+            {/* <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -119,7 +119,7 @@ const SimpleIconSection = ({ t }: any) => (
                   alt="Image"
                 />
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
@@ -129,11 +129,20 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang">
                 <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api08.svg`}
+                  alt="Image"
+                />
+              </div>
+            </div> */}
+            <div className="col-lg-3 col-md-3 col-3">
+              <div className="single_lang">
+                <img
+                  className="lazyload"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-langGO.svg`}
                   alt="Image"
                 />
               </div>
