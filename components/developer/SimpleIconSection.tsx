@@ -224,7 +224,7 @@ const SimpleIconSection = ({ t }: any) => (
                 </a>
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang dev-page">
                 <img
                   className="lazyload"
@@ -239,7 +239,7 @@ const SimpleIconSection = ({ t }: any) => (
                   {t('SimpleIconSection::[Download]')}
                 </a>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang dev-page">
                 <img
