@@ -58,6 +58,14 @@ function MyApp({ Component, pageProps }: any) {
     }
   };
   useEffect(() => {
+    const queryString = require('query-string');
+    const parsed = queryString.parse(window.location.search);
+    const regex = / /g;
+    const ad_id = parsed.ad_id;
+    if (ad_id !== undefined && regex.test(ad_id) !== true) {
+      Cookie.set('ad_id', ad_id.trim());
+    }
+
     TagManager.initialize(tagManagerArgs);
 
     if (!fbq.init(AppConfig.facebookConversionTracking.PIXEL_ID))
