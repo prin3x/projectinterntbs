@@ -176,7 +176,7 @@ const SimpleIconSection = ({ t }: any) => (
                 </a>
               </div>
             </div> */}
-            {/* <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang dev-page">
                 <img
                   className="lazyload"
@@ -186,12 +186,12 @@ const SimpleIconSection = ({ t }: any) => (
                 <a
                   className="lang_link"
                   target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-CShap.NET.zip`}
+                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-CShap.zip`}
                 >
                   {t('SimpleIconSection::[Download]')}
                 </a>
               </div>
-            </div> */}
+            </div>
             {/* <div className="col-lg-3 col-md-3 col-3">
               <div className="single_lang dev-page">
                 <img
@@ -299,6 +299,22 @@ const SimpleIconSection = ({ t }: any) => (
                   className="lang_link"
                   target="_blank"
                   href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Nodejs.zip`}
+                >
+                  {t('SimpleIconSection::[Download]')}
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-3 col-3">
+              <div className="single_lang dev-page">
+                <img
+                  className="lazyload"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang11.svg`}
+                  alt="Image"
+                />
+                <a
+                  className="lang_link"
+                  target="_blank"
+                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Java.zip`}
                 >
                   {t('SimpleIconSection::[Download]')}
                 </a>
