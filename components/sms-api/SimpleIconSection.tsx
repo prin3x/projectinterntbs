@@ -66,7 +66,7 @@ const SimpleIconSection = ({ t }: any) => (
       <div className="row single_lang_wrap">
         <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
           <div className="row ">
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -75,7 +75,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            {/* <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -84,7 +84,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div> */}
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -93,7 +93,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            {/* <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -102,7 +102,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -111,7 +111,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div> */}
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -120,7 +120,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -129,7 +129,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            {/* <div className="col-lg-3 col-md-3 col-3">
+            {/* <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -138,7 +138,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div> */}
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
@@ -147,7 +147,7 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div>
-            <div className="col-lg-3 col-md-3 col-3">
+            <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
