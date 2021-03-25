@@ -259,8 +259,6 @@ export async function quickRegisterStep1(param: any): Promise<QuickRegisterStep1
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/1',
       { msisdn, recaptcha },
     );
-
-    console.log('resultAPI : ', resultAPI);
     if (resultAPI.status !== 200 && resultAPI.status !== 201) {
       return {
         data: { msisdn: '' },
@@ -291,18 +289,20 @@ export async function quickRegisterStep2(param: any): Promise<QuickRegisterStep2
     let { msisdn, pin } = param;
     const gclid = Cookie.get('gclid');
     const fbclid = Cookie.get('_fbc');
+    const adID = Cookie.get('ad_id');
     const sendData = {
       msisdn,
       pin,
       gclid,
       fbclid,
+      adID,
     };
+    
     let resultAPI = await axios.post(
       process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/2',
       sendData,
     );
 
-    console.log('resultAPI : ', resultAPI);
     if (resultAPI.status !== 200 && resultAPI.status !== 201) {
       return {
         welcome_token: '',

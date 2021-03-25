@@ -58,6 +58,24 @@ function MyApp({ Component, pageProps }: any) {
     }
   };
   useEffect(() => {
+    const queryString = require('query-string');
+    const parsed = queryString.parse(window.location.search);
+    const regex = / /g;
+    const ad_id = parsed.ad_id;
+    if (ad_id !== undefined && regex.test(ad_id) !== true) {
+      if (ad_id !== undefined && regex.test(ad_id) !== true) {
+        let domain = 'localhost';
+        if (AppConfig.APP_ENV === AppConfig.production)
+          domain = '.thaibulksms.com';
+        else if (AppConfig.APP_ENV === AppConfig.internalTest)
+          domain = '.1mobyline.com';
+        Cookie.set('ad_id', ad_id.trim(), {
+          domain,
+          expires: 7,
+        });
+      }
+    }
+
     TagManager.initialize(tagManagerArgs);
 
     if (!fbq.init(AppConfig.facebookConversionTracking.PIXEL_ID))
