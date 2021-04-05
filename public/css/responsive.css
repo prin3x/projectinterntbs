@@ -509,7 +509,7 @@
   .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     font-size: 48px;
   }
-  .sms_feature_item h3, .sms_feature_item > div {
+  .sms_feature_item h3, .sms_feature_item > div ,.sms_feature_item p:nth-child(2){
     font-size: 40px;
     line-height: 1.2;
   }
@@ -958,7 +958,7 @@
   .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     font-size: 48px;
   }
-  .sms_feature_item h3, .sms_feature_item > div {
+  .sms_feature_item h3, .sms_feature_item > div ,.sms_feature_item p:nth-child(2){
     font-size: 40px;
     line-height: 1.2;
   }
@@ -5114,7 +5114,7 @@
     font-size: 30px;
     margin-bottom: 40px;
   }
-  .sms_feature_item h3, .sms_feature_item > div {
+  .sms_feature_item h3, .sms_feature_item > div ,.sms_feature_item p:nth-child(2){
     color: #31b1e7;
     font-size: 30px;
     line-height: 1.2;

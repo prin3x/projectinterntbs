@@ -12,11 +12,11 @@ const SliderSection = ({ t }: any) => (
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    <h3 className="section_title">
+                    <h2 className="section_title">
                         {t(
                             'SliderSection::SMS can be used for multiple purposes.'
                         )}{' '}
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div className="row">

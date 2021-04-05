@@ -1732,7 +1732,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-.sms_feature_item h3, .sms_feature_item > div {
+.sms_feature_item h3, .sms_feature_item > div ,.sms_feature_item p:nth-child(2){
   color: #31b1e7;
   font-size: 46px;
   line-height: 1.2;
@@ -1745,7 +1745,7 @@ a:hover {
   margin-bottom: 75px;
 }
 
-.sms_feature_item h3, .sms_feature_item > div span {
+.sms_feature_item h3, .sms_feature_item > div ,.sms_feature_item p:nth-child(2)span {
   font-size: 20px;
 }
 

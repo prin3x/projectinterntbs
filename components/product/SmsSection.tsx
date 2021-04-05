@@ -39,7 +39,7 @@ const SmsSection = ({ t }: any) => {
                                                 'SmsSection::The average number of SMS sent / day'
                                             )}
                                         </p>
-                                        <h3>300,000+</h3>
+                                        <p>300,000+</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
@@ -49,12 +49,12 @@ const SmsSection = ({ t }: any) => {
                                                 'SmsSection::The average amount of time taken to send SMS'
                                             )}
                                         </p>
-                                        <h3>
+                                        <p>
                                             1.9{' '}
                                             <span>
                                                 {t('SmsSection::Seconds')}
                                             </span>
-                                        </h3>
+                                        </p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-12">

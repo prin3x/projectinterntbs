@@ -58,7 +58,6 @@ const TestQuickregister = ({ t }: any) => {
                 action: 'confirm_number',
             },
         })
-
         ;(function fbqReady() {
             if ((window as any).fbq !== undefined) {
                 if (
@@ -148,7 +147,6 @@ const TestQuickregister = ({ t }: any) => {
                 action: 'confirm_password',
             },
         })
-
         ;(function fbqReady() {
             if ((window as any).fbq !== undefined) {
                 if (
