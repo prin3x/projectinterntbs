@@ -2969,8 +2969,8 @@ ul.before-footer {
   margin-bottom: 60px;
 }
 
-.newsletter_text h3,
-.simple_icon_title h3,
+.newsletter_text h3, .newsletter_text h2,
+.simple_icon_title h3,.simple_icon_title h2,
 .track_text h3 {
   font-size: 44px;
   line-height: 1.3;

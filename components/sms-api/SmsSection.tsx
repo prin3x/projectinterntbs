@@ -7,7 +7,7 @@ const SmsSectionV3 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className="col-lg-5">
                     <div className="newsletter_text">
-                        <h3>{t('smsSection::SMS API for Developers')}</h3>
+                        <h2>{t('smsSection::SMS API for Developers')}</h2>
                         <p>
                             {t(
                                 'smsSection::Connect using the language you selected with the ThaiBulkSMS API system.'

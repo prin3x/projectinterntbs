@@ -7,9 +7,9 @@ const SimpleIconSection = ({ t }: any) => (
             <div className="row">
                 <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
                     <div className="simple_icon_title">
-                        <h3>
+                        <h2>
                             {t('simpleIconSection::SMS API Connection Manual')}
-                        </h3>
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -52,11 +52,11 @@ const SimpleIconSection = ({ t }: any) => (
             <div className="row">
                 <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
                     <div className="simple_icon_title">
-                        <h3>
+                        <h2>
                             {t(
                                 'simpleIconSection::Connect to SMS API in a variety of languages.'
                             )}
-                        </h3>
+                        </h2>
                         <p>
                             {t(
                                 'simpleIconSection::Download the SDK example in the language that you require.'
@@ -73,7 +73,7 @@ const SimpleIconSection = ({ t }: any) => (
                                 <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api01.svg`}
-                                    alt="Image"
+                                    alt="php"
                                 />
                             </div>
                         </div>
@@ -91,7 +91,7 @@ const SimpleIconSection = ({ t }: any) => (
                                 <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api03.svg`}
-                                    alt="Image"
+                                    alt="nodejs"
                                 />
                             </div>
                         </div>
@@ -118,7 +118,7 @@ const SimpleIconSection = ({ t }: any) => (
                                 <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api06.svg`}
-                                    alt="Image"
+                                    alt="c#"
                                 />
                             </div>
                         </div>
@@ -127,7 +127,7 @@ const SimpleIconSection = ({ t }: any) => (
                                 <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api07.svg`}
-                                    alt="Image"
+                                    alt="python"
                                 />
                             </div>
                         </div>
@@ -145,7 +145,7 @@ const SimpleIconSection = ({ t }: any) => (
                                 <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-langGO.svg`}
-                                    alt="Image"
+                                    alt="golang"
                                 />
                             </div>
                         </div>
@@ -154,7 +154,7 @@ const SimpleIconSection = ({ t }: any) => (
                                 <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang11.svg`}
-                                    alt="Image"
+                                    alt="java"
                                 />
                             </div>
                         </div>
