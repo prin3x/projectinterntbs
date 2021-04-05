@@ -37,7 +37,7 @@
     top: 58%;
   }
 
-  .sms_text h3 {
+  .sms_text h3,.sms_text h2 {
     font-size: 44px;
   }
 
@@ -450,7 +450,7 @@
   .size-img {
     width: 50%;
   }
-  .single_feature_text h4 {
+  .single_feature_text h4 , .single_feature_text h3 {
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 5px;
@@ -463,7 +463,7 @@
     height: auto;
     min-height: 850px;
   }
-  .simple_slider_heading h3, .globe_text h3 {
+  .simple_slider_heading h3, .simple_slider_heading h2, .globe_text h3 {
     font-size: 40px;
   }
   .simple_slider_wrapper .owl-prev {
@@ -503,13 +503,13 @@
   .globe_img img{
     width: 70%;
   }
-  .sms_text h3 {
+  .sms_text h3,.sms_text h2 {
     font-size: 36px;
   }
-  .sms_feature_item h2 {
+  .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     font-size: 48px;
   }
-  .sms_feature_item h3 {
+  .sms_feature_item h3, .sms_feature_item > div {
     font-size: 40px;
     line-height: 1.2;
   }
@@ -561,7 +561,7 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     font-size: 40px;
     margin-bottom: 20px;
   }
@@ -897,7 +897,7 @@
     min-height: 60px;
     word-break: break-all;
   }
-  .single_feature_text h4 {
+  .single_feature_text h4 , .single_feature_text h3 {
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 5px;
@@ -910,7 +910,7 @@
     height: auto;
     min-height: 750px;
   }
-  .simple_slider_heading h3,
+  .simple_slider_heading h3, .simple_slider_heading h2,
   .globe_text h3 {
     font-size: 36px;
     line-height: 1.2;
@@ -952,13 +952,13 @@
   .globe_img img {
     width: 70%;
   }
-  .sms_text h3 {
+  .sms_text h3,.sms_text h2 {
     font-size: 34px;
   }
-  .sms_feature_item h2 {
+  .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     font-size: 48px;
   }
-  .sms_feature_item h3 {
+  .sms_feature_item h3, .sms_feature_item > div {
     font-size: 40px;
     line-height: 1.2;
   }
@@ -1014,7 +1014,7 @@
     flex: 0 0 50%;
     max-width: 50%;
   }
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     font-size: 36px;
     margin-bottom: 20px;
   }
@@ -1525,7 +1525,7 @@
     width: 7px;
     height: 15px;
   }
-  .single_feature_text h4 {
+  .single_feature_text h4 , .single_feature_text h3 {
     font-size: 18px;
   }
   .single_feature_text p {
@@ -1560,7 +1560,7 @@
     width: 150%;
     margin: -15% 0 0 -28%;
   }
-  .simple_slider_heading h3,
+  .simple_slider_heading h3, .simple_slider_heading h2,
   .globe_text h3 {
     font-size: 30px;
     line-height: 1.2;
@@ -1574,7 +1574,7 @@
   .sms_text {
     margin-bottom: 30px;
   }
-  .sms_text h3 {
+  .sms_text h3,.sms_text h2 {
     font-size: 30px;
   }
   .sms_feature_item p {
@@ -1583,7 +1583,7 @@
     line-height: 1.4;
     margin-bottom: 10px;
   }
-  .sms_feature_item h2 {
+  .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     font-size: 40px;
     margin-bottom: 45px;
   }
@@ -1631,7 +1631,7 @@
   .client_name p {
     font-size: 16px;
   }
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     font-size: 30px;
     margin-bottom: 10px;
   }
@@ -2526,7 +2526,7 @@
     font-size: 22px;
   }
 
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     font-size: 28px;
   }
 
@@ -2556,7 +2556,7 @@
     font-size: 40px;
   }
 
-  .single_feature_text h4 {
+  .single_feature_text h4 , .single_feature_text h3 {
     font-size: 18px;
   }
 
@@ -2601,7 +2601,7 @@
     font-size: 28px;
   }
 
-  .simple_slider_heading h3 {
+  .simple_slider_heading h3, .simple_slider_heading h2 {
     font-size: 30px;
   }
 
@@ -2635,19 +2635,19 @@
     padding: 60px 0;
     position: relative;
   }
-  .sms_feature_item h2 {
+  .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     color: #31b1e7;
     font-size: 48px;
     line-height: 1.2;
     margin-bottom: 75px;
   }
-  .sms_text h3 {
+  .sms_text h3,.sms_text h2 {
     font-size: 30px;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 20px;
   }
-  .sms_feature_item h2 {
+  .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     color: #31b1e7;
     font-size: 48px;
     line-height: 1.2;
@@ -2920,7 +2920,7 @@
     text-align: right;
   }
 
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     font-size: 25px;
   }
 
@@ -3230,7 +3230,7 @@
     max-width: 80%;
   }
 
-  .single_feature_text h4 {
+  .single_feature_text h4 , .single_feature_text h3 {
     font-size: 16px;
   }
 
@@ -3349,7 +3349,7 @@
     padding: 30px 25px 60px;
   }
 
-  .simple_slider_heading h3 {
+  .simple_slider_heading h3, .simple_slider_heading h2 {
     font-size: 28px;
     margin-bottom: 0px;
   }
@@ -3507,7 +3507,7 @@
   .edu_text {
     text-align: center;
   }
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     margin-bottom: 15px;
   }
   .testimonial_item p.client_quote {
@@ -3637,7 +3637,7 @@
     width: 46%;
     margin: 0 2%;
   }
-  .single_feature_text h4 {
+  .single_feature_text h4 , .single_feature_text h3 {
     font-size: 20px;
   }
   .single_feature_text p {
@@ -3775,7 +3775,7 @@
     height: 750px;
   }
 
-  .sms_text h3 {
+  .sms_text h3,.sms_text h2 {
     font-size: 20px;
   }
 
@@ -3838,7 +3838,7 @@
     margin-bottom: 10px;
   }
 
-  .sms_feature_item h2 {
+  .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     font-size: 42px;
     margin-bottom: 40px;
   }
@@ -4160,7 +4160,7 @@
     height: 600px;
   }
 
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     font-size: 24px;
   }
 
@@ -4356,7 +4356,7 @@
     padding-bottom: 0px;
   }
 
-  .simple_slider_heading h3 {
+  .simple_slider_heading h3, .simple_slider_heading h2 {
     font-size: 28px;
     margin-bottom: 0px;
     text-align: center;
@@ -4968,7 +4968,7 @@
   .single_feature_text {
     margin: 20px 0;
   }
-  .single_feature_text h4 {
+  .single_feature_text h4 , .single_feature_text h3 {
     font-size: 16px;
   }
   .single_feature_text p {
@@ -4988,7 +4988,7 @@
   .client_img img {
     display: block;
   }
-  .simple_slider_heading h3 {
+  .simple_slider_heading h3, .simple_slider_heading h2 {
     font-size: 24px;
     margin-bottom: 0px;
     text-align: center;
@@ -5107,14 +5107,14 @@
     left: -2px;
     top: -1px;
   }
-  .sms_text h3 {
+  .sms_text h3,.sms_text h2 {
     font-size: 24px;
   }
-  .sms_feature_item h2 {
+  .sms_feature_item h2, .sms_feature_item div > .account-balance, .account-balance {
     font-size: 30px;
     margin-bottom: 40px;
   }
-  .sms_feature_item h3 {
+  .sms_feature_item h3, .sms_feature_item > div {
     color: #31b1e7;
     font-size: 30px;
     line-height: 1.2;
@@ -5183,7 +5183,7 @@
     margin-bottom: 30px;
     text-align: center;
   }
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     margin-bottom: 10px;
     padding: 0 20px;
   }
@@ -6011,7 +6011,7 @@
   .cta_section {
     padding: 60px 0;
   }
-  .edu_text h3 {
+  .edu_text h3, .edu_text h2 {
     padding: 0 10px;
     font-size: 20px;
   }

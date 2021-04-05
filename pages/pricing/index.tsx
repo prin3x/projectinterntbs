@@ -1,39 +1,45 @@
-import React from "react";
-import Layout from "../../components/Layout";
-import PricingSection from "../../components/pricing/PricingSection";
-import AllPricing from "../../components/pricing/AllPricing";
-import FaqSection from "../../components/pricing/FaqSection";
-import BacktoTop from "../../components/BacktoTop";
-import Head from "next/head";
-import { withTranslation } from "../../i18n";
-import * as ProductService from "../../services/shopping/product.service";
-import { PricingProps } from "../../services/shopping/pricing.model";
+import React from 'react'
+import Layout from '../../components/Layout'
+import PricingSection from '../../components/pricing/PricingSection'
+import AllPricing from '../../components/pricing/AllPricing'
+import FaqSection from '../../components/pricing/FaqSection'
+import BacktoTop from '../../components/BacktoTop'
+import Head from 'next/head'
+import { withTranslation } from '../../i18n'
+import * as ProductService from '../../services/shopping/product.service'
+import { PricingProps } from '../../services/shopping/pricing.model'
 
-import { NextSeo } from "next-seo";
-import { seo } from "../../components/seo/pricing";
+import { NextSeo } from 'next-seo'
+import { seo } from '../../components/seo/pricing'
 const Pricing: any = ({ t, packages }: PricingProps) => {
-  return (
-    <Layout>
-      <Head>
-        <meta name="keywords" content={t("keywords")} />
-        <meta name="author" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="https://www.thaibulksms.com/pricing/" />
-      </Head>
-      <NextSeo
-        openGraph={seo.openGraph}
-        title={t("meta::title")}
-        description={t("meta::description")}
-      />
-      <div className="page_wrapper">
-        <PricingSection />
-        <AllPricing packages={packages} />
-        <FaqSection />
-      </div>
-      <BacktoTop />
-    </Layout>
-  );
-};
+    return (
+        <Layout>
+            <Head>
+                <meta name="keywords" content={t('keywords')} />
+                <meta name="author" content="" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <link
+                    rel="canonical"
+                    href="https://www.thaibulksms.com/pricing/"
+                />
+            </Head>
+            <NextSeo
+                openGraph={seo.openGraph}
+                title={t('meta::title')}
+                description={t('meta::description')}
+            />
+            <div className="page_wrapper">
+                <PricingSection />
+                <AllPricing packages={packages} />
+                <FaqSection />
+            </div>
+            <BacktoTop />
+        </Layout>
+    )
+}
 
 // Pricing.getInitialProps = async () => {
 //   // const params: PackageAll = {
@@ -61,21 +67,21 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
 //   console.log('ok',packageAll)
 //   return { props: { packageAll} }
 // }
-export default withTranslation("Pricing")(Pricing);
+export default withTranslation('Pricing')(Pricing)
 
 export const getStaticProps = async () => {
-  let packageAll;
+    let packageAll
 
-  try {
-    packageAll = await ProductService.GetPackageNormal();
-  } catch (error) {
-    console.error(error);
-  }
+    try {
+        packageAll = await ProductService.GetPackageNormal()
+    } catch (error) {
+        console.error(error)
+    }
 
-  return {
-    props: {
-      packages: packageAll ? packageAll.packages : {},
-      namespacesRequired: ["Pricing"],
-    },
-  };
-};
+    return {
+        props: {
+            packages: packageAll ? packageAll.packages : {},
+            namespacesRequired: ['Pricing'],
+        },
+    }
+}

@@ -1700,7 +1700,7 @@ a:hover {
   margin-bottom: 50px;
 }
 
-.sms_text h3 {
+.sms_text h3,.sms_text h2 {
   font-size: 38px;
   font-weight: 400;
   line-height: 1.2;
@@ -1732,20 +1732,20 @@ a:hover {
   margin-bottom: 15px;
 }
 
-.sms_feature_item h3 {
+.sms_feature_item h3, .sms_feature_item > div {
   color: #31b1e7;
   font-size: 46px;
   line-height: 1.2;
 }
 
-.sms_feature_item h2 {
+.sms_feature_item h2, .sms_feature_item div > .account-balance {
   color: #31b1e7;
   font-size: 60px;
   line-height: 1.2;
   margin-bottom: 75px;
 }
 
-.sms_feature_item h3 span {
+.sms_feature_item h3, .sms_feature_item > div span {
   font-size: 20px;
 }
 
@@ -2544,7 +2544,7 @@ p.copyright {
   max-width: 40%;
 }
 
-.single_feature_text h4 {
+.single_feature_text h4 , .single_feature_text h3 {
   font-size: 24px;
   line-height: 1.2;
   margin-bottom: 10px;
@@ -2585,7 +2585,7 @@ p.copyright {
   width: 100%;
 }
 
-.simple_slider_heading h3 {
+.simple_slider_heading h3, .simple_slider_heading h2 {
   font-size: 40px;
   text-align: right;
   font-weight: 400;
@@ -2593,7 +2593,7 @@ p.copyright {
   margin-bottom: 40px;
 }
 
-.simple_slider_heading h3 span {
+.simple_slider_heading h3, .simple_slider_heading h2 span {
   color: #31b1e7;
 }
 
@@ -2875,7 +2875,7 @@ p.copyright {
   text-align: right;
 }
 
-.edu_text h3 {
+.edu_text h3, .edu_text h2 {
   color: #fff;
   font-size: 46px;
   line-height: 1.4;

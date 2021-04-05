@@ -1,13 +1,16 @@
-import * as React from "react";
-import { withTranslation } from "../../i18n";
-import PropTypes from "prop-types";
-
+import * as React from 'react'
+import { withTranslation } from '../../i18n'
+import PropTypes from 'prop-types'
 
 const CollapseItem = (props: any) => {
     const { item } = props
     return (
         <div className="card">
-            <div className="card-header" role="tab" id={`headingOne${item.type}${item.index}`}>
+            <div
+                className="card-header"
+                role="tab"
+                id={`headingOne${item.type}${item.index}`}
+            >
                 <a
                     data-toggle="collapse"
                     data-parent={item.keyId}
@@ -17,9 +20,7 @@ const CollapseItem = (props: any) => {
                 >
                     <span className="close ion-ios-arrow-down"></span>
                     <span className="open ion-ios-arrow-up"></span>
-                    <h5 className="mb-0 faq_header">
-                        {item.question}
-                    </h5>
+                    <h5 className="mb-0 faq_header">{item.question}</h5>
                 </a>
             </div>
             <div
@@ -30,18 +31,20 @@ const CollapseItem = (props: any) => {
                 data-parent={item.keyId}
             >
                 <div className="card-body faqAnswer">
-                    <p dangerouslySetInnerHTML={{ __html: item.answer }} className="txtFAQ"></p>
+                    <p
+                        dangerouslySetInnerHTML={{ __html: item.answer }}
+                        className="txtFAQ"
+                    ></p>
                 </div>
             </div>
         </div>
     )
 }
 CollapseItem.getInitialProps = async () => ({
-    namespacesRequired: ["FAQcallap"],
-});
+    namespacesRequired: ['FAQcallap'],
+})
 
 CollapseItem.propTypes = {
     t: PropTypes.func.isRequired,
-
-};
-export default withTranslation("FAQcallap")(CollapseItem);
+}
+export default withTranslation('FAQcallap')(CollapseItem)
