@@ -10,9 +10,15 @@ const PricingSection = ({ t }: any) => {
             data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
         >
             <div className="container pricing">
-                <h1 className="headPricing">
-                    {t('PricingSection::Package prices')}
-                </h1>
+                <h1
+                    className="headPricing"
+                    dangerouslySetInnerHTML={{
+                        __html: t('PricingSection::Package prices'),
+                    }}
+                />
+                <p className="subPricing">
+                    {t('PricingSection::Reasonable SMS packages')}
+                </p>
                 <div className="row justify-content-xl-end mt-80">
                     <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
                         <div

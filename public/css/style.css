@@ -4681,8 +4681,12 @@ ul.dropdown li.listsub a {
   right: 50%;
 }
 
-h3.headPricing {
+h3.headPricing,h1.headPricing  {
   font-size: 40px;
+  margin-top: 24px;
+  text-align: center;
+}
+.subPricing{
   margin-top: 24px;
   text-align: center;
 }

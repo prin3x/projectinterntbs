@@ -5424,7 +5424,7 @@
   .pricing__top .pricing_box h3 {
     font-size: 24px !important;
   }
-  h3.headPricing {
+  h3.headPricing,h1.headPricing  {
     font-size: 30px;
     margin-top: 40px;
     text-align: center;
