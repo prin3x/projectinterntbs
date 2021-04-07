@@ -2729,7 +2729,7 @@ p.copyright {
   z-index: -1;
 }
 
-.globe_text h3 {
+.globe_text h3, .globe_text h2 {
   font-size: 40px;
   line-height: 1.3;
   font-weight: 400;
@@ -2743,7 +2743,7 @@ p.copyright {
   margin: 20px 0 40px;
 }
 
-.globe_text h3 span {
+.globe_text h3, .globe_text h2 span {
   color: #31b1e7;
 }
 
