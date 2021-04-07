@@ -1570,6 +1570,14 @@ a:hover {
   display: block;
 }
 
+.hero_text_one h1 span {
+ color: #000;
+  font-size: 24px;
+  line-height: 1.5;
+  display: block;
+  padding-bottom: 10px;
+}
+
 .hero_text_one h1 {
   font-size: 56px;
   font-weight: 500;

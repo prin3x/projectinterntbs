@@ -79,7 +79,7 @@ const FeatureSection = ({ t }: any) => (
                             alt="Image"
                         />
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::Easily Integrated AP')}</h3>
+                            <h3>{t('FeatureSection::Easily Integrated API')}</h3>
                             <p
                                 dangerouslySetInnerHTML={{
                                     __html: t(
