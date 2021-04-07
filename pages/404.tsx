@@ -1,36 +1,36 @@
-import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Layout from '../components/Layout'
-import Components404 from '../components/404/404'
-import Head from 'next/head'
-import { withTranslation } from '../i18n'
-import { link } from '../components/404/redirectLink'
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Layout from '../components/Layout';
+import Components404 from '../components/404/404';
+import Head from 'next/head';
+import { withTranslation } from '../i18n';
+import { link } from '../components/404/redirectLink';
 const Custom404 = () => {
-    const router = useRouter()
-    let paths = router.asPath.split('?')
-    paths = paths[0].split('/')
-    let firstCheck = paths[1]
-    let secCheck = paths[2]
+    const router = useRouter();
+    let paths = router.asPath.split('?');
+    paths = paths[0].split('/');
+    let firstCheck = paths[1];
+    let secCheck = paths[2];
     useEffect(() => {
         if (firstCheck === 'blog') {
             if (secCheck) {
                 window.location.replace(
                     `http://www.thaibulksms.com/blog/${secCheck}`
-                )
-                return
+                );
+                return;
             }
-            window.location.replace(`http://www.thaibulksms.com/blog/`)
-            return
+            window.location.replace(`http://www.thaibulksms.com/blog/`);
+            return;
         }
         if (link['tbs'][firstCheck] !== undefined) {
             if (typeof link['tbs'][firstCheck] === 'object') {
                 if (link['tbs'][firstCheck][secCheck] !== undefined) {
-                    router.push('/' + link['tbs'][firstCheck][secCheck])
-                    return
+                    router.push('/' + link['tbs'][firstCheck][secCheck]);
+                    return;
                 }
             } else {
-                router.push('/' + link['tbs'][firstCheck])
-                return
+                router.push('/' + link['tbs'][firstCheck]);
+                return;
             }
         }
         if (link['dev'][firstCheck] !== undefined) {
@@ -38,12 +38,12 @@ const Custom404 = () => {
                 if (link['dev'][firstCheck][secCheck] !== undefined) {
                     window.location.replace(
                         `${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`
-                    )
-                    return
+                    );
+                    return;
                 }
             }
         }
-    }, [])
+    }, []);
     return (
         <Layout>
             <Head>
@@ -77,12 +77,12 @@ const Custom404 = () => {
             </Head>
             <Components404 />
         </Layout>
-    )
-}
+    );
+};
 // Custom404.getInitialProps = async () => ({
 //   namespacesRequired: [''],
 // });
-export default withTranslation('')(Custom404)
+export default withTranslation('')(Custom404);
 
 // export default function Custom404() {
 //   return <h1>404 - Page Not Found</h1>

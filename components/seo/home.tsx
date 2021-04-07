@@ -17,4 +17,4 @@ export const seo = {
         ],
         site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}`,
     },
-}
+};

@@ -1,27 +1,27 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
-import React, { useState, useEffect } from 'react'
-import TestQuickregister from '../quickregister/testQuickregister'
-import CountUp from 'react-countup'
-import Cookie from 'js-cookie'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
+import TestQuickregister from '../quickregister/testQuickregister';
+import CountUp from 'react-countup';
+import Cookie from 'js-cookie';
 const SmsSectionV2 = ({ t }: any) => {
-    const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false)
-    const [numStart, setnumStart] = useState(4662190879)
-    const [numEnd, setnumEnd] = useState(0)
-    const [duration, setDuration] = useState(0)
+    const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false);
+    const [numStart, setnumStart] = useState(4662190879);
+    const [numEnd, setnumEnd] = useState(0);
+    const [duration, setDuration] = useState(0);
     useEffect(() => {
-        let startDate = 1597104000
-        let dayAt = 300000
+        let startDate = 1597104000;
+        let dayAt = 300000;
         // let end = 1597363200;
         // 1 day = 86400
 
-        let curTime = Math.floor(Date.now() / 1000)
+        let curTime = Math.floor(Date.now() / 1000);
         // console.log('WTF : ', (curTime - startDate) / 86400);
         let remain =
             (Math.ceil((curTime - startDate) / 86400) -
                 (curTime - startDate) / 86400) *
             86400 *
-            7
+            7;
         // console.log('remain : ', remain);
         // console.log(
         //   'start  >>>>>>>>>> : ',
@@ -29,14 +29,14 @@ const SmsSectionV2 = ({ t }: any) => {
         // );
         setnumStart(
             numStart + Math.ceil(dayAt * ((curTime - startDate) / 86400))
-        )
+        );
         // console.log(
         //   'end : ',
         //   numStart + dayAt * Math.ceil((curTime - startDate) / 86400)
         // );
-        setnumEnd(numStart + dayAt * Math.ceil((curTime - startDate) / 86400))
-        setDuration(remain)
-    }, [])
+        setnumEnd(numStart + dayAt * Math.ceil((curTime - startDate) / 86400));
+        setDuration(remain);
+    }, []);
     return (
         <div
             className="sms_section lazyload"
@@ -76,7 +76,7 @@ const SmsSectionV2 = ({ t }: any) => {
                                                         ).replace(
                                                             /(\d)(?=(\d{3})+(?!\d))/g,
                                                             '$1,'
-                                                        )}`
+                                                        )}`;
                                                     }}
                                                 />
                                             </div>
@@ -116,14 +116,14 @@ const SmsSectionV2 = ({ t }: any) => {
                 {!isLogin && <TestQuickregister />}
             </div>
         </div>
-    )
-}
+    );
+};
 
 SmsSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 SmsSectionV2.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(React.memo(SmsSectionV2))
+};
+export default withTranslation('Home')(React.memo(SmsSectionV2));

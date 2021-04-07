@@ -1,6 +1,6 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
-import Link from 'next/link'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 const Components404 = () => (
     <div className="register_section">
         <div className="finish-regis">
@@ -19,12 +19,12 @@ const Components404 = () => (
             </div>
         </div>
     </div>
-)
+);
 Components404.getInitialProps = async () => ({
     namespacesRequired: ['Thankyou'],
-})
+});
 
 Components404.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Thankyou')(Components404)
+};
+export default withTranslation('Thankyou')(Components404);

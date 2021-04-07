@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
-import { i18n, withTranslation, Link } from '../i18n'
-import React, { useState, useRef, useEffect } from 'react'
-import Cookie from 'js-cookie'
-import appConfig from '../appConfig'
+import PropTypes from 'prop-types';
+import { i18n, withTranslation, Link } from '../i18n';
+import React, { useState, useRef, useEffect } from 'react';
+import Cookie from 'js-cookie';
+import appConfig from '../appConfig';
 
 const HeaderTopMenuMobile = () => (
     <div className="site-mobile-menu-header">
@@ -32,7 +32,7 @@ const HeaderTopMenuMobile = () => (
             </div>
         </div>
     </div>
-)
+);
 const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
     return (
         <div className="menu_btn">
@@ -62,31 +62,31 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                 </li>
             </ul>
         </div>
-    )
-}
+    );
+};
 
 const options = [
     { value: 'TH', text: 'TH' },
     { value: 'EN', text: 'EN' },
-]
+];
 
 const MySelect = options.map((list) => {
-    return <option value={list.value}>{list.text}</option>
-})
+    return <option value={list.value}>{list.text}</option>;
+});
 
 const Header = ({ t }: any) => {
-    const [lang, setLang] = useState('TH')
+    const [lang, setLang] = useState('TH');
     const [isLogin, setIsLogin] = useState(
         Cookie.get('PASSCODE') ? true : false
-    )
-    const headerBar: any = useRef(null)
+    );
+    const headerBar: any = useRef(null);
     function sticky() {
-        var scroll = window.pageYOffset
+        var scroll = window.pageYOffset;
         if (headerBar.current !== null) {
             if (scroll < 40) {
-                headerBar.current.classList.remove('sticky')
+                headerBar.current.classList.remove('sticky');
             } else {
-                headerBar.current.classList.add('sticky')
+                headerBar.current.classList.add('sticky');
             }
         }
     }
@@ -99,34 +99,34 @@ const Header = ({ t }: any) => {
     useEffect(() => {
         async function loadCookies() {
             if (Cookie.get('LANG')) {
-                const textLang: any = Cookie.get('LANG')
-                setLang(textLang)
+                const textLang: any = Cookie.get('LANG');
+                setLang(textLang);
             }
         }
-        loadCookies()
+        loadCookies();
         // check Cookie Login
         if (Cookie.get('PASSCODE')) {
-            setIsLogin(true)
+            setIsLogin(true);
         }
-        window.addEventListener('scroll', sticky)
+        window.addEventListener('scroll', sticky);
         return () => {
-            window.removeEventListener('scroll', sticky)
-        }
-    }, [setLang])
+            window.removeEventListener('scroll', sticky);
+        };
+    }, [setLang]);
 
     const onSwitchLanguage = (value: string) => {
-        setLang(value)
-        let domain = 'localhost'
+        setLang(value);
+        let domain = 'localhost';
         if (appConfig.APP_ENV === appConfig.production)
-            domain = '.thaibulksms.com'
+            domain = '.thaibulksms.com';
         else if (appConfig.APP_ENV === appConfig.internalTest)
-            domain = '.1mobyline.com'
+            domain = '.1mobyline.com';
         Cookie.set('LANG', value, {
             domain,
             expires: 7,
-        })
-        i18n.changeLanguage(value.toLowerCase())
-    }
+        });
+        i18n.changeLanguage(value.toLowerCase());
+    };
 
     return (
         <div ref={headerBar} className="header-bar-area position-fixed w-100 ">
@@ -613,10 +613,10 @@ const Header = ({ t }: any) => {
                                                             </Link>
                                                         </li>
                                                         <li className="li_padding_bottom20">
-                                                                 <a href="https://member.thaibulksms.com/">
+                                                            <a href="https://member.thaibulksms.com/">
                                                                 <span className="new_icon_title_menu_about04 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
-                                                                         {t(
+                                                                        {t(
                                                                             'header::Member'
                                                                         )}
                                                                     </h6>
@@ -626,7 +626,7 @@ const Header = ({ t }: any) => {
                                                                         )}
                                                                     </p>
                                                                 </span>
-                                                                </a>
+                                                            </a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1340,14 +1340,14 @@ const Header = ({ t }: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 Header.getInitialProps = async () => ({
     namespacesRequired: ['Header'],
-})
+});
 
 Header.propTypes = {
     t: PropTypes.func.isRequired,
-}
+};
 
-export default withTranslation('Header')(Header)
+export default withTranslation('Header')(Header);

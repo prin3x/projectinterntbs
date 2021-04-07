@@ -1,40 +1,40 @@
-import { withTranslation, Link } from '../../i18n'
-import PropTypes from 'prop-types'
-import * as React from 'react'
-import { Product, ProductPackage } from '../../services/shopping/pricing.model'
-import numeral from 'numeral'
-import TagManager from 'react-gtm-module'
-import classnames from 'classnames'
-import Cookie from 'js-cookie'
-import appConfig from '../../appConfig'
-import { useRouter } from 'next/router'
-import { CheckFirstPurchase } from '../../services/shopping/payment.service'
+import { withTranslation, Link } from '../../i18n';
+import PropTypes from 'prop-types';
+import * as React from 'react';
+import { Product, ProductPackage } from '../../services/shopping/pricing.model';
+import numeral from 'numeral';
+import TagManager from 'react-gtm-module';
+import classnames from 'classnames';
+import Cookie from 'js-cookie';
+import appConfig from '../../appConfig';
+import { useRouter } from 'next/router';
+import { CheckFirstPurchase } from '../../services/shopping/payment.service';
 
-const SenderActive = 5
-const SenderBegin = 1
+const SenderActive = 5;
+const SenderBegin = 1;
 
 const BuyPackage = (packageItem: ProductPackage) => {
-    let domain = 'localhost'
+    let domain = 'localhost';
 
-    if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com'
+    if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
     else if (appConfig.APP_ENV === appConfig.internalTest)
-        domain = '.1mobyline.com'
+        domain = '.1mobyline.com';
 
-    Cookie.set('packageId', packageItem.productId.toString(), { domain })
+    Cookie.set('packageId', packageItem.productId.toString(), { domain });
     window.location.replace(
         `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment/`
-    )
-}
+    );
+};
 const showPackage = (
     packagesNormal: Product[],
     packages: Product[],
     t: Function
 ) => {
-    let itemPackages: any = []
+    let itemPackages: any = [];
     for (let item in packages) {
-        let productItem = packages[item]
-        let productItemNormal = packagesNormal[item]
-        let itemNo = item + 1
+        let productItem = packages[item];
+        let productItemNormal = packagesNormal[item];
+        let itemNo = item + 1;
         itemPackages.push(
             <div
                 key={itemNo}
@@ -286,37 +286,37 @@ const showPackage = (
                     </div>
                 </div>
             </div>
-        )
+        );
     }
-    return itemPackages
-}
+    return itemPackages;
+};
 
 const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
-    const router = useRouter()
-    const [showProduct, setShowProduct] = React.useState(false)
+    const router = useRouter();
+    const [showProduct, setShowProduct] = React.useState(false);
     React.useEffect(() => {
         TagManager.dataLayer({
             dataLayer: {
                 event: 'purchase',
                 action: 'intent',
             },
-        })
+        });
 
-        const dpd: any = router.query.dpd
+        const dpd: any = router.query.dpd;
 
-        if (!dpd) return
-        setShowProduct(dpd ? true : false)
-        firstPurchase(dpd)
-    }, [router])
+        if (!dpd) return;
+        setShowProduct(dpd ? true : false);
+        firstPurchase(dpd);
+    }, [router]);
 
     const firstPurchase = async (dpd: string) => {
         try {
-            await CheckFirstPurchase(dpd)
+            await CheckFirstPurchase(dpd);
         } catch (error) {
-            console.error(error)
-            router.push('/pricing')
+            console.error(error);
+            router.push('/pricing');
         }
-    }
+    };
     return (
         <div
             className="all__pricing accordion lazyload"
@@ -388,14 +388,14 @@ const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 FirstPurchase.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
-})
+});
 
 FirstPurchase.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Pricing')(React.memo(FirstPurchase))
+};
+export default withTranslation('Pricing')(React.memo(FirstPurchase));

@@ -1,5 +1,5 @@
-import { withTranslation, Link } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation, Link } from '../../i18n';
+import PropTypes from 'prop-types';
 const HeroSectionV2 = ({ t }: any) => (
     <div
         className="hero_section v2 lazyload"
@@ -41,13 +41,13 @@ const HeroSectionV2 = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 
 HeroSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 HeroSectionV2.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(HeroSectionV2)
+};
+export default withTranslation('Home')(HeroSectionV2);

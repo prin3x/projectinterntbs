@@ -1,5 +1,5 @@
-import Header from './Header'
-import Footer from './Footer'
+import Header from './Header';
+import Footer from './Footer';
 // import { i18n } from '../i18n';
 // import React, { useEffect } from 'react';
 // import Head from 'next/head';
@@ -39,6 +39,6 @@ const Layout = (props: any) => {
                 data-page_id={process.env.NEXT_PUBLIC_FB_PAGEID}
             ></div>
         </div>
-    )
-}
-export default Layout
+    );
+};
+export default Layout;

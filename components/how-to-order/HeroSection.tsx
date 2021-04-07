@@ -1,24 +1,24 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
-import * as React from 'react'
-import { useRouter } from 'next/router'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import * as React from 'react';
+import { useRouter } from 'next/router';
 
-const classnames = require('classnames')
+const classnames = require('classnames');
 
 const HeroSection = ({ t }: any) => {
-    const router = useRouter()
-    const [defaultTab, setDefaultTab] = React.useState('pills-home')
+    const router = useRouter();
+    const [defaultTab, setDefaultTab] = React.useState('pills-home');
 
     React.useEffect(() => {
         if (!router.query.tab) {
-            console.warn('have not tab')
-            return
+            console.warn('have not tab');
+            return;
         }
 
-        setDefaultTab(`${router.query.tab}`)
+        setDefaultTab(`${router.query.tab}`);
         // const params = new URLSearchParams();
         // console.log(defaultTab)
-    }, [router, setDefaultTab])
+    }, [router, setDefaultTab]);
     return (
         <div className="hero_section hero_section_2">
             <div className="container">
@@ -86,14 +86,14 @@ const HeroSection = ({ t }: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 HeroSection.getInitialProps = async () => ({
     namespacesRequired: ['How-to-order'],
-})
+});
 
 HeroSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('How-to-order')(HeroSection)
+};
+export default withTranslation('How-to-order')(HeroSection);

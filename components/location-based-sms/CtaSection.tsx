@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
-import Link from 'next/link'
+import PropTypes from 'prop-types';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
 const CtaSectionV2 = ({ t }: any) => (
     <div
         className="cta_section v2 lazyload"
@@ -34,12 +34,12 @@ const CtaSectionV2 = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 CtaSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['LocationBasedSMSPage'],
-})
+});
 
 CtaSectionV2.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('LocationBasedSMSPage')(CtaSectionV2)
+};
+export default withTranslation('LocationBasedSMSPage')(CtaSectionV2);

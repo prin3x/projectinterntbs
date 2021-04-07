@@ -1,5 +1,5 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const SmsSectionV3 = ({ t }: any) => (
     <div className="sms_section v3 ">
         <div className="container">
@@ -30,13 +30,13 @@ const SmsSectionV3 = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 
 SmsSectionV3.getInitialProps = async () => ({
     namespacesRequired: ['WhyThaibulksms'],
-})
+});
 
 SmsSectionV3.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('WhyThaibulksms')(SmsSectionV3)
+};
+export default withTranslation('WhyThaibulksms')(SmsSectionV3);

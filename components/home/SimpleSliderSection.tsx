@@ -1,60 +1,60 @@
-import dynamic from 'next/dynamic'
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
-import React, { useRef } from 'react'
+import dynamic from 'next/dynamic';
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import React, { useRef } from 'react';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
-})
+});
 const SimpleSliderSection = ({ t }: any) => {
-    const mainImage: any = useRef(null)
+    const mainImage: any = useRef(null);
     function onInitialized(e: any) {
-        let count = 0
+        let count = 0;
         e.currentTarget.childNodes[0].childNodes[0].childNodes.forEach(
             (val: any) => {
                 if (val.className === 'owl-item active') {
-                    val.style.opacity = 0.5
+                    val.style.opacity = 0.5;
                     if (count === 0) {
-                        val.style.opacity = 1
+                        val.style.opacity = 1;
                     }
-                    count++
+                    count++;
                 } else {
-                    val.style.opacity = 0.5
+                    val.style.opacity = 0.5;
                 }
             }
-        )
+        );
     }
     function handlefade() {
-        mainImage.current.classList.add('fade-exit-active')
+        mainImage.current.classList.add('fade-exit-active');
     }
     function handleSelect(e: any) {
-        mainImage.current.classList.remove('fade-exit-active')
-        mainImage.current.classList.add('fade-enter-active')
-        let count = 0
+        mainImage.current.classList.remove('fade-exit-active');
+        mainImage.current.classList.add('fade-enter-active');
+        let count = 0;
         e.currentTarget.childNodes[0].childNodes[0].childNodes.forEach(
             (val: any) => {
-                val.style.opacity = 0.5
+                val.style.opacity = 0.5;
             }
-        )
+        );
         e.currentTarget.childNodes[0].childNodes[0].childNodes.forEach(
             (val: any) => {
                 if (val.className === 'owl-item active') {
                     if (count === 0) {
-                        val.style.opacity = 1
+                        val.style.opacity = 1;
                         val.children[0].children[0].childNodes.forEach(
                             (childval: any) => {
                                 if (childval.className === 'linking') {
                                     if (mainImage.current !== null) {
                                         mainImage.current.data =
-                                            childval.innerText
+                                            childval.innerText;
                                     }
                                 }
                             }
-                        )
-                        count++
+                        );
+                        count++;
                     }
                 }
             }
-        )
+        );
     }
     return (
         <div className="simple_slider_section">
@@ -341,14 +341,14 @@ const SimpleSliderSection = ({ t }: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 SimpleSliderSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 SimpleSliderSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(React.memo(SimpleSliderSection))
+};
+export default withTranslation('Home')(React.memo(SimpleSliderSection));

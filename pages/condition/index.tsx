@@ -1,12 +1,12 @@
-import React from 'react'
-import Layout from '../../components/Layout'
-import HeroSection from '../../components/condition/HeroSection'
-import Help from '../../components/Help'
-import BacktoTop from '../../components/BacktoTop'
-import Head from 'next/head'
-import { withTranslation } from '../../i18n'
-import { NextSeo } from 'next-seo'
-import { seo } from '../../components/seo/condition'
+import React from 'react';
+import Layout from '../../components/Layout';
+import HeroSection from '../../components/condition/HeroSection';
+import Help from '../../components/Help';
+import BacktoTop from '../../components/BacktoTop';
+import Head from 'next/head';
+import { withTranslation } from '../../i18n';
+import { NextSeo } from 'next-seo';
+import { seo } from '../../components/seo/condition';
 const Condition = ({ t }: any) => (
     <Layout>
         <Head>
@@ -42,15 +42,15 @@ const Condition = ({ t }: any) => (
         </div>
         <BacktoTop />
     </Layout>
-)
+);
 // Condition.getInitialProps = async () => ({
 //   namespacesRequired: ['ConditionMeta'],
 // });
-export default withTranslation('Condition')(Condition)
+export default withTranslation('Condition')(Condition);
 export const getStaticProps = async () => {
     return {
         props: {
             namespacesRequired: ['Condition'],
         },
-    }
-}
+    };
+};

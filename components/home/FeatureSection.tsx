@@ -1,5 +1,5 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const FeatureSection = ({ t }: any) => (
     <div className="feature_section">
         <div className="container">
@@ -79,7 +79,9 @@ const FeatureSection = ({ t }: any) => (
                             alt="Image"
                         />
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::Easily Integrated API')}</h3>
+                            <h3>
+                                {t('FeatureSection::Easily Integrated API')}
+                            </h3>
                             <p
                                 dangerouslySetInnerHTML={{
                                     __html: t(
@@ -93,12 +95,12 @@ const FeatureSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 FeatureSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 FeatureSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(FeatureSection)
+};
+export default withTranslation('Home')(FeatureSection);

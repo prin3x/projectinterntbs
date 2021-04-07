@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import { withTranslation, Link } from '../../i18n'
+import PropTypes from 'prop-types';
+import { withTranslation, Link } from '../../i18n';
 const EduSection = ({ t }: any) => (
     <div className="edu_section">
         <div className="container">
@@ -91,12 +91,12 @@ const EduSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 EduSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 EduSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(EduSection)
+};
+export default withTranslation('Home')(EduSection);

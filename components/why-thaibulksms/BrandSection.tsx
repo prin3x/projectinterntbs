@@ -1,5 +1,5 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const WhyBrandSection = ({ t }: any) => (
     <div className="simple_icon_section v2 bg-whyTop">
         <div className="container">
@@ -181,13 +181,13 @@ const WhyBrandSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 
 WhyBrandSection.getInitialProps = async () => ({
     namespacesRequired: ['WhyThaibulksms'],
-})
+});
 
 WhyBrandSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('WhyThaibulksms')(WhyBrandSection)
+};
+export default withTranslation('WhyThaibulksms')(WhyBrandSection);

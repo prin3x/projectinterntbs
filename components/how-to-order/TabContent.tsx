@@ -1,36 +1,36 @@
-import PropTypes from 'prop-types'
-import React, { useState } from 'react'
-import Modal from 'react-modal'
-import Swal from 'sweetalert2'
-import { useClipboard } from 'use-clipboard-copy'
-import { Link, withTranslation } from '../../i18n'
-import { useRouter } from 'next/router'
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import Modal from 'react-modal';
+import Swal from 'sweetalert2';
+import { useClipboard } from 'use-clipboard-copy';
+import { Link, withTranslation } from '../../i18n';
+import { useRouter } from 'next/router';
 
-const classnames = require('classnames')
+const classnames = require('classnames');
 const TabContent = ({ t }: any) => {
-    const [tab, setTab] = React.useState<any>()
-    const [showModalbank, setShowModalbank] = useState(false)
-    const [showModalqr, setShowModalqr] = useState(false)
-    const [showModalcredit, setShowModalcredit] = useState(false)
-    const [modalIsOpen, setIsOpen] = React.useState(false)
-    const clipboard = useClipboard()
-    const [defaultTab, setDefaultTab] = React.useState('pills-home')
-    const router = useRouter()
+    const [tab, setTab] = React.useState<any>();
+    const [showModalbank, setShowModalbank] = useState(false);
+    const [showModalqr, setShowModalqr] = useState(false);
+    const [showModalcredit, setShowModalcredit] = useState(false);
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const clipboard = useClipboard();
+    const [defaultTab, setDefaultTab] = React.useState('pills-home');
+    const router = useRouter();
 
     React.useEffect(() => {
         if (!router.query.tab) {
-            console.warn('have not tab')
-            return
+            console.warn('have not tab');
+            return;
         }
 
-        setDefaultTab(`${router.query.tab}`)
-        setTab($('#pills-profile-tab'))
-        Modal.setAppElement('#ElementModal')
+        setDefaultTab(`${router.query.tab}`);
+        setTab($('#pills-profile-tab'));
+        Modal.setAppElement('#ElementModal');
         // }, [tab]);
-    }, [router, setDefaultTab])
+    }, [router, setDefaultTab]);
 
     const onClipboard = (text: string) => {
-        clipboard.copy(text)
+        clipboard.copy(text);
         Swal.fire({
             position: 'top',
             icon: 'success',
@@ -40,8 +40,8 @@ const TabContent = ({ t }: any) => {
             ),
             showConfirmButton: false,
             timer: 1500,
-        })
-    }
+        });
+    };
 
     return (
         <div
@@ -162,7 +162,7 @@ const TabContent = ({ t }: any) => {
                                                     )}{' '}
                                                     <a
                                                         onClick={() => {
-                                                            tab?.tab('show')
+                                                            tab?.tab('show');
                                                         }}
                                                         className="theme__text link mt-0"
                                                     >
@@ -316,10 +316,10 @@ const TabContent = ({ t }: any) => {
                                                                     onClick={() => {
                                                                         setIsOpen(
                                                                             true
-                                                                        )
+                                                                        );
                                                                         setShowModalqr(
                                                                             true
-                                                                        )
+                                                                        );
                                                                     }}
                                                                 >
                                                                     {t(
@@ -358,10 +358,10 @@ const TabContent = ({ t }: any) => {
                                                                     onClick={() => {
                                                                         setIsOpen(
                                                                             true
-                                                                        )
+                                                                        );
                                                                         setShowModalcredit(
                                                                             true
-                                                                        )
+                                                                        );
                                                                     }}
                                                                 >
                                                                     {t(
@@ -415,10 +415,10 @@ const TabContent = ({ t }: any) => {
                                                                     onClick={() => {
                                                                         setIsOpen(
                                                                             true
-                                                                        )
+                                                                        );
                                                                         setShowModalbank(
                                                                             true
-                                                                        )
+                                                                        );
                                                                     }}
                                                                 >
                                                                     {t(
@@ -900,10 +900,10 @@ const TabContent = ({ t }: any) => {
                     <button
                         style={{ float: 'right' }}
                         onClick={() => {
-                            setIsOpen(false)
-                            setShowModalbank(false)
-                            setShowModalqr(false)
-                            setShowModalcredit(false)
+                            setIsOpen(false);
+                            setShowModalbank(false);
+                            setShowModalqr(false);
+                            setShowModalcredit(false);
                         }}
                         className="btn-close-order"
                     >
@@ -1167,14 +1167,14 @@ const TabContent = ({ t }: any) => {
                 </Modal>
             </div>
         </div>
-    )
-}
+    );
+};
 
 TabContent.getInitialProps = async () => ({
     namespacesRequired: ['How-to-order'],
-})
+});
 
 TabContent.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation(['How-to-order'])(TabContent)
+};
+export default withTranslation(['How-to-order'])(TabContent);

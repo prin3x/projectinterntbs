@@ -1,13 +1,13 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
-import TestQuickregister from '../quickregister/testQuickregister'
-import 'react-modal-video/scss/modal-video.scss'
-import ModalVideo from 'react-modal-video'
-import { useState } from 'react'
-import Cookie from 'js-cookie'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import TestQuickregister from '../quickregister/testQuickregister';
+import 'react-modal-video/scss/modal-video.scss';
+import ModalVideo from 'react-modal-video';
+import { useState } from 'react';
+import Cookie from 'js-cookie';
 const SmsSection = ({ t }: any) => {
-    const [isOpen, setIsOpen] = useState(false)
-    const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false);
     return (
         <div
             className="sms_section productsms lazyload"
@@ -109,13 +109,13 @@ const SmsSection = ({ t }: any) => {
                 }
             `}</style>
         </div>
-    )
-}
+    );
+};
 SmsSection.getInitialProps = async () => ({
     namespacesRequired: ['Product'],
-})
+});
 
 SmsSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Product')(SmsSection)
+};
+export default withTranslation('Product')(SmsSection);

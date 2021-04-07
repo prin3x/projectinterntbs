@@ -1,5 +1,5 @@
-import { withTranslation, Link } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation, Link } from '../../i18n';
+import PropTypes from 'prop-types';
 const PricingSection = ({ t }: any) => (
     <div className="pricing-section">
         <div className="container">
@@ -208,12 +208,12 @@ const PricingSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 PricingSection.getInitialProps = async () => ({
     namespacesRequired: ['Product'],
-})
+});
 
 PricingSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Product')(PricingSection)
+};
+export default withTranslation('Product')(PricingSection);

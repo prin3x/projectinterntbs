@@ -1,15 +1,15 @@
-import React from 'react'
-import Head from 'next/head'
-import { NextSeo } from 'next-seo'
-import Help from '../../components/Help'
-import BacktoTop from '../../components/BacktoTop'
-import Layout from '../../components/Layout'
-import { withTranslation } from '../../i18n'
-import { seo } from '../../components/seo/resource'
-import HeroSection from '../../components/resource/HeroSection'
-import ContentSection from '../../components/resource/ContentSection'
-import CtaSection from '../../components/resource/CtaSection'
-import * as BlogService from '../../services/blog/blog.service'
+import React from 'react';
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
+import Help from '../../components/Help';
+import BacktoTop from '../../components/BacktoTop';
+import Layout from '../../components/Layout';
+import { withTranslation } from '../../i18n';
+import { seo } from '../../components/seo/resource';
+import HeroSection from '../../components/resource/HeroSection';
+import ContentSection from '../../components/resource/ContentSection';
+import CtaSection from '../../components/resource/CtaSection';
+import * as BlogService from '../../services/blog/blog.service';
 const Resource = ({ t, posts }: any) => (
     <Layout>
         <Head>
@@ -35,28 +35,28 @@ const Resource = ({ t, posts }: any) => (
 
         <BacktoTop />
     </Layout>
-)
+);
 
-export default withTranslation('Resource')(Resource)
+export default withTranslation('Resource')(Resource);
 export const getStaticProps = async () => {
-    let LandingPage
+    let LandingPage;
     try {
-        LandingPage = await BlogService.GetLandingPage()
+        LandingPage = await BlogService.GetLandingPage();
     } catch (error) {
-        console.error(error)
+        console.error(error);
     }
     const highligth = LandingPage.PostHighligth
         ? LandingPage.PostHighligth.filter((post) => post.highlight)
-        : []
+        : [];
     const example = LandingPage.PostExample
         ? LandingPage.PostExample.filter((post) => post.ExampleOfUse)
-        : []
+        : [];
     const knowledge = LandingPage.PostKnowledge
         ? LandingPage.PostKnowledge.filter((post) => post.Knowledge)
-        : []
+        : [];
     const successStory = LandingPage.PostSuccessStory
         ? LandingPage.PostSuccessStory.filter((post) => post.SuccessStory)
-        : []
+        : [];
     return {
         props: {
             posts: {
@@ -67,5 +67,5 @@ export const getStaticProps = async () => {
             },
             namespacesRequired: ['Resource'],
         },
-    }
-}
+    };
+};

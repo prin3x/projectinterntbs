@@ -1,55 +1,55 @@
-import * as fbq from 'fbq'
-import Cookie from 'js-cookie'
-import PropTypes from 'prop-types'
-import React, { useEffect, useState } from 'react'
-import ReCAPTCHA from 'react-google-recaptcha'
-import TagManager from 'react-gtm-module'
-import { useForm } from 'react-hook-form'
-import Modal from 'react-modal'
-import appConfig from '../../appConfig'
-import { withTranslation } from '../../i18n'
+import * as fbq from 'fbq';
+import Cookie from 'js-cookie';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import TagManager from 'react-gtm-module';
+import { useForm } from 'react-hook-form';
+import Modal from 'react-modal';
+import appConfig from '../../appConfig';
+import { withTranslation } from '../../i18n';
 import {
     quickRegisterStep1,
     quickRegisterStep2,
     quickRegisterStep3,
-} from '../../services/user/user.service'
+} from '../../services/user/user.service';
 type Inputs = {
-    msisdn: string
-    pin: string
-    resultStep1: string
-    resultStep2: string
-    resultStep3: string
-    welcomeToken: string
-}
+    msisdn: string;
+    pin: string;
+    resultStep1: string;
+    resultStep2: string;
+    resultStep3: string;
+    welcomeToken: string;
+};
 
 const TestQuickregister = ({ t }: any) => {
-    const [showModalpass, setShowModalpass] = useState(false)
-    const [showInputstep1, setShowInputstep1] = useState(true)
-    const [showInputstep3, setShowInputstep3] = useState(false)
-    const [showLogin, setShowLogin] = useState(false)
-    const [showModalcaptcha, setShowModalcaptcha] = useState(false)
-    const [msisdn, setMsisdn] = useState('')
-    const [tempDatastep1, setTempDatastep1] = useState({ msisdn: '' })
-    const [welcome_token, setWelcomeToken] = useState('')
+    const [showModalpass, setShowModalpass] = useState(false);
+    const [showInputstep1, setShowInputstep1] = useState(true);
+    const [showInputstep3, setShowInputstep3] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
+    const [showModalcaptcha, setShowModalcaptcha] = useState(false);
+    const [msisdn, setMsisdn] = useState('');
+    const [tempDatastep1, setTempDatastep1] = useState({ msisdn: '' });
+    const [welcome_token, setWelcomeToken] = useState('');
     const [testDesc, setTestDesc] = useState(
         'Just type in your mobile number and verify your identity with the password you receive.'
-    )
+    );
     useEffect(() => {
-        Modal.setAppElement('#ElementModal')
-    }, [])
+        Modal.setAppElement('#ElementModal');
+    }, []);
     const setreCaptcha = async (value: any) => {
-        setShowModalcaptcha(false)
+        setShowModalcaptcha(false);
         const resultStep1 = await quickRegisterStep1({
             msisdn: tempDatastep1.msisdn,
             recaptcha: value,
-        })
+        });
         if (resultStep1.error.code !== '') {
             setErrorStep1('resultStep1', {
                 type: resultStep1.error.code,
                 message: '',
-            })
-            closeModal()
-            return
+            });
+            closeModal();
+            return;
         }
         TagManager.dataLayer({
             dataLayer: {
@@ -57,8 +57,8 @@ const TestQuickregister = ({ t }: any) => {
                 register_method: 'quick',
                 action: 'confirm_number',
             },
-        })
-        ;(function fbqReady() {
+        });
+        (function fbqReady() {
             if ((window as any).fbq !== undefined) {
                 if (
                     !fbq.trackCustom(
@@ -68,13 +68,13 @@ const TestQuickregister = ({ t }: any) => {
                 )
                     console.warn(
                         `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmNumber} failed.`
-                    )
-            } else setTimeout(fbqReady, 3000)
-        })()
+                    );
+            } else setTimeout(fbqReady, 3000);
+        })();
 
-        setMsisdn(resultStep1.data.msisdn)
-        setShowModalpass(true)
-    }
+        setMsisdn(resultStep1.data.msisdn);
+        setShowModalpass(true);
+    };
     //================  step 1
     const {
         register: registerStep1,
@@ -84,34 +84,34 @@ const TestQuickregister = ({ t }: any) => {
         clearErrors: clearErrors1,
     } = useForm<Inputs>({
         mode: 'onBlur',
-    })
+    });
     const onSubmitStep1 = async (data: any) => {
         if (data.msisdn === '') {
             setErrorStep1('msisdn', {
                 type: 'pattern',
                 message: '',
-            })
-            return
+            });
+            return;
         }
-        setShowModalpass(false)
-        openModal()
-        setTempDatastep1(data)
-        setShowModalcaptcha(true)
-    }
+        setShowModalpass(false);
+        openModal();
+        setTempDatastep1(data);
+        setShowModalcaptcha(true);
+    };
     const handleErorrStep1 = (error: any) => {
         if (error.msisdn) {
             return (
                 'SmsSection::TestQuickregister::validate::msisdn::' +
                 error.msisdn.type
-            )
+            );
         }
         if (error.resultStep1) {
             return (
                 'SmsSection::TestQuickregister::resultStep1::' +
                 error.resultStep1.type
-            )
+            );
         }
-    }
+    };
     //================ end step 1
     //================  step 2
     const {
@@ -122,23 +122,23 @@ const TestQuickregister = ({ t }: any) => {
         errors: errrorsStep2,
     } = useForm<Inputs>({
         mode: 'onBlur',
-    })
+    });
     const onSubmitStep2 = async (data: any) => {
         if (data.pin === '') {
             setErrorStep2('pin', {
                 type: 'required',
                 message: '',
-            })
-            return
+            });
+            return;
         }
-        data.msisdn = msisdn
-        const resultStep2 = await quickRegisterStep2(data)
+        data.msisdn = msisdn;
+        const resultStep2 = await quickRegisterStep2(data);
         if (resultStep2.error.code !== '') {
             setErrorStep2('resultStep2', {
                 type: resultStep2.error.code,
                 message: '',
-            })
-            return
+            });
+            return;
         }
         TagManager.dataLayer({
             dataLayer: {
@@ -146,8 +146,8 @@ const TestQuickregister = ({ t }: any) => {
                 register_method: 'quick',
                 action: 'confirm_password',
             },
-        })
-        ;(function fbqReady() {
+        });
+        (function fbqReady() {
             if ((window as any).fbq !== undefined) {
                 if (
                     !fbq.trackCustom(
@@ -157,31 +157,31 @@ const TestQuickregister = ({ t }: any) => {
                 )
                     console.warn(
                         `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmPassword} failed.`
-                    )
-            } else setTimeout(fbqReady, 3000)
-        })()
+                    );
+            } else setTimeout(fbqReady, 3000);
+        })();
 
-        setTestDesc('desc-2')
-        setWelcomeToken(resultStep2.welcome_token)
-        setShowModalpass(false)
-        setShowInputstep1(false)
-        setShowInputstep3(true)
-        closeModal()
-    }
+        setTestDesc('desc-2');
+        setWelcomeToken(resultStep2.welcome_token);
+        setShowModalpass(false);
+        setShowInputstep1(false);
+        setShowInputstep3(true);
+        closeModal();
+    };
     const handleErorrStep2 = (error: any) => {
         if (error.pin) {
             return (
                 'SmsSection::TestQuickregister::validate::pin::' +
                 error.pin.type
-            )
+            );
         }
         if (error.resultStep2) {
             return (
                 'SmsSection::TestQuickregister::resultStep2::' +
                 error.resultStep2.type
-            )
+            );
         }
-    }
+    };
     //================ end step 2
     //================  step 3
     const {
@@ -192,60 +192,60 @@ const TestQuickregister = ({ t }: any) => {
         errors: errrorsStep3,
     } = useForm<Inputs>({
         mode: 'onBlur',
-    })
+    });
     const onSubmitStep3 = async () => {
         if (welcome_token === '') {
             setErrorStep3('welcomeToken', {
                 type: 'required',
                 message: '',
-            })
-            return
+            });
+            return;
         }
-        const resultStep3 = await quickRegisterStep3({ welcome_token })
+        const resultStep3 = await quickRegisterStep3({ welcome_token });
         if (resultStep3.error.code !== '') {
             setErrorStep3('resultStep3', {
                 type: resultStep3.error.code,
                 message: '',
-            })
-            return
+            });
+            return;
         }
-        openModal()
-        setShowLogin(true)
-    }
+        openModal();
+        setShowLogin(true);
+    };
     const handleErorrStep3 = (error: any) => {
         if (error.welcomeToken) {
             return (
                 'SmsSection::TestQuickregister::validate::welcomeToken.' +
                 error.welcomeToken.type
-            )
+            );
         }
         if (error.resultStep3) {
             return (
                 'SmsSection::TestQuickregister::resultStep3.' +
                 error.resultStep3.type
-            )
+            );
         }
-    }
+    };
     //================ end step 3
     const gotoLogin = () => {
-        let domain = 'localhost'
+        let domain = 'localhost';
         if (appConfig.APP_ENV === appConfig.production)
-            domain = '.thaibulksms.com'
+            domain = '.thaibulksms.com';
         else if (appConfig.APP_ENV === appConfig.internalTest)
-            domain = '.1mobyline.com'
+            domain = '.1mobyline.com';
 
-        Cookie.set('TBS_username', msisdn || '', { expires: 0.15, domain })
+        Cookie.set('TBS_username', msisdn || '', { expires: 0.15, domain });
         window.location.replace(
             `${appConfig.WEB_URL_ACCOUNT}/register/quickregister`
-        )
-    }
-    const [modalIsOpen, setIsOpen] = React.useState(false)
+        );
+    };
+    const [modalIsOpen, setIsOpen] = React.useState(false);
     function openModal() {
-        setIsOpen(true)
+        setIsOpen(true);
     }
 
     function closeModal() {
-        setIsOpen(false)
+        setIsOpen(false);
     }
     return (
         <>
@@ -486,7 +486,7 @@ const TestQuickregister = ({ t }: any) => {
                                 <button
                                     className="btn v2 btn-show-login"
                                     onClick={() => {
-                                        gotoLogin()
+                                        gotoLogin();
                                     }}
                                 >
                                     {t(
@@ -499,14 +499,14 @@ const TestQuickregister = ({ t }: any) => {
                 </Modal>
             </div>
         </>
-    )
-}
+    );
+};
 
 TestQuickregister.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 TestQuickregister.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(TestQuickregister)
+};
+export default withTranslation('Home')(TestQuickregister);

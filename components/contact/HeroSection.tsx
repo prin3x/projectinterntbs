@@ -1,37 +1,38 @@
-import PropTypes from 'prop-types'
-import React, { useState } from 'react'
-import ReCAPTCHA from 'react-google-recaptcha'
-import { useForm } from 'react-hook-form'
-import Swal from 'sweetalert2'
-import { withTranslation } from '../../i18n'
-import { sendContact } from '../../services/contact/contact.service'
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
+import { withTranslation } from '../../i18n';
+import { sendContact } from '../../services/contact/contact.service';
 const menuClick = () => {
-    var elDivnice = document.getElementsByClassName('devnice-select')[0]
-    if (elDivnice.classList.contains('open')) elDivnice.classList.remove('open')
-    else elDivnice.classList.add('open')
-}
+    var elDivnice = document.getElementsByClassName('devnice-select')[0];
+    if (elDivnice.classList.contains('open'))
+        elDivnice.classList.remove('open');
+    else elDivnice.classList.add('open');
+};
 type Inputs = {
-    contactType: string
-    firstname: string
-    lastname: string
-    companyName: string
-    email: string
-    phone: string
-    desc: string
-    recaptcha: string
-    confirm: boolean
-}
+    contactType: string;
+    firstname: string;
+    lastname: string;
+    companyName: string;
+    email: string;
+    phone: string;
+    desc: string;
+    recaptcha: string;
+    confirm: boolean;
+};
 const HeroSection = ({ t }: any) => {
     const [wordhead, setWordhead] = useState(
         'HeroSection::Contact the sales department'
-    )
-    const [successbtn, setSuccessbtn] = useState(false)
-    let captcha: any
+    );
+    const [successbtn, setSuccessbtn] = useState(false);
+    let captcha: any;
     const setCaptchaRef = (ref: any) => {
         if (ref) {
-            return (captcha = ref)
+            return (captcha = ref);
         }
-    }
+    };
     let {
         register,
         handleSubmit,
@@ -44,17 +45,17 @@ const HeroSection = ({ t }: any) => {
             confirm: true,
             contactType: '1',
         },
-    })
+    });
     const onSubmit = async (data: any) => {
-        captcha.reset()
+        captcha.reset();
 
-        const result = await sendContact(data)
+        const result = await sendContact(data);
         if (result.code !== '') {
             Swal.fire({
                 icon: 'warning',
                 html: t('HeroSection::' + result.code),
-            })
-            return
+            });
+            return;
         }
 
         reset({
@@ -66,52 +67,52 @@ const HeroSection = ({ t }: any) => {
             phone: '',
             desc: '',
             confirm: true,
-        })
-        setWordhead('HeroSection::Contact the sales department')
+        });
+        setWordhead('HeroSection::Contact the sales department');
 
-        setSuccessbtn(false)
+        setSuccessbtn(false);
         Swal.fire({
             icon: 'success',
             text: t('HeroSection::Swal::titlesuccess'),
-        })
-    }
+        });
+    };
     const handleErorr = (error: any) => {
         if (error.firstname) {
-            return 'HeroSection::validate::firstname::' + error.firstname.type
+            return 'HeroSection::validate::firstname::' + error.firstname.type;
         }
         if (error.lastname) {
-            return 'HeroSection::validate::lastname::' + error.lastname.type
+            return 'HeroSection::validate::lastname::' + error.lastname.type;
         }
         if (error.phone) {
-            return 'HeroSection::validate::phone::' + error.phone.type
+            return 'HeroSection::validate::phone::' + error.phone.type;
         }
         if (error.email) {
-            return 'HeroSection::validate::email::' + error.email.type
+            return 'HeroSection::validate::email::' + error.email.type;
         }
         if (error.recaptcha) {
-            return 'HeroSection::validate::recaptcha::' + error.recaptcha.type
+            return 'HeroSection::validate::recaptcha::' + error.recaptcha.type;
         }
         if (error.confirm) {
-            return 'HeroSection::validate::confirm::' + error.confirm.type
+            return 'HeroSection::validate::confirm::' + error.confirm.type;
         }
         if (error.desc) {
-            return 'HeroSection::validate::desc::' + error.desc.type
+            return 'HeroSection::validate::desc::' + error.desc.type;
         }
         if (error.res) {
             if (error.res.type !== '400')
-                return 'HeroSection::' + error.res.type
-            return 'ErrorMessage:::' + error.res.type
+                return 'HeroSection::' + error.res.type;
+            return 'ErrorMessage:::' + error.res.type;
         }
 
         if (error.auth) {
-            return 'ErrorMessage:::' + error.auth.type
+            return 'ErrorMessage:::' + error.auth.type;
         }
-    }
+    };
     const setreCaptcha = (value: any) => {
-        setValue('recaptcha', value, { shouldValidate: true })
-        clearErrors('recaptcha')
-    }
-    React.useEffect(() => {}, [])
+        setValue('recaptcha', value, { shouldValidate: true });
+        clearErrors('recaptcha');
+    };
+    React.useEffect(() => {}, []);
     return (
         <div className="container">
             <style jsx>{`
@@ -257,10 +258,10 @@ const HeroSection = ({ t }: any) => {
                                                             {
                                                                 shouldValidate: true,
                                                             }
-                                                        )
+                                                        );
                                                         setWordhead(
                                                             'HeroSection::Contact the sales department'
-                                                        )
+                                                        );
                                                     }}
                                                 >
                                                     {t(
@@ -277,10 +278,10 @@ const HeroSection = ({ t }: any) => {
                                                             {
                                                                 shouldValidate: true,
                                                             }
-                                                        )
+                                                        );
                                                         setWordhead(
                                                             'HeroSection::Contact support'
-                                                        )
+                                                        );
                                                     }}
                                                 >
                                                     {t(
@@ -428,14 +429,14 @@ const HeroSection = ({ t }: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 HeroSection.getInitialProps = async () => ({
     namespacesRequired: ['Contact'],
-})
+});
 
 HeroSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Contact')(HeroSection)
+};
+export default withTranslation('Contact')(HeroSection);

@@ -1,14 +1,14 @@
-import { NextSeo } from 'next-seo'
-import Head from 'next/head'
-import React from 'react'
-import BacktoTop from '../../../components/BacktoTop'
-import CtaSection from '../../../components/global-sms/CtaSection'
-import DesSection from '../../../components/global-sms/DesSection'
-import HeroSection from '../../../components/global-sms/HeroSection'
-import SmsSection from '../../../components/global-sms/SmsSection'
-import Layout from '../../../components/Layout'
-import { seo } from '../../../components/seo/global-sms'
-import { withTranslation } from '../../../i18n'
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
+import React from 'react';
+import BacktoTop from '../../../components/BacktoTop';
+import CtaSection from '../../../components/global-sms/CtaSection';
+import DesSection from '../../../components/global-sms/DesSection';
+import HeroSection from '../../../components/global-sms/HeroSection';
+import SmsSection from '../../../components/global-sms/SmsSection';
+import Layout from '../../../components/Layout';
+import { seo } from '../../../components/seo/global-sms';
+import { withTranslation } from '../../../i18n';
 
 const GlobalSMS = ({ t }: any) => (
     <Layout>
@@ -34,13 +34,13 @@ const GlobalSMS = ({ t }: any) => (
         </div>
         <BacktoTop />
     </Layout>
-)
+);
 
-export default withTranslation('GlobalSMSPage')(GlobalSMS)
+export default withTranslation('GlobalSMSPage')(GlobalSMS);
 export const getStaticProps = async () => {
     return {
         props: {
             namespacesRequired: ['GlobalSMSPage'],
         },
-    }
-}
+    };
+};

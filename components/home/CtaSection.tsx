@@ -1,5 +1,5 @@
-import { withTranslation, Link } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation, Link } from '../../i18n';
+import PropTypes from 'prop-types';
 const CtaSection = ({ t }: any) => (
     <div className="cta_section">
         <div className="container">
@@ -40,12 +40,12 @@ const CtaSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 CtaSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 CtaSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(CtaSection)
+};
+export default withTranslation('Home')(CtaSection);

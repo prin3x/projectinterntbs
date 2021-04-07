@@ -1,5 +1,5 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 
 const SmartSmsConsoleContentSection = ({ t }: any) => (
     <div
@@ -32,12 +32,14 @@ const SmartSmsConsoleContentSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 SmartSmsConsoleContentSection.getInitialProps = async () => ({
     namespacesRequired: ['SmartSmsConsole'],
-})
+});
 
 SmartSmsConsoleContentSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('SmartSmsConsole')(SmartSmsConsoleContentSection)
+};
+export default withTranslation('SmartSmsConsole')(
+    SmartSmsConsoleContentSection
+);

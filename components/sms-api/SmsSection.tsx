@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
-import Link from 'next/link'
+import PropTypes from 'prop-types';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
 const SmsSectionV3 = ({ t }: any) => (
     <div className="sms_section v2 ">
         <div className="container">
@@ -63,13 +63,13 @@ const SmsSectionV3 = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 
 SmsSectionV3.getInitialProps = async () => ({
     namespacesRequired: ['SMSAPIPage'],
-})
+});
 
 SmsSectionV3.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('SMSAPIPage')(SmsSectionV3)
+};
+export default withTranslation('SMSAPIPage')(SmsSectionV3);

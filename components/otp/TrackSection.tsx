@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
+import PropTypes from 'prop-types';
+import { withTranslation } from '../../i18n';
 const TrackSection = ({ t }: any) => (
     <div
         className="track_section lazyload"
@@ -77,12 +77,12 @@ const TrackSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 TrackSection.getInitialProps = async () => ({
     namespacesRequired: ['Otp'],
-})
+});
 
 TrackSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Otp')(TrackSection)
+};
+export default withTranslation('Otp')(TrackSection);

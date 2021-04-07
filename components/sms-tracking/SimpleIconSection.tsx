@@ -1,5 +1,5 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const SimpleIconSectionV2 = ({ t }: any) => (
     <div className="simple_icon_section">
         <div className="container">
@@ -116,12 +116,12 @@ const SimpleIconSectionV2 = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 SimpleIconSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['Sms-tracking'],
-})
+});
 
 SimpleIconSectionV2.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Sms-tracking')(SimpleIconSectionV2)
+};
+export default withTranslation('Sms-tracking')(SimpleIconSectionV2);

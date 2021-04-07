@@ -1,9 +1,9 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
-import React from 'react'
-import ProductFaqSection from './FaqSection'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import React from 'react';
+import ProductFaqSection from './FaqSection';
 
-import CollapseItem from './CollapseItem'
+import CollapseItem from './CollapseItem';
 
 const TabContent = ({ t }: any) => {
     // const [, setTab] = React.useState<any>();
@@ -111,7 +111,7 @@ const TabContent = ({ t }: any) => {
                 'HeroSection::We provide SMS sending services covering 200 countries. Please contact us for service prices or more information at <a href="mailto:contact@thaibulksms.com">contact@thaibulksms.com</a> or telephone <a href="tel:027986000">0-2798-6000</a>.'
             ),
         },
-    ]
+    ];
 
     const listItemshopping = [
         {
@@ -144,7 +144,7 @@ const TabContent = ({ t }: any) => {
                 'HeroSection::This can be done by sending the Username, company details, name, address, and desired taxpayer ID number to this E-mail: <a href="mailto:contact@thaibulksms.com">contact@thaibulksms.com</a>'
             ),
         },
-    ]
+    ];
 
     const listItemAPI = [
         {
@@ -195,11 +195,11 @@ const TabContent = ({ t }: any) => {
                 'HeroSection::The system will continue to Resend until the end recipient has opened their machine. If their status has updated, this means that the Resend process has finished, but this cannot be inspected under a Standard SMS package.'
             ),
         },
-    ]
+    ];
     React.useEffect(() => {
         // setTab($('#pills-profile-tab'));
         // }, [tab]);
-    }, [])
+    }, []);
 
     return (
         <div
@@ -240,7 +240,7 @@ const TabContent = ({ t }: any) => {
                                                         }}
                                                         key={key + 1}
                                                     />
-                                                )
+                                                );
                                             })}
                                         </div>
                                     </div>
@@ -278,7 +278,7 @@ const TabContent = ({ t }: any) => {
                                                             }}
                                                             key={key + 1}
                                                         />
-                                                    )
+                                                    );
                                                 }
                                             )}
                                         </div>
@@ -315,7 +315,7 @@ const TabContent = ({ t }: any) => {
                                                         }}
                                                         key={key + 1}
                                                     />
-                                                )
+                                                );
                                             })}
                                         </div>
                                     </div>
@@ -378,14 +378,14 @@ const TabContent = ({ t }: any) => {
         </div> */}
             </div>
         </div>
-    )
-}
+    );
+};
 
 TabContent.getInitialProps = async () => ({
     namespacesRequired: ['FAQ'],
-})
+});
 
 TabContent.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation(['FAQ'])(TabContent)
+};
+export default withTranslation(['FAQ'])(TabContent);

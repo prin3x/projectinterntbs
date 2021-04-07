@@ -1,16 +1,16 @@
-import React from 'react'
-import Layout from '../../components/Layout'
-import PricingSection from '../../components/pricing/PricingSection'
-import AllPricing from '../../components/pricing/AllPricing'
-import FaqSection from '../../components/pricing/FaqSection'
-import BacktoTop from '../../components/BacktoTop'
-import Head from 'next/head'
-import { withTranslation } from '../../i18n'
-import * as ProductService from '../../services/shopping/product.service'
-import { PricingProps } from '../../services/shopping/pricing.model'
+import React from 'react';
+import Layout from '../../components/Layout';
+import PricingSection from '../../components/pricing/PricingSection';
+import AllPricing from '../../components/pricing/AllPricing';
+import FaqSection from '../../components/pricing/FaqSection';
+import BacktoTop from '../../components/BacktoTop';
+import Head from 'next/head';
+import { withTranslation } from '../../i18n';
+import * as ProductService from '../../services/shopping/product.service';
+import { PricingProps } from '../../services/shopping/pricing.model';
 
-import { NextSeo } from 'next-seo'
-import { seo } from '../../components/seo/pricing'
+import { NextSeo } from 'next-seo';
+import { seo } from '../../components/seo/pricing';
 const Pricing: any = ({ t, packages }: PricingProps) => {
     return (
         <Layout>
@@ -38,8 +38,8 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
             </div>
             <BacktoTop />
         </Layout>
-    )
-}
+    );
+};
 
 // Pricing.getInitialProps = async () => {
 //   // const params: PackageAll = {
@@ -67,15 +67,15 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
 //   console.log('ok',packageAll)
 //   return { props: { packageAll} }
 // }
-export default withTranslation('Pricing')(Pricing)
+export default withTranslation('Pricing')(Pricing);
 
 export const getStaticProps = async () => {
-    let packageAll
+    let packageAll;
 
     try {
-        packageAll = await ProductService.GetPackageNormal()
+        packageAll = await ProductService.GetPackageNormal();
     } catch (error) {
-        console.error(error)
+        console.error(error);
     }
 
     return {
@@ -83,5 +83,5 @@ export const getStaticProps = async () => {
             packages: packageAll ? packageAll.packages : {},
             namespacesRequired: ['Pricing'],
         },
-    }
-}
+    };
+};

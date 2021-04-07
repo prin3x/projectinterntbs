@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper'
-import { format } from 'date-fns'
-import { parseFromTimeZone } from 'date-fns-timezone'
-import Link from 'next/link'
-import { withTranslation } from '../../i18n'
-import AppConfig from '../../appConfig'
+import PropTypes from 'prop-types';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper';
+import { format } from 'date-fns';
+import { parseFromTimeZone } from 'date-fns-timezone';
+import Link from 'next/link';
+import { withTranslation } from '../../i18n';
+import AppConfig from '../../appConfig';
 // Import Swiper styles
 
-SwiperCore.use([Navigation, Pagination, A11y, Autoplay])
+SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 const ContentSection = ({ Posts, t }: any) => (
     <div
         className="hero_section lazyload"
@@ -74,7 +74,7 @@ const ContentSection = ({ Posts, t }: any) => (
                                                 </a>
                                             </Link>
                                         </SwiperSlide>
-                                    )
+                                    );
                                 })}
                         </Swiper>
                     </div>
@@ -82,13 +82,13 @@ const ContentSection = ({ Posts, t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 
 ContentSection.getInitialProps = async () => ({
     namespacesRequired: ['Resource'],
-})
+});
 
 ContentSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Resource')(ContentSection)
+};
+export default withTranslation('Resource')(ContentSection);

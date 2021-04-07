@@ -1,15 +1,15 @@
-import { NextSeo } from 'next-seo'
-import Head from 'next/head'
-import React from 'react'
-import BacktoTop from '../../../components/BacktoTop'
-import Layout from '../../../components/Layout'
-import AdvantagesSection from '../../../components/location-based-sms/AdvantagesSection'
-import CtaSection from '../../../components/location-based-sms/CtaSection'
-import DesSection from '../../../components/location-based-sms/DesSection'
-import HeroSection from '../../../components/location-based-sms/HeroSection'
-import SmsSection from '../../../components/location-based-sms/SmsSection'
-import { seo } from '../../../components/seo/location-based-sms'
-import { withTranslation } from '../../../i18n'
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
+import React from 'react';
+import BacktoTop from '../../../components/BacktoTop';
+import Layout from '../../../components/Layout';
+import AdvantagesSection from '../../../components/location-based-sms/AdvantagesSection';
+import CtaSection from '../../../components/location-based-sms/CtaSection';
+import DesSection from '../../../components/location-based-sms/DesSection';
+import HeroSection from '../../../components/location-based-sms/HeroSection';
+import SmsSection from '../../../components/location-based-sms/SmsSection';
+import { seo } from '../../../components/seo/location-based-sms';
+import { withTranslation } from '../../../i18n';
 
 const LocationBasedSMS = ({ t }: any) => (
     <Layout>
@@ -36,13 +36,13 @@ const LocationBasedSMS = ({ t }: any) => (
         </div>
         <BacktoTop />
     </Layout>
-)
+);
 
-export default withTranslation('LocationBasedSMSPage')(LocationBasedSMS)
+export default withTranslation('LocationBasedSMSPage')(LocationBasedSMS);
 export const getStaticProps = async () => {
     return {
         props: {
             namespacesRequired: ['LocationBasedSMSPage'],
         },
-    }
-}
+    };
+};

@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
-import React, { useEffect } from 'react'
-import { Link, withTranslation } from '../i18n'
+import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { Link, withTranslation } from '../i18n';
 const Footer = ({ t }: any) => {
-    useEffect(() => {}, [])
+    useEffect(() => {}, []);
     return (
         <div className="footer_section">
             <div className="container" id="footer">
@@ -254,13 +254,13 @@ const Footer = ({ t }: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 Footer.getInitialProps = async () => ({
     namespacesRequired: ['Footer'],
-})
+});
 
 Footer.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Footer')(React.memo(Footer))
+};
+export default withTranslation('Footer')(React.memo(Footer));

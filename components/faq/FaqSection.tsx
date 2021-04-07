@@ -1,5 +1,5 @@
-import { withTranslation, Link } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation, Link } from '../../i18n';
+import PropTypes from 'prop-types';
 const FaqSection = ({ t }: any) => (
     <div
         className="faq_section lazyload"
@@ -70,13 +70,13 @@ const FaqSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 FaqSection.getInitialProps = async () => ({
     namespacesRequired: ['FAQ'],
-})
+});
 
 FaqSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('FAQ')(FaqSection)
+};
+export default withTranslation('FAQ')(FaqSection);
 // export default FaqSection;

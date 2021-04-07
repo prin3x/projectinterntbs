@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 // import { sendContact } from './contact.model';
 
 export async function sendContact(param: any) {
@@ -11,25 +11,25 @@ export async function sendContact(param: any) {
         email: param.email,
         message: param.desc,
         recaptcha: param.recaptcha,
-    }
+    };
     try {
         let resultAPI = await axios.post(
             process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/contact',
             dataSend
-        )
-        console.log(resultAPI)
+        );
+        console.log(resultAPI);
         if (resultAPI.status !== 200 && resultAPI.status !== 201) {
-            return { code: '400', errorMessageText: '' }
+            return { code: '400', errorMessageText: '' };
         }
 
-        return { code: '', errorMessageText: '' }
+        return { code: '', errorMessageText: '' };
     } catch (error) {
-        console.log('error : ', error.response)
+        console.log('error : ', error.response);
         let errorData = error.response
             ? error.response.data.error
-            : { code: '400', errorMessageText: '' }
-        return errorData
+            : { code: '400', errorMessageText: '' };
+        return errorData;
     }
 }
 
-export default sendContact
+export default sendContact;

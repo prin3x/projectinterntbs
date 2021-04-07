@@ -1,23 +1,23 @@
-import { withTranslation, Router } from '../../i18n'
-import PropTypes from 'prop-types'
-import { StoreContext } from '../context/store'
-import React, { useEffect, useContext } from 'react'
-import { useForm } from 'react-hook-form'
-import { login } from '../../services/user/user.service'
-import TagManager from 'react-gtm-module'
+import { withTranslation, Router } from '../../i18n';
+import PropTypes from 'prop-types';
+import { StoreContext } from '../context/store';
+import React, { useEffect, useContext } from 'react';
+import { useForm } from 'react-hook-form';
+import { login } from '../../services/user/user.service';
+import TagManager from 'react-gtm-module';
 
 type Inputs = {
-    firstname: string
-    lastname: string
-    email: string
-    password: string
-    agree: boolean
-    news: boolean
-    registerdto: string
-    auth: string
-}
+    firstname: string;
+    lastname: string;
+    email: string;
+    password: string;
+    agree: boolean;
+    news: boolean;
+    registerdto: string;
+    auth: string;
+};
 const QuickRegisterComponents = ({ t }: any) => {
-    const dataStore: any = useContext(StoreContext)
+    const dataStore: any = useContext(StoreContext);
     let {
         register,
         handleSubmit,
@@ -30,22 +30,22 @@ const QuickRegisterComponents = ({ t }: any) => {
             agree: true,
             news: true,
         },
-    })
+    });
     const onSubmit = async (data: any) => {
         if (dataStore.msisdnStore[0] === undefined) {
-            console.log('errror msisdnStore')
-            return
+            console.log('errror msisdnStore');
+            return;
         }
         const user = await login({
             ...data,
             username: dataStore.msisdnStore[0],
-        })
-        console.log('user : ', user)
+        });
+        console.log('user : ', user);
         if (user.error.code !== '') {
             setError('auth', {
                 type: user.error.code,
                 message: '',
-            })
+            });
         } else {
             TagManager.dataLayer({
                 dataLayer: {
@@ -53,36 +53,36 @@ const QuickRegisterComponents = ({ t }: any) => {
                     register_method: 'quick',
                     action: 'complete_fulfil_info',
                 },
-            })
-            window.location.replace('https://member.thaibulksms.com/')
+            });
+            window.location.replace('https://member.thaibulksms.com/');
             // Router.push('/');
         }
-    }
+    };
     const handleErorr = (error: any) => {
-        console.log(error)
+        console.log(error);
         if (error.firstname) {
-            return 'quickregister.validate.firstname.' + error.firstname.type
+            return 'quickregister.validate.firstname.' + error.firstname.type;
         }
         if (error.lastname) {
-            return 'quickregister.validate.lastname.' + error.lastname.type
+            return 'quickregister.validate.lastname.' + error.lastname.type;
         }
         if (error.password) {
-            return 'quickregister.validate.password.' + error.password.type
+            return 'quickregister.validate.password.' + error.password.type;
         }
         if (error.email) {
-            return 'quickregister.validate.email.' + error.email.type
+            return 'quickregister.validate.email.' + error.email.type;
         }
         if (error.agree) {
-            return 'quickregister.validate.agree.' + error.agree.type
+            return 'quickregister.validate.agree.' + error.agree.type;
         }
         if (error.registerdto) {
-            return 'quickregister.' + error.registerdto.type
+            return 'quickregister.' + error.registerdto.type;
         }
 
         if (error.auth) {
-            return 'ErrorMessage:' + error.auth.type
+            return 'ErrorMessage:' + error.auth.type;
         }
-    }
+    };
     useEffect(() => {
         TagManager.dataLayer({
             dataLayer: {
@@ -90,15 +90,15 @@ const QuickRegisterComponents = ({ t }: any) => {
                 register_method: 'quick',
                 action: 'view_fulfil_info',
             },
-        })
-        console.log('dataStore : ', dataStore)
+        });
+        console.log('dataStore : ', dataStore);
         if (dataStore.passStore[0] !== undefined) {
-            setValue('password', dataStore.passStore[0])
+            setValue('password', dataStore.passStore[0]);
         }
         if (dataStore.msisdnStore[0] === undefined) {
-            Router.push('/log-in')
+            Router.push('/log-in');
         }
-    }, [])
+    }, []);
     return (
         <div className="register_section">
             <h2>{t('quickregister.header')}</h2>
@@ -192,15 +192,15 @@ const QuickRegisterComponents = ({ t }: any) => {
                 </div>
             </form>
         </div>
-    )
-}
+    );
+};
 QuickRegisterComponents.getInitialProps = async () => ({
     namespacesRequired: ['QuickRegister', 'ErrorMessage'],
-})
+});
 
 QuickRegisterComponents.propTypes = {
     t: PropTypes.func.isRequired,
-}
+};
 export default withTranslation(['QuickRegister', 'ErrorMessage'])(
     QuickRegisterComponents
-)
+);

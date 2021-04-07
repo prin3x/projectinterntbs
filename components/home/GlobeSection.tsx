@@ -1,5 +1,5 @@
-import { withTranslation, Link } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation, Link } from '../../i18n';
+import PropTypes from 'prop-types';
 const GlobeSection = ({ t }: any) => (
     <div className="globe_section">
         <div className="container">
@@ -39,13 +39,13 @@ const GlobeSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 
 GlobeSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 GlobeSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(GlobeSection)
+};
+export default withTranslation('Home')(GlobeSection);

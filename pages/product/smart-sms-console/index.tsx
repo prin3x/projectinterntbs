@@ -1,15 +1,15 @@
-import React from 'react'
-import Layout from '../../../components/Layout'
-import Head from 'next/head'
-import SmartSmsConsoleContentSection from '../../../components/smart-sms-console/ContentSelect'
-import SmsSection from '../../../components/smart-sms-console/SmsSection'
-import SimpleIconSection from '../../../components/smart-sms-console/SimpleIconSection'
-import OtherFeature from '../../../components/smart-sms-console/OtherFeature'
-import CtaSection from '../../../components/smart-sms-console/CtaSection'
-import BacktoTop from '../../../components/BacktoTop'
-import { NextSeo } from 'next-seo'
-import { seo } from '../../../components/seo/smart-sms-console'
-import { withTranslation } from '../../../i18n'
+import React from 'react';
+import Layout from '../../../components/Layout';
+import Head from 'next/head';
+import SmartSmsConsoleContentSection from '../../../components/smart-sms-console/ContentSelect';
+import SmsSection from '../../../components/smart-sms-console/SmsSection';
+import SimpleIconSection from '../../../components/smart-sms-console/SimpleIconSection';
+import OtherFeature from '../../../components/smart-sms-console/OtherFeature';
+import CtaSection from '../../../components/smart-sms-console/CtaSection';
+import BacktoTop from '../../../components/BacktoTop';
+import { NextSeo } from 'next-seo';
+import { seo } from '../../../components/seo/smart-sms-console';
+import { withTranslation } from '../../../i18n';
 const SmartSmsConsole = ({ t }: any) => (
     <Layout>
         <Head>
@@ -35,15 +35,15 @@ const SmartSmsConsole = ({ t }: any) => (
         </div>
         <BacktoTop />
     </Layout>
-)
+);
 // Otp.getInitialProps = async () => ({
 //   namespacesRequired: ['OtpMeta'],
 // });
-export default withTranslation('SmartSmsConsole')(SmartSmsConsole)
+export default withTranslation('SmartSmsConsole')(SmartSmsConsole);
 export const getStaticProps = async () => {
     return {
         props: {
             namespacesRequired: ['SmartSmsConsole'],
         },
-    }
-}
+    };
+};

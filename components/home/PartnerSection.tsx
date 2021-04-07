@@ -1,9 +1,9 @@
-import dynamic from 'next/dynamic'
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import dynamic from 'next/dynamic';
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
-})
+});
 const PartnerSection = ({ t }: any) => (
     <div className="partner_section">
         <div className="container">
@@ -93,12 +93,12 @@ const PartnerSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 PartnerSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
-})
+});
 
 PartnerSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Home')(PartnerSection)
+};
+export default withTranslation('Home')(PartnerSection);

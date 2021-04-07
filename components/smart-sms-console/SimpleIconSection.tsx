@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
+import PropTypes from 'prop-types';
+import { withTranslation } from '../../i18n';
 const SimpleIconSection = ({ t }: any) => (
     <div className="promo_section lazyload">
         <div className="container">
@@ -136,12 +136,12 @@ const SimpleIconSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 SimpleIconSection.getInitialProps = async () => ({
     namespacesRequired: ['SmartSmsConsole'],
-})
+});
 
 SimpleIconSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('SmartSmsConsole')(SimpleIconSection)
+};
+export default withTranslation('SmartSmsConsole')(SimpleIconSection);

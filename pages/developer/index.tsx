@@ -1,12 +1,12 @@
-import { NextSeo } from 'next-seo'
-import Head from 'next/head'
-import React from 'react'
-import BacktoTop from '../../components/BacktoTop'
-import Layout from '../../components/Layout'
-import { seo } from '../../components/seo/developer'
-import CtaSection from '../../components/developer/CtaSection'
-import SimpleIconSection from '../../components/developer/SimpleIconSection'
-import { withTranslation } from '../../i18n'
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
+import React from 'react';
+import BacktoTop from '../../components/BacktoTop';
+import Layout from '../../components/Layout';
+import { seo } from '../../components/seo/developer';
+import CtaSection from '../../components/developer/CtaSection';
+import SimpleIconSection from '../../components/developer/SimpleIconSection';
+import { withTranslation } from '../../i18n';
 
 const Developer = ({ t }: any) => (
     <Layout>
@@ -29,13 +29,13 @@ const Developer = ({ t }: any) => (
         </div>
         <BacktoTop />
     </Layout>
-)
+);
 
-export default withTranslation('Developer')(Developer)
+export default withTranslation('Developer')(Developer);
 export const getStaticProps = async () => {
     return {
         props: {
             namespacesRequired: ['Developer'],
         },
-    }
-}
+    };
+};

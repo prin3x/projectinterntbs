@@ -15,5 +15,5 @@ const Proloader = () => (
             </div>
         </div>
     </div>
-)
-export default Proloader
+);
+export default Proloader;

@@ -1,9 +1,9 @@
-import { withTranslation, Link } from '../../i18n'
-import PropTypes from 'prop-types'
-import * as React from 'react'
+import { withTranslation, Link } from '../../i18n';
+import PropTypes from 'prop-types';
+import * as React from 'react';
 
 const FaqSection = ({ t }: any) => {
-    React.useEffect(() => {}, [])
+    React.useEffect(() => {}, []);
     return (
         <div
             className="faq_section lazyload"
@@ -424,14 +424,14 @@ const FaqSection = ({ t }: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 FaqSection.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
-})
+});
 
 FaqSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Pricing')(FaqSection)
+};
+export default withTranslation('Pricing')(FaqSection);

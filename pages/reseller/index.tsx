@@ -1,15 +1,15 @@
-import { NextSeo } from 'next-seo'
-import Head from 'next/head'
-import React from 'react'
-import BacktoTop from '../../components/BacktoTop'
-import Layout from '../../components/Layout'
-import AdvantagesSection from '../../components/reseller/AdvantagesSection'
-import CtaSection from '../../components/reseller/CtaSection'
-import DesSection from '../../components/reseller/DesSection'
-import HeroSection from '../../components/reseller/HeroSection'
-import SmsSection from '../../components/reseller/SmsSection'
-import { seo } from '../../components/seo/reseller'
-import { withTranslation } from '../../i18n'
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
+import React from 'react';
+import BacktoTop from '../../components/BacktoTop';
+import Layout from '../../components/Layout';
+import AdvantagesSection from '../../components/reseller/AdvantagesSection';
+import CtaSection from '../../components/reseller/CtaSection';
+import DesSection from '../../components/reseller/DesSection';
+import HeroSection from '../../components/reseller/HeroSection';
+import SmsSection from '../../components/reseller/SmsSection';
+import { seo } from '../../components/seo/reseller';
+import { withTranslation } from '../../i18n';
 
 const Reseller = ({ t }: any) => (
     <Layout>
@@ -36,13 +36,13 @@ const Reseller = ({ t }: any) => (
         </div>
         <BacktoTop />
     </Layout>
-)
+);
 
-export default withTranslation('ResellerPage')(Reseller)
+export default withTranslation('ResellerPage')(Reseller);
 export const getStaticProps = async () => {
     return {
         props: {
             namespacesRequired: ['ResellerPage'],
         },
-    }
-}
+    };
+};

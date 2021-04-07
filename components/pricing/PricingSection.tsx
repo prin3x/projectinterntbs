@@ -1,9 +1,9 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
-import * as React from 'react'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+import * as React from 'react';
 
 const PricingSection = ({ t }: any) => {
-    React.useEffect(() => {}, [])
+    React.useEffect(() => {}, []);
     return (
         <div
             className="pricing-section position-relative pricing__top lazyload"
@@ -183,14 +183,14 @@ const PricingSection = ({ t }: any) => {
                 alt=""
             />
         </div>
-    )
-}
+    );
+};
 
 PricingSection.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
-})
+});
 
 PricingSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Pricing')(PricingSection)
+};
+export default withTranslation('Pricing')(PricingSection);

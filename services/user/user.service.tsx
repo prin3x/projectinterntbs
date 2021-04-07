@@ -1,5 +1,5 @@
-import axios from 'axios'
-import Cookie from 'js-cookie'
+import axios from 'axios';
+import Cookie from 'js-cookie';
 import {
     AuthLogin,
     QuickRegisterStep1,
@@ -7,33 +7,33 @@ import {
     QuickRegisterStep3,
     Register,
     AuthData,
-} from './user.model'
-import * as jwt from 'jsonwebtoken'
-const TBSToken = 'TBS_token'
+} from './user.model';
+import * as jwt from 'jsonwebtoken';
+const TBSToken = 'TBS_token';
 export function decodeTBSToken(): AuthData | undefined {
-    const tbsToken = Cookie.get(TBSToken)
-    let decoded: any = {} as AuthData
+    const tbsToken = Cookie.get(TBSToken);
+    let decoded: any = {} as AuthData;
 
     if (!tbsToken) {
-        logout()
-        return undefined
+        logout();
+        return undefined;
     }
 
     try {
-        decoded = jwt.decode(tbsToken) as AuthData
+        decoded = jwt.decode(tbsToken) as AuthData;
     } catch (e) {
-        console.log(e)
-        return undefined
+        console.log(e);
+        return undefined;
     }
 
-    return decoded
+    return decoded;
 }
 // ------------------  login --------------------------------------------
 export async function login(param: any): Promise<AuthLogin> {
     try {
-        console.log('login param : ', param)
-        const { username, password } = param
-        let sendData = {}
+        console.log('login param : ', param);
+        const { username, password } = param;
+        let sendData = {};
         if (param.firstname && param.lastname && param.email) {
             sendData = {
                 username,
@@ -42,24 +42,24 @@ export async function login(param: any): Promise<AuthLogin> {
                 lastname: param.lastname,
                 email: param.email,
                 is_receive_news: String(param.news),
-            }
+            };
         } else {
-            sendData = { username, password }
+            sendData = { username, password };
         }
 
         // return loginFail();
         let resultAPI = await axios.post(
             process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/auth',
             sendData
-        )
+        );
         // let resultAPI = await axios.get(
         //   'https://api.github.com/repos/vercel/next.js'
         // );
-        console.log(resultAPI)
+        console.log(resultAPI);
         if (resultAPI.status !== 200 && resultAPI.status !== 201) {
-            return loginFail()
+            return loginFail();
         }
-        const data = resultAPI.data
+        const data = resultAPI.data;
         let loginResponse: AuthLogin = {
             token: data.token,
             passcode: data.passcode,
@@ -68,56 +68,56 @@ export async function login(param: any): Promise<AuthLogin> {
                 code: '',
                 erromessagerText: '',
             },
-        }
+        };
         if (data.isCompletedProfile) {
             localStorage.setItem(
                 'TBS_token',
                 JSON.stringify({ token: loginResponse.token })
-            )
-            Cookie.set('TBS_token', loginResponse.token, { expires: 0.15 })
-            Cookie.set('PASSCODE', loginResponse.passcode, { expires: 0.15 })
+            );
+            Cookie.set('TBS_token', loginResponse.token, { expires: 0.15 });
+            Cookie.set('PASSCODE', loginResponse.passcode, { expires: 0.15 });
         }
-        return loginResponse
+        return loginResponse;
     } catch (error) {
-        localStorage.setItem('TBS_token', JSON.stringify({}))
+        localStorage.setItem('TBS_token', JSON.stringify({}));
         let errorData = error.response
             ? error.response.data.error
-            : { code: '400', errorMessageText: '' }
-        return loginFail(errorData.code, errorData.errorMessageText)
+            : { code: '400', errorMessageText: '' };
+        return loginFail(errorData.code, errorData.errorMessageText);
     }
 }
 export async function checktoken(): Promise<boolean> {
     try {
-        const strlocalStorage = localStorage.getItem('TBS_token')
-        const cookiePasscode = Cookie.get('PASSCODE')
+        const strlocalStorage = localStorage.getItem('TBS_token');
+        const cookiePasscode = Cookie.get('PASSCODE');
         if (strlocalStorage === null || cookiePasscode === undefined) {
-            logout()
-            return false
+            logout();
+            return false;
         }
-        const objlocalStorage = JSON.parse(strlocalStorage)
+        const objlocalStorage = JSON.parse(strlocalStorage);
         if (
             objlocalStorage.token === '' ||
             Object.keys(objlocalStorage).length === 0
         ) {
-            logout()
-            return false
+            logout();
+            return false;
         }
         // let resultChecktoken = await axios.post(process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/auth', {});
-        const resultChecktoken = true
+        const resultChecktoken = true;
         if (resultChecktoken) {
-            return resultChecktoken
+            return resultChecktoken;
         }
-        logout()
-        return false
+        logout();
+        return false;
     } catch (error) {
-        console.log(error)
-        return false
+        console.log(error);
+        return false;
     }
 }
 export const logout = () => {
-    localStorage.setItem('TBS_token', JSON.stringify({}))
-    Cookie.remove('PASSCODE')
-}
+    localStorage.setItem('TBS_token', JSON.stringify({}));
+    Cookie.remove('PASSCODE');
+};
 export const loginFail = (code = '400', errorMessageText = '') => {
     let loginResponse: AuthLogin = {
         token: '',
@@ -127,9 +127,9 @@ export const loginFail = (code = '400', errorMessageText = '') => {
             code: code ? code : 'auth.user.fail',
             erromessagerText: errorMessageText,
         },
-    }
-    return loginResponse
-}
+    };
+    return loginResponse;
+};
 // ------------------ end login --------------------------------------------
 // ------------------ register --------------------------------------------
 
@@ -154,11 +154,11 @@ export async function registerUser(param: any): Promise<Register> {
         //   },
         //   error: { code: '', erromessagerText: '' },
         // };
-        let { firstname, lastname, tel, email, news, recaptcha } = param
-        const is_receive_news = String(news)
-        const msisdn = tel
-        const cookieGclid = Cookie.get('gclid')
-        let sendData = {}
+        let { firstname, lastname, tel, email, news, recaptcha } = param;
+        const is_receive_news = String(news);
+        const msisdn = tel;
+        const cookieGclid = Cookie.get('gclid');
+        let sendData = {};
         if (cookieGclid === undefined) {
             sendData = {
                 firstname,
@@ -167,7 +167,7 @@ export async function registerUser(param: any): Promise<Register> {
                 email,
                 is_receive_news,
                 recaptcha,
-            }
+            };
         } else {
             sendData = {
                 firstname,
@@ -177,81 +177,81 @@ export async function registerUser(param: any): Promise<Register> {
                 is_receive_news,
                 recaptcha,
                 gclid: cookieGclid,
-            }
+            };
         }
         let resultAPI = await axios.post(
             process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user',
             sendData
-        )
+        );
 
-        console.log('resultAPI : ', resultAPI)
+        console.log('resultAPI : ', resultAPI);
         if (resultAPI.status !== 200 && resultAPI.status !== 201) {
             return {
                 accID: '',
                 data: {},
                 error: { code: 'registerdto.fail', erromessagerText: '' },
-            }
+            };
         }
-        const data = resultAPI.data
+        const data = resultAPI.data;
         let dataRegister: Register = {
             accID: data.accID,
             data: data.data,
             error: { code: '', erromessagerText: '' },
-        }
+        };
         localStorage.setItem(
             'TBS_resendRegisterSMSToken',
             JSON.stringify({ token: data.resendRegisterSMSToken })
-        )
-        return dataRegister
+        );
+        return dataRegister;
     } catch (error) {
-        console.log('error : ', error.response)
+        console.log('error : ', error.response);
         let errorData = error.response
             ? error.response.data.error
-            : { code: '400', errorMessageText: '' }
-        return { accID: '', data: {}, error: errorData }
+            : { code: '400', errorMessageText: '' };
+        return { accID: '', data: {}, error: errorData };
     }
 }
 export async function resendRegister() {
-    const strlocalStorage = localStorage.getItem('TBS_resendRegisterSMSToken')
+    const strlocalStorage = localStorage.getItem('TBS_resendRegisterSMSToken');
     if (strlocalStorage === null) {
         return {
             error: {
                 code: 'resendregistersmsdto.resendRegisterSMSToken.invalid',
                 erromessagerText: '',
             },
-        }
+        };
     }
 
-    const objlocalStorage = JSON.parse(strlocalStorage)
-    const resend_register_sms_token = objlocalStorage.token
+    const objlocalStorage = JSON.parse(strlocalStorage);
+    const resend_register_sms_token = objlocalStorage.token;
     try {
         let resultAPI = await axios.post(
             process.env.NEXT_PUBLIC_API_URL_ACCOUNT +
                 '/user/resend-register-sms',
             { resend_register_sms_token }
-        )
+        );
 
-        console.log(resultAPI)
+        console.log(resultAPI);
         if (resultAPI.status !== 200 && resultAPI.status !== 201) {
             return {
                 error: { code: 'resendRegisterSMS.fail', erromessagerText: '' },
-            }
+            };
         }
         return {
             error: { code: '', erromessagerText: '' },
-        }
+        };
     } catch (error) {
         // localStorage.setItem('TBS_token', JSON.stringify({}));
-        console.log('error.response :', error.response)
+        console.log('error.response :', error.response);
         if (error.response.data.error.code === 'resendRegisterSMS.exceeded') {
-            localStorage.removeItem('TBS_resendRegisterSMSToken')
+            localStorage.removeItem('TBS_resendRegisterSMSToken');
         }
         let errorData = error.response
             ? error.response.data.error
-            : { code: '400', errorMessageText: '' }
+            : { code: '400', errorMessageText: '' };
         return {
             error: errorData,
-        }
+        };
     }
 }
 export async function quickRegisterStep1(
@@ -263,11 +263,11 @@ export async function quickRegisterStep1(
     // };
     // return dataRegister;
     try {
-        let { msisdn, recaptcha } = param
+        let { msisdn, recaptcha } = param;
         let resultAPI = await axios.post(
             process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/1',
             { msisdn, recaptcha }
-        )
+        );
         if (resultAPI.status !== 200 && resultAPI.status !== 201) {
             return {
                 data: { msisdn: '' },
@@ -275,20 +275,20 @@ export async function quickRegisterStep1(
                     code: 'quickregisterfirststepdto.fail',
                     erromessagerText: '',
                 },
-            }
+            };
         }
-        const data = resultAPI.data
+        const data = resultAPI.data;
         let dataRegister = {
             data: data.data,
             error: { code: '', erromessagerText: '' },
-        }
-        return dataRegister
+        };
+        return dataRegister;
     } catch (error) {
-        console.log('error : ', error.response)
+        console.log('error : ', error.response);
         let errorData = error.response
             ? error.response.data.error
-            : { code: '400', errorMessageText: '' }
-        return { data: { msisdn: '' }, error: errorData }
+            : { code: '400', errorMessageText: '' };
+        return { data: { msisdn: '' }, error: errorData };
     }
 }
 export async function quickRegisterStep2(
@@ -300,22 +300,22 @@ export async function quickRegisterStep2(
     //   error: { code: '', erromessagerText: '' },
     // };
     try {
-        let { msisdn, pin } = param
-        const gclid = Cookie.get('gclid')
-        const fbclid = Cookie.get('_fbc')
-        const adID = Cookie.get('ad_id')
+        let { msisdn, pin } = param;
+        const gclid = Cookie.get('gclid');
+        const fbclid = Cookie.get('_fbc');
+        const adID = Cookie.get('ad_id');
         const sendData = {
             msisdn,
             pin,
             gclid,
             fbclid,
             adID,
-        }
+        };
 
         let resultAPI = await axios.post(
             process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/2',
             sendData
-        )
+        );
 
         if (resultAPI.status !== 200 && resultAPI.status !== 201) {
             return {
@@ -325,21 +325,21 @@ export async function quickRegisterStep2(
                     code: 'quickregistersecondstepdto::fail',
                     erromessagerText: '',
                 },
-            }
+            };
         }
-        const data = resultAPI.data
+        const data = resultAPI.data;
         let dataRegister = {
             welcome_token: data.welcome_token,
             data: data.data,
             error: { code: '', erromessagerText: '' },
-        }
-        return dataRegister
+        };
+        return dataRegister;
     } catch (error) {
-        console.log('error : ', error.response)
+        console.log('error : ', error.response);
         let errorData = error.response
             ? error.response.data.error
-            : { code: '400', errorMessageText: '' }
-        return { welcome_token: '', data: {}, error: errorData }
+            : { code: '400', errorMessageText: '' };
+        return { welcome_token: '', data: {}, error: errorData };
     }
 }
 export async function quickRegisterStep3(
@@ -350,13 +350,13 @@ export async function quickRegisterStep3(
     //   error: { code: '', erromessagerText: '' },
     // };
     try {
-        let { welcome_token } = param
+        let { welcome_token } = param;
         let resultAPI = await axios.post(
             process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/3',
             { welcome_token }
-        )
+        );
 
-        console.log('resultAPI : ', resultAPI)
+        console.log('resultAPI : ', resultAPI);
         if (resultAPI.status !== 200 && resultAPI.status !== 201) {
             return {
                 data: {},
@@ -364,22 +364,22 @@ export async function quickRegisterStep3(
                     code: 'quickregisterthirdstepdto.fail',
                     erromessagerText: '',
                 },
-            }
+            };
         }
-        const data = resultAPI.data
+        const data = resultAPI.data;
         let dataRegister = {
             data: data.data,
             error: { code: '', erromessagerText: '' },
-        }
-        return dataRegister
+        };
+        return dataRegister;
     } catch (error) {
-        console.log('error : ', error.response)
+        console.log('error : ', error.response);
         let errorData = error.response
             ? error.response.data.error
-            : { code: '400', errorMessageText: '' }
-        return { data: {}, error: errorData }
+            : { code: '400', errorMessageText: '' };
+        return { data: {}, error: errorData };
     }
 }
 // ------------------ end register --------------------------------------------
 
-export default login
+export default login;

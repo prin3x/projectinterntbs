@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
+import PropTypes from 'prop-types';
+import { withTranslation } from '../../i18n';
 const SimpleIconSection = ({ t }: any) => (
     <div className="simple_icon_section v2">
         <div className="container">
@@ -59,12 +59,12 @@ const SimpleIconSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 SimpleIconSection.getInitialProps = async () => ({
     namespacesRequired: ['LocationBasedSMSPage'],
-})
+});
 
 SimpleIconSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('LocationBasedSMSPage')(SimpleIconSection)
+};
+export default withTranslation('LocationBasedSMSPage')(SimpleIconSection);

@@ -19,4 +19,4 @@ export default {
 
     API_URL_BLOG: process.env.NEXT_PUBLIC_API_URL_BLOG || '',
     WEB_URL_BLOG: process.env.NEXT_PUBLIC_WEB_URL_BLOG || '',
-}
+};

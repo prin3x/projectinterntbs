@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
-import Link from 'next/link'
-import { format } from 'date-fns'
-import { parseFromTimeZone } from 'date-fns-timezone'
-import AppConfig from '../../appConfig'
+import PropTypes from 'prop-types';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+import { format } from 'date-fns';
+import { parseFromTimeZone } from 'date-fns-timezone';
+import AppConfig from '../../appConfig';
 const ContentSection = ({ Posts, t }: any) => (
     <div className="resource_section">
         <div className="container">
@@ -157,7 +157,7 @@ const ContentSection = ({ Posts, t }: any) => (
                                                 </div>
                                             </a>
                                         </Link>
-                                    )
+                                    );
                                 })
                         }
                     </div>
@@ -251,7 +251,7 @@ const ContentSection = ({ Posts, t }: any) => (
                                                 </div>
                                             </a>
                                         </Link>
-                                    )
+                                    );
                                 })
                         }
                     </div>
@@ -259,12 +259,12 @@ const ContentSection = ({ Posts, t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 ContentSection.getInitialProps = async () => ({
     namespacesRequired: ['Resource'],
-})
+});
 
 ContentSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Resource')(ContentSection)
+};
+export default withTranslation('Resource')(ContentSection);

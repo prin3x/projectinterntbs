@@ -1,5 +1,5 @@
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const CtaSectionV3 = ({ t }: any) => (
     <div
         className="cta_section v2 lazyload"
@@ -36,12 +36,12 @@ const CtaSectionV3 = ({ t }: any) => (
             </div>
         </div>
     </div>
-)
+);
 CtaSectionV3.getInitialProps = async () => ({
     namespacesRequired: ['Sms-tracking'],
-})
+});
 
 CtaSectionV3.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Sms-tracking')(CtaSectionV3)
+};
+export default withTranslation('Sms-tracking')(CtaSectionV3);

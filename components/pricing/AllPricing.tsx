@@ -1,25 +1,25 @@
-import { withTranslation, Link } from '../../i18n'
-import PropTypes from 'prop-types'
-import * as React from 'react'
-import { Product, ProductPackage } from '../../services/shopping/pricing.model'
-import numeral from 'numeral'
-import TagManager from 'react-gtm-module'
-import classnames from 'classnames'
-import Cookie from 'js-cookie'
-import appConfig from '../../appConfig'
-import Swal from 'sweetalert2'
-import { decodeTBSToken } from '../../services/user/user.service'
+import { withTranslation, Link } from '../../i18n';
+import PropTypes from 'prop-types';
+import * as React from 'react';
+import { Product, ProductPackage } from '../../services/shopping/pricing.model';
+import numeral from 'numeral';
+import TagManager from 'react-gtm-module';
+import classnames from 'classnames';
+import Cookie from 'js-cookie';
+import appConfig from '../../appConfig';
+import Swal from 'sweetalert2';
+import { decodeTBSToken } from '../../services/user/user.service';
 
-const SenderActive = 5
+const SenderActive = 5;
 
 const BuyPackage = (packageItem: ProductPackage) => {
-    let domain = 'localhost'
+    let domain = 'localhost';
 
-    if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com'
+    if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
     else if (appConfig.APP_ENV === appConfig.internalTest)
-        domain = '.1mobyline.com'
+        domain = '.1mobyline.com';
 
-    const decodeToken = decodeTBSToken()
+    const decodeToken = decodeTBSToken();
     if (decodeToken && decodeToken.isSubaccount) {
         Swal.fire({
             title: 'แจ้งเตือน',
@@ -27,20 +27,20 @@ const BuyPackage = (packageItem: ProductPackage) => {
                 "<p style='font-size:15px;'>บัญชีของคุณเป็นบัญชีผู้ใช้สำรองไม่สามารถทำรายการสั่งซื้อได้ กรุณาติดต่อผู้ดูแลบัญชีผู้ใช้หลักของคุณเพื่อดำเนินการ</p>",
             allowOutsideClick: false,
             confirmButtonText: 'ปิด',
-        })
-        return
+        });
+        return;
     }
 
-    Cookie.set('packageId', packageItem.productId.toString(), { domain })
+    Cookie.set('packageId', packageItem.productId.toString(), { domain });
     window.location.replace(
         `${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment/`
-    )
-}
+    );
+};
 const showPackage = (packages: Product[], t: Function) => {
-    let itemPackages: any = []
+    let itemPackages: any = [];
     for (let item in packages) {
-        let productItem = packages[item]
-        let itemNo = item + 1
+        let productItem = packages[item];
+        let itemNo = item + 1;
         itemPackages.push(
             <div
                 key={itemNo}
@@ -236,10 +236,10 @@ const showPackage = (packages: Product[], t: Function) => {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
-    return itemPackages
-}
+    return itemPackages;
+};
 
 const AllPricing = ({ t, packages }: any) => {
     React.useEffect(() => {
@@ -248,8 +248,8 @@ const AllPricing = ({ t, packages }: any) => {
                 event: 'purchase',
                 action: 'intent',
             },
-        })
-    }, [])
+        });
+    }, []);
 
     return (
         <div
@@ -353,14 +353,14 @@ const AllPricing = ({ t, packages }: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 AllPricing.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
-})
+});
 
 AllPricing.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Pricing')(React.memo(AllPricing))
+};
+export default withTranslation('Pricing')(React.memo(AllPricing));

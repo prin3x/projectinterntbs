@@ -1,9 +1,9 @@
-import dynamic from 'next/dynamic'
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import dynamic from 'next/dynamic';
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
-})
+});
 const SliderSection = ({ t }: any) => (
     <div
         className="slider_section lazyload"
@@ -146,12 +146,12 @@ const SliderSection = ({ t }: any) => (
       {t('SliderSection::exampleBtn')}
     </p> */}
     </div>
-)
+);
 SliderSection.getInitialProps = async () => ({
     namespacesRequired: ['Product'],
-})
+});
 
 SliderSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Product')(SliderSection)
+};
+export default withTranslation('Product')(SliderSection);

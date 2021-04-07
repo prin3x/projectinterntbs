@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { withTranslation } from '../../i18n'
-import PropTypes from 'prop-types'
+import * as React from 'react';
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
 
 const CollapseItem = (props: any) => {
-    const { item } = props
+    const { item } = props;
     return (
         <div className="card">
             <div
@@ -38,13 +38,13 @@ const CollapseItem = (props: any) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 CollapseItem.getInitialProps = async () => ({
     namespacesRequired: ['FAQcallap'],
-})
+});
 
 CollapseItem.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('FAQcallap')(CollapseItem)
+};
+export default withTranslation('FAQcallap')(CollapseItem);

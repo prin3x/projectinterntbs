@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types'
-import * as React from 'react'
-import { withTranslation } from '../../i18n'
+import PropTypes from 'prop-types';
+import * as React from 'react';
+import { withTranslation } from '../../i18n';
 
 const HeroSection = ({ t }: any) => {
-    React.useEffect(() => {}, [])
+    React.useEffect(() => {}, []);
     return (
         <div className="container condition-wrap">
             <h1 className="condition-header textHeadCondition">
@@ -151,14 +151,14 @@ const HeroSection = ({ t }: any) => {
                 {t('conditionhero::effective')}
             </p>
         </div>
-    )
-}
+    );
+};
 
 HeroSection.getInitialProps = async () => ({
     namespacesRequired: ['Condition'],
-})
+});
 
 HeroSection.propTypes = {
     t: PropTypes.func.isRequired,
-}
-export default withTranslation('Condition')(HeroSection)
+};
+export default withTranslation('Condition')(HeroSection);
