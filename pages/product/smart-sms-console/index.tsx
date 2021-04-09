@@ -11,36 +11,39 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../../components/seo/smart-sms-console';
 import { withTranslation } from '../../../i18n';
 const SmartSmsConsole = ({ t }: any) => (
-  <Layout>
-    <Head>
-      <meta name="keywords" content={t('meta::keywords')} />
-      <meta name="author" content="" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
-    <NextSeo
-      openGraph={seo.openGraph}
-      title={t('meta::title')}
-      description={t('meta::description')}
-    />
-    {/* <Proloader /> */}
-    <div className="page_wrapper">
-      <SmartSmsConsoleContentSection />
-      <SmsSection />
-      <SimpleIconSection />
-      <OtherFeature />
-      <CtaSection />
-    </div>
-    <BacktoTop />
-  </Layout>
+    <Layout>
+        <Head>
+            <meta name="keywords" content={t('meta::keywords')} />
+            <meta name="author" content="" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+        </Head>
+        <NextSeo
+            openGraph={seo.openGraph}
+            title={t('meta::title')}
+            description={t('meta::description')}
+        />
+        {/* <Proloader /> */}
+        <div className="page_wrapper">
+            <SmartSmsConsoleContentSection />
+            <SmsSection />
+            <SimpleIconSection />
+            <OtherFeature />
+            <CtaSection />
+        </div>
+        <BacktoTop />
+    </Layout>
 );
 // Otp.getInitialProps = async () => ({
 //   namespacesRequired: ['OtpMeta'],
 // });
 export default withTranslation('SmartSmsConsole')(SmartSmsConsole);
 export const getStaticProps = async () => {
-  return {
-    props: {
-      namespacesRequired: ['SmartSmsConsole'],
-    },
-  };
+    return {
+        props: {
+            namespacesRequired: ['SmartSmsConsole'],
+        },
+    };
 };

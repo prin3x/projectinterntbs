@@ -1,14 +1,15 @@
 {
     "meta": {
-        "title": "แพ็กเกจ ราคา SMS สุดคุ้มค่า เพียง 0.21 ตอบโจทย์ทุกการใช้งาน | ThaiBulkSMS",
-        "description": "แพ็กเกจราคา SMS ราคาถูกเพียง 0.21 ของ ThaiBulkSMS ราคาสุดคุ้มค่าทุกการใช้งาน พร้อมฟีเจอร์ในการส่ง ครบวงจร",
+        "title": "แพ็กเกจ SMS ราคาถูก ส่งข้อความ เพียง 0.21 บาท ตอบโจทย์ทุกการใช้งาน | ThaiBulkSMS",
+        "description": "แพ็กเกจ SMS ราคาถูก ครบวงจร ส่งข้อความเริ่มเพียง 0.21 บาท ด้วยคุณภาพและบริการที่ดีที่สุด เสถียรทุกเครือข่าย",
         "keywords": ""
     },
     "PricingSection":{
-        "Package prices":"ราคาแพ็กเกจ",
+        "Package prices":"ราคาแพ็กเกจ<br/><br/>โปรแกรมส่ง SMS ออนไลน์",
+        "Reasonable SMS packages":"แพ็กเกจ SMS ราคาถูก ครบวงจร ส่งข้อความเริ่มเพียง 0.21 บาท ด้วยคุณภาพและบริการที่ดีที่สุด เสถียรทุกเครือข่าย",
         "Cheap SMS sending":"ส่ง SMS ได้ในราคาถูก",
         "Cheaper prices for SMS sending":"ส่งข้อความราคาถูกกว่า",
-        "Sending reports are available.":"ดูรายงานการส่งได้",
+        "Sending reports are available.":"ดูรายงานการส่งข้อความได้",
         "All basic features are available.":"ใช้งานฟีเจอร์พื้นฐานได้ครบถ้วน",
         "Tools for measuring campaign results are provided.":"มีเครื่องมือวัดผลแคมเปญ",
         "Best SMS pricing, only":"ราคาถูกเพียง",

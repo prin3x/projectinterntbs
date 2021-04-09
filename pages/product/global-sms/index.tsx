@@ -11,33 +11,36 @@ import { seo } from '../../../components/seo/global-sms';
 import { withTranslation } from '../../../i18n';
 
 const GlobalSMS = ({ t }: any) => (
-  <Layout>
-    <Head>
-      <meta name="keywords" content={t('meta::keywords')} />
-      <meta name="author" content="" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
-    <NextSeo
-      openGraph={seo.openGraph}
-      title={t('meta::title')}
-      description={t('meta::description')}
-    />
-    {/* <Proloader /> */}
-    <div className="page_wrapper">
-      <HeroSection />
-      <SmsSection />
-      <DesSection />
-      <CtaSection />
-    </div>
-    <BacktoTop />
-  </Layout>
+    <Layout>
+        <Head>
+            <meta name="keywords" content={t('meta::keywords')} />
+            <meta name="author" content="" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+        </Head>
+        <NextSeo
+            openGraph={seo.openGraph}
+            title={t('meta::title')}
+            description={t('meta::description')}
+        />
+        {/* <Proloader /> */}
+        <div className="page_wrapper">
+            <HeroSection />
+            <SmsSection />
+            <DesSection />
+            <CtaSection />
+        </div>
+        <BacktoTop />
+    </Layout>
 );
 
 export default withTranslation('GlobalSMSPage')(GlobalSMS);
 export const getStaticProps = async () => {
-  return {
-    props: {
-      namespacesRequired: ['GlobalSMSPage'],
-    },
-  };
+    return {
+        props: {
+            namespacesRequired: ['GlobalSMSPage'],
+        },
+    };
 };
