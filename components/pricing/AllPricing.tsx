@@ -13,22 +13,22 @@ import { decodeTBSToken } from '../../services/user/user.service';
 const SenderActive = 5;
 
 const BuyPackage = (packageItem: ProductPackage) => {
-    let domain = 'localhost';
+  let domain = 'localhost';
 
   if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
   else if (appConfig.APP_ENV === appConfig.internalTest) domain = '.1mobyline.com';
 
-    const decodeToken = decodeTBSToken();
-    if (decodeToken && decodeToken.isSubaccount) {
-        Swal.fire({
-            title: 'แจ้งเตือน',
-            html:
-                "<p style='font-size:15px;'>บัญชีของคุณเป็นบัญชีผู้ใช้สำรองไม่สามารถทำรายการสั่งซื้อได้ กรุณาติดต่อผู้ดูแลบัญชีผู้ใช้หลักของคุณเพื่อดำเนินการ</p>",
-            allowOutsideClick: false,
-            confirmButtonText: 'ปิด',
-        });
-        return;
-    }
+  const decodeToken = decodeTBSToken();
+  if (decodeToken && decodeToken.isSubaccount) {
+    Swal.fire({
+      title: 'แจ้งเตือน',
+      html:
+        "<p style='font-size:15px;'>บัญชีของคุณเป็นบัญชีผู้ใช้สำรองไม่สามารถทำรายการสั่งซื้อได้ กรุณาติดต่อผู้ดูแลบัญชีผู้ใช้หลักของคุณเพื่อดำเนินการ</p>",
+      allowOutsideClick: false,
+      confirmButtonText: 'ปิด',
+    });
+    return;
+  }
 
   Cookie.set('packageId', packageItem.productId.toString(), { domain });
   window.location.replace(`${process.env.NEXT_PUBLIC_WEB_URL_SHOPPING}/payment/`);
@@ -96,24 +96,14 @@ const showPackage = (packages: Product[], t: Function) => {
                     alt=""
                   />
                 </div>
-                <div className="col-md-8 box">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="pricing__content">
-                                <div className="arrow-down">
-                                    <img
-                                        src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_down.png`}
-                                        alt=""
-                                    />
-                                </div>
-                                <img
-                                    src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/shape_triangle.png`}
-                                    className="shape__box"
-                                    alt=""
-                                />
-                                <div className="row">
-                                    <div className="col-sm-6 text-center">
-                                        <h4 className="d-md-none">Standard</h4>
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/shape_triangle.png`}
+                  className="shape__box"
+                  alt=""
+                />
+                <div className="row">
+                  <div className="col-sm-6 text-center">
+                    <h4 className="d-md-none">Standard</h4>
 
                     <h3>
                       {numeral(
@@ -147,23 +137,19 @@ const showPackage = (packages: Product[], t: Function) => {
                         </span>
                       </div>
 
-                                            <div className="text-center">
-                                                <button
-                                                    // href="#"
-                                                    onClick={() =>
-                                                        BuyPackage(
-                                                            productItem.standard
-                                                        )
-                                                    }
-                                                    className="btn v8"
-                                                >
-                                                    {t('AllPricing::Buy now')}
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-6 text-center">
-                                        <h4 className="d-md-none">Corporate</h4>
+                      <div className="text-center">
+                        <button
+                          // href="#"
+                          onClick={() => BuyPackage(productItem.standard)}
+                          className="btn v8"
+                        >
+                          {t('AllPricing::Buy now')}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-6 text-center">
+                    <h4 className="d-md-none">Corporate</h4>
 
                     <h3>
                       {numeral(
@@ -193,25 +179,18 @@ const showPackage = (packages: Product[], t: Function) => {
                         </span>
                       </div>
 
-                                            <div className="text-center">
-                                                <button
-                                                    onClick={() =>
-                                                        BuyPackage(
-                                                            productItem.corporate
-                                                        )
-                                                    }
-                                                    className="btn v8"
-                                                >
-                                                    {t('AllPricing::Buy now')}
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <div className="text-center">
+                        <button
+                          onClick={() => BuyPackage(productItem.corporate)}
+                          className="btn v8"
+                        >
+                          {t('AllPricing::Buy now')}
+                        </button>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
@@ -222,55 +201,50 @@ const showPackage = (packages: Product[], t: Function) => {
 };
 
 const AllPricing = ({ t, packages }: any) => {
-    React.useEffect(() => {
-        TagManager.dataLayer({
-            dataLayer: {
-                event: 'purchase',
-                action: 'intent',
-            },
-        });
-    }, []);
+  React.useEffect(() => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'purchase',
+        action: 'intent',
+      },
+    });
+  }, []);
 
-    return (
-        <div
-            className="all__pricing accordion lazyload"
-            id="accordion"
-            data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/pricing_bg.png`}
-        >
-            <div className="container priceTable">
+  return (
+    <div
+      className="all__pricing accordion lazyload"
+      id="accordion"
+      data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/pricing_bg.png`}
+    >
+      <div className="container priceTable">
+        <div className="row">
+          <div className="col-12">
+            <div className="row no-gutters">
+              <div className="col-md-4">
+                <div className="left__box left__box__top">
+                  <p>{t('AllPricing::Package prices')}</p>
+                </div>
+              </div>
+              <div className="col-md-8">
                 <div className="row">
-                    <div className="col-12">
-                        <div className="row no-gutters">
-                            <div className="col-md-4">
-                                <div className="left__box left__box__top">
-                                    <p>{t('AllPricing::Package prices')}</p>
-                                </div>
-                            </div>
-                            <div className="col-md-8">
-                                <div className="row">
-                                    <div className="col-12">
-                                        <div className="top__bar">
-                                            <div className="row">
-                                                <div className="col-6 text-center">
-                                                    <p>
-                                                        {t(
-                                                            'AllPricing::Standard SMS'
-                                                        )}
-                                                    </p>
-                                                </div>
-                                                <div className="col-6 text-center">
-                                                    <p>
-                                                        {t(
-                                                            'AllPricing::Corporate SMS'
-                                                        )}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                  <div className="col-12">
+                    <div className="top__bar">
+                      <div className="row">
+                        <div className="col-6 text-center">
+                          <p>{t('AllPricing::Standard SMS')}</p>
                         </div>
+                        <div className="col-6 text-center">
+                          <p>{t('AllPricing::Corporate SMS')}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {showPackage(packages, t)}
+          </div>
 
           <div className="col-12 text-center pricing__bottom__content">
             <p
@@ -310,17 +284,22 @@ const AllPricing = ({ t, packages }: any) => {
                         {t('AllPricing::Baht/message')}
                       </p>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 AllPricing.getInitialProps = async () => ({
-    namespacesRequired: ['Pricing'],
+  namespacesRequired: ['Pricing'],
 });
 
 AllPricing.propTypes = {
-    t: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
 };
 export default withTranslation('Pricing')(React.memo(AllPricing));
