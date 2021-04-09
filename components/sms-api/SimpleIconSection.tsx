@@ -113,25 +113,25 @@ const SimpleIconSection = ({ t }: any) => (
                 />
               </div>
             </div> */}
-                        <div className="col-lg-4 col-md-4 col-4">
-                            <div className="single_lang">
-                                <img
-                                    className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api06.svg`}
-                                    alt="c#"
-                                />
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-4 col-4">
-                            <div className="single_lang">
-                                <img
-                                    className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api07.svg`}
-                                    alt="python"
-                                />
-                            </div>
-                        </div>
-                        {/* <div className="col-lg-4 col-md-4 col-4">
+            <div className="col-lg-4 col-md-4 col-4">
+              <div className="single_lang">
+                <img
+                  className="lazyload"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang05.svg`}
+                  alt="Image"
+                />
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-4 col-4">
+              <div className="single_lang">
+                <img
+                  className="lazyload"
+                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api07.svg`}
+                  alt="Image"
+                />
+              </div>
+            </div>
+            {/* <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang">
                 <img
                   className="lazyload"
