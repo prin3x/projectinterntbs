@@ -107,54 +107,56 @@ const SimpleIconSection = ({ t }: any) => (
                 </div>
             </div>
 
-      <div className="row">
-        <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
-          <div className="simple_icon_title dev-page edit_seo">
-            <h1 className="edit_text_seo">{t('SimpleIconSection::Download example')}</h1>
-            <p>
-              {t(
-                'SimpleIconSection::Download the SDK example in the language that you require.'
-              )}
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="row single_lang_wrap">
-        <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-          <div className="row ">
-            <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api01.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-PHP.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
+            <div className="row">
+                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
+                    <div className="simple_icon_title dev-page edit_seo">
+                        <h1 className="edit_text_seo">
+                            {t('SimpleIconSection::Download example')}
+                        </h1>
+                        <p>
+                            {t(
+                                'SimpleIconSection::Download the SDK example in the language that you require.'
+                            )}
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api03.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Nodejs.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div>
-            {/* <div className="col-lg-4 col-md-4 col-4">
+            <div className="row single_lang_wrap">
+                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+                    <div className="row ">
+                        <div className="col-lg-4 col-md-4 col-4">
+                            <div className="single_lang dev-page">
+                                <img
+                                    className="lazyload"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api01.svg`}
+                                    alt="php"
+                                />
+                                <a
+                                    className="lang_link"
+                                    target="_blank"
+                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-PHP.zip`}
+                                >
+                                    {t('SimpleIconSection::[Download]')}
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-4">
+                            <div className="single_lang dev-page">
+                                <img
+                                    className="lazyload"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api03.svg`}
+                                    alt="nodejs"
+                                />
+                                <a
+                                    className="lang_link"
+                                    target="_blank"
+                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Nodejs.zip`}
+                                >
+                                    {t('SimpleIconSection::[Download]')}
+                                </a>
+                            </div>
+                        </div>
+                        {/* <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang dev-page">
                 <img
                   className="lazyload"
@@ -207,7 +209,7 @@ const SimpleIconSection = ({ t }: any) => (
                                 <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang05.svg`}
-                                    alt="Image"
+                                    alt="c#"
                                 />
                                 <a
                                     className="lang_link"
@@ -266,23 +268,23 @@ const SimpleIconSection = ({ t }: any) => (
                 </a>
               </div>
             </div> */}
-            <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api07.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Python.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div>
-            {/* <div className="col-lg-4 col-md-4 col-4">
+                        <div className="col-lg-4 col-md-4 col-4">
+                            <div className="single_lang dev-page">
+                                <img
+                                    className="lazyload"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api07.svg`}
+                                    alt="python"
+                                />
+                                <a
+                                    className="lang_link"
+                                    target="_blank"
+                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Python.zip`}
+                                >
+                                    {t('SimpleIconSection::[Download]')}
+                                </a>
+                            </div>
+                        </div>
+                        {/* <div className="col-lg-4 col-md-4 col-4">
               <div className="single_lang dev-page">
                 <img
                   className="lazyload"
@@ -298,37 +300,40 @@ const SimpleIconSection = ({ t }: any) => (
                 </a>
               </div>
             </div> */}
-            <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-langGO.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Go-lang.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang11.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Java.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
+                        <div className="col-lg-4 col-md-4 col-4">
+                            <div className="single_lang dev-page">
+                                <img
+                                    className="lazyload"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-langGO.svg`}
+                                    alt="golang"
+                                />
+                                <a
+                                    className="lang_link"
+                                    target="_blank"
+                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Go-lang.zip`}
+                                >
+                                    {t('SimpleIconSection::[Download]')}
+                                </a>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-4">
+                            <div className="single_lang dev-page">
+                                <img
+                                    className="lazyload"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang11.svg`}
+                                    alt="java"
+                                />
+                                <a
+                                    className="lang_link"
+                                    target="_blank"
+                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Java.zip`}
+                                >
+                                    {t('SimpleIconSection::[Download]')}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
