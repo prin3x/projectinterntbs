@@ -9,11 +9,13 @@ const HeroSectionV2 = ({ t }: any) => (
             <div className="row align-item-center hero_top_one">
                 <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
                     <div className="hero_text_one">
-                        <h1>
-                            {t(
-                                'HeroSection::Meeting every one of your SMS sending needs.'
-                            )}
-                        </h1>
+                        <h1
+                            dangerouslySetInnerHTML={{
+                                __html: t(
+                                    'HeroSection::Meeting every one of your SMS sending needs.'
+                                ),
+                            }}
+                        />
                         <p>
                             {t(
                                 'HeroSection::SMS sending service capable of quick sending with reliable stability. Consultation is available at every step.'
