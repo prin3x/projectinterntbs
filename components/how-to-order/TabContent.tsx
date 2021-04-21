@@ -24,7 +24,7 @@ const TabContent = ({ t }: any) => {
     }
 
     setDefaultTab(`${router.query.tab}`);
-    setTab(('#pills-profile-tab'));
+    setTab($('#pills-profile-tab'));
     Modal.setAppElement('#ElementModal');
     // }, [tab]);
   }, [router, setDefaultTab]);
