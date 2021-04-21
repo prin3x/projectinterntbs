@@ -24,7 +24,7 @@ const TabContent = ({ t }: any) => {
     }
 
     setDefaultTab(`${router.query.tab}`);
-    setTab($('#pills-profile-tab'));
+    setTab(('#pills-profile-tab'));
     Modal.setAppElement('#ElementModal');
     // }, [tab]);
   }, [router, setDefaultTab]);
@@ -429,10 +429,10 @@ const TabContent = ({ t }: any) => {
                                               style={{ fontWeight: 400 }}
                                               className="theme__text"
                                               onClick={() =>
-                                                onClipboard('2503000721')
+                                                onClipboard('2502207574')
                                               }
                                             >
-                                              250-3-00072-1
+                                              250-2-20757-4
                                             </p>
                                             <p
                                               style={{ fontWeight: 400 }}
