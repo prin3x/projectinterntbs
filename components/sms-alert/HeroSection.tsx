@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-const HeroSectionV3 = ({ t }: any) => (
+const HeroSectionV3 = () => (
     <div
         className="hero_section v3 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
@@ -17,13 +17,7 @@ const HeroSectionV3 = ({ t }: any) => (
                 </div>
                 <div className="col-lg-6 col-md-12 col-12">
                     <div className="hero_text_one v2">
-                        <h1
-                            dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'HeroSection::<span>Reach your target group with a location-based method.<span><br/> Instantly send messages without having to use phone numbers.'
-                                ),
-                            }}
-                        ></h1>
+                        <h1><span>แจ้งเตือนข่าวสารผ่านช่องทางที่รวดเร็วที่สุด</span> เสริมธุรกิจด้านการตลาด ผ่านการสื่อสารด้วยการส่งข้อความ</h1>                   
                     </div>
                 </div>
             </div>

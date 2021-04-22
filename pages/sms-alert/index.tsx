@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React from 'react';
 import BacktoTop from '../../components/BacktoTop';
 import Layout from '../../components/Layout';
-import AdvantagesSection from '../../components/sms-alert/AdvantagesSection';
 import CtaSection from '../../components/sms-alert/CtaSection';
 import DesSection from '../../components/sms-alert/DesSection';
 import HeroSection from '../../components/sms-alert/HeroSection';
@@ -31,7 +30,6 @@ const SmsAlertPage = ({ t }: any) => (
             <HeroSection />
             <SmsSection />
             <DesSection />
-            <AdvantagesSection />
             <CtaSection />
         </div>
         <BacktoTop />

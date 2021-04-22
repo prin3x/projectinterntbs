@@ -1,22 +1,14 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
 import Link from 'next/link';
-const SmsSectionV3 = ({ t }: any) => (
+const SmsSectionV3 = () => (
     <div className="sms_section v2 ">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-5">
                     <div className="newsletter_text">
-                        <h3>
-                            {t(
-                                'SmsSection::Send messages even without phone numbers when the target group enters the determined area,'
-                            )}
-                        </h3>
-                        <p>
-                            {t(
-                                'SmsSection::making reaching your target group an easier matter. Suitable for businesses who wish to immediately stimulate sales in offline areas.'
-                            )}
-                        </p>
+                        <h3>SMS Marketing คือการทำการตลาด โดยใช้ SMS</h3>
+                        <p>การตลาดประเภทนี้ ช่วยให้ทุกธุรกิจสามารถสื่อสารกับกลุ่มเป้าหมายหรือลูกค้าได้อย่างไม่จำกัด ส่งข้อความได้ทุกจุดประสงค์</p>
                     </div>
                 </div>
                 <div className="col-lg-7">
@@ -35,19 +27,16 @@ const SmsSectionV3 = ({ t }: any) => (
                         <div className="row align-items-center">
                             <div className="col-lg-8 col-md-12">
                                 <div className="sms_form_text">
-                                    <h4>
-                                        {t(
-                                            'SmsSection::How can customers be reached? Prove this on your own.'
-                                        )}
-                                    </h4>
+                                    <h4>ต้องการส่งข้อความ SMS Marketing</h4>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_field">
                                     <Link href="/contact">
-                                        <a className="btn v8">
-                                            {t('SmsSection::Let us advise you')}
-                                        </a>
+                                        <a className="btn v8">ดูบริการ</a>
+                                    </Link>
+                                    <Link href="/contact">
+                                        <a className="btn otp">ติดต่อเรา</a>
                                     </Link>
                                 </div>
                             </div>

@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React from 'react';
 import BacktoTop from '../../components/BacktoTop';
 import Layout from '../../components/Layout';
-import AdvantagesSection from '../../components/sms-marketing/AdvantagesSection';
 import CtaSection from '../../components/sms-marketing/CtaSection';
 import DesSection from '../../components/sms-marketing/DesSection';
 import HeroSection from '../../components/sms-marketing/HeroSection';
@@ -31,7 +30,6 @@ const SmsMarketing = ({ t }: any) => (
             <HeroSection />
             <SmsSection />
             <DesSection />
-            <AdvantagesSection />
             <CtaSection />
         </div>
         <BacktoTop />

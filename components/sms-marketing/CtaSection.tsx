@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
 import Link from 'next/link';
-const CtaSectionV2 = ({ t }: any) => (
+const CtaSectionV2 = () => (
     <div
         className="cta_section v2 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
@@ -10,25 +10,10 @@ const CtaSectionV2 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className=" col-lg-12">
                     <div className="cta-text">
-                        <h3
-                            dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'CtaSection::Use SMS Location-Based Services to enter more of your target customers.'
-                                ),
-                            }}
-                        ></h3>
+                        <h3>สนใจส่งข้อความ SMS Marketing</h3>
                         <Link href="/contact">
-                            <a className="btn v7">
-                                {t('CtaSection::Additional inquiries')}
-                            </a>
+                            <a className="btn v7">แพ็กเกจราคา</a>
                         </Link>
-                        <p
-                            dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'CtaSection::Or call us at <a href="tel:02-798-6000">02-798-6000</a>'
-                                ),
-                            }}
-                        ></p>
                     </div>
                 </div>
             </div>
