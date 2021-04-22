@@ -614,21 +614,21 @@ const Header = ({ t }: any) => {
                                                         </li>
                                                         <li className="li_padding_bottom20">
                                                             <Link
-                                                                href="https://account.thaibulksms.com/log-in/"
+                                                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                                                                 passHref={true}
                                                             >
-                                                                    <span className="new_icon_title_menu_about04 icon_logo_new_menu_width">
-                                                                        <h6 className="text_title_left">
-                                                                            {t(
-                                                                                'header::Member'
-                                                                            )}
-                                                                        </h6>
-                                                                        <p className="txtSub text_sub_left">
-                                                                            {t(
-                                                                                'header::Member Register Or Login'
-                                                                            )}
-                                                                        </p>
-                                                                    </span>
+                                                                <span className="new_icon_title_menu_about04 icon_logo_new_menu_width">
+                                                                    <h6 className="text_title_left">
+                                                                        {t(
+                                                                            'header::Member'
+                                                                        )}
+                                                                    </h6>
+                                                                    <p className="txtSub text_sub_left">
+                                                                        {t(
+                                                                            'header::Member Register Or Login'
+                                                                        )}
+                                                                    </p>
+                                                                </span>
                                                             </Link>
                                                         </li>
                                                     </ul>
