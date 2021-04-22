@@ -13,100 +13,100 @@ import { seo } from '../components/seo/defaultseo';
 import { appWithTranslation, i18n } from '../i18n';
 import { checktoken } from '../services/user/user.service';
 
-import { fb } from '../utils/fb'
+import { fb } from '../utils/fb';
 
 const tagManagerArgs = {
-  gtmId: AppConfig.GTM_CODE || '',
+    gtmId: AppConfig.GTM_CODE || '',
 };
 
 axios.interceptors.request.use((config) => {
-  const jwtToken = Cookie.get('TBS_token');
-  if (jwtToken) {
-    config.headers['Authorization'] = `Bearer ${jwtToken}`;
-  }
-  return config;
+    const jwtToken = Cookie.get('TBS_token');
+    if (jwtToken) {
+        config.headers['Authorization'] = `Bearer ${jwtToken}`;
+    }
+    return config;
 });
 
 axios.interceptors.response.use(
-  (res) => {
-    // Any status code that lie within the range of 2xx cause this function to trigger
-    return res;
-  },
-  (error) => {
-    // Any status codes that falls outside the range of 2xx cause this function to trigger
-    const { status } = error.response;
-    if (status === 401) {
-      Router.push('/log-in');
+    (res) => {
+        // Any status code that lie within the range of 2xx cause this function to trigger
+        return res;
+    },
+    (error) => {
+        // Any status codes that falls outside the range of 2xx cause this function to trigger
+        const { status } = error.response;
+        if (status === 401) {
+            Router.push('/log-in');
+        }
+        return Promise.reject(error);
     }
-    return Promise.reject(error);
-  },
 );
 
 function MyApp({ Component, pageProps }: any) {
-  let lang = Cookie.get('LANG');
-  if (lang === undefined) {
-    i18n.changeLanguage('th');
-  } else {
-    i18n.changeLanguage(lang.toLowerCase());
-  }
-  // if (!i18n.language) i18n.changeLanguage('th');
-  const router = useRouter();
-  const handleRouteChange = async (url: string) => {
-    if ((await checktoken()) && url === '/log-in') {
-      // Router.push('/member');
-      window.location.replace('https://member.thaibulksms.com/');
+    let lang = Cookie.get('LANG');
+    if (lang === undefined) {
+        i18n.changeLanguage('th');
+    } else {
+        i18n.changeLanguage(lang.toLowerCase());
     }
-  };
-  useEffect(() => {
-    const queryString = require('query-string');
-    const parsed = queryString.parse(window.location.search);
-    const regex = / /g;
-    const ad_id = parsed.ad_id;
-    if (ad_id !== undefined && regex.test(ad_id) !== true) {
-      if (ad_id !== undefined && regex.test(ad_id) !== true) {
-        let domain = 'localhost';
-        if (AppConfig.APP_ENV === AppConfig.production)
-          domain = '.thaibulksms.com';
-        else if (AppConfig.APP_ENV === AppConfig.internalTest)
-          domain = '.1mobyline.com';
-        Cookie.set('ad_id', ad_id.trim(), {
-          domain,
-          expires: 7,
-        });
-      }
-    }
-
-    TagManager.initialize(tagManagerArgs);
-
-    if (!fbq.init(AppConfig.facebookConversionTracking.PIXEL_ID))
-      console.warn('fbq init failed.');
-
-    handleRouteChange(router.pathname);
-    Router.events.on('routeChangeStart', handleRouteChange);
-
-    let timeout = setTimeout(() => {
-      fb(FB => timeout && FB.XFBML.parse());
-    }, 2000);
-    return () => {
-      clearTimeout(timeout);
-      Router.events.off('routeChangeStart', handleRouteChange);
+    // if (!i18n.language) i18n.changeLanguage('th');
+    const router = useRouter();
+    const handleRouteChange = async (url: string) => {
+        if ((await checktoken()) && url === '/log-in') {
+            // Router.push('/member');
+            window.location.replace('https://member.thaibulksms.com/');
+        }
     };
-  }, []);
+    useEffect(() => {
+        const queryString = require('query-string');
+        const parsed = queryString.parse(window.location.search);
+        const regex = / /g;
+        const ad_id = parsed.ad_id;
+        if (ad_id !== undefined && regex.test(ad_id) !== true) {
+            if (ad_id !== undefined && regex.test(ad_id) !== true) {
+                let domain = 'localhost';
+                if (AppConfig.APP_ENV === AppConfig.production)
+                    domain = '.thaibulksms.com';
+                else if (AppConfig.APP_ENV === AppConfig.internalTest)
+                    domain = '.1mobyline.com';
+                Cookie.set('ad_id', ad_id.trim(), {
+                    domain,
+                    expires: 7,
+                });
+            }
+        }
 
-  return (
-    <>
-      <DefaultSeo {...seo} />
-      <StoreContextProvider>
-        <Proloader />
-        <Component {...pageProps} />
-      </StoreContextProvider>
-    </>
-  );
+        TagManager.initialize(tagManagerArgs);
+
+        if (!fbq.init(AppConfig.facebookConversionTracking.PIXEL_ID))
+            console.warn('fbq init failed.');
+
+        handleRouteChange(router.pathname);
+        Router.events.on('routeChangeStart', handleRouteChange);
+
+        let timeout = setTimeout(() => {
+            fb((FB) => timeout && FB.XFBML.parse());
+        }, 2000);
+        return () => {
+            clearTimeout(timeout);
+            Router.events.off('routeChangeStart', handleRouteChange);
+        };
+    }, []);
+
+    return (
+        <>
+            <DefaultSeo {...seo} />
+            <StoreContextProvider>
+                <Proloader />
+                <Component {...pageProps} />
+            </StoreContextProvider>
+        </>
+    );
 }
 
 MyApp.getInitialProps = async (appContext: any) => {
-  const appProps = await App.getInitialProps(appContext);
-  return { ...appProps };
+    const appProps = await App.getInitialProps(appContext);
+    return { ...appProps };
 };
 
 export default appWithTranslation(MyApp);

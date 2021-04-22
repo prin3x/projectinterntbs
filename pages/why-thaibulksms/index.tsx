@@ -14,36 +14,39 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/otp';
 import { withTranslation } from '../../i18n';
 const WhyThaibulksms = ({ t }: any) => (
-  <Layout>
-    <Head>
-      <title>{t('meta::title')}</title>
-      <meta name="title" content={t('meta::title')} />
-      <meta name="description" content={t('meta::description')} />
-      <meta name="keywords" content={t('meta::keywords')} />
-      <meta name="author" content="" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <NextSeo openGraph={seo.openGraph} />
-    </Head>
-    {/* <Proloader /> */}
-    <div className="page_wrapper">
-      <HeroSection />
-      <SmsSection />
-      <BrandSection />
-      <PriceSection />
-      <TrackSection />
-      <CtaSection />
-      <FaqSection />
-    </div>
-    <BacktoTop />
-  </Layout>
+    <Layout>
+        <Head>
+            <title>{t('meta::title')}</title>
+            <meta name="title" content={t('meta::title')} />
+            <meta name="description" content={t('meta::description')} />
+            <meta name="keywords" content={t('meta::keywords')} />
+            <meta name="author" content="" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+            <NextSeo openGraph={seo.openGraph} />
+        </Head>
+        {/* <Proloader /> */}
+        <div className="page_wrapper">
+            <HeroSection />
+            <SmsSection />
+            <BrandSection />
+            <PriceSection />
+            <TrackSection />
+            <CtaSection />
+            <FaqSection />
+        </div>
+        <BacktoTop />
+    </Layout>
 );
 
 export default withTranslation('WhyThaibulksms')(WhyThaibulksms);
 
 export const getStaticProps = async () => {
-  return {
-    props: {
-      namespacesRequired: ['WhyThaibulksms'],
-    },
-  };
+    return {
+        props: {
+            namespacesRequired: ['WhyThaibulksms'],
+        },
+    };
 };

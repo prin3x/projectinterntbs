@@ -1,12 +1,12 @@
 {
     "meta": {
-        "title": "บริษัทส่งข้อความด้วย SMS ราคาเริ่ม 0.21 บาท อันดับ 1 ของไทย | ThaiBulkSMS",
-        "description": "บริษัทส่ง SMS จำนวนมาก ราคาสุดคุ้มค่าเพียง 0.21 บาท บริการส่งข้อความ SMS ได้ด้วยตนเองผ่านระบบ - ทดลองส่ง sms ฟรี",
+        "title": "บริษัทส่งข้อความผ่าน SMS Gateway ราคาเริ่ม 0.21 บาท | ThaiBulkSMS",
+        "description": "บริการส่งข้อความ ผ่าน SMS Gateway ส่ง SMS โฆษณาจำนวนมาก ราคาถูกคุ้มค่าเพียง 0.21 บาท บริษัทอันดับ 1 ของไทย - ทดลองส่ง SMS ฟรี!",
         "keywords": "free,sms,gateway,website,mobile,phone,online,text,message,messages,thailand,aggregator,thai,server,service,services,providers,shortcodes,ส่ง,ฟรี,gsm,ขาย,ถูก,2g,3g,4g,messaging,,ais,api,bulk,advertising,pricing,price,reseller,software,solutions,campaignscoporate,broadcast,direct,dtac,truemove,hutch,cdma,net,ads,ราคา,promotion,การตลาด,ธุรกิจ,เครือข่าย,เว็บ,โฆษณา,โทรศัพท์เคลื่อนที่,โทรศัพท์มือถือ,ข้อความ,ข้อความสั้น,สตางค์,หารายได้ออนไลน์,ออนไลน์"
     },
     "HeroSection": {
-        "Meeting every one of your SMS sending needs." : "ตอบโจทย์ทุกความต้องการ ด้านการส่ง SMS",
-        "SMS sending service capable of quick sending with reliable stability. Consultation is available at every step." : "บริการส่งข้อความ SMS ครบวงจร ส่งไว มั่นใจได้ในความเสถียร พร้อมให้คำปรึกษาทุกขั้นตอน",
+        "Meeting every one of your SMS sending needs." : "บริการ SMS Marketing ตอบโจทย์ทุกความต้องการด้านการส่งข้อความ",
+        "SMS sending service capable of quick sending with reliable stability. Consultation is available at every step." : "บริการส่งข้อความ SMS โฆษณา ผ่าน SMS Gateway ครบวงจร  ส่งไว มั่นใจได้ในความเสถียร พร้อมให้คำปรึกษาทุกขั้นตอน",
         "Try SMS sending for free" : "ทดลองส่ง SMS ฟรี",
         "View package prices" : "ดูราคาแพ็กเกจ"
     },
@@ -16,13 +16,13 @@
     "FeatureSection": {
         "Why ThaiBulk SMS": "ทำไมต้องเป็น <span class=\"col_one\">ThaiBulk</span> <span class=\"col_two\">SMS</span>",
         "No.1 SMS Platform": "No.1 SMS Platform",
-        "Thailand’s no. 1 SMS service provider": "ผู้ให้บริการ SMS<br/>อันดับ 1 ของไทย",
+        "Thailand’s no. 1 SMS service provider": "ผู้ให้บริการ SMS Gateway<br/>อันดับ 1 ของไทย",
         "Fast & Reliable": "Fast & Reliable",
         "The fastest channel for sending is chosen automatically, resulting in fast sending and reliable stability.": "เลือกช่องทางส่งที่เร็วที่สุดอัตโนมัติ<br/>จึงส่งไว เชื่อใจได้ในความเสถียร",
         "Smart Console": "Smart Console",
-        "The results of sending can be measured easily with smart reports.": "วัดผลการส่งได้ง่าย<br/>ด้วยรายงานที่ชาญฉลาด",
-        "Easily Integrated AP": "Easily Integrated AP",
-        "Easy to connect and support multiple languages.": "เชื่อมต่อง่าย<br/>ใช้ได้หลากหลายภาษา"
+        "The results of sending can be measured easily with smart reports.": "วัดผลการส่งข้อความได้ง่าย<br/>ด้วยรายงานที่ชาญฉลาด",
+        "Easily Integrated API": "Easily Integrated API",
+        "Easy to connect and support multiple languages.": "เชื่อมต่อ SMS API ง่าย<br/>ใช้ได้หลากหลายภาษา"
     },
     "SimpleSliderSection": {
         "Covering every purpose of SMS sending": "ครอบคลุมทุกจุดประสงค์<br/>การส่ง <span>SMS</span>",
@@ -40,7 +40,7 @@
     },
     "GlobeSection": {
         "Free SMS and OTP sending worldwide at a great value price.": "ส่ง <span>SMS</span> และ <span>OTP</span> ได้ทั่วโลก ด้วยราคาที่คุ้มค่า",
-        "Covering more than 200 countries worldwide.": "ครอบคลุมมากกว่า 200 ประเทศทั่วโลก",
+        "Covering more than 200 countries worldwide.": "ครอบคลุมมากกว่า 200 ประเทศทั่วโลก ส่งข้อความได้ทุกเครือข่าย รองรับการส่งข้อความได้ทุกภาษา",
         "Contact us for more information": "สอบถามรายละเอียด"
     },
     "SmsSection": {
