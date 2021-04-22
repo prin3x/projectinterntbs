@@ -9,30 +9,33 @@ import SimpleIconSection from '../../components/developer/SimpleIconSection';
 import { withTranslation } from '../../i18n';
 
 const Developer = ({ t }: any) => (
-  <Layout>
-    <Head>
-      <meta name="keywords" content={t('keywords')} />
-      <meta name="author" content="" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
-    <NextSeo
-      openGraph={seo.openGraph}
-      title={t('meta::title')}
-      description={t('meta::description')}
-    />
-    <div className="page_wrapper">
-      <SimpleIconSection />
-      <CtaSection />
-    </div>
-    <BacktoTop />
-  </Layout>
+    <Layout>
+        <Head>
+            <meta name="keywords" content={t('keywords')} />
+            <meta name="author" content="" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+        </Head>
+        <NextSeo
+            openGraph={seo.openGraph}
+            title={t('meta::title')}
+            description={t('meta::description')}
+        />
+        <div className="page_wrapper">
+            <SimpleIconSection />
+            <CtaSection />
+        </div>
+        <BacktoTop />
+    </Layout>
 );
 
 export default withTranslation('Developer')(Developer);
 export const getStaticProps = async () => {
-  return {
-    props: {
-      namespacesRequired: ['Developer'],
-    },
-  };
+    return {
+        props: {
+            namespacesRequired: ['Developer'],
+        },
+    };
 };

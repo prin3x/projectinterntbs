@@ -4,12 +4,12 @@ import Footer from './Footer';
 // import React, { useEffect } from 'react';
 // import Head from 'next/head';
 const Layout = (props: any) => {
-  // useEffect(() => {
-  //   i18n.changeLanguage('th');
-  // }, []);
-  return (
-    <div>
-      {/* <Head>
+    // useEffect(() => {
+    //   i18n.changeLanguage('th');
+    // }, []);
+    return (
+        <div>
+            {/* <Head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -30,15 +30,15 @@ const Layout = (props: any) => {
           }}
         />
       </Head> */}
-      <Header />
-      {props.children}
-      <Footer />
-      <div
-        className="fb-customerchat"
-        data-attribution="setup_tool"
-        data-page_id={process.env.NEXT_PUBLIC_FB_PAGEID}
-      ></div>
-    </div>
-  );
+            <Header />
+            {props.children}
+            <Footer />
+            <div
+                className="fb-customerchat"
+                data-attribution="setup_tool"
+                data-page_id={process.env.NEXT_PUBLIC_FB_PAGEID}
+            ></div>
+        </div>
+    );
 };
 export default Layout;

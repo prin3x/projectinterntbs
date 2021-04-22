@@ -10,75 +10,85 @@ import AppConfig from '../../appConfig';
 
 SwiperCore.use([Navigation, Pagination, A11y, Autoplay]);
 const ContentSection = ({ Posts, t }: any) => (
-  <div
-    className="hero_section lazyload"
-    data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-resource.jpg`}
-  >
-    <div className="container">
-      <div className="row justify-content-center hero_top_one">
-        <div className="col-12 text-center">
-          <h1 className="section__title">{t('HeroSection::Database')}</h1>
-          <div className="secSliderResource">
-            <Swiper
-              spaceBetween={50}
-              slidesPerView={1}
-              // pagination={true}
-              autoplay={{
-                delay: 7000,
-              }}
-              loop={true}
-              navigation={true}
-              pagination={true}
-              // scrollbar={{ draggable: true }}
-              // onSwiper={(swiper) => console.log(swiper)}
-              // onSlideChange={() => console.log('slide change')}
-            >
-              {!Posts.highligth ||
-                Posts.highligth.map((item, key) => {
-                  return (
-                    <SwiperSlide key={key}>
-                      <Link
-                        href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`}
-                        as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}
-                      >
-                        <a>
-                          <div className="sliderResource">
-                            <div className="imgSlider">
-                              <img
-                                src={item.banner_image_top.url}
-                                alt={item.name}
-                              />
-                            </div>
-                            <div className="textSlider">
-                              <h4>{item.name}</h4>
-                              <p>
-                                {format(
-                                  parseFromTimeZone(item.published_at, {
-                                    timeZone: 'Asia/Bangkok',
-                                  }),
-                                  'dd MMM yyyy'
-                                )}
-                              </p>
-                            </div>
-                          </div>
-                        </a>
-                      </Link>
-                    </SwiperSlide>
-                  );
-                })}
-            </Swiper>
-          </div>
+    <div
+        className="hero_section lazyload"
+        data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-resource.jpg`}
+    >
+        <div className="container">
+            <div className="row justify-content-center hero_top_one">
+                <div className="col-12 text-center">
+                    <h1 className="section__title">
+                        {t('HeroSection::Database')}
+                    </h1>
+                    <div className="secSliderResource">
+                        <Swiper
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            // pagination={true}
+                            autoplay={{
+                                delay: 7000,
+                            }}
+                            loop={true}
+                            navigation={true}
+                            pagination={true}
+                            // scrollbar={{ draggable: true }}
+                            // onSwiper={(swiper) => console.log(swiper)}
+                            // onSlideChange={() => console.log('slide change')}
+                        >
+                            {!Posts.highligth ||
+                                Posts.highligth.map((item, key) => {
+                                    return (
+                                        <SwiperSlide key={key}>
+                                            <Link
+                                                href={`${AppConfig.WEB_URL_BLOG}/post/[slug]`}
+                                                as={`${AppConfig.WEB_URL_BLOG}/post/${item.slug}`}
+                                            >
+                                                <a>
+                                                    <div className="sliderResource">
+                                                        <div className="imgSlider">
+                                                            <img
+                                                                src={
+                                                                    item
+                                                                        .banner_image_top
+                                                                        .url
+                                                                }
+                                                                alt={item.name}
+                                                            />
+                                                        </div>
+                                                        <div className="textSlider">
+                                                            <h4>{item.name}</h4>
+                                                            <p>
+                                                                {format(
+                                                                    parseFromTimeZone(
+                                                                        item.published_at,
+                                                                        {
+                                                                            timeZone:
+                                                                                'Asia/Bangkok',
+                                                                        }
+                                                                    ),
+                                                                    'dd MMM yyyy'
+                                                                )}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </Link>
+                                        </SwiperSlide>
+                                    );
+                                })}
+                        </Swiper>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 );
 
 ContentSection.getInitialProps = async () => ({
-  namespacesRequired: ['Resource'],
+    namespacesRequired: ['Resource'],
 });
 
 ContentSection.propTypes = {
-  t: PropTypes.func.isRequired,
+    t: PropTypes.func.isRequired,
 };
 export default withTranslation('Resource')(ContentSection);

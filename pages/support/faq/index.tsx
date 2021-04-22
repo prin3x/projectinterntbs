@@ -9,31 +9,34 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../../components/seo/why-thaibulksms';
 import { withTranslation } from '../../../i18n';
 const FAQ = ({ t }: any) => (
-  <Layout>
-    <Head>
-      <title>{t('meta::title')}</title>
-      <meta name="title" content={t('meta::title')} />
-      <meta name="description" content={t('meta::description')} />
-      <meta name="keywords" content={t('meta::keywords')} />
-      <meta name="author" content="" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <NextSeo openGraph={seo.openGraph} />
-    </Head>
-    {/* <Proloader /> */}
-    <div className="page_wrapper">
-      <HeroSection />
-      <TabContent />
-    </div>
-    <BacktoTop />
-  </Layout>
+    <Layout>
+        <Head>
+            <title>{t('meta::title')}</title>
+            <meta name="title" content={t('meta::title')} />
+            <meta name="description" content={t('meta::description')} />
+            <meta name="keywords" content={t('meta::keywords')} />
+            <meta name="author" content="" />
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+            />
+            <NextSeo openGraph={seo.openGraph} />
+        </Head>
+        {/* <Proloader /> */}
+        <div className="page_wrapper">
+            <HeroSection />
+            <TabContent />
+        </div>
+        <BacktoTop />
+    </Layout>
 );
 
 export default withTranslation('FAQ')(FAQ);
 
 export const getStaticProps = async () => {
-  return {
-    props: {
-      namespacesRequired: ['FAQ'],
-    },
-  };
+    return {
+        props: {
+            namespacesRequired: ['FAQ'],
+        },
+    };
 };
