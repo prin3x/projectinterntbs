@@ -15,7 +15,7 @@ const SmsSectionV3 = () => (
                     <div className="newsletter_img">
                         <img
                             className="lazyload"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-lbs-01.png`}
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-alert.png`}
                             alt="Image"
                         />
                     </div>

@@ -11,7 +11,7 @@ const HeroSectionV3 = () => (
                     <div className="hero_img_one">
                         <object
                             type="image/svg+xml"
-                            data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-hero-lbs.svg`}
+                            data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-hero-marketing.svg`}
                         ></object>
                     </div>
                 </div>
