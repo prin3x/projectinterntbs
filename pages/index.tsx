@@ -9,6 +9,7 @@ import Layout from '../components/Layout';
 import HeroSection from '../components/home/HeroSection';
 import PartnerSection from '../components/home/PartnerSection';
 import FeatureSection from '../components/home/FeatureSection';
+import ServiceSection from '../components/home/ServiceSection';
 import SimpleSliderSection from '../components/home/SimpleSliderSection';
 import GlobeSection from '../components/home/GlobeSection';
 import SmsSection from '../components/home/SmsSection';
@@ -50,6 +51,7 @@ const Homepage = ({ t }: any) => (
                 <HeroSection />
                 <PartnerSection />
                 <FeatureSection />
+                <ServiceSection />
                 <SimpleSliderSection />
                 <GlobeSection />
                 <SmsSection />
