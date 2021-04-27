@@ -10,9 +10,12 @@ const CtaSectionV2 = () => (
             <div className="row align-items-center">
                 <div className=" col-lg-12">
                     <div className="cta-text">
-                        <h3>สนใจส่งข้อความ SMS Marketing</h3>
+                        <h3>ส่ง SMS Alert เพื่อให้ลูกค้าไม่พลาดทุกข่าวสารของคุณ</h3>
                         <Link href="/contact">
-                            <a className="btn v7">แพ็กเกจราคา</a>
+                            <a className="btn v7 marginSide">ขอรายละเอียด</a>
+                        </Link>
+                        <Link href="/contact">
+                            <a className="btn v7 marginSide">แพ็กเกจราคา</a>
                         </Link>
                     </div>
                 </div>
