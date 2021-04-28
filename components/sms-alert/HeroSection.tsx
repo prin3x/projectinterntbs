@@ -17,7 +17,7 @@ const HeroSectionV3 = () => (
                 </div>
                 <div className="col-lg-6 col-md-12 col-12">
                     <div className="hero_text_one v2">
-                        <h1><span>แจ้งเตือนข่าวสารผ่านช่องทางที่รวดเร็วที่สุด </span>ด้วยการส่งข้อความ SMS Alert</h1>                   
+                        <h1><span>แจ้งเตือนข่าวสารผ่านช่องทางที่รวดเร็วที่สุด</span> ด้วยการส่งข้อความ SMS Alert</h1>                   
                     </div>
                 </div>
             </div>

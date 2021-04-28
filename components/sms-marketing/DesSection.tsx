@@ -6,7 +6,7 @@ const SimpleIconSection = () => (
             <div className="row">
                 <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
                     <div className="simple_icon_title">
-                        <h3>SMS Marketing ช่วยให้ธุรกิจให้คุณได้ส่งข้อความ สื่อสารได้ทุกจุดประสงค์</h3>
+                        <h3>SMS Marketing ช่วยให้ธุรกิจคุณได้ส่งข้อความ สื่อสารได้ทุกจุดประสงค์</h3>
                     </div>
                 </div>
             </div>
