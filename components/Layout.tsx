@@ -1,5 +1,7 @@
 import Header from './Header';
 import Footer from '../tbs_submodule/Footer';
+import BannerCookie from '../tbs_submodule/BannerCookie';
+
 // import { i18n } from '../i18n';
 // import React, { useEffect } from 'react';
 // import Head from 'next/head';
@@ -33,6 +35,7 @@ const Layout = (props: any) => {
             <Header />
             {props.children}
             <Footer />
+            <BannerCookie />
             <div
                 className="fb-customerchat"
                 data-attribution="setup_tool"
