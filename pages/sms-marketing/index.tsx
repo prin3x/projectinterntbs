@@ -36,11 +36,11 @@ const SmsMarketing = ({ t }: any) => (
     </Layout>
 );
 
-export default withTranslation('LocationBasedSMSPage')(SmsMarketing);
+export default withTranslation('Sms-marketing')(SmsMarketing);
 export const getStaticProps = async () => {
     return {
         props: {
-            namespacesRequired: ['LocationBasedSMSPage'],
+            namespacesRequired: ['Sms-marketing'],
         },
     };
 };

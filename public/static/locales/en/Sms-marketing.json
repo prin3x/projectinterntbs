@@ -1,0 +1,28 @@
+{
+    "meta": {
+        "title": "",
+        "description": "",
+        "keywords": ""
+    },
+    "HeroSection": {
+        "marhero1": "marhero1"
+    },
+    "SmsSection": {
+        "marsmssec1": "marsmssec1",
+        "marsmssec2": "marsmssec2",
+        "marsmssec3": "marsmssec3",
+        "marsmssec4": "marsmssec4",
+        "marsmssec5": "marsmssec5"
+    },
+    "DesSection": {
+      "mardessec1":"mardessec1",
+      "mardessec2":"mardessec2",
+      "mardessec3":"mardessec3",
+      "mardessec4":"mardessec4",
+      "mardessec5":"mardessec5"
+    },
+    "CtaSection": {
+      "ctasec1":"ctasec1",
+      "ctasec2":"ctasec2"
+    }
+}

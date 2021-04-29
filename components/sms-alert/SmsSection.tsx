@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
 import Link from 'next/link';
-const SmsSectionV3 = () => (
+const SmsSectionV3 = ({ t }: any) => (
     <div className="sms_section v2 ">
         <div className="container">
-             <div className="row align-items-center">
+            <div className="row align-items-center">
                 <div className="col-lg-5">
                     <div className="newsletter_text">
-                        <h3>SMS Alert คือการส่งข้อความในรูปแบบ Notification เพื่อแจ้งเตือนข้อมูลข่าวสารไปยังกลุ่มเป้าหมาย</h3>
-                        <p>เป็นการส่งข้อความรูปแบบหนึ่ง เพื่อแจ้งเตือนข่าวสารสำคัญต่าง ๆ ตามที่ผู้ส่งต้องการกระจายข้อมูล ซึ่งผู้รับจะสามารถรับรู้ข่าวสารนั้นได้ก่อนช่องทางอื่น ๆ โดยสามารถส่งข้อความทั้งหมดผ่านระบบ API หรือผ่าน Smart SMS Console</p>
+                        <h3>{t('SmsSection::smssec1')}</h3>
+                        <p>{t('SmsSection::smssec2')}</p>
                     </div>
                 </div>
                 <div className="col-lg-7">
@@ -27,13 +27,15 @@ const SmsSectionV3 = () => (
                         <div className="row align-items-center">
                             <div className="col-lg-8 col-md-12">
                                 <div className="sms_form_text">
-                                    <h4>ส่ง SMS Alert ด้วยการเชื่อมต่อ SMS API</h4>
+                                    <h4>{t('SmsSection::smssec3')}</h4>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_field">
                                     <Link href="/contact">
-                                        <a className="btn v8">รายละเอียดเพิ่มเติม</a>
+                                        <a className="btn v8">
+                                            {t('SmsSection::smssec4')}
+                                        </a>
                                     </Link>
                                 </div>
                             </div>
@@ -46,10 +48,10 @@ const SmsSectionV3 = () => (
 );
 
 SmsSectionV3.getInitialProps = async () => ({
-    namespacesRequired: ['LocationBasedSMSPage'],
+    namespacesRequired: ['Sms-alert'],
 });
 
 SmsSectionV3.propTypes = {
     t: PropTypes.func.isRequired,
 };
-export default withTranslation('LocationBasedSMSPage')(SmsSectionV3);
+export default withTranslation('Sms-alert')(SmsSectionV3);

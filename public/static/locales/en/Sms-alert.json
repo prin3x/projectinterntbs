@@ -1,0 +1,30 @@
+{
+    "meta": {
+        "title": "",
+        "description": "",
+        "keywords": ""
+    },
+    "HeroSection": {
+        "alerthero1": "alerthero1"
+    },
+    "SmsSection": {
+        "smssec1": "smssec1",
+        "smssec2": "smssec2",
+        "smssec3": "smssec3",
+        "smssec4": "smssec4"
+    },
+    "DesSection": {
+      "dessec1":"dessec1",
+      "dessec2":"dessec2",
+      "dessec3":"dessec3",
+      "dessec4":"dessec4",
+      "dessec5":"dessec5",
+      "dessec6":"dessec6",
+      "dessec7":"dessec7"
+    },
+    "CtaSection": {
+      "ctasec1":"ctasec1",
+      "ctasec2":"ctasec2",
+      "ctasec3":"ctasec3"
+    }
+}

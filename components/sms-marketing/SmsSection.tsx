@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
 import Link from 'next/link';
-const SmsSectionV3 = () => (
+const SmsSectionV3 = ({ t }: any) => (
     <div className="sms_section v2 ">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-5">
                     <div className="newsletter_text">
-                        <h3>SMS Marketing ช่องทางเสริมธุรกิจให้เติบโตขึ้น อย่างมีประสิทธิภาพ</h3>
-                        <p>การส่งข้อความด้วย SMS Marketing เป็นการทำการตลาดโดยใช้ SMS ช่วยให้ทุกธุรกิจสามารถสื่อสารกับกลุ่มเป้าหมายหรือลูกค้าได้อย่างไม่จำกัด ส่งข้อความได้ทุกจุดประสงค์</p>
+                        <h3>{t('SmsSection::marsmssec1')}</h3>
+                        <p>{t('SmsSection::marsmssec2')}</p>
                     </div>
                 </div>
                 <div className="col-lg-7">
@@ -27,16 +27,20 @@ const SmsSectionV3 = () => (
                         <div className="row align-items-center">
                             <div className="col-lg-8 col-md-12">
                                 <div className="sms_form_text">
-                                    <h4>ต้องการส่งข้อความ SMS Marketing</h4>
+                                    <h4>{t('SmsSection::marsmssec3')}</h4>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_field">
                                     <Link href="/contact">
-                                        <a className="btn v8">ดูบริการ</a>
+                                        <a className="btn v8">
+                                            {t('SmsSection::marsmssec4')}
+                                        </a>
                                     </Link>
                                     <Link href="/contact">
-                                        <a className="btn otp">ติดต่อเรา</a>
+                                        <a className="btn otp">
+                                            {t('SmsSection::marsmssec5')}
+                                        </a>
                                     </Link>
                                 </div>
                             </div>
@@ -49,10 +53,10 @@ const SmsSectionV3 = () => (
 );
 
 SmsSectionV3.getInitialProps = async () => ({
-    namespacesRequired: ['LocationBasedSMSPage'],
+    namespacesRequired: ['Sms-marketing'],
 });
 
 SmsSectionV3.propTypes = {
     t: PropTypes.func.isRequired,
 };
-export default withTranslation('LocationBasedSMSPage')(SmsSectionV3);
+export default withTranslation('Sms-marketing')(SmsSectionV3);

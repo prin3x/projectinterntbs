@@ -36,11 +36,11 @@ const SmsAlertPage = ({ t }: any) => (
     </Layout>
 );
 
-export default withTranslation('LocationBasedSMSPage')(SmsAlertPage);
+export default withTranslation('Sms-alert')(SmsAlertPage);
 export const getStaticProps = async () => {
     return {
         props: {
-            namespacesRequired: ['LocationBasedSMSPage'],
+            namespacesRequired: ['Sms-alert'],
         },
     };
 };

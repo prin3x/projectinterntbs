@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
-const HeroSectionV3 = () => (
+const HeroSectionV3 = ({ t }: any) => (
     <div
         className="hero_section v3 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
@@ -17,7 +17,7 @@ const HeroSectionV3 = () => (
                 </div>
                 <div className="col-lg-6 col-md-12 col-12">
                     <div className="hero_text_one v2">
-                        <h1><span>ส่งข้อความ SMS Marketing</span> เสริมธุรกิจด้านการตลาด ผ่านการสื่อสารด้วยการส่งข้อความ</h1>                   
+                        <h1 dangerouslySetInnerHTML={{__html:t('HeroSection::marhero1')}}/>
                     </div>
                 </div>
             </div>
@@ -25,10 +25,10 @@ const HeroSectionV3 = () => (
     </div>
 );
 HeroSectionV3.getInitialProps = async () => ({
-    namespacesRequired: ['LocationBasedSMSPage'],
+    namespacesRequired: ['Sms-marketing'],
 });
 
 HeroSectionV3.propTypes = {
     t: PropTypes.func.isRequired,
 };
-export default withTranslation('LocationBasedSMSPage')(HeroSectionV3);
+export default withTranslation('Sms-marketing')(HeroSectionV3);
