@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { withTranslation } from '../../i18n';
 import Link from 'next/link';
 const SmsSectionV3 = ({ t }: any) => (
-    <div className="sms_section v2 ">
+    <div className="sms_section v2 sms_marketing_section">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-5">
