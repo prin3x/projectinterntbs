@@ -71,7 +71,7 @@ const options = [
 ];
 
 const MySelect = options.map((list) => {
-    return <option value={list.value}>{list.text}</option>;
+    return <option key={list.value} value={list.value}>{list.text}</option>;
 });
 
 const Header = ({ t }: any) => {
