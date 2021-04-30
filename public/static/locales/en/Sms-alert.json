@@ -5,26 +5,26 @@
         "keywords": ""
     },
     "HeroSection": {
-        "alerthero1": "alerthero1"
+        "alerthero1": "<span>Notify News via the Fastest Channel</span> by Sending SMS Alert Messages"
     },
     "SmsSection": {
-        "smssec1": "smssec1",
-        "smssec2": "smssec2",
-        "smssec3": "smssec3",
-        "smssec4": "smssec4"
+        "smssec1": "SMS Alert is a Channel to Notify Information or News Toward Target Group.",
+        "smssec2": "It is one of the massaging types to notify important news to recipients as senders want. Recipients will instantly receive those before other channels. All messages can be sent via API system or Smart SMS Console.",
+        "smssec3": "Send SMS Alert by Connecting with SMS API",
+        "smssec4": "More Details"
     },
     "DesSection": {
-      "dessec1":"dessec1",
-      "dessec2":"dessec2",
-      "dessec3":"dessec3",
-      "dessec4":"dessec4",
-      "dessec5":"dessec5",
-      "dessec6":"dessec6",
-      "dessec7":"dessec7"
+        "dessec1": "SMS Marketing Helps Your Businesses to Send Messages as You Want.",
+        "dessec2": "Notify Payments or Financial Transactions",
+        "dessec3": "Notify Information and News to Personnel in Organizations",
+        "dessec4": "Notify Important Promotions or Privileges",
+        "dessec5": "Notify Parcel Tracking for E-Business",
+        "dessec6": "Notify Goods and Services Purchases or Reserves ",
+        "dessec7": "Notify Important Information to Avoid Missing any Information"
     },
     "CtaSection": {
-      "ctasec1":"ctasec1",
-      "ctasec2":"ctasec2",
-      "ctasec3":"ctasec3"
+        "ctasec1": "Send SMS Alert to Your Customers Don't Let Them Miss A Single Update From You ",
+        "ctasec2": "Ask for More Details",
+        "ctasec3": "Package Prices"
     }
 }

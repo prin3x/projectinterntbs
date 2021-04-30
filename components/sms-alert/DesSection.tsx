@@ -38,7 +38,7 @@ const SimpleIconSection = ({ t }: any) => (
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-alert03.png`}
                             alt="Image"
                         />
-                        <p className="col6">{t('DesSection::dessec3')}</p>
+                        <p className="col6">{t('DesSection::dessec4')}</p>
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -48,7 +48,7 @@ const SimpleIconSection = ({ t }: any) => (
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-alert04.png`}
                             alt="Image"
                         />
-                        <p className="col6">{t('DesSection::dessec4')}</p>
+                        <p className="col6">{t('DesSection::dessec5')}</p>
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -58,7 +58,7 @@ const SimpleIconSection = ({ t }: any) => (
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-alert05.png`}
                             alt="Image"
                         />
-                        <p className="col6">{t('DesSection::dessec5')}</p>
+                        <p className="col6">{t('DesSection::dessec6')}</p>
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -68,7 +68,7 @@ const SimpleIconSection = ({ t }: any) => (
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-alert06.png`}
                             alt="Image"
                         />
-                        <p className="col6">{t('DesSection::dessec6')}</p>
+                        <p className="col6">{t('DesSection::dessec7')}</p>
                     </div>
                 </div>
             </div>
