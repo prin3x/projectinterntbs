@@ -3,78 +3,154 @@ import * as React from 'react';
 import { withTranslation } from '../../i18n';
 
 const HeroSection = ({ t }: any) => {
-  React.useEffect(() => {}, []);
-  return (
-    <div className="container condition-wrap">
-      <h1 className="condition-header textHeadCondition">{t('policyhero::header')}</h1>
-      <p className="condition-text" style={{ textIndent: '30px' }}>{t('policyhero::subheader')}</p>
-      <div className="col-lg-12">
-        <div className="condition-text">
+    React.useEffect(() => {}, []);
+    return (
+        <div className="container condition-wrap">
+            <h1 className="condition-header textHeadCondition">
+                {t('policyhero::header')}
+            </h1>
+            <p className="condition-text" style={{ textIndent: '30px' }}>
+                {t('policyhero::subheader')}
+            </p>
+            <div className="col-lg-12">
+                <div className="condition-text">
+                    <h2 className="textHeadCondition">
+                        {t('policyhero::section_1::header')}
+                    </h2>
+                    <span
+                        style={{
+                            display: 'block',
+                            textIndent: '24px',
+                            marginBottom: '14px',
+                        }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_1::content_1'),
+                        }}
+                    ></span>
+                    <span
+                        style={{
+                            display: 'block',
+                            textIndent: '24px',
+                            marginBottom: '14px',
+                        }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_1::content_2'),
+                        }}
+                    ></span>
+                    <span
+                        style={{
+                            display: 'block',
+                            textIndent: '24px',
+                            marginBottom: '14px',
+                        }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_1::content_3'),
+                        }}
+                    ></span>
 
-          <h2 className="textHeadCondition">{t('policyhero::section_1::header')}</h2>
-          <ul
-            dangerouslySetInnerHTML={{
-              __html: t('policyhero::section_1::content'),
-            }}
-          ></ul>
+                    <h2
+                        className="textHeadCondition"
+                        style={{ marginTop: '30px' }}
+                    >
+                        {t('policyhero::section_2::header')}
+                    </h2>
+                    <span
+                        style={{
+                            display: 'block',
+                            textIndent: '24px',
+                            marginBottom: '14px',
+                        }}
+                    >
+                        {t('policyhero::section_2::desc')}
+                    </span>
+                    <div
+                        style={{ marginLeft: '24px' }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_2::content'),
+                        }}
+                    ></div>
 
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_2::header')}</h2>
-          <ul
-            dangerouslySetInnerHTML={{
-              __html: t('policyhero::section_2::content'),
-            }}
-          ></ul>
-          <span style={{ display:'block', textIndent: '24px' }}>{t('policyhero::section_2::footer')}</span>
+                    <h2
+                        className="textHeadCondition"
+                        style={{ marginTop: '30px' }}
+                    >
+                        {t('policyhero::section_3::header')}
+                    </h2>
 
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_3::header')}</h2>
-          <span style={{ display:'block', textIndent: '24px', marginBottom: '14px' }}>{t('policyhero::section_3::desc')}</span>
-          <ul
-            dangerouslySetInnerHTML={{
-              __html: t('policyhero::section_3::content'),
-            }}
-          ></ul>
-          <span style={{ display:'block', textIndent: '24px' }}>{t('policyhero::section_3::footer')}</span>
+                    <span
+                        style={{
+                            display: 'block',
+                            textIndent: '24px',
+                            marginBottom: '14px',
+                        }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_3::content'),
+                        }}
+                    ></span>
 
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_4::header')}</h2>
-          <ul
-            dangerouslySetInnerHTML={{
-              __html: t('policyhero::section_4::content'),
-            }}
-          ></ul>
+                    <h2
+                        className="textHeadCondition"
+                        style={{ marginTop: '30px' }}
+                    >
+                        {t('policyhero::section_4::header')}
+                    </h2>
+                    <span
+                        style={{
+                            display: 'block',
+                            textIndent: '24px',
+                            marginBottom: '14px',
+                        }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_4::content'),
+                        }}
+                    ></span>
 
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_5::header')}</h2>
-          {t('policyhero::section_5::content')}
+                    <h2
+                        className="textHeadCondition"
+                        style={{ marginTop: '30px' }}
+                    >
+                        {t('policyhero::section_5::header')}
+                    </h2>
+                    <ol
+                        style={{ listStyleType: 'lower-alpha !important' }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_5::content'),
+                        }}
+                    ></ol>
 
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_6::header')}</h2>
-          {t('policyhero::section_6::content')}
-
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_7::header')}</h2>
-          {t('policyhero::section_7::content')}
-
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_8::header')}</h2>
-          {t('policyhero::section_8::content')}
-
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_9::header')}</h2>
-          {t('policyhero::section_9::content')}
-
-          <h2 className="textHeadCondition" style={{ marginTop: '30px' }}>{t('policyhero::section_10::header')}</h2>
-          {t('policyhero::section_10::content')}
-
-
+                    <h2
+                        className="textHeadCondition"
+                        style={{ marginTop: '30px' }}
+                    >
+                        {t('policyhero::section_6::header')}
+                    </h2>
+                    <span
+                        style={{
+                            display: 'block',
+                            textIndent: '24px',
+                            marginBottom: '14px',
+                        }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_6::content'),
+                        }}
+                    ></span>
+                    <div
+                        style={{ marginLeft: '24px' }}
+                        dangerouslySetInnerHTML={{
+                            __html: t('policyhero::section_6::footer'),
+                        }}
+                    ></div>
+                </div>
+            </div>
         </div>
-      </div>
-      <p style={{ marginTop: '30px' }} className="condition-text">
-        {t('policyhero::effective')}
-      </p>
-    </div>
-  );
+    );
 };
 
 HeroSection.getInitialProps = async () => ({
-  namespacesRequired: ['Policy'],
+    namespacesRequired: ['Policy'],
 });
 
 HeroSection.propTypes = {
-  t: PropTypes.func.isRequired,
+    t: PropTypes.func.isRequired,
 };
 export default withTranslation('Policy')(HeroSection);
