@@ -23,6 +23,16 @@
     "Easily Integrated API": "Easily Integrated API",
     "Easy to connect and support multiple languages.": "Easy to connect SMS API with multiple programing languages"
   },
+  "ServiceSection":{
+    "homeserviceheader":"ThaiBulkSMS Service",
+    "homeservice1":"Send SMS messages through website by yourself, fast, easy, measurable",
+    "homeservice2":"SMS API Service for developers, connecting with your chosen programing languages",
+    "homeservice3":"Ready-to-use OTP service to increase safety, no programming skill required",
+    "homeservice4":"Measure SMS campaign results accurately, do not waste your marketing budget",
+    "homeservice5":"Send SMS and OTP messages globally at valuable prices, fast, trackable",
+    "homeservice6":"Reach your target group within specific areas, send messages immediately without phone numbers",
+    "learnmore":"Learn More"
+    },  
   "SimpleSliderSection": {
     "Covering every purpose of SMS sending": "Send <span>SMS</span> to Your Client as You Want",
     "Promoting marketing activities": "Promote Marketing Activities",

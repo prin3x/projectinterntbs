@@ -1,12 +1,13 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const FeatureSection = () => (
+import Link from 'next/link';
+const FeatureSection = ({ t }: any) => (
     <div className="service_section">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-7 col-md-12 col-12 order-lg-1 order-md-2 order-2">
                     <div className="service_text">
-                        <h2>บริการของ ThaiBulkSMS</h2>
+                        <h2>{t('ServiceSection::homeserviceheader')}</h2>
                         <div className="serviceTBS">
                             <div className="serviceDetail">
                                 <img
@@ -15,8 +16,10 @@ const FeatureSection = () => (
                                     alt="Image"
                                 />
                                 <h3>Smart SMS Console</h3>
-                                <p>ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง ส่งง่าย วัดผลการส่งได้รวดเร็ว</p>
-                                <a href="">เรียนรู้เพิ่มเติม</a>
+                                <p>{t('ServiceSection::homeservice1')}</p>
+                                <Link href="/product/smart-sms-console">
+                                    {t('ServiceSection::learnmore')}
+                                </Link>
                             </div>
                             <div className="serviceDetail">
                                 <img
@@ -25,8 +28,10 @@ const FeatureSection = () => (
                                     alt="Image"
                                 />
                                 <h3>SMS API</h3>
-                                <p>บริการ SMS API สำหรับ Developer เชื่อมต่อด้วยภาษาที่คุณเลือก</p>
-                                <a href="">เรียนรู้เพิ่มเติม</a>
+                                <p>{t('ServiceSection::homeservice2')}</p>
+                                <Link href="/product/sms-api">
+                                    {t('ServiceSection::learnmore')}
+                                </Link>
                             </div>
                             <div className="serviceDetail">
                                 <img
@@ -35,8 +40,10 @@ const FeatureSection = () => (
                                     alt="Image"
                                 />
                                 <h3>OTP Service</h3>
-                                <p>ระบบส่ง OTP พร้อมใช้ เพิ่มความปลอดภัยไม่ต้องเขียนโปรแกรมเพิ่ม</p>
-                                <a href="">เรียนรู้เพิ่มเติม</a>
+                                <p>{t('ServiceSection::homeservice3')}</p>
+                                <Link href="/product/otp">
+                                    {t('ServiceSection::learnmore')}
+                                </Link>
                             </div>
                             <div className="serviceDetail">
                                 <img
@@ -45,8 +52,10 @@ const FeatureSection = () => (
                                     alt="Image"
                                 />
                                 <h3>SMS Tracking</h3>
-                                <p>วัดผลแคมเปญ SMS แม่นยำ ไม่เสียงบโฆษณาไป โดยเปล่าประโยชน์</p>
-                                <a href="">เรียนรู้เพิ่มเติม</a>
+                                <p>{t('ServiceSection::homeservice4')}</p>
+                                <Link href="/product/sms-tracking">
+                                    {t('ServiceSection::learnmore')}
+                                </Link>
                             </div>
                             <div className="serviceDetail">
                                 <img
@@ -55,8 +64,10 @@ const FeatureSection = () => (
                                     alt="Image"
                                 />
                                 <h3>Global SMS</h3>
-                                <p>ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า ส่งไว ติดตามผลการส่งได้</p>
-                                <a href="">เรียนรู้เพิ่มเติม</a>
+                                <p>{t('ServiceSection::homeservice5')}</p>
+                                <Link href="/product/global-sms/">
+                                    {t('ServiceSection::learnmore')}
+                                </Link>
                             </div>
                             <div className="serviceDetail">
                                 <img
@@ -65,8 +76,10 @@ const FeatureSection = () => (
                                     alt="Image"
                                 />
                                 <h3>Location Based SMS</h3>
-                                <p>เข้าถึงกลุ่มเป้าหมาย แบบกำหนดพื้นที่ ส่งข้อความได้ ไม่ต้องใช้เบอร์</p>
-                                <a href="">เรียนรู้เพิ่มเติม</a>
+                                <p>{t('ServiceSection::homeservice6')}</p>
+                                <Link href="/product/location-based-sms">
+                                    {t('ServiceSection::learnmore')}
+                                </Link>
                             </div>
                         </div>
                     </div>

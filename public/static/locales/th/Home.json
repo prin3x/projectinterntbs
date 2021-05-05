@@ -24,6 +24,16 @@
         "Easily Integrated API": "Easily Integrated API",
         "Easy to connect and support multiple languages.": "เชื่อมต่อ SMS API ง่าย<br/>ใช้ได้หลากหลายภาษา"
     },
+    "ServiceSection":{
+      "homeserviceheader":"บริการของ ThaiBulkSMS",
+      "homeservice1":"ส่ง SMS ผ่านเว็บไซต์ได้ด้วยตนเอง ส่งง่าย วัดผลการส่งได้รวดเร็ว",
+      "homeservice2":"บริการ SMS API สำหรับ Developer เชื่อมต่อด้วยภาษาที่คุณเลือก",
+      "homeservice3":"ระบบส่ง OTP พร้อมใช้ เพิ่มความปลอดภัยไม่ต้องเขียนโปรแกรมเพิ่ม",
+      "homeservice4":"วัดผลแคมเปญ SMS แม่นยำ ไม่เสียงบโฆษณาไป โดยเปล่าประโยชน์",
+      "homeservice5":"ส่ง SMS และ OTP ได้ทั่วโลก ด้วยราคาที่คุ้มค่า ส่งไว ติดตามผลการส่งได้",
+      "homeservice6":"เข้าถึงกลุ่มเป้าหมาย แบบกำหนดพื้นที่ ส่งข้อความได้ ไม่ต้องใช้เบอร์",
+      "learnmore":"เรียนรู้เพิ่มเติม"
+    },
     "SimpleSliderSection": {
         "Covering every purpose of SMS sending": "ครอบคลุมทุกจุดประสงค์<br/>การส่ง <span>SMS</span>",
         "Promoting marketing activities": "โปรโมตกิจกรรมการตลาด",

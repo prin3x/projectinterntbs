@@ -1,10 +1,10 @@
 export const seo = {
     openGraph: {
-        url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/location-based-sms`,
+        url: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/sms-marketing`,
         type: 'website',
-        title: 'บริการ Location Based Service ส่งข้อความระบุสถานที่',
+        title: 'ส่งข้อความ SMS Marketing ตอบโจทย์ทุกจุดประสงค์ของการใช้งาน',
         description:
-            'ส่ง SMS แบบระบุพื้นที่ (LBS) ไม่จำเป็นต้องมีหมายเลขโทรศัพท์ สามารถส่งได้ตามจุดพื้นที่สำคัญต่าง ๆ หรือกำหนดพื้นที่ที่ต้องการได้เอง',
+            'บริการส่งข้อความ SMS Marketing ลดต้นทุน ครอบคลุมทุกจุดประสงค์ในการทำการตลาด ด้วยราคาเริ่ม 0.21 บาท',
         images: [
             {
                 url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-LBS.jpg`,
@@ -12,6 +12,6 @@ export const seo = {
                 height: 600,
             },
         ],
-        site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/location-based-sms`,
+        site_name: `${process.env.NEXT_PUBLIC_DOMAIN_URL}/sms-marketing`,
     },
 };

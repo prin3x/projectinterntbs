@@ -16,7 +16,7 @@ const CtaSectionV2 = ({ t }: any) => (
                                 {t('CtaSection::ctasec2')}
                             </a>
                         </Link>
-                        <Link href="/contact">
+                        <Link href="/pricing">
                             <a className="btn v7 marginSide">
                                 {t('CtaSection::ctasec3')}
                             </a>
