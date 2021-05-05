@@ -613,7 +613,10 @@ const Header = ({ t }: any) => {
                                                             </Link>
                                                         </li>
                                                         <li className="li_padding_bottom20">
-                                                            <a href="https://member.thaibulksms.com/">
+                                                            <Link
+                                                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
+                                                                passHref={true}
+                                                            >
                                                                 <span className="new_icon_title_menu_about04 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -626,7 +629,7 @@ const Header = ({ t }: any) => {
                                                                         )}
                                                                     </p>
                                                                 </span>
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     </ul>
                                                 </div>
