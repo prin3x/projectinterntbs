@@ -52,6 +52,8 @@ compile:
 
 compile_production:
     stage: build_production
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive
     only:
         - master
     tags:
