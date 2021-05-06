@@ -14,7 +14,7 @@ compile:
         - develop
     tags:
         - internal_test
-        - thaibulksms
+        - thaibulksms_test
     script:
         # - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-staging.env /tmp/thaibulksms-frontend-next-staging.env
         # - cp /tmp/thaibulksms-frontend-next-staging.env .env
