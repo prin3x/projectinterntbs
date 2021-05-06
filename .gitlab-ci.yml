@@ -22,7 +22,7 @@ compile_internal:
         # - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-staging.env /tmp/thaibulksms-frontend-next-staging.env
         # - cp /tmp/thaibulksms-frontend-next-staging.env .env
         # - export $(grep -v '^#' .env | xargs)
-        - rimraf out
+        # - rimraf out
         - yarn
         - yarn build
         - sudo -u www-data  rsync -ar . /var/www/tbs-revamp-2020/tbs_frontend_next_2020
