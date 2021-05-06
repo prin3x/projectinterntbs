@@ -4,7 +4,8 @@ export const seo = {
         type: 'website',
         title:
             'SMS API บริการ SMS เชื่อมต่อ API สำหรับ Developer | ThaiBulkSMS',
-        description: 'SMS API',
+        description:
+            'บริการ SMS API สำหรับ Developer เชื่อมต่อด้วยภาษาที่คุณเลือก ผ่านระบบ API ของ ThaiBulkSMS ปลอดภัย มั่นใจ เชื่อถือได้ เชื่อมต่อง่ายใน 5 นาที',
         images: [
             {
                 url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Home.jpg`,
