@@ -8,6 +8,8 @@ stages:
 
 compile:
     stage: build
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive
     only:
         - staging
     tags:
