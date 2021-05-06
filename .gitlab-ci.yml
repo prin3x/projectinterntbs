@@ -20,6 +20,8 @@ compile_internal:
     script:
         - pwd
         # - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-staging.env /tmp/thaibulksms-frontend-next-staging.env
+        # - cp /tmp/thaibulksms-frontend-next-staging.env .env
+        # - export $(grep -v '^#' .env | xargs)
         # - rimraf out
         - yarn
         - yarn build
