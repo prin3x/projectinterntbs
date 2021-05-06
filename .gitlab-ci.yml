@@ -4,10 +4,11 @@ before_script:
 
 stages:
     - build
+    - build_internal
     - build_production
 
 compile:
-    stage: build
+    stage: build_internal
     variables:
         GIT_SUBMODULE_STRATEGY: recursive
     only:
