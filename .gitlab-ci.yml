@@ -9,6 +9,7 @@ stages:
 
 compile_internal:
     stage: build_internal
+    environment: internal_test
     variables:
         GIT_SUBMODULE_STRATEGY: recursive
     only:
@@ -21,10 +22,11 @@ compile_internal:
         # - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-staging.env /tmp/thaibulksms-frontend-next-staging.env
         # - cp /tmp/thaibulksms-frontend-next-staging.env .env
         # - export $(grep -v '^#' .env | xargs)
-        # - rimraf out
-        # - yarn
-        # - yarn build
-        # - sudo -u www-data rsync -ar out/* /var/www/staging/thaibulksms-frontend-next
+        - rimraf out
+        - yarn
+        - yarn build
+        - sudo -u www-data  rsync -ar . /var/www/tbs-revamp-2020/tbs_frontend_next_2020
+        - sudo -u www-data PM2_HOME=/var/www/.pm2 pm2 ../start pm2.yml
     cache:
         paths:
             - node_modules/
