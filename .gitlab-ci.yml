@@ -26,7 +26,7 @@ compile_internal:
         - yarn
         - yarn build
         - sudo -u www-data  rsync -ar . /var/www/tbs-revamp-2020/tbs_frontend_next_2020
-        - sudo -u www-data PM2_HOME=/var/www/.pm2 pm2 start /var/www/tbs-revamp-2020/pm2.yml
+        - sudo -u www-data PM2_HOME=/var/www/.pm2 pm2 start /var/www/tbs-revamp-2020/pm2.yaml
     cache:
         paths:
             - node_modules/
