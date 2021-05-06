@@ -4,7 +4,31 @@ before_script:
 
 stages:
     - build
+    - build_internal
     - build_production
+
+compile_internal:
+    stage: build_internal
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive
+    only:
+        - develop
+    tags:
+        - internal_test
+        - thaibulksms_test
+    script:
+        - pwd
+        # - sudo -u www-data cp /var/www/config/thaibulksms-frontend-next-staging.env /tmp/thaibulksms-frontend-next-staging.env
+        # - cp /tmp/thaibulksms-frontend-next-staging.env .env
+        # - export $(grep -v '^#' .env | xargs)
+        # - rimraf out
+        # - yarn
+        # - yarn build
+        # - sudo -u www-data rsync -ar out/* /var/www/staging/thaibulksms-frontend-next
+    cache:
+        paths:
+            - node_modules/
+            - .next/
 
 compile:
     stage: build
