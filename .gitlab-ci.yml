@@ -7,7 +7,7 @@ stages:
     - build_internal
     - build_production
 
-compile:
+compile_internal:
     stage: build_internal
     variables:
         GIT_SUBMODULE_STRATEGY: recursive
