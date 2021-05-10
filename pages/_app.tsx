@@ -44,6 +44,7 @@ axios.interceptors.response.use(
 
 function MyApp({ Component, pageProps }: any) {
     let lang = Cookie.get('LANG');
+    
 
     const router = useRouter();
     const handleRouteChange = async (url: string) => {
@@ -88,13 +89,16 @@ function MyApp({ Component, pageProps }: any) {
         };
     }, []);
 
+    if (!i18n.language) i18n.changeLanguage('th');
+
     useEffect(() => {
+        console.log(lang,process.browser)
         if (lang === undefined) {
             i18n.changeLanguage('th');
         } else {
             i18n.changeLanguage(lang.toLowerCase());
         }
-    },[lang]);
+    },[lang,process.browser]);
 
     return (
         <>
