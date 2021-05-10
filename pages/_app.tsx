@@ -92,7 +92,6 @@ function MyApp({ Component, pageProps }: any) {
     if (!i18n.language) i18n.changeLanguage('th');
 
     useEffect(() => {
-        console.log(lang,process.browser)
         if (lang === undefined) {
             i18n.changeLanguage('th');
         } else {
