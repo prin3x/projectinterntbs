@@ -111,12 +111,12 @@ const HeroSection = ({ t }: any) => {
                     >
                         {t('policyhero::section_5::header')}
                     </h2>
-                    <ol
-                        style={{ listStyleType: 'lower-alpha !important' }}
+                    <div
+                        style={{ marginLeft: '24px' }}
                         dangerouslySetInnerHTML={{
                             __html: t('policyhero::section_5::content'),
                         }}
-                    ></ol>
+                    ></div>
 
                     <h2
                         className="textHeadCondition"
