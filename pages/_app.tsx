@@ -94,7 +94,7 @@ function MyApp({ Component, pageProps }: any) {
         } else {
             i18n.changeLanguage(lang.toLowerCase());
         }
-    });
+    },[lang]);
 
     return (
         <>
