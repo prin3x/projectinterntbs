@@ -1,5 +1,5 @@
 import Header from './Header';
-import Footer from './Footer';
+import Footer from '../tbs_submodule/Footer';
 // import { i18n } from '../i18n';
 // import React, { useEffect } from 'react';
 // import Head from 'next/head';

@@ -4,10 +4,34 @@ before_script:
 
 stages:
     - build
+    - build_internal
     - build_production
+
+compile_internal:
+    stage: build_internal
+    environment: internal_test
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive
+    only:
+        - develop
+    tags:
+        - internal_test
+        - thaibulksms_test
+    script:
+        - pwd
+        - yarn
+        - yarn build
+        - sudo -u www-data  rsync -ar . /var/www/tbs-revamp-2020/tbs_frontend_next_2020
+        - sudo -u www-data PM2_HOME=/var/www/.pm2 pm2 start tbs_frontend_next_2020
+    cache:
+        paths:
+            - node_modules/
+            - .next/
 
 compile:
     stage: build
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive
     only:
         - staging
     tags:
@@ -28,6 +52,8 @@ compile:
 
 compile_production:
     stage: build_production
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive
     only:
         - master
     tags:
