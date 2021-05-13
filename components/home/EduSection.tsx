@@ -24,11 +24,14 @@ const EduSection = ({ t }: any) => (
                                 <a
                                     href="https://bit.ly/3hEL9ac"
                                     target="_blank"
+                                    rel="noopener"
                                 >
                                     <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_7.png`}
                                         alt="Image"
+                                        width="255"
+                                        height="229"
                                     />
                                     <div className="edu_box_text">
                                         <p>
@@ -47,11 +50,14 @@ const EduSection = ({ t }: any) => (
                                         <a
                                             href="https://bit.ly/2RDqTuQ"
                                             target="_blank"
+                                            rel="noopener"
                                         >
                                             <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_8.png`}
                                                 alt="Image"
+                                                width="255"
+                                                height="229"
                                             />
                                             <div className="edu_box_text">
                                                 <p>
@@ -68,11 +74,14 @@ const EduSection = ({ t }: any) => (
                                         <a
                                             href="https://bit.ly/32L9VRT"
                                             target="_blank"
+                                            rel="noopener"
                                         >
                                             <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_9.png`}
                                                 alt="Image"
+                                                width="255"
+                                                height="229"
                                             />
                                             <div className="edu_box_text">
                                                 <p>

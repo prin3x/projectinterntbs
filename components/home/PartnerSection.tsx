@@ -49,6 +49,8 @@ const PartnerSection = ({ t }: any) => (
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_1.png`}
                                     alt="Image"
+                                    width="159"
+                                    height="120"
                                 />
                             </div>
                         </div>
@@ -58,6 +60,8 @@ const PartnerSection = ({ t }: any) => (
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_2.png`}
                                     alt="Image"
+                                    width="159"
+                                    height="120"
                                 />
                             </div>
                         </div>
@@ -67,6 +71,8 @@ const PartnerSection = ({ t }: any) => (
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_3.png`}
                                     alt="Image"
+                                    width="159"
+                                    height="120"
                                 />
                             </div>
                         </div>
@@ -76,6 +82,8 @@ const PartnerSection = ({ t }: any) => (
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_4.png`}
                                     alt="Image"
+                                    width="159"
+                                    height="120"
                                 />
                             </div>
                         </div>
@@ -85,6 +93,8 @@ const PartnerSection = ({ t }: any) => (
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/partner_logo_5.png`}
                                     alt="Image"
+                                    width="159"
+                                    height="120"
                                 />
                             </div>
                         </div>
