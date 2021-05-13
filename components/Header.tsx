@@ -688,11 +688,11 @@ const Header = ({ t }: any) => {
                                 >
                                     {MySelect}
                                 </select>
-                                <a className="mobile-bar js-menu-toggle">
+                                <span className="mobile-bar js-menu-toggle">
                                     <span></span>
                                     <span></span>
                                     <span></span>
-                                </a>
+                                </span>
                             </div>
                             <div className="site-mobile-menu">
                                 <div className="site-mobile-menu-header">
@@ -737,42 +737,42 @@ const Header = ({ t }: any) => {
                                     </ul>
                                     <ul className="title-sub-menu-mobile">
                                         <li className="">
-                                            <a
+                                            <span
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="resource"
                                             >
                                                 {t('header::Database')}
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                     <ul className="title-sub-menu-mobile">
                                         <li className="">
-                                            <a
+                                            <span
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="support"
                                             >
                                                 {t('header::Support')}
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                     <ul className="title-sub-menu-mobile">
                                         <li className="">
-                                            <a
+                                            <span
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="documentation"
                                             >
                                                 {t('header::For Developers')}
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                     <ul className="title-sub-menu-mobile">
                                         <li className="">
-                                            <a
+                                            <span
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="aboutme"
                                             >
                                                 {t('header::About the Company')}
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                     <HeaderLoginMenuMobile

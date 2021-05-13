@@ -39,7 +39,7 @@ const Homepage = ({ t }: any) => (
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
-                <link rel="canonical" href="https://www.thaibulksms.com/" />
+                {/* <link rel="canonical" href="https://www.thaibulksms.com/" /> */}
             </Head>
             <NextSeo
                 openGraph={seo.openGraph}
