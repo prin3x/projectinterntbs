@@ -4,7 +4,7 @@ export const seo = {
         type: 'website',
         title: 'บริการส่ง SMS โปรแกรมส่ง SMS ออนไลน์ผ่านเว็บ | ThaiBulkSMS',
         description:
-            'บริการส่งข้อความ ราคาสุดคุ้มค่า อันดับ 1 ผ่านอินเทอร์เน็ต ครบวงจร - ทดลองส่งข้อความฟรี 20 เครดิต',
+            'บริการส่ง SMS ราคาถูกเพียง 0.21 บาท โปรแกรมส่ง SMS ออนไลน์ด้วยระบบส่ง SMS ผ่านเว็บ ราคาสุดคุ้มค่าทุกการใช้งาน - ทดลองส่งข้อความ 20 เครดิต',
         images: [
             {
                 url: `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/og-image/OG-TBS-Product.jpg`,
