@@ -101,6 +101,7 @@ const FeatureSection = ({ t }: any) => (
                         <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-Hservice.svg`}
+                            style={{width:'100%'}}
                             alt="Image"
                             width="80"
                             height="80"
