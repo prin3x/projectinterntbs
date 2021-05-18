@@ -1,6 +1,6 @@
 const BacktoTop = () => (
-    <a className="back-to-top">
+    <span className="back-to-top">
         <i className="fa fa-angle-up"></i>
-    </a>
+    </span>
 );
 export default BacktoTop;

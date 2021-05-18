@@ -14,6 +14,8 @@ const FeatureSection = ({ t }: any) => (
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice01.svg`}
                                     alt="Image"
+                                    width="80"
+                                    height="80"
                                 />
                                 <h3>Smart SMS Console</h3>
                                 <p>{t('ServiceSection::homeservice1')}</p>
@@ -26,6 +28,8 @@ const FeatureSection = ({ t }: any) => (
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice02.svg`}
                                     alt="Image"
+                                    width="80"
+                                    height="80"
                                 />
                                 <h3>SMS API</h3>
                                 <p>{t('ServiceSection::homeservice2')}</p>
@@ -38,6 +42,8 @@ const FeatureSection = ({ t }: any) => (
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice03.svg`}
                                     alt="Image"
+                                    width="80"
+                                    height="80"
                                 />
                                 <h3>OTP Service</h3>
                                 <p>{t('ServiceSection::homeservice3')}</p>
@@ -50,6 +56,8 @@ const FeatureSection = ({ t }: any) => (
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice04.svg`}
                                     alt="Image"
+                                    width="80"
+                                    height="80"
                                 />
                                 <h3>SMS Tracking</h3>
                                 <p>{t('ServiceSection::homeservice4')}</p>
@@ -62,6 +70,8 @@ const FeatureSection = ({ t }: any) => (
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice05.svg`}
                                     alt="Image"
+                                    width="80"
+                                    height="80"
                                 />
                                 <h3>Global SMS</h3>
                                 <p>{t('ServiceSection::homeservice5')}</p>
@@ -74,6 +84,8 @@ const FeatureSection = ({ t }: any) => (
                                     className="lazyload size-img"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-Hservice06.svg`}
                                     alt="Image"
+                                    width="80"
+                                    height="80"
                                 />
                                 <h3>Location Based SMS</h3>
                                 <p>{t('ServiceSection::homeservice6')}</p>
@@ -90,6 +102,8 @@ const FeatureSection = ({ t }: any) => (
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-Hservice.svg`}
                             alt="Image"
+                            width="80"
+                            height="80"
                         />
                     </div>
                 </div>

@@ -149,6 +149,8 @@ const SimpleSliderSection = ({ t }: any) => {
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User01.png`}
                                         alt="Image"
+                                        width="88"
+                                        height="88"
                                     />
                                     <p>
                                         {t(
@@ -188,6 +190,8 @@ const SimpleSliderSection = ({ t }: any) => {
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User02.png`}
                                         alt="Image"
+                                        width="88"
+                                        height="88"
                                     />
                                     <p>
                                         {t(
@@ -227,6 +231,8 @@ const SimpleSliderSection = ({ t }: any) => {
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User03.png`}
                                         alt="Image"
+                                        width="88"
+                                        height="88"
                                     />
                                     <p>
                                         {t(
@@ -261,6 +267,8 @@ const SimpleSliderSection = ({ t }: any) => {
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User04.png`}
                                         alt="Image"
+                                        width="88"
+                                        height="88"
                                     />
                                     <p>
                                         {t(
@@ -300,6 +308,8 @@ const SimpleSliderSection = ({ t }: any) => {
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/User05.png`}
                                         alt="Image"
+                                        width="88"
+                                        height="88"
                                     />
                                     <p>
                                         {t(
