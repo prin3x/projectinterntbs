@@ -37,7 +37,7 @@ const HeroSection = ({ t }: any) => {
                             __html: t('policyhero::section_1::content_2'),
                         }}
                     ></span>
-                    <span
+                    {/* <span
                         style={{
                             display: 'block',
                             textIndent: '24px',
@@ -46,7 +46,7 @@ const HeroSection = ({ t }: any) => {
                         dangerouslySetInnerHTML={{
                             __html: t('policyhero::section_1::content_3'),
                         }}
-                    ></span>
+                    ></span> */}
 
                     <h2
                         className="textHeadCondition"

@@ -21,6 +21,8 @@ const HeaderTopMenuMobile = () => (
                             className=""
                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
                             alt="Logo"
+                            width="216"
+                            height="28"
                         />
                     </a>
                 </Link>
@@ -163,6 +165,8 @@ const Header = ({ t }: any) => {
                                     className=""
                                     src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
                                     alt="Logo"
+                                    width="216"
+                                    height="28"
                                 />
                             </a>
                         </Link>
@@ -688,11 +692,11 @@ const Header = ({ t }: any) => {
                                 >
                                     {MySelect}
                                 </select>
-                                <a className="mobile-bar js-menu-toggle">
+                                <span className="mobile-bar js-menu-toggle">
                                     <span></span>
                                     <span></span>
                                     <span></span>
-                                </a>
+                                </span>
                             </div>
                             <div className="site-mobile-menu">
                                 <div className="site-mobile-menu-header">
@@ -704,6 +708,8 @@ const Header = ({ t }: any) => {
                                                         className=""
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
                                                         alt="Logo"
+                                                        width="216"
+                                                        height="28"
                                                     />
                                                 </a>
                                             </Link>
@@ -715,7 +721,12 @@ const Header = ({ t }: any) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="site-mobile-menu-body">
+
+                                <div
+                                  className="site-mobile-menu-body lazyload"
+                                  data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-menu-mobile.jpg [(max-width:767px)]`}
+                                >
+                                {/* <div className="site-mobile-menu-body"> */}
                                     <ul className="title-sub-menu-mobile">
                                         <li>
                                             <span
@@ -737,42 +748,42 @@ const Header = ({ t }: any) => {
                                     </ul>
                                     <ul className="title-sub-menu-mobile">
                                         <li className="">
-                                            <a
+                                            <span
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="resource"
                                             >
                                                 {t('header::Database')}
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                     <ul className="title-sub-menu-mobile">
                                         <li className="">
-                                            <a
+                                            <span
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="support"
                                             >
                                                 {t('header::Support')}
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                     <ul className="title-sub-menu-mobile">
                                         <li className="">
-                                            <a
+                                            <span
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="documentation"
                                             >
                                                 {t('header::For Developers')}
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                     <ul className="title-sub-menu-mobile">
                                         <li className="">
-                                            <a
+                                            <span
                                                 className="show-site-sub-menu block-link-title-menu-mobile"
                                                 data-name="aboutme"
                                             >
                                                 {t('header::About the Company')}
-                                            </a>
+                                            </span>
                                         </li>
                                     </ul>
                                     <HeaderLoginMenuMobile
@@ -795,6 +806,8 @@ const Header = ({ t }: any) => {
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
+                                                        width="34"
+                                                        height="34"
                                                     />
                                                 </li>
                                                 <li className="title-menu-mobile">
@@ -811,6 +824,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon01.svg`}
                                                                 alt="menu-icon_Product-icon01.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Our Strength'
@@ -830,6 +845,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon02.svg`}
                                                                 alt="menu-icon_Product-icon02.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             Smart SMS Console
                                                         </a>
@@ -842,6 +859,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon03.svg`}
                                                                 alt="menu-icon_Product-icon03.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             SMS Tracking
                                                         </a>
@@ -854,6 +873,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon04.svg`}
                                                                 alt="menu-icon_Product-icon04.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             Location Based SMS
                                                         </a>
@@ -866,6 +887,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon05.svg`}
                                                                 alt="menu-icon_Product-icon05.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             Global SMS
                                                         </a>
@@ -883,6 +906,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon06.svg`}
                                                                 alt="menu-icon_Product-icon06.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             SMS API
                                                         </a>
@@ -895,6 +920,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Product-icon07.svg`}
                                                                 alt="menu-icon_Product-icon07.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             OTP Service
                                                         </a>
@@ -922,6 +949,8 @@ const Header = ({ t }: any) => {
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
+                                                        width="34"
+                                                        height="34"
                                                     />
                                                 </li>
                                                 <li className="title-menu-mobile">
@@ -938,6 +967,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon01.svg`}
                                                                 alt="menu-icon_resource-icon01.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Database'
@@ -960,6 +991,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon02.svg`}
                                                                 alt="menu-icon_resource-icon02.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Knowledge'
@@ -977,6 +1010,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon03.svg`}
                                                                 alt="menu-icon_resource-icon03.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Example Operations'
@@ -999,6 +1034,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon04.svg`}
                                                                 alt="menu-icon_resource-icon04.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Success Stories'
@@ -1026,6 +1063,8 @@ const Header = ({ t }: any) => {
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
+                                                        width="34"
+                                                        height="34"
                                                     />
                                                 </li>
                                                 <li className="title-menu-mobile">
@@ -1042,6 +1081,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon01.svg`}
                                                                 alt="menu-icon_support-icon01.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Ordering Methods'
@@ -1056,6 +1097,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon02.svg`}
                                                                 alt="menu-icon_support-icon02.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Frequently Asked Questions'
@@ -1070,6 +1113,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_support-icon03.svg`}
                                                                 alt="menu-icon_support-icon03.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Contact us'
@@ -1090,6 +1135,8 @@ const Header = ({ t }: any) => {
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                                                             alt="phone.png"
+                                                            width="30"
+                                                            height="30"
                                                         />
                                                         02-798-6000
                                                     </a>
@@ -1100,6 +1147,8 @@ const Header = ({ t }: any) => {
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                                                             alt="mail.png"
+                                                            width="30"
+                                                            height="30"
                                                         />
                                                         contact@thaibulksms.com
                                                     </a>
@@ -1110,6 +1159,8 @@ const Header = ({ t }: any) => {
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                                                             alt="fb.png"
+                                                            width="30"
+                                                            height="30"
                                                         />
                                                         ThaiBulkSMS
                                                     </a>
@@ -1134,6 +1185,8 @@ const Header = ({ t }: any) => {
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
+                                                        width="34"
+                                                        height="34"
                                                     />
                                                 </li>
                                                 <li className="title-menu-mobile">
@@ -1152,6 +1205,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon01.svg`}
                                                                 alt="menu-icon_Dev-icon01.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Download Guide'
@@ -1166,6 +1221,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon02.svg`}
                                                                 alt="menu-icon_Dev-icon02.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Download Example SDK'
@@ -1180,6 +1237,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_Dev-icon03.svg`}
                                                                 alt="menu-icon_Dev-icon03.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             API References
                                                         </a>
@@ -1205,6 +1264,8 @@ const Header = ({ t }: any) => {
                                                         className="arrow-back-to-menu-mobile"
                                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/left-arrow.png`}
                                                         alt="left-arrow.png"
+                                                        width="34"
+                                                        height="34"
                                                     />
                                                 </li>
                                                 <li className="title-menu-mobile">
@@ -1223,6 +1284,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon01.svg`}
                                                                 alt="menu-icon_about-icon01.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Why use ThaiBulkSMS?'
@@ -1237,6 +1300,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon02.svg`}
                                                                 alt="menu-icon_about-icon02.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             {t(
                                                                 'header::Contact us'
@@ -1251,6 +1316,8 @@ const Header = ({ t }: any) => {
                                                                 className="icon-title-menu-mobile"
                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_about-icon03.svg`}
                                                                 alt="menu-icon_about-icon03.svg"
+                                                                width="50"
+                                                                height="50"
                                                             />
                                                             Reseller Program
                                                         </a>
@@ -1269,6 +1336,8 @@ const Header = ({ t }: any) => {
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/phone.png`}
                                                             alt="phone.png"
+                                                            width="30"
+                                                            height="30"
                                                         />
                                                         02-798-6000
                                                     </a>
@@ -1279,6 +1348,8 @@ const Header = ({ t }: any) => {
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail.png`}
                                                             alt="mail.png"
+                                                            width="30"
+                                                            height="30"
                                                         />
                                                         contact@thaibulksms.com
                                                     </a>
@@ -1289,6 +1360,8 @@ const Header = ({ t }: any) => {
                                                             className="icon-title-menu-mobile"
                                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/fb.png`}
                                                             alt="fb.png"
+                                                            width="30"
+                                                            height="30"
                                                         />
                                                         ThaiBulkSMS
                                                     </a>
