@@ -165,8 +165,6 @@ const Header = ({ t }: any) => {
                                     className=""
                                     src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo_1.png`}
                                     alt="Logo"
-                                    width="216"
-                                    height="28"
                                 />
                             </a>
                         </Link>
