@@ -146,6 +146,7 @@ const HeroSection = ({ t }: any) => {
                                     <a
                                         href="https://goo.gl/maps/LrntacVbBFvyB5Uv6"
                                         target="_blank"
+                                        rel="noopener"
                                     >
                                         <img
                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/contact.png`}

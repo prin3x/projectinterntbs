@@ -20,6 +20,8 @@ const FeatureSection = ({ t }: any) => (
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_1.png`}
                             alt="Image"
+                            width="100"
+                            height="100"
                         />
                         <div className="single_feature_text">
                             <h3>{t('FeatureSection::No.1 SMS Platform')}</h3>
@@ -39,6 +41,8 @@ const FeatureSection = ({ t }: any) => (
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_2.png`}
                             alt="Image"
+                            width="100"
+                            height="100"
                         />
                         <div className="single_feature_text">
                             <h3>{t('FeatureSection::Fast & Reliable')}</h3>
@@ -58,6 +62,8 @@ const FeatureSection = ({ t }: any) => (
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_3.png`}
                             alt="Image"
+                            width="100"
+                            height="100"
                         />
                         <div className="single_feature_text">
                             <h3>{t('FeatureSection::Smart Console')}</h3>
@@ -77,6 +83,8 @@ const FeatureSection = ({ t }: any) => (
                             className="lazyload size-img"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_4.png`}
                             alt="Image"
+                            width="100"
+                            height="100"
                         />
                         <div className="single_feature_text">
                             <h3>
