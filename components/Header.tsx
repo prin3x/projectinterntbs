@@ -1030,7 +1030,7 @@ const Header = ({ t }: any) => {
                                                 
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`}
+                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/`}
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
@@ -1054,7 +1054,7 @@ const Header = ({ t }: any) => {
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`}
+                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/`}
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
