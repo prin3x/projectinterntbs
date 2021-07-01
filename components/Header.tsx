@@ -310,34 +310,30 @@ const Header = ({ t }: any) => {
                                                 </Link>
                                             </li>
                                             <h6 className="title_menu_left">
-                                                {t('ความรู้และเทคนิค')}
+                                                {t("header::Tips and Knowledge")}
                                             </h6>
                                             <li className="listsub li_width_700">
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/marketing/`} passHref={true}>
-                                                    <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
+                                                    <a className="new_icon_title_menu_resource05 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
-                                                            {t(
-                                                                'การตลาด'
-                                                            )}
+                                                            {t("header::Marketing")}
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
                                                             {t(
-                                                                'ความรู้ด้านการตลาดและ SMS Marketing'
+                                                                "header::Marketing and SMS marketing knowledge"
                                                             )}
                                                         </p>
                                                     </a>
                                                 </Link>
 
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tech/`} passHref={true}>
-                                                    <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
+                                                    <a className="new_icon_title_menu_resource06 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
-                                                            {t(
-                                                                'เทคโนโลยี'
-                                                            )}
+                                                            {t("header::Tech")}
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
                                                             {t(
-                                                                'ความรู้ด้านเทคโนโลยีและไอทีเกี่ยวกับ SMS'
+                                                                "header::Technical knowledge about SMS and related technology"
                                                             )}
                                                         </p>
                                                     </a>
@@ -345,21 +341,19 @@ const Header = ({ t }: any) => {
                                             </li>
                                             <li className="listsub li_width_700">
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/features/`} passHref={true}>
-                                                    <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
+                                                    <a className="new_icon_title_menu_resource07 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
-                                                            {t(
-                                                                'ฟีเจอร์ ThaibulkSMS'
-                                                            )}
+                                                            {t("header::ThaiBulkSMS Features")}
                                                         </h6>
                                                         <p className="txtSub text_sub_left">
                                                             {t(
-                                                                'แนะนำและสอนใช้งานฟีเจอร์ ThaibulkSMS'
+                                                                "header::Features introduction, update, and tutorial"
                                                             )}
                                                         </p>
                                                     </a>
                                                 </Link>
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/use-cases/`} passHref={true}>
-                                                    <a className="new_icon_title_menu_pro05 icon_logo_new_menu_width title_menu_margin_top_0">
+                                                    <a className="new_icon_title_menu_resource03 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
                                                             {t(
                                                                 'header::Example Operations'
@@ -374,7 +368,7 @@ const Header = ({ t }: any) => {
                                                 </Link>
                                             </li>
                                             <h6 className="title_menu_left">
-                                                {t('header::For Developer')}
+                                                {t("header::Case Studies")}
                                             </h6>
                                             <li className="listsub li_width_700">
                                                 <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/success-stories/`}>
@@ -391,11 +385,11 @@ const Header = ({ t }: any) => {
                                                         </p>
                                                     </a>
                                                 </Link>
-                                               
+
                                             </li>
                                         </ul>
                                     </li>
-                                    
+
                                     <li className="has-children">
                                         <span className="active new_title_hover">
                                             {t('header::Support')}
@@ -967,7 +961,7 @@ const Header = ({ t }: any) => {
                                                 </li>
                                             </ul>
                                             <h5 className="head-site-sub-menu">
-                                                {t('ความรู้และเทคนิค')}
+                                            {t("header::Tips and Knowledge")}
                                             </h5>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
@@ -978,14 +972,12 @@ const Header = ({ t }: any) => {
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon02.svg`}
+                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon05.svg`}
                                                                 alt="menu-icon_resource-icon02.svg"
                                                                 width="50"
                                                                 height="50"
                                                             />
-                                                            {t(
-                                                                'การตลาด'
-                                                            )}
+                                                              {t("header::Marketing")}
                                                         </a>
                                                     </Link>
                                                 </li>
@@ -997,14 +989,12 @@ const Header = ({ t }: any) => {
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon02.svg`}
+                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon06.svg`}
                                                                 alt="menu-icon_resource-icon02.svg"
                                                                 width="50"
                                                                 height="50"
                                                             />
-                                                            {t(
-                                                                'เทคโนโลยี'
-                                                            )}
+                                                             {t("header::Tech")}
                                                         </a>
                                                     </Link>
                                                 </li>
@@ -1016,21 +1006,19 @@ const Header = ({ t }: any) => {
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
-                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon02.svg`}
+                                                                src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/menu-icon_resource-icon07.svg`}
                                                                 alt="menu-icon_resource-icon02.svg"
                                                                 width="50"
                                                                 height="50"
                                                             />
-                                                            {t(
-                                                                'ฟีเจอร์ ThaibulkSMS'
-                                                            )}
+                                                            {t("header::ThaiBulkSMS Features")}
                                                         </a>
                                                     </Link>
                                                 </li>
-                                                
+
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/`}
+                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/use-cases/`}
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
@@ -1041,9 +1029,7 @@ const Header = ({ t }: any) => {
                                                                 width="50"
                                                                 height="50"
                                                             />
-                                                            {t(
-                                                                'header::Example Operations'
-                                                            )}
+                                                           {t("header::Example Operations")}
                                                         </a>
                                                     </Link>
                                                 </li>
@@ -1054,7 +1040,7 @@ const Header = ({ t }: any) => {
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/`}
+                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/success-stories/`}
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
