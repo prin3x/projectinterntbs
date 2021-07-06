@@ -5,9 +5,9 @@ import { useRouter } from 'next/router';
 
 const classnames = require('classnames');
 
-const HeroSection = ({ t }: any) => {
+const HeroSection = ({ t, defaultTab, setDefaultTab }: any) => {
     const router = useRouter();
-    const [defaultTab, setDefaultTab] = React.useState('pills-home');
+    // const [defaultTab, setDefaultTab] = React.useState('pills-home');
 
     React.useEffect(() => {
         if (!router.query.tab) {
@@ -44,6 +44,9 @@ const HeroSection = ({ t }: any) => {
                                     role="tab"
                                     aria-controls="pills-home"
                                     aria-selected={defaultTab === 'pills-home'}
+                                    onClick={() => {
+                                        setDefaultTab(`pills-home`);
+                                    }}
                                 >
                                     <img
                                         className="lazyload"
@@ -70,6 +73,9 @@ const HeroSection = ({ t }: any) => {
                                     aria-selected={
                                         defaultTab === 'pills-profile'
                                     }
+                                    onClick={() => {
+                                        setDefaultTab(`pills-profile`);
+                                    }}
                                 >
                                     <img
                                         className="lazyload"
