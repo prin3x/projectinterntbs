@@ -130,7 +130,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                                     show:
                                                         productItem.standard
                                                             .sender ===
-                                                        SenderActive,
+                                                        10,
                                                 }
                                             )}
                                             data-parent="#accordion"
