@@ -7,14 +7,14 @@ import { Link, withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
 
 const classnames = require('classnames');
-const TabContent = ({ t }: any) => {
+const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
     const [tab, setTab] = React.useState<any>();
     const [showModalbank, setShowModalbank] = useState(false);
     const [showModalqr, setShowModalqr] = useState(false);
     const [showModalcredit, setShowModalcredit] = useState(false);
     const [modalIsOpen, setIsOpen] = React.useState(false);
     const clipboard = useClipboard();
-    const [defaultTab, setDefaultTab] = React.useState('pills-home');
+    // const [defaultTab, setDefaultTab] = React.useState('pills-home');
     const router = useRouter();
 
     React.useEffect(() => {
@@ -162,6 +162,9 @@ const TabContent = ({ t }: any) => {
                                                     )}{' '}
                                                     <a
                                                         onClick={() => {
+                                                            setDefaultTab(
+                                                                `pills-profile`
+                                                            );
                                                             tab?.tab('show');
                                                         }}
                                                         className="theme__text link mt-0"

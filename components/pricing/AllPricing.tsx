@@ -10,7 +10,7 @@ import { Link, withTranslation } from '../../i18n';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
 import { decodeTBSToken } from '../../services/user/user.service';
 
-const SenderActive = 5;
+const SenderActive = 10;
 
 const BuyPackage = (packageItem: ProductPackage) => {
     let domain = 'localhost';
@@ -130,7 +130,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                                     show:
                                                         productItem.standard
                                                             .sender ===
-                                                        SenderActive,
+                                                            SenderActive,
                                                 }
                                             )}
                                             data-parent="#accordion"
