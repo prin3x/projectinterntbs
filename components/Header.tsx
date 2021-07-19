@@ -1429,18 +1429,6 @@ const Header = ({ t }: any) => {
                     </div>
                 </div>
             </div>
-            <div className="leadGen">
-                <div className="secLeadGen">
-                    <h3>ฟรี! ไอเดียการใช้ SMS Marketing เพิ่มยอดขาย พิชิตใจลูกค้า</h3>
-                    <p>รวมเทคนิคต่าง ๆ ในการส่ง SMS เพิ่มแนวทางการใช้งาน แบบ Complete Guide</p>
-                    <input type="text" placeholder="อีเมล" className="inputLead"></input>
-                    <input type="text" placeholder="อีเมล" className="inputLead"></input>
-                    <button>ดาวน์โหลด E-Book ฟรี</button>
-                    <a href="" className="btnClose"> 
-                        <img className="" src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/btnCloseLead.svg`} alt="button close" />
-                    </a>
-                </div>
-            </div>
         </div>
     );
 };
