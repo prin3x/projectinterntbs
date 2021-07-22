@@ -11,7 +11,7 @@ const EduSection = ({ t }: any) => (
                                 'EduSection::Interesting tips and knowledge regarding SMS and marketing'
                             )}
                         </h2>
-                        {/* <a href="http://www.thaibulksms.com/blog/">{t('EduSection::View all contents')}</a> */}
+                        {/* <a href="https://www.thaibulksms.com/blog/">{t('EduSection::View all contents')}</a> */}
                         <Link href="/resource">
                             {t('EduSection::View all contents')}
                         </Link>

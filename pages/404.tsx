@@ -15,11 +15,11 @@ const Custom404 = () => {
         if (firstCheck === 'blog') {
             if (secCheck) {
                 window.location.replace(
-                    `http://www.thaibulksms.com/blog/${secCheck}`
+                    `https://www.thaibulksms.com/blog/${secCheck}`
                 );
                 return;
             }
-            window.location.replace(`http://www.thaibulksms.com/blog/`);
+            window.location.replace(`https://www.thaibulksms.com/blog/`);
             return;
         }
         if (link['tbs'][firstCheck] !== undefined) {
