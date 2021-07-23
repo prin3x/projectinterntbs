@@ -495,7 +495,8 @@ const Header = ({ t }: any) => {
                                         </Link>
                                         <ul className="dropdown box_menu_developer">
                                             <li className="menu_dev_padding_bottom_top_20">
-                                                <Link href="/developer">
+                                                {/* <Link href="/developer">*/}
+                                                <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer`}> 
                                                     <span className="new_icon_title_menu_dev01 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
                                                             {t(
@@ -511,7 +512,8 @@ const Header = ({ t }: any) => {
                                                 </Link>
                                             </li>
                                             <li className="menu_dev_padding_20">
-                                                <Link href="/developer/#ex_sdk">
+                                                {/* <Link href="/developer/#ex_sdk"> */}
+                                                <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer/#ex_sdk`}>
                                                     <span className="new_icon_title_menu_dev02 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
                                                             {t(
@@ -1213,7 +1215,8 @@ const Header = ({ t }: any) => {
                                             </ul>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <Link href="/developer">
+                                                    {/* <Link href="/developer"> */}
+                                                    <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer`}> 
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -1229,7 +1232,8 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/developer#ex_sdk">
+                                                    {/* <Link href="/developer#ex_sdk"> */}
+                                                    <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer/#ex_sdk`}>
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
