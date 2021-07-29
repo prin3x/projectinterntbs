@@ -4,7 +4,6 @@ import Layout from '../../components/Layout';
 import HeroSection from '../../components/speed-and-reliable/HeroSection';
 import SmsSection from '../../components/speed-and-reliable/SmsSection';
 import SimpleIconSection from '../../components/speed-and-reliable/SimpleIconSection';
-import TrackSection from '../../components/speed-and-reliable/TrackSection';
 import CtaSection from '../../components/speed-and-reliable/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
@@ -31,7 +30,6 @@ const speed = ({ t }: any) => (
             <HeroSection />
             <SmsSection />
             <SimpleIconSection />
-            <TrackSection />
             <CtaSection />
         </div>
         <BacktoTop />
