@@ -14,16 +14,6 @@ const handle = app.getRequestHandler();
     await app.prepare();
     const server = express();
 
-    server.use((req, res, next) => {
-        const hasTrailingSlash = /\/$/.test(req.path);
-        if (req.path.length > 1 && hasTrailingSlash) {
-            const query = req.url.slice(req.path.length);
-            res.redirect(301, req.path.slice(0, -1) + query);
-        } else {
-            next();
-        }
-    });
-
     await nextI18next.initPromise;
     server.use(bodyParser.urlencoded({ extended: true }));
     server.use(nextI18NextMiddleware(nextI18next));
