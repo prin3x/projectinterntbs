@@ -17,9 +17,12 @@ const ContentSection = ({ Posts, t }: any) => (
         <div className="container">
             <div className="row justify-content-center hero_top_one">
                 <div className="col-12 text-center">
-                    <h1 className="section__title">
-                        {t('HeroSection::Database')}
+                    <h1 style={{ display: 'none' }}>
+                        {t('HeroSection::Database')} resource
                     </h1>
+                    <h2 className="section__title">
+                        {t('HeroSection::Database')}
+                    </h2>
                     <div className="secSliderResource">
                         <Swiper
                             spaceBetween={50}
