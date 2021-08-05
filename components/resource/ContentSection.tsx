@@ -15,7 +15,7 @@ const ContentSection = ({ Posts, t }: any) => (
                                 {t('ContentSection::Knowledge')}
                             </h2>
                             <Link
-                                href={`${AppConfig.WEB_URL_BLOG}/categories/ความรู้/1/`}
+                                href={`${AppConfig.WEB_URL_BLOG}/categories/marketing`}
                                 passHref={true}
                             >
                                 <a>{t('ContentSection::View all')}</a>
@@ -75,7 +75,7 @@ const ContentSection = ({ Posts, t }: any) => (
                                 {t('ContentSection::Example Operations')}
                             </h2>
                             <Link
-                                href={`${AppConfig.WEB_URL_BLOG}/categories/ตัวอย่างการใช้งาน/1/`}
+                                href={`${AppConfig.WEB_URL_BLOG}/categories/use-cases`}
                                 passHref={true}
                             >
                                 <a>{t('ContentSection::View all')}</a>
@@ -169,7 +169,7 @@ const ContentSection = ({ Posts, t }: any) => (
                                 {t('ContentSection::Success Stories')}
                             </h2>
                             <Link
-                                href={`${AppConfig.WEB_URL_BLOG}/categories/เรื่องราวความสำเร็จ/1/`}
+                                href={`${AppConfig.WEB_URL_BLOG}/categories/success-stories/`}
                                 passHref={true}
                             >
                                 <a>{t('ContentSection::View all')}</a>
