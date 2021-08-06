@@ -267,6 +267,49 @@ const AllPricing = ({ t, packages }: any) => {
         >
             <div className="container priceTable">
                 <div className="row">
+                    <div className="col-md-12">
+                        <h2 className="section_title colorW">แพ็กเกจราคาที่เลือกได้ตามการใช้งาน</h2>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-12 hotPrice">
+                        <div className="secHotPrice leftSide">
+                            <h3>Standard Package</h3>
+                            <p>ส่ง SMS ได้ในราคาถูก</p>
+                            <div className="detailLowprice">
+                                <ul>
+                                    <li>ส่งข้อความราคาถูกกว่า</li>
+                                    <li>ดูรายงานการส่งข้อความได้</li>
+                                    <li>ใช้งานฟีเจอร์พื้นฐานได้ครบถ้วน</li>
+                                    <li>มีเครื่องมือวัดผลแคมเปญ</li>
+                                </ul>
+                                <div className="Lowprice">
+                                    <p>ราคาถูกเพียง</p>
+                                    <h2>0.21</h2>
+                                    <p>บาท / SMS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="secHotPrice rightSide">
+                            <h3>Corporate Package</h3>
+                            <p>คืนเครดิตถ้าส่งไม่ถึงผู้รับ</p>
+                            <div className="detailLowprice">
+                                <ul>
+                                    <li>ใช้ได้ทุกฟีเจอร์ของ Standard</li>
+                                    <li>คืนเครดิตถ้าส่งไม่ถึงผู้รับ</li>
+                                    <li>ส่ง OTP ด้วยระบบพร้อมใช้</li>
+                                    <li>ดูสถานะการส่งได้ละเอียดยิ่งกว่า</li>
+                                </ul>
+                                <div className="Lowprice">
+                                    <p>ราคาถูกเพียง</p>
+                                    <h2>0.24</h2>
+                                    <p>บาท / SMS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
                     <div className="col-12">
                         <div className="row no-gutters">
                             <div className="col-md-4">
@@ -311,6 +354,7 @@ const AllPricing = ({ t, packages }: any) => {
                                 ),
                             }}
                         />
+                        <a href="" className="LowThanOther">ทำไม SMS ของ ThaiBulkSMS ถึงราคาถูกกว่าที่อื่น? </a>
                         <div className="row">
                             <div className="col-md-10 offset-md-1 col-sm-12 offset-sm-0">
                                 <div className="special-price">

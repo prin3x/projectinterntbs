@@ -12,6 +12,44 @@ const FaqSection = ({ t }: any) => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
+                        <h2 className="section_title">ให้คุณใช้งาน ThaiBulkSMS ได้อย่างไร้กังวล</h2>
+                    </div>
+                </div>
+                <div className="row justify-content-md-center secFaqTBS">
+                    <div className="col-md-12">
+                        <div className="row">
+                            <div className="col-md-4 faqTBS">
+                                <img
+                                    className="lazyload"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/imgFAQ01.png`}
+                                    alt="Image"
+                                />
+                                <p>ด้วยยอดผู้ใช้ 200,000 คน และให้บริการมากกว่า 3,000 บริษัท</p>
+                                <a href="">ทำไมเราจึงส่งถึงไว?</a>
+                            </div>
+                            <div className="col-md-4 faqTBS">
+                                <img
+                                    className="lazyload"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/imgFAQ02.png`}
+                                    alt="Image"
+                                />
+                                <p>ความปลอดภัยมาตรฐาน Internet Banking</p>
+                                <a href="">วิธีเพิ่มอัตราในการส่งถึงผู้รับ</a>
+                            </div>
+                            <div className="col-md-4 faqTBS">
+                                <img
+                                    className="lazyload"
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/imgFAQ03.png`}
+                                    alt="Image"
+                                />
+                                <p>ซัพพอร์ตโดยทีมงานผู้เชี่ยวชาญ</p>
+                                <a href="">การใช้งาน SMS Tracking</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-12">
                         <h2 className="section_title">
                             {t('FaqSection::Frequently Asked Questions')}
                         </h2>
@@ -375,7 +413,7 @@ const FaqSection = ({ t }: any) => {
                         </div>
                     </div>
                     <div className="col-xl-7 col-12-7">
-                        <div className="row">
+                        <div className="row justify-content-md-center">
                             <div className="col-md-4 col-12">
                                 <div className="service_feature_item">
                                     <img
@@ -402,21 +440,6 @@ const FaqSection = ({ t }: any) => {
                                             )}
                                         </a>
                                     </Link>
-                                </div>
-                            </div>
-                            <div className="col-md-4 col-12">
-                                <div className="service_feature_item">
-                                    <img
-                                        className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
-                                        alt="Image"
-                                    />
-                                    <a
-                                        href="mailto:contact@thaibulksms.com"
-                                        className="btn v4"
-                                    >
-                                        {t('FaqSection::E-mail')}
-                                    </a>
                                 </div>
                             </div>
                         </div>

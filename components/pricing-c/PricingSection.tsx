@@ -1,174 +1,81 @@
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
-const PricingSection = ({ t }: any) => {
+const PricingSection = ({ }: any) => {
     React.useEffect(() => {}, []);
     return (
+
         <div
-            className="pricing-section position-relative pricing__top lazyload"
-            data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
+            className="pricing-section position-relative pricingB__top lazyload"
+            data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-pricingB.png`}
         >
             <div className="container pricing">
-                <h1
-                    className="headPricing"
-                    dangerouslySetInnerHTML={{
-                        __html: t('PricingSection::Package prices'),
-                    }}
-                />
-                <p className="subPricing">
-                    {t('PricingSection::Reasonable SMS packages')}
-                </p>
-                <div className="row justify-content-xl-end mt-80">
-                    <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
-                        <div
-                            className="pricing_box m-0 pricing_box1"
-                            style={{
-                                borderTop: '8px solid #31b1e7',
-                                backgroundColor: '#fff',
-                            }}
+                <h1 className="headPricing">บริการส่ง SMS ออนไลน์ ราคาถูก<br/><br/>เพียง <span>0.21 บาท/ข้อความ</span></h1>
+                <p className="subPricingB">ผู้ให้บริการ SMS อันดับ 1 ของไทย ราคาถูก ส่งไว<br />มั่นใจได้ในความเสถียร ครบจบในที่เดียว</p>
+                <ul className="btnPriceT">
+                    <li>
+                        <a
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                            className="btn v3"
                         >
-                            <h2
-                                className="nameTypePackage"
-                                style={{ fontSize: '40px' }}
-                            >
-                                STANDARD SMS
-                            </h2>
-                            <p style={{ fontSize: '22px', color: '#5b6e80' }}>
-                                {t('PricingSection::Cheap SMS sending')}
-                            </p>
-                            <ul className="pricing_feature">
-                                <li>
-                                    <i className="far fa-check-circle"></i>
-                                    <p>
-                                        {t(
-                                            'PricingSection::Cheaper prices for SMS sending'
-                                        )}
-                                    </p>
-                                </li>
-                                <li>
-                                    <i className="far fa-check-circle"></i>
-                                    <p>
-                                        {t(
-                                            'PricingSection::Sending reports are available.'
-                                        )}
-                                    </p>
-                                </li>
-                                <li>
-                                    <i className="far fa-check-circle"></i>
-                                    <p>
-                                        {t(
-                                            'PricingSection::All basic features are available.'
-                                        )}
-                                    </p>
-                                </li>
-                                <li>
-                                    <i className="far fa-check-circle"></i>
-                                    <p>
-                                        {t(
-                                            'PricingSection::Tools for measuring campaign results are provided.'
-                                        )}
-                                    </p>
-                                </li>
-                            </ul>
-                            <div className="price_plan">
-                                <span>
-                                    {t(
-                                        'PricingSection::Best SMS pricing, only'
-                                    )}
-                                </span>
-                                <h2
-                                    className="text_edit_en"
-                                    style={{ fontWeight: 500 }}
-                                >
-                                    0.21
-                                    <span style={{ marginLeft: '10px' }}>
-                                        {t('PricingSection::baht / message')}
-                                    </span>
-                                </h2>
-                            </div>
-                        </div>
+                           ทดลองส่งฟรี
+                        </a>
+                    </li>
+                    <li>
+                        <Link href="/pricing">
+                            <a className="btn v5">
+                                ดูราคาแพ็กเกจ
+                            </a>
+                        </Link>
+                    </li>
+                </ul>
+                <div  className="brandPrice">
+                    <div className="imgBrandPrice">
+                        <img
+                            className="lazyload"
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand09.png`}
+                            alt="Image"
+                        />
                     </div>
-                    <div className="col-lg-6 col-xl-4 col-md-6">
-                        <div
-                            className="pricing_box m-0"
-                            style={{
-                                borderTop: '8px solid #31b1e7',
-                                backgroundColor: '#fff',
-                            }}
-                        >
-                            <h2
-                                className="nameTypePackage"
-                                style={{ fontSize: '40px' }}
-                            >
-                                CORPORATE SMS
-                            </h2>
-                            <p style={{ fontSize: '22px', color: '#5b6e80' }}>
-                                {t(
-                                    'PricingSection::Credits are refunded if the messages fail to reach the recipients.'
-                                )}
-                            </p>
-                            <ul className="pricing_feature">
-                                <li>
-                                    <i className="far fa-check-circle"></i>
-                                    <p>
-                                        {t(
-                                            'PricingSection::Every feature of Standard SMS'
-                                        )}
-                                    </p>
-                                </li>
-                                <li>
-                                    <i
-                                        className="fa fa-plus-circle"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <p>
-                                        {t(
-                                            'PricingSection::A ready-to-use OTP sending system'
-                                        )}
-                                    </p>
-                                </li>
-                                <li>
-                                    <i
-                                        className="fa fa-plus-circle"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <p>
-                                        {t(
-                                            'PricingSection::Credit refunds if the messages fail to reach the recipients'
-                                        )}
-                                    </p>
-                                </li>
-                                <li>
-                                    <i
-                                        className="fa fa-plus-circle"
-                                        aria-hidden="true"
-                                    ></i>
-                                    <p>
-                                        {t(
-                                            'PricingSection::More detailed information on sending status'
-                                        )}
-                                    </p>
-                                </li>
-                            </ul>
-                            <div className="price_plan">
-                                <span>
-                                    {t(
-                                        'PricingSection::Best SMS pricing, only'
-                                    )}
-                                </span>
-                                <h2
-                                    className="text_edit_en"
-                                    style={{ fontWeight: 500 }}
-                                >
-                                    0.24
-                                    <span style={{ marginLeft: '10px' }}>
-                                        {t('PricingSection::baht / message')}
-                                    </span>
-                                </h2>
-                            </div>
-                        </div>
+                    <div className="imgBrandPrice">
+                        <img
+                            className="lazyload"
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand10.png`}
+                            alt="Image"
+                        />
                     </div>
+                    <div className="imgBrandPrice">
+                        <img
+                            className="lazyload"
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand11.png`}
+                            alt="Image"
+                        />
+                    </div>
+                    <div className="imgBrandPrice">
+                        <img
+                            className="lazyload"
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand08.png`}
+                            alt="Image"
+                        />
+                    </div>
+                    <div className="imgBrandPrice">
+                        <img
+                            className="lazyload"
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand12.png`}
+                            alt="Image"
+                        />
+                    </div>
+                </div>
+                <div className="textScroll">
+                    <p>ทำไม ThaiBulkSMS ถึงเป็นอันดับ 1</p>
+                    <a href="">
+                        <img
+                            className="lazyload"
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/btnScrollDown.png`}
+                            alt="Image"
+                        />
+                    </a>
                 </div>
             </div>
 

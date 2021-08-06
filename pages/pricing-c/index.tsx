@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import PricingSection from '../../components/pricing-c/PricingSection';
+import SmsSection from '../../components/pricing-c/SmsSection';
+import PromoSection from '../../components/pricing-c/PromoSection';
 import AllPricing from '../../components/pricing-c/AllPricing';
 import FaqSection from '../../components/pricing-c/FaqSection';
 import BacktoTop from '../../components/BacktoTop';
@@ -33,6 +35,8 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
             />
             <div className="page_wrapper">
                 <PricingSection />
+                <SmsSection />
+                <PromoSection />
                 <AllPricing packages={packages} />
                 <FaqSection />
             </div>
