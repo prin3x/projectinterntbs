@@ -119,7 +119,7 @@ const TabContent = ({ t }: any) => {
                 'HeroSection::What types of ThaiBulkSMS packages are there?'
             ),
             answer: t(
-                'HeroSection::There are 2 packages, which are Standard SMS and Corporate SMS. The customer may choose between these according to their operational needs. Package prices begin at 1,500 baht, and all package details can be viewed at <a href="http://thaibulksms.com/pricing">http://thaibulksms.com/pricing</a>'
+                'HeroSection::There are 2 packages, which are Standard SMS and Corporate SMS. The customer may choose between these according to their operational needs. Package prices begin at 1,500 baht, and all package details can be viewed at <a href="https://thaibulksms.com/pricing">https://thaibulksms.com/pricing</a>'
             ),
         },
         {

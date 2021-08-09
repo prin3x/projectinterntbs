@@ -25,14 +25,7 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/"
                         crossOrigin="true"
                     />
-                    <link
-                        rel="stylesheet"
-                        href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700;800&display=swap"
-                    />
-                    <link
-                        rel="stylesheet"
-                        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap"
-                    />
+                    <link rel="stylesheet" href="/css/font.loader.min.css" />
 
                     <link
                         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
