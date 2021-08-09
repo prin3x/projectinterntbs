@@ -10,9 +10,6 @@ class MyDocument extends Document {
         return (
             <Html lang="th">
                 <Head>
-                    {process.env.NODE_ENV == 'production' && (
-                        <base href={process.env.NEXT_PUBLIC_DOMAIN_URL} />
-                    )}
                     <link
                         rel="preconnect"
                         href="https://fonts.gstatic.com/"
