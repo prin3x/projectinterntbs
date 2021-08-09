@@ -53,7 +53,9 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                     </a>
                 </li>
                 <li>
-                    <Link href="/pricing">
+                    <Link
+                        href={process.env.NEXT_PUBLIC_DOMAIN_URL + '/pricing'}
+                    >
                         <a className="btn v3 btn-sum-menu-mobile closemenu">
                             {t(
                                 `header::` +
@@ -183,7 +185,13 @@ const Header = ({ t }: any) => {
                                         </span>
                                         <ul className="dropdown">
                                             <li className="listsub">
-                                                <Link href="/product">
+                                                <Link
+                                                    href={
+                                                        process.env
+                                                            .NEXT_PUBLIC_DOMAIN_URL +
+                                                        '/product'
+                                                    }
+                                                >
                                                     <a className="new_icon_title_menu_pro01 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
                                                             {t(
@@ -202,7 +210,13 @@ const Header = ({ t }: any) => {
                                                 {t('header::For Marketer')}
                                             </h6>
                                             <li className="listsub li_width_700">
-                                                <Link href="/product/smart-sms-console">
+                                                <Link
+                                                    href={
+                                                        process.env
+                                                            .NEXT_PUBLIC_DOMAIN_URL +
+                                                        '/product/smart-sms-console'
+                                                    }
+                                                >
                                                     <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
                                                             Smart SMS Console
@@ -214,7 +228,13 @@ const Header = ({ t }: any) => {
                                                         </p>
                                                     </a>
                                                 </Link>
-                                                <Link href="/product/location-based-sms">
+                                                <Link
+                                                    href={
+                                                        process.env
+                                                            .NEXT_PUBLIC_DOMAIN_URL +
+                                                        '/product/location-based-sms'
+                                                    }
+                                                >
                                                     <a className="new_icon_title_menu_pro04 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
                                                         <h6 className="text_title_left">
                                                             Location Based SMS
@@ -228,7 +248,13 @@ const Header = ({ t }: any) => {
                                                 </Link>
                                             </li>
                                             <li className="listsub li_width_700">
-                                                <Link href="/product/sms-tracking">
+                                                <Link
+                                                    href={
+                                                        process.env
+                                                            .NEXT_PUBLIC_DOMAIN_URL +
+                                                        '/product/sms-tracking'
+                                                    }
+                                                >
                                                     <a className="new_icon_title_menu_pro03 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
                                                             SMS Tracking
@@ -240,7 +266,13 @@ const Header = ({ t }: any) => {
                                                         </p>
                                                     </a>
                                                 </Link>
-                                                <Link href="/product/global-sms">
+                                                <Link
+                                                    href={
+                                                        process.env
+                                                            .NEXT_PUBLIC_DOMAIN_URL +
+                                                        '/product/global-sms'
+                                                    }
+                                                >
                                                     <a className="new_icon_title_menu_pro05 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
                                                             Global SMS
@@ -257,7 +289,13 @@ const Header = ({ t }: any) => {
                                                 {t('header::For Developer')}
                                             </h6>
                                             <li className="listsub li_width_700">
-                                                <Link href="/product/sms-api">
+                                                <Link
+                                                    href={
+                                                        process.env
+                                                            .NEXT_PUBLIC_DOMAIN_URL +
+                                                        '/product/sms-api'
+                                                    }
+                                                >
                                                     <a className="new_icon_title_menu_pro06 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
                                                             SMS API
@@ -269,7 +307,13 @@ const Header = ({ t }: any) => {
                                                         </p>
                                                     </a>
                                                 </Link>
-                                                <Link href="/product/otp">
+                                                <Link
+                                                    href={
+                                                        process.env
+                                                            .NEXT_PUBLIC_DOMAIN_URL +
+                                                        '/product/otp'
+                                                    }
+                                                >
                                                     <a className="new_icon_title_menu_pro07 icon_logo_new_menu_width title_menu_margin_top_0">
                                                         <h6 className="text_title_left">
                                                             OTP Service
@@ -285,7 +329,13 @@ const Header = ({ t }: any) => {
                                         </ul>
                                     </li>
                                     <li>
-                                        <Link href="/pricing">
+                                        <Link
+                                            href={
+                                                process.env
+                                                    .NEXT_PUBLIC_DOMAIN_URL +
+                                                '/pricing'
+                                            }
+                                        >
                                             <a className="active new_title_hover">
                                                 {t('header::Pricing')}
                                             </a>
@@ -424,7 +474,9 @@ const Header = ({ t }: any) => {
                                                 <div className="col-7 menu_support_padding_20">
                                                     <ul>
                                                         <li className="title_menu_margin_top_20 title_menu_padding_bottom_30">
-                                                            <Link href="/support/how-to-order">
+                                                            <Link
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/how-to-order`}
+                                                            >
                                                                 <span className="new_icon_title_menu_support01 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -440,7 +492,9 @@ const Header = ({ t }: any) => {
                                                             </Link>
                                                         </li>
                                                         <li className="title_menu_padding_bottom_30">
-                                                            <Link href="/support/faq">
+                                                            <Link
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/faq`}
+                                                            >
                                                                 <span className="new_icon_title_menu_support02 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -456,7 +510,9 @@ const Header = ({ t }: any) => {
                                                             </Link>
                                                         </li>
                                                         <li className="title_menu_padding_bottom_30">
-                                                            <Link href="/contact">
+                                                            <Link
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`}
+                                                            >
                                                                 <span className="new_icon_title_menu_support03 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -584,7 +640,9 @@ const Header = ({ t }: any) => {
                                                 <div className="col-7 menu_support_padding_20">
                                                     <ul>
                                                         <li className="menu_dev_padding_bottom_top_20">
-                                                            <Link href="/why-thaibulksms">
+                                                            <Link
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/why-thaibulksms`}
+                                                            >
                                                                 <span className="new_icon_title_menu_about01 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -600,7 +658,9 @@ const Header = ({ t }: any) => {
                                                             </Link>
                                                         </li>
                                                         <li className="li_padding_bottom20">
-                                                            <Link href="/contact">
+                                                            <Link
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`}
+                                                            >
                                                                 <span className="new_icon_title_menu_about02 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         {t(
@@ -616,7 +676,9 @@ const Header = ({ t }: any) => {
                                                             </Link>
                                                         </li>
                                                         <li className="li_padding_bottom20">
-                                                            <Link href="/reseller">
+                                                            <Link
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/reseller`}
+                                                            >
                                                                 <span className="new_icon_title_menu_about03 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
                                                                         Reseller
@@ -753,7 +815,13 @@ const Header = ({ t }: any) => {
                                     </ul>
                                     <ul className="title-sub-menu-mobile text-left">
                                         <li className="">
-                                            <Link href="/pricing">
+                                            <Link
+                                                href={
+                                                    process.env
+                                                        .NEXT_PUBLIC_DOMAIN_URL +
+                                                    '/pricing'
+                                                }
+                                            >
                                                 <a className="closemenu">
                                                     {t('header::Pricing')}
                                                 </a>
@@ -832,7 +900,13 @@ const Header = ({ t }: any) => {
                                             </ul>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <Link href="/product">
+                                                    <Link
+                                                        href={
+                                                            process.env
+                                                                .NEXT_PUBLIC_DOMAIN_URL +
+                                                            '/product'
+                                                        }
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -853,7 +927,13 @@ const Header = ({ t }: any) => {
                                             </h5>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <Link href="/product/smart-sms-console">
+                                                    <Link
+                                                        href={
+                                                            process.env
+                                                                .NEXT_PUBLIC_DOMAIN_URL +
+                                                            '/product/smart-sms-console'
+                                                        }
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -867,7 +947,13 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/product/sms-tracking">
+                                                    <Link
+                                                        href={
+                                                            process.env
+                                                                .NEXT_PUBLIC_DOMAIN_URL +
+                                                            '/product/sms-tracking'
+                                                        }
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -881,7 +967,13 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/product/location-based-sms">
+                                                    <Link
+                                                        href={
+                                                            process.env
+                                                                .NEXT_PUBLIC_DOMAIN_URL +
+                                                            '/product/location-based-sms'
+                                                        }
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -895,7 +987,13 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/product/global-sms">
+                                                    <Link
+                                                        href={
+                                                            process.env
+                                                                .NEXT_PUBLIC_DOMAIN_URL +
+                                                            '/product/global-sms'
+                                                        }
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -914,7 +1012,13 @@ const Header = ({ t }: any) => {
                                             </h5>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <Link href="/product/sms-api">
+                                                    <Link
+                                                        href={
+                                                            process.env
+                                                                .NEXT_PUBLIC_DOMAIN_URL +
+                                                            '/product/sms-api'
+                                                        }
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -928,7 +1032,13 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/product/otp">
+                                                    <Link
+                                                        href={
+                                                            process.env
+                                                                .NEXT_PUBLIC_DOMAIN_URL +
+                                                            '/product/otp'
+                                                        }
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -1131,7 +1241,9 @@ const Header = ({ t }: any) => {
                                             </ul>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <Link href="/support/how-to-order">
+                                                    <Link
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/how-to-order`}
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -1147,7 +1259,9 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/support/faq">
+                                                    <Link
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/faq`}
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -1163,7 +1277,9 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/contact">
+                                                    <Link
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`}
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -1340,7 +1456,9 @@ const Header = ({ t }: any) => {
                                             </ul>
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
-                                                    <Link href="/why-thaibulksms">
+                                                    <Link
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/why-thaibulksms`}
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -1356,7 +1474,9 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/contact">
+                                                    <Link
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`}
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -1372,7 +1492,9 @@ const Header = ({ t }: any) => {
                                                     </Link>
                                                 </li>
                                                 <li className="sub-head-menu">
-                                                    <Link href="/reseller/">
+                                                    <Link
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/reseller`}
+                                                    >
                                                         <a className="closemenu">
                                                             <img
                                                                 className="icon-title-menu-mobile"
@@ -1458,7 +1580,13 @@ const Header = ({ t }: any) => {
                                 </li>
                                 <li>
                                     {isLogin === true ? (
-                                        <Link href="/pricing">
+                                        <Link
+                                            href={
+                                                process.env
+                                                    .NEXT_PUBLIC_DOMAIN_URL +
+                                                '/pricing'
+                                            }
+                                        >
                                             <a className="btn v1">
                                                 {t(`header::` + 'Buy')}
                                             </a>
