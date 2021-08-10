@@ -26,9 +26,8 @@ const Smstracking = ({ t }: any) => (
             title={t('meta::title')}
             description={t('meta::description')}
             twitter={{
-                handle: '@handle',
-                site: '@site',
-                cardType: 'summary_large_image',
+                site: seo.openGraph.site_name,
+                cardType: seo.openGraph.type,
             }}
         />
         {/* <Proloader /> */}

@@ -28,9 +28,8 @@ const WhyThaibulksms = ({ t }: any) => (
             <NextSeo
                 openGraph={seo.openGraph}
                 twitter={{
-                    handle: '@handle',
-                    site: '@site',
-                    cardType: 'summary_large_image',
+                    site: seo.openGraph.site_name,
+                    cardType: seo.openGraph.type,
                 }}
             />
         </Head>
