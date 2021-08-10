@@ -25,6 +25,10 @@ const Otp = ({ t }: any) => (
             openGraph={seo.openGraph}
             title={t('meta::title')}
             description={t('meta::description')}
+            twitter={{
+                site: seo.openGraph.site_name,
+                cardType: seo.openGraph.type,
+            }}
         />
         {/* <Proloader /> */}
         <div className="page_wrapper">
