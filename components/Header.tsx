@@ -1131,7 +1131,7 @@ const Header = ({ t }: any) => {
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tecth/`}
+                                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_BLOG}/categories/tech/`}
                                                         passHref={true}
                                                     >
                                                         <a className="closemenu">
