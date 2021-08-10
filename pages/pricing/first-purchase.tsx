@@ -26,6 +26,11 @@ const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
                 openGraph={seo.openGraph}
                 title={t('meta::title')}
                 description={t('meta::description')}
+                twitter={{
+                    handle: '@handle',
+                    site: '@site',
+                    cardType: 'summary_large_image',
+                }}
             />
             <div className="page_wrapper">
                 <PricingSection />

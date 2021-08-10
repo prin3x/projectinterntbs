@@ -23,6 +23,11 @@ const Contact = ({ t }: any) => (
             openGraph={seo.openGraph}
             title={t('meta::title')}
             description={t('meta::description')}
+            twitter={{
+                handle: '@handle',
+                site: '@site',
+                cardType: 'summary_large_image',
+            }}
         />
         <div className="page_wrapper">
             <div
