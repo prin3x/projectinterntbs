@@ -20,7 +20,13 @@ const FAQ = ({ t }: any) => (
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <NextSeo openGraph={seo.openGraph} />
+            <NextSeo
+                openGraph={seo.openGraph}
+                twitter={{
+                    site: seo.openGraph.site_name,
+                    cardType: seo.openGraph.type,
+                }}
+            />
         </Head>
         {/* <Proloader /> */}
         <div className="page_wrapper">

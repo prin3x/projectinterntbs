@@ -18,7 +18,7 @@ const ContentSection = ({ Posts, t }: any) => (
             <div className="row justify-content-center hero_top_one">
                 <div className="col-12 text-center">
                     <h1 className="section__title">
-                        {t('HeroSection::Database')}
+                        {t('HeroSection::Database') + ' บทความความรู้ต่าง ๆ'}
                     </h1>
                     <div className="secSliderResource">
                         <Swiper

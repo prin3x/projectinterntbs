@@ -7,7 +7,8 @@ const HeroSection = ({ t }: any) => {
     return (
         <div className="container condition-wrap">
             <h1 className="condition-header textHeadCondition">
-                {t('cookiepolicyhero::header')}
+                {t('cookiepolicyhero::header')}{' '}
+                <span style={{ display: 'none' }}>....</span>
             </h1>
 
             <div className="col-lg-12">
