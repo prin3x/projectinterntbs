@@ -17,6 +17,15 @@ const Developer = ({ t }: any) => (
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
+            <meta name="twitter:title" content={seo.openGraph.title} />
+            <meta
+                name="twitter:description"
+                content={seo.openGraph.description}
+            />
+            <meta
+                name="twitter:image:src"
+                content={seo.openGraph.images[0].url}
+            />
         </Head>
         <NextSeo
             openGraph={seo.openGraph}
