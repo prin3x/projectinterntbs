@@ -17,6 +17,9 @@ const Condition = ({ t }: any) => (
                 content="width=device-width, initial-scale=1.0"
             />
         </Head>
+        <meta name="twitter:title" content={seo.openGraph.title} />
+        <meta name="twitter:description" content={seo.openGraph.description} />
+        <meta name="twitter:image:src" content={seo.openGraph.images[0].url} />
         <NextSeo
             openGraph={seo.openGraph}
             title={t('meta::title')}
