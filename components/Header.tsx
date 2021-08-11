@@ -54,7 +54,7 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                 </li>
                 <li>
                     <Link
-                        href={process.env.NEXT_PUBLIC_DOMAIN_URL + '/pricing'}
+                        href={process.env.NEXT_PUBLIC_DOMAIN_URL + '/pricing/'}
                     >
                         <a className="btn v3 btn-sum-menu-mobile closemenu">
                             {t(
@@ -1584,7 +1584,7 @@ const Header = ({ t }: any) => {
                                             href={
                                                 process.env
                                                     .NEXT_PUBLIC_DOMAIN_URL +
-                                                '/pricing'
+                                                '/pricing/'
                                             }
                                         >
                                             <a className="btn v1">
