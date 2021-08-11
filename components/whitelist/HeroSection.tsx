@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const HeroSectionV3 = ({  }: any) => (
+const HeroSectionV3 = () => (
     <div
         className="hero_section v3 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
@@ -17,7 +17,10 @@ const HeroSectionV3 = ({  }: any) => (
                 </div>
                 <div className="col-lg-6 col-md-12 col-12">
                     <div className="hero_text_one v2">
-                        <h1>แก้ปัญหา SMS ส่งไม่ถึงด้วยการขอ <span>Whitelist</span></h1>
+                        <h1>
+                            แก้ปัญหา SMS ส่งไม่ถึงด้วยการขอ{' '}
+                            <span>Whitelist</span>
+                        </h1>
                     </div>
                 </div>
             </div>
