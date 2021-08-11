@@ -23,6 +23,15 @@ const SMS_API = ({ t }: any) => (
                 rel="canonical"
                 href="https://www.thaibulksms.com/product/sms-api/"
             />
+            <meta name="twitter:title" content={seo.openGraph.title} />
+            <meta
+                name="twitter:description"
+                content={seo.openGraph.description}
+            />
+            <meta
+                name="twitter:image:src"
+                content={seo.openGraph.images[0].url}
+            />
         </Head>
         <NextSeo
             openGraph={seo.openGraph}
