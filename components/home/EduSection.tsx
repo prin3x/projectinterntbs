@@ -12,7 +12,7 @@ const EduSection = ({ t }: any) => (
                             )}
                         </h2>
                         {/* <a href="https://www.thaibulksms.com/blog/">{t('EduSection::View all contents')}</a> */}
-                        <Link href="/resource">
+                        <Link href="/resource/">
                             {t('EduSection::View all contents')}
                         </Link>
                     </div>

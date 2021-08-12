@@ -32,12 +32,12 @@ const SmsSectionV3 = ({ t }: any) => (
                             </div>
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_field">
-                                    <Link href="/product">
+                                    <Link href="/product/">
                                         <a className="btn v8">
                                             {t('SmsSection::marsmssec4')}
                                         </a>
                                     </Link>
-                                    <Link href="/contact">
+                                    <Link href="/contact/">
                                         <a className="btn otp">
                                             {t('SmsSection::marsmssec5')}
                                         </a>

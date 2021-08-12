@@ -89,7 +89,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                     {t(
                                                         'TabContent::Once you have found your ideal package on the'
                                                     )}
-                                                    <Link href="/pricing">
+                                                    <Link href="/pricing/">
                                                         <a className="theme__text link mt-0">
                                                             {t(
                                                                 'TabContent::package prices page'
@@ -865,7 +865,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                                         alt="Image"
                                     />
-                                    <Link href="/contact">
+                                    <Link href="/contact/">
                                         <a className="btn v4">
                                             {t(
                                                 'TabContent::Call back service by staff'

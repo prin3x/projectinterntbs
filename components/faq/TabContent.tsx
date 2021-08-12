@@ -354,7 +354,7 @@ const TabContent = ({ t }: any) => {
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                     alt="Image"
                   />
-                  <Link href="/contact">
+                  <Link href="/contact/">
                     <a className="btn v4">
                       {t('howtoordertabcontent.contactBtn')}
                     </a>

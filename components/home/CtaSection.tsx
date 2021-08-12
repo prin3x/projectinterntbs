@@ -29,7 +29,7 @@ const CtaSection = ({ t }: any) => (
                             </a>
                         </li>
                         <li>
-                            <Link href="/pricing">
+                            <Link href="/pricing/">
                                 <a className="btn v5">
                                     {t('CtaSection::View package prices')}
                                 </a>

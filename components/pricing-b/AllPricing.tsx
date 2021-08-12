@@ -130,7 +130,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                                     show:
                                                         productItem.standard
                                                             .sender ===
-                                                            SenderActive,
+                                                        SenderActive,
                                                 }
                                             )}
                                             data-parent="#accordion"
@@ -268,7 +268,9 @@ const AllPricing = ({ t, packages }: any) => {
             <div className="container priceTable">
                 <div className="row">
                     <div className="col-md-12">
-                        <h2 className="section_title colorW">แพ็กเกจราคาที่เลือกได้ตามการใช้งาน</h2>
+                        <h2 className="section_title colorW">
+                            แพ็กเกจราคาที่เลือกได้ตามการใช้งาน
+                        </h2>
                     </div>
                 </div>
                 <div className="row">
@@ -354,7 +356,9 @@ const AllPricing = ({ t, packages }: any) => {
                                 ),
                             }}
                         />
-                        <a href="" className="LowThanOther">ทำไม SMS ของ ThaiBulkSMS ถึงราคาถูกกว่าที่อื่น? </a>
+                        <a href="" className="LowThanOther">
+                            ทำไม SMS ของ ThaiBulkSMS ถึงราคาถูกกว่าที่อื่น?{' '}
+                        </a>
                         <div className="row">
                             <div className="col-md-10 offset-md-1 col-sm-12 offset-sm-0">
                                 <div className="special-price">
@@ -367,7 +371,7 @@ const AllPricing = ({ t, packages }: any) => {
                                                     ),
                                                 }}
                                             ></h3>
-                                            <Link href="/contact">
+                                            <Link href="/contact/">
                                                 <button className="btn v2 sms-btn-text">
                                                     {t(
                                                         'AllPricing::Contact our sales team'

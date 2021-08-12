@@ -28,7 +28,7 @@ const CtaSectionV2 = ({ t }: any) => (
                             >
                                 {t('CtaSection::Try for free')}
                             </a>
-                            <Link href="/pricing">
+                            <Link href="/pricing/">
                                 <a className="btn v7">
                                     {t('CtaSection::View Package Prices')}
                                 </a>

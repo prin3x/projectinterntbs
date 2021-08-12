@@ -18,7 +18,7 @@ const GlobeSection = ({ t }: any) => (
                                 'GlobeSection::Covering more than 200 countries worldwide.'
                             )}
                         </p>
-                        <Link href="/contact">
+                        <Link href="/contact/">
                             <a className="btn v3">
                                 {t(
                                     'GlobeSection::Contact us for more information'

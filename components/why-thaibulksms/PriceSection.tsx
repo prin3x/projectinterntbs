@@ -141,13 +141,13 @@ const WhyPriceSection = ({ t }: any) => (
                     </div>
                 </div>
                 <div className="col-md-12 text-center">
-                    <Link href="/product">
+                    <Link href="/product/">
                         <a className="btn v3 whyPricing">
                             {t('PriceSection::Learn more')}
                         </a>
                     </Link>
 
-                    <Link href="/pricing">
+                    <Link href="/pricing/">
                         <a className="btn v5 whyPricing">
                             {t('PriceSection::View Package Prices')}
                         </a>

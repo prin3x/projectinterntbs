@@ -62,7 +62,7 @@ const PricingSection = ({ t }: any) => (
                                 {t('PricingSection::0.21')}{' '}
                                 <span>{t('PricingSection::baht/message')}</span>
                             </h2>
-                            <Link href="/pricing">
+                            <Link href="/pricing/">
                                 <a className="btn v3">
                                     {t('PricingSection::View package prices')}
                                 </a>
@@ -159,7 +159,7 @@ const PricingSection = ({ t }: any) => (
                                 {t('PricingSection::0.24')}{' '}
                                 <span>{t('PricingSection::baht/message')}</span>
                             </h2>
-                            <Link href="/pricing">
+                            <Link href="/pricing/">
                                 <a className="btn v3">
                                     {t('PricingSection::View package prices')}
                                 </a>

@@ -21,7 +21,7 @@ const CtaSectionV2 = ({ t }: any) => (
                         >
                             {t('CtaSection::Try for free')}
                         </a>
-                        <Link href="/contact">
+                        <Link href="/contact/">
                             <a className="btn otp2">
                                 {t('CtaSection::Additional inquiries')}
                             </a>
