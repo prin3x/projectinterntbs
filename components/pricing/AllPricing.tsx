@@ -130,7 +130,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                                     show:
                                                         productItem.standard
                                                             .sender ===
-                                                            SenderActive,
+                                                        SenderActive,
                                                 }
                                             )}
                                             data-parent="#accordion"
@@ -323,7 +323,7 @@ const AllPricing = ({ t, packages }: any) => {
                                                     ),
                                                 }}
                                             ></h3>
-                                            <Link href="/contact">
+                                            <Link href="/contact/">
                                                 <button className="btn v2 sms-btn-text">
                                                     {t(
                                                         'AllPricing::Contact our sales team'

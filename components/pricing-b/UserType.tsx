@@ -1,13 +1,15 @@
 import { withTranslation, Link } from '../../i18n';
 import PropTypes from 'prop-types';
 import 'react-modal-video/scss/modal-video.scss';
-const SmsSection = ({  }: any) => {
+const SmsSection = ({}: any) => {
     return (
         <div className="smsUser_section productsms lazyload">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h2 className="section_title mt-120">ระบบส่ง SMS ที่ใช้ง่าย ตอบโจทย์หลากหลาย User</h2>
+                        <h2 className="section_title mt-120">
+                            ระบบส่ง SMS ที่ใช้ง่าย ตอบโจทย์หลากหลาย User
+                        </h2>
                     </div>
                 </div>
                 <div className="row justify-content-md-center">
@@ -21,7 +23,10 @@ const SmsSection = ({  }: any) => {
                                     ></object>
                                     <p>มือใหม่</p>
                                     <ul>
-                                        <li>แม้ไม่เคยส่ง SMS ผ่านเว็บมาก่อนก็สามารถใช้งานได้</li>
+                                        <li>
+                                            แม้ไม่เคยส่ง SMS
+                                            ผ่านเว็บมาก่อนก็สามารถใช้งานได้
+                                        </li>
                                         <li>เจ้าหน้าที่พร้อมซัพพอร์ต</li>
                                     </ul>
                                 </div>
@@ -34,8 +39,13 @@ const SmsSection = ({  }: any) => {
                                     ></object>
                                     <p>นักการตลาด</p>
                                     <ul>
-                                        <li>มีเครื่องมือช่วยวัดผลว่าแคมเปญประสบความสำเร็จหรือไม่</li>
-                                        <li>Report เชิงการตลาดที่เข้าใจง่ายเห็นภาพชัด</li>
+                                        <li>
+                                            มีเครื่องมือช่วยวัดผลว่าแคมเปญประสบความสำเร็จหรือไม่
+                                        </li>
+                                        <li>
+                                            Report
+                                            เชิงการตลาดที่เข้าใจง่ายเห็นภาพชัด
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -47,8 +57,14 @@ const SmsSection = ({  }: any) => {
                                     ></object>
                                     <p>นักพัฒนา</p>
                                     <ul>
-                                        <li>ส่งข้อความจากแพลตฟอร์มของคุณด้วย <a href="">SMS API ที่ได้มาตรฐาน</a></li>
-                                        <li><a href="">ระบบส่ง OTP พร้อมใช้</a> ไม่ต้องเขียนโปรแกรมเพิ่ม</li>
+                                        <li>
+                                            ส่งข้อความจากแพลตฟอร์มของคุณด้วย{' '}
+                                            <a href="">SMS API ที่ได้มาตรฐาน</a>
+                                        </li>
+                                        <li>
+                                            <a href="">ระบบส่ง OTP พร้อมใช้</a>{' '}
+                                            ไม่ต้องเขียนโปรแกรมเพิ่ม
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -61,11 +77,11 @@ const SmsSection = ({  }: any) => {
                                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
                                             className="btn v3"
                                         >
-                                        ทดลองส่งฟรี
+                                            ทดลองส่งฟรี
                                         </a>
                                     </li>
                                     <li>
-                                        <Link href="/pricing">
+                                        <Link href="/pricing/">
                                             <a className="btn v5">
                                                 ดูราคาแพ็กเกจ
                                             </a>

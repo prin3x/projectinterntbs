@@ -33,7 +33,7 @@ const HeroSectionV2 = ({ t }: any) => (
                                 </a>
                             </li>
                             <li>
-                                <Link href="/pricing">
+                                <Link href="/pricing/">
                                     <a className="btn v5">
                                         {t('HeroSection::View package prices')}
                                     </a>

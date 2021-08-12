@@ -17,7 +17,7 @@ const CtaSectionV2 = ({ t }: any) => (
                                 ),
                             }}
                         ></h3>
-                        <Link href="/contact">
+                        <Link href="/contact/">
                             <a className="btn v7">
                                 {t('CtaSection::Additional inquiries')}
                             </a>

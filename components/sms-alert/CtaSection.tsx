@@ -11,12 +11,12 @@ const CtaSectionV2 = ({ t }: any) => (
                 <div className=" col-lg-12">
                     <div className="cta-text">
                         <h3>{t('CtaSection::ctasec1')}</h3>
-                        <Link href="/contact">
+                        <Link href="/contact/">
                             <a className="btn v7 marginSide">
                                 {t('CtaSection::ctasec2')}
                             </a>
                         </Link>
-                        <Link href="/pricing">
+                        <Link href="/pricing/">
                             <a className="btn v7 marginSide">
                                 {t('CtaSection::ctasec3')}
                             </a>
