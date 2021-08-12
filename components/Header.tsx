@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import { i18n, withTranslation, Link } from '../i18n';
+import { i18n, withTranslation } from '../i18n';
 import React, { useState, useRef, useEffect } from 'react';
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
+import Link from 'next/link';
 
 const HeaderTopMenuMobile = () => (
     <div className="site-mobile-menu-header">
