@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 const EduSection = ({ t }: any) => (
     <div className="edu_section">
         <div className="container">
