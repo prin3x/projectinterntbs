@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import Swal from 'sweetalert2';
 import { useClipboard } from 'use-clipboard-copy';
-import { Link, withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
 
 const classnames = require('classnames');
 const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
