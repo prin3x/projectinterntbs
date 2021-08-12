@@ -52,7 +52,7 @@ const TabContent = ({ t }: any) => {
         {
             question: t('HeroSection::Can I request a custom sender’s name?'),
             answer: t(
-                'HeroSection::If you wish to set a custom sender’s name, a purchase of a package worth 3,500 THB and up is required. The number of sender’s names allowed will depend on the package. More details can be found at <a href="https://www.thaibulksms.com/pricing">https://www.thaibulksms.com/pricing</a>'
+                'HeroSection::If you wish to set a custom sender’s name, a purchase of a package worth 3,500 THB and up is required. The number of sender’s names allowed will depend on the package. More details can be found at <a href="https://www.thaibulksms.com/pricing/">https://www.thaibulksms.com/pricing</a>'
             ),
         },
         {
@@ -119,13 +119,13 @@ const TabContent = ({ t }: any) => {
                 'HeroSection::What types of ThaiBulkSMS packages are there?'
             ),
             answer: t(
-                'HeroSection::There are 2 packages, which are Standard SMS and Corporate SMS. The customer may choose between these according to their operational needs. Package prices begin at 1,500 baht, and all package details can be viewed at <a href="https://thaibulksms.com/pricing">https://thaibulksms.com/pricing</a>'
+                'HeroSection::There are 2 packages, which are Standard SMS and Corporate SMS. The customer may choose between these according to their operational needs. Package prices begin at 1,500 baht, and all package details can be viewed at <a href="https://thaibulksms.com/pricing/">https://thaibulksms.com/pricing</a>'
             ),
         },
         {
             question: t('HeroSection::What methods of payment are available?'),
             answer: t(
-                'HeroSection::<span>Payments can be easily made. Simply:</span><br />1. Select the package at the storefront <a href="https://www.thaibulksms.com/pricing">https://www.thaibulksms.com/pricing</a><br />2. Select the payment channel: bank account transfer, online payment via a credit card, or QR Code scanning<br /><br />** In the event of a bank account transfer, confirmation of the transfer must be made at the webpage for each payment.'
+                'HeroSection::<span>Payments can be easily made. Simply:</span><br />1. Select the package at the storefront <a href="https://www.thaibulksms.com/pricing/">https://www.thaibulksms.com/pricing</a><br />2. Select the payment channel: bank account transfer, online payment via a credit card, or QR Code scanning<br /><br />** In the event of a bank account transfer, confirmation of the transfer must be made at the webpage for each payment.'
             ),
         },
         {
