@@ -1,4 +1,6 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 import PropTypes from 'prop-types';
 const CtaSectionV2 = ({ t }: any) => (
     <div
@@ -28,7 +30,7 @@ const CtaSectionV2 = ({ t }: any) => (
                             >
                                 {t('CtaSection::Try for free')}
                             </a>
-                            <Link href="/pricing/">
+                            <Link href="/pricing">
                                 <a className="btn v7">
                                     {t('CtaSection::View Package Prices')}
                                 </a>
