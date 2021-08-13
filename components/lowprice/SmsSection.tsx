@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 const SmsSectionV3 = ({ t }: any) => (
     <div className="sms_section v2 ">
         <div className="container">
+<<<<<<< HEAD
             <div className="row">
                 <div className="col-xl-12">
                     <div className="simple_icon_title m-40 mb-100">
@@ -50,6 +51,31 @@ const SmsSectionV3 = ({ t }: any) => (
                     <div className="simple_icon_title m-60">
                         <h3>เลือกได้ ระหว่าง <span>Prepaid</span> และ <span>Postpaid</span></h3>
                         <p>หมดกังวลเรื่องการบริหารงบประมาณ เพราะสามารถกำหนดการจ่ายด้วยตนเอง</p>
+=======
+            <div className="row align-items-center">
+                <div className="col-lg-5">
+                    <div className="newsletter_text">
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t(
+                                    'SmsSection::Easy checkups: in only a few clicks,<br/> the OTP can be sent.'
+                                ),
+                            }}
+                        ></h3>
+                        <p>
+                            {t(
+                                'SmsSection::You can send OTP self-verification messages to increase customer security without writing additional programs. Simply set the values for only a few steps, and a code will be ready for use with the API, which quickens Developer workflows.'
+                            )}
+                        </p>
+                    </div>
+                </div>
+                <div className="col-lg-7">
+                    <div className="newsletter_img">
+                        <object
+                            type="image/svg+xml"
+                            data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-credit.svg`}
+                        ></object>
+>>>>>>> feature/add-new-credit-calculation-page
                     </div>
                 </div>
             </div>
@@ -59,7 +85,15 @@ const SmsSectionV3 = ({ t }: any) => (
                         <div className="row align-items-center">
                             <div className="col-lg-8 col-md-12">
                                 <div className="sms_form_text">
+<<<<<<< HEAD
                                     <h4>ทดลองใช้งานระบบส่ง SMS ฟรี ก่อนสั่งซื้อ</h4>
+=======
+                                    <h4>
+                                        {t(
+                                            'SmsSection::Immediately test the ready-to-use OTP transmission system'
+                                        )}
+                                    </h4>
+>>>>>>> feature/add-new-credit-calculation-page
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-12">
@@ -70,6 +104,16 @@ const SmsSectionV3 = ({ t }: any) => (
                                     >
                                         {t('SmsSection::Try for free')}
                                     </a>
+<<<<<<< HEAD
+=======
+                                    <a
+                                        href={`https://otp-manager.thaibulksms.com/login`}
+                                        className="btn otp"
+                                        target="_blank"
+                                    >
+                                        {t('SmsSection::Login')}
+                                    </a>
+>>>>>>> feature/add-new-credit-calculation-page
                                 </div>
                             </div>
                         </div>

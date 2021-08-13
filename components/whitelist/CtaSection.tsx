@@ -9,6 +9,7 @@ const CtaSectionV2 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className=" col-lg-12">
                     <div className="cta-text">
+<<<<<<< HEAD
                         <h3>หมดปัญหา SMS ส่งไม่ถึงผู้รับ<br />ด้วยการขอ Whitelist</h3>
                         <a
                             href={`https://otp-manager.thaibulksms.com/login`}
@@ -22,6 +23,27 @@ const CtaSectionV2 = ({ t }: any) => (
                             className="btn v7"
                         >
                             สอบถามเพิ่มเติม
+=======
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t(
+                                    'ctaSection::Send OTP with a ready-to-use system that does not require time wasted in programming.'
+                                ),
+                            }}
+                        ></h3>
+                        <a
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                            className="btn v7"
+                        >
+                            {t('ctaSection::Try for free')}
+                        </a>
+                        <a
+                            href={`https://otp-manager.thaibulksms.com/login`}
+                            className="btn otp2"
+                            target="_blank"
+                        >
+                            {t('ctaSection::Login')}
+>>>>>>> feature/add-new-credit-calculation-page
                         </a>
                     </div>
                 </div>

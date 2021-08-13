@@ -1,22 +1,17 @@
-
-
 import React from 'react';
 import Layout from '../../components/Layout';
 // import Proloader from '../../components/Proloader';
-import HeroSection from '../../components/lowprice/HeroSection';
-import SmsSection from '../../components/lowprice/SmsSection';
-import SimpleIconSection from '../../components/lowprice/SimpleIconSection';
-<<<<<<< HEAD
-=======
-import TrackSection from '../../components/lowprice/TrackSection';
->>>>>>> feature/add-new-credit-calculation-page
-import CtaSection from '../../components/lowprice/CtaSection';
+import HeroSection from '../../components/credit-calculation/HeroSection';
+import MultismsSection from '../../components/credit-calculation/MultismsSection';
+import TestCountSection from '../../components/credit-calculation/TestCountSection';
+import TableTextSection from '../../components/credit-calculation/TableTextSection';
+import CtaSection from '../../components/credit-calculation/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import { seo } from '../../components/seo/lowprice';
+import { seo } from '../../components/seo/credit-calculation';
 import { withTranslation } from '../../i18n';
-const lowprice = ({ t }: any) => (
+const credit = ({ t }: any) => (
     <Layout>
         <Head>
             <meta name="keywords" content={t('meta::keywords')} />
@@ -34,26 +29,22 @@ const lowprice = ({ t }: any) => (
         {/* <Proloader /> */}
         <div className="page_wrapper">
             <HeroSection />
-            <SmsSection />
-            <SimpleIconSection />
-<<<<<<< HEAD
-=======
-            <TrackSection />
->>>>>>> feature/add-new-credit-calculation-page
+            <MultismsSection />
+            <TestCountSection />
+            <TableTextSection />
             <CtaSection />
         </div>
         <BacktoTop />
     </Layout>
 );
-// lowprice.getInitialProps = async () => ({
-//   namespacesRequired: ['lowpriceMeta'],
+// credit.getInitialProps = async () => ({
+//   namespacesRequired: ['creditMeta'],
 // });
-export default withTranslation('lowprice')(lowprice);
+export default withTranslation('credit-calculation')(credit);
 export const getStaticProps = async () => {
     return {
         props: {
-            namespacesRequired: ['lowprice'],
+            namespacesRequired: ['credit-calculation'],
         },
     };
 };
-

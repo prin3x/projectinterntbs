@@ -4,6 +4,7 @@ const SmsSectionV3 = ({ t }: any) => (
     <div className="sms_section v2 ">
         <div className="container">
             <div className="row align-items-center">
+<<<<<<< HEAD
                 <div className="col-lg-6 col-md-push-6">
                 <div className="newsletter_img">
                         <object
@@ -46,6 +47,30 @@ const SmsSectionV3 = ({ t }: any) => (
                                 <h3><span>99.95%</span></h3>
                             </div> 
                         </div>
+=======
+                <div className="col-lg-5">
+                    <div className="newsletter_text">
+                        <h3
+                            dangerouslySetInnerHTML={{
+                                __html: t(
+                                    'SmsSection::Easy checkups: in only a few clicks,<br/> the OTP can be sent.'
+                                ),
+                            }}
+                        ></h3>
+                        <p>
+                            {t(
+                                'SmsSection::You can send OTP self-verification messages to increase customer security without writing additional programs. Simply set the values for only a few steps, and a code will be ready for use with the API, which quickens Developer workflows.'
+                            )}
+                        </p>
+                    </div>
+                </div>
+                <div className="col-lg-7">
+                    <div className="newsletter_img">
+                        <object
+                            type="image/svg+xml"
+                            data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-credit.svg`}
+                        ></object>
+>>>>>>> feature/add-new-credit-calculation-page
                     </div>
                 </div>
             </div>
@@ -55,7 +80,15 @@ const SmsSectionV3 = ({ t }: any) => (
                         <div className="row align-items-center">
                             <div className="col-lg-8 col-md-12">
                                 <div className="sms_form_text">
+<<<<<<< HEAD
                                     <h4>พิสูจน์ความเร็วและความเสถียรด้วยตัวคุณเอง</h4>
+=======
+                                    <h4>
+                                        {t(
+                                            'SmsSection::Immediately test the ready-to-use OTP transmission system'
+                                        )}
+                                    </h4>
+>>>>>>> feature/add-new-credit-calculation-page
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-12">
@@ -66,6 +99,16 @@ const SmsSectionV3 = ({ t }: any) => (
                                     >
                                         {t('SmsSection::Try for free')}
                                     </a>
+<<<<<<< HEAD
+=======
+                                    <a
+                                        href={`https://otp-manager.thaibulksms.com/login`}
+                                        className="btn otp"
+                                        target="_blank"
+                                    >
+                                        {t('SmsSection::Login')}
+                                    </a>
+>>>>>>> feature/add-new-credit-calculation-page
                                 </div>
                             </div>
                         </div>
