@@ -1,47 +1,59 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const HeroSectionV3 = ({ t }: any) => (
-    <div
-        className="hero_section v3 lazyload"
-        data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
-    >
-        <div className="container">
-            <div className="row align-item-center hero_top_one">
-                <div className="col-lg-6 col-md-12 col-12">
-                    <div className="hero_img_one">
-                        <object
-                            type="image/svg+xml"
-                            data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-otp.svg`}
-                        ></object>
+import * as React from 'react';
+
+const CalCreditSection = ({ }: any) => {
+    React.useEffect(() => {}, []);
+    return (
+
+        <div
+            className="pricing-section position-relative bgCalCredit-top lazyload"
+            data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-CalCredit.png`}
+        >
+            <div className="container pricing">
+                <h1 className="headPricing">การคำนวณเครดิต</h1>
+                <p className="subPricingB calCredit">ThaiBulkSMS คำนวณเครดิตจาก จำนวนตัวอักษร ในข้อความที่ส่งไปหาแต่ละเบอร์ผู้รับ<br />โดยข้อความภาษาไทยและภาษาอังกฤษ จะมีข้อกำหนดที่แตกต่างกัน</p>
+                <div className="secCaltext">
+                    <div className="caltextTH">
+                        <p>ข้อความภาษาไทย</p>
+                        <p className="textCount">70 ตัวอักษร</p>
+                        <p>คิดเป็น 1 เครดิต</p>
+                    </div>
+                    <div className="caltextEN">
+                        <p>ข้อความภาษาอังกฤษ</p>
+                        <p className="textCount">160 ตัวอักษร</p>
+                        <p>คิดเป็น 1 เครดิต</p>
                     </div>
                 </div>
-                <div className="col-lg-6 col-md-12 col-12">
-                    <div className="hero_text_one v2">
-                        <h1
-                            dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'HeroSection::An <span>OTP transmission service</span> that is ready to use<br/>, increases security and does<br/> not require additional programming.'
-                                ),
-                            }}
-                        ></h1>
-                        <p
-                            dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'HeroSection::This feature is only available for the <span>Corporate Package.</span>'
-                                ),
-                            }}
-                        ></p>
-                    </div>
+                
+                <div className="textNote">
+                    <p>หมายเหตุและข้อควรระวัง</p>
+                    <ul>
+                        <li>ในกรณีที่พิมพ์ภาษาไทยปนภาษาอังกฤษ ระบบจะใช้การนับแบบภาษาไทย</li>
+                        <li>หากใช้อักขระพิเศษที่อยู่ในแป้นภาษาไทย เครดิตจะถูกนับแบบภาษาไทย</li>
+                    </ul>
                 </div>
             </div>
+
+            <img
+                className="img-fluid bg__img img__1 lazyload"
+                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_25.png`}
+                alt=""
+            />
+            <img
+                className="img-fluid bg__img img__2 lazyload"
+                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__11.png`}
+                alt=""
+            />
         </div>
-    </div>
-);
-HeroSectionV3.getInitialProps = async () => ({
-    namespacesRequired: ['Otp'],
+    );
+};
+
+CalCreditSection.getInitialProps = async () => ({
+    namespacesRequired: ['CalCredit'],
 });
 
-HeroSectionV3.propTypes = {
+CalCreditSection.propTypes = {
     t: PropTypes.func.isRequired,
 };
-export default withTranslation('Otp')(HeroSectionV3);
+export default withTranslation('CalCredit')(CalCreditSection);

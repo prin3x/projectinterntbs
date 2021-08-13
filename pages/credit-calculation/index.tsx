@@ -2,9 +2,9 @@ import React from 'react';
 import Layout from '../../components/Layout';
 // import Proloader from '../../components/Proloader';
 import HeroSection from '../../components/credit-calculation/HeroSection';
-import SmsSection from '../../components/credit-calculation/SmsSection';
-import SimpleIconSection from '../../components/credit-calculation/SimpleIconSection';
-import TrackSection from '../../components/credit-calculation/TrackSection';
+import MultismsSection from '../../components/credit-calculation/MultismsSection';
+import TestCountSection from '../../components/credit-calculation/TestCountSection';
+import TableTextSection from '../../components/credit-calculation/TableTextSection';
 import CtaSection from '../../components/credit-calculation/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
@@ -29,9 +29,9 @@ const credit = ({ t }: any) => (
         {/* <Proloader /> */}
         <div className="page_wrapper">
             <HeroSection />
-            <SmsSection />
-            <SimpleIconSection />
-            <TrackSection />
+            <MultismsSection />
+            <TestCountSection />
+            <TableTextSection />
             <CtaSection />
         </div>
         <BacktoTop />
