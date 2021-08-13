@@ -1,4 +1,6 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
@@ -395,7 +397,7 @@ const FaqSection = ({ t }: any) => {
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                                         alt="Image"
                                     />
-                                    <Link href="/contact">
+                                    <Link href="/contact/">
                                         <a className="btn v4">
                                             {t(
                                                 'FaqSection::Call back service by staff'

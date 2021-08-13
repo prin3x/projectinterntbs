@@ -1,4 +1,6 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 import PropTypes from 'prop-types';
 const GlobeSection = ({ t }: any) => (
     <div className="globe_section">
@@ -18,7 +20,7 @@ const GlobeSection = ({ t }: any) => (
                                 'GlobeSection::Covering more than 200 countries worldwide.'
                             )}
                         </p>
-                        <Link href="/contact">
+                        <Link href="/contact/">
                             <a className="btn v3">
                                 {t(
                                     'GlobeSection::Contact us for more information'

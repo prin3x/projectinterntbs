@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import { i18n, withTranslation, Link } from '../i18n';
+import { i18n, withTranslation } from '../i18n';
 import React, { useState, useRef, useEffect } from 'react';
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
+import Link from 'next/link';
 
 const HeaderTopMenuMobile = () => (
     <div className="site-mobile-menu-header">
@@ -54,7 +55,7 @@ const HeaderLoginMenuMobile = ({ t, isLogin }: any) => {
                 </li>
                 <li>
                     <Link
-                        href={process.env.NEXT_PUBLIC_DOMAIN_URL + '/pricing'}
+                        href={process.env.NEXT_PUBLIC_DOMAIN_URL + '/pricing/'}
                     >
                         <a className="btn v3 btn-sum-menu-mobile closemenu">
                             {t(
@@ -189,7 +190,7 @@ const Header = ({ t }: any) => {
                                                     href={
                                                         process.env
                                                             .NEXT_PUBLIC_DOMAIN_URL +
-                                                        '/product'
+                                                        '/product/'
                                                     }
                                                 >
                                                     <a className="new_icon_title_menu_pro01 icon_logo_new_menu_width title_menu_margin_top_0">
@@ -214,7 +215,7 @@ const Header = ({ t }: any) => {
                                                     href={
                                                         process.env
                                                             .NEXT_PUBLIC_DOMAIN_URL +
-                                                        '/product/smart-sms-console'
+                                                        '/product/smart-sms-console/'
                                                     }
                                                 >
                                                     <a className="new_icon_title_menu_pro02 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
@@ -232,7 +233,7 @@ const Header = ({ t }: any) => {
                                                     href={
                                                         process.env
                                                             .NEXT_PUBLIC_DOMAIN_URL +
-                                                        '/product/location-based-sms'
+                                                        '/product/location-based-sms/'
                                                     }
                                                 >
                                                     <a className="new_icon_title_menu_pro04 icon_logo_new_menu_width title_menu_margin_top_0 title_menu_margin_bottom_0">
@@ -252,7 +253,7 @@ const Header = ({ t }: any) => {
                                                     href={
                                                         process.env
                                                             .NEXT_PUBLIC_DOMAIN_URL +
-                                                        '/product/sms-tracking'
+                                                        '/product/sms-tracking/'
                                                     }
                                                 >
                                                     <a className="new_icon_title_menu_pro03 icon_logo_new_menu_width title_menu_margin_top_0">
@@ -270,7 +271,7 @@ const Header = ({ t }: any) => {
                                                     href={
                                                         process.env
                                                             .NEXT_PUBLIC_DOMAIN_URL +
-                                                        '/product/global-sms'
+                                                        '/product/global-sms/'
                                                     }
                                                 >
                                                     <a className="new_icon_title_menu_pro05 icon_logo_new_menu_width title_menu_margin_top_0">
@@ -293,7 +294,7 @@ const Header = ({ t }: any) => {
                                                     href={
                                                         process.env
                                                             .NEXT_PUBLIC_DOMAIN_URL +
-                                                        '/product/sms-api'
+                                                        '/product/sms-api/'
                                                     }
                                                 >
                                                     <a className="new_icon_title_menu_pro06 icon_logo_new_menu_width title_menu_margin_top_0">
@@ -311,7 +312,7 @@ const Header = ({ t }: any) => {
                                                     href={
                                                         process.env
                                                             .NEXT_PUBLIC_DOMAIN_URL +
-                                                        '/product/otp'
+                                                        '/product/otp/'
                                                     }
                                                 >
                                                     <a className="new_icon_title_menu_pro07 icon_logo_new_menu_width title_menu_margin_top_0">
@@ -333,7 +334,7 @@ const Header = ({ t }: any) => {
                                             href={
                                                 process.env
                                                     .NEXT_PUBLIC_DOMAIN_URL +
-                                                '/pricing'
+                                                '/pricing/'
                                             }
                                         >
                                             <a className="active new_title_hover">
@@ -475,7 +476,7 @@ const Header = ({ t }: any) => {
                                                     <ul>
                                                         <li className="title_menu_margin_top_20 title_menu_padding_bottom_30">
                                                             <Link
-                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/how-to-order`}
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/how-to-order/`}
                                                             >
                                                                 <span className="new_icon_title_menu_support01 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
@@ -493,7 +494,7 @@ const Header = ({ t }: any) => {
                                                         </li>
                                                         <li className="title_menu_padding_bottom_30">
                                                             <Link
-                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/faq`}
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/faq/`}
                                                             >
                                                                 <span className="new_icon_title_menu_support02 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
@@ -511,7 +512,7 @@ const Header = ({ t }: any) => {
                                                         </li>
                                                         <li className="title_menu_padding_bottom_30">
                                                             <Link
-                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`}
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`}
                                                             >
                                                                 <span className="new_icon_title_menu_support03 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
@@ -578,7 +579,7 @@ const Header = ({ t }: any) => {
                                             <li className="menu_dev_padding_bottom_top_20">
                                                 {/* <Link href="/developer">*/}
                                                 <Link
-                                                    href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer`}
+                                                    href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer/`}
                                                 >
                                                     <span className="new_icon_title_menu_dev01 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
@@ -597,7 +598,7 @@ const Header = ({ t }: any) => {
                                             <li className="menu_dev_padding_20">
                                                 {/* <Link href="/developer/#ex_sdk"> */}
                                                 <Link
-                                                    href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer/#ex_sdk`}
+                                                    href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer/#ex_sdk/`}
                                                 >
                                                     <span className="new_icon_title_menu_dev02 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
@@ -615,7 +616,7 @@ const Header = ({ t }: any) => {
                                             </li>
                                             <li className="menu_dev_padding_20">
                                                 <Link
-                                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
+                                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}/`}
                                                 >
                                                     <span className="new_icon_title_menu_dev03 icon_logo_new_menu_width">
                                                         <h6 className="text_title_left">
@@ -641,7 +642,7 @@ const Header = ({ t }: any) => {
                                                     <ul>
                                                         <li className="menu_dev_padding_bottom_top_20">
                                                             <Link
-                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/why-thaibulksms`}
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/why-thaibulksms/`}
                                                             >
                                                                 <span className="new_icon_title_menu_about01 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
@@ -659,7 +660,7 @@ const Header = ({ t }: any) => {
                                                         </li>
                                                         <li className="li_padding_bottom20">
                                                             <Link
-                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`}
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`}
                                                             >
                                                                 <span className="new_icon_title_menu_about02 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
@@ -677,7 +678,7 @@ const Header = ({ t }: any) => {
                                                         </li>
                                                         <li className="li_padding_bottom20">
                                                             <Link
-                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/reseller`}
+                                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/reseller/`}
                                                             >
                                                                 <span className="new_icon_title_menu_about03 icon_logo_new_menu_width">
                                                                     <h6 className="text_title_left">
@@ -819,7 +820,7 @@ const Header = ({ t }: any) => {
                                                 href={
                                                     process.env
                                                         .NEXT_PUBLIC_DOMAIN_URL +
-                                                    '/pricing'
+                                                    '/pricing/'
                                                 }
                                             >
                                                 <a className="closemenu">
@@ -904,7 +905,7 @@ const Header = ({ t }: any) => {
                                                         href={
                                                             process.env
                                                                 .NEXT_PUBLIC_DOMAIN_URL +
-                                                            '/product'
+                                                            '/product/'
                                                         }
                                                     >
                                                         <a className="closemenu">
@@ -931,7 +932,7 @@ const Header = ({ t }: any) => {
                                                         href={
                                                             process.env
                                                                 .NEXT_PUBLIC_DOMAIN_URL +
-                                                            '/product/smart-sms-console'
+                                                            '/product/smart-sms-console/'
                                                         }
                                                     >
                                                         <a className="closemenu">
@@ -951,7 +952,7 @@ const Header = ({ t }: any) => {
                                                         href={
                                                             process.env
                                                                 .NEXT_PUBLIC_DOMAIN_URL +
-                                                            '/product/sms-tracking'
+                                                            '/product/sms-tracking/'
                                                         }
                                                     >
                                                         <a className="closemenu">
@@ -971,7 +972,7 @@ const Header = ({ t }: any) => {
                                                         href={
                                                             process.env
                                                                 .NEXT_PUBLIC_DOMAIN_URL +
-                                                            '/product/location-based-sms'
+                                                            '/product/location-based-sms/'
                                                         }
                                                     >
                                                         <a className="closemenu">
@@ -991,7 +992,7 @@ const Header = ({ t }: any) => {
                                                         href={
                                                             process.env
                                                                 .NEXT_PUBLIC_DOMAIN_URL +
-                                                            '/product/global-sms'
+                                                            '/product/global-sms/'
                                                         }
                                                     >
                                                         <a className="closemenu">
@@ -1016,7 +1017,7 @@ const Header = ({ t }: any) => {
                                                         href={
                                                             process.env
                                                                 .NEXT_PUBLIC_DOMAIN_URL +
-                                                            '/product/sms-api'
+                                                            '/product/sms-api/'
                                                         }
                                                     >
                                                         <a className="closemenu">
@@ -1036,7 +1037,7 @@ const Header = ({ t }: any) => {
                                                         href={
                                                             process.env
                                                                 .NEXT_PUBLIC_DOMAIN_URL +
-                                                            '/product/otp'
+                                                            '/product/otp/'
                                                         }
                                                     >
                                                         <a className="closemenu">
@@ -1242,7 +1243,7 @@ const Header = ({ t }: any) => {
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/how-to-order`}
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/how-to-order/`}
                                                     >
                                                         <a className="closemenu">
                                                             <img
@@ -1260,7 +1261,7 @@ const Header = ({ t }: any) => {
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/faq`}
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/support/faq/`}
                                                     >
                                                         <a className="closemenu">
                                                             <img
@@ -1278,7 +1279,7 @@ const Header = ({ t }: any) => {
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`}
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`}
                                                     >
                                                         <a className="closemenu">
                                                             <img
@@ -1457,7 +1458,7 @@ const Header = ({ t }: any) => {
                                             <ul className="title-sub-menu">
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/why-thaibulksms`}
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/why-thaibulksms/`}
                                                     >
                                                         <a className="closemenu">
                                                             <img
@@ -1475,7 +1476,7 @@ const Header = ({ t }: any) => {
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact`}
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`}
                                                     >
                                                         <a className="closemenu">
                                                             <img
@@ -1493,7 +1494,7 @@ const Header = ({ t }: any) => {
                                                 </li>
                                                 <li className="sub-head-menu">
                                                     <Link
-                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/reseller`}
+                                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/reseller/`}
                                                     >
                                                         <a className="closemenu">
                                                             <img
@@ -1584,7 +1585,7 @@ const Header = ({ t }: any) => {
                                             href={
                                                 process.env
                                                     .NEXT_PUBLIC_DOMAIN_URL +
-                                                '/pricing'
+                                                '/pricing/'
                                             }
                                         >
                                             <a className="btn v1">
