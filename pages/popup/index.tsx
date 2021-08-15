@@ -5,6 +5,7 @@ import { withTranslation } from '../../i18n';
 import ReCAPTCHA from 'react-google-recaptcha';
 // import { event } from 'jquery';
 // import { tr } from 'date-fns/locale';
+import Constant from './constants';
 
 const TestQuickregister = ({ t }: any) => {
     useEffect(() => {
@@ -225,7 +226,107 @@ const TestQuickregister = ({ t }: any) => {
     const [fase1, setfase1] = useState(true);
     const [fase2, setfase2] = useState(false);
     const [fase3, setfase3] = useState(false);
+    const [previewMessage, setPreviewMessage] = useState<string>('');
+    const [msgCount, setMsgCount] = useState(0);
+    const [currentCount, setCurrentCount] = useState(0);
+    const [textSms, settextSms] = useState('');
+    const [typedMessage, setTypedMessage] = useState('');
+    const [charMaxLength, setCharMaxLength] = useState(
+        Constant.MAX_CHAR_LENGTH_ASC
+    );
+    const [creditUsage, setCreditUsage] = useState<number>(0);
+    const [isUnicode, setIsUnicode] = useState<boolean>(false);
+    const [maxMsgLengthPerCopy, setMaxMsgLengthPerCopy] = useState<number>(160);
+    const unicodeRegex = new RegExp(/[^\x00-\x7F]+/g);
 
+    function addNewChar(v) {
+        setTypedMessage(v);
+        settextSms(v);
+        if (v.length === 160) {
+        }
+        let count: number = 0;
+        let current_C: number = 0;
+        for (let i = 0; i < v.length; i++) {
+            if (
+                Constant.DOUBLE_BYTES_CHAR.includes(v.charCodeAt(i)) &&
+                !isUnicode
+            ) {
+                count += 2;
+                current_C++;
+            } else {
+                count++;
+                current_C++;
+            }
+            setCurrentCount(current_C);
+            if (count >= charMaxLength) {
+                setMsgCount(charMaxLength);
+
+                setPreviewMessage(v.slice(0, i + 1));
+                return;
+            } else {
+                setMsgCount(count);
+                setPreviewMessage(v);
+            }
+        }
+    }
+
+    function alterMaxMsgLenth() {
+        let creditUsed: number = msgCount > 0 ? 1 : 0;
+
+        if (unicodeRegex.test(previewMessage)) {
+            console.log('th');
+
+            setIsUnicode((prev) => {
+                setCharMaxLength(Constant.MAX_CHAR_LENGTH_ASC);
+                return false;
+            });
+            if (checkIsMoreThanMax()) {
+                settextSms(textSms.slice(0, 70));
+                setMsgCount(70);
+            }
+        } else {
+            console.log('eng');
+
+            setIsUnicode((prev) => {
+                setCharMaxLength(Constant.MAX_CHAR_LENGTH_UNI);
+                return true;
+            });
+            if (checkIsMoreThanMax()) {
+                settextSms(textSms.slice(0, 160));
+                setMsgCount(160);
+            }
+        }
+
+        const maxMsgPerCopy: number = isUnicode
+            ? Constant.TH_MSG_DEFAULT_CHAR_LENGTH
+            : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
+
+        const isMoreThanOneCopy: boolean = msgCount > maxMsgPerCopy;
+
+        const nextMsgLengthPerCopy: number = isUnicode
+            ? Constant.TH_NEXT_CHAR_LENGTH
+            : Constant.ENG_NEXT_CHAR_LENGTH;
+
+        setMaxMsgLengthPerCopy(maxMsgPerCopy);
+
+        if (isMoreThanOneCopy) {
+            creditUsed = Math.ceil(msgCount / nextMsgLengthPerCopy);
+            let newLength: number = nextMsgLengthPerCopy * creditUsed;
+
+            setCreditUsage(creditUsed);
+
+            setMaxMsgLengthPerCopy(newLength);
+        }
+
+        setCreditUsage(creditUsed);
+    }
+
+    function checkIsMoreThanMax() {
+        if (msgCount >= charMaxLength) {
+            return true;
+        }
+        return false;
+    }
     function openModal() {
         setIsOpen(true);
     }
@@ -258,6 +359,9 @@ const TestQuickregister = ({ t }: any) => {
         setreCaptcha(value);
         console.log(value);
     }
+    useEffect(() => {
+        alterMaxMsgLenth();
+    });
     return (
         <div>
             <button
@@ -326,12 +430,25 @@ const TestQuickregister = ({ t }: any) => {
 
                                     <div className="msg">
                                         <label>ข้อความ</label>
-                                        <label className="blue">0/70</label>
+                                        <label className="blue">
+                                            {msgCount}/{charMaxLength}
+                                        </label>
                                     </div>
 
                                     <textarea
                                         className="msg"
                                         placeholder="ข้อความที่ต้องการส่ง"
+                                        // disabled={checkIsMoreThanMax()}
+                                        maxLength={
+                                            checkIsMoreThanMax()
+                                                ? currentCount
+                                                : charMaxLength
+                                        }
+                                        value={textSms}
+                                        onChange={(e) => {
+                                            addNewChar(e.target.value);
+                                            setTypedMessage(e.target.value);
+                                        }}
                                     />
                                 </form>
                                 <div className="desc">
