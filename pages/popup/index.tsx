@@ -297,7 +297,7 @@ const TestQuickregister = ({ t }: any) => {
                                     <input
                                         maxLength={10}
                                         type="text"
-                                        placeholder="เบอร์มือถืของคุณ"
+                                        placeholder="เบอร์มือถือของคุณ"
                                         className="phone"
                                         onChange={(event) => {
                                             setPhone(event.target.value);
