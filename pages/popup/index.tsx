@@ -1,219 +1,21 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import { withTranslation } from '../../i18n';
+import { withTranslation, Link } from '../../i18n';
 import ReCAPTCHA from 'react-google-recaptcha';
 // import { event } from 'jquery';
 // import { tr } from 'date-fns/locale';
 import Constant from './constants';
+import {
+    quickRegisterStep1,
+    quickRegisterStep2,
+} from '../../services/user/user.service';
 
+// from '../../services/user/user.service';
 const TestQuickregister = ({ t }: any) => {
     useEffect(() => {
         Modal.setAppElement('#ElementModal');
     }, []);
-
-    // // const setreCaptcha = async (value: any) => {
-    // //     setShowModalcaptcha(false);
-    // //     const resultStep1 = await quickRegisterStep1({
-    // //         msisdn: tempDatastep1.msisdn,
-    // //         recaptcha: value,
-    // //     });
-    // //     if (resultStep1.error.code !== '') {
-    // //         setErrorStep1('resultStep1', {
-    // //             type: resultStep1.error.code,
-    // //             message: '',
-    // //         });
-    // //         closeModal();
-    // //         return;
-    // //     }
-    // //     TagManager.dataLayer({
-    // //         dataLayer: {
-    // //             event: 'register',
-    // //             register_method: 'quick',
-    // //             action: 'confirm_number',
-    // //         },
-    // //     });
-    // //     (function fbqReady() {
-    // //         if ((window as any).fbq !== undefined) {
-    // //             if (
-    // //                 !fbq.trackCustom(
-    // //                     appConfig.facebookConversionTracking.quickRegister
-    // //                         .confirmNumber
-    // //                 )
-    // //             )
-    // //                 console.warn(
-    // //                     `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmNumber} failed.`
-    // //                 );
-    // //         } else setTimeout(fbqReady, 3000);
-    // //     })();
-
-    // //     setMsisdn(resultStep1.data.msisdn);
-    // //     setShowModalpass(true);
-    // // };
-    // //================  step 1
-    // const {
-    //     register: registerStep1,
-    //     handleSubmit: handleSubmitStep1,
-    //     setError: setErrorStep1,
-    //     errors: errrorsStep1,
-    //     clearErrors: clearErrors1,
-    // } = useForm<Inputs>({
-    //     mode: 'onBlur',
-    // });
-    // const onSubmitStep1 = async (data: any) => {
-    //     if (data.msisdn === '') {
-    //         setErrorStep1('msisdn', {
-    //             type: 'pattern',
-    //             message: '',
-    //         });
-    //         return;
-    //     }
-    //     setShowModalpass(false);
-    //     openModal();
-    //     setTempDatastep1(data);
-    //     setShowModalcaptcha(true);
-    // };
-    // const handleErorrStep1 = (error: any) => {
-    //     if (error.msisdn) {
-    //         return (
-    //             'SmsSection::TestQuickregister::validate::msisdn::' +
-    //             error.msisdn.type
-    //         );
-    //     }
-    //     if (error.resultStep1) {
-    //         return (
-    //             'SmsSection::TestQuickregister::resultStep1::' +
-    //             error.resultStep1.type
-    //         );
-    //     }
-    // };
-    // //================ end step 1
-    // //================  step 2
-    // const {
-    //     register: registerStep2,
-    //     handleSubmit: handleSubmitStep2,
-    //     setError: setErrorStep2,
-    //     clearErrors: clearErrors2,
-    //     errors: errrorsStep2,
-    // } = useForm<Inputs>({
-    //     mode: 'onBlur',
-    // });
-    // const onSubmitStep2 = async (data: any) => {
-    //     if (data.pin === '') {
-    //         setErrorStep2('pin', {
-    //             type: 'required',
-    //             message: '',
-    //         });
-    //         return;
-    //     }
-    //     data.msisdn = msisdn;
-    //     const resultStep2 = await quickRegisterStep2(data);
-    //     if (resultStep2.error.code !== '') {
-    //         setErrorStep2('resultStep2', {
-    //             type: resultStep2.error.code,
-    //             message: '',
-    //         });
-    //         return;
-    //     }
-    //     TagManager.dataLayer({
-    //         dataLayer: {
-    //             event: 'register',
-    //             register_method: 'quick',
-    //             action: 'confirm_password',
-    //         },
-    //     });
-    //     (function fbqReady() {
-    //         if ((window as any).fbq !== undefined) {
-    //             if (
-    //                 !fbq.trackCustom(
-    //                     appConfig.facebookConversionTracking.quickRegister
-    //                         .confirmPassword
-    //                 )
-    //             )
-    //                 console.warn(
-    //                     `fbq track ${appConfig.facebookConversionTracking.quickRegister.confirmPassword} failed.`
-    //                 );
-    //         } else setTimeout(fbqReady, 3000);
-    //     })();
-
-    //     setTestDesc('desc-2');
-    //     setWelcomeToken(resultStep2.welcome_token);
-    //     setShowModalpass(false);
-    //     setShowInputstep1(false);
-    //     setShowInputstep3(true);
-    //     closeModal();
-    // };
-    // const handleErorrStep2 = (error: any) => {
-    //     if (error.pin) {
-    //         return (
-    //             'SmsSection::TestQuickregister::validate::pin::' +
-    //             error.pin.type
-    //         );
-    //     }
-    //     if (error.resultStep2) {
-    //         return (
-    //             'SmsSection::TestQuickregister::resultStep2::' +
-    //             error.resultStep2.type
-    //         );
-    //     }
-    // };
-    // //================ end step 2
-    // //================  step 3
-    // const {
-    //     register: registerStep3,
-    //     handleSubmit: handleSubmitStep3,
-    //     setError: setErrorStep3,
-    //     clearErrors: clearErrors3,
-    //     errors: errrorsStep3,
-    // } = useForm<Inputs>({
-    //     mode: 'onBlur',
-    // });
-    // const onSubmitStep3 = async () => {
-    //     if (welcome_token === '') {
-    //         setErrorStep3('welcomeToken', {
-    //             type: 'required',
-    //             message: '',
-    //         });
-    //         return;
-    //     }
-    //     const resultStep3 = await quickRegisterStep3({ welcome_token });
-    //     if (resultStep3.error.code !== '') {
-    //         setErrorStep3('resultStep3', {
-    //             type: resultStep3.error.code,
-    //             message: '',
-    //         });
-    //         return;
-    //     }
-    //     openModal();
-    //     setShowLogin(true);
-    // };
-    // const handleErorrStep3 = (error: any) => {
-    //     if (error.welcomeToken) {
-    //         return (
-    //             'SmsSection::TestQuickregister::validate::welcomeToken.' +
-    //             error.welcomeToken.type
-    //         );
-    //     }
-    //     if (error.resultStep3) {
-    //         return (
-    //             'SmsSection::TestQuickregister::resultStep3.' +
-    //             error.resultStep3.type
-    //         );
-    //     }
-    // };
-    // //================ end step 3
-    // const gotoLogin = () => {
-    //     let domain = 'localhost';
-    //     if (appConfig.APP_ENV === appConfig.production)
-    //         domain = '.thaibulksms.com';
-    //     else if (appConfig.APP_ENV === appConfig.internalTest)
-    //         domain = '.1mobyline.com';
-
-    //     Cookie.set('TBS_username', msisdn || '', { expires: 0.15, domain });
-    //     window.location.replace(
-    //         `${appConfig.WEB_URL_ACCOUNT}/register/quickregister`
-    //     );
-    // };
 
     const [modalIsOpen, setIsOpen] = useState(false);
     const [phoneNum, setPhone] = useState('');
@@ -234,6 +36,8 @@ const TestQuickregister = ({ t }: any) => {
     const [charMaxLength, setCharMaxLength] = useState(
         Constant.MAX_CHAR_LENGTH_ASC
     );
+    const [load, setLoad] = React.useState(true);
+    const [welcome_token, setWelcomeToken] = useState('');
     const [creditUsage, setCreditUsage] = useState<number>(0);
     const [isUnicode, setIsUnicode] = useState<boolean>(false);
     const [maxMsgLengthPerCopy, setMaxMsgLengthPerCopy] = useState<number>(160);
@@ -241,32 +45,71 @@ const TestQuickregister = ({ t }: any) => {
 
     function addNewChar(v) {
         setTypedMessage(v);
+
         settextSms(v);
-        if (v.length === 160) {
-        }
         let count: number = 0;
         let current_C: number = 0;
-        for (let i = 0; i < v.length; i++) {
-            if (
-                Constant.DOUBLE_BYTES_CHAR.includes(v.charCodeAt(i)) &&
-                !isUnicode
-            ) {
-                count += 2;
-                current_C++;
-            } else {
-                count++;
-                current_C++;
-            }
-            setCurrentCount(current_C);
-            if (count >= charMaxLength) {
-                setMsgCount(charMaxLength);
+        if (v !== '') {
+            console.log(calculateCredit(v));
+            for (let i = 0; i < v.length; i++) {
+                if (
+                    Constant.DOUBLE_BYTES_CHAR.includes(v.charCodeAt(i)) &&
+                    !isUnicode
+                ) {
+                    count += 2;
+                    current_C++;
+                } else {
+                    count++;
+                    current_C++;
+                }
+                setCurrentCount(current_C);
+                if (count >= charMaxLength) {
+                    setMsgCount(charMaxLength);
 
-                setPreviewMessage(v.slice(0, i + 1));
-                return;
-            } else {
-                setMsgCount(count);
-                setPreviewMessage(v);
+                    setPreviewMessage(v.slice(0, i + 1));
+                    return;
+                } else {
+                    setMsgCount(count);
+                    setPreviewMessage(v);
+                }
             }
+        }
+    }
+
+    function calculateCredit(msg) {
+        if (msg !== '') {
+            let msgLength = msg.length;
+            let totalCredits = 0;
+            const pattern = new RegExp('[^\u0020-\u007F\u00A0-\u00BF]');
+            const patternDouble = new RegExp(
+                '[^\u005B-\u005E\u007B-\u007E\u20AC]'
+            );
+            let rtn = {
+                isUnicode: false,
+                msgPerCredit: 160,
+                msgLength: msg.length ? msg.length : 0,
+                msg: msg,
+                credit: 1,
+            };
+
+            if (pattern.test(msg)) {
+                rtn.isUnicode = true;
+                rtn.msgPerCredit = 70;
+
+                if (msgLength > 70) rtn.msgPerCredit = 67;
+            } else {
+                rtn.isUnicode = false;
+                if (msgLength > 160) rtn.msgPerCredit = 153;
+            }
+
+            rtn.credit = Math.ceil(msgLength / rtn.msgPerCredit);
+            totalCredits = totalCredits + rtn.credit;
+
+            // Add doublebyte
+            if (rtn.isUnicode === false)
+                rtn.msgLength = rtn.msgLength + msg.match(patternDouble).length;
+
+            return rtn;
         }
     }
 
@@ -327,6 +170,31 @@ const TestQuickregister = ({ t }: any) => {
         }
         return false;
     }
+
+    const submitStep1 = async () => {
+        const resultStep1 = await quickRegisterStep1({
+            msisdn: phoneNum,
+            recaptcha: reCaptcha,
+            message: textSms,
+        });
+        if ((await resultStep1.error.code) === '') {
+            await changeFase(2);
+        }
+        console.log(resultStep1);
+    };
+
+    const submitStep2 = async () => {
+        const resultStep2 = await quickRegisterStep2({
+            msisdn: phoneNum,
+            pin: otp,
+        });
+        if ((await resultStep2.error.code) === '') {
+            await changeFase(3);
+        } else {
+            console.log('RE2' + resultStep2.error.code);
+        }
+    };
+
     function openModal() {
         setIsOpen(true);
     }
@@ -448,6 +316,9 @@ const TestQuickregister = ({ t }: any) => {
                                         onChange={(e) => {
                                             addNewChar(e.target.value);
                                             setTypedMessage(e.target.value);
+                                            if (e.target.value === null) {
+                                                e.target.value = '';
+                                            }
                                         }}
                                     />
                                 </form>
@@ -464,13 +335,16 @@ const TestQuickregister = ({ t }: any) => {
                                     />
                                 </div>
                                 <button
-                                    disabled={!(phoneOk && reCaptchaOK)}
+                                    disabled={!(phoneOk && reCaptchaOK && load)}
                                     className={
-                                        phoneOk && reCaptchaOK
+                                        phoneOk && reCaptchaOK && load
                                             ? 'active'
                                             : 'disable'
                                     }
-                                    onClick={() => changeFase(2)}
+                                    onClick={() => {
+                                        setLoad(false);
+                                        submitStep1().then(() => setLoad(true));
+                                    }}
                                 >
                                     ส่ง SMS
                                 </button>
@@ -512,9 +386,14 @@ const TestQuickregister = ({ t }: any) => {
                                     />
                                 </form>
                                 <button
-                                    disabled={button !== 2}
-                                    className={button === 2 ? 'active' : ''}
-                                    onClick={() => changeFase(3)}
+                                    disabled={button !== 2 && !load}
+                                    className={
+                                        button === 2 && load ? 'active' : ''
+                                    }
+                                    onClick={() => {
+                                        setLoad(false);
+                                        submitStep2().then(() => setLoad(true));
+                                    }}
                                 >
                                     ยืนยันเบอร์
                                 </button>
@@ -530,18 +409,30 @@ const TestQuickregister = ({ t }: any) => {
                                     ออนไลน์แบบเต็มรูปแบบได้ทันที
                                     โดยใช้รหัสผ่านเดียวกับที่ใช้ยืนยันการส่งข้อความในการเข้าสู่ระบบ
                                 </div>
-                                <button
-                                    className="active"
-                                    onClick={() => changeFase(1)}
+                                <Link
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                                 >
-                                    button
-                                </button>
-                                <button
-                                    className="white"
-                                    onClick={() => changeFase(1)}
+                                    <button
+                                        className="active"
+                                        onClick={() => changeFase(1)}
+                                    >
+                                        เข้าสู่ระบบ
+                                    </button>
+                                </Link>
+
+                                <Link
+                                    href={
+                                        process.env.NEXT_PUBLIC_DOMAIN_URL +
+                                        '/pricing'
+                                    }
                                 >
-                                    button
-                                </button>
+                                    <button
+                                        className="white"
+                                        onClick={() => changeFase(1)}
+                                    >
+                                        ดูราคาแพ็กเกจ
+                                    </button>
+                                </Link>
                             </div>
                         ) : (
                             ''

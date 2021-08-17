@@ -263,10 +263,10 @@ export async function quickRegisterStep1(
     // };
     // return dataRegister;
     try {
-        let { msisdn, recaptcha } = param;
+        let { msisdn, recaptcha, message } = param;
         let resultAPI = await axios.post(
             process.env.NEXT_PUBLIC_API_URL_ACCOUNT + '/user/quick-register/1',
-            { msisdn, recaptcha }
+            { msisdn, recaptcha, message }
         );
         if (resultAPI.status !== 200 && resultAPI.status !== 201) {
             return {
