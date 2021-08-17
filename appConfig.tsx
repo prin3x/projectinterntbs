@@ -2,6 +2,7 @@ export default {
     production: 'production',
     development: 'development',
     internalTest: 'internal_test',
+    HOME_PAGE_URL: process.env.NEXT_PUBLIC_DOMAIN_URL || '',
     GTM_CODE: process.env.NEXT_PUBLIC_GTM_CODE || '',
     API_URL_SHOPPING: process.env.NEXT_PUBLIC_API_URL_SHOPPING || '',
     API_URL_ACCOUNT: process.env.NEXT_PUBLIC_API_URL_ACCOUNT || '',

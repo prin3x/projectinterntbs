@@ -6,10 +6,7 @@ import Layout from '../../components/Layout';
 import HeroSection from '../../components/lowprice/HeroSection';
 import SmsSection from '../../components/lowprice/SmsSection';
 import SimpleIconSection from '../../components/lowprice/SimpleIconSection';
-<<<<<<< HEAD
-=======
 import TrackSection from '../../components/lowprice/TrackSection';
->>>>>>> feature/add-new-credit-calculation-page
 import CtaSection from '../../components/lowprice/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
@@ -36,10 +33,7 @@ const lowprice = ({ t }: any) => (
             <HeroSection />
             <SmsSection />
             <SimpleIconSection />
-<<<<<<< HEAD
-=======
             <TrackSection />
->>>>>>> feature/add-new-credit-calculation-page
             <CtaSection />
         </div>
         <BacktoTop />
