@@ -1,10 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
-const CtaSectionV2 = ({  }: any) => (
-=======
 const CtaSectionV2 = ({ t }: any) => (
->>>>>>> feature/add-new-credit-calculation-page
     <div
         className="cta_section v2 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
@@ -13,21 +9,6 @@ const CtaSectionV2 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className=" col-lg-12">
                     <div className="cta-text">
-<<<<<<< HEAD
-                        <h3>SMS ราคาถูก ที่มาพร้อมคุณภาพ<br />ที่คุณไว้วางใจได้</h3>
-                        <a
-                            href={`https://otp-manager.thaibulksms.com/login`}
-                            className="btn lowPrice"
-                            target="_blank"
-                        >
-                           ซื้อเลย
-                        </a>
-                        <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                            className="btn v7"
-                        >
-                            ทอลองใช้ฟรี
-=======
                         <h3
                             dangerouslySetInnerHTML={{
                                 __html: t(
@@ -47,7 +28,6 @@ const CtaSectionV2 = ({ t }: any) => (
                             target="_blank"
                         >
                             {t('ctaSection::Login')}
->>>>>>> feature/add-new-credit-calculation-page
                         </a>
                     </div>
                 </div>

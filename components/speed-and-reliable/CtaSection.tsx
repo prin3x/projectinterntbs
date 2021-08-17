@@ -9,9 +9,6 @@ const CtaSectionV2 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className=" col-lg-12">
                     <div className="cta-text">
-<<<<<<< HEAD
-                        <h3>ส่ง SMS ถึงผู้รับอย่างมั่นใจ<br/>ส่งถึงไว ไม่ Delay</h3>
-=======
                         <h3
                             dangerouslySetInnerHTML={{
                                 __html: t(
@@ -19,7 +16,6 @@ const CtaSectionV2 = ({ t }: any) => (
                                 ),
                             }}
                         ></h3>
->>>>>>> feature/add-new-credit-calculation-page
                         <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                             className="btn v7"
@@ -31,11 +27,7 @@ const CtaSectionV2 = ({ t }: any) => (
                             className="btn otp2"
                             target="_blank"
                         >
-<<<<<<< HEAD
-                            ดูราคาแพ็กเกจ
-=======
                             {t('ctaSection::Login')}
->>>>>>> feature/add-new-credit-calculation-page
                         </a>
                     </div>
                 </div>
