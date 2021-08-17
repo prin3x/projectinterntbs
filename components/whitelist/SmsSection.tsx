@@ -1,10 +1,9 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const SmsSectionV3 = () => (
+const SmsSectionV3 = ({ t }: any) => (
     <div className="sms_section v2 ">
         <div className="container">
             <div className="row align-items-center">
-<<<<<<< HEAD
                 <div className="col-lg-7 col-md-push-6">
                     <div className="newsletter_img">
                         <img
@@ -16,10 +15,17 @@ const SmsSectionV3 = () => (
                 </div>
                 <div className="col-lg-5 col-md-pull-6">
                     <div className="newsletter_text">
-<<<<<<< HEAD
-                        <h3>70% ของการส่ง SMS ไม่ถึงผู้รับ มาจากปัญหา Anti-Spam</h3>
-                        <p>สถานะ “Anti-Spam” ที่พบในรายงานการส่งข้อความ เกิดจากการที่ผู้รับปลายทางเคยแจ้งเครือข่ายไว้ว่า ไม่ต้องการรับ SMS โฆษณารบกวน (Spam) ทำให้ SMS ถูกส่งไปไม่ถึง</p>
-=======
+                        <h3>
+                            70% ของการส่ง SMS ไม่ถึงผู้รับ มาจากปัญหา Anti-Spam
+                        </h3>
+                        <p>
+                            สถานะ “Anti-Spam” ที่พบในรายงานการส่งข้อความ
+                            เกิดจากการที่ผู้รับปลายทางเคยแจ้งเครือข่ายไว้ว่า
+                            ไม่ต้องการรับ SMS โฆษณารบกวน (Spam) ทำให้ SMS
+                            ถูกส่งไปไม่ถึง
+                        </p>
+                    </div>
+                </div>
                 <div className="col-lg-5">
                     <div className="newsletter_text">
                         <h3
@@ -42,8 +48,6 @@ const SmsSectionV3 = () => (
                             type="image/svg+xml"
                             data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-credit.svg`}
                         ></object>
->>>>>>> feature/add-new-credit-calculation-page
-=======
                         <h3>
                             70% ของการส่ง SMS ไม่ถึงผู้รับ มาจากปัญหา Anti-Spam
                         </h3>
@@ -53,7 +57,6 @@ const SmsSectionV3 = () => (
                             ไม่ต้องการรับ SMS โฆษณารบกวน (Spam) ทำให้ SMS
                             ถูกส่งไปไม่ถึง
                         </p>
->>>>>>> d1b739688e6d951e295c2a574862532f9166f13b
                     </div>
                 </div>
             </div>
@@ -61,7 +64,6 @@ const SmsSectionV3 = () => (
                 <div className="col-md-12">
                     <div className="sms_form v2">
                         <div className="row align-items-center">
-<<<<<<< HEAD
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_text">
                                     <h4>SMS แบบไหนบ้างที่เข้าข่ายเป็น Spam</h4>
@@ -69,35 +71,6 @@ const SmsSectionV3 = () => (
                             </div>
                             <div className="col-lg-8 col-md-12">
                                 <div className="sms_form_field">
-<<<<<<< HEAD
-                                    <p className="textLeft">มักจะเป็น SMS ที่มีเนื้อหารบกวนผู้รับ เช่น การส่ง SMS ประเภทโฆษณา การตลาด และ การที่ผู้ส่งไม่ได้ขอ <span>Whitelist Sender Name</span> ก็จะทำให้เครือข่ายปลายทางถือว่าเป็นข้อความรบกวน (Spam) เช่นเดียวกัน</p>
-=======
-                            <div className="col-lg-8 col-md-12">
-                                <div className="sms_form_text">
-                                    <h4>
-                                        {t(
-                                            'SmsSection::Immediately test the ready-to-use OTP transmission system'
-                                        )}
-                                    </h4>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-12">
-                                <div className="sms_form_field">
-                                    <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                        className="btn v8"
-                                    >
-                                        {t('SmsSection::Try for free')}
-                                    </a>
-                                    <a
-                                        href={`https://otp-manager.thaibulksms.com/login`}
-                                        className="btn otp"
-                                        target="_blank"
-                                    >
-                                        {t('SmsSection::Login')}
-                                    </a>
->>>>>>> feature/add-new-credit-calculation-page
-=======
                                     <p className="textLeft">
                                         มักจะเป็น SMS ที่มีเนื้อหารบกวนผู้รับ
                                         เช่น การส่ง SMS ประเภทโฆษณา การตลาด และ
@@ -106,7 +79,6 @@ const SmsSectionV3 = () => (
                                         ก็จะทำให้เครือข่ายปลายทางถือว่าเป็นข้อความรบกวน
                                         (Spam) เช่นเดียวกัน
                                     </p>
->>>>>>> d1b739688e6d951e295c2a574862532f9166f13b
                                 </div>
                             </div>
                         </div>
