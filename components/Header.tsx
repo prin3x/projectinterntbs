@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types';
 import { i18n, withTranslation } from '../i18n';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
 import HeaderSubmodule from "../tbs_submodule/HeaderSubmodule.js";
@@ -62,8 +61,5 @@ Header.getInitialProps = async () => ({
     namespacesRequired: ['Header'],
 });
 
-Header.propTypes = {
-    t: PropTypes.func.isRequired,
-};
 
 export default withTranslation('Header')(Header);
