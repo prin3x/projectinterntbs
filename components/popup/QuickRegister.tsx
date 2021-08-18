@@ -120,27 +120,27 @@ const TestQuickregister = ({ t }: any) => {
     function alterMaxMsgLenth() {
         let creditUsed: number = msgCount > 0 ? 1 : 0;
 
-        if (unicodeRegex.test(previewMessage)) {
+        if (!unicodeRegex.test(previewMessage)) {
             console.log('th');
 
             setIsUnicode((prev) => {
-                setCharMaxLength(Constant.MAX_CHAR_LENGTH_ASC);
+                setCharMaxLength(Constant.MAX_CHAR_LENGTH_UNI);
                 return false;
             });
             if (checkIsMoreThanMax()) {
-                settextSms(textSms.slice(0, 70));
-                setMsgCount(70);
+                settextSms(textSms.slice(0, 160));
+                setMsgCount(160);
             }
         } else {
             console.log('eng');
 
             setIsUnicode((prev) => {
-                setCharMaxLength(Constant.MAX_CHAR_LENGTH_UNI);
+                setCharMaxLength(Constant.MAX_CHAR_LENGTH_ASC);
                 return true;
             });
             if (checkIsMoreThanMax()) {
-                settextSms(textSms.slice(0, 160));
-                setMsgCount(160);
+                settextSms(textSms.slice(0, 70));
+                setMsgCount(70);
             }
         }
 
