@@ -6,13 +6,13 @@ const SmsSectionV3 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className="col-lg-7 col-md-push-6">
                     <div className="newsletter_img">
-                         <img
+                        <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whitelist01.png`}
                             alt="Image"
                         />
                     </div>
-                    
+
                 </div>
                 <div className="col-lg-5 col-md-pull-6">
                     <div className="newsletter_text">
@@ -27,7 +27,7 @@ const SmsSectionV3 = ({ t }: any) => (
                         <div className="row align-items-center">
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_text">
-                                    <h4>SMS แบบไหนบ้างที่เข้าข่ายเป็น Spam</h4>
+                                    <h4>{t(`SMS แบบไหนบ้างที่เข้าข่ายเป็น Spam`)}</h4>
                                 </div>
                             </div>
                             <div className="col-lg-8 col-md-12">

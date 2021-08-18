@@ -17,7 +17,7 @@ const CtaSectionV2 = ({ t }: any) => (
                             {t('ctaSection::Try for free')}
                         </a>
                         <a
-                            href={`https://otp-manager.thaibulksms.com/login`}
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
                             className="btn otp2"
                             target="_blank"
                         >

@@ -11,17 +11,17 @@ const CtaSectionV2 = ({ t }: any) => (
                     <div className="cta-text">
                         <h3>หมดปัญหา SMS ส่งไม่ถึงผู้รับ<br />ด้วยการขอ Whitelist</h3>
                         <a
-                            href={`https://otp-manager.thaibulksms.com/login`}
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
                             className="btn lowPrice"
                             target="_blank"
                         >
                            สั่งซื้อแพ็กเกจ
                         </a>
                         <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`}
                             className="btn v7"
                         >
-                            สอบถามเพิ่มเติม
+                            {t(`สอบถามเพิ่มเติม`)}
                         </a>
                     </div>
                 </div>

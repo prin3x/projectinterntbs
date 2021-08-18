@@ -37,7 +37,7 @@ const SimpleIconSection = ({ t }: any) => (
                   type="image/svg+xml"
                   data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-whitelist02.svg`}
               ></object>
-              <p>ลดปัญหา Anti-Spam</p>
+              <p>{t('ลดปัญหา Anti-Spam')}</p>
             </div>
             <div className="Whitelist">
               <object
@@ -94,7 +94,7 @@ const SimpleIconSection = ({ t }: any) => (
           <div className="col-lg-4 col-md-12">
               <div className="sms_form_field">
                   <a
-                      href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                      href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
                       className="btn v8"
                   >
                       สั่งซื้อแพ็กเกจ
