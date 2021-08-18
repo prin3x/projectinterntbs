@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const HeroSectionV3 = ({ t }: any) => (
+const HeroSectionV3 = ({  }: any) => (
     <div
         className="hero_section v3 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
@@ -11,26 +11,13 @@ const HeroSectionV3 = ({ t }: any) => (
                     <div className="hero_img_one">
                         <object
                             type="image/svg+xml"
-                            data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-otp.svg`}
+                            data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-hero-speed.svg`}
                         ></object>
                     </div>
                 </div>
                 <div className="col-lg-6 col-md-12 col-12">
                     <div className="hero_text_one v2">
-                        <h1
-                            dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'HeroSection::An <span>OTP transmission service</span> that is ready to use<br/>, increases security and does<br/> not require additional programming.'
-                                ),
-                            }}
-                        ></h1>
-                        <p
-                            dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'HeroSection::This feature is only available for the <span>Corporate Package.</span>'
-                                ),
-                            }}
-                        ></p>
+                        <h1>ส่งเร็ว เสถียร <span>สื่อสารกับลูกค้าผ่าน</span> SMS ได้แบบไม่สะดุด</h1>
                     </div>
                 </div>
             </div>
