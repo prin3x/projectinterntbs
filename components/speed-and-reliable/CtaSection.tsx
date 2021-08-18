@@ -9,13 +9,7 @@ const CtaSectionV2 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className=" col-lg-12">
                     <div className="cta-text">
-                        <h3
-                            dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'ctaSection::Send OTP with a ready-to-use system that does not require time wasted in programming.'
-                                ),
-                            }}
-                        ></h3>
+                        <h3>ส่ง SMS ถึงผู้รับอย่างมั่นใจ<br/>ส่งถึงไว ไม่ Delay</h3>
                         <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                             className="btn v7"
@@ -27,7 +21,7 @@ const CtaSectionV2 = ({ t }: any) => (
                             className="btn otp2"
                             target="_blank"
                         >
-                            {t('ctaSection::Login')}
+                            ดูราคาแพ็กเกจ
                         </a>
                     </div>
                 </div>

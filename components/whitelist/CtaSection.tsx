@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const CtaSectionV2 = ({  }: any) => (
+const CtaSectionV2 = ({ t }: any) => (
     <div
         className="cta_section v2 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
