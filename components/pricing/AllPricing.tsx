@@ -354,6 +354,13 @@ const AllPricing = ({ t, packages }: any) => {
                                             </p>
                                         </div>
                                     </div>
+                                    <div className="row align-items-center">
+                                        <div className="col-md-12 mt-40">
+                                            <a href="" className="LowThanOtherB">
+                                                ทำไม SMS ของ ThaiBulkSMS ถึงราคาถูกกว่าที่อื่น?{' '}
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

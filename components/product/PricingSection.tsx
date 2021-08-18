@@ -7,7 +7,7 @@ const PricingSection = ({ t }: any) => (
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    <h2 className="section_title">
+                    <h2 className="section_title pringHeadSpace">
                         {t('PricingSection::Packages and pricing')}
                     </h2>
                 </div>

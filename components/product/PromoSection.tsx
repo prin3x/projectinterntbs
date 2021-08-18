@@ -30,6 +30,7 @@ const PromoSection = ({ t }: any) => (
                 <div className="col-md-6">
                     <div className="promo_item">
                         <div className="promo_title">
+                            <p className="featureText">Smart SMS Console</p>
                             <p
                                 dangerouslySetInnerHTML={{
                                     __html: t(
@@ -44,18 +45,27 @@ const PromoSection = ({ t }: any) => (
                                 data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-sms.svg`}
                                 className="lazyload"
                             ></object>
-                            <a
-                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                className="btn v2"
-                            >
-                                {t('PromoSection::Try for free')}
-                            </a>
+                            <div className="btnFeatureP">
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                    className="btn v8 promoImg"
+                                >
+                                   ทดลองใช้ฟรี
+                                </a>
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                    className="btn v5 promoImg"
+                                >
+                                    ดูข้อมูลเพิ่มเติม
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-6">
                     <div className="promo_item">
                         <div className="promo_title">
+                            <p className="featureText">SMS API</p>
                             <p
                                 dangerouslySetInnerHTML={{
                                     __html: t(
@@ -70,12 +80,20 @@ const PromoSection = ({ t }: any) => (
                                 data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-api.svg`}
                                 className="lazyload"
                             ></object>
-                            <a
-                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                className="btn v2"
-                            >
-                                {t('PromoSection::Try for free')}
-                            </a>
+                            <div className="btnFeatureP">
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                    className="btn v8 promoImg"
+                                >
+                                    ทดลองใช้ฟรี
+                                </a>
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                    className="btn v5 promoImg"
+                                >
+                                    ดูข้อมูลเพิ่มเติม
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
