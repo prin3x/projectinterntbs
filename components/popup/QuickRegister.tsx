@@ -21,7 +21,7 @@ const TestQuickregister = ({ t }: any) => {
     const [phoneNum, setPhone] = useState('');
     const [phoneOk, setphoneOk] = useState(false);
     const [otp, setOtp] = useState('');
-    const [otpOk, setOtpOk] = useState(false);
+
     const [reCaptcha, setreCaptcha] = useState('');
     const [reCaptchaOK, setreCaptchaOK] = useState(false);
     const [button, setbutton] = useState(0);
@@ -32,22 +32,19 @@ const TestQuickregister = ({ t }: any) => {
     const [msgCount, setMsgCount] = useState(0);
     const [currentCount, setCurrentCount] = useState(0);
     const [textSms, settextSms] = useState('');
-    const [typedMessage, setTypedMessage] = useState('');
+
     const [charMaxLength, setCharMaxLength] = useState(
         Constant.MAX_CHAR_LENGTH_ASC
     );
     const [load, setLoad] = React.useState(true);
     const [existPhoneError, setexistPhoneError] = React.useState(false);
     const [pinError, setpinError] = React.useState(false);
-    const [welcome_token, setWelcomeToken] = useState('');
     const [creditUsage, setCreditUsage] = useState<number>(0);
     const [isUnicode, setIsUnicode] = useState<boolean>(false);
     const [maxMsgLengthPerCopy, setMaxMsgLengthPerCopy] = useState<number>(160);
     const unicodeRegex = new RegExp(/[^\x00-\x7F]+/g);
 
     function addNewChar(v) {
-        setTypedMessage(v);
-
         settextSms(v);
         let count: number = 0;
         let current_C: number = 0;
@@ -123,7 +120,7 @@ const TestQuickregister = ({ t }: any) => {
         if (!unicodeRegex.test(previewMessage)) {
             console.log('th');
 
-            setIsUnicode((prev) => {
+            setIsUnicode(() => {
                 setCharMaxLength(Constant.MAX_CHAR_LENGTH_UNI);
                 return false;
             });
@@ -134,7 +131,7 @@ const TestQuickregister = ({ t }: any) => {
         } else {
             console.log('eng');
 
-            setIsUnicode((prev) => {
+            setIsUnicode(() => {
                 setCharMaxLength(Constant.MAX_CHAR_LENGTH_ASC);
                 return true;
             });
@@ -163,6 +160,7 @@ const TestQuickregister = ({ t }: any) => {
             setCreditUsage(creditUsed);
 
             setMaxMsgLengthPerCopy(newLength);
+            console.log(creditUsage, maxMsgLengthPerCopy);
         }
 
         setCreditUsage(creditUsed);
@@ -340,10 +338,8 @@ const TestQuickregister = ({ t }: any) => {
                                             if (e.target.value === '') {
                                                 e.target.value = '';
                                                 addNewChar('');
-                                                setTypedMessage('');
                                             } else {
                                                 addNewChar(e.target.value);
-                                                setTypedMessage(e.target.value);
                                             }
                                         }}
                                     />
@@ -399,10 +395,8 @@ const TestQuickregister = ({ t }: any) => {
                                                 event.target.value.length === 6
                                             ) {
                                                 setbutton(2);
-                                                setOtpOk(true);
                                             } else {
                                                 setbutton(0);
-                                                setOtpOk(false);
                                             }
                                         }}
                                         onKeyPress={(event) => {
