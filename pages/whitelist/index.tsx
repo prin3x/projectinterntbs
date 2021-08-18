@@ -4,7 +4,6 @@ import Layout from '../../components/Layout';
 import HeroSection from '../../components/whitelist/HeroSection';
 import SmsSection from '../../components/whitelist/SmsSection';
 import SimpleIconSection from '../../components/whitelist/SimpleIconSection';
-import TrackSection from '../../components/whitelist/TrackSection';
 import CtaSection from '../../components/whitelist/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
@@ -14,7 +13,6 @@ import { withTranslation } from '../../i18n';
 const whitelist = ({ t }: any) => (
     <Layout>
         <Head>
-            <meta name="title" content={t('meta::title')} />
             <meta name="keywords" content={t('meta::keywords')} />
             <meta name="author" content="" />
             <meta
@@ -32,7 +30,6 @@ const whitelist = ({ t }: any) => (
             <HeroSection />
             <SmsSection />
             <SimpleIconSection />
-            <TrackSection />
             <CtaSection />
         </div>
         <BacktoTop />
