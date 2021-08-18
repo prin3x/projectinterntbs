@@ -2,7 +2,7 @@ import { i18n, withTranslation } from '../i18n';
 import React, { useState } from 'react';
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
-import HeaderSubmodule from "../tbs_submodule/HeaderSubmodule.js";
+import HeaderSubmodule from '../tbs_submodule/HeaderSubmodule.js';
 
 const options = [
     { value: 'TH', text: 'TH' },
@@ -60,6 +60,5 @@ const Header = ({ t }: any) => {
 Header.getInitialProps = async () => ({
     namespacesRequired: ['Header'],
 });
-
 
 export default withTranslation('Header')(Header);

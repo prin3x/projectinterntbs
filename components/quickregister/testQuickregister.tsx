@@ -21,6 +21,7 @@ type Inputs = {
     resultStep3: string;
     welcomeToken: string;
 };
+import QuickRegisger from '../popup/QuickRegister';
 
 const TestQuickregister = ({ t }: any) => {
     const [showModalpass, setShowModalpass] = useState(false);
@@ -271,50 +272,7 @@ const TestQuickregister = ({ t }: any) => {
                             <div className="col-lg-6 col-md-12">
                                 {showInputstep1 && (
                                     <div className="sms_form_field">
-                                        <form
-                                            onSubmit={handleSubmitStep1(
-                                                onSubmitStep1
-                                            )}
-                                            className="error-text-box"
-                                        >
-                                            <input
-                                                ref={registerStep1({
-                                                    pattern: /^[0][6||8-9][0-9]{8}$/i,
-                                                    maxLength: 10,
-                                                })}
-                                                id="msisdn"
-                                                name="msisdn"
-                                                type="text"
-                                                placeholder={t(
-                                                    'SmsSection::TestQuickregister::Your mobile number'
-                                                )}
-                                                onChange={() =>
-                                                    clearErrors1('resultStep1')
-                                                }
-                                                maxLength={10}
-                                            />
-                                            <div
-                                                style={{
-                                                    color: 'red',
-                                                }}
-                                                className="sms-error-text"
-                                            >
-                                                {t(
-                                                    handleErorrStep1(
-                                                        errrorsStep1
-                                                    )
-                                                )}
-                                            </div>
-                                            <button
-                                                className="btn v2 sms-btn-text"
-                                                type="submit"
-                                                onClick={() => clearErrors1()}
-                                            >
-                                                {t(
-                                                    'SmsSection::TestQuickregister::Confirm number'
-                                                )}
-                                            </button>
-                                        </form>
+                                        <QuickRegisger />
                                     </div>
                                 )}
                                 {showInputstep3 && (
