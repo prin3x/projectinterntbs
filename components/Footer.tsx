@@ -8,7 +8,7 @@ const Footer = ({ t }: any) => {
 };
 
 Footer.getInitialProps = async () => ({
-    namespacesRequired: ['footer'],
+    namespacesRequired: ['Footer'],
 });
 
-export default withTranslation('footer')(Footer);
+export default withTranslation('Footer')(Footer);
