@@ -1,4 +1,6 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 import PropTypes from 'prop-types';
 const FaqSection = ({ t }: any) => (
     <div
@@ -130,7 +132,7 @@ const FaqSection = ({ t }: any) => (
                                     <p
                                         dangerouslySetInnerHTML={{
                                             __html: t(
-                                                'FaqSection::It is possible. If you wish to set a custom name as the sender’s name, you are required to purchase a package with a minimum price of 3,000 THB and up. The number of custom names allowed depending on the package chosen. The details can be found here: <a href="https://www.thaibulksms.com/pricing" >https://www.thaibulksms.com/pricing</a>'
+                                                'FaqSection::It is possible. If you wish to set a custom name as the sender’s name, you are required to purchase a package with a minimum price of 3,000 THB and up. The number of custom names allowed depending on the package chosen. The details can be found here: <a href="https://www.thaibulksms.com/pricing/" >https://www.thaibulksms.com/pricing</a>'
                                             ),
                                         }}
                                     ></p>
@@ -383,7 +385,7 @@ const FaqSection = ({ t }: any) => (
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                                     alt="Image"
                                 />
-                                <Link href="/contact">
+                                <Link href="/contact/">
                                     <a className="btn v4">
                                         {t(
                                             'FaqSection::Call back service by staff'

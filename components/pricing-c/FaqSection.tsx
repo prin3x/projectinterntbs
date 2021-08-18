@@ -1,4 +1,6 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
@@ -12,7 +14,9 @@ const FaqSection = ({ t }: any) => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h2 className="section_title">ให้คุณใช้งาน ThaiBulkSMS ได้อย่างไร้กังวล</h2>
+                        <h2 className="section_title">
+                            ให้คุณใช้งาน ThaiBulkSMS ได้อย่างไร้กังวล
+                        </h2>
                     </div>
                 </div>
                 <div className="row justify-content-md-center secFaqTBS">
@@ -24,7 +28,10 @@ const FaqSection = ({ t }: any) => {
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/imgFAQ01.png`}
                                     alt="Image"
                                 />
-                                <p>ด้วยยอดผู้ใช้ 200,000 คน และให้บริการมากกว่า 3,000 บริษัท</p>
+                                <p>
+                                    ด้วยยอดผู้ใช้ 200,000 คน และให้บริการมากกว่า
+                                    3,000 บริษัท
+                                </p>
                                 <a href="">ทำไมเราจึงส่งถึงไว?</a>
                             </div>
                             <div className="col-md-4 faqTBS">
@@ -433,7 +440,7 @@ const FaqSection = ({ t }: any) => {
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                                         alt="Image"
                                     />
-                                    <Link href="/contact">
+                                    <Link href="/contact/">
                                         <a className="btn v4">
                                             {t(
                                                 'FaqSection::Call back service by staff'

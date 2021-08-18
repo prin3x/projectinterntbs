@@ -1,4 +1,6 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 import PropTypes from 'prop-types';
 import * as React from 'react';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
@@ -378,7 +380,7 @@ const FirstPurchase = ({ t, packages, packagesNormal }: any) => {
                                     'AllPricing::Not found your ideal choice yet?'
                                 )}
                             </h5>
-                            <Link href="/contact">
+                            <Link href="/contact/">
                                 <a className="btn v3">
                                     {t('AllPricing::Contact our sales team')}
                                 </a>

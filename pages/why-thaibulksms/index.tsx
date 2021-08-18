@@ -25,7 +25,22 @@ const WhyThaibulksms = ({ t }: any) => (
                 name="viewport"
                 content="width=device-width, initial-scale=1.0"
             />
-            <NextSeo openGraph={seo.openGraph} />
+            <meta name="twitter:title" content={seo.openGraph.title} />
+            <meta
+                name="twitter:description"
+                content={seo.openGraph.description}
+            />
+            <meta
+                name="twitter:image:src"
+                content={seo.openGraph.images[0].url}
+            />
+            <NextSeo
+                openGraph={seo.openGraph}
+                twitter={{
+                    site: seo.openGraph.site_name,
+                    cardType: seo.openGraph.type,
+                }}
+            />
         </Head>
         {/* <Proloader /> */}
         <div className="page_wrapper">

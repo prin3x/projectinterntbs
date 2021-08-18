@@ -1,36 +1,44 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
-const PricingSection = ({ }: any) => {
+const PricingSection = ({}: any) => {
     React.useEffect(() => {}, []);
     return (
-
         <div
             className="pricing-section position-relative pricingB__top lazyload"
             data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-pricingB.png`}
         >
             <div className="container pricing">
-                <h1 className="headPricing">บริการส่ง SMS ออนไลน์ ราคาถูก<br/><br/>เพียง <span>0.21 บาท/ข้อความ</span></h1>
-                <p className="subPricingB">ผู้ให้บริการ SMS อันดับ 1 ของไทย ราคาถูก ส่งไว<br />มั่นใจได้ในความเสถียร ครบจบในที่เดียว</p>
+                <h1 className="headPricing">
+                    บริการส่ง SMS ออนไลน์ ราคาถูก
+                    <br />
+                    <br />
+                    เพียง <span>0.21 บาท/ข้อความ</span>
+                </h1>
+                <p className="subPricingB">
+                    ผู้ให้บริการ SMS อันดับ 1 ของไทย ราคาถูก ส่งไว
+                    <br />
+                    มั่นใจได้ในความเสถียร ครบจบในที่เดียว
+                </p>
                 <ul className="btnPriceT">
                     <li>
                         <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
                             className="btn v3"
                         >
-                           ทดลองส่งฟรี
+                            ทดลองส่งฟรี
                         </a>
                     </li>
                     <li>
-                        <Link href="/pricing">
-                            <a className="btn v5">
-                                ดูราคาแพ็กเกจ
-                            </a>
+                        <Link href="/pricing/">
+                            <a className="btn v5">ดูราคาแพ็กเกจ</a>
                         </Link>
                     </li>
                 </ul>
-                <div  className="brandPrice">
+                <div className="brandPrice">
                     <div className="imgBrandPrice">
                         <img
                             className="lazyload"

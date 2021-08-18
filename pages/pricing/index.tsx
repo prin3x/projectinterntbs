@@ -25,11 +25,24 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
                     rel="canonical"
                     href="https://www.thaibulksms.com/pricing/"
                 />
+                <meta name="twitter:title" content={seo.openGraph.title} />
+                <meta
+                    name="twitter:description"
+                    content={seo.openGraph.description}
+                />
+                <meta
+                    name="twitter:image:src"
+                    content={seo.openGraph.images[0].url}
+                />
             </Head>
             <NextSeo
                 openGraph={seo.openGraph}
                 title={t('meta::title')}
                 description={t('meta::description')}
+                twitter={{
+                    site: seo.openGraph.site_name,
+                    cardType: seo.openGraph.type,
+                }}
             />
             <div className="page_wrapper">
                 <PricingSection />

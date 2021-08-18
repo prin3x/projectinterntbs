@@ -44,7 +44,7 @@ const SmsSectionV3 = ({ t }: any) => (
                             </div>
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_field">
-                                    <Link href="/contact">
+                                    <Link href="/contact/">
                                         <a href={``} className="btn v8">
                                             {t(
                                                 'SmsSection::Request a quotation slip'

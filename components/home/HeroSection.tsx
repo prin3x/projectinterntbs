@@ -1,4 +1,6 @@
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 import PropTypes from 'prop-types';
 const HeroSectionV2 = ({ t }: any) => (
     // <div
@@ -33,7 +35,7 @@ const HeroSectionV2 = ({ t }: any) => (
                                 </a>
                             </li>
                             <li>
-                                <Link href="/pricing">
+                                <Link href="/pricing/">
                                     <a className="btn v5">
                                         {t('HeroSection::View package prices')}
                                     </a>

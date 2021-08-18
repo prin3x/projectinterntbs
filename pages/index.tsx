@@ -40,11 +40,24 @@ const Homepage = ({ t }: any) => (
                     content="width=device-width, initial-scale=1.0"
                 />
                 {/* <link rel="canonical" href="https://www.thaibulksms.com/" /> */}
+                <meta name="twitter:title" content={seo.openGraph.title} />
+                <meta
+                    name="twitter:description"
+                    content={seo.openGraph.description}
+                />
+                <meta
+                    name="twitter:image:src"
+                    content={seo.openGraph.images[0].url}
+                />
             </Head>
             <NextSeo
                 openGraph={seo.openGraph}
                 title={t('meta::title')}
                 description={t('meta::description')}
+                twitter={{
+                    site: seo.openGraph.site_name,
+                    cardType: seo.openGraph.type,
+                }}
             />
             {/* <Proloader /> */}
             <div className="page_wrapper">

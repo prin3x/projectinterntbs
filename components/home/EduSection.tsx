@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
-import { withTranslation, Link } from '../../i18n';
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 const EduSection = ({ t }: any) => (
     <div className="edu_section">
         <div className="container">
@@ -12,7 +14,7 @@ const EduSection = ({ t }: any) => (
                             )}
                         </h2>
                         {/* <a href="https://www.thaibulksms.com/blog/">{t('EduSection::View all contents')}</a> */}
-                        <Link href="/resource">
+                        <Link href="/resource/">
                             {t('EduSection::View all contents')}
                         </Link>
                     </div>

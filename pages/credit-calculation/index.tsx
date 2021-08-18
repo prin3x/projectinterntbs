@@ -1,20 +1,19 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 // import Proloader from '../../components/Proloader';
-import HeroSection from '../../components/whitelist/HeroSection';
-import SmsSection from '../../components/whitelist/SmsSection';
-import SimpleIconSection from '../../components/whitelist/SimpleIconSection';
-import TrackSection from '../../components/whitelist/TrackSection';
-import CtaSection from '../../components/whitelist/CtaSection';
+import HeroSection from '../../components/credit-calculation/HeroSection';
+import MultismsSection from '../../components/credit-calculation/MultismsSection';
+import TestCountSection from '../../components/credit-calculation/TestCountSection';
+import TableTextSection from '../../components/credit-calculation/TableTextSection';
+import CtaSection from '../../components/credit-calculation/CtaSection';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import { seo } from '../../components/seo/whitelist';
+import { seo } from '../../components/seo/credit-calculation';
 import { withTranslation } from '../../i18n';
-const whitelist = ({ t }: any) => (
+const credit = ({ t }: any) => (
     <Layout>
         <Head>
-            <meta name="title" content={t('meta::title')} />
             <meta name="keywords" content={t('meta::keywords')} />
             <meta name="author" content="" />
             <meta
@@ -30,22 +29,22 @@ const whitelist = ({ t }: any) => (
         {/* <Proloader /> */}
         <div className="page_wrapper">
             <HeroSection />
-            <SmsSection />
-            <SimpleIconSection />
-            <TrackSection />
+            <MultismsSection />
+            <TestCountSection />
+            <TableTextSection />
             <CtaSection />
         </div>
         <BacktoTop />
     </Layout>
 );
-// whitelist.getInitialProps = async () => ({
-//   namespacesRequired: ['whitelistMeta'],
+// credit.getInitialProps = async () => ({
+//   namespacesRequired: ['creditMeta'],
 // });
-export default withTranslation('whitelist')(whitelist);
+export default withTranslation('credit-calculation')(credit);
 export const getStaticProps = async () => {
     return {
         props: {
-            namespacesRequired: ['whitelist'],
+            namespacesRequired: ['credit-calculation'],
         },
     };
 };

@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
-import { Link, withTranslation } from '../../i18n';
+
+import { withTranslation } from '../../i18n';
+import Link from 'next/link';
+
 const WhyPriceSection = ({ t }: any) => (
     <div className="simple_icon_section v2 bg-whyBottom">
         <div className="container">
@@ -141,13 +144,13 @@ const WhyPriceSection = ({ t }: any) => (
                     </div>
                 </div>
                 <div className="col-md-12 text-center">
-                    <Link href="/product">
+                    <Link href="/product/">
                         <a className="btn v3 whyPricing">
                             {t('PriceSection::Learn more')}
                         </a>
                     </Link>
 
-                    <Link href="/pricing">
+                    <Link href="/pricing/">
                         <a className="btn v5 whyPricing">
                             {t('PriceSection::View Package Prices')}
                         </a>
