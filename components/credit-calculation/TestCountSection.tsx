@@ -43,14 +43,10 @@ const TestCountSection = ({}: any) => {
         let creditUsed: number = msgCount > 0 ? 1 : 0;
 
         if (!unicodeRegex.test(previewMessage)) {
-            console.log('th');
-
             setIsUnicode(() => {
                 return false;
             });
         } else {
-            console.log('eng');
-
             setIsUnicode(() => {
                 return true;
             });

@@ -10,6 +10,7 @@ import {
     quickRegisterStep1,
     quickRegisterStep2,
 } from '../../services/user/user.service';
+import { lstat } from 'fs/promises';
 
 // from '../../services/user/user.service';
 const TestQuickregister = ({ t }: any) => {
@@ -49,7 +50,7 @@ const TestQuickregister = ({ t }: any) => {
         let count: number = 0;
         let current_C: number = 0;
         if (v !== '') {
-            console.log(calculateCredit(v));
+            // console.log(calculateCredit(v));
             for (let i = 0; i < v.length; i++) {
                 if (
                     Constant.DOUBLE_BYTES_CHAR.includes(v.charCodeAt(i)) &&
@@ -118,7 +119,7 @@ const TestQuickregister = ({ t }: any) => {
         let creditUsed: number = msgCount > 0 ? 1 : 0;
 
         if (!unicodeRegex.test(previewMessage)) {
-            console.log('th');
+            // console.log('th');
 
             setIsUnicode(() => {
                 setCharMaxLength(Constant.MAX_CHAR_LENGTH_UNI);
@@ -129,14 +130,16 @@ const TestQuickregister = ({ t }: any) => {
                 setMsgCount(160);
             }
         } else {
-            console.log('eng');
+            // console.log('eng');
 
             setIsUnicode(() => {
                 setCharMaxLength(Constant.MAX_CHAR_LENGTH_ASC);
                 return true;
             });
             if (checkIsMoreThanMax()) {
-                settextSms(textSms.slice(0, 70));
+                const last = textSms.length;
+                const start = last - 70;
+                settextSms(textSms.slice(start, last));
                 setMsgCount(70);
             }
         }
@@ -188,7 +191,7 @@ const TestQuickregister = ({ t }: any) => {
         ) {
             setexistPhoneError(true);
         }
-        console.log(resultStep1);
+        // console.log(resultStep1);
     };
 
     const submitStep2 = async () => {
@@ -199,7 +202,7 @@ const TestQuickregister = ({ t }: any) => {
         if ((await resultStep2.error.code) === '') {
             await changeFase(3);
         } else {
-            console.log('RE2' + resultStep2.error.code);
+            // console.log('RE2' + resultStep2.error.code);
         }
         if (
             resultStep2.error.code === 'quickRegisterSecondStep.pin.incorrect'
@@ -238,7 +241,7 @@ const TestQuickregister = ({ t }: any) => {
     function setreCap(value: any) {
         setreCaptchaOK(true);
         setreCaptcha(value);
-        console.log(value);
+        // console.log(value);
     }
     useEffect(() => {
         alterMaxMsgLenth();
@@ -286,7 +289,7 @@ const TestQuickregister = ({ t }: any) => {
                                         className="phone"
                                         onChange={(event) => {
                                             setPhone(event.target.value);
-                                            console.log(event.target.value);
+                                            // console.log(event.target.value);
                                             setexistPhoneError(false);
                                             if (
                                                 event.target.value.length === 10
@@ -363,6 +366,9 @@ const TestQuickregister = ({ t }: any) => {
                                     <ReCAPTCHA
                                         sitekey={`${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_KEY}`}
                                         onChange={setreCap}
+                                        onExpired={() => {
+                                            setreCaptchaOK(false);
+                                        }}
                                     />
                                 </div>
                                 <button
