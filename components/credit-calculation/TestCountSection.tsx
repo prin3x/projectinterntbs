@@ -70,14 +70,8 @@ const TestCountSection = ({}: any) => {
                     // current_C++;
                 }
 
-                if (count >= charMaxLength) {
-                    setMsgCount(charMaxLength);
-                    setPreviewMessage(v.slice(0, i + 1));
-                    return;
-                } else {
-                    setMsgCount(count);
-                    setPreviewMessage(v);
-                }
+                setMsgCount(count);
+                setPreviewMessage(v);
             }
         } else {
             setMsgCount(0);
@@ -91,14 +85,12 @@ const TestCountSection = ({}: any) => {
             console.log('th');
 
             setIsUnicode(() => {
-                setCharMaxLength(Constant.MAX_CHAR_LENGTH_UNI);
                 return false;
             });
         } else {
             console.log('eng');
 
             setIsUnicode(() => {
-                setCharMaxLength(Constant.MAX_CHAR_LENGTH_ASC);
                 return true;
             });
         }
@@ -107,7 +99,7 @@ const TestCountSection = ({}: any) => {
             ? Constant.TH_MSG_DEFAULT_CHAR_LENGTH
             : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
 
-        const isMoreThanOneCopy: boolean = msgCount > maxMsgPerCopy;
+        // const isMoreThanOneCopy: boolean = msgCount > maxMsgPerCopy;
 
         const nextMsgLengthPerCopy: number = isUnicode
             ? Constant.TH_NEXT_CHAR_LENGTH
@@ -115,14 +107,16 @@ const TestCountSection = ({}: any) => {
 
         setMaxMsgLengthPerCopy(maxMsgPerCopy);
 
-        if (isMoreThanOneCopy) {
-            creditUsed = Math.ceil(msgCount / nextMsgLengthPerCopy);
-            let newLength: number = nextMsgLengthPerCopy * creditUsed;
-
-            setCreditUsage(creditUsed);
-
-            setMaxMsgLengthPerCopy(newLength);
-            console.log('toon' + creditUsage, maxMsgLengthPerCopy);
+        creditUsed = Math.ceil(msgCount / nextMsgLengthPerCopy);
+        let newLength: number = nextMsgLengthPerCopy * creditUsed;
+        if (creditUsage <= 1) {
+            if (!unicodeRegex.test(previewMessage)) {
+                setCharMaxLength(Constant.ENG_MSG_DEFAULT_CHAR_LENGTH);
+            } else {
+                setCharMaxLength(Constant.TH_MSG_DEFAULT_CHAR_LENGTH);
+            }
+        } else {
+            setCharMaxLength(newLength);
         }
 
         setCreditUsage(creditUsed);
@@ -160,7 +154,7 @@ const TestCountSection = ({}: any) => {
                                     ></textarea>
                                     <p className="textMessage">ข้อความ</p>
                                     <p className="textCount">
-                                        {msgCount}/{maxMsgLengthPerCopy}
+                                        {msgCount}/{charMaxLength}
                                     </p>
                                     <div className="countCredit">
                                         คิดเป็น{' '}
