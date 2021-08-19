@@ -11,53 +11,14 @@ const TestCountSection = ({}: any) => {
     );
     const unicodeRegex = new RegExp(/[^\x00-\x7F]+/g);
     const [previewMessage, setPreviewMessage] = useState<string>('');
-    const [maxMsgLengthPerCopy, setMaxMsgLengthPerCopy] = useState<number>(160);
+
     const [creditUsage, setCreditUsage] = useState<number>(0);
-    function calculateCredit(msg) {
-        if (msg !== '') {
-            let msgLength = msg.length;
-            let totalCredits = 0;
-            const pattern = new RegExp('[^\u0020-\u007F\u00A0-\u00BF]');
-            const patternDouble = new RegExp(
-                '[^\u005B-\u005E\u007B-\u007E\u20AC]'
-            );
-            let rtn = {
-                isUnicode: false,
-                msgPerCredit: 160,
-                msgLength: msg.length ? msg.length : 0,
-                msg: msg,
-                credit: 1,
-            };
-            console.log(pattern.test(msg));
-            if (pattern.test(msg)) {
-                rtn.isUnicode = true;
-                rtn.msgPerCredit = 70;
-
-                if (msgLength > 70) rtn.msgPerCredit = 67;
-            } else {
-                rtn.isUnicode = false;
-                if (msgLength > 160) rtn.msgPerCredit = 153;
-            }
-
-            rtn.credit = Math.ceil(msgLength / rtn.msgPerCredit);
-            totalCredits = totalCredits + rtn.credit;
-
-            // Add doublebyte
-            if (rtn.isUnicode === false) {
-                rtn.msgLength = rtn.msgLength + msg.match(patternDouble).length;
-            }
-
-            console.log(rtn);
-            return rtn;
-        }
-    }
 
     function addNewChar(v) {
         // settextSms(v);
         let count: number = 0;
         // let current_C: number = 0;
         if (v !== '') {
-            console.log(calculateCredit(v));
             for (let i = 0; i < v.length; i++) {
                 if (
                     Constant.DOUBLE_BYTES_CHAR.includes(v.charCodeAt(i)) &&
@@ -105,16 +66,10 @@ const TestCountSection = ({}: any) => {
             ? Constant.TH_NEXT_CHAR_LENGTH
             : Constant.ENG_NEXT_CHAR_LENGTH;
 
-        setMaxMsgLengthPerCopy(maxMsgPerCopy);
-
         creditUsed = Math.ceil(msgCount / nextMsgLengthPerCopy);
         let newLength: number = nextMsgLengthPerCopy * creditUsed;
         if (creditUsage <= 1) {
-            if (!unicodeRegex.test(previewMessage)) {
-                setCharMaxLength(Constant.ENG_MSG_DEFAULT_CHAR_LENGTH);
-            } else {
-                setCharMaxLength(Constant.TH_MSG_DEFAULT_CHAR_LENGTH);
-            }
+            setCharMaxLength(maxMsgPerCopy);
         } else {
             setCharMaxLength(newLength);
         }
