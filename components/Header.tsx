@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
 import HeaderSubmodule from '../tbs_submodule/HeaderSubmodule.js';
-
+import MyHeader from '../components/myHeader';
+import { useRouter } from 'next/router';
 const options = [
     { value: 'TH', text: 'TH' },
     { value: 'EN', text: 'EN' },
@@ -18,6 +19,7 @@ const MySelect = options.map((list) => {
 });
 
 const Header = ({ t }: any) => {
+    const { pathname } = useRouter();
     const [lang, setLang] = useState('TH');
     const [isLogin, setIsLogin] = useState(
         Cookie.get('PASSCODE') ? true : false
@@ -55,7 +57,11 @@ const Header = ({ t }: any) => {
         MySelect,
     };
 
-    return <HeaderSubmodule {...headerConfig} />;
+    return pathname === '/pricing-c' || pathname === '/pricing-c' ? (
+        <MyHeader {...headerConfig} />
+    ) : (
+        <HeaderSubmodule {...headerConfig} />
+    );
 };
 Header.getInitialProps = async () => ({
     namespacesRequired: ['Header'],
