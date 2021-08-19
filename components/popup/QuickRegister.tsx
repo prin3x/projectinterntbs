@@ -10,7 +10,6 @@ import {
     quickRegisterStep1,
     quickRegisterStep2,
 } from '../../services/user/user.service';
-import { lstat } from 'fs/promises';
 
 // from '../../services/user/user.service';
 const TestQuickregister = ({ t }: any) => {
@@ -75,43 +74,6 @@ const TestQuickregister = ({ t }: any) => {
             }
         } else {
             setMsgCount(0);
-        }
-    }
-
-    function calculateCredit(msg) {
-        if (msg !== '') {
-            let msgLength = msg.length;
-            let totalCredits = 0;
-            const pattern = new RegExp('[^\u0020-\u007F\u00A0-\u00BF]');
-            const patternDouble = new RegExp(
-                '[^\u005B-\u005E\u007B-\u007E\u20AC]'
-            );
-            let rtn = {
-                isUnicode: false,
-                msgPerCredit: 160,
-                msgLength: msg.length ? msg.length : 0,
-                msg: msg,
-                credit: 1,
-            };
-
-            if (pattern.test(msg)) {
-                rtn.isUnicode = true;
-                rtn.msgPerCredit = 70;
-
-                if (msgLength > 70) rtn.msgPerCredit = 67;
-            } else {
-                rtn.isUnicode = false;
-                if (msgLength > 160) rtn.msgPerCredit = 153;
-            }
-
-            rtn.credit = Math.ceil(msgLength / rtn.msgPerCredit);
-            totalCredits = totalCredits + rtn.credit;
-
-            // Add doublebyte
-            if (rtn.isUnicode === false)
-                rtn.msgLength = rtn.msgLength + msg.match(patternDouble).length;
-
-            return rtn;
         }
     }
 
@@ -253,7 +215,7 @@ const TestQuickregister = ({ t }: any) => {
                 // type="submit"
                 onClick={() => openModal()}
             >
-                {t('SmsSection::TestQuickregister::Confirm number')}
+                ทดลองส่งข้อความ
             </button>
 
             <div id="ElementModal">
@@ -448,7 +410,9 @@ const TestQuickregister = ({ t }: any) => {
                                         submitStep2().then(() => setLoad(true));
                                     }}
                                 >
-                                    ยืนยันเบอร์
+                                    {t(
+                                        'SmsSection::TestQuickregister::Confirm number'
+                                    )}
                                 </button>
                             </div>
                         ) : (
