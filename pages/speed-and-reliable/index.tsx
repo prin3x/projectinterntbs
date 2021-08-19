@@ -10,7 +10,7 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/speed-and-reliable';
 import { withTranslation } from '../../i18n';
-const speed = ({ t }: any) => (
+const Speed = ({ t }: any) => (
     <Layout>
         <Head>
             <meta name="keywords" content={t('meta::keywords')} />
@@ -35,14 +35,14 @@ const speed = ({ t }: any) => (
         <BacktoTop />
     </Layout>
 );
-// speed.getInitialProps = async () => ({
-//   namespacesRequired: ['speedMeta'],
+// Speed.getInitialProps = async () => ({
+//   namespacesRequired: ['SpeedMeta'],
 // });
-export default withTranslation('speed-and-reliable')(speed);
+export default withTranslation('Speed-and-reliable')(Speed);
 export const getStaticProps = async () => {
     return {
         props: {
-            namespacesRequired: ['speed-and-reliable'],
+            namespacesRequired: ['Speed-and-reliable'],
         },
     };
 };

@@ -10,7 +10,7 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/whitelist';
 import { withTranslation } from '../../i18n';
-const whitelist = ({ t }: any) => (
+const Whitelist = ({ t }: any) => (
     <Layout>
         <Head>
             <meta name="keywords" content={t('meta::keywords')} />
@@ -38,11 +38,11 @@ const whitelist = ({ t }: any) => (
 // whitelist.getInitialProps = async () => ({
 //   namespacesRequired: ['whitelistMeta'],
 // });
-export default withTranslation('whitelist')(whitelist);
+export default withTranslation('Whitelist')(Whitelist);
 export const getStaticProps = async () => {
     return {
         props: {
-            namespacesRequired: ['whitelist'],
+            namespacesRequired: ['Whitelist'],
         },
     };
 };
