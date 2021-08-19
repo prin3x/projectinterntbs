@@ -10,7 +10,6 @@ import {
     quickRegisterStep1,
     quickRegisterStep2,
 } from '../../services/user/user.service';
-import { lstat } from 'fs/promises';
 
 // from '../../services/user/user.service';
 const TestQuickregister = ({ t }: any) => {
@@ -62,6 +61,13 @@ const TestQuickregister = ({ t }: any) => {
                     count++;
                     current_C++;
                 }
+                // if (checkIsMoreThanMax()) {
+                //     if (!unicodeRegex.test(previewMessage)) {
+                //         setCurrentCount(160);
+                //     } else {
+                //         setCurrentCount(70);
+                //     }
+                // }
                 setCurrentCount(current_C);
                 if (count >= charMaxLength) {
                     setMsgCount(charMaxLength);
@@ -78,43 +84,6 @@ const TestQuickregister = ({ t }: any) => {
         }
     }
 
-    function calculateCredit(msg) {
-        if (msg !== '') {
-            let msgLength = msg.length;
-            let totalCredits = 0;
-            const pattern = new RegExp('[^\u0020-\u007F\u00A0-\u00BF]');
-            const patternDouble = new RegExp(
-                '[^\u005B-\u005E\u007B-\u007E\u20AC]'
-            );
-            let rtn = {
-                isUnicode: false,
-                msgPerCredit: 160,
-                msgLength: msg.length ? msg.length : 0,
-                msg: msg,
-                credit: 1,
-            };
-
-            if (pattern.test(msg)) {
-                rtn.isUnicode = true;
-                rtn.msgPerCredit = 70;
-
-                if (msgLength > 70) rtn.msgPerCredit = 67;
-            } else {
-                rtn.isUnicode = false;
-                if (msgLength > 160) rtn.msgPerCredit = 153;
-            }
-
-            rtn.credit = Math.ceil(msgLength / rtn.msgPerCredit);
-            totalCredits = totalCredits + rtn.credit;
-
-            // Add doublebyte
-            if (rtn.isUnicode === false)
-                rtn.msgLength = rtn.msgLength + msg.match(patternDouble).length;
-
-            return rtn;
-        }
-    }
-
     function alterMaxMsgLenth() {
         let creditUsed: number = msgCount > 0 ? 1 : 0;
 
@@ -127,7 +96,9 @@ const TestQuickregister = ({ t }: any) => {
             });
             if (checkIsMoreThanMax()) {
                 settextSms(textSms.slice(0, 160));
-                setMsgCount(160);
+                setMsgCount(textSms.slice(0, 160).length);
+                setCurrentCount(textSms.slice(0, 160).length);
+                // setMsgCount(160);
             }
         } else {
             // console.log('eng');
@@ -140,7 +111,8 @@ const TestQuickregister = ({ t }: any) => {
                 const last = textSms.length;
                 const start = last - 70;
                 settextSms(textSms.slice(start, last));
-                setMsgCount(70);
+                setMsgCount(textSms.slice(start, last).length);
+                setCurrentCount(textSms.slice(start, last).length);
             }
         }
 
@@ -253,7 +225,7 @@ const TestQuickregister = ({ t }: any) => {
                 // type="submit"
                 onClick={() => openModal()}
             >
-                {t('SmsSection::TestQuickregister::Confirm number')}
+                ทดลองส่งข้อความ
             </button>
 
             <div id="ElementModal">
@@ -448,7 +420,9 @@ const TestQuickregister = ({ t }: any) => {
                                         submitStep2().then(() => setLoad(true));
                                     }}
                                 >
-                                    ยืนยันเบอร์
+                                    {t(
+                                        'SmsSection::TestQuickregister::Confirm number'
+                                    )}
                                 </button>
                             </div>
                         ) : (
