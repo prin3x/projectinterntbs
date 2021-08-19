@@ -61,6 +61,13 @@ const TestQuickregister = ({ t }: any) => {
                     count++;
                     current_C++;
                 }
+                // if (checkIsMoreThanMax()) {
+                //     if (!unicodeRegex.test(previewMessage)) {
+                //         setCurrentCount(160);
+                //     } else {
+                //         setCurrentCount(70);
+                //     }
+                // }
                 setCurrentCount(current_C);
                 if (count >= charMaxLength) {
                     setMsgCount(charMaxLength);
@@ -89,7 +96,9 @@ const TestQuickregister = ({ t }: any) => {
             });
             if (checkIsMoreThanMax()) {
                 settextSms(textSms.slice(0, 160));
-                setMsgCount(160);
+                setMsgCount(textSms.slice(0, 160).length);
+                setCurrentCount(textSms.slice(0, 160).length);
+                // setMsgCount(160);
             }
         } else {
             // console.log('eng');
@@ -102,7 +111,8 @@ const TestQuickregister = ({ t }: any) => {
                 const last = textSms.length;
                 const start = last - 70;
                 settextSms(textSms.slice(start, last));
-                setMsgCount(70);
+                setMsgCount(textSms.slice(start, last).length);
+                setCurrentCount(textSms.slice(start, last).length);
             }
         }
 
