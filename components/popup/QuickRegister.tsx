@@ -32,7 +32,7 @@ const TestQuickregister = ({ t }: any) => {
     const [msgCount, setMsgCount] = useState(0);
     const [currentCount, setCurrentCount] = useState(0);
     const [textSms, settextSms] = useState('');
-
+    const [textSmsOK, settextSmsOK] = useState(false);
     const [charMaxLength, setCharMaxLength] = useState(
         Constant.MAX_CHAR_LENGTH_ASC
     );
@@ -338,11 +338,20 @@ const TestQuickregister = ({ t }: any) => {
                                             if (e.target.value === '') {
                                                 e.target.value = '';
                                                 addNewChar('');
+                                                settextSmsOK(false);
                                             } else {
                                                 addNewChar(e.target.value);
+                                                settextSmsOK(true);
                                             }
                                         }}
                                     />
+                                    {!textSmsOK ? (
+                                        <label className="red">
+                                            กรุณากรอกข้อความ
+                                        </label>
+                                    ) : (
+                                        ''
+                                    )}
                                 </form>
                                 <div className="desc">
                                     ในระบบส่งเต็มรูปแบบ
@@ -357,9 +366,19 @@ const TestQuickregister = ({ t }: any) => {
                                     />
                                 </div>
                                 <button
-                                    disabled={!(phoneOk && reCaptchaOK && load)}
+                                    disabled={
+                                        !(
+                                            phoneOk &&
+                                            reCaptchaOK &&
+                                            load &&
+                                            textSmsOK
+                                        )
+                                    }
                                     className={
-                                        phoneOk && reCaptchaOK && load
+                                        phoneOk &&
+                                        reCaptchaOK &&
+                                        load &&
+                                        textSmsOK
                                             ? 'active'
                                             : 'disable'
                                     }
