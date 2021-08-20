@@ -6,7 +6,7 @@ import * as React from 'react';
 import TagManager from 'react-gtm-module';
 import Swal from 'sweetalert2';
 import appConfig from '../../appConfig';
-import { Link, withTranslation } from '../../i18n';
+import { withTranslation } from '../../i18n';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
 import { decodeTBSToken } from '../../services/user/user.service';
 

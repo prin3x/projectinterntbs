@@ -1,5 +1,4 @@
 import { withTranslation } from '../../i18n';
-import Link from 'next/link';
 
 import PropTypes from 'prop-types';
 import * as React from 'react';
