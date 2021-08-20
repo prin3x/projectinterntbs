@@ -58,14 +58,26 @@ const TestCountSection = ({}: any) => {
 
         // const isMoreThanOneCopy: boolean = msgCount > maxMsgPerCopy;
         var nextMsgLengthPerCopy: number = 0;
-        if (creditUsage <= 1) {
-            nextMsgLengthPerCopy = isUnicode
-                ? Constant.TH_MSG_DEFAULT_CHAR_LENGTH
-                : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
+        if (isUnicode) {
+            if (msgCount <= 70) {
+                nextMsgLengthPerCopy = isUnicode
+                    ? Constant.TH_MSG_DEFAULT_CHAR_LENGTH
+                    : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
+            } else {
+                nextMsgLengthPerCopy = isUnicode
+                    ? Constant.TH_NEXT_CHAR_LENGTH
+                    : Constant.ENG_NEXT_CHAR_LENGTH;
+            }
         } else {
-            nextMsgLengthPerCopy = isUnicode
-                ? Constant.TH_NEXT_CHAR_LENGTH
-                : Constant.ENG_NEXT_CHAR_LENGTH;
+            if (msgCount <= 160) {
+                nextMsgLengthPerCopy = isUnicode
+                    ? Constant.TH_MSG_DEFAULT_CHAR_LENGTH
+                    : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
+            } else {
+                nextMsgLengthPerCopy = isUnicode
+                    ? Constant.TH_NEXT_CHAR_LENGTH
+                    : Constant.ENG_NEXT_CHAR_LENGTH;
+            }
         }
 
         creditUsed = Math.ceil(msgCount / nextMsgLengthPerCopy);
