@@ -26,15 +26,15 @@ const PricingSection = ({}: any) => {
                 <ul className="btnPriceT">
                     <li>
                         <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
-                            className="btn v3"
+                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                             target="_blank"
+                            className="btn v3"
                         >
                             ทดลองส่งฟรี
                         </a>
                     </li>
                     <li>
-                        <Link href="/pricing/">
+                        <Link href="#all-pricing">
                             <a className="btn v5">ดูราคาแพ็กเกจ</a>
                         </Link>
                     </li>
@@ -78,13 +78,6 @@ const PricingSection = ({}: any) => {
                 </div>
                 <div className="textScroll">
                     <p>ทำไมถึงควรใช้ ThaiBulkSMS</p>
-                    <a href="">
-                        <img
-                            className="lazyload"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/btnScrollDown.png`}
-                            alt="Image"
-                        />
-                    </a>
                 </div>
             </div>
 

@@ -225,6 +225,7 @@ const TestQuickregister = ({ t }: any) => {
             <button
                 className="btn v2 sms-btn-text"
                 // type="submit"
+                style={{ width: '200px' }}
                 onClick={() => openModal()}
             >
                 ทดลองส่งข้อความ
@@ -452,7 +453,7 @@ const TestQuickregister = ({ t }: any) => {
                                 <Link
                                     href={
                                         process.env.NEXT_PUBLIC_DOMAIN_URL +
-                                        '/pricing'
+                                        '/pricing/'
                                     }
                                 >
                                     <button

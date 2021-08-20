@@ -61,10 +61,18 @@ const SmsSection = ({}: any) => {
                                     <ul>
                                         <li>
                                             ส่งข้อความจากแพลตฟอร์มของคุณด้วย{' '}
-                                            <a href="">SMS API ที่ได้มาตรฐาน</a>
+                                            <a
+                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-api/`}
+                                            >
+                                                SMS API ที่ได้มาตรฐาน
+                                            </a>
                                         </li>
                                         <li>
-                                            <a href="">ระบบส่ง OTP พร้อมใช้</a>{' '}
+                                            <a
+                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-api/`}
+                                            >
+                                                ระบบส่ง OTP พร้อมใช้
+                                            </a>{' '}
                                             ไม่ต้องเขียนโปรแกรมเพิ่ม
                                         </li>
                                     </ul>
@@ -76,14 +84,15 @@ const SmsSection = ({}: any) => {
                                 <ul className="btnPriceUser">
                                     <li>
                                         <a
-                                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
+                                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                                             className="btn v3"
+                                            target="_blank"
                                         >
-                                            ทดลองส่งฟรี
+                                            ทดลองใช้ระบบฟรี
                                         </a>
                                     </li>
                                     <li>
-                                        <Link href="/pricing/">
+                                        <Link href="#all-pricing">
                                             <a className="btn v5">
                                                 ดูราคาแพ็กเกจ
                                             </a>

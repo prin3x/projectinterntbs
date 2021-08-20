@@ -29,29 +29,35 @@ const PromoSection = ({}: any) => (
                         <p>
                             มีรายงานการส่งที่เจาะลึก
                             เป็นเจ้าเดียวที่สามารถรู้ว่าผู้รับเปิดข้อความหรือไม่{' '}
-                            <a href="">การันตีส่งถึงทุกเบอร์</a>{' '}
+                            <a
+                                target="_blank"
+                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/whitelist/`}
+                            >
+                                การันตีส่งถึงทุกเบอร์
+                            </a>{' '}
                             แม้แต่เบอร์ที่แจ้งบล็อก SMS โฆษณาไว้กับเครือข่าย{' '}
                             <span>หากส่งไม่ถึง เราพร้อมคืนเครดิตให้</span>
                         </p>
                         <div>
+                            <Link href="#all-pricing">
+                                <a className="btn v2"> ดูราคาแพ็กเกจ</a>
+                            </Link>
                             <a
                                 href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                className="btn v2"
-                            >
-                                ดูราคาแพ็กเกจ
-                            </a>
-                            <a
-                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                target="_blank"
                                 className="btn v11"
                             >
                                 ทดลองใช้ระบบฟรี
                             </a>
                         </div>
-                        <Link href="/product/otp">
+                        <a
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-api/`}
+                            target="_blank"
+                        >
                             <a className="link">
                                 อ่านเพิ่มเติมเกี่ยวกับการวัดผล SMS
                             </a>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -70,19 +76,22 @@ const PromoSection = ({}: any) => (
                         <h3>ส่ง OTP ถึงทันที ไม่ Delay</h3>
                         <p>
                             ส่ง OTP ถึงลูกค้าแบบไม่ต้องรอ พร้อม{' '}
-                            <a href="">ระบบ OTP พร้อมใช้</a> ให้นำไปส่ง OTP
-                            ได้ทันที โดยไม่ต้องเขียนโปรแกรมเพิ่ม
+                            <a
+                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/otp/`}
+                                target="_blank"
+                            >
+                                ระบบ OTP พร้อมใช้
+                            </a>{' '}
+                            ให้นำไปส่ง OTP ได้ทันที โดยไม่ต้องเขียนโปรแกรมเพิ่ม
                         </p>
                         <div>
-                            <a
-                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                className="btn v2"
-                            >
-                                ดูราคาแพ็กเกจ
-                            </a>
+                            <Link href="#all-pricing">
+                                <a className="btn v2">ดูราคาแพ็กเกจ</a>
+                            </Link>
                             <a
                                 href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                                 className="btn v11"
+                                target="_blank"
                             >
                                 ทดลองใช้ระบบฟรี
                             </a>
@@ -104,30 +113,37 @@ const PromoSection = ({}: any) => (
                     <div className="service_feature_text">
                         <h3>ส่งข้อความแจ้งเตือนด้วย API</h3>
                         <p>
-                            เชื่อมต่อกับระบบคุณด้วย <a href="">SMS API</a>{' '}
+                            เชื่อมต่อกับระบบคุณด้วย{' '}
+                            <a
+                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-api/`}
+                                target="_blank"
+                            >
+                                SMS API
+                            </a>{' '}
                             เพื่อส่งข้อความแจ้งเตือนนัดหมาย แจ้งสถานะขนส่ง ฯลฯ
                             มี SDK รองรับหลายภาษาคู่มือการใช้งานที่ทำตามได้ง่าย
                             พร้อมทีมเทคนิคคอยตอบคำถามและช่วยแก้ปัญหาแม้อยู่นอกเวลาทำการ
                         </p>
                         <div>
-                            <a
-                                href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                className="btn v2"
-                            >
-                                ดูราคาแพ็กเกจ
-                            </a>
+                            <Link href="#all-pricing">
+                                <a className="btn v2">ดูราคาแพ็กเกจ</a>
+                            </Link>
                             <a
                                 href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                                 className="btn v11"
+                                target="_blank"
                             >
                                 ทดลองใช้ระบบฟรี
                             </a>
                         </div>
-                        <Link href="/product/otp">
+                        <a
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/developer/`}
+                            target="_blank"
+                        >
                             <a className="link">
                                 ดูข้อมูลที่จำเป็นสำหรับนักพัฒนา
                             </a>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

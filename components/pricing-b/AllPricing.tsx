@@ -356,7 +356,11 @@ const AllPricing = ({ t, packages }: any) => {
                                 ),
                             }}
                         />
-                        <a href="" className="LowThanOther">
+                        <a
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/lowprice/`}
+                            className="LowThanOther"
+                            target="_blank"
+                        >
                             ทำไม SMS ของ ThaiBulkSMS ถึงราคาถูกกว่าที่อื่น?{' '}
                         </a>
                         <div className="row">
@@ -371,13 +375,16 @@ const AllPricing = ({ t, packages }: any) => {
                                                     ),
                                                 }}
                                             ></h3>
-                                            <Link href="/contact/">
+                                            <a
+                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`}
+                                                target="_blank"
+                                            >
                                                 <button className="btn v2 sms-btn-text">
                                                     {t(
                                                         'AllPricing::Contact our sales team'
                                                     )}
                                                 </button>
-                                            </Link>
+                                            </a>
                                         </div>
                                         <div className="col-lg-4 col-md-6 col-sm-12">
                                             <p className="head-price">

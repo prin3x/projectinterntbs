@@ -4,7 +4,7 @@ import TestQuickregister from '../quickregister/testQuickregister';
 import 'react-modal-video/scss/modal-video.scss';
 import { useState } from 'react';
 import Cookie from 'js-cookie';
-const SmsSection = ({  }: any) => {
+const SmsSection = ({}: any) => {
     const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false);
     return (
         <div
@@ -15,8 +15,17 @@ const SmsSection = ({  }: any) => {
                 <div className="row">
                     <div className="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 col-md-12 ">
                         <div className="sms_text">
-                            <h3>ส่งไว ภายใน 1 วินาที รองรับการส่งได้หลักล้านต่อวัน</h3>
-                            <p>ให้ทุกการส่ง SMS ออกจากระบบเป็นไปอย่างรวดเร็ว ให้คุณมั่นใจได้ว่า OTP จะส่งถึงลูกค้าได้แบบไม่ต้องรอ อีกทั้งตัว Server ของ ThaiBulkSMS มีความเสถียรสูงพร้อมทีมผู้เชี่ยวชาญด้านเทคนิคคอยสแตนด์บาย</p>
+                            <h3>
+                                ส่งไว ภายใน 1 วินาที
+                                รองรับการส่งได้หลักล้านต่อวัน
+                            </h3>
+                            <p>
+                                ให้ทุกการส่ง SMS ออกจากระบบเป็นไปอย่างรวดเร็ว
+                                ให้คุณมั่นใจได้ว่า OTP
+                                จะส่งถึงลูกค้าได้แบบไม่ต้องรอ อีกทั้งตัว Server
+                                ของ ThaiBulkSMS
+                                มีความเสถียรสูงพร้อมทีมผู้เชี่ยวชาญด้านเทคนิคคอยสแตนด์บาย
+                            </p>
                         </div>
                     </div>
                     <div className="col-md-12">
@@ -24,14 +33,17 @@ const SmsSection = ({  }: any) => {
                             <div className="row">
                                 <div className="col-lg-4 col-md-6">
                                     <div className="sms_feature_item">
-                                        <p>จำนวนการส่ง SMS โดยเฉลี่ย / วัน</p>
-                                        <p>2,000,000</p>
+                                        <p>
+                                            จำนวนการส่ง SMS สูงสุดที่รองรับ /
+                                            นาที
+                                        </p>
+                                        <p>24,000</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="sms_feature_item">
-                                        <p>ระยะเวลาการส่ง SMS โดยเฉลี่ย</p>
-                                        <p>2.9 วินาที</p>
+                                        <p>จำนวนการส่ง SMS โดยเฉลี่ย / วัน</p>
+                                        <p>1,500,000+</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
@@ -44,7 +56,14 @@ const SmsSection = ({  }: any) => {
                         </div>
                     </div>
                     <div className="col-md-12 textCenter">
-                        <a href="" className="linkSMSfast">ทำไมระบบของ ThaiBulkSMS ถึงส่งเร็วและมีความเสถียรสูง?</a>
+                        <a
+                            className="linkSMSfast"
+                            target="_blank"
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/speed-and-reliable/`}
+                        >
+                            ทำไมระบบของ ThaiBulkSMS
+                            ถึงส่งเร็วและมีความเสถียรสูง?
+                        </a>
                     </div>
                 </div>
                 {!isLogin && <TestQuickregister />}
