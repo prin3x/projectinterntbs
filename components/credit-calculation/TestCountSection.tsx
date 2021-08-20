@@ -57,10 +57,16 @@ const TestCountSection = ({}: any) => {
             : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
 
         // const isMoreThanOneCopy: boolean = msgCount > maxMsgPerCopy;
-
-        const nextMsgLengthPerCopy: number = isUnicode
-            ? Constant.TH_NEXT_CHAR_LENGTH
-            : Constant.ENG_NEXT_CHAR_LENGTH;
+        var nextMsgLengthPerCopy: number = 0;
+        if (creditUsage <= 1) {
+            nextMsgLengthPerCopy = isUnicode
+                ? Constant.TH_MSG_DEFAULT_CHAR_LENGTH
+                : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
+        } else {
+            nextMsgLengthPerCopy = isUnicode
+                ? Constant.TH_NEXT_CHAR_LENGTH
+                : Constant.ENG_NEXT_CHAR_LENGTH;
+        }
 
         creditUsed = Math.ceil(msgCount / nextMsgLengthPerCopy);
         let newLength: number = nextMsgLengthPerCopy * creditUsed;
