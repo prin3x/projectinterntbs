@@ -109,10 +109,12 @@ const TestQuickregister = ({ t }: any) => {
             });
             if (checkIsMoreThanMax()) {
                 const last = textSms.length;
-                const start = last - 70;
-                settextSms(textSms.slice(start, last));
-                setMsgCount(textSms.slice(start, last).length);
-                setCurrentCount(textSms.slice(start, last).length);
+                const firstText = textSms.slice(0, 69);
+                const lastText = textSms.slice(last - 1, last);
+                const text = firstText + lastText;
+                settextSms(text);
+                setMsgCount(text.length);
+                setCurrentCount(text.length);
             }
         }
 
