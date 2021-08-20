@@ -114,7 +114,11 @@ const TestCountSection = ({}: any) => {
                                 </div>
                             </div>
                             <div className="col-md-6 col-sm-12 spaceRegis">
-                                <a href="" className="linkRegis">
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                    className="linkRegis"
+                                    target="_blank"
+                                >
                                     สมัครสมาชิก
                                 </a>
                                 <br />

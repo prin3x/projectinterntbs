@@ -32,7 +32,6 @@ const FaqSection = ({ t }: any) => {
                                     ด้วยยอดผู้ใช้ 200,000 คน และให้บริการมากกว่า
                                     3,000 บริษัท
                                 </p>
-                                <a href="">ทำไมเราจึงส่งถึงไว?</a>
                             </div>
                             <div className="col-md-4 faqTBS">
                                 <img
@@ -41,7 +40,6 @@ const FaqSection = ({ t }: any) => {
                                     alt="Image"
                                 />
                                 <p>ความปลอดภัยมาตรฐาน Internet Banking</p>
-                                <a href="">วิธีเพิ่มอัตราในการส่งถึงผู้รับ</a>
                             </div>
                             <div className="col-md-4 faqTBS">
                                 <img
@@ -50,7 +48,6 @@ const FaqSection = ({ t }: any) => {
                                     alt="Image"
                                 />
                                 <p>ซัพพอร์ตโดยทีมงานผู้เชี่ยวชาญ</p>
-                                <a href="">การใช้งาน SMS Tracking</a>
                             </div>
                         </div>
                     </div>
@@ -429,7 +426,7 @@ const FaqSection = ({ t }: any) => {
                                         alt="Image"
                                     />
                                     <a href="tel:027986000" className="btn v4">
-                                        {t('FaqSection::Contact our staff')}
+                                        02-798-6000
                                     </a>
                                 </div>
                             </div>
@@ -440,13 +437,16 @@ const FaqSection = ({ t }: any) => {
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                                         alt="Image"
                                     />
-                                    <Link href="/contact/">
+                                    <a
+                                        href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`}
+                                        target="_blank"
+                                    >
                                         <a className="btn v4">
                                             {t(
                                                 'FaqSection::Call back service by staff'
                                             )}
                                         </a>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>

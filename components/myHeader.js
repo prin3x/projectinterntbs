@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-
+import Link from 'next/link';
 const HeaderSubmodule = ({
     t,
     isLogin,
@@ -154,37 +154,17 @@ const HeaderSubmodule = ({
                             <ul>
                                 <li>
                                     <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
+                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                        target="_blank"
                                         className="loginLink"
                                     >
-                                        {t(
-                                            'header::' +
-                                                (isLogin === true
-                                                    ? 'Enter the system'
-                                                    : 'Login')
-                                        )}
+                                        {t(`header::` + 'Free trial')}
                                     </a>
                                 </li>
                                 <li>
-                                    {isLogin === true ? (
-                                        <a
-                                            href={
-                                                process.env
-                                                    .NEXT_PUBLIC_DOMAIN_URL +
-                                                '/pricing/'
-                                            }
-                                            className="btn v1"
-                                        >
-                                            {t(`header::` + 'Buy')}
-                                        </a>
-                                    ) : (
-                                        <a
-                                            className="btn v1"
-                                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                        >
-                                            {t(`header::` + 'Free trial')}
-                                        </a>
-                                    )}
+                                    <Link href="#all-pricing">
+                                        <a className="btn v1">ดูราคาแพ็กเกจ</a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

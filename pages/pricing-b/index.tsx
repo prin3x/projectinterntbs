@@ -37,6 +37,7 @@ const Pricing: any = ({ t, packages }: PricingProps) => {
                 <PricingSection />
                 <SmsSection />
                 <UserType />
+                <section id="all-pricing"></section>
                 <AllPricing packages={packages} />
                 <FaqSection />
             </div>
