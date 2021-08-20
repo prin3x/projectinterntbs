@@ -28,6 +28,7 @@ const PricingSection = ({}: any) => {
                         <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register`}
                             className="btn v3"
+                            target="_blank"
                         >
                             ทดลองส่งฟรี
                         </a>
