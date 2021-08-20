@@ -24,7 +24,7 @@ const CtaSectionV2 = ({}: any) => (
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                             className="btn v7"
                         >
-                            ทอลองใช้ฟรี
+                            ทดลองใช้ฟรี
                         </a>
                     </div>
                 </div>
