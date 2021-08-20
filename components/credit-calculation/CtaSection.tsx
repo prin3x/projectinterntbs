@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const CtaSectionV2 = ({  }: any) => (
+const CtaSectionV2 = ({}: any) => (
     <div
         className="cta_section v2 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
@@ -11,9 +11,8 @@ const CtaSectionV2 = ({  }: any) => (
                     <div className="cta-text">
                         <h3>รับฟรี 20 เครดิตสำหรับทดลองส่งจริง</h3>
                         <a
-                            href={`https://otp-manager.thaibulksms.com/login`}
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
                             className="btn v7"
-                            target="_blank"
                         >
                             ดูราคาแพ็กเกจ
                         </a>

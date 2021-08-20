@@ -12,7 +12,7 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/lowprice';
 import { withTranslation } from '../../i18n';
-const lowprice = ({ t }: any) => (
+const Lowprice = ({ t }: any) => (
     <Layout>
         <Head>
             <meta name="keywords" content={t('meta::keywords')} />
@@ -37,14 +37,14 @@ const lowprice = ({ t }: any) => (
         <BacktoTop />
     </Layout>
 );
-// lowprice.getInitialProps = async () => ({
-//   namespacesRequired: ['lowpriceMeta'],
+// Lowprice.getInitialProps = async () => ({
+//   namespacesRequired: ['LowpriceMeta'],
 // });
-export default withTranslation('lowprice')(lowprice);
+export default withTranslation('Lowprice')(Lowprice);
 export const getStaticProps = async () => {
     return {
         props: {
-            namespacesRequired: ['lowprice'],
+            namespacesRequired: ['Lowprice'],
         },
     };
 };
