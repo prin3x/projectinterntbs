@@ -11,9 +11,9 @@ const SimpleIconSection = ({ t }: any) => (
                 <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
                     <div className="simple_icon_title dev-page edit_seo">
                         <h1 className="edit_text_seo">
-                            {t('SimpleIconSection::SMS API linking manual')}
+                            คู่มือการใช้งาน Web Console
                         </h1>
-                        <div className="row m-40">
+                        <div className="row m-40 justify-content-center">
                             <div className="col-lg-6">
                                 <div className="track_box apipage">
                                     <img
@@ -32,31 +32,7 @@ const SimpleIconSection = ({ t }: any) => (
                                     </h4>
                                     <a
                                         target="_blank"
-                                        href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V2.0_TH.pdf`}
-                                    >
-                                        {t('SimpleIconSection::[Download]')}
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="track_box apipage v2">
-                                    <img
-                                        className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api02.png`}
-                                        alt="Image"
-                                    />
-                                    <p>
-                                        {/* {t(
-                      'SimpleIconSection::simpleIconSection.breadcrumb-right-box'
-                    )} */}
-                                        SMS API Manual
-                                    </p>
-                                    <h4>
-                                        {t('SimpleIconSection::English Manual')}
-                                    </h4>
-                                    <a
-                                        target="_blank"
-                                        href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulksmsAPIDocument_V2.0_EN.pdf`}
+                                        href={`https://drive.google.com/drive/folders/1BhubCJb1RTzHPz3bp_At5MEkMOpVEwtR?usp=sharing`}
                                     >
                                         {t('SimpleIconSection::[Download]')}
                                     </a>
@@ -68,25 +44,82 @@ const SimpleIconSection = ({ t }: any) => (
                 <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
                     <div className="simple_icon_title dev-page edit_seo">
                         <h1 className="edit_text_seo">
-                            {t('SimpleIconSection::OTP Service Manual')}
+                            วิดีโอสอนใช้งาน
                         </h1>
-                        <div className="row m-40">
-                            <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12">
+                        <div className="row m-40 justify-content-center">
+                            <div className="col-lg-6 col-md-12">
                                 <div className="track_box apipage">
                                     <img
                                         className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
+                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual.png`}
                                         alt="Image"
                                     />
-                                    <p>OTP Service Manual</p>
+                                    <p>วิดีโอสอนใช้งาน</p>
                                     <h4>
-                                        {t('SimpleIconSection::Thai Manual')}
+                                        ส่งข้อความแบบ Excel
                                     </h4>
                                     <a
                                         target="_blank"
-                                        href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/Thaibulksms-otp.pdf`}
+                                        href={`https://www.youtube.com/watch?v=LxbxhcxUgUo`}
                                     >
-                                        {t('SimpleIconSection::[Download]')}
+                                        [ดูวีดีโอการสอน]
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-12">
+                                <div className="track_box apipage">
+                                    <img
+                                        className="lazyload"
+                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual.png`}
+                                        alt="Image"
+                                    />
+                                    <p>วิดีโอสอนใช้งาน</p>
+                                    <h4>
+                                        วิธีนับเครดิตการใช้งาน
+                                    </h4>
+                                    <a
+                                        target="_blank"
+                                        href={`https://www.youtube.com/watch?v=yeBLXOpO4Mc&t=14s`}
+                                    >
+                                        [ดูวีดีโอการสอน]
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-12">
+                                <div className="track_box apipage">
+                                    <img
+                                        className="lazyload"
+                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual.png`}
+                                        alt="Image"
+                                    />
+                                    <p>วิดีโอสอนใช้งาน</p>
+                                    <h4>
+                                        วิธีการชำระเงิน
+                                    </h4>
+                                    <a
+                                        target="_blank"
+                                        href={`https://www.youtube.com/watch?v=up5fok4BKmU`}
+                                    >
+                                        [ดูวีดีโอการสอน]
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-12">
+                                <div className="track_box apipage">
+                                    <img
+                                        className="lazyload"
+                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual.png`}
+                                        alt="Image"
+                                    />
+                                    <p>วิดีโอสอนใช้งาน</p>
+                                    <h4>
+                                        วิธีสมัครใช้งาน ThaiBulkSMS
+                                    </h4>
+                                    <a
+                                        target="_blank"
+                                        href={`https://www.youtube.com/watch?v=LSEETNZ2kqU`}
+                                    >
+                                        [ดูวีดีโอการสอน]
                                     </a>
                                 </div>
                             </div>
@@ -95,244 +128,24 @@ const SimpleIconSection = ({ t }: any) => (
                 </div>
             </div>
 
+            <div className="row">
+                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
+                    <div className="simple_icon_title dev-page edit_seo">
+                        <h1 className="edit_text_seo">
+                            ต้องการคู่มือ SMS API สำหรับนักพัฒนา?
+                        </h1>
+                    </div>
+                </div>
+            </div>
             <div className="row" id="ex_sdk">
                 <div className="col-xl-12 btn-api-ref">
                     <a
                         className="btn v3"
                         target="_blank"
-                        href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
+                        href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}/`}
                     >
-                        {t('SimpleIconSection::API References')}
+                        ดูคู่มือ API
                     </a>
-                </div>
-            </div>
-
-            <div className="row">
-                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
-                    <div className="simple_icon_title dev-page edit_seo">
-                        <h1 className="edit_text_seo">
-                            {t('SimpleIconSection::Download example')}
-                        </h1>
-                        <p>
-                            {t(
-                                'SimpleIconSection::Download the SDK example in the language that you require.'
-                            )}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="row single_lang_wrap">
-                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
-                    <div className="row ">
-                        <div className="col-lg-4 col-md-4 col-4">
-                            <div className="single_lang dev-page">
-                                <img
-                                    className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api01.svg`}
-                                    alt="php"
-                                />
-                                <a
-                                    className="lang_link"
-                                    target="_blank"
-                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-PHP.zip`}
-                                >
-                                    {t('SimpleIconSection::[Download]')}
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-4 col-4">
-                            <div className="single_lang dev-page">
-                                <img
-                                    className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api03.svg`}
-                                    alt="nodejs"
-                                />
-                                <a
-                                    className="lang_link"
-                                    target="_blank"
-                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Nodejs.zip`}
-                                >
-                                    {t('SimpleIconSection::[Download]')}
-                                </a>
-                            </div>
-                        </div>
-                        {/* <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang02.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-VB.NET.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div> */}
-                        {/* <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang03.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-C.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div> */}
-                        {/* <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang04.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-C2Plus.NET.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div> */}
-                        <div className="col-lg-4 col-md-4 col-4">
-                            <div className="single_lang dev-page">
-                                <img
-                                    className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang05.svg`}
-                                    alt="c#"
-                                />
-                                <a
-                                    className="lang_link"
-                                    target="_blank"
-                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-CShap.zip`}
-                                >
-                                    {t('SimpleIconSection::[Download]')}
-                                </a>
-                            </div>
-                        </div>
-                        {/* <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang06.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-ObjC.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div> */}
-                        {/* <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang07.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaiBulkSMS_ClassicASP_NoParser.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div> */}
-                        {/* <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang08.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-ActionScript.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div> */}
-                        <div className="col-lg-4 col-md-4 col-4">
-                            <div className="single_lang dev-page">
-                                <img
-                                    className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-api07.svg`}
-                                    alt="python"
-                                />
-                                <a
-                                    className="lang_link"
-                                    target="_blank"
-                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Python.zip`}
-                                >
-                                    {t('SimpleIconSection::[Download]')}
-                                </a>
-                            </div>
-                        </div>
-                        {/* <div className="col-lg-4 col-md-4 col-4">
-              <div className="single_lang dev-page">
-                <img
-                  className="lazyload"
-                  data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang10.svg`}
-                  alt="Image"
-                />
-                <a
-                  className="lang_link"
-                  target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-JavaScript.zip`}
-                >
-                  {t('SimpleIconSection::[Download]')}
-                </a>
-              </div>
-            </div> */}
-                        <div className="col-lg-4 col-md-4 col-4">
-                            <div className="single_lang dev-page">
-                                <img
-                                    className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-langGO.svg`}
-                                    alt="golang"
-                                />
-                                <a
-                                    className="lang_link"
-                                    target="_blank"
-                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Go-lang.zip`}
-                                >
-                                    {t('SimpleIconSection::[Download]')}
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-4 col-4">
-                            <div className="single_lang dev-page">
-                                <img
-                                    className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-lang11.svg`}
-                                    alt="java"
-                                />
-                                <a
-                                    className="lang_link"
-                                    target="_blank"
-                                    href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ExampleCode-Java.zip`}
-                                >
-                                    {t('SimpleIconSection::[Download]')}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

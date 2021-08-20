@@ -57,7 +57,7 @@ const Header = ({ t }: any) => {
         MySelect,
     };
 
-    return pathname === '/pricing-b' || pathname === '/pricing-c' ? (
+    return pathname === '/pricing-c' || pathname === '/pricing-b' ? (
         <MyHeader {...headerConfig} />
     ) : (
         <HeaderSubmodule {...headerConfig} />

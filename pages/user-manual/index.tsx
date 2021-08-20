@@ -44,11 +44,11 @@ const Usermanual = ({ t }: any) => (
     </Layout>
 );
 
-export default withTranslation('user-manual')(Usermanual);
+export default withTranslation('UserManual')(Usermanual);
 export const getStaticProps = async () => {
     return {
         props: {
-            namespacesRequired: ['user-manual'],
+            namespacesRequired: ['UserManual'],
         },
     };
 };

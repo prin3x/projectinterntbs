@@ -10,11 +10,7 @@ const CtaSectionV2 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className=" col-lg-12">
                     <div className="cta-text">
-                        <h3>
-                            {t(
-                                'CtaSection::Immediately test the SMS API and OTP API'
-                            )}
-                        </h3>
+                        <h3>ทดลองใช้งานระบบส่ง SMS ผ่านเว็บได้ฟรี</h3>
                         <a
                             href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                             className="btn v7"
