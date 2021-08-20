@@ -30,7 +30,7 @@ const SimpleIconSection = ({  }: any) => (
               </div>
               <div className="row">
                   <div className="col-md-12 m-center">
-                    <a href="" className="btn v2">ติดต่อฝ่ายขาย</a>
+                    <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`} className="btn v2">ติดต่อฝ่ายขาย</a>
                   </div>
               </div>
           </div>
