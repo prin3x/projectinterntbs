@@ -95,9 +95,8 @@ const TestQuickregister = ({ t }: any) => {
                 return false;
             });
             if (checkIsMoreThanMax()) {
-                settextSms(textSms.slice(0, 160));
-                setMsgCount(textSms.slice(0, 160).length);
-                setCurrentCount(textSms.slice(0, 160).length);
+                // setMsgCount(textSms.slice(0, 160).length);
+                setCurrentCount(textSms.length);
                 // setMsgCount(160);
             }
         } else {
