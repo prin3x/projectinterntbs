@@ -236,7 +236,7 @@ const TestQuickregister = ({ t }: any) => {
                     isOpen={modalIsOpen}
                     // onRequestClose={closeModal}
                     onRequestClose={() => {}}
-                    className="pass-style"
+                    className="pass-style quick-register"
                     contentLabel=""
                 >
                     {/* <a onClick={() => changeFase(1)}>
@@ -282,7 +282,7 @@ const TestQuickregister = ({ t }: any) => {
                                     />
                                     {!phoneOk ? (
                                         <label className="red">
-                                            กรุณากรอกเบอรมือถือให้ครบ10หลัก
+                                            กรุณากรอกเบอร์มือถือให้ครบ10หลัก
                                         </label>
                                     ) : (
                                         ''
