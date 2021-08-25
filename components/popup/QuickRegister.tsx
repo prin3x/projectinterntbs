@@ -49,7 +49,7 @@ const TestQuickregister = ({ t }: any) => {
         let count: number = 0;
         let current_C: number = 0;
         if (v !== '') {
-            console.log(calculateCredit(v));
+            // console.log(calculateCredit(v));
             for (let i = 0; i < v.length; i++) {
                 if (
                     Constant.DOUBLE_BYTES_CHAR.includes(v.charCodeAt(i)) &&
@@ -61,6 +61,13 @@ const TestQuickregister = ({ t }: any) => {
                     count++;
                     current_C++;
                 }
+                // if (checkIsMoreThanMax()) {
+                //     if (!unicodeRegex.test(previewMessage)) {
+                //         setCurrentCount(160);
+                //     } else {
+                //         setCurrentCount(70);
+                //     }
+                // }
                 setCurrentCount(current_C);
                 if (count >= charMaxLength) {
                     setMsgCount(charMaxLength);
@@ -77,67 +84,36 @@ const TestQuickregister = ({ t }: any) => {
         }
     }
 
-    function calculateCredit(msg) {
-        if (msg !== '') {
-            let msgLength = msg.length;
-            let totalCredits = 0;
-            const pattern = new RegExp('[^\u0020-\u007F\u00A0-\u00BF]');
-            const patternDouble = new RegExp(
-                '[^\u005B-\u005E\u007B-\u007E\u20AC]'
-            );
-            let rtn = {
-                isUnicode: false,
-                msgPerCredit: 160,
-                msgLength: msg.length ? msg.length : 0,
-                msg: msg,
-                credit: 1,
-            };
-
-            if (pattern.test(msg)) {
-                rtn.isUnicode = true;
-                rtn.msgPerCredit = 70;
-
-                if (msgLength > 70) rtn.msgPerCredit = 67;
-            } else {
-                rtn.isUnicode = false;
-                if (msgLength > 160) rtn.msgPerCredit = 153;
-            }
-
-            rtn.credit = Math.ceil(msgLength / rtn.msgPerCredit);
-            totalCredits = totalCredits + rtn.credit;
-
-            // Add doublebyte
-            if (rtn.isUnicode === false)
-                rtn.msgLength = rtn.msgLength + msg.match(patternDouble).length;
-
-            return rtn;
-        }
-    }
-
     function alterMaxMsgLenth() {
         let creditUsed: number = msgCount > 0 ? 1 : 0;
 
         if (!unicodeRegex.test(previewMessage)) {
-            console.log('th');
+            // console.log('th');
 
             setIsUnicode(() => {
                 setCharMaxLength(Constant.MAX_CHAR_LENGTH_UNI);
                 return false;
             });
             if (checkIsMoreThanMax()) {
-                settextSms(textSms.slice(0, 160));
-                setMsgCount(160);
+                // setMsgCount(textSms.slice(0, 160).length);
+                setCurrentCount(textSms.length);
+                // setMsgCount(160);
             }
         } else {
-            console.log('eng');
+            // console.log('eng');
 
             setIsUnicode(() => {
                 setCharMaxLength(Constant.MAX_CHAR_LENGTH_ASC);
                 return true;
             });
             if (checkIsMoreThanMax()) {
-                settextSms(textSms.slice(0, 70));
-                setMsgCount(70);
+                const last = textSms.length;
+                const firstText = textSms.slice(0, 69);
+                const lastText = textSms.slice(last - 1, last);
+                const text = firstText + lastText;
+                settextSms(text);
+                setMsgCount(text.length);
+                setCurrentCount(text.length);
             }
         }
 
@@ -188,7 +164,7 @@ const TestQuickregister = ({ t }: any) => {
         ) {
             setexistPhoneError(true);
         }
-        console.log(resultStep1);
+        // console.log(resultStep1);
     };
 
     const submitStep2 = async () => {
@@ -199,7 +175,7 @@ const TestQuickregister = ({ t }: any) => {
         if ((await resultStep2.error.code) === '') {
             await changeFase(3);
         } else {
-            console.log('RE2' + resultStep2.error.code);
+            // console.log('RE2' + resultStep2.error.code);
         }
         if (
             resultStep2.error.code === 'quickRegisterSecondStep.pin.incorrect'
@@ -238,7 +214,7 @@ const TestQuickregister = ({ t }: any) => {
     function setreCap(value: any) {
         setreCaptchaOK(true);
         setreCaptcha(value);
-        console.log(value);
+        // console.log(value);
     }
     useEffect(() => {
         alterMaxMsgLenth();
@@ -248,9 +224,10 @@ const TestQuickregister = ({ t }: any) => {
             <button
                 className="btn v2 sms-btn-text"
                 // type="submit"
+                style={{ width: '200px' }}
                 onClick={() => openModal()}
             >
-                {t('SmsSection::TestQuickregister::Confirm number')}
+                ทดลองส่งข้อความ
             </button>
 
             <div id="ElementModal">
@@ -258,7 +235,7 @@ const TestQuickregister = ({ t }: any) => {
                     isOpen={modalIsOpen}
                     // onRequestClose={closeModal}
                     onRequestClose={() => {}}
-                    className="pass-style"
+                    className="pass-style quick-register"
                     contentLabel=""
                 >
                     {/* <a onClick={() => changeFase(1)}>
@@ -286,7 +263,7 @@ const TestQuickregister = ({ t }: any) => {
                                         className="phone"
                                         onChange={(event) => {
                                             setPhone(event.target.value);
-                                            console.log(event.target.value);
+                                            // console.log(event.target.value);
                                             setexistPhoneError(false);
                                             if (
                                                 event.target.value.length === 10
@@ -304,7 +281,7 @@ const TestQuickregister = ({ t }: any) => {
                                     />
                                     {!phoneOk ? (
                                         <label className="red">
-                                            กรุณากรอกเบอรมือถือให้ครบ10หลัก
+                                            กรุณากรอกเบอร์มือถือให้ครบ10หลัก
                                         </label>
                                     ) : (
                                         ''
@@ -363,6 +340,9 @@ const TestQuickregister = ({ t }: any) => {
                                     <ReCAPTCHA
                                         sitekey={`${process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_KEY}`}
                                         onChange={setreCap}
+                                        onExpired={() => {
+                                            setreCaptchaOK(false);
+                                        }}
                                     />
                                 </div>
                                 <button
@@ -442,7 +422,9 @@ const TestQuickregister = ({ t }: any) => {
                                         submitStep2().then(() => setLoad(true));
                                     }}
                                 >
-                                    ยืนยันเบอร์
+                                    {t(
+                                        'SmsSection::TestQuickregister::Confirm number'
+                                    )}
                                 </button>
                             </div>
                         ) : (
@@ -470,7 +452,7 @@ const TestQuickregister = ({ t }: any) => {
                                 <Link
                                     href={
                                         process.env.NEXT_PUBLIC_DOMAIN_URL +
-                                        '/pricing'
+                                        '/pricing/'
                                     }
                                 >
                                     <button

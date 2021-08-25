@@ -142,7 +142,7 @@ const SimpleIconSection = ({ t }: any) => (
                     <a
                         className="btn v3"
                         target="_blank"
-                        href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}`}
+                        href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}/`}
                     >
                         ดูคู่มือ API
                     </a>

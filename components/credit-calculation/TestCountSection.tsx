@@ -43,14 +43,10 @@ const TestCountSection = ({}: any) => {
         let creditUsed: number = msgCount > 0 ? 1 : 0;
 
         if (!unicodeRegex.test(previewMessage)) {
-            console.log('th');
-
             setIsUnicode(() => {
                 return false;
             });
         } else {
-            console.log('eng');
-
             setIsUnicode(() => {
                 return true;
             });
@@ -61,10 +57,28 @@ const TestCountSection = ({}: any) => {
             : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
 
         // const isMoreThanOneCopy: boolean = msgCount > maxMsgPerCopy;
-
-        const nextMsgLengthPerCopy: number = isUnicode
-            ? Constant.TH_NEXT_CHAR_LENGTH
-            : Constant.ENG_NEXT_CHAR_LENGTH;
+        var nextMsgLengthPerCopy: number = 0;
+        if (isUnicode) {
+            if (msgCount <= 70) {
+                nextMsgLengthPerCopy = isUnicode
+                    ? Constant.TH_MSG_DEFAULT_CHAR_LENGTH
+                    : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
+            } else {
+                nextMsgLengthPerCopy = isUnicode
+                    ? Constant.TH_NEXT_CHAR_LENGTH
+                    : Constant.ENG_NEXT_CHAR_LENGTH;
+            }
+        } else {
+            if (msgCount <= 160) {
+                nextMsgLengthPerCopy = isUnicode
+                    ? Constant.TH_MSG_DEFAULT_CHAR_LENGTH
+                    : Constant.ENG_MSG_DEFAULT_CHAR_LENGTH;
+            } else {
+                nextMsgLengthPerCopy = isUnicode
+                    ? Constant.TH_NEXT_CHAR_LENGTH
+                    : Constant.ENG_NEXT_CHAR_LENGTH;
+            }
+        }
 
         creditUsed = Math.ceil(msgCount / nextMsgLengthPerCopy);
         let newLength: number = nextMsgLengthPerCopy * creditUsed;
@@ -118,7 +132,10 @@ const TestCountSection = ({}: any) => {
                                 </div>
                             </div>
                             <div className="col-md-6 col-sm-12 spaceRegis">
-                                <a href="" className="linkRegis">
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                    className="linkRegis"
+                                >
                                     สมัครสมาชิก
                                 </a>
                                 <br />

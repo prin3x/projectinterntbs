@@ -20,10 +20,8 @@ const TestQuickregister = ({ t }: any) => {
                                         )}
                                     </h4>
                                     <p>
-                                        {t(
-                                            'SmsSection::TestQuickregister::' +
-                                                'desc-2'
-                                        )}
+                                        เพียงกรอกเบอร์มือถือของคุณ
+                                        และข้อความที่คุณต้องการ
                                     </p>
                                 </div>
                             </div>
