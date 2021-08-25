@@ -10,16 +10,8 @@ const PricingSection = ({ t }: any) => {
             data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
         >
             <div className="container pricing">
-                <h1
-                    className="headPricing"
-                    dangerouslySetInnerHTML={{
-                        __html: t('PricingSection::Package prices'),
-                    }}
-                />
-                <p className="subPricing">
-                    {t('PricingSection::Reasonable SMS packages')}
-                </p>
-                <div className="row justify-content-xl-end mt-80">
+                <h1 className="headPricing">ราคาแพ็กเกจส่ง SMS ออนไลน์<br />ราคาเพียง 0.21 บาท/ข้อความ</h1>
+                <div className="row justify-content-center mt-80">
                     <div className="col-lg-6 col-xl-4 col-md-6 pricing_right">
                         <div
                             className="pricing_box m-0 pricing_box1"

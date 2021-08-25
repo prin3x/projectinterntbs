@@ -34,23 +34,15 @@ const SmsSection = ({ t }: any) => {
                             <div className="row">
                                 <div className="col-lg-4 col-md-6">
                                     <div className="sms_feature_item">
-                                        <p>
-                                            {t(
-                                                'SmsSection::The average number of SMS sent / day'
-                                            )}
-                                        </p>
-                                        <p>300,000+</p>
+                                        <p>จำนวนการส่ง SMS โดยเฉลี่ย / วัน</p>
+                                        <p>1,500,000+</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="sms_feature_item">
+                                        <p>ระยะเวลาส่ง SMS ออกจากระบบโดยเฉลี่ย</p>
                                         <p>
-                                            {t(
-                                                'SmsSection::The average amount of time taken to send SMS'
-                                            )}
-                                        </p>
-                                        <p>
-                                            1.9{' '}
+                                            0.75{' '}
                                             <span>
                                                 {t('SmsSection::Seconds')}
                                             </span>

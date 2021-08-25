@@ -14,89 +14,63 @@ const FeatureSection = ({ t }: any) => (
                 </div>
             </div>
             <div className="row mt-5">
-                <div className="col-md-3 whyTBS">
+                <div className="col-lg-3 col-md-6 whyTBS">
                     <div className="single_feature_item">
-                        <img
-                            className="lazyload size-img"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_1.png`}
-                            alt="Image"
-                            width="100"
-                            height="100"
-                        />
+                        <div className="spaceWhyImg">
+                            <img
+                                className="lazyload size-img"
+                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-WhyNum1.png`}
+                                alt="Image"
+                            />
+                        </div>
                         <div className="single_feature_text">
                             <h3>{t('FeatureSection::No.1 SMS Platform')}</h3>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t(
-                                        'FeatureSection::Thailand’s no. 1 SMS service provider'
-                                    ),
-                                }}
-                            ></p>
+                            <p>อันดับ 1 ของไทย ด้วยผู้ใช้ 200,000 คน และกว่า 3,000 บริษัท</p>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-3 whyTBS">
+                <div className="col-lg-3 col-md-6 whyTBS">
                     <div className="single_feature_item">
-                        <img
-                            className="lazyload size-img"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_2.png`}
-                            alt="Image"
-                            width="100"
-                            height="100"
-                        />
+                        <div className="spaceWhyImg">
+                            <img
+                                className="lazyload size-img"
+                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-speed02.png`}
+                                alt="Image"
+                            />
+                        </div>
                         <div className="single_feature_text">
                             <h3>{t('FeatureSection::Fast & Reliable')}</h3>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t(
-                                        'FeatureSection::The fastest channel for sending is chosen automatically, resulting in fast sending and reliable stability.'
-                                    ),
-                                }}
-                            ></p>
+                            <p>ต่อตรงกับ 3 เครือข่ายหลัก จัดคิวส่งด้วย AI ไม่เกิดปัญหาคอขวด</p>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-3 whyTBS">
+                <div className="col-lg-3 col-md-6 whyTBS">
                     <div className="single_feature_item">
-                        <img
-                            className="lazyload size-img"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_3.png`}
-                            alt="Image"
-                            width="100"
-                            height="100"
-                        />
+                        <div className="spaceWhyImg">
+                            <img
+                                className="lazyload size-img"
+                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-lowPrice02.png`}
+                                alt="Image"
+                            />
+                        </div>
                         <div className="single_feature_text">
-                            <h3>{t('FeatureSection::Smart Console')}</h3>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t(
-                                        'FeatureSection::The results of sending can be measured easily with smart reports.'
-                                    ),
-                                }}
-                            ></p>
+                            <h3>Competitive Price</h3>
+                            <p>การันตี ราคาดีที่สุด สำหรับการสั่งซื้อปริมาณมาก</p>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-3 whyTBS">
+                <div className="col-lg-3 col-md-6 whyTBS">
                     <div className="single_feature_item">
-                        <img
-                            className="lazyload size-img"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_4.png`}
-                            alt="Image"
-                            width="100"
-                            height="100"
-                        />
+                        <div className="spaceWhyImg">
+                            <img
+                                className="lazyload size-img"
+                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysupport.png`}
+                                alt="Image"
+                            />
+                        </div>
                         <div className="single_feature_text">
-                            <h3>
-                                {t('FeatureSection::Easily Integrated API')}
-                            </h3>
-                            <p
-                                dangerouslySetInnerHTML={{
-                                    __html: t(
-                                        'FeatureSection::Easy to connect and support multiple languages.'
-                                    ),
-                                }}
-                            ></p>
+                            <h3>Localized Service</h3>
+                            <p>ซัพพอร์ตระดับ Global โดยคนไทยเข้าใจ ใกล้ชิด ติดต่อง่าย</p>
                         </div>
                     </div>
                 </div>

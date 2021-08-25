@@ -4,7 +4,16 @@ const SmsSectionV3 = ({ t }: any) => (
     <div className="sms_section v3 ">
         <div className="container">
             <div className="row align-items-center">
-                <div className="col-lg-5">
+            <div className="col-md-6 col-md-push-6">
+                    <div className="newsletter_img">
+                        <img
+                            className="lazyload"
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-WhyNum1.png`}
+                            alt="Image"
+                        />
+                    </div>
+                </div>
+                <div className="col-md-6 col-md-pull-6">
                     <div className="newsletter_text">
                         <h3>
                             {t(
@@ -17,14 +26,23 @@ const SmsSectionV3 = ({ t }: any) => (
                             )}
                         </p>
                     </div>
-                </div>
-                <div className="col-lg-7">
-                    <div className="newsletter_img">
+                </div>    
+            </div>
+            <div className="row m-80">
+                <div className="col-md-6">
+                    <div className="track_img mt-5">
+                        {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
                         <img
                             className="lazyload"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-WhyNum1.png`}
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysupport.png`}
                             alt="Image"
                         />
+                    </div>
+                </div>
+                <div className="col-md-6">
+                    <div className="track_text mt-5">
+                        <h3>ซัพพอร์ตโดยทีมคนไทย ที่ให้บริการระดับโลก</h3>
+                        <p>เรามีทีมซัพพอร์ตคนไทยคอยให้ความช่วยเหลือแม้นอกเวลาทำการ ติดต่อง่ายกว่า ไม่มีอุปสรรคด้านการสื่อสาร จึงแก้ปัญหาได้เร็วกว่า ทั้งนี้การให้บริการของเรายังได้มาตรฐานระดับโลก จากการที่เรามี <a href="">บริการส่ง SMS ไปต่างประเทศ</a></p>
                     </div>
                 </div>
             </div>

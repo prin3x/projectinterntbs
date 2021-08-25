@@ -13,6 +13,7 @@ import ServiceSection from '../components/home/ServiceSection';
 import SimpleSliderSection from '../components/home/SimpleSliderSection';
 import GlobeSection from '../components/home/GlobeSection';
 import SmsSection from '../components/home/SmsSection';
+import SuccessSection from '../components/home/SuccessSection';
 import TestimonialSection from '../components/home/TestimonialSection';
 import EduSection from '../components/home/EduSection';
 import CtaSection from '../components/home/CtaSection';
@@ -64,10 +65,11 @@ const Homepage = ({ t }: any) => (
                 <HeroSection />
                 <PartnerSection />
                 <FeatureSection />
+                <SmsSection />
+                <SuccessSection />
                 <ServiceSection />
                 <SimpleSliderSection />
                 <GlobeSection />
-                <SmsSection />
                 <TestimonialSection />
                 <EduSection />
                 <CtaSection />
