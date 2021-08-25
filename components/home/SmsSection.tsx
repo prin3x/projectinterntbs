@@ -39,25 +39,42 @@ const SmsSectionV2 = ({ t }: any) => {
     }, []);
     return (
         <div
-            className="sms_section lazyload"
+            className="sms_section lazyload secHome"
             // data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
             data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mobile/promo_bg.jpg [(max-width:767px)] | ${process.env.NEXT_PUBLIC_BASE_ASSET}/img/promo_bg.png`}
         >
             <div className="container">
                 <div className="row">
-                    <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12 ">
+                    <div className="col-lg-8 offset-lg-2 col-md-12 ">
                         <div className="sms_text">
-                            <h2>
-                                {t(
-                                    'SmsSection::Be confident in every instance of SMS sending'
-                                )}
-                            </h2>
+                            <h2>มั่นใจในความเร็วและความเสถียรในทุก ๆ การส่ง SMS</h2>
+                            <p>ThaiBulkSMS มุ่งมั่นพัฒนาระบบให้คงความเสถียรสูงสุดในทุกเวลา รองรับการส่งปริมาณมากได้อย่างไม่ติดขัด เพื่อให้ทุกการสื่อสารผ่าน SMS ของคุณเป็นไปอย่างราบรื่นและมีประสิทธิภาพ</p>
                         </div>
                     </div>
                     <div className="col-md-12">
                         <div className="sms_feature">
                             <div className="row">
-                                <div className="col-md-12">
+                                <div className="col-md-4">
+                                    <div className="sms_feature_item">
+                                        <p>จำนวนการส่ง SMS สูงสุดที่รองรับ / นาที</p>
+                                        <div>24,000</div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="sms_feature_item">
+                                        <p>จำนวนการส่ง SMS โดยเฉลี่ย / วัน</p>
+                                        <div>1,500,000+</div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4">
+                                    <div className="sms_feature_item">
+                                        <p>Uptime</p>
+                                        <div>99.95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12 text-center">
                                     <div className="sms_feature_item">
                                         <p>
                                             {t(
@@ -84,31 +101,7 @@ const SmsSectionV2 = ({ t }: any) => {
                                         )}
                                         {/* <h2>4,662,190,879</h2> */}
                                     </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="sms_feature_item">
-                                        <p>
-                                            {t(
-                                                'SmsSection::The number of SMS sending on average / day'
-                                            )}
-                                        </p>
-                                        <div>300,000+</div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="sms_feature_item">
-                                        <p>
-                                            {t(
-                                                'SmsSection::The average amount of time taken to send SMS Seconds'
-                                            )}
-                                        </p>
-                                        <div>
-                                            1.9{' '}
-                                            <span>
-                                                {t('SmsSection::Seconds')}
-                                            </span>
-                                        </div>
-                                    </div>
+                                    <a href="" className="linkCountSMS">ทำไมระบบของ ThaiBulkSMS ถึงส่งเร็วและมีความเสถียรสูง? </a>
                                 </div>
                             </div>
                         </div>

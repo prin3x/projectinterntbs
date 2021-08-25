@@ -20,11 +20,7 @@ const HeroSectionV2 = ({ t }: any) => (
                                 ),
                             }}
                         />
-                        <p>
-                            {t(
-                                'HeroSection::SMS sending service capable of quick sending with reliable stability. Consultation is available at every step.'
-                            )}
-                        </p>
+                        <p>ผู้ให้บริการอันดับ 1 ของไทย ราคาถูกเพียง 0.21 บาท/ข้อความส่งไว มั่นใจได้ในความเสถียร ครบจบในที่เดียว</p>
                         <ul className="cta-btn">
                             <li>
                                 <a

@@ -2,7 +2,7 @@ import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
 const SimpleSection = ({ t }: any) => (
     <div
-        className="simple_section lazyload"
+        className="simple_section lazyload productPage"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_4.png`}
     >
         <div className="container">
@@ -77,6 +77,26 @@ const SimpleSection = ({ t }: any) => (
                             <p>{t('SimpleSection::Templates are provided.')}</p>
                         </li>
                     </ul>
+                </div>
+            </div>
+            <div className="row justify-content-center">
+                <div className="col-md-12">
+                    <div className="sms_form userProduct">
+                        <div className="row align-items-center">
+                            <div className="col-lg-7 col-md-12 line-user">
+                                <h2>ผู้ให้บริการที่ไม่มีประสิทธิภาพ จะทำให้เกิดผลเสียกับธุรกิจมากกว่าที่คิด</h2>
+                                <p>เพื่อให้แน่ใจว่า ThaiBulkSMS จะเป็นผู้ให้บริการคุณภาพสูงที่คุณตามหา คุณสามารถทดลองใช้ระบบส่งแบบเต็มรูปแบบได้ฟรีก่อนสั่งซื้อ</p>
+                            </div>
+                            <div className="col-lg-5 col-md-12 text-center">
+                                <button
+                                    className="btn v2"
+                                    type="submit"
+                                >
+                                    ทดลองใช้ฟรี
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

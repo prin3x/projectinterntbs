@@ -81,32 +81,6 @@ const TrackSection = ({ t }: any) => (
                 </div>
             </div>
             <div className="row m-80">
-                <div className="col-md-6">
-                    <div className="track_img mt-5">
-                        {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
-                        <img
-                            className="lazyload"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysupport.png`}
-                            alt="Image"
-                        />
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div className="track_text mt-5">
-                        <h3>
-                            {t(
-                                'TrackSection::Included with support from a team of specialists'
-                            )}
-                        </h3>
-                        <p>
-                            {t(
-                                'TrackSection::This creates confidence that if the system experiences problems, we can immediately fix the situation for you, regardless of whether it is a Hardware or Software issue.'
-                            )}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="row m-80">
                 <div className="col-md-6 col-md-push-6">
                     <div className="track_img mt-5">
                         {/* <object type="image/svg+xml" data="/img/img-sms-track-page.svg"></object> */}
