@@ -32,7 +32,7 @@ const SimpleIconSection = ({ t }: any) => (
                                     </h4>
                                     <a
                                         target="_blank"
-                                        href={`https://drive.google.com/drive/folders/1BhubCJb1RTzHPz3bp_At5MEkMOpVEwtR?usp=sharing`}
+                                        href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulkSMSApiManual.pdf`}
                                     >
                                         {t('SimpleIconSection::[Download]')}
                                     </a>
