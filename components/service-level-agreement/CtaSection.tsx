@@ -1,0 +1,39 @@
+import { withTranslation } from '../../i18n';
+import PropTypes from 'prop-types';
+const CtaSectionV2 = ({ t }: any) => (
+    <div
+        className="cta_section v2 lazyload"
+        data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
+    >
+        <div className="container">
+            <div className="row align-items-center">
+                <div className=" col-lg-12">
+                    <div className="cta-text">
+                        <h3>คุณภาพที่การันตีด้วย SLA<br />ให้บริการลูกค้าของคุณได้มั่นใจยิ่งกว่า</h3>
+                        <a
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
+                            className="btn lowPrice"
+                            target="_blank"
+                        >
+                           ดูราคาแพ็กเกจ
+                        </a>
+                        <a
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/register/`}
+                            className="btn v7"
+                        >
+                            {t(`ทดลองส่งฟรี`)}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+);
+CtaSectionV2.getInitialProps = async () => ({
+    namespacesRequired: ['Otp'],
+});
+
+CtaSectionV2.propTypes = {
+    t: PropTypes.func.isRequired,
+};
+export default withTranslation('Otp')(CtaSectionV2);
