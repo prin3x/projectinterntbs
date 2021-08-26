@@ -1,6 +1,6 @@
 import { withTranslation } from '../../i18n';
 import PropTypes from 'prop-types';
-const SmsSectionV3 = ({ t }: any) => (
+const SmsSectionV3 = ({  }: any) => (
     <div className="sms_section v2 ">
         <div className="container">
             <div className="row align-items-center">
@@ -8,7 +8,7 @@ const SmsSectionV3 = ({ t }: any) => (
                     <div className="newsletter_img">
                         <img
                             className="lazyload"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whitelist01.png`}
+                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-SLA01.png`}
                             alt="Image"
                         />
                     </div>
@@ -16,8 +16,8 @@ const SmsSectionV3 = ({ t }: any) => (
                 </div>
                 <div className="col-lg-5 col-md-pull-6">
                     <div className="newsletter_text">
-                        <h3>70% ของการส่ง SMS ไม่ถึงผู้รับ มาจากปัญหา Anti-Spam</h3>
-                        <p>สถานะ “Anti-Spam” ที่พบในรายงานการส่งข้อความ เกิดจากการที่ผู้รับปลายทางเคยแจ้งเครือข่ายไว้ว่า ไม่ต้องการรับ SMS โฆษณารบกวน (Spam) ทำให้ SMS ถูกส่งไปไม่ถึง</p>
+                        <h3>รับประกันคุณภาพทั้งความเสถียร และการซัพพอร์ต</h3>
+                        <p>SLA (Service Level Agreement) คือ ข้อตกลงในการให้บริการว่าจะรักษาคุณภาพให้เป็นไปตามมาตรฐานที่ตกลงกันไว้ โดยจะมีการชดเชยหากไม่สามารถทำได้ตามข้อตกลง เพื่อให้ลูกค้าใช้บริการได้อย่างมั่นใจ</p>
                     </div>
                 </div>
             </div>
@@ -27,12 +27,12 @@ const SmsSectionV3 = ({ t }: any) => (
                         <div className="row align-items-center">
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_text">
-                                    <h4>{t(`SMS แบบไหนบ้างที่เข้าข่ายเป็น Spam`)}</h4>
+                                    <h4 className="noSLA">ความเสี่ยงจากการเลือกใช้ผู้ให้บริการที่ไม่มี SLA</h4>
                                 </div>
                             </div>
                             <div className="col-lg-8 col-md-12">
                                 <div className="sms_form_field">
-                                    <p className="textLeft">มักจะเป็น SMS ที่มีเนื้อหารบกวนผู้รับ เช่น การส่ง SMS ประเภทโฆษณา การตลาด และ การที่ผู้ส่งไม่ได้ขอ <span>Whitelist Sender Name</span> ก็จะทำให้เครือข่ายปลายทางถือว่าเป็นข้อความรบกวน (Spam) เช่นเดียวกัน</p>
+                                    <p className="textLeft">คุณจะไม่สามารถมั่นใจได้เลยว่าระบบการส่ง SMS หรือ Infrastructure เสถียรจริงหรือไม่ และถ้าหากระบบล่มเป็นเวลานานจนเกิดความเสียหายกับธุรกิจทั้งด้านรายได้ และภาพลักษณ์ก็อาจจะไม่ได้รับการชดเชยใด ๆ เนื่องจากไม่มีข้อตกลงที่กำหนดไว้</p>
                                 </div>
                             </div>
                         </div>

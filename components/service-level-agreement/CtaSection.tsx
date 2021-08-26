@@ -9,19 +9,19 @@ const CtaSectionV2 = ({ t }: any) => (
             <div className="row align-items-center">
                 <div className=" col-lg-12">
                     <div className="cta-text">
-                        <h3>หมดปัญหา SMS ส่งไม่ถึงผู้รับ<br />ด้วยการขอ Whitelist</h3>
+                        <h3>คุณภาพที่การันตีด้วย SLA<br />ให้บริการลูกค้าของคุณได้มั่นใจยิ่งกว่า</h3>
                         <a
                             href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
                             className="btn lowPrice"
                             target="_blank"
                         >
-                           สั่งซื้อแพ็กเกจ
+                           ดูราคาแพ็กเกจ
                         </a>
                         <a
-                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/contact/`}
+                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/register/`}
                             className="btn v7"
                         >
-                            {t(`สอบถามเพิ่มเติม`)}
+                            {t(`ทดลองส่งฟรี`)}
                         </a>
                     </div>
                 </div>
