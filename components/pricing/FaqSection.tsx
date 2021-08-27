@@ -25,31 +25,33 @@ const FaqSection = ({ t }: any) => {
                             <div className="col-md-4 faqTBS">
                                 <img
                                     className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/imgFAQ01.png`}
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-otp.png`}
                                     alt="Image"
                                 />
+                                <h4>ส่งไว OTP ไม่ Delay</h4>
                                 <p>
-                                    ด้วยยอดผู้ใช้ 200,000 คน และให้บริการมากกว่า
-                                    3,000 บริษัท
+                                    ส่งได้เร็วสูงสุด 24,000 SMS/นาที
                                 </p>
                                 <a href="">ทำไมเราจึงส่งถึงไว?</a>
                             </div>
                             <div className="col-md-4 faqTBS">
                                 <img
                                     className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/imgFAQ02.png`}
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_12.png`}
                                     alt="Image"
                                 />
-                                <p>ความปลอดภัยมาตรฐาน Internet Banking</p>
+                                <h4>มั่นใจว่า SMS ส่งถึงผู้รับ</h4>
+                                <p>แม้แต่ผู้ที่แจ้งบล็อก SMS โฆษณากับเครือข่าย</p>
                                 <a href="">วิธีเพิ่มอัตราในการส่งถึงผู้รับ</a>
                             </div>
                             <div className="col-md-4 faqTBS">
                                 <img
                                     className="lazyload"
-                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/imgFAQ03.png`}
+                                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_4.png`}
                                     alt="Image"
                                 />
-                                <p>ซัพพอร์ตโดยทีมงานผู้เชี่ยวชาญ</p>
+                                <h4>วัดผลการส่งได้แม่นยำ</h4>
+                                <p>เช็กสถานะได้ว่าลูกค้าเปิด SMS หรือยัง</p>
                                 <a href="">การใช้งาน SMS Tracking</a>
                             </div>
                         </div>
