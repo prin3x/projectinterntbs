@@ -15,7 +15,7 @@ const FaqSection = ({ t }: any) => {
                 <div className="row">
                     <div className="col-md-12">
                         <h2 className="section_title">
-                            ให้คุณใช้งาน ThaiBulkSMS ได้อย่างไร้กังวล
+                            ThaiBulkSMS ให้คุณมากกว่าแค่ราคาถูก
                         </h2>
                     </div>
                 </div>
