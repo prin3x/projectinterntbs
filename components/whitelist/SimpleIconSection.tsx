@@ -50,7 +50,7 @@ const SimpleIconSection = ({ t }: any) => (
         </div>
       </div>
       <div className="row justify-content-md-center">
-        <div className="col-xl-8">
+        <div className="col-xl-10">
           <div className="simple_icon_title">
             <h3>ขอ Whitelist ง่าย ๆ ใน 3 ขั้นตอน</h3>
             <div className="row m-60">
@@ -85,13 +85,15 @@ const SimpleIconSection = ({ t }: any) => (
           </div>
         </div>
       </div>
-      <div className="row align-items-center justify-content-md-center">
-          <div className="col-lg-6 col-md-8">
-              <div className="sms_form_text">
-                  <h4>แพ็กเกจเล็ก ก็ขอ Whitelist ได้เริ่มต้นที่ <span>3,500 บาท</span></h4>
+      <div className="row justify-content-md-center">
+          <div className="col-sm-8 col-md-6">
+              <div className="sms_form_text text-center">
+                  <h4 className="smWhitelist">แพ็กเกจเล็ก ก็ขอ Whitelist ได้เริ่มต้นที่ <span>3,500 บาท</span></h4>
               </div>
           </div>
-          <div className="col-lg-4 col-md-12">
+          </div>
+        <div className="row justify-content-md-center">
+          <div className="col-md-8">
               <div className="sms_form_field">
                   <a
                       href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
