@@ -101,7 +101,7 @@ const SmsSectionV2 = ({ t }: any) => {
                                         )}
                                         {/* <h2>4,662,190,879</h2> */}
                                     </div>
-                                    <a href="" className="linkCountSMS">ทำไมระบบของ ThaiBulkSMS ถึงส่งเร็วและมีความเสถียรสูง? </a>
+                                    <a  href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/speed-and-reliable/`} className="linkCountSMS">ทำไมระบบของ ThaiBulkSMS ถึงส่งเร็วและมีความเสถียรสูง? </a>
                                 </div>
                             </div>
                         </div>
