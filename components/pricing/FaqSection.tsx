@@ -32,7 +32,7 @@ const FaqSection = ({ t }: any) => {
                                 <p>
                                     ส่งได้เร็วสูงสุด 24,000 SMS/นาที
                                 </p>
-                                <a href="">ทำไมเราจึงส่งถึงไว?</a>
+                                <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/speed-and-reliable/`} >ทำไมเราจึงส่งถึงไว?</a>
                             </div>
                             <div className="col-md-4 faqTBS">
                                 <img
@@ -42,7 +42,7 @@ const FaqSection = ({ t }: any) => {
                                 />
                                 <h4>มั่นใจว่า SMS ส่งถึงผู้รับ</h4>
                                 <p>แม้แต่ผู้ที่แจ้งบล็อก SMS โฆษณากับเครือข่าย</p>
-                                <a href="">วิธีเพิ่มอัตราในการส่งถึงผู้รับ</a>
+                                <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/whitelist/`}>วิธีเพิ่มอัตราในการส่งถึงผู้รับ</a>
                             </div>
                             <div className="col-md-4 faqTBS">
                                 <img
@@ -52,7 +52,7 @@ const FaqSection = ({ t }: any) => {
                                 />
                                 <h4>วัดผลการส่งได้แม่นยำ</h4>
                                 <p>เช็กสถานะได้ว่าลูกค้าเปิด SMS หรือยัง</p>
-                                <a href="">การใช้งาน SMS Tracking</a>
+                                <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-tracking/`}>การใช้งาน SMS Tracking</a>
                             </div>
                         </div>
                     </div>

@@ -110,7 +110,7 @@ const WhyBrandSection = ({ t }: any) => (
                 <div className="col-md-4 whyTBS">
                     <div className="single_feature_item">
                         <img
-                            className="lazyload size-img"
+                            className="lazyload size-img-why"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-why01.png`}
                             alt="Image"
                         />
@@ -131,7 +131,7 @@ const WhyBrandSection = ({ t }: any) => (
                 <div className="col-md-4 whyTBS">
                     <div className="single_feature_item">
                         <img
-                            className="lazyload size-img"
+                            className="lazyload size-img-why"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-why02.png`}
                             alt="Image"
                         />
@@ -152,7 +152,7 @@ const WhyBrandSection = ({ t }: any) => (
                 <div className="col-md-4 whyTBS">
                     <div className="single_feature_item">
                         <img
-                            className="lazyload size-img"
+                            className="lazyload size-img-why"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon-why03.png`}
                             alt="Image"
                         />

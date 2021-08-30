@@ -356,7 +356,7 @@ const AllPricing = ({ t, packages }: any) => {
                                     </div>
                                     <div className="row align-items-center">
                                         <div className="col-md-12 mt40-mb20">
-                                            <a href="" className="LowThanOtherB">
+                                            <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/lowprice/`}  className="LowThanOtherB">
                                                 ทำไม SMS ของ ThaiBulkSMS ถึงราคาถูกกว่าที่อื่น?{' '}
                                             </a>
                                         </div>
