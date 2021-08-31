@@ -25,7 +25,7 @@ const SimpleIconSection = ({ t }: any) => (
                                         {/* {t(
                       'SimpleIconSection::Thai Manual'
                     )} */}
-                                        SMS API Manual
+                                        Web Console Manual
                                     </p>
                                     <h4>
                                         {t('SimpleIconSection::Thai Manual')}

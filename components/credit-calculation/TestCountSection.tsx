@@ -122,26 +122,26 @@ const TestCountSection = ({}: any) => {
                                         }}
                                     ></textarea>
                                     <p className="textMessage">ข้อความ</p>
-                                    <p className="textCount">
-                                        {msgCount}/{charMaxLength}
-                                    </p>
+                                    
                                     <div className="countCredit">
-                                        คิดเป็น{' '}
-                                        <span>{creditUsage} เครดิต</span>
+                                        {msgCount}/<span>{charMaxLength}</span>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-6 col-sm-12 spaceRegis">
+                                <p className="textCount">
+                                    คิดเป็น{' '}<br />
+                                    <span>{creditUsage} เครดิต</span>
+                                </p>
+                                <p className="freeCredit">
+                                    รับเครดิตฟรี สำหรับทดลองส่ง
+                                </p>
                                 <a
                                     href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                    className="linkRegis"
+                                    className="btn v3"
                                 >
                                     สมัครสมาชิก
                                 </a>
-                                <br />
-                                <p className="freeCredit">
-                                    เพื่อ รับเครดิตฟรี สำหรับทดลองส่ง
-                                </p>
                             </div>
                         </div>
                     </div>
