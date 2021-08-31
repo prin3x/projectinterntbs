@@ -53,9 +53,7 @@ const TestimonialSection = ({ t }: any) => (
                         <div className="item">
                             <div className="testimonial_item">
                                 <p className="client_quote">
-                                    {t(
-                                        'TestimonialSection::ThaiBulkSMS is an SMS-sending service provider which makes sure that sending text messages to customers is very easy and convenient because the service allows us to send the messages by ourselves without having to go through an intermediary. Plus, reports on message sending are provided, enabling more accurate assessment of the results.'
-                                    )}
+                                ประทับใจในบริการของพนักงานที่คอยดูแลลูกค้าได้ดีมาก ๆ อย่างเช่นการเติม เครดิต หรือ สอบถามข้อมูลอื่น ๆ ก็สามารถตอบ/แก้ไขปัญหาได้อย่างรวดเร็ว มีรูปแบบของเว็บไซต์ที่ใช้งานง่ายหาเมนูต่าง ๆ ได้เอง
                                 </p>
                                 <div className="client_info">
                                     {/* <div className="client_img">
@@ -66,11 +64,7 @@ const TestimonialSection = ({ t }: any) => (
                     />
                   </div> */}
                                     <div className="client_name">
-                                        <h6>
-                                            {t(
-                                                'TestimonialSection::Syn Mun Kong Insurance PLC'
-                                            )}
-                                        </h6>
+                                        <h6>บริษัท ไทยสมุทรประกันชีวิต จำกัด (มหาชน)</h6>
                                         {/* <p>{t('p2')}</p> */}
                                     </div>
                                 </div>

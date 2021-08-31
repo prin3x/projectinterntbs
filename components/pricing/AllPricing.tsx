@@ -319,7 +319,7 @@ const AllPricing = ({ t, packages }: any) => {
                                             <h3
                                                 dangerouslySetInnerHTML={{
                                                     __html: t(
-                                                        'AllPricing::Buy more, <br>Get discount more'
+                                                        'AllPricing::Buy more, Get discount more'
                                                     ),
                                                 }}
                                             ></h3>
