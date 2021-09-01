@@ -8,17 +8,17 @@ const SimpleIconSection = ({ t }: any) => (
     >
         <div className="container">
             <div className="row mt-80">
-                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
+                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
                     <div className="simple_icon_title dev-page edit_seo">
                         <h1 className="edit_text_seo">
                             คู่มือการใช้งาน Web Console
                         </h1>
-                        <div className="row m-40 justify-content-center">
-                            <div className="col-lg-6">
+                        <div className="row mt40-mb20 justify-content-center">
+                            <div className="col-lg-4 col-md-6">
                                 <div className="track_box apipage">
                                     <img
                                         className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-api01.png`}
+                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual02.svg`}
                                         alt="Image"
                                     />
                                     <p>
@@ -41,19 +41,28 @@ const SimpleIconSection = ({ t }: any) => (
                         </div>
                     </div>
                 </div>
-                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
+                <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 m-40">
                     <div className="simple_icon_title dev-page edit_seo">
                         <h1 className="edit_text_seo">
                             วิดีโอสอนใช้งาน
                         </h1>
-                        <div className="row m-40 justify-content-center">
-                            <div className="col-lg-6 col-md-12">
+                        <div className="row m-40 justify-content-start">
+                            <div className="col-lg-4 col-md-6 col-xs-12">
                                 <div className="track_box apipage">
-                                    <img
-                                        className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual.png`}
-                                        alt="Image"
-                                    />
+                                    <div className="VdoPlay">
+                                        <img
+                                            className="lazyload thumbYoutube"
+                                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/thumbImage.webp`}
+                                            alt="Image"
+                                        />
+                                        <a href="" className="btnPlay">
+                                            <img
+                                                className="lazyload thumbYoutube"
+                                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/play-button.svg`}
+                                                alt="Image"
+                                            />                                        
+                                        </a>
+                                    </div>
                                     <p>วิดีโอสอนใช้งาน</p>
                                     <h4>
                                         ส่งข้อความแบบ Excel
@@ -66,13 +75,22 @@ const SimpleIconSection = ({ t }: any) => (
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-md-12">
+                            <div className="col-lg-4 col-md-6 col-xs-12">
                                 <div className="track_box apipage">
-                                    <img
-                                        className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual.png`}
-                                        alt="Image"
-                                    />
+                                    <div className="VdoPlay">
+                                        <img
+                                            className="lazyload thumbYoutube"
+                                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/thumbImage.webp`}
+                                            alt="Image"
+                                        />
+                                        <a href="" className="btnPlay">
+                                            <img
+                                                className="lazyload thumbYoutube"
+                                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/play-button.svg`}
+                                                alt="Image"
+                                            />                                        
+                                        </a>
+                                    </div>
                                     <p>วิดีโอสอนใช้งาน</p>
                                     <h4>
                                         วิธีนับเครดิตการใช้งาน
@@ -85,13 +103,22 @@ const SimpleIconSection = ({ t }: any) => (
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-md-12">
+                            <div className="col-lg-4 col-md-6 col-xs-12">
                                 <div className="track_box apipage">
-                                    <img
-                                        className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual.png`}
-                                        alt="Image"
-                                    />
+                                    <div className="VdoPlay">
+                                        <img
+                                            className="lazyload thumbYoutube"
+                                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/thumbImage.webp`}
+                                            alt="Image"
+                                        />
+                                        <a href="" className="btnPlay">
+                                            <img
+                                                className="lazyload thumbYoutube"
+                                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/play-button.svg`}
+                                                alt="Image"
+                                            />                                        
+                                        </a>
+                                    </div>
                                     <p>วิดีโอสอนใช้งาน</p>
                                     <h4>
                                         วิธีการชำระเงิน
@@ -104,13 +131,22 @@ const SimpleIconSection = ({ t }: any) => (
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-6 col-md-12">
+                            <div className="col-lg-4 col-md-6 col-xs-12">
                                 <div className="track_box apipage">
-                                    <img
-                                        className="lazyload"
-                                        data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual.png`}
-                                        alt="Image"
-                                    />
+                                    <div className="VdoPlay">
+                                        <img
+                                            className="lazyload thumbYoutube"
+                                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/thumbImage.webp`}
+                                            alt="Image"
+                                        />
+                                        <a href="" className="btnPlay">
+                                            <img
+                                                className="lazyload thumbYoutube"
+                                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/play-button.svg`}
+                                                alt="Image"
+                                            />                                        
+                                        </a>
+                                    </div>
                                     <p>วิดีโอสอนใช้งาน</p>
                                     <h4>
                                         วิธีสมัครใช้งาน ThaiBulkSMS
