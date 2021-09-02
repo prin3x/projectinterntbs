@@ -10,7 +10,7 @@ const GlobeSection = ({ }: any) => (
                     <div className="globe_text">
                         <h2>ทุก SMS ที่ส่งไป มั่นใจได้ว่าส่งถึง</h2>
                         <p>"ไม่ใช่แค่ส่งได้ แต่ต้องส่งถึง" คือสิ่งที่เรายึดถือมาตลอด พร้อมมี Solution ที่จะทำให้คุณมั่นใจได้ว่า ทุกการส่ง SMS กับเราจะไปถึงเบอร์ลูกค้าอย่างแน่นอน แม้แต่เบอร์ที่แจ้งบล็อก SMS โฆษณาไว้กับเครือข่าย</p>
-                        <Link href="/contact/">
+                        <Link href="/whitelist/">
                             <a className="btn v3">
                                 ดู Solution
                             </a>
