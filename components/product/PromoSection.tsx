@@ -53,7 +53,7 @@ const PromoSection = ({ t }: any) => (
                                    ทดลองใช้ฟรี
                                 </a>
                                 <a
-                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/product/smart-sms-console/`}
                                     className="btn v5 promoImg"
                                 >
                                     ดูข้อมูลเพิ่มเติม
@@ -88,7 +88,7 @@ const PromoSection = ({ t }: any) => (
                                     ทดลองใช้ฟรี
                                 </a>
                                 <a
-                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                    href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/product/sms-api/`}
                                     className="btn v5 promoImg"
                                 >
                                     ดูข้อมูลเพิ่มเติม

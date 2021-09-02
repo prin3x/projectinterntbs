@@ -88,12 +88,12 @@ const SimpleSection = ({ t }: any) => (
                                 <p>เพื่อให้แน่ใจว่า ThaiBulkSMS จะเป็นผู้ให้บริการคุณภาพสูงที่คุณตามหา คุณสามารถทดลองใช้ระบบส่งแบบเต็มรูปแบบได้ฟรีก่อนสั่งซื้อ</p>
                             </div>
                             <div className="col-lg-5 col-md-12 text-center">
-                                <button
+                                <a  href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                                     className="btn v2"
                                     type="submit"
                                 >
                                     ทดลองใช้ฟรี
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
