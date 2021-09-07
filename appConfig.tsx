@@ -20,4 +20,7 @@ export default {
 
     API_URL_BLOG: process.env.NEXT_PUBLIC_API_URL_BLOG || '',
     WEB_URL_BLOG: process.env.NEXT_PUBLIC_WEB_URL_BLOG || '',
+    YOUTUBE_API_KEY:
+        process.env.YOUTUBE_API_KEY ||
+        'AIzaSyB9y6ObszLFtRVkc0_JJkvSAX1OHMSAhgc',
 };
