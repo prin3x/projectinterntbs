@@ -8,7 +8,7 @@ const TrackSection = ({  }: any) => (
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    <h1 className="headPricing">ตารางการคำนวณเครดิต</h1>
+                    <h3 className="headPricing">ตารางการคำนวณเครดิต</h3>
                     <div className="secTableCal">
                         <table>
                             <tr>

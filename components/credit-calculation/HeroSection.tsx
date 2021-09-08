@@ -11,7 +11,7 @@ const CalCreditSection = ({ }: any) => {
             data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg-CalCredit.png`}
         >
             <div className="container pricing">
-                <h1 className="headPricing">การคำนวณเครดิต</h1>
+                <h3 className="headPricing">การคำนวณเครดิต</h3>
                 <p className="subPricingB calCredit">ThaiBulkSMS คำนวณเครดิตจาก จำนวนตัวอักษร ในข้อความที่ส่งไปหาแต่ละเบอร์ผู้รับ<br />โดยข้อความภาษาไทยและภาษาอังกฤษ จะมีข้อกำหนดที่แตกต่างกัน</p>
                 <div className="secCaltext">
                     <div className="caltextTH">
