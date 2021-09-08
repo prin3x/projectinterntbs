@@ -77,12 +77,6 @@ const SimpleIconSection = ({ t }: any) => {
                         </div>
                         <p>วิดีโอสอนใช้งาน</p>
                         <h4>{title}</h4>
-                        <a
-                            target="_blank"
-                            href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
-                        >
-                            [ดูวีดีโอการสอน]
-                        </a>
                     </div>
                 </div>
             );
