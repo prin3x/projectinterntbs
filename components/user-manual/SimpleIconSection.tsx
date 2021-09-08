@@ -133,7 +133,7 @@ const SimpleIconSection = ({ t }: any) => {
                     </div>
                     <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 m-40">
                         <div className="simple_icon_title dev-page edit_seo">
-                            <h1 className="edit_text_seo">วิดีโอสอนใช้งาน</h1>
+                            <h2 className="edit_text_seo">วิดีโอสอนใช้งาน</h2>
                             <div className="row m-40 justify-content-start">
                                 {renderVideo()}
                             </div>
@@ -144,9 +144,9 @@ const SimpleIconSection = ({ t }: any) => {
                 <div className="row">
                     <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
                         <div className="simple_icon_title dev-page edit_seo">
-                            <h1 className="edit_text_seo">
+                            <h2 className="edit_text_seo">
                                 ต้องการคู่มือ SMS API สำหรับนักพัฒนา?
-                            </h1>
+                            </h2>
                         </div>
                     </div>
                 </div>
