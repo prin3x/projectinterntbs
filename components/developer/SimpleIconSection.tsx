@@ -67,9 +67,9 @@ const SimpleIconSection = ({ t }: any) => (
                 </div>
                 <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 mt-80">
                     <div className="simple_icon_title dev-page edit_seo">
-                        <h1 className="edit_text_seo">
+                        <h2 className="edit_text_seo">
                             {t('SimpleIconSection::OTP Service Manual')}
-                        </h1>
+                        </h2>
                         <div className="row m-40">
                             <div className="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-12">
                                 <div className="track_box apipage">
@@ -110,9 +110,9 @@ const SimpleIconSection = ({ t }: any) => (
             <div className="row">
                 <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
                     <div className="simple_icon_title dev-page edit_seo">
-                        <h1 className="edit_text_seo">
+                        <h2 className="edit_text_seo">
                             {t('SimpleIconSection::Download example')}
-                        </h1>
+                        </h2>
                         <p>
                             {t(
                                 'SimpleIconSection::Download the SDK example in the language that you require.'
