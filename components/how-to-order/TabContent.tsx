@@ -882,12 +882,9 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
                                         alt="Image"
                                     />
-                                    <a
-                                        href="mailto:contact@thaibulksms.com"
-                                        className="btn v4"
-                                    >
+                                    <span className="btn v4">
                                         {t('TabContent::E-mail')}
-                                    </a>
+                                    </span>
                                 </div>
                             </div>
                         </div>

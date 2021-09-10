@@ -206,14 +206,14 @@ const HeroSection = ({ t }: any) => {
                                                 alt=""
                                             />
                                             <p>
-                                                <a href="mailto:contact@thaibulksms.com">
+                                                <span>
                                                     <label
                                                         dangerouslySetInnerHTML={{
                                                             __html:
                                                                 '<!--email_off-->contact@thaibulksms.com<!--/email_off-->',
                                                         }}
                                                     ></label>
-                                                </a>
+                                                </span>
                                             </p>
                                         </li>
                                         <li>
