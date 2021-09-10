@@ -29,10 +29,12 @@ const FaqSection = ({ t }: any) => {
                                     alt="Image"
                                 />
                                 <h4>ส่งไว OTP ไม่ Delay</h4>
-                                <p>
-                                    ส่งได้เร็วสูงสุด 24,000 SMS/นาที
-                                </p>
-                                <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/speed-and-reliable/`} >ทำไมเราจึงส่งถึงไว?</a>
+                                <p>ส่งได้เร็วสูงสุด 24,000 SMS/นาที</p>
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/speed-and-reliable/`}
+                                >
+                                    ทำไมเราจึงส่งถึงไว?
+                                </a>
                             </div>
                             <div className="col-md-4 faqTBS">
                                 <img
@@ -41,8 +43,14 @@ const FaqSection = ({ t }: any) => {
                                     alt="Image"
                                 />
                                 <h4>มั่นใจว่า SMS ส่งถึงผู้รับ</h4>
-                                <p>แม้แต่ผู้ที่แจ้งบล็อก SMS โฆษณากับเครือข่าย</p>
-                                <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/whitelist/`}>วิธีเพิ่มอัตราในการส่งถึงผู้รับ</a>
+                                <p>
+                                    แม้แต่ผู้ที่แจ้งบล็อก SMS โฆษณากับเครือข่าย
+                                </p>
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/whitelist/`}
+                                >
+                                    วิธีเพิ่มอัตราในการส่งถึงผู้รับ
+                                </a>
                             </div>
                             <div className="col-md-4 faqTBS">
                                 <img
@@ -52,7 +60,11 @@ const FaqSection = ({ t }: any) => {
                                 />
                                 <h4>วัดผลการส่งได้แม่นยำ</h4>
                                 <p>เช็กสถานะได้ว่าลูกค้าเปิด SMS หรือยัง</p>
-                                <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-tracking/`}>การใช้งาน SMS Tracking</a>
+                                <a
+                                    href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-tracking/`}
+                                >
+                                    การใช้งาน SMS Tracking
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -458,12 +470,9 @@ const FaqSection = ({ t }: any) => {
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
                                         alt="Image"
                                     />
-                                    <a
-                                        href="mailto:contact@thaibulksms.com"
-                                        className="btn v4"
-                                    >
+                                    <span className="btn v4">
                                         {t('FaqSection::E-mail')}
-                                    </a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
