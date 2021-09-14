@@ -33,7 +33,7 @@ const Layout = (props: any) => {
           }}
         />
       </Head> */}
-            {/* <Header /> */}
+            <Header />
             {props.children}
             {/* <Footer /> */}
             {/* <BannerCookie /> */}
