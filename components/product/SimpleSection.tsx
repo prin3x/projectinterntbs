@@ -1,7 +1,15 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
-const SimpleSection = ({ t }: any) => (
-    <div
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Product.json';
+import en from '../../public/locales/en/Product.json';
+// import PropTypes from 'prop-types';
+import Link from 'next/dist/client/link';
+const SimpleSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="simple_section lazyload productPage"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_4.png`}
     >
@@ -9,9 +17,7 @@ const SimpleSection = ({ t }: any) => (
             <div className="row">
                 <div className="col-md-12">
                     <h2 className="simple_title">
-                        {t(
-                            'SimpleSection::Complete set of basic features for SMS sending'
-                        )}
+                        {t.SimpleSection['Complete set of basic features for SMS sending']}
                     </h2>
                 </div>
                 <div className="col-md-12">
@@ -19,62 +25,50 @@ const SimpleSection = ({ t }: any) => (
                         <li>
                             <i className="far fa-check-circle"></i>
                             <p>
-                                {t(
-                                    'SimpleSection::Sending results can be checked instantly.'
-                                )}
+                                {t.SimpleSection['Sending results can be checked instantly.']}
                             </p>
                         </li>
                         <li>
                             <i className="far fa-check-circle"></i>
                             <p>
-                                {t(
-                                    'SimpleSection::Maximum allowance of 5 messages being sent consecutively'
-                                )}
+                                {t.SimpleSection['Maximum allowance of 5 messages being sent consecutively']}
                             </p>
                         </li>
                         <li>
                             <i className="far fa-check-circle"></i>
                             <p>
-                                {t(
-                                    'SimpleSection::Various ways of setting the time of sending'
-                                )}
+                                {t.SimpleSection['Various ways of setting the time of sending']}
                             </p>
                         </li>
                         <li>
                             <i className="far fa-check-circle"></i>
                             <p>
-                                {t(
-                                    'SimpleSection::Detailed reports of sending are provided.'
-                                )}
+                                {t.SimpleSection['Detailed reports of sending are provided.']}
                             </p>
                         </li>
                         <li>
                             <i className="far fa-check-circle"></i>
                             <p>
-                                {t(
-                                    'SimpleSection::The sender’s name can be specified.'
-                                )}
+                                {t.SimpleSection['The sender’s name can be specified.']}
                             </p>
                         </li>
                         <li>
                             <i className="far fa-check-circle"></i>
                             <p>
-                                {t(
-                                    'SimpleSection::The sending status is clearly specified.'
-                                )}
+                                {t.SimpleSection['The sending status is clearly specified.']}
                             </p>
                         </li>
                         <li>
                             <i className="far fa-check-circle"></i>
-                            <p>{t('SimpleSection::Block list system')}</p>
+                            <p>{t.SimpleSection['Block list system']}</p>
                         </li>
                         <li>
                             <i className="far fa-check-circle"></i>
-                            <p>{t('SimpleSection::Phonebook')}</p>
+                            <p>{t.SimpleSection.Phonebook}</p>
                         </li>
                         <li>
                             <i className="far fa-check-circle"></i>
-                            <p>{t('SimpleSection::Templates are provided.')}</p>
+                            <p>{t.SimpleSection['Templates are provided.']}</p>
                         </li>
                     </ul>
                 </div>
@@ -88,12 +82,14 @@ const SimpleSection = ({ t }: any) => (
                                 <p>เพื่อให้แน่ใจว่า ThaiBulkSMS จะเป็นผู้ให้บริการคุณภาพสูงที่คุณตามหา คุณสามารถทดลองใช้ระบบส่งแบบเต็มรูปแบบได้ฟรีก่อนสั่งซื้อ</p>
                             </div>
                             <div className="col-lg-5 col-md-12 text-center">
-                                <a  href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
+                                <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
+                                <a 
                                     className="btn v2"
                                     type="submit"
                                 >
                                     ทดลองใช้ฟรี
                                 </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -101,12 +97,15 @@ const SimpleSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
+    
+
 SimpleSection.getInitialProps = async () => ({
     namespacesRequired: ['Product'],
 });
 
-SimpleSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Product')(SimpleSection);
+// SimpleSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default SimpleSection;

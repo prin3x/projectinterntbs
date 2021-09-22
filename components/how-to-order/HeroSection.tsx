@@ -1,12 +1,21 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/How-to-order.json';
+import en from '../../public/locales/en/How-to-order.json';
+// import PropTypes from 'prop-types';
 import * as React from 'react';
-import { useRouter } from 'next/router';
+import Link from 'next/dist/client/link';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 const classnames = require('classnames');
 
-const HeroSection = ({ t, defaultTab, setDefaultTab }: any) => {
+const HeroSection = ({ defaultTab, setDefaultTab }: any) => {
     const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
     // const [defaultTab, setDefaultTab] = React.useState('pills-home');
 
     React.useEffect(() => {
@@ -25,7 +34,7 @@ const HeroSection = ({ t, defaultTab, setDefaultTab }: any) => {
                 <div className="row justify-content-center hero_top_one">
                     <div className="col-12 text-center">
                         <h1 className="section__title">
-                            {t('HeroSection::How to order a package')}
+                            {t.HeroSection['How to order a package']}
                         </h1>
 
                         <ul
@@ -34,13 +43,13 @@ const HeroSection = ({ t, defaultTab, setDefaultTab }: any) => {
                             role="tablist"
                         >
                             <li className="nav-item" role="presentation">
+                                <Link href="#pills-home">
                                 <a
                                     className={classnames('nav-link', {
                                         active: defaultTab === 'pills-home',
                                     })}
                                     id="pills-home-tab"
                                     data-toggle="pill"
-                                    href="#pills-home"
                                     role="tab"
                                     aria-controls="pills-home"
                                     aria-selected={defaultTab === 'pills-home'}
@@ -48,26 +57,28 @@ const HeroSection = ({ t, defaultTab, setDefaultTab }: any) => {
                                         setDefaultTab(`pills-home`);
                                     }}
                                 >
-                                    <img
+                                    {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/main_3.png`}
                                         alt=""
-                                    />
+                                    /> */}
+                                    <span className="lazyload">
+                                        <Image loader={myLoader} src="main_3.png" alt="" width={100} height={100}/>
+                                    </span>
                                     <span>
-                                        {t(
-                                            'HeroSection::Follow these steps to place an order'
-                                        )}
+                                        {t.HeroSection['Follow these steps to place an order']}
                                     </span>
                                 </a>
+                                </Link>
                             </li>
                             <li className="nav-item" role="presentation">
+                                <Link href="#pills-profile">
                                 <a
                                     className={classnames('nav-link', {
                                         active: defaultTab === 'pills-profile',
                                     })}
                                     id="pills-profile-tab"
                                     data-toggle="pill"
-                                    href="#pills-profile"
                                     role="tab"
                                     aria-controls="pills-profile"
                                     aria-selected={
@@ -77,15 +88,19 @@ const HeroSection = ({ t, defaultTab, setDefaultTab }: any) => {
                                         setDefaultTab(`pills-profile`);
                                     }}
                                 >
-                                    <img
+                                    {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/dollar.png`}
                                         alt=""
-                                    />
+                                    /> */}
+                                    <span className="lazyload">
+                                        <Image loader={myLoader} src="dollar.png" alt="" width={100} height={100}/>
+                                    </span>
                                     <span>
-                                        {t('HeroSection::Payment methods')}
+                                        {t.HeroSection['Payment methods']}
                                     </span>
                                 </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -99,7 +114,7 @@ HeroSection.getInitialProps = async () => ({
     namespacesRequired: ['How-to-order'],
 });
 
-HeroSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('How-to-order')(HeroSection);
+// HeroSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default HeroSection;

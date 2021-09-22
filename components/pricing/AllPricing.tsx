@@ -1,18 +1,29 @@
-import classnames from 'classnames';
 import Cookie from 'js-cookie';
 import numeral from 'numeral';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import * as React from 'react';
 import TagManager from 'react-gtm-module';
 import Swal from 'sweetalert2';
 import appConfig from '../../appConfig';
-import { Link, withTranslation } from '../../i18n';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Pricing.json';
+import en from '../../public/locales/en/Pricing.json';
 import { Product, ProductPackage } from '../../services/shopping/pricing.model';
 import { decodeTBSToken } from '../../services/user/user.service';
+import Link from 'next/dist/client/link';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+
+// import classnames from 'classnames';
+const classnames = require('classnames');
 
 const SenderActive = 10;
 
 const BuyPackage = (packageItem: ProductPackage) => {
+
     let domain = 'localhost';
 
     if (appConfig.APP_ENV === appConfig.production) domain = '.thaibulksms.com';
@@ -37,7 +48,11 @@ const BuyPackage = (packageItem: ProductPackage) => {
     );
 };
 
-const showPackage = (packages: Product[], t: Function) => {
+const showPackage = (packages: Product[]) => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     let itemPackages: any = [];
     for (let item in packages) {
         let productItem = packages[item];
@@ -47,19 +62,19 @@ const showPackage = (packages: Product[], t: Function) => {
         if (productItem.amount === 3500)
             yellowRibbon = (
                 <div className="parent">
-                    <h4 className="ribbon">{t('AllPricing::For beginners')}</h4>
+                    <h4 className="ribbon">{t.AllPricing['For beginners']}</h4>
                 </div>
             );
         else if (productItem.amount === 30000)
             yellowRibbon = (
                 <div className="parent">
-                    <h4 className="ribbon">{t('AllPricing::Bestsellers')}</h4>
+                    <h4 className="ribbon">{t.AllPricing.Bestsellers}</h4>
                 </div>
             );
         else if (productItem.amount === 250000)
             yellowRibbon = (
                 <div className="parent">
-                    <h4 className="ribbon">{t('AllPricing::Best Value')}</h4>
+                    <h4 className="ribbon">{t.AllPricing['Best Value']}</h4>
                 </div>
             );
 
@@ -81,12 +96,12 @@ const showPackage = (packages: Product[], t: Function) => {
                         <h3>
                             {numeral(productItem.amount).format('0,0')}
                             {` `}
-                            <span>{t('AllPricing::Baht')}</span>
+                            <span>{t.AllPricing.Baht}</span>
                         </h3>
                         <span>
-                            {t('AllPricing::Duration of usage')}{' '}
+                            {t.AllPricing['Duration of usage']}{' '}
                             {`${productItem.period} `}
-                            {t('AllPricing::months')}
+                            {t.AllPricing.months}
                         </span>
                     </div>
                 </div>
@@ -95,16 +110,22 @@ const showPackage = (packages: Product[], t: Function) => {
                         <div className="col-12">
                             <div className="pricing__content">
                                 <div className="arrow-down">
-                                    <img
+                                    {/* <img
                                         src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/arrow_down.png`}
                                         alt=""
-                                    />
+                                    /> */}
+                                    <span>
+                                        <Image loader={myLoader} src="arrow_down.png" alt="" width={100} height={100}/>
+                                    </span>
                                 </div>
-                                <img
+                                {/* <img
                                     src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/shape_triangle.png`}
                                     className="shape__box"
                                     alt=""
-                                />
+                                /> */}
+                                <span className="shape__box">
+                                    <Image loader={myLoader} src="shape_triangle.png" alt="" width={100} height={100}/>
+                                </span>
                                 <div className="row">
                                     <div className="col-sm-6 text-center">
                                         <h4 className="d-md-none">Standard</h4>
@@ -116,8 +137,8 @@ const showPackage = (packages: Product[], t: Function) => {
                                             ).format('0.00')}
                                             {` `}
                                             <span>
-                                                {/* {t('AllPricing::bath')}/{t('AllPricing::message')} */}
-                                                {t('AllPricing::Baht/message')}
+                                                {/* {t.AllPricing.bath')}/{t.AllPricing.message} */}
+                                                {t.AllPricing['Baht/message']}
                                             </span>
                                         </h3>
 
@@ -137,9 +158,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                         >
                                             <div className="sender__box1">
                                                 <span>
-                                                    {t(
-                                                        'AllPricing::Number of messages'
-                                                    )}
+                                                    {t.AllPricing['Number of messages']}
                                                 </span>
                                                 <span className="theme__text">
                                                     {numeral(
@@ -168,7 +187,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                                     }
                                                     className="btn v8"
                                                 >
-                                                    {t('AllPricing::Buy now')}
+                                                    {t.AllPricing['Buy now']}
                                                 </button>
                                             </div>
                                         </div>
@@ -182,7 +201,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                                     productItem.corporate.credit
                                             ).format('0.00')}{' '}
                                             <span>
-                                                {t('AllPricing::Baht/message')}
+                                                {t.AllPricing['Baht/message']}
                                             </span>
                                         </h3>
 
@@ -202,9 +221,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                         >
                                             <div className="sender__box1">
                                                 <span>
-                                                    {t(
-                                                        'AllPricing::Number of messages'
-                                                    )}
+                                                    {t.AllPricing['Number of messages']}
                                                 </span>
                                                 <span className="theme__text">
                                                     {numeral(
@@ -233,7 +250,7 @@ const showPackage = (packages: Product[], t: Function) => {
                                                     }
                                                     className="btn v8"
                                                 >
-                                                    {t('AllPricing::Buy now')}
+                                                    {t.AllPricing['Buy now']}
                                                 </button>
                                             </div>
                                         </div>
@@ -249,7 +266,11 @@ const showPackage = (packages: Product[], t: Function) => {
     return itemPackages;
 };
 
-const AllPricing = ({ t, packages }: any) => {
+const AllPricing = ({ packages }: any) => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     React.useEffect(() => {
         TagManager.dataLayer({
             dataLayer: {
@@ -271,7 +292,7 @@ const AllPricing = ({ t, packages }: any) => {
                         <div className="row no-gutters">
                             <div className="col-md-4">
                                 <div className="left__box left__box__top">
-                                    <p>{t('AllPricing::Package prices')}</p>
+                                    <p>{t.AllPricing['Package prices']}</p>
                                 </div>
                             </div>
                             <div className="col-md-8">
@@ -281,16 +302,12 @@ const AllPricing = ({ t, packages }: any) => {
                                             <div className="row">
                                                 <div className="col-6 text-center">
                                                     <p>
-                                                        {t(
-                                                            'AllPricing::Standard SMS'
-                                                        )}
+                                                        {t.AllPricing['Standard SMS']}
                                                     </p>
                                                 </div>
                                                 <div className="col-6 text-center">
                                                     <p>
-                                                        {t(
-                                                            'AllPricing::Corporate SMS'
-                                                        )}
+                                                        {t.AllPricing['Corporate SMS']}
                                                     </p>
                                                 </div>
                                             </div>
@@ -300,15 +317,13 @@ const AllPricing = ({ t, packages }: any) => {
                             </div>
                         </div>
 
-                        {showPackage(packages, t)}
+                        {showPackage(packages)}
                     </div>
 
                     <div className="col-12 text-center pricing__bottom__content">
                         <p
                             dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'AllPricing::• Package prices do not include VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.'
-                                ),
+                                __html: t.AllPricing['• Package prices do not include VAT.<br>• 3% withholding tax is available only when purchasing in the name of juristic persons.'],
                             }}
                         />
                         <div className="row">
@@ -318,16 +333,12 @@ const AllPricing = ({ t, packages }: any) => {
                                         <div className="col-lg-4 col-md-12">
                                             <h3
                                                 dangerouslySetInnerHTML={{
-                                                    __html: t(
-                                                        'AllPricing::Buy more, Get discount more'
-                                                    ),
+                                                    __html: t.AllPricing['Buy more, Get discount more'],
                                                 }}
                                             ></h3>
                                             <Link href="/contact/">
                                                 <button className="btn v2 sms-btn-text">
-                                                    {t(
-                                                        'AllPricing::Contact our sales team'
-                                                    )}
+                                                    {t.AllPricing['Contact our sales team']}
                                                 </button>
                                             </Link>
                                         </div>
@@ -337,9 +348,9 @@ const AllPricing = ({ t, packages }: any) => {
                                             </p>
                                             <p>
                                                 <span>
-                                                    {t('AllPricing::0.21')}
+                                                    {t.AllPricing['0.21']}
                                                 </span>{' '}
-                                                {t('AllPricing::Baht/message')}
+                                                {t.AllPricing['Baht/message']}
                                             </p>
                                         </div>
                                         <div className="col-lg-4 col-md-6 col-sm-12">
@@ -348,17 +359,19 @@ const AllPricing = ({ t, packages }: any) => {
                                             </p>
                                             <p>
                                                 <span>
-                                                    {t('AllPricing::0.24')}
+                                                    {t.AllPricing['0.24']}
                                                 </span>{' '}
-                                                {t('AllPricing::Baht/message')}
+                                                {t.AllPricing['Baht/message']}
                                             </p>
                                         </div>
                                     </div>
                                     <div className="row align-items-center">
                                         <div className="col-md-12 mt40-mb20">
-                                            <a href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/lowprice/`}  className="LowThanOtherB">
+                                            <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/lowprice/`}>
+                                            <a className="LowThanOtherB">
                                                 ทำไม SMS ของ ThaiBulkSMS ถึงราคาถูกกว่าที่อื่น?{' '}
                                             </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -375,7 +388,7 @@ AllPricing.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
 });
 
-AllPricing.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Pricing')(React.memo(AllPricing));
+// AllPricing.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default React.memo(AllPricing);

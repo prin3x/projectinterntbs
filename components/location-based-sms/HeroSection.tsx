@@ -1,7 +1,14 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
-const HeroSectionV3 = ({ t }: any) => (
-    <div
+// import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/LocationBasedSMSPage.json';
+import en from '../../public/locales/en/LocationBasedSMSPage.json';
+const HeroSectionV3 = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="hero_section v3 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
     >
@@ -19,9 +26,7 @@ const HeroSectionV3 = ({ t }: any) => (
                     <div className="hero_text_one v2">
                         <h1
                             dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'HeroSection::<span>Reach your target group with a location-based method.<span><br/> Instantly send messages without having to use phone numbers.'
-                                ),
+                                __html: t.HeroSection['<span>Reach your target group with a location-based method.<span><br/> Instantly send messages without having to use phone numbers.'],
                             }}
                         ></h1>
                     </div>
@@ -29,12 +34,14 @@ const HeroSectionV3 = ({ t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
+
 HeroSectionV3.getInitialProps = async () => ({
     namespacesRequired: ['LocationBasedSMSPage'],
 });
 
-HeroSectionV3.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('LocationBasedSMSPage')(HeroSectionV3);
+// HeroSectionV3.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default HeroSectionV3;

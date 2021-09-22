@@ -1,7 +1,14 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
-const HeroSectionWhy = ({ t }: any) => (
-    <div
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/WhyThaibulksms.json';
+import en from '../../public/locales/en/WhyThaibulksms.json';
+// import PropTypes from 'prop-types';
+const HeroSectionWhy = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="hero_section v3 lazyload"
         // style={{ backgroundImage: 'url(/img/bg_11.png)' }}
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
@@ -21,9 +28,7 @@ const HeroSectionWhy = ({ t }: any) => (
                     <div className="hero_text_one v2">
                         <h1
                             dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'HeroSection::Why should I use the SMS messaging service of <span>ThaiBulkSMS?</span>'
-                                ),
+                                __html: t.HeroSection['Why should I use the SMS messaging service of <span>ThaiBulkSMS?</span>'],
                             }}
                         ></h1>
                     </div>
@@ -31,12 +36,14 @@ const HeroSectionWhy = ({ t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
+    
 HeroSectionWhy.getInitialProps = async () => ({
     namespacesRequired: ['WhyThaibulksms'],
 });
 
-HeroSectionWhy.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('WhyThaibulksms')(HeroSectionWhy);
+// HeroSectionWhy.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default HeroSectionWhy;

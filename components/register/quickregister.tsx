@@ -1,5 +1,12 @@
-import { withTranslation, Router } from '../../i18n';
-import PropTypes from 'prop-types';
+// import { withTranslation, Router } from '../../i18n';
+import { useRouter } from 'next/router'
+// import th from '../../public/locales/th/Help.json';
+// import en from '../../public/locales/en/Help.json';
+import th from '../../public/locales/th/QuickRegister.json';
+import en from '../../public/locales/en/QuickRegister.json';
+// import th from '../../public/locales/th/ErrorMessage.json';
+// import en from '../../public/locales/en/ErrorMessage.json';
+// import PropTypes from 'prop-types';
 import { StoreContext } from '../context/store';
 import React, { useEffect, useContext } from 'react';
 import { useForm } from 'react-hook-form';
@@ -16,7 +23,11 @@ type Inputs = {
     registerdto: string;
     auth: string;
 };
-const QuickRegisterComponents = ({ t }: any) => {
+const QuickRegisterComponents = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     const dataStore: any = useContext(StoreContext);
     let {
         register,
@@ -96,12 +107,16 @@ const QuickRegisterComponents = ({ t }: any) => {
             setValue('password', dataStore.passStore[0]);
         }
         if (dataStore.msisdnStore[0] === undefined) {
-            Router.push('/log-in');
+            router.push('/log-in');
         }
     }, []);
     return (
         <div className="register_section">
-            <h2>{t('quickregister.header')}</h2>
+            <h2>{t.quickregister.header}</h2>
+
+            {/* ทดสอบ Help.json */}
+            {/* {t.help.lable} */}
+            
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-indiv">
                     <div className="input-twocolumn">
@@ -111,7 +126,7 @@ const QuickRegisterComponents = ({ t }: any) => {
                             name="firstname"
                             type="text"
                             className="input-txt02"
-                            placeholder={t('quickregister.firstname')}
+                            placeholder={t.quickregister.firstname}
                         />
                         <input
                             ref={register({ required: true })}
@@ -119,7 +134,7 @@ const QuickRegisterComponents = ({ t }: any) => {
                             name="lastname"
                             type="text"
                             className="input-txt02"
-                            placeholder={t('quickregister.lastname')}
+                            placeholder={t.quickregister.lastname}
                         />
                     </div>
                     <div className="input-twocolumn">
@@ -132,7 +147,7 @@ const QuickRegisterComponents = ({ t }: any) => {
                             name="email"
                             type="text"
                             className="input-txt02"
-                            placeholder={t('quickregister.email')}
+                            placeholder={t.quickregister.email}
                         />
                         <input
                             ref={register({ required: true })}
@@ -141,7 +156,7 @@ const QuickRegisterComponents = ({ t }: any) => {
                             name="password"
                             type="password"
                             className="input-txt02"
-                            placeholder={t('quickregister.password')}
+                            placeholder={t.quickregister.password}
                         />
                     </div>
                     <div
@@ -151,13 +166,13 @@ const QuickRegisterComponents = ({ t }: any) => {
                             margin: '15px',
                         }}
                     >
-                        {t(handleErorr(errors))}
+                        {t[`${handleErorr(errors)}`]}
                     </div>
 
                     <div className="sec-checkbox">
                         <div>
                             <label className="container">
-                                {t('quickregister.rule')}
+                                {t.quickregister.rule}
                                 <input
                                     type="checkbox"
                                     id="agree"
@@ -169,7 +184,7 @@ const QuickRegisterComponents = ({ t }: any) => {
                         </div>
                         <div>
                             <label className="container">
-                                {t('quickregister.news')}
+                                {t.quickregister.news}
                                 <input
                                     type="checkbox"
                                     id="news"
@@ -185,7 +200,7 @@ const QuickRegisterComponents = ({ t }: any) => {
                             className="btn v2"
                             style={{ minWidth: '180px' }}
                             type="submit"
-                            value={t('quickregister.createBtn')}
+                            value={t.quickregister.createBtn}
                             onClick={() => clearErrors()}
                         />
                     </div>
@@ -195,12 +210,11 @@ const QuickRegisterComponents = ({ t }: any) => {
     );
 };
 QuickRegisterComponents.getInitialProps = async () => ({
-    namespacesRequired: ['QuickRegister', 'ErrorMessage'],
+    // namespacesRequired: ['QuickRegister', 'ErrorMessage'],
+    namespacesRequired: ['QuickRegister'],
 });
 
-QuickRegisterComponents.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation(['QuickRegister', 'ErrorMessage'])(
-    QuickRegisterComponents
-);
+// QuickRegisterComponents.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default QuickRegisterComponents;

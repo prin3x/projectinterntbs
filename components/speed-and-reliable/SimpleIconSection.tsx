@@ -1,8 +1,12 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
+// import PropTypes from 'prop-types';
 import CountUp from 'react-countup';
 import { useEffect, useState } from 'react';
-const SimpleIconSection = ({ }: any) => {
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+const SimpleIconSection = () => {
   const [numStart, setnumStart] = useState(4662190879);
   const [numEnd, setnumEnd] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -38,11 +42,14 @@ const SimpleIconSection = ({ }: any) => {
           </div>
           <div className="col-lg-7">
             <div className="newsletter_img">
-              <img
+              {/* <img
                 className="lazyload"
                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_15.png`}
                 alt="Image"
-              />
+              /> */}
+              <span className="lazyload">
+                <Image loader={myLoader} src="img_15.png" alt="Image" width={100} height={100}/>
+              </span>
             </div>
           </div>
         </div>
@@ -100,39 +107,54 @@ const SimpleIconSection = ({ }: any) => {
             <p>แบรนด์ชั้นนำ ที่ส่ง SMS กับเรา</p>
             <div className="brandSpeed">
               <div className="imgBrand">
-                <img
+                {/* <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand05.png`}
                   alt="Image"
-                />
+                /> */}
+                <span className="lazyload">
+                  <Image loader={myLoader} src="logo-brand05.png" alt="Image" width={100} height={100}/>
+                </span>
               </div>
               <div className="imgBrand">
-                <img
+                {/* <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand03.png`}
                   alt="Image"
-                />
+                /> */}
+                <span className="lazyload">
+                  <Image loader={myLoader} src="logo-brand03.png" alt="Image" width={100} height={100}/>
+                </span>
               </div>
               <div className="imgBrand">
-                <img
+                {/* <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand06.png`}
                   alt="Image"
-                />
+                /> */}
+                <span className="lazyload">
+                  <Image loader={myLoader} src="logo-brand06.png" alt="Image" width={100} height={100}/>
+                </span>
               </div>
               <div className="imgBrand">
-                <img
+                {/* <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand08.png`}
                   alt="Image"
-                />
+                /> */}
+                <span className="lazyload">
+                  <Image loader={myLoader} src="logo-brand08.png" alt="Image" width={100} height={100}/>
+                </span>
               </div>
               <div className="imgBrand">
-                <img
+                {/* <img
                   className="lazyload"
                   data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand04.png`}
                   alt="Image"
-                />
+                /> */}
+                <span className="lazyload">
+                  <Image loader={myLoader} src="logo-brand04.png" alt="Image" width={100} height={100}/>
+                </span>
               </div>
             </div>
           </div>
@@ -146,7 +168,7 @@ SimpleIconSection.getInitialProps = async () => ({
   namespacesRequired: ['Otp'],
 });
 
-SimpleIconSection.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(SimpleIconSection);
+// SimpleIconSection.propTypes = {
+//   t: PropTypes.func.isRequired,
+// };
+export default SimpleIconSection;

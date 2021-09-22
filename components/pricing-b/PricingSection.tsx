@@ -1,10 +1,13 @@
-import { withTranslation } from '../../i18n';
 import Link from 'next/link';
-
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import * as React from 'react';
+import Image from 'next/image';
 
-const PricingSection = ({}: any) => {
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+
+const PricingSection = () => {
     React.useEffect(() => {}, []);
     return (
         <div
@@ -25,13 +28,14 @@ const PricingSection = ({}: any) => {
                 </p>
                 <ul className="btnPriceT">
                     <li>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                         <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                             target="_blank"
                             className="btn v3"
                         >
                             ทดลองส่งฟรี
                         </a>
+                        </Link>
                     </li>
                     <li>
                         <Link href="#all-pricing">
@@ -41,39 +45,54 @@ const PricingSection = ({}: any) => {
                 </ul>
                 <div className="brandPrice">
                     <div className="imgBrandPrice">
-                        <img
+                        {/* <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand09.png`}
                             alt="Image"
-                        />
+                        /> */}
+                        <span className="lazyload">
+                            <Image loader={myLoader} src="logo-brand09.png" alt="Image" width={100} height={100}/>
+                        </span>
                     </div>
                     <div className="imgBrandPrice">
-                        <img
+                        {/* <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand10.png`}
                             alt="Image"
-                        />
+                        /> */}
+                        <span className="lazyload">
+                            <Image loader={myLoader} src="logo-brand10.png" alt="Image" width={100} height={100}/>
+                        </span>
                     </div>
                     <div className="imgBrandPrice">
-                        <img
+                        {/* <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand11.png`}
                             alt="Image"
-                        />
+                        /> */}
+                        <span className="lazyload">
+                            <Image loader={myLoader} src="logo-brand11.png" alt="Image" width={100} height={100}/>
+                        </span>
                     </div>
                     <div className="imgBrandPrice">
-                        <img
+                        {/* <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand08.png`}
                             alt="Image"
-                        />
+                        /> */}
+                        <span className="lazyload">
+                            <Image loader={myLoader} src="logo-brand08.png" alt="Image" width={100} height={100}/>
+                        </span>
                     </div>
                     <div className="imgBrandPrice">
-                        <img
+                        {/* <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/logo-brand12.png`}
                             alt="Image"
-                        />
+                        /> */}
+                        <span className="lazyload">
+                            <Image loader={myLoader} src="logo-brand12.png" alt="Image" width={100} height={100}/>
+                        </span>
                     </div>
                 </div>
                 <div className="textScroll">
@@ -81,16 +100,22 @@ const PricingSection = ({}: any) => {
                 </div>
             </div>
 
-            <img
+            {/* <img
                 className="img-fluid bg__img img__1 lazyload"
                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_25.png`}
                 alt=""
-            />
-            <img
+            /> */}
+            <span className="img-fluid bg__img img__1 lazyload">
+                <Image loader={myLoader} src="img_25.png" alt="" width={100} height={100}/>
+            </span>
+            {/* <img
                 className="img-fluid bg__img img__2 lazyload"
                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__11.png`}
                 alt=""
-            />
+            /> */}
+            <span className="img-fluid bg__img img_2 lazyload">
+                <Image loader={myLoader} src="img__11.png" alt="" width={100} height={100}/>
+            </span>
         </div>
     );
 };
@@ -99,7 +124,7 @@ PricingSection.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
 });
 
-PricingSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Pricing')(PricingSection);
+// PricingSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default PricingSection;

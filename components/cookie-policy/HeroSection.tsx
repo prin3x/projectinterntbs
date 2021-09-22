@@ -1,13 +1,18 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import * as React from 'react';
-import { withTranslation } from '../../i18n';
+import { useRouter } from 'next/router';
+import th from '../../public/locales/th/CookiePolicy.json';
+import en from '../../public/locales/th/CookiePolicy.json';
 
-const HeroSection = ({ t }: any) => {
+const HeroSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
     React.useEffect(() => {}, []);
     return (
         <div className="container condition-wrap">
             <h1 className="condition-header textHeadCondition">
-                {t('cookiepolicyhero::header')}{' '}
+                {t.cookiepolicyhero.header}{' '}
                 <span style={{ display: 'none' }}>....</span>
             </h1>
 
@@ -20,7 +25,7 @@ const HeroSection = ({ t }: any) => {
                             marginBottom: '14px',
                         }}
                         dangerouslySetInnerHTML={{
-                            __html: t('cookiepolicyhero::section_1::content_1'),
+                            __html: t.cookiepolicyhero.section_1.content_1,
                         }}
                     ></span>
                     <span
@@ -30,7 +35,7 @@ const HeroSection = ({ t }: any) => {
                             marginBottom: '14px',
                         }}
                         dangerouslySetInnerHTML={{
-                            __html: t('cookiepolicyhero::section_1::content_2'),
+                            __html: t.cookiepolicyhero.section_1.content_2,
                         }}
                     ></span>
                     <span
@@ -40,7 +45,7 @@ const HeroSection = ({ t }: any) => {
                             marginBottom: '14px',
                         }}
                         dangerouslySetInnerHTML={{
-                            __html: t('cookiepolicyhero::section_1::content_3'),
+                            __html: t.cookiepolicyhero.section_1.content_3,
                         }}
                     ></span>
                 </div>
@@ -53,7 +58,7 @@ HeroSection.getInitialProps = async () => ({
     namespacesRequired: ['CookiePolicy'],
 });
 
-HeroSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('CookiePolicy')(HeroSection);
+// HeroSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default HeroSection;

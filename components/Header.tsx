@@ -1,10 +1,12 @@
-import { i18n, withTranslation } from '../i18n';
 import React, { useState } from 'react';
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
 import HeaderSubmodule from '../tbs_submodule/HeaderSubmodule.js';
 import MyHeader from '../components/myHeader';
 import { useRouter } from 'next/router';
+import th from '../public/locales/th/Header.json';
+import en from '../public/locales/en/Header.json';
+
 const options = [
     { value: 'TH', text: 'TH' },
     { value: 'EN', text: 'EN' },
@@ -18,9 +20,12 @@ const MySelect = options.map((list) => {
     );
 });
 
-const Header = ({ t }: any) => {
+const Header = () => {
     const { pathname } = useRouter();
+    const router = useRouter();
+    const {locale} = router;
     const [lang, setLang] = useState('TH');
+    const t = locale === 'th' ? th : en;
     const [isLogin, setIsLogin] = useState(
         Cookie.get('PASSCODE') ? true : false
     );
@@ -43,7 +48,8 @@ const Header = ({ t }: any) => {
             domain,
             expires: 7,
         });
-        i18n.changeLanguage(value.toLowerCase());
+        const locale = value.toLowerCase();
+        router.push(router.pathname, router.asPath, { locale });
     };
 
     const headerConfig = {
@@ -67,4 +73,4 @@ Header.getInitialProps = async () => ({
     namespacesRequired: ['Header'],
 });
 
-export default withTranslation('Header')(Header);
+export default Header;

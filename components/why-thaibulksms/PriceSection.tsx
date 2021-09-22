@@ -1,18 +1,22 @@
-import PropTypes from 'prop-types';
-
-import { withTranslation } from '../../i18n';
+// import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/WhyThaibulksms.json';
+import en from '../../public/locales/en/WhyThaibulksms.json';
 import Link from 'next/link';
 
-const WhyPriceSection = ({ t }: any) => (
-    <div className="simple_icon_section v2 bg-whyBottom">
+const WhyPriceSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div className="simple_icon_section v2 bg-whyBottom">
         <div className="container">
             <div className="row">
                 <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12">
                     <div className="simple_icon_title">
                         <h3>
-                            {t(
-                                'PriceSection::Focus on cheap prices or on full features can be selected according to your needs'
-                            )}
+                            {t.PriceSection['Focus on cheap prices or on full features can be selected according to your needs']}
                         </h3>
                     </div>
                 </div>
@@ -25,51 +29,41 @@ const WhyPriceSection = ({ t }: any) => (
                                 backgroundColor: '#fff',
                             }}
                         >
-                            <h3>{t('PriceSection::Standard Package')}</h3>
+                            <h3>{t.PriceSection['Standard Package']}</h3>
                             <ul className="pricing_feature">
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PriceSection::Cheaper messaging prices'
-                                        )}
+                                        {t.PriceSection['Cheaper messaging prices']}
                                     </p>
                                 </li>
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PriceSection::Viewable messaging reports'
-                                        )}
+                                        {t.PriceSection['Viewable messaging reports']}
                                     </p>
                                 </li>
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PriceSection::Complete basic feature operations'
-                                        )}
+                                        {t.PriceSection['Complete basic feature operations']}
                                     </p>
                                 </li>
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PriceSection::Campaign analysis tools'
-                                        )}
+                                        {t.PriceSection['Campaign analysis tools']}
                                     </p>
                                 </li>
                             </ul>
                             <div className="price_plan">
                                 <span>
-                                    {t(
-                                        'PriceSection::The best SMS price is available at only'
-                                    )}
+                                    {t.PriceSection['The best SMS price is available at only']}
                                 </span>
                                 <h2>
                                     0.21
                                     <span style={{ marginLeft: '10px' }}>
-                                        {t('PriceSection::baht / SMS')}
+                                        {t.PriceSection['baht / SMS']}
                                     </span>
                                 </h2>
                             </div>
@@ -83,14 +77,12 @@ const WhyPriceSection = ({ t }: any) => (
                                 backgroundColor: '#fff',
                             }}
                         >
-                            <h3>{t('PriceSection::Corporate Package')}</h3>
+                            <h3>{t.PriceSection['Corporate Package']}</h3>
                             <ul className="pricing_feature">
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PriceSection::All the features of Standard SMS'
-                                        )}
+                                        {t.PriceSection['All the features of Standard SMS']}
                                     </p>
                                 </li>
                                 <li>
@@ -99,9 +91,7 @@ const WhyPriceSection = ({ t }: any) => (
                                         aria-hidden="true"
                                     ></i>
                                     <p>
-                                        {t(
-                                            'PriceSection::OTP messaging with a Ready-to-use system'
-                                        )}
+                                        {t.PriceSection['OTP messaging with a Ready-to-use system']}
                                     </p>
                                 </li>
                                 <li>
@@ -110,9 +100,7 @@ const WhyPriceSection = ({ t }: any) => (
                                         aria-hidden="true"
                                     ></i>
                                     <p>
-                                        {t(
-                                            'PriceSection::Credit refunds if recipients are unable to receive the messages'
-                                        )}
+                                        {t.PriceSection['Credit refunds if recipients are unable to receive the messages']}
                                     </p>
                                 </li>
                                 <li>
@@ -121,22 +109,18 @@ const WhyPriceSection = ({ t }: any) => (
                                         aria-hidden="true"
                                     ></i>
                                     <p>
-                                        {t(
-                                            'PriceSection::More detailed messaging status checking'
-                                        )}
+                                        {t.PriceSection['More detailed messaging status checking']}
                                     </p>
                                 </li>
                             </ul>
                             <div className="price_plan">
                                 <span>
-                                    {t(
-                                        'PriceSection::The best SMS price is available at only'
-                                    )}
+                                    {t.PriceSection['The best SMS price is available at only']}
                                 </span>
                                 <h2>
                                     0.24
                                     <span style={{ marginLeft: '10px' }}>
-                                        {t('PriceSection::baht / SMS')}
+                                        {t.PriceSection['baht / SMS']}
                                     </span>
                                 </h2>
                             </div>
@@ -146,26 +130,27 @@ const WhyPriceSection = ({ t }: any) => (
                 <div className="col-md-12 text-center">
                     <Link href="/product/">
                         <a className="btn v3 whyPricing">
-                            {t('PriceSection::Learn more')}
+                            {t.PriceSection['Learn more']}
                         </a>
                     </Link>
 
                     <Link href="/pricing/">
                         <a className="btn v5 whyPricing">
-                            {t('PriceSection::View Package Prices')}
+                            {t.PriceSection['View Package Prices']}
                         </a>
                     </Link>
                 </div>
             </div>
         </div>
     </div>
-);
+    )
+}
 
 WhyPriceSection.getInitialProps = async () => ({
     namespacesRequired: ['WhyThaibulksms'],
 });
 
-WhyPriceSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('WhyThaibulksms')(WhyPriceSection);
+// WhyPriceSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default WhyPriceSection;

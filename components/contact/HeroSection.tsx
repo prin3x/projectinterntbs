@@ -1,10 +1,19 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-import { withTranslation } from '../../i18n';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Contact.json';
+import en from '../../public/locales/en/Contact.json';
 import { sendContact } from '../../services/contact/contact.service';
+import Link from 'next/link';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+
 const menuClick = () => {
     var elDivnice = document.getElementsByClassName('devnice-select')[0];
     if (elDivnice.classList.contains('open'))
@@ -22,9 +31,13 @@ type Inputs = {
     recaptcha: string;
     confirm: boolean;
 };
-const HeroSection = ({ t }: any) => {
+const HeroSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     const [wordhead, setWordhead] = useState(
-        'HeroSection::Contact the sales department'
+        HeroSection["Contact the sales department"]
     );
     const [successbtn, setSuccessbtn] = useState(false);
     let captcha: any;
@@ -53,7 +66,7 @@ const HeroSection = ({ t }: any) => {
         if (result.code !== '') {
             Swal.fire({
                 icon: 'warning',
-                html: t('HeroSection::' + result.code),
+                html: t.HeroSection[result.code],
             });
             return;
         }
@@ -73,7 +86,7 @@ const HeroSection = ({ t }: any) => {
         setSuccessbtn(false);
         Swal.fire({
             icon: 'success',
-            text: t('HeroSection::Swal::titlesuccess'),
+            text: t.HeroSection.Swal.titlesuccess,
         });
     };
     const handleErorr = (error: any) => {
@@ -134,7 +147,7 @@ const HeroSection = ({ t }: any) => {
             <div className="row justify-content-center hero_top_one">
                 <div className="col-12 text-center">
                     <h1 className="section__title">
-                        {t('HeroSection::Contact us')}
+                        {t.HeroSection['Contact us']}
                     </h1>
                 </div>
 
@@ -143,68 +156,77 @@ const HeroSection = ({ t }: any) => {
                         <div className="row no-gutters">
                             <div className="col-lg-5">
                                 <div className="contact__left">
-                                    <a
-                                        href="https://goo.gl/maps/LrntacVbBFvyB5Uv6"
-                                        target="_blank"
-                                        rel="noopener"
-                                    >
-                                        <img
+                                    <Link href="https://goo.gl/maps/LrntacVbBFvyB5Uv6">                                    
+                                    <a target="_blank" rel="noopener">
+                                        {/* <img
                                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/contact.png`}
                                             className="img-fluid left__img"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid left__img">
+                                            <Image loader={myLoader} src="contact.png" alt="contact" width={100} height={100}/>
+                                        </span>
                                     </a>
+                                    </Link>
 
                                     <h3>
-                                        {t(
-                                            'HeroSection::1MOBY Company Limited'
-                                        )}
+                                        {t.HeroSection['1MOBY Company Limited']}
                                     </h3>
                                     <ul>
                                         <li style={{ marginTop: '10px' }}>
-                                            <img
+                                            {/* <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/location.png`}
                                                 alt=""
-                                            />
+                                            /> */}
+                                            <span className="lazyload">
+                                                <Image loader={myLoader} src="location.png" alt="location" width={100} height={100}/>
+                                            </span>
                                             <p
                                                 dangerouslySetInnerHTML={{
-                                                    __html: t(
-                                                        'HeroSection::2521/10 Ladprao Road, Klong Chao Khun Singh Subdistrict, Wangthonglang District, Bangkok 10310'
-                                                    ),
+                                                    __html: t.HeroSection['2521/10 Ladprao Road, Klong Chao Khun Singh Subdistrict, Wangthonglang District, Bangkok 10310'],
                                                 }}
                                             ></p>
                                         </li>
                                         <li>
-                                            <img
+                                            {/* <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/call.png`}
                                                 alt=""
-                                            />
+                                            /> */}
+                                            <span className="lazyload">
+                                                <Image loader={myLoader} src="call.png" alt="call" width={100} height={100}/>
+                                            </span>
                                             <p>
-                                                <a href="tel:027986000">
-                                                    {t(
-                                                        'HeroSection::0-2798-6000 extension 0'
-                                                    )}
+                                                <Link href="tel:027986000">
+                                                <a>
+                                                    {t.HeroSection['0-2798-6000 extension 0']}
                                                 </a>
+                                                </Link>                                              
                                             </p>
                                         </li>
                                         <li>
-                                            <img
+                                            {/* <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/calendar.png`}
                                                 alt=""
-                                            />
+                                            /> */}
+                                            <span className="lazyload">
+                                                <Image loader={myLoader} src="calendar.png" alt="calendar" width={100} height={100}/>
+                                            </span>
                                             <p>
-                                                {t('HeroSection::0-2798-6099')}
+                                                {t.HeroSection['0-2798-6099']}
                                             </p>
                                         </li>
                                         <li>
-                                            <img
+                                            {/* <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/mail_2.png`}
                                                 alt=""
-                                            />
+                                            /> */}
+                                            <span className="lazyload">
+                                                <Image loader={myLoader} src="mail_2.png" alt="mail_2" width={100} height={100}/>
+                                            </span>
                                             <p>
                                                 <span>
                                                     <label
@@ -223,9 +245,7 @@ const HeroSection = ({ t }: any) => {
                                                 alt=""
                                             />
                                             <p>
-                                                {t(
-                                                    'HeroSection::8.30 – 17.30 hrs. (Monday – Friday)'
-                                                )}
+                                                {t.HeroSection['8.30 – 17.30 hrs. (Monday – Friday)']}
                                             </p>
                                         </li>
                                     </ul>
@@ -245,7 +265,7 @@ const HeroSection = ({ t }: any) => {
                                             onClick={menuClick}
                                         >
                                             <span className="">
-                                                {t(wordhead)}
+                                                {t[`${wordhead}`]}
                                             </span>
                                             <ul className="list">
                                                 <li
@@ -265,9 +285,7 @@ const HeroSection = ({ t }: any) => {
                                                         );
                                                     }}
                                                 >
-                                                    {t(
-                                                        'HeroSection::Contact the sales department'
-                                                    )}
+                                                    {t.HeroSection['Contact the sales department']}
                                                 </li>
                                                 <li
                                                     className="option "
@@ -285,9 +303,7 @@ const HeroSection = ({ t }: any) => {
                                                         );
                                                     }}
                                                 >
-                                                    {t(
-                                                        'HeroSection::Contact support'
-                                                    )}
+                                                    {t.HeroSection['Contact support']}
                                                 </li>
                                             </ul>
                                         </div>
@@ -305,9 +321,7 @@ const HeroSection = ({ t }: any) => {
                                             name="firstname"
                                             type="text"
                                             className="input__box v2"
-                                            placeholder={t(
-                                                'HeroSection::Real first name'
-                                            )}
+                                            placeholder={t.HeroSection['Real first name']}
                                         />
 
                                         <input
@@ -316,9 +330,7 @@ const HeroSection = ({ t }: any) => {
                                             name="lastname"
                                             type="text"
                                             className="input__box v2"
-                                            placeholder={t(
-                                                'HeroSection::Surname'
-                                            )}
+                                            placeholder={t.HeroSection.Surname}
                                         />
                                         <input
                                             ref={register()}
@@ -326,9 +338,7 @@ const HeroSection = ({ t }: any) => {
                                             name="companyName"
                                             type="text"
                                             className="input__box v2"
-                                            placeholder={t(
-                                                'HeroSection::Company'
-                                            )}
+                                            placeholder={t.HeroSection.Company}
                                         />
                                         <input
                                             ref={register({
@@ -339,9 +349,7 @@ const HeroSection = ({ t }: any) => {
                                             name="email"
                                             type="text"
                                             className="input__box v2"
-                                            placeholder={t(
-                                                'HeroSection::Email'
-                                            )}
+                                            placeholder={t.HeroSection.Email}
                                         />
                                         <input
                                             ref={register({
@@ -360,9 +368,7 @@ const HeroSection = ({ t }: any) => {
                                             name="phone"
                                             type="text"
                                             className="input__box v2"
-                                            placeholder={t(
-                                                'HeroSection::Phone number'
-                                            )}
+                                            placeholder={t.HeroSection['Phone number']}
                                         />
 
                                         <textarea
@@ -370,9 +376,7 @@ const HeroSection = ({ t }: any) => {
                                             id="desc"
                                             name="desc"
                                             className="input__box v2"
-                                            placeholder={t(
-                                                'HeroSection::Initial details'
-                                            )}
+                                            placeholder={t.HeroSection['Initial details']}
                                         ></textarea>
                                         <input
                                             ref={register({
@@ -388,9 +392,7 @@ const HeroSection = ({ t }: any) => {
                                             onChange={setreCaptcha}
                                         />
                                         <label className="checkbox-wrapper">
-                                            {t(
-                                                'HeroSection::Confirm your contact from ThaiBulkSMS'
-                                            )}
+                                            {t.HeroSection['Confirm your contact from ThaiBulkSMS']}
                                             <input
                                                 type="checkbox"
                                                 id="confirm"
@@ -408,7 +410,7 @@ const HeroSection = ({ t }: any) => {
                                                 margin: '15px',
                                             }}
                                         >
-                                            {t(handleErorr(errors))}
+                                            {t[`${handleErorr(errors)}`]}
                                         </div>
                                         <div
                                             className="button__wrapper text-center"
@@ -437,7 +439,7 @@ HeroSection.getInitialProps = async () => ({
     namespacesRequired: ['Contact'],
 });
 
-HeroSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Contact')(HeroSection);
+// HeroSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default HeroSection;

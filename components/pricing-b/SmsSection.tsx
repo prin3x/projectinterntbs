@@ -1,10 +1,10 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import TestQuickregister from '../quickregister/testQuickregister';
 import 'react-modal-video/scss/modal-video.scss';
 import { useState } from 'react';
 import Cookie from 'js-cookie';
-const SmsSection = ({}: any) => {
+import Link from 'next/dist/client/link';
+const SmsSection = () => {
     const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false);
     return (
         <div
@@ -56,14 +56,16 @@ const SmsSection = ({}: any) => {
                         </div>
                     </div>
                     <div className="col-md-12 textCenter">
+                        <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/speed-and-reliable/`}>
                         <a
                             className="linkSMSfast"
                             target="_blank"
-                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/speed-and-reliable/`}
+                            
                         >
                             ทำไมระบบของ ThaiBulkSMS
                             ถึงส่งเร็วและมีความเสถียรสูง?
                         </a>
+                        </Link>
                     </div>
                 </div>
                 {!isLogin && <TestQuickregister />}
@@ -75,7 +77,7 @@ SmsSection.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
 });
 
-SmsSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Pricing')(SmsSection);
+// SmsSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default SmsSection;

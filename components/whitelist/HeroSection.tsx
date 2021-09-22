@@ -1,5 +1,7 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+// import { useRouter } from 'next/router'
+// import th from '../../public/locales/th/Otp.json';
+// import en from '../../public/locales/en/Otp.json';
+// import PropTypes from 'prop-types';
 const HeroSectionV3 = ({  }: any) => (
     <div
         className="hero_section v3 lazyload"
@@ -28,7 +30,7 @@ HeroSectionV3.getInitialProps = async () => ({
     namespacesRequired: ['Otp'],
 });
 
-HeroSectionV3.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(HeroSectionV3);
+// HeroSectionV3.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default HeroSectionV3;

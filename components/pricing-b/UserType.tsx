@@ -1,9 +1,8 @@
-import { withTranslation } from '../../i18n';
 import Link from 'next/link';
 
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import 'react-modal-video/scss/modal-video.scss';
-const SmsSection = ({}: any) => {
+const SmsSection = () => {
     return (
         <div className="smsUser_section productsms lazyload">
             <div className="container">
@@ -61,19 +60,19 @@ const SmsSection = ({}: any) => {
                                     <ul>
                                         <li>
                                             ส่งข้อความจากแพลตฟอร์มของคุณด้วย{' '}
-                                            <a
-                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-api/`}
-                                            >
+                                            <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-api/`}>
+                                            <a                                            >
                                                 SMS API ที่ได้มาตรฐาน
                                             </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a
-                                                href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-api/`}
-                                            >
+                                            <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/product/sms-api/`}>
+                                            <a>
                                                 ระบบส่ง OTP พร้อมใช้
                                             </a>{' '}
                                             ไม่ต้องเขียนโปรแกรมเพิ่ม
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -83,13 +82,13 @@ const SmsSection = ({}: any) => {
                             <div className="col-md-12">
                                 <ul className="btnPriceUser">
                                     <li>
-                                        <a
-                                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                                            className="btn v3"
+                                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
+                                        <a className="btn v3"
                                             target="_blank"
                                         >
                                             ทดลองใช้ระบบฟรี
                                         </a>
+                                        </Link>
                                     </li>
                                     <li>
                                         <Link href="#all-pricing">
@@ -111,7 +110,7 @@ SmsSection.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
 });
 
-SmsSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Pricing')(SmsSection);
+// SmsSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default SmsSection;

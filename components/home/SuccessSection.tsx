@@ -1,9 +1,17 @@
-import { withTranslation } from '../../i18n';
+import React from "react";
 import Link from 'next/link';
+// import PropTypes from 'prop-types';
+// import { useRouter } from 'next/router'
+// import th from '../../public/locales/th/Home.json';
+// import en from '../../public/locales/en/Home.json';
 
-import PropTypes from 'prop-types';
-const GlobeSection = ({ }: any) => (
-    <div className="success_section">
+const GlobeSection = () => {
+    // const router = useRouter();
+    // const { locale } = router;
+    // const t = locale === 'th' ? th : en;
+
+    return(
+        <div className="success_section">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
@@ -28,13 +36,14 @@ const GlobeSection = ({ }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
 
 GlobeSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
 });
 
-GlobeSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Home')(GlobeSection);
+// GlobeSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default React.memo(GlobeSection);

@@ -1,14 +1,20 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import Swal from 'sweetalert2';
 import { useClipboard } from 'use-clipboard-copy';
-import { useRouter } from 'next/router';
-import { withTranslation } from '../../i18n';
 import Link from 'next/link';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/How-to-order.json';
+import en from '../../public/locales/en/How-to-order.json';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 const classnames = require('classnames');
-const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
+const TabContent = ({ defaultTab, setDefaultTab }: any) => {
     const [tab, setTab] = React.useState<any>();
     const [showModalbank, setShowModalbank] = useState(false);
     const [showModalqr, setShowModalqr] = useState(false);
@@ -17,6 +23,8 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
     const clipboard = useClipboard();
     // const [defaultTab, setDefaultTab] = React.useState('pills-home');
     const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
 
     React.useEffect(() => {
         if (!router.query.tab) {
@@ -36,9 +44,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
             position: 'top',
             icon: 'success',
             // title: 'คุณได้คัดลอกบัญชีธนาคารสำเร็จ',
-            title: t(
-                'TabContent::You have successfully copied the bank account details.'
-            ),
+            title: t.TabContent['You have successfully copied the bank account details.'],
             showConfirmButton: false,
             timer: 1500,
         });
@@ -69,17 +75,18 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                 <span className="serial__number">
                                                     1
                                                 </span>
-                                                <img
+                                                {/* <img
                                                     className="img-fluid lazyload"
                                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o1.png`}
                                                     alt=""
-                                                />
+                                                /> */}
+                                                <span className="img-fluid lazyload">
+                                                    <Image loader={myLoader} src="o1.png" alt="" width={100} height={100}/>
+                                                </span>
                                             </div>
                                             <div className="serial__content">
                                                 <h4>
-                                                    {t(
-                                                        'TabContent::Choose your desired package.'
-                                                    )}
+                                                    {t.TabContent['Choose your desired package.']}
                                                 </h4>
                                                 {/* <p
                           dangerouslySetInnerHTML={{
@@ -87,19 +94,13 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                           }}
                         ></p> */}
                                                 <p>
-                                                    {t(
-                                                        'TabContent::Once you have found your ideal package on the'
-                                                    )}
+                                                    {t.TabContent['Once you have found your ideal package on the']}
                                                     <Link href="/pricing/">
                                                         <a className="theme__text link mt-0">
-                                                            {t(
-                                                                'TabContent::package prices page'
-                                                            )}
+                                                            {t.TabContent['package prices page']}
                                                         </a>
                                                     </Link>
-                                                    {t(
-                                                        'TabContent::, click the "Buy Now" button to begin the ordering process.'
-                                                    )}
+                                                    {t.TabContent[', click the "Buy Now" button to begin the ordering process.']}
                                                 </p>
                                             </div>
                                         </div>
@@ -111,23 +112,22 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                 <span className="serial__number">
                                                     2
                                                 </span>
-                                                <img
+                                                {/* <img
                                                     className="img-fluid lazyload"
                                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o2.png`}
                                                     alt=""
-                                                />
+                                                /> */}
+                                                <span className="img-fluid lazyload">
+                                                    <Image loader={myLoader} src="o2.png" alt="" width={100} height={100}/>
+                                                </span>
                                             </div>
                                             <div className="serial__content">
                                                 <h4>
-                                                    {t(
-                                                        'TabContent::Enter the details for placing the order'
-                                                    )}
+                                                    {t.TabContent['Enter the details for placing the order']}
                                                 </h4>
                                                 <p
                                                     dangerouslySetInnerHTML={{
-                                                        __html: t(
-                                                            'TabContent::If you have not logged in, the system will prompt you to log in. A first-time buyer will need to enter their details.'
-                                                        ),
+                                                        __html: t.TabContent['If you have not logged in, the system will prompt you to log in. A first-time buyer will need to enter their details.'],
                                                     }}
                                                 ></p>
                                             </div>
@@ -140,17 +140,18 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                 <span className="serial__number">
                                                     3
                                                 </span>
-                                                <img
+                                                {/* <img
                                                     className="img-fluid lazyload"
                                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o3.png`}
                                                     alt=""
-                                                />
+                                                /> */}
+                                                <span className="img-fluid lazyload">
+                                                    <Image loader={myLoader} src="o3.png" alt="" width={100} height={100}/>
+                                                </span>
                                             </div>
                                             <div className="serial__content">
                                                 <h4>
-                                                    {t(
-                                                        'TabContent::Choose the desired payment'
-                                                    )}
+                                                    {t.TabContent['Choose the desired payment']}
                                                 </h4>
                                                 {/* <p
                           dangerouslySetInnerHTML={{
@@ -158,9 +159,8 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                           }}
                         ></p> */}
                                                 <p>
-                                                    {t(
-                                                        'TabContent::method from these 3 methods: QR Code, credit card, and bank transfer.'
-                                                    )}{' '}
+                                                    {t.TabContent['method from these 3 methods: QR Code, credit card, and bank transfer.']}{' '}
+                                                    <Link href="">
                                                     <a
                                                         onClick={() => {
                                                             setDefaultTab(
@@ -170,10 +170,9 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                         }}
                                                         className="theme__text link mt-0"
                                                     >
-                                                        {t(
-                                                            'TabContent::Please see the details here.'
-                                                        )}
+                                                        {t.TabContent['Please see the details here.']}
                                                     </a>
+                                                    </Link>
                                                 </p>
                                             </div>
                                         </div>
@@ -185,23 +184,22 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                 <span className="serial__number">
                                                     4
                                                 </span>
-                                                <img
+                                                {/* <img
                                                     className="img-fluid lazyload"
                                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o4.png`}
                                                     alt=""
-                                                />
+                                                /> */}
+                                                <span className="img-fluid lazyload">
+                                                    <Image loader={myLoader} src="o4.png" alt="" width={100} height={100}/>
+                                                </span>
                                             </div>
                                             <div className="serial__content">
                                                 <h4>
-                                                    {t(
-                                                        'TabContent::Make the payment within the specified time limit.'
-                                                    )}
+                                                    {t.TabContent['Make the payment within the specified time limit.']}
                                                 </h4>
                                                 <p
                                                     dangerouslySetInnerHTML={{
-                                                        __html: t(
-                                                            'TabContent::If you fail to make the payment within the specified time limit, the system will cancel the order immediately.'
-                                                        ),
+                                                        __html: t.TabContent['If you fail to make the payment within the specified time limit, the system will cancel the order immediately.'],
                                                     }}
                                                 ></p>
                                             </div>
@@ -214,23 +212,22 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                 <span className="serial__number">
                                                     5
                                                 </span>
-                                                <img
+                                                {/* <img
                                                     className="img-fluid lazyload"
                                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o5.png`}
                                                     alt=""
-                                                />
+                                                /> */}
+                                                <span className="img-fluid lazyload">
+                                                    <Image loader={myLoader} src="o5.png" alt="" width={100} height={100}/>
+                                                </span>
                                             </div>
                                             <div className="serial__content">
                                                 <h4>
-                                                    {t(
-                                                        'TabContent::Wait for the confirmation email.'
-                                                    )}
+                                                    {t.TabContent['Wait for the confirmation email.']}
                                                 </h4>
                                                 <p
                                                     dangerouslySetInnerHTML={{
-                                                        __html: t(
-                                                            'TabContent::Once the payment is completed, you will receive a confirmation email as proof of payment.'
-                                                        ),
+                                                        __html: t.TabContent['Once the payment is completed, you will receive a confirmation email as proof of payment.'],
                                                     }}
                                                 ></p>
                                             </div>
@@ -243,23 +240,22 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                 <span className="serial__number">
                                                     6
                                                 </span>
-                                                <img
+                                                {/* <img
                                                     className="img-fluid lazyload"
                                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/o6.png`}
                                                     alt=""
-                                                />
+                                                /> */}
+                                                <span className="img-fluid lazyload">
+                                                    <Image loader={myLoader} src="o6.png" alt="" width={100} height={100}/>
+                                                </span>
                                             </div>
                                             <div className="serial__content">
                                                 <h4>
-                                                    {t(
-                                                        'TabContent::Begin using the service'
-                                                    )}
+                                                    {t.TabContent['Begin using the service']}
                                                 </h4>
                                                 <p
                                                     dangerouslySetInnerHTML={{
-                                                        __html: t(
-                                                            'TabContent::instantly in case of QR code or credit card payments. If using bank transfer, a transfer notification needs to be sent to us and our staff will carry out the confirmation process. The credits will be available after the confirmation.'
-                                                        ),
+                                                        __html: t.TabContent['instantly in case of QR code or credit card payments. If using bank transfer, a transfer notification needs to be sent to us and our staff will carry out the confirmation process. The credits will be available after the confirmation.'],
                                                     }}
                                                 ></p>
                                             </div>
@@ -282,9 +278,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                         <div className="box__wrapper">
                                             <div className="box__header">
                                                 <h2>
-                                                    {t(
-                                                        'TabContent::Instantly use the credits upon the completion of payments.'
-                                                    )}
+                                                    {t.TabContent['Instantly use the credits upon the completion of payments.']}
                                                 </h2>
                                             </div>
                                             <div className="box__body">
@@ -293,26 +287,26 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                         <div className="col-md-6">
                                                             <div className="info__box flex-column text-center border-0 new__info__box">
                                                                 <div className="info__icon mr-0">
-                                                                    <img
+                                                                    {/* <img
                                                                         className="lazyload"
                                                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_13.png`}
                                                                         alt=""
-                                                                    />
+                                                                    /> */}
+                                                                    <span className="lazyload">
+                                                                        <Image loader={myLoader} src="icon_13.png" alt="" width={100} height={100}/>
+                                                                    </span>
                                                                 </div>
                                                                 <h5
                                                                     dangerouslySetInnerHTML={{
-                                                                        __html: t(
-                                                                            'TabContent::QR code payments <br/>are available for every bank.'
-                                                                        ),
+                                                                        __html: t.TabContent['QR code payments <br/>are available for every bank.'],
                                                                     }}
                                                                 ></h5>
                                                                 <p
                                                                     dangerouslySetInnerHTML={{
-                                                                        __html: t(
-                                                                            'TabContent::Compatible with every bank. <br/>No fees are charged.'
-                                                                        ),
+                                                                        __html: t.TabContent['Compatible with every bank. <br/>No fees are charged.'],
                                                                     }}
                                                                 ></p>
+                                                                <Link href="">
                                                                 <a
                                                                     className="theme__text link"
                                                                     data-toggle="modal"
@@ -326,35 +320,34 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                         );
                                                                     }}
                                                                 >
-                                                                    {t(
-                                                                        'TabContent::Payment instructions'
-                                                                    )}
+                                                                    {t.TabContent['Payment instructions']}
                                                                 </a>
+                                                                </Link>
                                                             </div>
                                                         </div>
 
                                                         <div className="col-md-6">
                                                             <div className="info__box flex-column text-center border-0 new__info__box">
                                                                 <div className="info__icon mr-0">
-                                                                    <img
+                                                                    {/* <img
                                                                         className="lazyload"
                                                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_24_1.png`}
                                                                         alt=""
-                                                                    />
+                                                                    /> */}
+                                                                    <span className="lazyload">
+                                                                        <Image loader={myLoader} src="icon_24_1.png" alt="" width={100} height={100}/>
+                                                                    </span>
                                                                 </div>
                                                                 <h5>
-                                                                    {t(
-                                                                        'TabContent::Credit card payment'
-                                                                    )}
+                                                                    {t.TabContent['Credit card payment']}
                                                                 </h5>
                                                                 <p
                                                                     dangerouslySetInnerHTML={{
-                                                                        __html: t(
-                                                                            'TabContent::Highest level of security.<br/> No fees are charged.'
-                                                                        ),
+                                                                        __html: t.TabContent['Highest level of security.<br/> No fees are charged.'],
                                                                     }}
                                                                 ></p>
 
+                                                                <Link href="">
                                                                 <a
                                                                     className="theme__text link"
                                                                     data-toggle="modal"
@@ -368,10 +361,9 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                         );
                                                                     }}
                                                                 >
-                                                                    {t(
-                                                                        'TabContent::Payment instructions'
-                                                                    )}
+                                                                    {t.TabContent['Payment instructions']}
                                                                 </a>
+                                                                </Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -382,9 +374,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                         <div className="box__wrapper">
                                             <div className="box__header">
                                                 <h2>
-                                                    {t(
-                                                        'TabContent::Pay and wait for confirmation by our staff'
-                                                    )}
+                                                    {t.TabContent['Pay and wait for confirmation by our staff']}
                                                 </h2>
                                             </div>
                                             <div className="box__body">
@@ -393,25 +383,25 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                         <div className="col-12">
                                                             <div className="info__box flex-column text-center border-0 new__info__box">
                                                                 <div className="info__icon mr-0">
-                                                                    <img
+                                                                    {/* <img
                                                                         className="lazyload"
                                                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_25_1.png`}
                                                                         alt=""
-                                                                    />
+                                                                    /> */}
+                                                                    <span className="lazyload">
+                                                                        <Image loader={myLoader} src="icon_25_1.png" alt="" width={100} height={100}/>
+                                                                    </span>
                                                                 </div>
                                                                 <h5 className="mt-4">
-                                                                    {t(
-                                                                        'TabContent::Bank transfer'
-                                                                    )}
+                                                                    {t.TabContent['Bank transfer']}
                                                                 </h5>
                                                                 <p
                                                                     dangerouslySetInnerHTML={{
-                                                                        __html: t(
-                                                                            'TabContent::Notify us of the payment and wait for the confirmation by our staff.<br/>After the confirmation, the credits can be used.'
-                                                                        ),
+                                                                        __html: t.TabContent['Notify us of the payment and wait for the confirmation by our staff.<br/>After the confirmation, the credits can be used.'],
                                                                     }}
                                                                 ></p>
 
+                                                                <Link href="">
                                                                 <a
                                                                     className="theme__text link"
                                                                     data-toggle="modal"
@@ -425,24 +415,31 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                         );
                                                                     }}
                                                                 >
-                                                                    {t(
-                                                                        'TabContent::Payment instructions'
-                                                                    )}
+                                                                    {t.TabContent['Payment instructions']}
                                                                 </a>
+                                                                </Link>
+
                                                                 <div className="row">
                                                                     <div className="col-12">
                                                                         <hr className="bank-howtoOrder"></hr>
                                                                     </div>
                                                                     <div className="col-md-6">
                                                                         <div className="item__box__2 d-flex align-items-start">
-                                                                            <img
+                                                                            {/* <img
                                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__1.png`}
                                                                                 alt=""
                                                                                 style={{
                                                                                     marginRight:
                                                                                         '20px',
                                                                                 }}
-                                                                            />
+                                                                            /> */}
+                                                                            <span 
+                                                                                style={{
+                                                                                    marginRight:
+                                                                                        '20px'
+                                                                                }}>
+                                                                                <Image loader={myLoader} src="img__1.png" alt="" width={100} height={100}/>
+                                                                            </span>
 
                                                                             <div className="textBankHow">
                                                                                 <p
@@ -451,9 +448,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             '10px',
                                                                                     }}
                                                                                 >
-                                                                                    {t(
-                                                                                        'TabContent::Siam Commercial Bank'
-                                                                                    )}
+                                                                                    {t.TabContent['Siam Commercial Bank']}
                                                                                 </p>
 
                                                                                 <div className="d-flex">
@@ -470,9 +465,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account type'
-                                                                                            )}
+                                                                                            {t.TabContent['Account type']}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -481,9 +474,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account number'
-                                                                                            )}
+                                                                                            {t.TabContent['Account number']}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -492,9 +483,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account name'
-                                                                                            )}
+                                                                                            {t.TabContent['Account name']}
                                                                                         </p>
                                                                                     </div>
 
@@ -505,9 +494,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             }}
                                                                                             className="theme__text"
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Savings'
-                                                                                            )}
+                                                                                            {t.TabContent.Savings}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -528,9 +515,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             }}
                                                                                             className="theme__text"
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::One Mobi Company Limited'
-                                                                                            )}
+                                                                                            {t.TabContent['One Mobi Company Limited']}
                                                                                         </p>
                                                                                     </div>
                                                                                 </div>
@@ -611,14 +596,22 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
 
                                                                     <div className="col-md-6">
                                                                         <div className="item__box__2 d-flex align-items-start">
-                                                                            <img
+                                                                            {/* <img
                                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__3.png`}
                                                                                 alt=""
                                                                                 style={{
                                                                                     marginRight:
                                                                                         '20px',
                                                                                 }}
-                                                                            />
+                                                                            /> */}
+                                                                            <span 
+                                                                                style={{
+                                                                                    marginRight:
+                                                                                        '20px'
+                                                                                }}>
+                                                                                <Image loader={myLoader} src="img__3.png" alt="" width={100} height={100}/>
+                                                                            </span>
+
 
                                                                             <div className="textBankHow">
                                                                                 <p
@@ -627,9 +620,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             '10px',
                                                                                     }}
                                                                                 >
-                                                                                    {t(
-                                                                                        'TabContent::Bangkok Bank'
-                                                                                    )}
+                                                                                    {t.TabContent['Bangkok Bank']}
                                                                                 </p>
 
                                                                                 <div className="d-flex">
@@ -646,9 +637,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account type'
-                                                                                            )}
+                                                                                            {t.TabContent['Account type']}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -657,9 +646,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account number'
-                                                                                            )}
+                                                                                            {t.TabContent['Account number']}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -668,9 +655,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account name'
-                                                                                            )}
+                                                                                            {t.TabContent['Account name']}
                                                                                         </p>
                                                                                     </div>
 
@@ -681,9 +666,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             }}
                                                                                             className="theme__text"
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Savings'
-                                                                                            )}
+                                                                                            {t.TabContent.Savings}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -704,9 +687,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             }}
                                                                                             className="theme__text"
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::One Mobi Company Limited'
-                                                                                            )}
+                                                                                            {t.TabContent['One Mobi Company Limited']}
                                                                                         </p>
                                                                                     </div>
                                                                                 </div>
@@ -716,14 +697,21 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
 
                                                                     <div className="col-md-6">
                                                                         <div className="item__box__2 d-flex align-items-start">
-                                                                            <img
+                                                                            {/* <img
                                                                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__4.png`}
                                                                                 alt=""
                                                                                 style={{
                                                                                     marginRight:
                                                                                         '20px',
                                                                                 }}
-                                                                            />
+                                                                            /> */}
+                                                                            <span
+                                                                                style={{
+                                                                                marginRight:
+                                                                                    '20px'
+                                                                                }}>
+                                                                                <Image loader={myLoader} src="img__4.png" alt="" width={100} height={100}/>
+                                                                            </span>
 
                                                                             <div className="textBankHow">
                                                                                 <p
@@ -732,9 +720,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             '10px',
                                                                                     }}
                                                                                 >
-                                                                                    {t(
-                                                                                        'TabContent::Krungsri Bank'
-                                                                                    )}
+                                                                                    {t.TabContent['Krungsri Bank']}
                                                                                 </p>
 
                                                                                 <div className="d-flex">
@@ -751,9 +737,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account type'
-                                                                                            )}
+                                                                                            {t.TabContent['Account type']}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -762,9 +746,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account number'
-                                                                                            )}
+                                                                                            {t.TabContent['Account number']}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -773,9 +755,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                                     '#5b6e80',
                                                                                             }}
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Account name'
-                                                                                            )}
+                                                                                            {t.TabContent['Account name']}
                                                                                         </p>
                                                                                     </div>
 
@@ -786,9 +766,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             }}
                                                                                             className="theme__text"
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::Savings'
-                                                                                            )}
+                                                                                            {t.TabContent.Savings}
                                                                                         </p>
                                                                                         <p
                                                                                             style={{
@@ -809,9 +787,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                                                                             }}
                                                                                             className="theme__text"
                                                                                         >
-                                                                                            {t(
-                                                                                                'TabContent::One Mobi Company Limited'
-                                                                                            )}
+                                                                                            {t.TabContent['One Mobi Company Limited']}
                                                                                         </p>
                                                                                     </div>
                                                                                 </div>
@@ -836,12 +812,10 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                     <div className="col-xl-5 col-lg-12">
                         <div className="faq_bottom_text">
                             <h3>
-                                {t('TabContent::Still have further questions?')}
+                                {t.TabContent['Still have further questions?']}
                             </h3>
                             <p>
-                                {t(
-                                    'TabContent::Choose your most convenient way to contact us.'
-                                )}
+                                {t.TabContent['Choose your most convenient way to contact us.']}
                             </p>
                         </div>
                     </div>
@@ -849,41 +823,50 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                         <div className="row">
                             <div className="col-md-4 col-12">
                                 <div className="service_feature_item">
-                                    <img
+                                    {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_1.png`}
                                         alt="Image"
-                                    />
-                                    <a href="tel:027986000" className="btn v4">
-                                        {t('TabContent::Contact our staff')}
+                                    /> */}
+                                    <span className="lazyload">
+                                        <Image loader={myLoader} src="img_1.png" alt="" width={100} height={100}/>
+                                    </span>
+                                    <Link href="tel:027986000">
+                                    <a className="btn v4">
+                                        {t.TabContent['Contact our staff']}
                                     </a>
+                                    </Link>                      
                                 </div>
                             </div>
                             <div className="col-md-4 col-12">
                                 <div className="service_feature_item">
-                                    <img
+                                    {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                                         alt="Image"
-                                    />
+                                    /> */}
+                                    <span className="lazyload">
+                                        <Image loader={myLoader} src="img_2.png" alt="" width={100} height={100}/>
+                                    </span>
                                     <Link href="/contact/">
                                         <a className="btn v4">
-                                            {t(
-                                                'TabContent::Call back service by staff'
-                                            )}
+                                            {t.TabContent['Call back service by staff']}
                                         </a>
                                     </Link>
                                 </div>
                             </div>
                             <div className="col-md-4 col-12">
                                 <div className="service_feature_item">
-                                    <img
+                                    {/* <img
                                         className="lazyload"
                                         data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
                                         alt="Image"
-                                    />
+                                    /> */}
+                                    <span className="lazyload">
+                                        <Image loader={myLoader} src="img_3.png" alt="" width={100} height={100}/>
+                                    </span>
                                     <span className="btn v4">
-                                        {t('TabContent::E-mail')}
+                                        {t.TabContent['E-mail']}
                                     </span>
                                 </div>
                             </div>
@@ -914,9 +897,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                         <div className="box__wrapper">
                             <div className="box__header">
                                 <h5>
-                                    {t(
-                                        'TabContent::Instructions for payment by bank transfer'
-                                    )}
+                                    {t.TabContent['Instructions for payment by bank transfer']}
                                 </h5>
                             </div>
                             <div className="box__body">
@@ -925,42 +906,45 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                     style={{ backgroundColor: ' #f1f8f9' }}
                                 >
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_20.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_20.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::1. Transfer the required amount to the specified bank account.'
-                                            )}
+                                            {t.TabContent['1. Transfer the required amount to the specified bank account.']}
                                         </h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_21.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_21.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::2. Notify us of the payment via the system.'
-                                            )}
+                                            {t.TabContent['2. Notify us of the payment via the system.']}
                                         </h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_22.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_22.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4
                                             dangerouslySetInnerHTML={{
-                                                __html: t(
-                                                    'TabContent::3. Wait for confirmation from our staff. The process will take no more than 24 hours.'
-                                                ),
+                                                __html: t.TabContent['3. Wait for confirmation from our staff. The process will take no more than 24 hours.'],
                                             }}
                                         >
                                             {/* 3. {t('paymentbankhero.h9-1')}
@@ -970,16 +954,17 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_23.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_23.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4
                                             dangerouslySetInnerHTML={{
-                                                __html: t(
-                                                    'TabContent::4. Once the payment is confirmed, you can use the credits to send SMS.'
-                                                ),
+                                                __html: t.TabContent['4. Once the payment is confirmed, you can use the credits to send SMS.'],
                                             }}
                                         >
                                             {/* 4. {t('paymentbankhero.h10-1')} <br />
@@ -994,9 +979,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                         <div className="box__wrapper">
                             <div className="box__header">
                                 <h5>
-                                    {t(
-                                        'TabContent::Instructions for QR code payment'
-                                    )}
+                                    {t.TabContent['Instructions for QR code payment']}
                                 </h5>
                             </div>
                             <div className="box__body type__scroll">
@@ -1005,16 +988,17 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                     style={{ backgroundColor: '#f1f8f9' }}
                                 >
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_15.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_15.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4
                                             dangerouslySetInnerHTML={{
-                                                __html: t(
-                                                    'TabContent::1. Open the bank’s application and go to the “Scan QR Code” menu.'
-                                                ),
+                                                __html: t.TabContent['1. Open the bank’s application and go to the “Scan QR Code” menu.'],
                                             }}
                                         >
                                             {/* 1. {t('TabContent::paymentqrhero.h8')}
@@ -1024,54 +1008,58 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_16.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_16.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::2. Use your phone to scan the QR code on the screen.'
-                                            )}
+                                            {t.TabContent['2. Use your phone to scan the QR code on the screen.']}
                                         </h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_17.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_17.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::3. Or you can choose to save the QR code as an image and upload it in the bank’s application to pay.'
-                                            )}
+                                            {t.TabContent['3. Or you can choose to save the QR code as an image and upload it in the bank’s application to pay.']}
                                         </h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_18.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_18.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::4. Check that all the details are correct, then confirm the payment.'
-                                            )}
+                                            {t.TabContent['4. Check that all the details are correct, then confirm the payment.']}
                                         </h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_19.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_19.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::5. After the payment is completed, the system will update your status automatically. You can now use the newly purchased credits to send SMS.'
-                                            )}
+                                            {t.TabContent['5. After the payment is completed, the system will update your status automatically. You can now use the newly purchased credits to send SMS.']}
                                         </h4>
                                     </div>
                                 </div>
@@ -1083,9 +1071,7 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                         <div className="box__wrapper">
                             <div className="box__header">
                                 <h5>
-                                    {t(
-                                        'TabContent::Instructions for credit card payment'
-                                    )}
+                                    {t.TabContent['Instructions for credit card payment']}
                                 </h5>
                             </div>
                             <div className="box__body type__scroll">
@@ -1094,71 +1080,76 @@ const TabContent = ({ t, defaultTab, setDefaultTab }: any) => {
                                     style={{ backgroundColor: '#f1f8f9' }}
                                 >
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_26.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_26.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4
                                             dangerouslySetInnerHTML={{
-                                                __html: t(
-                                                    'TabContent::1. When you choose to pay by credit card, the system will automatically take you to the 2C2P website.'
-                                                ),
+                                                __html: t.TabContent['1. When you choose to pay by credit card, the system will automatically take you to the 2C2P website.'],
                                             }}
                                         ></h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_27.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_27.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::2. Check the price and enter your credit card details.'
-                                            )}
+                                            {t.TabContent['2. Check the price and enter your credit card details.']}
                                         </h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_28.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_28.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::3. Enter OTP for identity verification, then click confirm.'
-                                            )}
+                                            {t.TabContent['3. Enter OTP for identity verification, then click confirm.']}
                                         </h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_29.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_96.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4
                                             dangerouslySetInnerHTML={{
-                                                __html: t(
-                                                    'TabContent::4. After the payment is completed, the system will take you back to the ThaiBulkSMS website automatically.'
-                                                ),
+                                                __html: t.TabContent['4. After the payment is completed, the system will take you back to the ThaiBulkSMS website automatically.'],
                                             }}
                                         ></h4>
                                     </div>
 
                                     <div className="d-flex align-items-center item__box">
-                                        <img
+                                        {/* <img
                                             className="img-fluid lazyload"
                                             data-src="/img/icon_30.png"
                                             alt=""
-                                        />
+                                        /> */}
+                                        <span className="img-fluid lazyload">
+                                            <Image loader={myLoader} src="icon_30.png" alt="" width={100} height={100}/>
+                                        </span>
                                         <h4>
-                                            {t(
-                                                'TabContent::5. You can use the new credit to send an SMS now.'
-                                            )}
+                                            {t.TabContent['5. You can use the new credit to send an SMS now.']}
                                         </h4>
                                     </div>
                                 </div>
@@ -1175,7 +1166,7 @@ TabContent.getInitialProps = async () => ({
     namespacesRequired: ['How-to-order'],
 });
 
-TabContent.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation(['How-to-order'])(TabContent);
+// TabContent.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default TabContent;

@@ -1,7 +1,16 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
-const CtaSectionV2 = ({ t }: any) => (
-    <div
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Otp.json';
+import en from '../../public/locales/en/Otp.json';
+// import PropTypes from 'prop-types';
+import Link from 'next/dist/client/link';
+
+const CtaSectionV2 = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="cta_section v2 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
     >
@@ -11,35 +20,34 @@ const CtaSectionV2 = ({ t }: any) => (
                     <div className="cta-text">
                         <h3
                             dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'ctaSection::Send OTP with a ready-to-use system that does not require time wasted in programming.'
-                                ),
+                                __html: t.ctaSection['Send OTP with a ready-to-use system that does not require time wasted in programming.'],
                             }}
                         ></h3>
-                        <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                            className="btn v7"
-                        >
-                            {t('ctaSection::Try for free')}
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
+                        <a className="btn v7">
+                            {t.ctaSection['Try for free']}
                         </a>
-                        <a
-                            href={`https://otp-manager.thaibulksms.com/login`}
-                            className="btn otp2"
+                        </Link>
+
+                        <Link href={`https://otp-manager.thaibulksms.com/login`}>
+                        <a className="btn otp2"
                             target="_blank"
                         >
-                            {t('ctaSection::Login')}
+                            {t.ctaSection.Login}
                         </a>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-);
+    )
+}
 CtaSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['Otp'],
 });
 
-CtaSectionV2.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(CtaSectionV2);
+// CtaSectionV2.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default CtaSectionV2;

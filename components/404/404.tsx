@@ -1,6 +1,10 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+import React from 'react';
+// import PropTypes from 'prop-types';
 import Link from 'next/link';
+// import { useRouter } from 'next/router'
+// import th from '../../public/locales/th/Thankyou.json';
+// import en from '../../public/locales/en/Thankyou.json';
+
 const Components404 = () => (
     <div className="register_section">
         <div className="finish-regis">
@@ -24,7 +28,7 @@ Components404.getInitialProps = async () => ({
     namespacesRequired: ['Thankyou'],
 });
 
-Components404.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Thankyou')(Components404);
+// Components404.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default React.memo(Components404);

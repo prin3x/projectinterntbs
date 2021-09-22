@@ -1,17 +1,33 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
-const SimpleIconSection = ({ t }: any) => (
-  <div className="simple_icon_section bg-speed">
+// import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Otp.json';
+import en from '../../public/locales/en/Otp.json';
+import Link from 'next/dist/client/link';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+const SimpleIconSection = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'th' ? th : en;
+
+  return(
+    <div className="simple_icon_section bg-speed">
     <div className="container">
 
       <div className="row align-items-center">
           <div className="col-lg-7">
               <div className="newsletter_img">
-                <img
+                {/* <img
                     className="lazyload"
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whitelist02.png`}
                     alt="Image"
-                />
+                /> */}
+                <span className="lazyload">
+                    <Image loader={myLoader} src="img-whitelist02.png" alt="Image" width={100} height={100}/>
+                </span>
               </div>
           </div>
           <div className="col-lg-5">
@@ -37,7 +53,7 @@ const SimpleIconSection = ({ t }: any) => (
                   type="image/svg+xml"
                   data={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-whitelist02.svg`}
               ></object>
-              <p>{t('ลดปัญหา Anti-Spam')}</p>
+              <p>{t['ลดปัญหา Anti-Spam']}</p>
             </div>
             <div className="Whitelist">
               <object
@@ -95,23 +111,26 @@ const SimpleIconSection = ({ t }: any) => (
         <div className="row justify-content-md-center">
           <div className="col-md-8">
               <div className="sms_form_field">
+                <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}>
                   <a
-                      href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
                       className="btn v8"
                   >
                       สั่งซื้อแพ็กเกจ
                   </a>
+                </Link>
               </div>
           </div>
       </div>
     </div>
   </div>
-);
+  )
+}
+  
 SimpleIconSection.getInitialProps = async () => ({
   namespacesRequired: ['Otp'],
 });
 
-SimpleIconSection.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(SimpleIconSection);
+// SimpleIconSection.propTypes = {
+//   t: PropTypes.func.isRequired,
+// };
+export default SimpleIconSection;

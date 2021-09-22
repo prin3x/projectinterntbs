@@ -1,7 +1,15 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
-const CtaSectionV2 = ({ t }: any) => (
-    <div
+// import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Resource.json';
+import en from '../../public/locales/en/Resource.json';
+import Link from 'next/dist/client/link';
+const CtaSectionV2 = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="cta_section v2 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
     >
@@ -11,39 +19,41 @@ const CtaSectionV2 = ({ t }: any) => (
                     <div className="cta-text">
                         <h3
                             dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'CtaSection::Increase successes with SMS Marketing <br/>through Thailand’s number 1 SMS Provider.'
-                                ),
+                                __html: t.CtaSection['Increase successes with SMS Marketing <br/>through Thailand’s number 1 SMS Provider.'],
                             }}
                         >
                             {/* เพิ่มความสำเร็จให้ SMS Marketing
               <br />
               ด้วย SMS Provider อันดับ 1 ของไทย */}
                         </h3>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                         <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                             className="btn v7"
                         >
-                            {t('CtaSection::Try for free')}
+                            {t.CtaSection['Try for free']}
                         </a>
+                        </Link>
+                        <Link href={`https://otp-manager.thaibulksms.com/login`}>
                         <a
-                            href={`https://otp-manager.thaibulksms.com/login`}
                             className="btn otp2"
                             target="_blank"
                         >
-                            {t('CtaSection::View Package Prices')}
+                            {t.CtaSection['View Package Prices']}
                         </a>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-);
+    )
+}
+    
 CtaSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['Resource'],
 });
 
-CtaSectionV2.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Resource')(CtaSectionV2);
+// CtaSectionV2.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default CtaSectionV2;
