@@ -24,7 +24,7 @@ Components404.getInitialProps = async () => ({
     namespacesRequired: ['Thankyou'],
 });
 
-Components404.propTypes = {
-    t: PropTypes.func.isRequired,
-};
+// Components404.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
 export default withTranslation('Thankyou')(Components404);

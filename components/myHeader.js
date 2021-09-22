@@ -118,10 +118,10 @@ const HeaderSubmodule = ({
                                 <a href="tel:027986000">02-798-6000</a>
                             </div>
                             <div className="header_select">
-                                {/* <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
-                  <option value="th">TH</option>
-                  <option value="en">EN</option>
-                    </select> */}
+                                <select className="user_select" onChange={(e) => onSwitchLanguage(e)} defaultValue={lang}>
+                                    <option value="th">TH</option>
+                                    <option value="en">EN</option>
+                                </select>
                                 <select
                                     className="user_select"
                                     onChange={(e) =>

@@ -4,6 +4,10 @@ import { withTranslation } from '../i18n';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../components/seo/home';
+import { useRouter } from 'next/router'
+import th from '../public/static/locales/th/Home.json'
+import en from '../public/static/locales/en/Home.json'
+
 // import SimpleSliderSection from '../components/home/SimpleSliderSection';
 import Layout from '../components/Layout';
 import HeroSection from '../components/home/HeroSection';
@@ -30,11 +34,17 @@ import BacktoTop from '../components/BacktoTop';
 // const EduSection = dynamic(() => import('../components/home/EduSection'))
 // const CtaSection = dynamic(() => import('../components/home/CtaSection'))
 // const BacktoTop = dynamic(() => import('../components/BacktoTop'))
-const Homepage = ({ t }: any) => (
-    <React.Fragment>
+// const Homepage = ({ t }: any) => (
+const Homepage = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return (
+        <React.Fragment>
         <Layout>
             <Head>
-                <meta name="keywords" content={t('keywords')} />
+                <meta name="keywords" content={t.meta.keywords} />
                 <meta name="author" content="" />
                 <meta
                     name="viewport"
@@ -53,8 +63,8 @@ const Homepage = ({ t }: any) => (
             </Head>
             <NextSeo
                 openGraph={seo.openGraph}
-                title={t('meta::title')}
-                description={t('meta::description')}
+                title={t.meta.title}
+                description={t.meta.description}
                 twitter={{
                     site: seo.openGraph.site_name,
                     cardType: seo.openGraph.type,
@@ -62,26 +72,26 @@ const Homepage = ({ t }: any) => (
             />
             {/* <Proloader /> */}
             <div className="page_wrapper">
-                <HeroSection />
-                <PartnerSection />
+                {/* <HeroSection /> */}
+                {/* <PartnerSection /> */}
                 <FeatureSection />
-                <SmsSection />
-                <SuccessSection />
-                <ServiceSection />
-                <SimpleSliderSection />
-                <GlobeSection />
-                <TestimonialSection />
-                <EduSection />
-                <CtaSection />
+                {/* <SmsSection /> */}
+                {/* <SuccessSection /> */}
+                {/* <ServiceSection /> */}
+                {/* <SimpleSliderSection /> */}
+                {/* <GlobeSection /> */}
+                {/* <TestimonialSection /> */}
+                {/* <EduSection /> */}
+                {/* <CtaSection /> */}
             </div>
             <BacktoTop />
         </Layout>
     </React.Fragment>
-);
+    )
+};
 // Homepage.getInitialProps = async () => ({
 //   namespacesRequired: ['HomeMeta'],
 // });
-export default withTranslation('Home')(Homepage);
 export const getStaticProps = async () => {
     return {
         props: {
@@ -89,3 +99,6 @@ export const getStaticProps = async () => {
         },
     };
 };
+
+export default Homepage;
+// export default withTranslation('Home')(Homepage);

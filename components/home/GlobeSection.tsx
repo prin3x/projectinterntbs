@@ -1,7 +1,8 @@
 import { withTranslation } from '../../i18n';
 import Link from 'next/link';
-
+import Image from 'next/dist/client/image';
 import PropTypes from 'prop-types';
+
 const GlobeSection = ({ t }: any) => (
     <div className="globe_section">
         <div className="container">
@@ -31,11 +32,20 @@ const GlobeSection = ({ t }: any) => (
                 </div>
                 <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
                     <div className="globe_img">
-                        <img
+                    <div className="lazyload">
+                        <Image 
+                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_10.png`} 
+                            alt="glob_img"
+                            width={350}
+                            height={500} />
+                        {/* <Image src="assets/img/img_10.png" /> */}
+                    </div>
+                        {/* <img
                             className="lazyload"
-                            data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_10.png`}
+                            // src="/img/img_10.png"
+                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_10.png`}
                             alt="Image"
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>
@@ -51,3 +61,4 @@ GlobeSection.propTypes = {
     t: PropTypes.func.isRequired,
 };
 export default withTranslation('Home')(GlobeSection);
+

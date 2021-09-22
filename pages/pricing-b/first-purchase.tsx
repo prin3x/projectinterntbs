@@ -11,11 +11,18 @@ import { PricingProps } from '../../services/shopping/pricing.model';
 
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/pricing-b';
-const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
+import { useRouter } from 'next/router';
+import th from '../../public/static/locales/th/Pricing-b.json'
+import en from '../../public/static/locales/en/Pricing-b.json'
+
+const Pricing: any = ({packages, packagesNormal }: PricingProps) => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
     return (
         <Layout>
             <Head>
-                <meta name="keywords" content={t('meta::keywords')} />
+                <meta name="keywords" content={t.meta.keywords} />
                 <meta name="author" content="" />
                 <meta
                     name="viewport"
@@ -24,8 +31,8 @@ const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
             </Head>
             <NextSeo
                 openGraph={seo.openGraph}
-                title={t('meta::title')}
-                description={t('meta::description')}
+                title={t.meta.title}
+                description={t.meta.description}
             />
             <div className="page_wrapper">
                 <PricingSection />
@@ -59,7 +66,7 @@ const Pricing: any = ({ t, packages, packagesNormal }: PricingProps) => {
 //   };
 // };
 
-export default withTranslation('Pricing-b')(Pricing);
+export default Pricing;
 
 export const getStaticProps = async () => {
     let packageAll;

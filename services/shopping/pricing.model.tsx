@@ -17,7 +17,6 @@ export interface Product {
     period: number;
 }
 export interface PricingProps {
-    t: Function;
     packages: ProductPackage[];
     packagesNormal: ProductPackage[];
     test: string;

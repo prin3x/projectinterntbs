@@ -2,7 +2,7 @@ import { i18n, withTranslation } from '../i18n';
 import React, { useState } from 'react';
 import Cookie from 'js-cookie';
 import appConfig from '../appConfig';
-import HeaderSubmodule from '../tbs_submodule/HeaderSubmodule.js';
+import HeaderSubmodule from '../tbs_submodule/HeaderSubmodule';
 import MyHeader from '../components/myHeader';
 import { useRouter } from 'next/router';
 const options = [
@@ -62,6 +62,7 @@ const Header = ({ t }: any) => {
     ) : (
         <HeaderSubmodule {...headerConfig} />
     );
+
 };
 Header.getInitialProps = async () => ({
     namespacesRequired: ['Header'],
