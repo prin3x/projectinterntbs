@@ -11,8 +11,8 @@ import ContentSection from '../../components/resource/ContentSection';
 import CtaSection from '../../components/resource/CtaSection';
 import * as BlogService from '../../services/blog/blog.service';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Resource.json'
-import en from '../../public/static/locales/en/Resource.json'
+import th from '../../public/locales/th/Resource.json'
+import en from '../../public/locales/en/Resource.json'
 
 const Resource = ({ posts }: any) => {
     const router = useRouter();

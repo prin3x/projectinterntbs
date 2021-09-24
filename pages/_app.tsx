@@ -8,17 +8,17 @@ import React, { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 import AppConfig from '../appConfig';
 import { StoreContextProvider } from '../components/context/store';
-import Proloader from '../components/Proloader';
+// import Proloader from '../components/Proloader';
 import { seo } from '../components/seo/defaultseo';
-// import { appWithTranslation, i18n } from '../i18n';
-// import { i18n } from '../i18n';
 import { checktoken } from '../services/user/user.service';
 import '../public/assets/css/style.css'
 import '../public/assets/css/responsive.css'
-import playground from '../playground'
 
 import { fb } from '../utils/fb';
 import Cookies from 'js-cookie';
+
+import '../public/css/style.css';
+import '../public/css/responsive.css';
 
 const tagManagerArgs = {
     gtmId: AppConfig.GTM_CODE || '',
@@ -49,9 +49,15 @@ axios.interceptors.response.use(
 
 function MyApp({ Component, pageProps }: any) {
     let lang = Cookie.get('LANG');
-    
+
     const router = useRouter();
 
+    const handleRouteChange = async (url: string) => {
+        if ((await checktoken()) && url === '/log-in') {
+            // Router.push('/member');
+            window.location.replace('https://member.thaibulksms.com/');
+        }
+    };
     useEffect(() => {
         if (lang === undefined) {
             router.locale = 'th'
@@ -134,5 +140,4 @@ MyApp.getInitialProps = async (appContext: any) => {
     return { ...appProps };
 };
 
-// export default appWithTranslation(MyApp);
 export default MyApp;

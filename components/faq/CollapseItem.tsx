@@ -1,6 +1,9 @@
 import * as React from 'react';
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+// import { useRouter } from 'next/router'
+// import th from '../../public/locales/th/FAQcallap.json';
+// import en from '../../public/locales/en/FAQcallap.json';
+import Link from 'next/link';
 
 const CollapseItem = (props: any) => {
     const { item } = props;
@@ -11,10 +14,10 @@ const CollapseItem = (props: any) => {
                 role="tab"
                 id={`headingOne${item.type}${item.index}`}
             >
+                <Link href={`#collapseOne${item.type}${item.index}`}>
                 <a
                     data-toggle="collapse"
                     data-parent={item.keyId}
-                    href={`#collapseOne${item.type}${item.index}`}
                     aria-expanded="false"
                     aria-controls={`collapseOne${item.type}${item.index}`}
                 >
@@ -22,6 +25,7 @@ const CollapseItem = (props: any) => {
                     <span className="open ion-ios-arrow-up"></span>
                     <h5 className="mb-0 faq_header">{item.question}</h5>
                 </a>
+                </Link>          
             </div>
             <div
                 id={`collapseOne${item.type}${item.index}`}
@@ -44,7 +48,7 @@ CollapseItem.getInitialProps = async () => ({
     namespacesRequired: ['FAQcallap'],
 });
 
-CollapseItem.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('FAQcallap')(CollapseItem);
+// CollapseItem.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default CollapseItem;

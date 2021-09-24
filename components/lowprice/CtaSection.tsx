@@ -1,7 +1,16 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
-const CtaSectionV2 = ({}: any) => (
-    <div
+// import { useRouter } from 'next/router'
+// import th from '../../public/locales/th/Otp.json';
+// import en from '../../public/locales/en/Otp.json';
+// import PropTypes from 'prop-types';
+import Link from 'next/link';
+
+const CtaSectionV2 = () => {
+    // const router = useRouter();
+    // const { locale } = router;
+    // const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="cta_section v2 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
     >
@@ -14,29 +23,29 @@ const CtaSectionV2 = ({}: any) => (
                             <br />
                             ที่คุณไว้วางใจได้
                         </h3>
-                        <a
-                            href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}
-                            className="btn lowPrice"
-                        >
+                        <Link href={`${process.env.NEXT_PUBLIC_DOMAIN_URL}/pricing/`}>
+                        <a className="btn lowPrice">
                             ซื้อเลย
                         </a>
-                        <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
-                            className="btn v7"
-                        >
+                        </Link>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
+                        <a className="btn v7">
                             ทดลองใช้ฟรี
                         </a>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-);
+    )
+    
+}
 CtaSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['Otp'],
 });
 
-CtaSectionV2.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(CtaSectionV2);
+// CtaSectionV2.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default CtaSectionV2;

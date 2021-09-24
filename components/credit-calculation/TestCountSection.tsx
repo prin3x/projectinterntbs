@@ -1,8 +1,15 @@
-import { withTranslation } from '../../i18n';
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Constant from './constants';
+// import { useRouter } from 'next/router';
+// import th from '../../public/locales/th/credit-calculation.json';
+// import en from '../../public/locales/th/credit-calculation.json';
+
 const TestCountSection = ({}: any) => {
+    // const router = useRouter();
+    // const { locale } = router;
+    // const t = locale === 'th' ? th : en;
+
     const [msgCount, setMsgCount] = useState(0);
     // const [textSms, settextSms] = useState('');
     const [isUnicode, setIsUnicode] = useState<boolean>(false);
@@ -154,7 +161,7 @@ TestCountSection.getInitialProps = async () => ({
     namespacesRequired: ['credit-calculation'],
 });
 
-TestCountSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('credit-calculation')(TestCountSection);
+// TestCountSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default TestCountSection;

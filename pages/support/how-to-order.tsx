@@ -8,8 +8,8 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/support_how-to-order';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/How-to-order.json'
-import en from '../../public/static/locales/en/How-to-order.json'
+import th from '../../public/locales/th/How-to-order.json'
+import en from '../../public/locales/en/How-to-order.json'
 
 const Order = () => {
     const router = useRouter();

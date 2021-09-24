@@ -1,8 +1,19 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Pricing.json';
+import en from '../../public/locales/en/Pricing.json';
+// import PropTypes from 'prop-types';
 import * as React from 'react';
+import Image from 'next/image';
 
-const PricingSection = ({ t }: any) => {
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+
+const PricingSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     React.useEffect(() => {}, []);
     return (
         <div
@@ -27,47 +38,37 @@ const PricingSection = ({ t }: any) => {
                                 STANDARD SMS
                             </h2>
                             <p style={{ fontSize: '22px', color: '#5b6e80' }}>
-                                {t('PricingSection::Cheap SMS sending')}
+                                {t.PricingSection['Cheap SMS sending']}
                             </p>
                             <ul className="pricing_feature">
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PricingSection::Cheaper prices for SMS sending'
-                                        )}
+                                        {t.PricingSection['Cheaper prices for SMS sending']}
                                     </p>
                                 </li>
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PricingSection::Sending reports are available.'
-                                        )}
+                                        {t.PricingSection['Sending reports are available.']}
                                     </p>
                                 </li>
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PricingSection::All basic features are available.'
-                                        )}
+                                        {t.PricingSection['All basic features are available.']}
                                     </p>
                                 </li>
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PricingSection::Tools for measuring campaign results are provided.'
-                                        )}
+                                        {t.PricingSection['Tools for measuring campaign results are provided.']}
                                     </p>
                                 </li>
                             </ul>
                             <div className="price_plan">
                                 <span>
-                                    {t(
-                                        'PricingSection::Best SMS pricing, only'
-                                    )}
+                                    {t.PricingSection['Best SMS pricing, only']}
                                 </span>
                                 <h2
                                     className="text_edit_en"
@@ -75,7 +76,7 @@ const PricingSection = ({ t }: any) => {
                                 >
                                     0.21
                                     <span style={{ marginLeft: '10px' }}>
-                                        {t('PricingSection::baht / message')}
+                                        {t.PricingSection['baht / message']}
                                     </span>
                                 </h2>
                             </div>
@@ -96,17 +97,13 @@ const PricingSection = ({ t }: any) => {
                                 CORPORATE SMS
                             </h2>
                             <p style={{ fontSize: '22px', color: '#5b6e80' }}>
-                                {t(
-                                    'PricingSection::Credits are refunded if the messages fail to reach the recipients.'
-                                )}
+                                {t.PricingSection['Credits are refunded if the messages fail to reach the recipients.']}
                             </p>
                             <ul className="pricing_feature">
                                 <li>
                                     <i className="far fa-check-circle"></i>
                                     <p>
-                                        {t(
-                                            'PricingSection::Every feature of Standard SMS'
-                                        )}
+                                        {t.PricingSection['Every feature of Standard SMS']}
                                     </p>
                                 </li>
                                 <li>
@@ -115,9 +112,7 @@ const PricingSection = ({ t }: any) => {
                                         aria-hidden="true"
                                     ></i>
                                     <p>
-                                        {t(
-                                            'PricingSection::A ready-to-use OTP sending system'
-                                        )}
+                                        {t.PricingSection['A ready-to-use OTP sending system']}
                                     </p>
                                 </li>
                                 <li>
@@ -126,9 +121,7 @@ const PricingSection = ({ t }: any) => {
                                         aria-hidden="true"
                                     ></i>
                                     <p>
-                                        {t(
-                                            'PricingSection::Credit refunds if the messages fail to reach the recipients'
-                                        )}
+                                        {t.PricingSection['Credit refunds if the messages fail to reach the recipients']}
                                     </p>
                                 </li>
                                 <li>
@@ -137,17 +130,13 @@ const PricingSection = ({ t }: any) => {
                                         aria-hidden="true"
                                     ></i>
                                     <p>
-                                        {t(
-                                            'PricingSection::More detailed information on sending status'
-                                        )}
+                                        {t.PricingSection['More detailed information on sending status']}
                                     </p>
                                 </li>
                             </ul>
                             <div className="price_plan">
                                 <span>
-                                    {t(
-                                        'PricingSection::Best SMS pricing, only'
-                                    )}
+                                    {t.PricingSection['Best SMS pricing, only']}
                                 </span>
                                 <h2
                                     className="text_edit_en"
@@ -155,7 +144,7 @@ const PricingSection = ({ t }: any) => {
                                 >
                                     0.24
                                     <span style={{ marginLeft: '10px' }}>
-                                        {t('PricingSection::baht / message')}
+                                        {t.PricingSection['baht / message']}
                                     </span>
                                 </h2>
                             </div>
@@ -164,16 +153,22 @@ const PricingSection = ({ t }: any) => {
                 </div>
             </div>
 
-            <img
+            {/* <img
                 className="img-fluid bg__img img__1 lazyload"
                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_25.png`}
                 alt=""
-            />
-            <img
+            /> */}
+            <span className="img-fluid bg__img img__1 lazyload">
+                <Image loader={myLoader} src="img_25.png" alt="Image" width={100} height={100}/>
+            </span>
+            {/* <img
                 className="img-fluid bg__img img__2 lazyload"
                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img__11.png`}
                 alt=""
-            />
+            /> */}
+            <span className="img-fluid bg__img img__2 lazyload">
+                <Image loader={myLoader} src="/img__11.png" alt="Image" width={100} height={100}/>
+            </span>
         </div>
     );
 };
@@ -182,7 +177,7 @@ PricingSection.getInitialProps = async () => ({
     namespacesRequired: ['Pricing'],
 });
 
-PricingSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Pricing')(PricingSection);
+// PricingSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default PricingSection;

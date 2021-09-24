@@ -1,16 +1,31 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
-const SmsSectionV3 = ({ t }: any) => (
-    <div className="sms_section v2 ">
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Otp.json';
+import en from '../../public/locales/en/Otp.json';
+// import PropTypes from 'prop-types';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+const SmsSectionV3 = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div className="sms_section v2 ">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-7 col-md-push-6">
                     <div className="newsletter_img">
-                        <img
+                        {/* <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whitelist01.png`}
                             alt="Image"
-                        />
+                        /> */}
+                        <span className="lazyload">
+                            <Image loader={myLoader} src="img-whitelist01.png" alt="Image" width={100} height={100}/>
+                        </span>
                     </div>
 
                 </div>
@@ -27,7 +42,7 @@ const SmsSectionV3 = ({ t }: any) => (
                         <div className="row align-items-center">
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_text">
-                                    <h4>{t(`SMS แบบไหนบ้างที่เข้าข่ายเป็น Spam`)}</h4>
+                                    <h4>{t[`SMS แบบไหนบ้างที่เข้าข่ายเป็น Spam`]}</h4>
                                 </div>
                             </div>
                             <div className="col-lg-8 col-md-12">
@@ -41,13 +56,14 @@ const SmsSectionV3 = ({ t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
 
 SmsSectionV3.getInitialProps = async () => ({
     namespacesRequired: ['Otp'],
 });
 
-SmsSectionV3.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(SmsSectionV3);
+// SmsSectionV3.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default SmsSectionV3;

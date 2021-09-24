@@ -13,8 +13,8 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/lowprice';
 // import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Lowprice.json'
-import en from '../../public/static/locales/en/Lowprice.json'
+import th from '../../public/locales/th/Lowprice.json'
+import en from '../../public/locales/en/Lowprice.json'
 
 const Lowprice = () => {
     const router = useRouter();

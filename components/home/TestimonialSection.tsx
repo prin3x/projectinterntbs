@@ -1,22 +1,29 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+import React from "react";
+// import PropTypes from 'prop-types';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Home.json';
+import en from '../../public/locales/en/Home.json';
+
 const OwlCarousel = dynamic(import('react-owl-carousel'), {
     ssr: false,
 });
-const TestimonialSection = ({ t }: any) => (
-    <div className="testimonial_section">
+
+const TestimonialSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div className="testimonial_section">
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
                     <h2
                         className="section_title"
                         dangerouslySetInnerHTML={{
-                            __html: t(
-                                'TestimonialSection::Customers who trust ThaiBulk SMS'
-                            ),
-                        }}
-                    >
+                            __html: t.TestimonialSection["Customers who trust ThaiBulk SMS"],
+                        }}>
                         {/* {t('h1')} <span className="col_one">ThaiBulk</span>{' '}
             <span className="col_two">SMS</span> */}
                     </h2>
@@ -73,9 +80,7 @@ const TestimonialSection = ({ t }: any) => (
                         <div className="item">
                             <div className="testimonial_item">
                                 <p className="client_quote">
-                                    {t(
-                                        'TestimonialSection::The prices represent an excellent value considering the quality of the service. The service meets all our expectations including measurement of results, viewing of reports and controlling budgets which are adjustable in each month or until the credits run out.'
-                                    )}
+                                    {t.TestimonialSection["The prices represent an excellent value considering the quality of the service. The service meets all our expectations including measurement of results, viewing of reports and controlling budgets which are adjustable in each month or until the credits run out."]}
                                 </p>
                                 <div className="client_info">
                                     {/* <div className="client_img">
@@ -87,9 +92,7 @@ const TestimonialSection = ({ t }: any) => (
                   </div> */}
                                     <div className="client_name">
                                         <h6>
-                                            {t(
-                                                'TestimonialSection::Smart One Logistics Co., Ltd.'
-                                            )}
+                                            {t.TestimonialSection["Smart One Logistics Co., Ltd."]}
                                         </h6>
                                         {/* <p>{t('p2')}</p> */}
                                     </div>
@@ -99,9 +102,7 @@ const TestimonialSection = ({ t }: any) => (
                         <div className="item">
                             <div className="testimonial_item">
                                 <p className="client_quote">
-                                    {t(
-                                        'TestimonialSection::The service ensures that marketing by SMS can be executed easily and speedily. The staff are also available to provide helpful advice and rapid solutions to various problems.'
-                                    )}
+                                    {t.TestimonialSection["The service ensures that marketing by SMS can be executed easily and speedily. The staff are also available to provide helpful advice and rapid solutions to various problems."]}
                                 </p>
                                 <div className="client_info">
                                     {/* <div className="client_img">
@@ -113,9 +114,7 @@ const TestimonialSection = ({ t }: any) => (
                   </div> */}
                                     <div className="client_name">
                                         <h6>
-                                            {t(
-                                                'TestimonialSection::National Housing Authority of Thailand'
-                                            )}
+                                            {t.TestimonialSection["National Housing Authority of Thailand"]}
                                         </h6>
                                         {/* <p>{t('p2')}</p> */}
                                     </div>
@@ -154,12 +153,14 @@ const TestimonialSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+    
+}
 TestimonialSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
 });
 
-TestimonialSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Home')(TestimonialSection);
+// TestimonialSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default React.memo(TestimonialSection);

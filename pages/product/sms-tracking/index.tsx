@@ -12,8 +12,8 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../../components/seo/sms-tracking';
 import { useRouter } from 'next/router';
-import th from '../../../public/static/locales/th/Sms-tracking.json'
-import en from '../../../public/static/locales/en/Sms-tracking.json'
+import th from '../../../public/locales/th/Sms-tracking.json'
+import en from '../../../public/locales/en/Sms-tracking.json'
 
 const Smstracking = () => {
     const router = useRouter();

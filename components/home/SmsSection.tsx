@@ -1,10 +1,17 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React, { useState, useEffect } from 'react';
 import TestQuickregister from '../quickregister/testQuickregister';
 import CountUp from 'react-countup';
 import Cookie from 'js-cookie';
-const SmsSectionV2 = ({ t }: any) => {
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Home.json';
+import en from '../../public/locales/en/Home.json';
+
+const SmsSectionV2 = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false);
     const [numStart, setnumStart] = useState(4662190879);
     const [numEnd, setnumEnd] = useState(0);
@@ -37,6 +44,7 @@ const SmsSectionV2 = ({ t }: any) => {
         setnumEnd(numStart + dayAt * Math.ceil((curTime - startDate) / 86400));
         setDuration(remain);
     }, []);
+    
     return (
         <div
             className="sms_section lazyload secHome"
@@ -77,9 +85,7 @@ const SmsSectionV2 = ({ t }: any) => {
                                 <div className="col-md-12 text-center">
                                     <div className="sms_feature_item">
                                         <p>
-                                            {t(
-                                                'SmsSection::The number of SMS sent by us up to now'
-                                            )}
+                                            {t.SmsSection['The number of SMS sent by us up to now']}
                                         </p>
                                         {duration !== 0 && (
                                             <div>
@@ -117,7 +123,7 @@ SmsSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
 });
 
-SmsSectionV2.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Home')(React.memo(SmsSectionV2));
+// SmsSectionV2.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default React.memo(SmsSectionV2);

@@ -1,7 +1,19 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
-const HeroSection = ({ t }: any) => (
-    <div
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Product.json';
+import en from '../../public/locales/en/Product.json';
+// import PropTypes from 'prop-types';
+// import Image from 'next/image';
+
+// const myLoader = ({src}:any) => {
+//     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+// }
+const HeroSection = () =>{
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="hero_section lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/hero_bg.png`}
     >
@@ -16,9 +28,7 @@ const HeroSection = ({ t }: any) => (
                     <div
                         className="hero_text_one"
                         dangerouslySetInnerHTML={{
-                            __html: t(
-                                'HeroSection::<span>Improve the results of SMS campaigns</span><p> with Thailand’s No.1 </p><h1>SMS Communication Platform</h1>'
-                            ),
+                            __html: t.HeroSection['<span>Improve the results of SMS campaigns</span><p> with Thailand’s No.1 </p><h1>SMS Communication Platform</h1>'],
                         }}
                     ></div>
                 </div>
@@ -67,12 +77,14 @@ const HeroSection = ({ t }: any) => (
             </div> */}
         </div>
     </div>
-);
+    )
+}
+
 HeroSection.getInitialProps = async () => ({
     namespacesRequired: ['Product'],
 });
 
-HeroSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Product')(HeroSection);
+// HeroSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default HeroSection;

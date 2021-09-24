@@ -11,8 +11,8 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../../components/seo/smart-sms-console';
 // import { withTranslation } from '../../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../../public/static/locales/th/SmartSmsConsole.json'
-import en from '../../../public/static/locales/en/SmartSmsConsole.json'
+import th from '../../../public/locales/th/SmartSmsConsole.json'
+import en from '../../../public/locales/en/SmartSmsConsole.json'
 
 const SmartSmsConsole = () => {
     const router = useRouter();

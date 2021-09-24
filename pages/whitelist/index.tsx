@@ -11,8 +11,8 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/whitelist';
 // import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Whitelist.json'
-import en from '../../public/static/locales/en/Whitelist.json'
+import th from '../../public/locales/th/Whitelist.json'
+import en from '../../public/locales/en/Whitelist.json'
 
 const Whitelist = () => {
     const router = useRouter();

@@ -1,9 +1,20 @@
-import { withTranslation } from '../../i18n';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/WhyThaibulksms.json';
+import en from '../../public/locales/en/WhyThaibulksms.json';
 import Link from 'next/link';
+// import PropTypes from 'prop-types';
+import Image from 'next/image';
 
-import PropTypes from 'prop-types';
-const FaqSection = ({ t }: any) => (
-    <div
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+const FaqSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="faq_section lazyload"
         // style={{ backgroundImage: 'url(/img/bg_3.png)' }}
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_3.png`}
@@ -12,11 +23,9 @@ const FaqSection = ({ t }: any) => (
             <div className="row align-items-center mt-5">
                 <div className="col-xl-5 col-lg-12">
                     <div className="faq_bottom_text">
-                        <h3>{t('FaqSection::Do you still have questions?')}</h3>
+                        <h3>{t.FaqSection['Do you still have questions?']}</h3>
                         <p>
-                            {t(
-                                'FaqSection::Select your most convenient contact channel'
-                            )}
+                            {t.FaqSection['Select your most convenient contact channel']}
                         </p>
                     </div>
                 </div>
@@ -24,45 +33,55 @@ const FaqSection = ({ t }: any) => (
                     <div className="row">
                         <div className="col-md-4 col-12">
                             <div className="service_feature_item">
-                                <img
+                                {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_1.png`}
                                     alt="Image"
-                                />
-                                <a href="tel:027986000" className="btn v4">
-                                    {t('FaqSection::Contact an officer')}
+                                /> */}
+                                <span className="lazyload">
+                                    <Image loader={myLoader} src="img_1.png" alt="Image" width={100} height={100}/>
+                                </span>
+                                <Link href="tel:027986000">
+                                <a className="btn v4">
+                                    {t.FaqSection['Contact an officer']}
                                 </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
                             <div className="service_feature_item">
-                                <img
+                                {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_2.png`}
                                     alt="Image"
-                                />
+                                /> */}
+                                <span className="lazyload">
+                                    <Image loader={myLoader} src="img_2.png" alt="Image" width={100} height={100}/>
+                                </span>
                                 <Link href="/contact/">
                                     <a className="btn v4">
-                                        {t(
-                                            'FaqSection::The officer will contact you back'
-                                        )}
+                                        {t.FaqSection['The officer will contact you back']}
                                     </a>
                                 </Link>
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
                             <div className="service_feature_item">
-                                <img
+                                {/* <img
                                     className="lazyload"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_3.png`}
                                     alt="Image"
-                                />
+                                /> */}
+                                <span className="lazyload">
+                                    <Image loader={myLoader} src="img_3.png" alt="Image" width={100} height={100}/>
+                                </span>
+                                <Link href="mailto:contact@thaibulksms.com">
                                 <a
-                                    href="mailto:contact@thaibulksms.com"
                                     className="btn v4"
                                 >
-                                    {t('FaqSection::Email')}
+                                    {t.FaqSection.Email}
                                 </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -70,13 +89,15 @@ const FaqSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
+    
 FaqSection.getInitialProps = async () => ({
     namespacesRequired: ['WhyThaibulksms'],
 });
 
-FaqSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('WhyThaibulksms')(FaqSection);
+// FaqSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default FaqSection;
 // export default FaqSection;

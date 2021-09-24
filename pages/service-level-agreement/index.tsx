@@ -11,8 +11,8 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/service-level-agreement';
 // import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/service-level-agreement.json'
-import en from '../../public/static/locales/en/service-level-agreement.json'
+import th from '../../public/locales/th/service-level-agreement.json'
+import en from '../../public/locales/en/service-level-agreement.json'
 
 const seviceLevel = () => {
     const router = useRouter();

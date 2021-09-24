@@ -1,40 +1,35 @@
 import React from 'react';
-// import dynamic from 'next/dynamic'
-import { withTranslation } from '../i18n';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../components/seo/home';
 import { useRouter } from 'next/router'
-import th from '../public/static/locales/th/Home.json'
-import en from '../public/static/locales/en/Home.json'
+import th from '../public/locales/th/Home.json'
+import en from '../public/locales/en/Home.json'
 
 // import SimpleSliderSection from '../components/home/SimpleSliderSection';
-import Layout from '../components/Layout';
-import HeroSection from '../components/home/HeroSection';
-import PartnerSection from '../components/home/PartnerSection';
-import FeatureSection from '../components/home/FeatureSection';
-import ServiceSection from '../components/home/ServiceSection';
-import SimpleSliderSection from '../components/home/SimpleSliderSection';
-import GlobeSection from '../components/home/GlobeSection';
-import SmsSection from '../components/home/SmsSection';
-import SuccessSection from '../components/home/SuccessSection';
-import TestimonialSection from '../components/home/TestimonialSection';
-import EduSection from '../components/home/EduSection';
-import CtaSection from '../components/home/CtaSection';
-import BacktoTop from '../components/BacktoTop';
+// import GlobeSection from '../components/home/GlobeSection';
+// import SmsSection from '../components/home/SmsSection';
+// import SuccessSection from '../components/home/SuccessSection';
+// import TestimonialSection from '../components/home/TestimonialSection';
+// import EduSection from '../components/home/EduSection';
+// import CtaSection from '../components/home/CtaSection';
+// import BacktoTop from '../components/BacktoTop';
 
-// const Layout = dynamic(() => import('../components/Layout'))
-// const HeroSection = dynamic(() => import('../components/home/HeroSection'))
-// const PartnerSection = dynamic(() => import('../components/home/PartnerSection'))
-// const FeatureSection = dynamic(() => import('../components/home/FeatureSection'))
-// const SimpleSliderSection = dynamic(() => import('../components/home/SimpleSliderSection'))
-// const GlobeSection = dynamic(() => import('../components/home/GlobeSection'))
-// const SmsSection = dynamic(() => import('../components/home/SmsSection'))
-// const TestimonialSection = dynamic(() => import('../components/home/TestimonialSection'))
-// const EduSection = dynamic(() => import('../components/home/EduSection'))
-// const CtaSection = dynamic(() => import('../components/home/CtaSection'))
-// const BacktoTop = dynamic(() => import('../components/BacktoTop'))
-// const Homepage = ({ t }: any) => (
+const Layout = dynamic(() => import('../components/Layout'))
+const HeroSection = dynamic(() => import('../components/home/HeroSection'))
+const PartnerSection = dynamic(() => import('../components/home/PartnerSection'))
+const FeatureSection = dynamic(() => import('../components/home/FeatureSection'))
+const SimpleSliderSection = dynamic(() => import('../components/home/SimpleSliderSection'))
+const GlobeSection = dynamic(() => import('../components/home/GlobeSection'))
+const SmsSection = dynamic(() => import('../components/home/SmsSection'))
+const SuccessSection = dynamic(() => import('../components/home/SuccessSection'))
+const ServiceSection = dynamic(() => import('../components/home/ServiceSection'))
+const TestimonialSection = dynamic(() => import('../components/home/TestimonialSection'))
+const EduSection = dynamic(() => import('../components/home/EduSection'))
+const CtaSection = dynamic(() => import('../components/home/CtaSection'))
+const BacktoTop = dynamic(() => import('../components/BacktoTop'))
+
 const Homepage = () => {
     const router = useRouter();
     const { locale } = router;
@@ -88,10 +83,12 @@ const Homepage = () => {
         </Layout>
     </React.Fragment>
     )
-};
+    
+}
 // Homepage.getInitialProps = async () => ({
 //   namespacesRequired: ['HomeMeta'],
 // });
+
 export const getStaticProps = async () => {
     return {
         props: {
@@ -101,4 +98,3 @@ export const getStaticProps = async () => {
 };
 
 export default Homepage;
-// export default withTranslation('Home')(Homepage);

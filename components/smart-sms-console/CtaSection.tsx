@@ -1,7 +1,16 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
-const CtaSectionV2 = ({ t }: any) => (
-    <div
+// import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/SmartSmsConsole.json';
+import en from '../../public/locales/en/SmartSmsConsole.json';
+import Link from 'next/dist/client/link';
+
+const CtaSectionV2 = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="cta_section v2 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_10.png`}
     >
@@ -11,38 +20,40 @@ const CtaSectionV2 = ({ t }: any) => (
                     <div className="cta-text">
                         <h3
                             dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'CtaSection::Easily send messages through the ThaiBulkSMS website <br />without having to rely on Developers'
-                                ),
+                                __html: t.CtaSection['Easily send messages through the ThaiBulkSMS website <br />without having to rely on Developers'],
                             }}
                         >
                             {/* ส่งข้อความผ่านเว็บ ThaiBulkSMS ได้ง่าย
               <br />
               ทำเองได้ ไม่ต้องพึ่ง Developer */}
                         </h3>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                         <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                             className="btn v7"
                         >
-                            {t('CtaSection::Try for free')}
+                            {t.CtaSection['Try for free']}
                         </a>
+                        </Link>
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}>
                         <a
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/log-in/`}
                             className="btn otp2"
                         >
-                            {t('CtaSection::Login')}
+                            {t.CtaSection.Login}
                         </a>
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-);
+    )
+}
+    
 CtaSectionV2.getInitialProps = async () => ({
     namespacesRequired: ['SmartSmsConsole'],
 });
 
-CtaSectionV2.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('SmartSmsConsole')(CtaSectionV2);
+// CtaSectionV2.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default CtaSectionV2;

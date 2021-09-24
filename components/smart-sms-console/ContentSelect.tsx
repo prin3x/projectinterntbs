@@ -1,8 +1,15 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/SmartSmsConsole.json';
+import en from '../../public/locales/en/SmartSmsConsole.json';
+// import PropTypes from 'prop-types';
 
-const SmartSmsConsoleContentSection = ({ t }: any) => (
-    <div
+const SmartSmsConsoleContentSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="hero_section v3 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
     >
@@ -20,9 +27,7 @@ const SmartSmsConsoleContentSection = ({ t }: any) => (
                     <div className="hero_text_one v2">
                         <h1
                             dangerouslySetInnerHTML={{
-                                __html: t(
-                                    'SmartSmsConsoleContentSection::<span>Send SMS messages on your own through a website.</span> Sending is easy and can be quickly analyzed.'
-                                ),
+                                __html: t.SmartSmsConsoleContentSection['<span>Send SMS messages on your own through a website.</span> Sending is easy and can be quickly analyzed.'],
                             }}
                         >
                             {/* <span>{t('ส่ง SMS ผ่านเว็บไซต์')}</span> ได้ด้วยตนเอง ส่งง่าย วัดผลการส่งได้รวดเร็ว */}
@@ -32,14 +37,14 @@ const SmartSmsConsoleContentSection = ({ t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
+    
 SmartSmsConsoleContentSection.getInitialProps = async () => ({
     namespacesRequired: ['SmartSmsConsole'],
 });
 
-SmartSmsConsoleContentSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('SmartSmsConsole')(
-    SmartSmsConsoleContentSection
-);
+// SmartSmsConsoleContentSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default SmartSmsConsoleContentSection;

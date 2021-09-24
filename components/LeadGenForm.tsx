@@ -1,8 +1,16 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { withTranslation } from '../i18n';
+import { useRouter } from 'next/router'
+import th from '../public/locales/th/LeadGenForm.json';
+import en from '../public/locales/en/LeadGenForm.json';
+import Image from 'next/image';
+import Link from 'next/dist/client/link';
 import appConfig from '../appConfig';
 import Cookie from 'js-cookie';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 interface FormValue {
     email: string;
@@ -23,7 +31,11 @@ enum CookieStatus {
     CLOSE = 'close',
 }
 
-const LeadGenForm = ({ t }: any): React.Component | any => {
+const LeadGenForm = (): React.Component | any => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     const [formVal, setFormVal] = useState<FormValue>({
         email: '',
         phoneNumber: '',
@@ -150,35 +162,42 @@ const LeadGenForm = ({ t }: any): React.Component | any => {
                                 isSuccess ? 'success' : ''
                             }`}
                         >
-                            {t('CompletedText')}
+                            {t.CompletedText}
+
                         </div>
+                        <Link href="">
                         <a className="btnClose" onClick={handleClose}>
-                            <img
+                            {/* <img
                                 className=""
                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/btnCloseLead.svg`}
                                 alt="button close"
-                            />
+                            /> */}
+                            <span>
+                                <Image loader={myLoader} src="btnCloseLead.svg" alt="button close" width={100} height={100}/>
+                            </span>
                         </a>
+                        </Link>
                     </div>
                 ) : (
                     <div className="secLeadGen">
-                        <h3>{t('HeadingText')}</h3>
-                        <p>{t('LeadText')}</p>
+                        <h3>{t.HeadingText}</h3>
+                        <p>{t.LeadText}</p>
                         <form>
                             <div className="leadform-instance">
                                 <input
                                     onChange={handleEmail}
                                     name="email"
                                     type="email"
-                                    placeholder={t('Email')}
+                                    placeholder={t.Email}
                                     className={`inputLead ${
                                         errors.email ? 'error' : ''
                                     }`}
                                 ></input>
                                 {errors.email && (
                                     <div className="invalid-leadform">
-                                        {t(`${errorsMsg?.email}`) ||
-                                            t('Error::InvalidEmail')}
+                                        {/* {t(`${errorsMsg?.email}`) ||
+                                            t('Error::InvalidEmail')} */}
+                                        {t[`${errorsMsg?.email}`] || t.Error.InvalidEmail}
                                     </div>
                                 )}
                             </div>
@@ -187,29 +206,36 @@ const LeadGenForm = ({ t }: any): React.Component | any => {
                                     onChange={handlePhoneNumber}
                                     name="phoneNumber"
                                     type="text"
-                                    placeholder={t('Phone')}
+                                    placeholder={t.Phone}
                                     className={`inputLead ${
                                         errors.phoneNumber ? 'error' : ''
                                     }`}
                                 ></input>
                                 {errors.phoneNumber && (
                                     <div className="invalid-leadform">
-                                        {t(`${errorsMsg?.phoneNumber}`) ||
-                                            t('Error::InvalidPhoneNumber')}
+                                        {/* {t(`${errorsMsg?.phoneNumber}`) ||
+                                            t('Error::InvalidPhoneNumber')} */}
+                                        {t[`${errorsMsg?.phoneNumber}`] || t.Error.InvalidPhoneNumber}
                                     </div>
                                 )}
                             </div>
                             <button onClick={handleSubmitForm} type="submit">
-                                {t('Download')}
+                                {t.Download}
                             </button>
                         </form>
+                        <Link href="">
                         <a className="btnClose" onClick={handleClose}>
-                            <img
+                            {/* <img
                                 className=""
                                 src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/btnCloseLead.svg`}
                                 alt="button close"
-                            />
+                            /> */}
+                            <span>
+                                <Image loader={myLoader} src="btnCloseLead.svg" alt="button close" width={100} height={100}/>
+                            </span>
                         </a>
+                        </Link>
+                        
                     </div>
                 )}
             </div>
@@ -225,4 +251,4 @@ export const getStaticProps = async () => {
     };
 };
 
-export default withTranslation('LeadGenForm')(LeadGenForm);
+export default LeadGenForm;

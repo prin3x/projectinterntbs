@@ -1,7 +1,20 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
-const SmsSectionV3 = ({ t }: any) => (
-    <div className="sms_section v2 ">
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Otp.json';
+import en from '../../public/locales/en/Otp.json';
+// import PropTypes from 'prop-types';
+import Link from 'next/dist/client/link';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+const SmsSectionV3 = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+    
+    return(
+        <div className="sms_section v2 ">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-6 col-md-push-6">
@@ -25,11 +38,14 @@ const SmsSectionV3 = ({ t }: any) => (
             <div className="row align-items-center m-60">
                 <div className="col-lg-7">
                     <div className="newsletter_img">
-                        <img
+                        {/* <img
                             className="lazyload"
                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-speed02.png`}
                             alt="Image"
-                        />
+                        /> */}
+                        <span className="lazyload">
+                            <Image loader={myLoader} src="img-speed02.png" alt="Image" width={100} height={100}/>
+                        </span>
                     </div>
                 </div>
                 <div className="col-lg-5">
@@ -60,12 +76,13 @@ const SmsSectionV3 = ({ t }: any) => (
                             </div>
                             <div className="col-lg-4 col-md-12">
                                 <div className="sms_form_field">
+                                    <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}>
                                     <a
-                                        href={`${process.env.NEXT_PUBLIC_WEB_URL_ACCOUNT}/register/`}
                                         className="btn v8"
                                     >
-                                        {t('SmsSection::Try for free')}
+                                        {t.SmsSection['Try for free']}
                                     </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -74,13 +91,14 @@ const SmsSectionV3 = ({ t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
 
 SmsSectionV3.getInitialProps = async () => ({
     namespacesRequired: ['Otp'],
 });
 
-SmsSectionV3.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(SmsSectionV3);
+// SmsSectionV3.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default SmsSectionV3;

@@ -1,8 +1,16 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
+// import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Developer.json';
+import en from '../../public/locales/en/Developer.json';
 import axios from 'axios';
 import appConfig from '../../appConfig';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
 
 interface thumbnailsType {
     url: string;
@@ -24,8 +32,11 @@ interface videoType {
     };
 }
 
-const SimpleIconSection = ({ t }: any) => {
+const SimpleIconSection = () => {
     const [playlist, setPlaylist] = useState<videoType[]>([]);
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
 
     useEffect(() => {
         fetchVideo();
@@ -63,17 +74,24 @@ const SimpleIconSection = ({ t }: any) => {
                                 data-src={`${thumbnails.medium.url}`}
                                 alt="Image"
                             />
+                            {/* <span className="lazyload">
+                                <Image loader={myLoader} src="thumbImage.webp" alt="Image" width={100} height={100}/>
+                            </span> */}
+                            <Link href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
                             <a
-                                href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}
                                 className="btnPlay"
                                 target="_blank"
                             >
-                                <img
+                                {/* <img
                                     className="lazyload thumbYoutube"
                                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/play-button.svg`}
                                     alt="Image"
-                                />
+                                /> */}
+                                <span className="lazyload">
+                                    <Image loader={myLoader} src="play-button.svg" alt="Image" width={100} height={100}/>
+                                </span>
                             </a>
+                            </Link>
                         </div>
                         <p>วิดีโอสอนใช้งาน</p>
                         <h4>{title}</h4>
@@ -98,11 +116,14 @@ const SimpleIconSection = ({ t }: any) => {
                             <div className="row mt40-mb20 justify-content-center">
                                 <div className="col-lg-4 col-md-6">
                                     <div className="track_box apipage">
-                                        <img
+                                        {/* <img
                                             className="lazyload"
                                             data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icn-aw-userManual02.svg`}
                                             alt="Image"
-                                        />
+                                        /> */}
+                                        <span className="lazyload">
+                                            <Image loader={myLoader} src="icn-aw-userManual02.svg" alt="Image" width={100} height={100}/>
+                                        </span>
                                         <p>
                                             {/* {t(
                       'SimpleIconSection::Thai Manual'
@@ -110,16 +131,15 @@ const SimpleIconSection = ({ t }: any) => {
                                             Web Console Manual
                                         </p>
                                         <h4>
-                                            {t(
-                                                'SimpleIconSection::Thai Manual'
-                                            )}
+                                            {t.SimpleIconSection['Thai Manual']}
                                         </h4>
+                                        <Link href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulkSMSApiManual.pdf`}>
                                         <a
                                             target="_blank"
-                                            href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/documents/ThaibulkSMSApiManual.pdf`}
                                         >
-                                            {t('SimpleIconSection::[Download]')}
+                                            {t.SimpleIconSection['[Download]']}
                                         </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -146,13 +166,14 @@ const SimpleIconSection = ({ t }: any) => {
                 </div>
                 <div className="row" id="ex_sdk">
                     <div className="col-xl-12 btn-api-ref">
+                        <Link href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}/`}>
                         <a
                             className="btn v3"
                             target="_blank"
-                            href={`${process.env.NEXT_PUBLIC_WEB_URL_DEVELOPER}/`}
                         >
                             ดูคู่มือ API
                         </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -164,8 +185,8 @@ SimpleIconSection.getInitialProps = async () => ({
     namespacesRequired: ['Developer'],
 });
 
-SimpleIconSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
+// SimpleIconSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
 
-export default withTranslation('Developer')(SimpleIconSection);
+export default SimpleIconSection;

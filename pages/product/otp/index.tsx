@@ -12,8 +12,8 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../../components/seo/otp';
 // import { withTranslation } from '../../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../../public/static/locales/th/Otp.json'
-import en from '../../../public/static/locales/en/Otp.json'
+import th from '../../../public/locales/th/Otp.json'
+import en from '../../../public/locales/en/Otp.json'
 
 const Otp = () => {
     const router = useRouter();

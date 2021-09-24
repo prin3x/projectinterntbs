@@ -10,8 +10,8 @@ import SimpleIconSection from '../../../components/sms-api/SimpleIconSection';
 import SmsSection from '../../../components/sms-api/SmsSection';
 // import { withTranslation } from '../../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../../public/static/locales/th/SMSAPIPage.json'
-import en from '../../../public/static/locales/en/SMSAPIPage.json'
+import th from '../../../public/locales/th/SMSAPIPage.json'
+import en from '../../../public/locales/en/SMSAPIPage.json'
 
 const SMS_API = () => {
     const router = useRouter();

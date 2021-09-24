@@ -1,7 +1,15 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
-const TrackSection = ({  }: any) => (
-    <div
+// import PropTypes from 'prop-types';
+// import { useRouter } from 'next/router';
+// import th from '../../public/locales/th/Otp.json';
+// import en from '../../public/locales/th/Otp.json';
+
+const TrackSection = ({  }: any) => {
+    // const router = useRouter();
+    // const { locale } = router;
+    // const t = locale === 'th' ? th : en;
+
+    return(
+        <div
         className="track_section bgTableCal lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bgTablePrice.png`}
     >
@@ -72,12 +80,13 @@ const TrackSection = ({  }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
 TrackSection.getInitialProps = async () => ({
     namespacesRequired: ['Otp'],
 });
 
-TrackSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(TrackSection);
+// TrackSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default TrackSection;

@@ -12,8 +12,8 @@ import { PricingProps } from '../../services/shopping/pricing.model';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/pricing-c';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Pricing-c.json'
-import en from '../../public/static/locales/en/Pricing-c.json'
+import th from '../../public/locales/th/Pricing-c.json'
+import en from '../../public/locales/en/Pricing-c.json'
 
 const Pricing: any = ({ packages, packagesNormal }: PricingProps) => {
     const router = useRouter();

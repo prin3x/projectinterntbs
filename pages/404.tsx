@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
 import Components404 from '../components/404/404';
 import Head from 'next/head';
-import { withTranslation } from '../i18n';
+import { useRouter } from 'next/router';
+// import th from '../public/locales/th/Home.json';
+// import en from '../public/locales/th/Home.json';
 import { link } from '../components/404/redirectLink';
 const Custom404 = () => {
     const router = useRouter();

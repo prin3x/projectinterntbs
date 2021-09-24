@@ -6,10 +6,9 @@ import Layout from '../../components/Layout';
 import { seo } from '../../components/seo/developer';
 import CtaSection from '../../components/developer/CtaSection';
 import SimpleIconSection from '../../components/developer/SimpleIconSection';
-import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Developer.json'
-import en from '../../public/static/locales/en/Developer.json'
+import th from '../../public/locales/th/Developer.json'
+import en from '../../public/locales/en/Developer.json'
 
 const Developer = () => {
     const router = useRouter();

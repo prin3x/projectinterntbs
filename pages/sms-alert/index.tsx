@@ -10,8 +10,8 @@ import SmsSection from '../../components/sms-alert/SmsSection';
 import { seo } from '../../components/seo/sms-alert';
 // import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Sms-alert.json'
-import en from '../../public/static/locales/en/Sms-alert.json'
+import th from '../../public/locales/th/Sms-alert.json'
+import en from '../../public/locales/en/Sms-alert.json'
 
 const SmsAlertPage = () => {
     const router = useRouter();

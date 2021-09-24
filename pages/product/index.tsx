@@ -14,8 +14,8 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/product';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Product.json'
-import en from '../../public/static/locales/en/Product.json'
+import th from '../../public/locales/th/Product.json'
+import en from '../../public/locales/en/Product.json'
 
 const Product = () => {
     const router = useRouter();

@@ -10,8 +10,8 @@ import SmsSection from '../../components/sms-marketing/SmsSection';
 import { seo } from '../../components/seo/sms-marketing';
 // import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Sms-marketing.json'
-import en from '../../public/static/locales/en/Sms-marketing.json'
+import th from '../../public/locales/th/Sms-marketing.json'
+import en from '../../public/locales/en/Sms-marketing.json'
 
 const SmsMarketing = () => {
     const router = useRouter();

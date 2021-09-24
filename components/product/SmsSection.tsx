@@ -1,11 +1,23 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Product.json';
+import en from '../../public/locales/en/Product.json';
+// import PropTypes from 'prop-types';
 import TestQuickregister from '../quickregister/testQuickregister';
 import 'react-modal-video/scss/modal-video.scss';
 import ModalVideo from 'react-modal-video';
 import { useState } from 'react';
 import Cookie from 'js-cookie';
-const SmsSection = ({ t }: any) => {
+import Link from 'next/dist/client/link';
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+const SmsSection = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     const [isOpen, setIsOpen] = useState(false);
     const [isLogin] = useState(Cookie.get('PASSCODE') ? true : false);
     return (
@@ -18,14 +30,10 @@ const SmsSection = ({ t }: any) => {
                     <div className="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-12 ">
                         <div className="sms_text">
                             <h3>
-                                {t(
-                                    'SmsSection::Sending OTP without delays. Running your campaigns without interruptions.'
-                                )}
+                                {t.SmsSection['Sending OTP without delays. Running your campaigns without interruptions.']}
                             </h3>
                             <p>
-                                {t(
-                                    'SmsSection::ThaiBulkSMS uses an Intelligent Routing system to automatically select the fastest sending channel, so you  can be confident in the speed and stability of every instance of SMS sending.'
-                                )}
+                                {t.SmsSection['ThaiBulkSMS uses an Intelligent Routing system to automatically select the fastest sending channel, so you  can be confident in the speed and stability of every instance of SMS sending.']}
                             </p>
                         </div>
                     </div>
@@ -44,7 +52,7 @@ const SmsSection = ({ t }: any) => {
                                         <p>
                                             0.75{' '}
                                             <span>
-                                                {t('SmsSection::Seconds')}
+                                                {t.SmsSection.Seconds}
                                             </span>
                                         </p>
                                     </div>
@@ -57,16 +65,19 @@ const SmsSection = ({ t }: any) => {
                                             videoId="v2ILWufxX8Y"
                                             onClose={() => setIsOpen(false)}
                                         />
+                                        <Link href="">
                                         <a onClick={() => setIsOpen(true)}>
-                                            <img
+                                            {/* <img
                                                 className="lazyload"
                                                 data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/play_icon.png`}
                                                 alt="Image"
-                                            />
-                                            {t(
-                                                'SmsSection::Why can we send SMS so quickly?'
-                                            )}
+                                            /> */}
+                                            <span className="lazyload">
+                                                <Image loader={myLoader} src="play_icon.png" alt="Image" width={100} height={100}/>
+                                            </span>
+                                            {t.SmsSection['Why can we send SMS so quickly?']}
                                         </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +118,7 @@ SmsSection.getInitialProps = async () => ({
     namespacesRequired: ['Product'],
 });
 
-SmsSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Product')(SmsSection);
+// SmsSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default SmsSection;

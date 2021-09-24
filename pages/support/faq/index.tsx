@@ -9,8 +9,8 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../../components/seo/why-thaibulksms';
 // import { withTranslation } from '../../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../../public/static/locales/th/FAQ.json'
-import en from '../../../public/static/locales/en/FAQ.json'
+import th from '../../../public/locales/th/FAQ.json'
+import en from '../../../public/locales/en/FAQ.json'
 
 const FAQ = () => {
     const router = useRouter();

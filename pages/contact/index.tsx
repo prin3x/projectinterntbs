@@ -11,8 +11,8 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/contact';
 const BacktoTop = dynamic(() => import('../../components/BacktoTop'));
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Contact.json'
-import en from '../../public/static/locales/en/Contact.json'
+import th from '../../public/locales/th/Contact.json'
+import en from '../../public/locales/en/Contact.json'
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`

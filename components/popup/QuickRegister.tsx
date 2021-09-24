@@ -1,7 +1,9 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import { withTranslation, Link } from '../../i18n';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Home.json';
+import en from '../../public/locales/en/Home.json';
 import ReCAPTCHA from 'react-google-recaptcha';
 // import { event } from 'jquery';
 // import { tr } from 'date-fns/locale';
@@ -10,9 +12,14 @@ import {
     quickRegisterStep1,
     quickRegisterStep2,
 } from '../../services/user/user.service';
+import Link from 'next/dist/client/link';
 
 // from '../../services/user/user.service';
-const TestQuickregister = ({ t }: any) => {
+const QuickRegister = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     useEffect(() => {
         Modal.setAppElement('#ElementModal');
     }, []);
@@ -160,7 +167,7 @@ const TestQuickregister = ({ t }: any) => {
         }
         if (
             (await resultStep1.error.code) ===
-            'quickRegisterFirstStep::msisdn::exist'
+            'quickRegisterFirstStep.msisdn.exist'
         ) {
             setexistPhoneError(true);
         }
@@ -422,9 +429,7 @@ const TestQuickregister = ({ t }: any) => {
                                         submitStep2().then(() => setLoad(true));
                                     }}
                                 >
-                                    {t(
-                                        'SmsSection::TestQuickregister::Confirm number'
-                                    )}
+                                    {t.SmsSection.TestQuickregister['Confirm number']}
                                 </button>
                             </div>
                         ) : (
@@ -473,11 +478,11 @@ const TestQuickregister = ({ t }: any) => {
     );
 };
 
-TestQuickregister.getInitialProps = async () => ({
+QuickRegister.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
 });
 
-TestQuickregister.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Home')(TestQuickregister);
+// QuickRegister.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default QuickRegister;

@@ -12,8 +12,8 @@ import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/credit-calculation';
 import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/credit-calculation.json'
-import en from '../../public/static/locales/en/credit-calculation.json'
+import th from '../../public/locales/th/credit-calculation.json'
+import en from '../../public/locales/en/credit-calculation.json'
 
 const credit = () => {
     const router = useRouter();

@@ -1,11 +1,17 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import React from 'react';
 
-import { withTranslation } from '../../i18n';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Home.json';
+import en from '../../public/locales/en/Home.json';
 
-import QuickRegisger from '../popup/QuickRegister';
+import QuickRegister from '../popup/QuickRegister';
 
-const TestQuickregister = ({ t }: any) => {
+const TestQuickregister = () => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     return (
         <>
             <div className="row">
@@ -15,9 +21,7 @@ const TestQuickregister = ({ t }: any) => {
                             <div className="col-lg-6 col-md-12">
                                 <div className="sms_form_text">
                                     <h4>
-                                        {t(
-                                            'SmsSection::TestQuickregister::Try sending an SMS to your mobile phone now.'
-                                        )}
+                                        {t.SmsSection.TestQuickregister['Try SMS sending']}
                                     </h4>
                                     <p>
                                         เพียงกรอกเบอร์มือถือของคุณ
@@ -27,7 +31,7 @@ const TestQuickregister = ({ t }: any) => {
                             </div>
                             <div className="col-lg-6 col-md-12">
                                 <div className="sms_form_field">
-                                    <QuickRegisger />
+                                    <QuickRegister/>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +46,7 @@ TestQuickregister.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
 });
 
-TestQuickregister.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Home')(TestQuickregister);
+// TestQuickregister.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default TestQuickregister;

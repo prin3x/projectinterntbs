@@ -1,6 +1,5 @@
-import { withTranslation } from '../../i18n';
-import PropTypes from 'prop-types';
-const HeroSectionV3 = ({  }: any) => (
+// import PropTypes from 'prop-types';
+const HeroSectionV3 = () => (
     <div
         className="hero_section v3 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
@@ -28,7 +27,7 @@ HeroSectionV3.getInitialProps = async () => ({
     namespacesRequired: ['Otp'],
 });
 
-HeroSectionV3.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(HeroSectionV3);
+// HeroSectionV3.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default HeroSectionV3;

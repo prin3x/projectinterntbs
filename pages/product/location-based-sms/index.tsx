@@ -11,8 +11,8 @@ import SmsSection from '../../../components/location-based-sms/SmsSection';
 import { seo } from '../../../components/seo/location-based-sms';
 // import { withTranslation } from '../../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../../public/static/locales/th/LocationBasedSMSPage.json'
-import en from '../../../public/static/locales/en/LocationBasedSMSPage.json'
+import th from '../../../public/locales/th/LocationBasedSMSPage.json'
+import en from '../../../public/locales/en/LocationBasedSMSPage.json'
 
 const LocationBasedSMS = () => {
     const router = useRouter();

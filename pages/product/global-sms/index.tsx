@@ -10,8 +10,8 @@ import Layout from '../../../components/Layout';
 import { seo } from '../../../components/seo/global-sms';
 // import { withTranslation } from '../../../i18n';
 import { useRouter } from 'next/router';
-import th from '../../../public/static/locales/th/GlobalSMSPage.json'
-import en from '../../../public/static/locales/en/GlobalSMSPage.json'
+import th from '../../../public/locales/th/GlobalSMSPage.json'
+import en from '../../../public/locales/en/GlobalSMSPage.json'
 
 const GlobalSMS = () => {
     const router = useRouter();

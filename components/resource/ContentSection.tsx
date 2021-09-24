@@ -1,24 +1,36 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
+// import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
+import th from '../../public/locales/th/Resource.json';
+import en from '../../public/locales/en/Resource.json';
 import Link from 'next/link';
 import { format } from 'date-fns';
 import { parseFromTimeZone } from 'date-fns-timezone';
 import AppConfig from '../../appConfig';
-const ContentSection = ({ Posts, t }: any) => (
-    <div className="resource_section">
+import Image from 'next/image';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+const ContentSection = ({ Posts }: any) => {
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
+    return(
+        <div className="resource_section">
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-12">
                     <div className="secKnowledge">
                         <div className="headSection">
                             <h2 className="edit_text_seo">
-                                {t('ContentSection::Knowledge')}
+                                {t.ContentSection.Knowledge}
                             </h2>
                             <Link
                                 href={`${AppConfig.WEB_URL_BLOG}/categories/marketing`}
                                 passHref={true}
                             >
-                                <a>{t('ContentSection::View all')}</a>
+                                <a>{t.ContentSection['View all']}</a>
                             </Link>
                         </div>
                         <div className="Knowledge">
@@ -34,14 +46,22 @@ const ContentSection = ({ Posts, t }: any) => (
                                             <a>
                                                 <div className="secArticle">
                                                     <div className="img-article">
-                                                        <img
+                                                        {/* <img
                                                             src={
                                                                 item
                                                                     .banner_image_top
                                                                     .url
                                                             }
                                                             alt={item.name}
-                                                        />
+                                                        /> */}
+                                                        <span>
+                                                            <Image loader={myLoader} 
+                                                                src={
+                                                                item.banner_image_top.url
+                                                                } 
+                                                                alt={item.name} 
+                                                                width={100} height={100}/>
+                                                        </span>
                                                     </div>
                                                     <div className="text-article">
                                                         <h4>{item.name}</h4>
@@ -72,13 +92,13 @@ const ContentSection = ({ Posts, t }: any) => (
                     <div className="secUsecase">
                         <div className="headSection">
                             <h2 className="edit_text_seo">
-                                {t('ContentSection::Example Operations')}
+                                {t.ContentSection['Example Operations']}
                             </h2>
                             <Link
                                 href={`${AppConfig.WEB_URL_BLOG}/categories/use-cases`}
                                 passHref={true}
                             >
-                                <a>{t('ContentSection::View all')}</a>
+                                <a>{t.ContentSection['View all']}</a>
                             </Link>
                         </div>
                         {
@@ -94,14 +114,22 @@ const ContentSection = ({ Posts, t }: any) => (
                                             <a>
                                                 <div className="hilight">
                                                     <div className="img-hilight">
-                                                        <img
+                                                        {/* <img
                                                             src={
                                                                 item
                                                                     .banner_image_top
                                                                     .url
                                                             }
                                                             alt={item.name}
-                                                        />
+                                                        /> */}
+                                                        <span>
+                                                            <Image loader={myLoader} 
+                                                                src={
+                                                                item.banner_image_top.url
+                                                                } 
+                                                                alt={item.name} 
+                                                                width={100} height={100}/>
+                                                        </span>
                                                     </div>
                                                     <div className="text-hilight">
                                                         <h4>{item.name}</h4>
@@ -130,14 +158,22 @@ const ContentSection = ({ Posts, t }: any) => (
                                             <a>
                                                 <div className="secArticle">
                                                     <div className="img-article">
-                                                        <img
+                                                        {/* <img
                                                             src={
                                                                 item
                                                                     .banner_image_top
                                                                     .url
                                                             }
                                                             alt={item.name}
-                                                        />
+                                                        /> */}
+                                                        <span>
+                                                            <Image loader={myLoader} 
+                                                                src={
+                                                                item.banner_image_top.url
+                                                                } 
+                                                                alt={item.name} 
+                                                                width={100} height={100}/>
+                                                        </span>
                                                     </div>
                                                     <div className="text-article">
                                                         <h4>{item.name}</h4>
@@ -166,13 +202,13 @@ const ContentSection = ({ Posts, t }: any) => (
                     <div className="secUsecase">
                         <div className="headSection">
                             <h2 className="edit_text_seo">
-                                {t('ContentSection::Success Stories')}
+                                {t.ContentSection['Success Stories']}
                             </h2>
                             <Link
                                 href={`${AppConfig.WEB_URL_BLOG}/categories/success-stories/`}
                                 passHref={true}
                             >
-                                <a>{t('ContentSection::View all')}</a>
+                                <a>{t.ContentSection['View all']}</a>
                             </Link>
                         </div>
                         {
@@ -188,14 +224,22 @@ const ContentSection = ({ Posts, t }: any) => (
                                             <a>
                                                 <div className="hilight">
                                                     <div className="img-hilight">
-                                                        <img
+                                                        {/* <img
                                                             src={
                                                                 item
                                                                     .banner_image_top
                                                                     .url
                                                             }
                                                             alt={item.name}
-                                                        />
+                                                        /> */}
+                                                        <span>
+                                                            <Image loader={myLoader} 
+                                                                src={
+                                                                item.banner_image_top.url
+                                                                } 
+                                                                alt={item.name} 
+                                                                width={100} height={100}/>
+                                                        </span>
                                                     </div>
                                                     <div className="text-hilight">
                                                         <h4>{item.name}</h4>
@@ -224,14 +268,22 @@ const ContentSection = ({ Posts, t }: any) => (
                                             <a>
                                                 <div className="secArticle">
                                                     <div className="img-article">
-                                                        <img
+                                                        {/* <img
                                                             src={
                                                                 item
                                                                     .banner_image_top
                                                                     .url
                                                             }
                                                             alt={item.name}
-                                                        />
+                                                        /> */}
+                                                        <span>
+                                                            <Image loader={myLoader} 
+                                                                src={
+                                                                item.banner_image_top.url
+                                                                } 
+                                                                alt={item.name} 
+                                                                width={100} height={100}/>
+                                                        </span>
                                                     </div>
                                                     <div className="text-article">
                                                         <h4>{item.name}</h4>
@@ -259,12 +311,14 @@ const ContentSection = ({ Posts, t }: any) => (
             </div>
         </div>
     </div>
-);
+    )
+}
+
 ContentSection.getInitialProps = async () => ({
     namespacesRequired: ['Resource'],
 });
 
-ContentSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Resource')(ContentSection);
+// ContentSection.propTypes = {
+//     t: PropTypes.func.isRequired,
+// };
+export default ContentSection;

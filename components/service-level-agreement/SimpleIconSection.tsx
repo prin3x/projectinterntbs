@@ -1,7 +1,21 @@
-import PropTypes from 'prop-types';
-import { withTranslation } from '../../i18n';
-const SimpleIconSection = ({  }: any) => (
-  <div className="simple_icon_section bg-speed">
+// import PropTypes from 'prop-types';
+// import { useRouter } from 'next/router'
+// import th from '../../public/locales/th/Otp.json';
+// import en from '../../public/locales/en/Otp.json';
+import Image from 'next/image';
+import Link from 'next/dist/client/link';
+
+const myLoader = ({src}:any) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+
+const SimpleIconSection = ({  }: any) => {
+  // const router = useRouter();
+  //   const { locale } = router;
+  //   const t = locale === 'th' ? th : en;
+
+  return(
+    <div className="simple_icon_section bg-speed">
     <div className="container">
       <div className="row justify-content-md-center">
         <div className="col-xl-8">
@@ -14,11 +28,14 @@ const SimpleIconSection = ({  }: any) => (
       <div className="row align-items-center m-80">
           <div className="col-lg-7">
               <div className="newsletter_img">
-                <img
+                {/* <img
                     className="lazyload"
                     data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-SLA02.png`}
                     alt="Image"
-                />
+                /> */}
+                <span className="lazyload">
+                    <Image loader={myLoader} src="img-SLA02.png" alt="Image" width={100} height={100}/>
+                </span>
               </div>
           </div>
           <div className="col-lg-5">
@@ -100,18 +117,22 @@ const SimpleIconSection = ({  }: any) => (
       <div className="row justify-content-md-center">
         <div className="col-xl-8">
           <div className="simple_icon_title">
-            <a href="" className="detailSLA">อ่านรายละเอียดข้อตกลงรับประกันคุณภาพ (Service Level Agreement)</a>
+            <Link href="">
+              <a className="detailSLA">อ่านรายละเอียดข้อตกลงรับประกันคุณภาพ (Service Level Agreement)</a>
+            </Link>
           </div>
         </div>
       </div>
     </div>
   </div>
-);
+  )
+}
+  
 SimpleIconSection.getInitialProps = async () => ({
   namespacesRequired: ['Otp'],
 });
 
-SimpleIconSection.propTypes = {
-  t: PropTypes.func.isRequired,
-};
-export default withTranslation('Otp')(SimpleIconSection);
+// SimpleIconSection.propTypes = {
+//   t: PropTypes.func.isRequired,
+// };
+export default SimpleIconSection;

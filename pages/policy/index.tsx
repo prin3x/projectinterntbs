@@ -9,8 +9,8 @@ import Image from 'next/image';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/condition';
 import { useRouter } from 'next/router';
-import th from '../../public/static/locales/th/Policy.json'
-import en from '../../public/static/locales/en/Policy.json'
+import th from '../../public/locales/th/Policy.json'
+import en from '../../public/locales/en/Policy.json'
 
 const myLoader = ({src}:any) => {
     return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
