@@ -5,6 +5,10 @@ import Image from 'next/dist/client/image';
 import th from '../../public/static/locales/th/Home.json'
 import en from '../../public/static/locales/en/Home.json'
 
+const myLoader = ({src}) => {
+    return `${process.env.NEXT_PUBLIC_BASE_ASSET}/img/${src}`
+}
+
 // const FeatureSection = ({ t }: any) => (
 //     <div className="feature_section">
 //         <div className="container">
@@ -122,7 +126,7 @@ const FeatureSection = () => {
                         <div className="spaceWhyImg">
                             <div className="lazyload size-img">
                                 {/* <Image src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-WhyNum1.png`} alt="Image" width={100} height={100} /> */}
-                                <Image src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_1.png`} alt="Image" width={100} height={100} />
+                                <Image loader={myLoader} src="img-WhyNum1.png" alt="Image" width={1000} height={1000} />
                             </div>
                             {/* <img
                                 className="lazyload size-img"
@@ -143,7 +147,7 @@ const FeatureSection = () => {
                     <div className="single_feature_item">
                     <div className="spaceWhyImg">
                             <div className="lazyload size-img">
-                                <Image src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_2.png`} alt="Image" width={100} height={100} />
+                                <Image loader={myLoader} src="img-speed02.png" alt="Image" width={100} height={100} />
                             </div>
                             {/* <img
                                 className="lazyload size-img"
@@ -164,7 +168,7 @@ const FeatureSection = () => {
                     <div className="single_feature_item">
                         <div className="spaceWhyImg">
                             <div className="lazyload size-img">
-                                <Image src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_3.png`} alt="Image" width={100} height={100} />
+                                <Image loader={myLoader} src="img-lowPrice02.png" alt="Image" width={100} height={100} />
                             </div>
                             {/* <img
                                 className="lazyload size-img"
@@ -182,7 +186,7 @@ const FeatureSection = () => {
                     <div className="single_feature_item">
                         <div className="spaceWhyImg">
                             <div className="lazyload size-img">
-                                <Image src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_4.png`} alt="Image" width={100} height={100} />
+                                <Image loader={myLoader} src="img-whysupport.png" alt="Image" width={100} height={100} />
                             </div>
                             {/* <img
                                 className="lazyload size-img"

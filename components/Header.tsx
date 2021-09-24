@@ -5,6 +5,9 @@ import appConfig from '../appConfig';
 import HeaderSubmodule from '../tbs_submodule/HeaderSubmodule';
 import MyHeader from '../components/myHeader';
 import { useRouter } from 'next/router';
+import th from '../public/static/locales/th/Header.json'
+import en from '../public/static/locales/en/Header.json'
+
 const options = [
     { value: 'TH', text: 'TH' },
     { value: 'EN', text: 'EN' },
@@ -18,8 +21,13 @@ const MySelect = options.map((list) => {
     );
 });
 
-const Header = ({ t }: any) => {
+const Header = () => {
     const { pathname } = useRouter();
+    const router = useRouter();
+
+    const { locale } = router;
+    const t = locale === 'th' ? th : en;
+
     const [lang, setLang] = useState('TH');
     const [isLogin, setIsLogin] = useState(
         Cookie.get('PASSCODE') ? true : false
@@ -43,7 +51,9 @@ const Header = ({ t }: any) => {
             domain,
             expires: 7,
         });
-        i18n.changeLanguage(value.toLowerCase());
+        // i18n.changeLanguage(value.toLowerCase());
+        const locale = value.toLowerCase();
+        router.push(router.pathname, router.asPath, { locale })
     };
 
     const headerConfig = {
@@ -51,7 +61,6 @@ const Header = ({ t }: any) => {
         setLang,
         isLogin,
         setIsLogin,
-        t,
         Cookie,
         onSwitchLanguage,
         MySelect,
