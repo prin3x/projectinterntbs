@@ -258,6 +258,14 @@
     background: hsla(0, 0%, 98%, 0.6);
     font-size: 16px;
 }
+.usertypeDD {
+    margin: 10px auto 30px !important;
+}
+
+.usertypeBranch {
+    margin: 15px 0 15px !important;
+    width: 100% !important;
+}
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .userType_section,
@@ -283,5 +291,93 @@
         border-radius: 15px;
         border: 2px solid #b2bbc3;
         margin: 15px 0;
+      }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+    .chooseType {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .chooseType .indivType,
+      .chooseType .companyType {
+        box-shadow: 0 0 20px #e8edee;
+        border-radius: 15px;
+        width: 320px;
+        padding: 20px;
+        position: relative;
+        margin-bottom: 50px;
+      }
+      .form-indiv {
+        padding: 30px 30px;
+      }
+      .form-indiv {
+        max-width: 90%;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #e8edee;
+        background-color: #fff;
+        padding: 30px 30px;
+        margin: 40px auto;
+        text-align: left;
+      }
+      .form-indiv h4 {
+        font-size: 16px;
+        font-weight: 300;
+        color: #5b6e80;
+        margin: 0px 0 10px;
+        line-height: 1.4;
+      }
+      .input-txt01 {
+        padding: 3%;
+        font-size: 18px;
+      }
+      .input-twocolumn .input-txt02 {
+        width: 48%;
+        padding: 3%;
+        font-size: 18px;
+      }
+      .select-address {
+        margin: 20px 0 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      .select-address label:last-child {
+        margin-left: 0px;
+      }
+      .input-twocolumn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .input-twocolumn .input-txt02 {
+        width: 100%;
+        padding: 5%;
+        font-size: 18px;
+        border: 2px solid #b2bbc3;
+        margin: 10px auto;
+      }
+      .input-twocolumn div.input-with-error {
+        width: 100%;
+      }
+    
+      .input-twocolumn div.input-with-error select[name="branch"]{
+      display:none;
+      visibility: hidden;
+    }
+      .userType_section,
+      .register_section,
+      .login_section {
+        padding: 100px 0 60px;
+        min-height: 600px;
+        margin: 0 auto;
+      }
+      .usertypeBranch {
+        margin: 10px 0 10px !important;
+        width: 100% !important;
+        height: 60px !important;
       }
 }

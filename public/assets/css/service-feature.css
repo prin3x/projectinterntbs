@@ -70,11 +70,20 @@
 
 .promo_img {
     text-align: center;
+    width: 55%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .promo_img img {
     margin: 45px auto 30px;
     display: block;
+}
+
+.promo_img object {
+  min-height: 250px;
 }
 
 .promo_bottom_text {
@@ -215,4 +224,106 @@
       .service_feature_text a.link {
         margin: 20px 0 30px;
       }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .promo_section {
+    padding: 50px 0;
+  }
+  .promo_text h2 {
+    /* font-size: 26px; */
+    font-size: 20px;
+  }
+  .promo_text p {
+    margin-bottom: 40px;
+
+    font-size: 18px;
+  }
+  .promo_text {
+    margin: 120px auto 30px;
+  }
+  .promo_img {
+    width: 60%;
+    margin: 0px auto;
+  }
+  .promo_bottom_text {
+    margin: 50px auto;
+
+    font-size: 15px;
+  }
+  .promo_title {
+    min-width: 300px;
+  }
+
+  .promo_title p {
+    font-size: 18px;
+  }
+
+  .promo_link {
+    border-left: 0px;
+
+    font-size: 13px;
+  }
+  .promo_item {
+    margin: 40px auto 20px;
+  }
+  .promo_item_three_img {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .promo_item_three_img img {
+    width: 75%;
+    margin: 20px auto;
+  }
+  .row_pad {
+    /* padding-bottom: 80px; */
+    padding-bottom: 40px;
+  }
+  .service_feature_text {
+    text-align: center;
+  }
+
+  .service_feature_text h3 {
+    font-size: 22px;
+  }
+  .service_feature_text p {
+    font-size: 16px;
+    /* font-size: 14px; */
+    text-align: left;
+    width: 92%;
+    margin: 0 auto 20px;
+    padding: 0;
+  }
+  .service_feature_text a.link {
+    font-size: 18px;
+    /* font-size: 16px; */
+  }
+  .service_feature_item {
+    margin: 0 38px 30px;
+    /* margin: 0 20px 30px; */
+    border: 3px solid #f1f4f8;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .service_feature_item img {
+    margin: 0 auto 0px;
+    display: block;
+    max-width: 25%;
+    flex: initial;
+    width: 30%;
+  }
+  .service_feature_item p {
+    font-size: 14px;
+    font-family: "Sarabun", serif;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0;
+    text-align: left;
+    padding: 0 0 0 20px;
+    flex: 1;
+  }
+
 }

@@ -158,6 +158,17 @@
     font-size: 15px;
   }
 
+  .client_img {
+    display: block;
+    margin: 40px auto 15px;
+
+    width: 70px;
+    height: 70px;
+    border: 3px solid #356b9f;
+  }
+  .client_img img {
+    display: block;
+  }
   .client_info {
     display: block;
     float: none;
