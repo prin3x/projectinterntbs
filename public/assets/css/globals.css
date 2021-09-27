@@ -638,7 +638,7 @@ a:hover {
 
 .box__wrapper ul li {
     font-size: 17px;
-  }
+}
 
 .__title {
     font-size: 20px;
@@ -1198,13 +1198,6 @@ textarea.input__box.v2 {
     margin: 0;
 }
 
-.tab__content.faq_section {
-    padding: 0 0 100px;
-}
-.tab__content .btn.v4 {
-    font-size: 16px;
-}
-
 .icon__box .serial__number .img-fluid {
     width: 70%;
     height: auto;
@@ -1268,7 +1261,6 @@ textarea.input__box.v2 {
     margin-left: 0;
 }
 
-
 .modal-dialog {
     max-width: 777px;
 }
@@ -1306,7 +1298,6 @@ textarea.input__box.v2 {
     padding-right: 50px;
 }
 
-
 .bg__img {
     position: absolute;
     z-index: -1;
@@ -1327,130 +1318,6 @@ textarea.input__box.v2 {
     right: 0;
 }
 
-.pricing__top {
-    padding: 160px 0;
-    overflow: hidden;
-    z-index: 1;
-}
-.pricing__top .pricing_box h2.nameTypePackage {
-    font-size: 35px !important;
-}
-.pricing__top .pricing_box h3 {
-    font-size: 35px !important;
-}
-.pricing__top .pricing_box p {
-    font-size: 18px !important;
-}
-.pricing__top .price_plan h2 {
-    font-size: 54px !important;
-  }
-
-.all__pricing {
-    padding: 120px 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 0;
-}
-
-.left__box {
-    background-color: #08101f;
-}
-
-.left__box {
-    padding-left: 55px;
-    height: 100%;
-    padding-top: 20px;
-    padding-bottom: 40px;
-}
-
-.top__bar {
-    background-color: #2e4050;
-}
-
-.top__bar p,
-.left__box p {
-    font-size: 24px;
-    font-weight: 500;
-    color: #fff;
-    margin: 0;
-    padding: 15px 0;
-}
-
-.left__box.left__box__top {
-    padding: 0px 0px 0px 55px;
-}
-
-.left__box h3 {
-    font-size: 40px;
-    font-weight: bold;
-    color: #31b1e7;
-    line-height: 58px;
-    margin-bottom: 0;
-}
-
-.left__box span {
-    font-size: 18px;
-    color: #fff;
-    display: inline-block;
-}
-
-.pricing__content {
-    background-color: #e8ecef;
-    border-bottom: 1px solid rgb(91, 110, 128);
-    padding-top: 26px;
-    padding-bottom: 30px;
-    position: relative;
-}
-
-.pricing__content .arrow-down {
-    position: absolute;
-    top: 40%;
-    left: -13px;
-    width: 25px;
-    height: 25px;
-}
-
-.pricing__content .arrow-down img {
-    width: 100%;
-    height: auto;
-}
-
-.pricing__content h3 {
-    font-size: 40px;
-    font-weight: bold;
-    color: #08101f;
-    line-height: 58px;
-    margin-bottom: 0;
-    padding: 15px 0;
-}
-
-.single__pricing[aria-expanded='true'] .pricing__content h3 {
-    color: #31b1e7;
-}
-
-.pricing__content span {
-    font-size: 18px;
-    line-height: 24px;
-    color: #5b6e80;
-    font-weight: 400;
-}
-
-.pricing__content h4 {
-    color: #31b1e7;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 34px;
-    margin-bottom: 0;
-}
-
-.single__pricing .parent {
-    width: 200px;
-    height: 100%;
-    overflow: hidden;
-    text-align: center;
-    position: absolute;
-}
-
 .ribbon:before,
 .ribbon:after {
     content: '';
@@ -1469,43 +1336,9 @@ textarea.input__box.v2 {
     left: 100%;
 }
 
-.pack-img {
-    top: -16px;
-    position: relative;
-}
-
-.pack-img img {
-    max-width: 210%;
-    margin-top: 40%;
-    margin-left: -87%;
-    /* max-width: 230%;
-    margin-left: -106%; */
-}
-
-.pack-text {
-    position: absolute;
-    top: 37%;
-}
-
-.pack-text p {
-    width: 140%;
-    font-size: 12px;
-    color: #fff;
-    margin-left: -34%;
-    line-height: 1.3;
-    /* font-size: 16px;
-    margin-left: -51%; */
-}
-
-.pack-text b {
-    font-size: 14px;
-    /* font-size: 18px; */
-}
-
 .devribbon-container {
     height: 0;
 }
-
 
 .p-line-through {
     margin-bottom: -25px;
@@ -1568,38 +1401,8 @@ textarea.input__box.v2 {
     margin-bottom: 30px;
 }
 
-
 .shape__box {
     display: none;
-}
-
-.single__pricing[aria-expanded='true'] .shape__box {
-    position: absolute;
-    top: 55%;
-    left: -21px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    display: block;
-}
-
-.pricing__bottom__content p {
-    font-size: 18px;
-    color: #fff;
-    font-family: 'Sarabun', sans-serif;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-.pricing__bottom__content h5 {
-    color: #fff;
-    font-size: 36px;
-    font-weight: 400;
-    margin-bottom: 0;
-}
-
-.pricing__bottom__content .btn {
-    color: #31b1e7;
 }
 
 .single_lang {
@@ -1655,44 +1458,12 @@ ul.dropdown li.listsub a {
     margin-top: -80px;
 }
 
-.single__pricing {
-    cursor: pointer;
-}
-.single__pricing[aria-expanded="true"] .pack-text {
-    top: 38%;
-}
-.single__pricing[aria-expanded="true"] .pack-text p {
-    font-size: 20px;
-    margin-left: -45%;
-}
-.single__pricing[aria-expanded="true"] .pack-text b {
-    font-size: 24px;
-}
-
-.single__pricing[aria-expanded="true"] .pack-img {
-    position: absolute;
-    top: 47px;
-    right: 20%;
-    width: 75%;
-}
-
 .col-md-push-6 {
     left: 50%;
 }
 
 .col-md-pull-6 {
     right: 50%;
-}
-
-h3.headPricing,
-h1.headPricing {
-    font-size: 40px;
-    margin-top: 24px;
-    text-align: center;
-}
-.subPricing {
-    margin-top: 24px;
-    text-align: center;
 }
 
 a.changeAdd {
@@ -1719,7 +1490,6 @@ a.changeAdd {
     margin: 15px 0 15px !important;
     width: 100% !important;
 }
-
 
 /** .swal2-alert **/
 
@@ -1763,143 +1533,102 @@ a.changeAdd {
     .img-fluid {
         max-width: 120%;
         height: auto;
-      }
-      .serial__content p {
+    }
+    .serial__content p {
         font-size: 18px;
         line-height: 25px;
-      }
-      .pricing__top .pricing_box h2.nameTypePackage {
-        font-size: 31px !important;
-      }
-      .pricing__top .pricing_box h3 {
-        font-size: 31px !important;
-      }
-      .pricing__top .pricing_box p {
-        font-size: 17px !important;
-      }
-      .pricing__top .price_plan h2 {
-        font-size: 45px !important;
-      }
-      .bg__img.img__1 {
+    }
+
+    .bg__img.img__1 {
         width: 45%;
-      }
-      .bg__img.img__2 {
+    }
+    .bg__img.img__2 {
         width: 25%;
-      }
-      .form__wrapper .btn {
+    }
+    .form__wrapper .btn {
         border-radius: 0 15px 15px 0;
         padding: 15px 35px;
-      }
-      .form__wrapper input {
+    }
+    .form__wrapper input {
         height: 60px;
         padding: 0 20px;
-      }
-      .input__box {
+    }
+    .input__box {
         height: 60px;
         margin-top: 35px;
         padding: 0 20px;
-      }
-      h1.section__title{
+    }
+    h1.section__title {
         font-size: 40px;
         line-height: 50px;
         margin-top: 0px;
-      }
-      .section__title {
+    }
+    .section__title {
         font-size: 40px;
         line-height: 50px;
-      }
-      .item__box img {
+    }
+    .item__box img {
         margin-right: 50px;
         margin-left: 20px;
         width: 80px;
         height: 80px;
-      }
-      .item__box h4 {
+    }
+    .item__box h4 {
         font-size: 18px;
-      }
-      .pricing__top {
-        padding: 100px 0;
-        overflow: hidden;
-      }
-      .pricing_right {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: flex-end;
-      }
-      .left__box {
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-      .pricing__content {
-        padding: 10px 0;
-      }
-      .left__box h3,
-      .pricing__content h3 {
-        font-size: 40px;
-      }
-      .left__box span,
-      .pricing__content span {
-        font-size: 16px;
-      }
-      .single__pricing[aria-expanded="true"] .left__box h3 {
-        color: #fff;
-        font-size: 48px;
-        margin-top: 20px;
-      }
-      .expand .btn {
+    }
+
+    .expand .btn {
         width: 150px;
-      }
-      .tab__toggle li a {
+    }
+    .tab__toggle li a {
         font-size: 20px;
         width: 280px;
         height: 160px;
-      }
-      .serial__content h4 {
+    }
+    .serial__content h4 {
         font-size: 24px;
-      }
-      .input__box {
+    }
+    .input__box {
         font-size: 18px;
-      }
-      .input__box.v2.nice-select:after {
+    }
+    .input__box.v2.nice-select:after {
         top: 50%;
-      }
-      .box__wrapper .box__body p {
+    }
+    .box__wrapper .box__body p {
         font-size: 16px;
-      }
-      .box__wrapper .box__header h2 {
+    }
+    .box__wrapper .box__header h2 {
         font-size: 24px;
-      }
-      .box__wrapper .box__header h5 {
+    }
+    .box__wrapper .box__header h5 {
         font-size: 24px;
-      }
-      .box__wrapper .box__header {
+    }
+    .box__wrapper .box__header {
         padding: 20px 40px;
-      }
-      .secQR .img-fluid {
+    }
+    .secQR .img-fluid {
         width: 30%;
-      }
-      .pack-img {
+    }
+    .pack-img {
         top: 3px;
         position: relative;
-      }
-      .secSliderResource {
+    }
+    .secSliderResource {
         margin: 60px 0;
-      }
-      .secSliderResource .sliderResource {
+    }
+    .secSliderResource .sliderResource {
         min-height: 350px;
-      }
-      .Knowledge .secArticle .text-article h4 {
+    }
+    .Knowledge .secArticle .text-article h4 {
         font-size: 20px;
         color: #2e4050;
-      }
-      .side__box.sticky__box {
+    }
+    .side__box.sticky__box {
         position: fixed;
         width: 370px;
         top: 47px;
         z-index: 1000;
-      }
-      
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1912,148 +1641,113 @@ a.changeAdd {
     }
     .box__wrapper .box__content {
         padding: 30px !important;
-      }
-      .box__wrapper .box__body .info__box {
+    }
+    .box__wrapper .box__body .info__box {
         padding: 15px 20px;
-      }
-    
-      .box__wrapper .box__body .info__box .info__icon {
+    }
+
+    .box__wrapper .box__body .info__box .info__icon {
         height: 80px;
         width: 80px;
         padding: 15px;
-      }
-    
-      .box__wrapper .box__body p.sub-title-payment {
+    }
+
+    .box__wrapper .box__body p.sub-title-payment {
         font-size: 12px !important;
-      }
-    
-      .box__wrapper .box__body p {
+    }
+
+    .box__wrapper .box__body p {
         font-size: 16px !important;
-      }
-    
-      .item__box h4 br {
+    }
+
+    .item__box h4 br {
         display: none;
-      }
-    
-      .item__box h4 {
+    }
+
+    .item__box h4 {
         font-size: 16px;
-      }
-    
-      .item__box img {
+    }
+
+    .item__box img {
         width: 90px;
         height: 90px;
         margin-right: 40px;
-      }
-    
-      .box__wrapper .box__body .item__box__2 p {
+    }
+
+    .box__wrapper .box__body .item__box__2 p {
         font-size: 13px !important;
-      }
-      .left__box.left__box__top {
+    }
+    .left__box.left__box__top {
         padding: 0px 0px 0px 25px;
-      }
-      .left__box {
+    }
+    .box__wrapper ul li {
+        font-size: 13px;
+        line-height: 25px;
+        color: #5b6e80;
+    }
+    .left__box {
         padding-left: 25px;
         border-bottom: 1px solid rgb(3, 21, 88);
-      }
-      .single__pricing.active .left__box {
-        padding-left: 40px;
-      }
-      .top__bar p,
-      .left__box p {
-        font-size: 20px;
-      }
-      .left__box h3 {
-        font-size: 35px;
-      }
-      .left__box span,
-      .pricing__content span {
-        font-size: 14px;
-      }
-      .pricing__content h3 {
-        font-size: 30px;
-      }
-      .sender__box1 {
-        width: 155px;
-      }
-      .single__pricing.active .left__box h3 {
-        font-size: 45px;
-      }
-      .expand .btn {
+    }
+
+    .expand .btn {
         height: 38px;
         width: 150px;
         line-height: 38px;
-      }
-      .pricing__bottom__content p {
-        font-size: 16px;
-      }
-      .pricing__bottom__content h5 {
-        font-size: 30px;
-        line-height: 40px;
-      }
-      .left__img {
-        width: 100%;
-      }
+    }
 
-      .tab__content .btn.v4 {
-        font-size: 16px;
-      }
-      .link__box {
+    .link__box {
         margin-top: 80px;
-      }
-      .tab__toggle li a {
+    }
+    .tab__toggle li a {
         width: 200px;
         height: 150px;
         font-size: 20px;
         /* width: 190px;
         height: 140px; */
-      }
-      .tab__toggle li a img {
+    }
+    .tab__toggle li a img {
         height: 40px;
         margin-bottom: 15px;
-      }
-      .secSliderResource {
+    }
+    .secSliderResource {
         margin: 60px 0;
-      }
-      .secSliderResource .sliderResource {
+    }
+    .secSliderResource .sliderResource {
         min-height: 350px;
-      }
-      .Knowledge .secArticle .text-article h4 {
+    }
+    .Knowledge .secArticle .text-article h4 {
         font-size: 20px;
         color: #2e4050;
-      }
-      .resource_section {
+    }
+    .resource_section {
         padding: 40px 0 60px;
-      }
-      .Knowledge .secArticle .img-article {
+    }
+    .Knowledge .secArticle .img-article {
         min-height: 150px;
-      }
-}
+    }
+    .modal-dialog {
+        max-width: 567px;
+    }
+    .bg__img.img__1 {
+        width: 45%;
+        left: -180px;
+    }
+    .bg__img.img__2 {
+        width: 25%;
+    }
 
-@media only screen and (min-width: 768px) {
-    .single__pricing[aria-expanded='true'] {
-        -webkit-box-shadow: 0 0 45px rgb(43, 42, 42);
-        box-shadow: 0 0 45px rgb(43, 42, 42);
+    .pack-img img {
+        max-width: 696%;
+        margin-top: 40%;
+        margin-left: -140%;
     }
-    .single__pricing[aria-expanded='true'] .pricing__content {
-        background-color: #fff;
+    h1.section__title {
+        margin-bottom: 20px;
+        margin-top: 0px;
     }
-    .single__pricing[aria-expanded='true'] .left__box {
-        background-image: url(../img/pricing__shape.png);
-        background-color: #3e97de;
-        background-position: left bottom;
-        background-repeat: no-repeat;
-        width: calc(100% + 15px);
-        margin-left: -15px;
-        padding-left: 70px;
-    }
-    .single__pricing[aria-expanded='true'] .pricing__content {
-        position: relative;
-        width: calc(100% + 15px);
-    }
-    .single__pricing[aria-expanded='true'] .left__box h3 {
-        color: #fff;
-        font-size: 60px;
-        margin-top: 20px;
+    .section__title {
+        margin-bottom: 20px;
     }
 }
 

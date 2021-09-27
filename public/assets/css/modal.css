@@ -94,6 +94,7 @@ p.login-content {
         padding: 17px 55px;
       }
       .login-text {
-        padding: 8% 5% 3%;
+        /* padding: 8% 5% 3%; */
+        padding: 9% 5% 5%;
       }
 }

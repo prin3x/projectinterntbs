@@ -2759,7 +2759,7 @@
     padding-top: 40px;
   } */
 
-  .xl-none,
+  /* .xl-none, */
   /* .lg-none {
     display: none;
   } */
@@ -2847,7 +2847,7 @@
   .link__box {
     margin-top: 80px;
   } */
-  .modal-dialog {
+  /* .modal-dialog {
     max-width: 567px;
   }
   .pricing__top .pricing_box h3 {
@@ -2868,11 +2868,11 @@
   }
   .pricing__top .price_plan {
     padding: 30px 20px;
-  }
+  } */
   /*Edit 06Aug*/
-  .pricing_box {
+  /* .pricing_box {
     margin: 0px auto 45px;
-  }
+  } */
   /* .sms_section.v3 {
     background: #eff3f7;
     padding: 100px 0 80px;
@@ -2882,7 +2882,7 @@
   /* .whyTBS img {
     width: 100px;
   } */
-  .pack-img img {
+  /* .pack-img img {
     max-width: 696%;
     margin-top: 40%;
     margin-left: -140%;
@@ -2890,7 +2890,7 @@
   .pack-text {
     position: absolute;
     top: 30%;
-  }
+  } */
   /* .site-mobile-menu .site-nav-wrap > li > ul > li > a h6 {
     font-size: 18px;
     line-height: 1.2;
@@ -3017,7 +3017,7 @@
     padding: 0 0 60px;
     text-align: center;
   } */
-
+/* 
   .promo_item_three_img {
     text-align: center;
     margin-bottom: 30px;
@@ -3056,7 +3056,7 @@
 
   .promo_bottom_text {
     font-size: 16px;
-  }
+  } */
 
   /* .sms_section {
     height: 750px;
@@ -3101,7 +3101,7 @@
     font-size: 10px;
   } */
 
-  .simple_feature_list {
+  /* .simple_feature_list {
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2;
@@ -3114,7 +3114,7 @@
   .simple_feature_list li i {
     font-size: 26px;
     top: 5px;
-  }
+  } */
 
   /* .footer_section a {
     font-size: 17px;
@@ -3151,7 +3151,7 @@
     padding: 80px 0 55px;
   } */
 
-  .single_feature_item img {
+  /* .single_feature_item img {
     max-width: 80%;
   }
 
@@ -3161,9 +3161,9 @@
 
   .single_feature_text p {
     font-size: 13px;
-  }
+  } */
 
-  .track_section {
+  /* .track_section {
     padding: 60px 0;
   }
 
@@ -3192,14 +3192,14 @@
   .track_box.whyBox {
     margin: 20px auto !important;
     width: 80%;
-  }
+  } */
 
-  .newsletter_text {
+  /* .newsletter_text {
     text-align: center;
     margin-bottom: 30px;
-  }
+  } */
 
-  .newsletter_text h3, .newsletter_text h2,
+  /* .newsletter_text h3, .newsletter_text h2,
   .simple_icon_title h3,.simple_icon_title h2,
   .track_text h3 {
     font-size: 29px;
@@ -3209,7 +3209,7 @@
   .simple_icon_title p,
   .track_text p {
     font-size: 17px;
-  }
+  } */
 
   /* .sms_form_text h4 {
     font-size: 27px;
@@ -3228,7 +3228,7 @@
     padding: 60px 30px 60px 30px;
   } */
 
-  .simple_icon img {
+  /* .simple_icon img {
     max-width: 80px;
   }
 
@@ -3251,7 +3251,7 @@
 
   .icon_btn {
     margin-top: 0px;
-  }
+  } */
 
   /* .globe_text {
     text-align: center;
@@ -3344,14 +3344,14 @@
     padding: 70px 0;
   } */
 
-  .box__wrapper ul li {
+  /* .box__wrapper ul li {
     font-size: 13px;
     line-height: 25px;
     color: #5b6e80;
-  }
-  .tab__content.faq_section {
+  } */
+  /* .tab__content.faq_section {
     padding: 0 0 80px;
-  }
+  } */
   /*Edit 06Aug*/
   /* .hero_section.v2 .btn.v3,
   .hero_section.v2 .btn.v5 {
@@ -3372,27 +3372,27 @@
   } */
 
   /*edit 06 Aug*/
-  .promo_section {
+  /* .promo_section {
     padding: 130px 0;
   }
   .service_feature_text a.link {
     margin: 20px 0 30px;
-  }
-  .simple_title {
+  } */
+  /* .simple_title {
     margin-bottom: 35px;
-  }
-  .simple_feature_list li {
+  } */
+  /* .simple_feature_list li {
     margin-bottom: 0;
-  }
-  .pricing_box p {
+  } */
+  /* .pricing_box p {
     margin-bottom: 40px;
-  }
-  .slider_section {
+  } */
+  /* .slider_section {
     height: 500px;
-  }
-  .btn.v4 {
+  } */
+  /* .btn.v4 {
     font-size: 16px;
-  }
+  } */
   /* .hero_text_one span {
     font-size: 26px;
   }
@@ -3409,10 +3409,10 @@
     font-size: 18px;
     line-height: 32px;
   } */
-  .pricing_feature {
+  /* .pricing_feature {
     margin: 0px;
-  }
-  .single__pricing.active .left__box h3 {
+  } */
+  /* .single__pricing.active .left__box h3 {
     font-size: 35px;
   }
   .single__pricing.active .left__box {
@@ -3424,19 +3424,19 @@
   }
   .single__pricing[aria-expanded="true"] .left__box {
     padding-left: 35px;
-  }
-  .nice-select:after {
+  } */
+  /* .nice-select:after {
     width: 10px;
     height: 10px;
     right: 17px;
-  }
-  h1.section__title{
+  } */
+  /* h1.section__title{
     margin-bottom: 20px;
     margin-top: 0px;
   }
   .section__title {
     margin-bottom: 20px;
-  }
+  } */
   /* .edu_section::before {
     top: 49%;
     height: 1200px;
@@ -3454,15 +3454,15 @@
     font-size: 26px;
   } */
   /* Login password style */
-  .login-text {
+  /* .login-text {
     padding: 9% 5% 5%;
-  }
+  } */
   /* error text style */
-  .sms-error-text {
+  /* .sms-error-text {
     position: absolute;
     bottom: -95%;
     left: 4%;
-  }
+  } */
   .sms_form {
     padding: 50px 30px 85px 50px;
   }
@@ -3485,10 +3485,10 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .pack-text p {
+  /* .pack-text p {
     margin-left: 16%;
-  }
-  .single__pricing[aria-expanded="true"] .pack-text p {
+  } */
+  /* .single__pricing[aria-expanded="true"] .pack-text p {
     margin-left: -34%;
   }
   .single__pricing[aria-expanded="true"] .pack-img img {
@@ -3502,21 +3502,21 @@
   }
   .single__pricing[aria-expanded="true"] .pack-text b {
     font-size: 20px;
-  }
-  .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
+  } */
+  /* .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
     font-size: 24px;
   }
   .site-mobile-menu .site-nav-wrap .arrow-collapse {
     position: absolute;
     right: -60px;
     top: 17px;
-  }
-  .track_box.feature {
+  } */
+  /* .track_box.feature {
     margin-bottom: 20px;
   }
   .track_box p {
     font-size: 20px;
-  }
+  } */
   ul.api-des {
     width: 60%;
     margin-left: 25%;
@@ -3540,13 +3540,13 @@
   .special-price .btn {
     margin: 20px auto 40px;
   }
-  .track_box.productBox {
+  /* .track_box.productBox {
     margin: 15px auto !important;
     width: 80%;
   }
   .track_box.productBox img.col4 {
     width: 30%;
-  }
+  } */
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {

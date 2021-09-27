@@ -68,3 +68,29 @@
         font-size: 36px;
       }
 }
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .simple_icon img {
+        max-width: 80px;
+      }
+    
+      .simple_icon p {
+        font-size: 13px;
+      }
+    
+      .simple_icon_btn h4 {
+        font-size: 23px;
+      }
+    
+      .simple_icon_btn {
+        padding: 27px;
+        margin: 0 20px;
+      }
+    
+      .arrow_bg {
+        max-width: 40%;
+      }
+    
+      .icon_btn {
+        margin-top: 0px;
+      }
+}

@@ -68,11 +68,14 @@
   .whyTBS div Image {
     width: 100px;
   }
-  .single_feature_text h3{
+  .single_feature_text h3, .single_feature_text h4{
     font-size: 16px;
   }
   .single_feature_text p{
     font-size: 13px;
+  }
+  .single_feature_item img {
+    max-width: 80%;
   }
 }
 

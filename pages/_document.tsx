@@ -25,7 +25,7 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/"
                         crossOrigin="true"
                     />
-                    <link rel="stylesheet" href="/css/font.loader.min.css" />
+                    <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/font.loader.min.css`} />
 
                     <link
                         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -54,8 +54,8 @@ class MyDocument extends Document {
                     {/* <link
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/style.css`}
                         rel="stylesheet"
-                    />
-                    <link
+                    /> */}
+                    {/* <link
                         href={`${process.env.NEXT_PUBLIC_BASE_ASSET}/css/responsive.css`}
                         rel="stylesheet"
                     /> */}

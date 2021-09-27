@@ -153,8 +153,7 @@
         font-weight: 500;
       }
       .service_feature_item p,
-      .service_feature_text a.link,
-      .simple_feature_list li p {
+      .service_feature_text a.link{
         font-size: 18px;
       }
       .service_feature_text p {
@@ -167,5 +166,53 @@
         font-size: 30px;
         line-height: 1.3;
         font-weight: 500;
+      }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .promo_item_three_img {
+        text-align: center;
+        margin-bottom: 30px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .promo_item_three_img object {
+        width: 100%;
+      }
+    
+      .service_feature_item {
+        margin-bottom: 30px;
+      }
+    
+      .service_feature_text {
+        text-align: center;
+      }
+    
+      .promo_text h2 {
+        font-size: 38px;
+      }
+    
+      .promo_text p {
+        font-size: 26px;
+      }
+    
+      .promo_title {
+        min-width: 300px;
+      }
+    
+      .promo_title p {
+        font-size: 20px;
+      }
+    
+      .promo_bottom_text {
+        font-size: 16px;
+      }
+      .promo_section {
+        padding: 130px 0;
+      }
+      .service_feature_text a.link {
+        margin: 20px 0 30px;
       }
 }

@@ -121,6 +121,13 @@ span.open {
     margin-bottom: 0;
 }
 
+.tab__content.faq_section {
+    padding: 0 0 100px;
+}
+.tab__content .btn.v4 {
+    font-size: 16px;
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .section_title {
         text-align: center;
@@ -155,6 +162,12 @@ span.open {
     .faq_bottom_text {
         text-align: center;
         margin-bottom: 35px;
+      }
+      .tab__content.faq_section {
+        padding: 0 0 80px;
+      }
+      .tab__content .btn.v4 {
+        font-size: 16px;
       }
 }
 

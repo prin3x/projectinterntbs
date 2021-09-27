@@ -3,16 +3,10 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../components/seo/home';
+import { useRouter } from 'next/router'
+import th from '../public/locales/th/Home.json'
+import en from '../public/locales/en/Home.json'
 
-import { useRouter } from 'next/router';
-import th from '../public/locales/th/Home.json';
-import en from '../public/locales/th/Home.json';
-// import SimpleSliderSection from '../components/home/SimpleSliderSection';
-// import Layout from '../components/Layout';
-// import HeroSection from '../components/home/HeroSection';
-// import PartnerSection from '../components/home/PartnerSection';
-// import FeatureSection from '../components/home/FeatureSection';
-// import ServiceSection from '../components/home/ServiceSection';
 // import SimpleSliderSection from '../components/home/SimpleSliderSection';
 // import GlobeSection from '../components/home/GlobeSection';
 // import SmsSection from '../components/home/SmsSection';
@@ -36,13 +30,12 @@ const EduSection = dynamic(() => import('../components/home/EduSection'))
 const CtaSection = dynamic(() => import('../components/home/CtaSection'))
 const BacktoTop = dynamic(() => import('../components/BacktoTop'))
 
-
 const Homepage = () => {
     const router = useRouter();
     const { locale } = router;
     const t = locale === 'th' ? th : en;
-    
-    return(
+
+    return (
         <React.Fragment>
         <Layout>
             <Head>

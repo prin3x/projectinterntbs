@@ -4281,9 +4281,9 @@ a.changeAdd {
 
 /** end .swal2-alert **/
 
-.single__pricing[aria-expanded='true'] .arrow-down {
+/* .single__pricing[aria-expanded='true'] .arrow-down {
     display: none;
-}
+} */
 
 /* Condition page */
 
