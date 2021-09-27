@@ -1,0 +1,70 @@
+/*----------------------------
+       Simple Icon CSS
+------------------------------*/
+
+.simple_icon_section {
+    padding: 140px 0;
+}
+
+.simple_icon_title {
+    text-align: center;
+}
+
+.icon_wrapper {
+    position: relative;
+}
+
+.arrow_bg {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.simple_icon_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 90px 0;
+}
+
+.simple_icon p {
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 25px 0 0;
+    color: #5b6e80;
+    font-family: 'Sarabun', serif;
+    font-weight: 500;
+}
+
+.icon_btn {
+    margin-top: 150px;
+}
+
+.simple_icon {
+    text-align: center;
+}
+
+.simple_icon_btn {
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 35px rgb(0, 0, 0, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 35px;
+}
+
+.simple_icon_btn h4 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: #2a87f4;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .simple_icon_btn h4 {
+        font-size: 36px;
+      }
+}

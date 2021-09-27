@@ -1,0 +1,251 @@
+/*--------------------------------
+            Pricing  CSS
+---------------------------------*/
+.pricing-section {
+    padding: 80px 0;
+}
+
+.pricing_box {
+    margin: 0 auto;
+    box-shadow: 0 0 20px #e8edee;
+    padding: 50px 35px 30px;
+    width: 70%;
+}
+
+.pricing_box.m-0 {
+    width: 100%;
+}
+
+.pricing_box img {
+    margin: 0 auto 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 60%;
+    margin: 30px auto;
+}
+
+.pricing_box h3 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.pricing_box p {
+    font-size: 24px;
+    color: #2e4050;
+    font-family: 'Sarabun', serif;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.pricing_feature li {
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.pricing_feature li i {
+    display: inline-block;
+    font-size: 26px;
+    color: #31b1e7;
+    position: relative;
+    top: 3px;
+}
+
+.pricing_feature li p {
+    padding-left: 12px;
+    font-size: 18px;
+    font-family: 'Sarabun', serif;
+    color: #5b6e80;
+    margin-bottom: 0;
+    line-height: 1.3;
+    display: inline-block;
+}
+
+.pricing_feature {
+    margin: 20px;
+}
+
+.price_plan {
+    border: 1px solid #f1f4f8;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 5px 30px;
+    position: relative;
+}
+
+.price_plan span {
+    font-size: 18px;
+    color: #5b6e80;
+    font-family: 'Sarabun', serif;
+    font-weight: 400;
+}
+
+.price_plan h2 {
+    font-size: 60px;
+    color: #31b1e7;
+    text-align: right;
+    line-height: 1;
+    margin: 8px 0 15px;
+}
+
+.price_plan h2 span {
+    font-size: 20px;
+    color: #5b6e80;
+    font-family: 'Sarabun', serif;
+    margin-left: -20px;
+}
+
+.price_plan a.btn.v3 {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.price_bottom_text p {
+    font-size: 18px;
+    color: #5b6e80;
+    font-family: 'Sarabun', serif;
+    margin-bottom: 10px;
+}
+
+.price_bottom_text ul {
+    margin-left: 50px;
+    min-height: 160px;
+}
+
+.price_bottom_text ul li {
+    font-size: 16px;
+    color: #5b6e80;
+    font-family: 'sarabun', serif;
+    line-height: 1.4;
+    list-style: circle;
+    padding: 5px 0;
+}
+
+.price_bottom_text {
+    margin-top: 65px;
+}
+
+.pricing_bottom_text {
+    text-align: center;
+    margin: 80px 0 10px;
+}
+
+.pricing_bottom_text span {
+    font-size: 20px;
+    color: #31b1e7;
+    font-family: 'Sarabun', serif;
+}
+
+.pricing_bottom_text h3 {
+    font-size: 36px;
+    color: #2e4050;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .pricing_box h3 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.2;
+        text-align: center;
+      }
+      .pricing_box p {
+        font-size: 20px;
+        color: #2e4050;
+        font-family: "Sarabun", serif;
+        line-height: 1.3;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .price_bottom_text ul {
+        margin-bottom: 20px;
+        min-height: 140px;
+      }
+      .price_bottom_text ul li {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .pricing_box img {
+        margin: 40px auto;
+        width: 60%;
+      }
+      .pricing_box.m-0 {
+        width: 80%;
+      }
+    
+      .pricing_box.m-0.whyPrice {
+        width: 100% !important;
+      }
+      .pricing_feature li p {
+        padding-left: 10px;
+        font-size: 16px;
+      }
+      .price_plan h2 {
+        font-size: 48px;
+      }
+      .price_plan h2 span {
+        font-size: 16px;
+        color: #5b6e80;
+        font-family: "Sarabun", serif;
+        margin-left: 5px !important;
+      }
+      .price_bottom_text ul {
+        margin-left: 30px;
+      }
+      .pricing_bottom_text h3 {
+        font-size: 30px;
+      }
+      .pricing_bottom_text h3 {
+        font-size: 30px;
+      }
+    
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .pricing_box h3 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .pricing_box {
+    margin: 0 40px 45px;
+  }
+  .pricing_feature li p {
+    padding-left: 12px;
+    font-size: 15px;
+    font-family: "Sarabun", serif;
+    color: #5b6e80;
+    margin-bottom: 0;
+    line-height: 1.3;
+    display: inline-block;
+  }
+  .price_plan h2 {
+    font-size: 36px;
+    color: #31b1e7;
+    text-align: right;
+    line-height: 1;
+    margin: 8px 0 15px;
+  }
+  .price_plan span {
+    font-size: 16px;
+    color: #5b6e80;
+    font-family: "Sarabun", serif;
+    font-weight: 400;
+    padding-left: 1rem;
+  }
+  .price_plan h2 span {
+    font-size: 16px;
+    color: #5b6e80;
+    font-family: "Sarabun", serif;
+    margin-left: -20px;
+  }
+}

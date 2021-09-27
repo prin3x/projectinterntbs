@@ -1,0 +1,53 @@
+/*--------------------------------
+            Simple  CSS
+---------------------------------*/
+.simple_section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px 0;
+}
+
+.simple_title {
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 65px;
+}
+
+.simple_feature_list {
+    columns: 3;
+}
+
+.simple_feature_list li {
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 13px;
+    text-align: center;
+}
+
+.simple_feature_list li i {
+    font-size: 30px;
+    position: relative;
+    top: 3px;
+}
+
+.simple_feature_list li p {
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Sarabun', serif;
+    padding-left: 10px;
+    min-width: 250px;
+    text-align: left;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .simple_section {
+        padding: 60px 0;
+      }
+      .simple_title {
+        font-size: 30px;
+        margin-bottom: 55px;
+      }
+}
