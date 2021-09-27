@@ -14,8 +14,35 @@ import { checktoken } from '../services/user/user.service';
 
 import { fb } from '../utils/fb';
 
-import '../public/css/style.css';
-import '../public/css/responsive.css';
+// import '../public/css/style.css';
+// import '../public/css/responsive.css';
+import '../public/assets/css/globals.css';
+import '../public/assets/css/header.css';
+import '../public/assets/css/footer.css';
+import '../public/assets/css/backtotop.css';
+import '../public/assets/css/bannercookie.css';
+import '../public/assets/css/captcha.css';
+import '../public/assets/css/condition.css';
+import '../public/assets/css/cta.css';
+import '../public/assets/css/edu.css';
+import '../public/assets/css/faq.css';
+import '../public/assets/css/feature-checkicon.css';
+import '../public/assets/css/feature.css';
+import '../public/assets/css/globe.css';
+import '../public/assets/css/hero.css';
+import '../public/assets/css/newletter.css';
+import '../public/assets/css/partner.css';
+import '../public/assets/css/proloader.css';
+import '../public/assets/css/regisandlogin.css';
+import '../public/assets/css/service.css';
+import '../public/assets/css/service-feature.css';
+import '../public/assets/css/simple.css';
+import '../public/assets/css/simpleicon.css';
+import '../public/assets/css/slider.css';
+import '../public/assets/css/testimonial.css';
+import '../public/assets/css/test-pipeline.css';
+import '../public/assets/css/track.css';
+import '../public/assets/css/usertype.css';
 
 const tagManagerArgs = {
     gtmId: AppConfig.GTM_CODE || '',
