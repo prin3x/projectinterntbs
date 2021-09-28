@@ -194,27 +194,70 @@ form select.hide-select {
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
     .pass-style {
-        width: 80%;
+        /* width: 80%; */
+        width: 90%;
+        margin: 30% auto;
     }
     .modal-pass {
-        padding: 12% 5% 3%;
+        /* padding: 12% 5% 3%; */
+        padding: 15% 5% 3%;
+        /* padding: 18% 5% 3%; */
     }
     .form-wrap {
-        width: 80%;
+        /* width: 80%; */
+        width: 90%;
+        /* width: 100%; */
     }
+    .form-password-wrap {
+        margin-top: 20px;
+    }
+    .form-password-wrap input {
+        height: 54px;
+        padding: 0 15px;
+        font-size: 16px;
+        /* font-size: 14px; */
+    }
+
     .login-text {
-        padding: 9% 5% 5%;
+        /* padding: 9% 5% 5%; */
+        padding: 15% 7% 10%;
     }
+    h5.pass-modal-text {
+        font-size: 20px;
+        /* font-size: 16px; */
+    }
+    h5.login-topic {
+        margin-bottom: 3%;
+        font-size: 18px;
+        /* font-size: 13px; */
+    }
+
+    p.login-content {
+        font-size: 12px;
+    }
+    .btn.v2.btn-show-login {
+        font-size: 14px;
+    }
+
     .captcha {
         margin: 20px 0 30px;
         max-width: 100%;
     }
     .captcha-content {
         width: 60%;
+
+        padding: 7% 5% 5%;
+
+        /* width: 100%; */
     }
     .sms-error-text {
         position: absolute;
         top: 35%;
-        left: 3%;
+        /* left: 3%; */
+
+        left: 4%;
+    }
+    .error-text {
+        font-size: 14px;
     }
 }

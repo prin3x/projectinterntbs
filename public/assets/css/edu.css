@@ -160,10 +160,12 @@
   }
 
   .edu_section::before {
-    height: 830px;
+    /* height: 830px; */
     top: 0;
     transform: translateY(0%);
     /* height: 950px; */
+
+    height: 100%;
   }
 
   .edu_text h2 {

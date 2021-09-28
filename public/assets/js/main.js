@@ -1,6 +1,6 @@
 (function ($) {
   'use strict';
-
+  var menu_name = '';
   //===== Prealoder
   $(window).on('load', function (event) {
     $('.proloader').delay(500).fadeOut(500);
@@ -35,22 +35,39 @@
     e.preventDefault();
 
     if ($('body').hasClass('offcanvas-menu')) {
+      $('body').removeClass('sub-menu-fixed-body');
       $('body').removeClass('offcanvas-menu');
       $this.removeClass('active');
+      $('#' + menu_name).removeClass('off_sum_menu_mobile');
     } else {
       $('body').addClass('offcanvas-menu');
+      $('body').addClass('sub-menu-fixed-body');
       $this.addClass('active');
     }
   });
   $('body').on('click', '.page_wrapper, .closemenu', function (e) {
     // var $this = $(this);
     // e.preventDefault();
-
     if ($('body').hasClass('offcanvas-menu')) {
       $('body').removeClass('offcanvas-menu');
+      $('body').removeClass('sub-menu-fixed-body');
       // $this.removeClass('active');
     }
   });
+
+  $(document).on('click', '.show-site-sub-menu', function (e) {
+    var $this = $(this);
+    e.preventDefault();    
+    let menu_name_click = $(this).data('name');
+    menu_name = menu_name_click ? menu_name_click: menu_name
+    
+    if ($('#' + menu_name).hasClass('off_sum_menu_mobile')) {
+        $('#' + menu_name).removeClass('off_sum_menu_mobile');
+      } else {
+        $('body').addClass('sub-menu-fixed-body');
+        $('#' + menu_name).addClass('off_sum_menu_mobile');
+      }
+  });  
 
   // /* -------------------------------------
   //             Responsive menu
@@ -157,14 +174,14 @@
   });
 
   //Animate the scroll to yop
-  $('.back-to-top').on('click', function (event) {
+  $(document).on('click', '.back-to-top', function (event) {
     event.preventDefault();
 
     $('html, body').animate(
       {
         scrollTop: 0,
       },
-      1500
+      1500,
     );
   });
 
@@ -173,7 +190,7 @@
     $('html, body').animate(
       { scrollTop: $($(this).attr('href')).offset().top - 90 },
       500,
-      'linear'
+      'linear',
     );
   });
 
@@ -188,7 +205,7 @@
           scrollTop: $($anchor.attr('href')).offset().top - headerH + 'px',
         },
         1200,
-        'easeInSine'
+        'easeInSine',
       );
     event.preventDefault();
   });
@@ -204,7 +221,7 @@
           scrollTop: $($anchor.attr('href')).offset().top - headerH + 'px',
         },
         1200,
-        'easeInSine'
+        'easeInSine',
       );
     event.preventDefault();
   });
@@ -235,8 +252,7 @@
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (
-      location.pathname.replace(/^\//, '') ==
-        this.pathname.replace(/^\//, '') &&
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
       location.hostname == this.hostname
     ) {
       var target = $(this.hash);
@@ -246,7 +262,7 @@
           {
             scrollTop: target.offset().top - 88,
           },
-          1000
+          1000,
         );
         return false;
       }

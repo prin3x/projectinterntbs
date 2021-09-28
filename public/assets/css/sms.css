@@ -241,17 +241,23 @@
 @media only screen and (min-width: 375px) and (max-width: 767px) {
 
   ul.api-des {
-    width: 60%;
-    margin-left: 25%;
+    /* width: 60%; */
+    /* margin-left: 25%; */
+
+    width: 90%;
+    margin-left: 2%;
     margin-top: 20px;
   }
   ul.api-des li {
+    /* font-size: 16px; */
+
     margin: 5px 0px 5px 35px;
     padding-left: 5px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
     text-align: left;
   }
+
   .sms_section {
     height: 550px;
   }
@@ -274,7 +280,7 @@
   }
 
   .sms_form {
-    padding: 50px 30px 50px 30px;
+    /* padding: 50px 30px 50px 30px; */
     -webkit-transform: translateY(25px);
     -ms-transform: translateY(25px);
     transform: translateY(25px);
@@ -282,6 +288,41 @@
     width: 90%;
     margin: 0 auto;
   
+    padding: 50px 30px 45px 30px;
+
+    /* width: 100%;
+    padding: 40px 20px 40px 20px; */
+  }
+
+  .sms_form_field {
+    text-align: center;
+  }
+  .sms_form_field input {
+    width: 100%;
+    /* margin-bottom: 30px; */
+    /* margin-bottom: 65px; */
+
+    border: 2px solid #5b6e80;
+    height: 50px;
+    border-radius: 14px;
+    padding: 15px 20px 15px;
+
+    font-size: 14px;
+    margin-bottom: 55px;
+  }
+  .sms_form_field input:placeholder {
+    text-align: center;
+  }
+
+  .sms_form_field button {
+    width: 50%;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .sms_form_text {
@@ -291,8 +332,11 @@
   }
   .sms_form_text h4 {
     /* font-size: 22px; */
-    font-size: 18px;
+    /* font-size: 18px; */
     text-align: center;
+
+    font-size: 16px;
+    margin-bottom: 9px;
   }
 
   .sms_form_text p {
@@ -302,6 +346,11 @@
     line-height: 1.6;
     width: 70%;
     margin: 0 auto;
+
+    /* width: 80%; */
+  }
+  .sms-error-text {
+    font-size: 12px;
   }
 
   .sms_text {
@@ -348,34 +397,6 @@
     color: #31b1e7;
     font-size: 30px;
     line-height: 1.2;
-  }
-
-  .sms_form_field {
-    text-align: center;
-  }
-  .sms_form_field input {
-    width: 100%;
-    margin-bottom: 30px;
-    margin-bottom: 65px;
-
-    border: 2px solid #5b6e80;
-    height: 50px;
-    border-radius: 14px;
-    padding: 15px 20px 15px;
-  }
-  .sms_form_field input:placeholder {
-    text-align: center;
-  }
-
-  .sms_form_field button {
-    width: 50%;
-    margin: 0 auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 
   .btn.v2 {

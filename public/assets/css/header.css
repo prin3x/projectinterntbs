@@ -1548,10 +1548,22 @@ ul.title-sub-menu-mobile {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
-    .btn.otp2 {
-        min-width: 70%;
-        margin-left: 0;
-    }
+    .site-mobile-menu .site-nav-wrap .arrow-collapse {
+        right: -33px;
+      }
+      .site-mobile-menu .site-nav-wrap > li > ul > li > a h6 {
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 5px;
+        font-weight: 400;
+      }
+    .nice-select.user_select .current {
+        font-size: 18px;
+      }
+      .nice-select.user_select {
+        height: 15px;
+      }
+
     .lg-none {
         display: none;
     }
@@ -1594,20 +1606,32 @@ ul.title-sub-menu-mobile {
     .menu_btn ul li {
         margin-top: 30px;
     }
+    .loginLink {
+        font-size: 4vw;
+      }
+      .btn.v1 {
+        font-size: 14px;
+      }
+
     .btn.v2 {
         padding: 20px 40px;
     }
     .btn.v4 {
         font-size: 16px;
         padding: 15px 20px;
+
+        /* font-size: 14px; */
       }
+
     .btn.v7 {
         font-size: 18px;
-        padding: 20px 40px;
+        /* padding: 20px 40px; */
 
         display: block;
         margin: 10px auto;
         width: 70%;
+
+        padding: 15px 40px;
     }
     .btn.v7.Whybtn {
         background-color: #fff;
@@ -1615,7 +1639,25 @@ ul.title-sub-menu-mobile {
         margin-right: auto;
     }
     .btn.v8 {
-        font-size: 18px;
-        padding: 18px 45px;
+        /* font-size: 18px;
+        padding: 18px 45px; */
+
+        font-size: 14px;
+        padding: 15px 20px;
+        min-width: 100px;
     }
+
+      .btn.otp {
+        /* font-size: 16px; */
+
+        font-size: 14px;
+        padding: 15px 20px;
+        min-width: 100px;
+      }
+      .btn.otp2 {
+        font-size: 18px;
+        padding: 15px 40px;
+        min-width: 70%;
+        margin-left: 0;
+      }
 }

@@ -125,7 +125,10 @@
   }
   
   .arrow_bg {
-    max-width: 40%;
+    /* max-width: 40%; */
+
+    top: 90%;
+    max-width: 60%;
   }
   
   .icon_btn {

@@ -378,75 +378,39 @@
         font-size: 16px;
         line-height: 26px;
       }
-    .tab__toggle li a {
-        width: 225px;
-        height: 130px;
-        margin: 15px;
+
+
+      .tab__toggle li {
+        /* width: 100%; */
+
+        display: inline-block;
+        width: 33%;
       }
+      .tab__toggle li a {
+        /* width: 225px; */
+        /* height: 130px; */
+        /* margin: 15px; */
 
-    h1.section__title{
-        /* font-size: 33px; */
-        /* margin-bottom: 0px; */
-        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        font-size: 24px;
-        margin-bottom: 20px;
-        line-height: 46px;
-      }
-
-      .section__title {
-        /* font-size: 33px;
-        margin-bottom: 0px; */
-
-        font-size: 24px;
-        margin-bottom: 20px;
-        line-height: 46px;
-      }
-    .hero_section.v2 {
-        height: 300px;
-        margin-bottom: 260px;
-        margin-top: 5px;
-        padding-top: 40px;
-        background-image: url(../img/mobile/hero_img_2.webp);
-    }
-
-    .hero_section.v2 .hero_text_one {
-        height: 400px;
-        text-align: center;
-        width: 100%;
-        padding-top: 300px;
+        height: auto;
+        margin: 2%;
         width: 96%;
-        margin: 0 auto;
-    }
+        padding: 10px 16px;
+        min-height: 110px;
+      }
 
-    .hero_section.v2 .cta-btn {
+      .tab__toggle li a img {
+        height: 25px;
+        margin-bottom: 15px;
+      }
+      .nav-link span {
+        font-size: 14px;
         text-align: center;
-    }
-
-    .hero_section.v2 .btn.v3 {
-        font-size: 14px;
-        padding: 12px 30px;
-        min-width: 180px;
-        margin: 0 10px;
-    }
-
-    .hero_section.v2 .btn.v5 {
-        font-size: 14px;
-        padding: 10px 26px;
-        min-width: 180px;
-        margin: 0 10px;
-    }
-
-    .hero_section.v2 .hero_text_one h1 {
-        font-size: 24px;
-    }
-
-    .hero_section.v2 .hero_text_one p {
-        font-size: 14px;
-        margin: 15px 0 25px;
-    }
-    .hero_section.v3 .hero_top_one.paymentPage {
-        padding: 60px 0;
+        margin-left: 0px;
+        flex: 1;
       }
 
     .hero_img_one {
@@ -464,11 +428,6 @@
     .hero_curve {
         top: 61%;
         max-width: 62%;
-    }
-
-    .hero_top_one,
-    .hero_bottom_one {
-        padding: 80px 0 0;
     }
 
     .hero_text_one span {
@@ -489,6 +448,86 @@
 
     .hero_top_one,
     .hero_bottom_one {
+        /* padding: 80px 0 0;
+         */
         padding: 70px 0 0;
+    }
+    
+    h1.section__title{
+        /* font-size: 33px; */
+        /* margin-bottom: 0px; */
+        margin-top: 0px;
+
+        font-size: 24px;
+        margin-bottom: 20px;
+        line-height: 46px;
+    }
+
+    .section__title {
+        /* font-size: 33px;
+        margin-bottom: 0px; */
+
+        font-size: 24px;
+        margin-bottom: 20px;
+        line-height: 46px;
+    }
+    .hero_section_2 .hero_top_one {
+        padding: 60px 0 20px;
+    }
+
+    .hero_section.v2 {
+        height: 300px;
+        margin-bottom: 260px;
+        margin-top: 5px;
+        padding-top: 40px;
+        background-image: url(../img/mobile/hero_img_2.webp);
+    }
+
+    .hero_section.v2 .cta-btn {
+        text-align: center;
+    }
+
+    .hero_section.v2 .btn.v3 {
+        font-size: 14px;
+        padding: 12px 30px;
+        min-width: 180px;
+        margin: 0 10px;
+    }
+
+    .hero_section.v2 .btn.v5 {
+        font-size: 14px;
+        padding: 10px 26px;
+        min-width: 180px;
+        margin: 0 10px;
+    }
+
+    .hero_section.v2 .hero_text_one {
+        height: 400px;
+        text-align: center;
+        width: 100%;
+        padding-top: 300px;
+        width: 96%;
+        margin: 0 auto;
+    }
+    .hero_section.v2 .hero_text_one h1 {
+        font-size: 24px;
+    }
+    .hero_section.v2 .hero_text_one p {
+        margin: 15px 0 25px;
+    }
+
+    .hero_section.v3 .hero_top_one {
+        padding: 60px 0 60px;
+      }
+    .hero_section.v3 .hero_text_one h1 {
+        margin: 0;
+    }
+    .hero_section.v3 .hero_top_one.paymentPage {
+        padding: 60px 0;
+      }
+    .hero_section.v3 .hero_text_one p span,
+    .hero_section.v3 .hero_text_one p {
+        font-size: 14px;
+        border-left: none;
     }
 }

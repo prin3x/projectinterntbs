@@ -229,6 +229,7 @@
 @media only screen and (min-width: 375px) and (max-width: 767px) {
   .promo_section {
     padding: 50px 0;
+    /* padding: 100px 0; */
   }
   .promo_text h2 {
     /* font-size: 26px; */
@@ -245,6 +246,9 @@
   .promo_img {
     width: 60%;
     margin: 0px auto;
+  }
+  .promo_img object {
+    min-height: 220px;
   }
   .promo_bottom_text {
     margin: 50px auto;
