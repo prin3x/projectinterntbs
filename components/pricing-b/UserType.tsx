@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 // import PropTypes from 'prop-types';
-import 'react-modal-video/scss/modal-video.scss';
+// import 'react-modal-video/scss/modal-video.scss';
 const SmsSection = () => {
     return (
         <div className="smsUser_section productsms lazyload">
