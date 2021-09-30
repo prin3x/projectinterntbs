@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/dist/client/image';
 import { useRouter } from 'next/router';
-import th from '../public/static/locales/th/Header.json'
-import en from '../public/static/locales/en/Header.json'
+import th from '../public/locales/th/Header.json'
+import en from '../public/locales/en/Header.json'
 
 
 const myLoader = ({src}) => {

@@ -4,13 +4,8 @@ import appConfig from '../appConfig';
 import HeaderSubmodule from '../tbs_submodule/HeaderSubmodule';
 import MyHeader from '../components/myHeader';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-import th from '../public/static/locales/th/Header.json'
-import en from '../public/static/locales/en/Header.json'
-=======
-import th from '../public/locales/th/Header.json';
-import en from '../public/locales/en/Header.json';
->>>>>>> 77c5c178db9320fea644406d7e707eee6bd28d55
+// import th from '../public/locales/th/Header.json';
+// import en from '../public/locales/en/Header.json';
 
 const options = [
     { value: 'TH', text: 'TH' },
@@ -28,16 +23,9 @@ const MySelect = options.map((list) => {
 const Header = () => {
     const { pathname } = useRouter();
     const router = useRouter();
-<<<<<<< HEAD
-
-    const { locale } = router;
-    const t = locale === 'th' ? th : en;
-
-=======
-    const {locale} = router;
->>>>>>> 77c5c178db9320fea644406d7e707eee6bd28d55
+    // const {locale} = router;
     const [lang, setLang] = useState('TH');
-    const t = locale === 'th' ? th : en;
+    // const t = locale === 'th' ? th : en;
     const [isLogin, setIsLogin] = useState(
         Cookie.get('PASSCODE') ? true : false
     );
@@ -60,14 +48,8 @@ const Header = () => {
             domain,
             expires: 7,
         });
-<<<<<<< HEAD
-        // i18n.changeLanguage(value.toLowerCase());
-        const locale = value.toLowerCase();
-        router.push(router.pathname, router.asPath, { locale })
-=======
         const locale = value.toLowerCase();
         router.push(router.pathname, router.asPath, { locale });
->>>>>>> 77c5c178db9320fea644406d7e707eee6bd28d55
     };
 
     const headerConfig = {

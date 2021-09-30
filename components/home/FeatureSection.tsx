@@ -30,11 +30,6 @@ const FeatureSection = () => {
                 <div className="col-lg-3 col-md-6 whyTBS">
                     <div className="single_feature_item">
                         <div className="spaceWhyImg">
-                            {/* <img
-                                className="lazyload size-img"
-                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-WhyNum1.png`}
-                                alt="Image"
-                            /> */}
                             <span className="lazyload size-img">
                                 <Image loader={myLoader} src="img-WhyNum1.png" alt="icon1" width={100} height={100}/>
                             </span>
@@ -48,11 +43,6 @@ const FeatureSection = () => {
                 <div className="col-lg-3 col-md-6 whyTBS">
                     <div className="single_feature_item">
                         <div className="spaceWhyImg">
-                            {/* <img
-                                className="lazyload size-img"
-                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-speed02.png`}
-                                alt="Image"
-                            /> */}
                             <span className="lazyload size-img">
                                 <Image loader={myLoader} src="img-speed02.png" alt="icon2" width={100} height={100}/>
                             </span>
@@ -66,11 +56,6 @@ const FeatureSection = () => {
                 <div className="col-lg-3 col-md-6 whyTBS">
                     <div className="single_feature_item">
                         <div className="spaceWhyImg">
-                            {/* <img
-                                className="lazyload size-img"
-                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-lowPrice02.png`}
-                                alt="Image"
-                            /> */}
                             <span className="lazyload size-img">
                                 <Image loader={myLoader} src="img-lowPrice02.png" alt="icon3" width={100} height={100}/>
                             </span>
@@ -84,11 +69,6 @@ const FeatureSection = () => {
                 <div className="col-lg-3 col-md-6 whyTBS">
                     <div className="single_feature_item">
                         <div className="spaceWhyImg">
-                            {/* <img
-                                className="lazyload size-img"
-                                data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img-whysupport.png`}
-                                alt="Image"
-                            /> */}
                             <span className="lazyload size-img">
                                 <Image loader={myLoader} src="img-whysupport.png" alt="icon4" width={100} height={100}/>
                             </span>

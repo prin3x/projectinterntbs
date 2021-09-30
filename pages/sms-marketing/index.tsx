@@ -8,7 +8,6 @@ import DesSection from '../../components/sms-marketing/DesSection';
 import HeroSection from '../../components/sms-marketing/HeroSection';
 import SmsSection from '../../components/sms-marketing/SmsSection';
 import { seo } from '../../components/seo/sms-marketing';
-// import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
 import th from '../../public/locales/th/Sms-marketing.json'
 import en from '../../public/locales/en/Sms-marketing.json'

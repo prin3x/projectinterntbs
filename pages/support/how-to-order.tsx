@@ -4,7 +4,6 @@ import HeroSection from '../../components/how-to-order/HeroSection';
 import TabContent from '../../components/how-to-order/TabContent';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
-// import { withTranslation } from '../../i18n';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/support_how-to-order';
 import { useRouter } from 'next/router';

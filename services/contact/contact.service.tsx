@@ -23,7 +23,7 @@ export async function sendContact(param: any) {
         }
 
         return { code: '', errorMessageText: '' };
-    } catch (error) {
+    } catch (error: any) {
         console.log('error : ', error.response);
         let errorData = error.response
             ? error.response.data.error

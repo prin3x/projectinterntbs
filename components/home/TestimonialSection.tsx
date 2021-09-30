@@ -24,8 +24,6 @@ const TestimonialSection = () => {
                         dangerouslySetInnerHTML={{
                             __html: t.TestimonialSection["Customers who trust ThaiBulk SMS"],
                         }}>
-                        {/* {t('h1')} <span className="col_one">ThaiBulk</span>{' '}
-            <span className="col_two">SMS</span> */}
                     </h2>
                 </div>
             </div>

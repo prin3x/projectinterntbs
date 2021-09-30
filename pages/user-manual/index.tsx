@@ -6,7 +6,6 @@ import Layout from '../../components/Layout';
 import { seo } from '../../components/seo/user-manual';
 import CtaSection from '../../components/user-manual/CtaSection';
 import SimpleIconSection from '../../components/user-manual/SimpleIconSection';
-// import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
 import th from '../../public/locales/th/UserManual.json'
 import en from '../../public/locales/en/UserManual.json'

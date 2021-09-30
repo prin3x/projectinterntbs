@@ -5,7 +5,6 @@ import Help from '../../components/Help';
 import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import Image from 'next/image';
-// import { withTranslation } from '../../i18n';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/condition';
 import { useRouter } from 'next/router';
@@ -54,17 +53,12 @@ const Condition = () => {
                     style={
                         {
                             // backgroundImage: 'url(/img/bg_12.png)',
-                            // backgroundSize: 'contain',
+                            backgroundSize: 'contain',
                         }
                     }
                 >
                     <HeroSection />
                     <Image loader={myLoader} src="/img/bg_13.png" className="img-fluid shape__bottom lazyload" width={500} height={500} />
-                    {/* <img
-                        data-src="/img/bg_13.png"
-                        className="img-fluid shape__bottom lazyload"
-                        alt=""
-                    /> */}
                     <Help />
                 </div>
             </div>
@@ -75,7 +69,6 @@ const Condition = () => {
 // Condition.getInitialProps = async () => ({
 //   namespacesRequired: ['ConditionMeta'],
 // });
-// export default withTranslation('CookiePolicy')(Condition);
 export default Condition;
 export const getStaticProps = async () => {
     return {

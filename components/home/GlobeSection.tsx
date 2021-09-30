@@ -1,12 +1,5 @@
 import React from "react";
 import Link from 'next/link';
-<<<<<<< HEAD
-import Image from 'next/dist/client/image';
-import PropTypes from 'prop-types';
-
-const GlobeSection = ({ t }: any) => (
-    <div className="globe_section">
-=======
 import Image from "next/dist/client/image";
 import { useRouter } from 'next/router'
 import th from '../../public/locales/th/Home.json';
@@ -24,7 +17,6 @@ const GlobeSection = () => {
 
     return(
         <div className="globe_section">
->>>>>>> 77c5c178db9320fea644406d7e707eee6bd28d55
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-lg-6 col-md-12 col-12 order-lg-1 order-md-2 order-2">
@@ -46,29 +38,15 @@ const GlobeSection = () => {
                 </div>
                 <div className="col-lg-6 col-md-12 col-12 order-lg-2 order-md-1 order-1">
                     <div className="globe_img">
-<<<<<<< HEAD
-                    <div className="lazyload">
-                        <Image 
-                            src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_10.png`} 
-                            alt="glob_img"
-                            width={350}
-                            height={500} />
-                        {/* <Image src="assets/img/img_10.png" /> */}
-                    </div>
-=======
->>>>>>> 77c5c178db9320fea644406d7e707eee6bd28d55
                         {/* <img
                             className="lazyload"
                             // src="/img/img_10.png"
                             src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/img_10.png`}
                             alt="Image"
                         /> */}
-<<<<<<< HEAD
-=======
                         <span className="lazyload">
                             <Image loader={myLoader} src="img_10.png" alt="globeimg" width={500} height={500}/>
                         </span>
->>>>>>> 77c5c178db9320fea644406d7e707eee6bd28d55
                     </div>
                 </div>
             </div>
@@ -82,15 +60,7 @@ GlobeSection.getInitialProps = async () => ({
     namespacesRequired: ['Home'],
 });
 
-<<<<<<< HEAD
-GlobeSection.propTypes = {
-    t: PropTypes.func.isRequired,
-};
-export default withTranslation('Home')(GlobeSection);
-
-=======
 // GlobeSection.propTypes = {
 //     t: PropTypes.func.isRequired,
 // };
 export default React.memo(GlobeSection);
->>>>>>> 77c5c178db9320fea644406d7e707eee6bd28d55

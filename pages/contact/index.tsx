@@ -6,7 +6,6 @@ import Help from '../../components/Help';
 // import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import Image from 'next/image'
-import { withTranslation } from '../../i18n';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/contact';
 const BacktoTop = dynamic(() => import('../../components/BacktoTop'));
@@ -62,11 +61,6 @@ const Contact = () => {
             >
                 <HeroSection />
                 <Image loader={myLoader} src="bg_13.png" className="img-fluid shape__bottom lazyload" width={20} height={20}/>
-                {/* <img
-                    data-src="/img/bg_13.png"
-                    className="img-fluid shape__bottom lazyload"
-                    alt=""
-                /> */}
                 <Help />
             </div>
         </div>
@@ -79,7 +73,7 @@ const Contact = () => {
 // Contact.getInitialProps = async () => ({
 //   namespacesRequired: ['ContactMeta'],
 // });
-export default withTranslation('Contact')(Contact);
+export default Contact;
 export const getStaticProps = async () => {
     return {
         props: {

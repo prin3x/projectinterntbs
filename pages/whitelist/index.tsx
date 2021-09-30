@@ -9,7 +9,6 @@ import BacktoTop from '../../components/BacktoTop';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import { seo } from '../../components/seo/whitelist';
-// import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
 import th from '../../public/locales/th/Whitelist.json'
 import en from '../../public/locales/en/Whitelist.json'

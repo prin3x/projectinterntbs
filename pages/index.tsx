@@ -6,6 +6,7 @@ import { seo } from '../components/seo/home';
 import { useRouter } from 'next/router'
 import th from '../public/locales/th/Home.json'
 import en from '../public/locales/en/Home.json'
+import Proloader from '../components/Proloader';
 
 // import SimpleSliderSection from '../components/home/SimpleSliderSection';
 // import GlobeSection from '../components/home/GlobeSection';
@@ -65,19 +66,19 @@ const Homepage = () => {
                     cardType: seo.openGraph.type,
                 }}
             />
-            {/* <Proloader /> */}
+            <Proloader />
             <div className="page_wrapper">
-                {/* <HeroSection /> */}
-                {/* <PartnerSection /> */}
+                <HeroSection />
+                <PartnerSection />
                 <FeatureSection />
-                {/* <SmsSection /> */}
-                {/* <SuccessSection /> */}
-                {/* <ServiceSection /> */}
-                {/* <SimpleSliderSection /> */}
-                {/* <GlobeSection /> */}
-                {/* <TestimonialSection /> */}
-                {/* <EduSection /> */}
-                {/* <CtaSection /> */}
+                <SmsSection />
+                <SuccessSection />
+                <ServiceSection />
+                <SimpleSliderSection />
+                <GlobeSection />
+                <TestimonialSection />
+                <EduSection />
+                <CtaSection />
             </div>
             <BacktoTop />
         </Layout>

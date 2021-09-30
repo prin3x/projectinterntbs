@@ -14,7 +14,8 @@ const SimpleIconSection = () => {
     const { locale } = router;
     const t = locale === 'th' ? th : en;
 
-    <div
+    return(
+        <div
         className="hero_section v3 lazyload"
         data-bgset={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/bg_11.png`}
     >
@@ -357,6 +358,8 @@ const SimpleIconSection = () => {
             </div>
         </div>
     </div>
+    )
+    
 }
 
 SimpleIconSection.getInitialProps = async () => ({

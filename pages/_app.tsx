@@ -1,28 +1,55 @@
 import axios from 'axios';
-import * as fbq from 'fbq';
+// import * as fbq from 'fbq';
 import Cookie from 'js-cookie';
-import { DefaultSeo } from 'next-seo';
+// import { DefaultSeo } from 'next-seo';
 import App from 'next/app';
 import Router, { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
-import TagManager from 'react-gtm-module';
-import AppConfig from '../appConfig';
-import { StoreContextProvider } from '../components/context/store';
+// import TagManager from 'react-gtm-module';
+// import AppConfig from '../appConfig';
+// import { StoreContextProvider } from '../components/context/store';
 // import Proloader from '../components/Proloader';
-import { seo } from '../components/seo/defaultseo';
-import { checktoken } from '../services/user/user.service';
-import '../public/assets/css/style.css'
-import '../public/assets/css/responsive.css'
+// import { seo } from '../components/seo/defaultseo';
+// import { checktoken } from '../services/user/user.service';
+// import '../public/assets/css/global.css'
+// import '../public/assets/css/proloader.css'
+// import '../public/assets/css/backtotop.css'
+// import '../public/assets/css/header.css'
+// import '../public/assets/css/footer.css'
+// import '../public/assets/css/banner-cookie.css'
+// import '../public/assets/css/help.css'
+// import '../public/assets/css/condition.css'
+// import '../public/assets/css/cta.css'
+// import '../public/assets/css/edu.css'
+// import '../public/assets/css/faq.css'
+// import '../public/assets/css/feature.css'
+// import '../public/assets/css/globe.css'
+// import '../public/assets/css/hero.css'
+// import '../public/assets/css/modal.css'
+// import '../public/assets/css/newsletter.css'
+// import '../public/assets/css/partner.css'
+// import '../public/assets/css/pricing.css'
+// import '../public/assets/css/service.css'
+// import '../public/assets/css/service.feature.css'
+// import '../public/assets/css/simple.css'
+// import '../public/assets/css/simpleicons.css'
+// import '../public/assets/css/simpleslider.css'
+// import '../public/assets/css/slider.css'
+// import '../public/assets/css/sms.css'
+// import '../public/assets/css/test-pipeline.css'
+// import '../public/assets/css/testimonial.css'
+// import '../public/assets/css/track.css'
+// import '../public/assets/css/user-type.css'
 
-import { fb } from '../utils/fb';
-import Cookies from 'js-cookie';
+// import '../public/assets/css/style.css'
+// import '../public/assets/css/responsive.css'
 
-import '../public/css/style.css';
-import '../public/css/responsive.css';
+// import { fb } from '../utils/fb';
+// import Cookies from 'js-cookie';
 
-const tagManagerArgs = {
-    gtmId: AppConfig.GTM_CODE || '',
-};
+// const tagManagerArgs = {
+//     gtmId: AppConfig.GTM_CODE || '',
+// };
 
 axios.interceptors.request.use((config) => {
     const jwtToken = Cookie.get('TBS_token');
@@ -52,12 +79,12 @@ function MyApp({ Component, pageProps }: any) {
 
     const router = useRouter();
 
-    const handleRouteChange = async (url: string) => {
-        if ((await checktoken()) && url === '/log-in') {
-            // Router.push('/member');
-            window.location.replace('https://member.thaibulksms.com/');
-        }
-    };
+    // const handleRouteChange = async (url: string) => {
+    //     if ((await checktoken()) && url === '/log-in') {
+    //         // Router.push('/member');
+    //         window.location.replace('https://member.thaibulksms.com/');
+    //     }
+    // };
     useEffect(() => {
         if (lang === undefined) {
             router.locale = 'th'

@@ -18,11 +18,6 @@ const Help = () => {
         <div className="info__box__wrapper d-none d-xl-block">
         <button type="button" className="btn v8">
             <span>
-                {/* <img
-                    className="lazyload"
-                    data-src={`${process.env.NEXT_PUBLIC_BASE_ASSET}/img/icon_14.png`}
-                    alt=""
-                /> */}
                 <span className="lazyload">
                     <Image loader={myLoader} src="icon_14.png" alt="Image" width={100} height={100}/>
                 </span>

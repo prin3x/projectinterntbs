@@ -33,11 +33,11 @@ const Layout = (props: any) => {
           }}
         />
       </Head> */}
-            {/* <Header /> */}
+            <Header />
             {props.children}
-            {/* <Footer /> */}
-            {/* <BannerCookie /> */}
-            {/* <LeadGenForm /> */}
+            <Footer />
+            <BannerCookie />
+            <LeadGenForm />
             <div
                 className="fb-customerchat"
                 data-attribution="setup_tool"

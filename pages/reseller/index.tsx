@@ -9,7 +9,6 @@ import DesSection from '../../components/reseller/DesSection';
 import HeroSection from '../../components/reseller/HeroSection';
 import SmsSection from '../../components/reseller/SmsSection';
 import { seo } from '../../components/seo/reseller';
-// import { withTranslation } from '../../i18n';
 import { useRouter } from 'next/router';
 import th from '../../public/locales/th/ResellerPage.json'
 import en from '../../public/locales/en/ResellerPage.json'
