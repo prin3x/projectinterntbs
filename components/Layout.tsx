@@ -38,11 +38,11 @@ const Layout = (props: any) => {
             <Footer />
             <BannerCookie />
             <LeadGenForm />
-            <div
+            {/* <div
                 className="fb-customerchat"
                 data-attribution="setup_tool"
                 data-page_id={process.env.NEXT_PUBLIC_FB_PAGEID}
-            ></div>
+            ></div> */}
         </div>
     );
 };
