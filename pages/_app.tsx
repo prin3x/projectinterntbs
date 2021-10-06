@@ -1,23 +1,26 @@
 import axios from 'axios';
 // import * as fbq from 'fbq';
 import Cookie from 'js-cookie';
-// import { DefaultSeo } from 'next-seo';
+import { DefaultSeo } from 'next-seo';
 import App from 'next/app';
 import Router, { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 // import TagManager from 'react-gtm-module';
 // import AppConfig from '../appConfig';
-// import { StoreContextProvider } from '../components/context/store';
+import { StoreContextProvider } from '../components/context/store';
 // import Proloader from '../components/Proloader';
-// import { seo } from '../components/seo/defaultseo';
+import { seo } from '../components/seo/defaultseo';
 // import { checktoken } from '../services/user/user.service';
+// import { fb } from '../utils/fb';
+// import Cookies from 'js-cookie';
+import 'react-modal-video/scss/modal-video.scss'
+
 // import '../public/assets/css/global.css'
 // import '../public/assets/css/proloader.css'
 // import '../public/assets/css/backtotop.css'
 // import '../public/assets/css/header.css'
 // import '../public/assets/css/footer.css'
 // import '../public/assets/css/banner-cookie.css'
-// import '../public/assets/css/help.css'
 // import '../public/assets/css/condition.css'
 // import '../public/assets/css/cta.css'
 // import '../public/assets/css/edu.css'
@@ -41,11 +44,8 @@ import React, { useEffect } from 'react';
 // import '../public/assets/css/track.css'
 // import '../public/assets/css/user-type.css'
 
-// import '../public/assets/css/style.css'
-// import '../public/assets/css/responsive.css'
-
-// import { fb } from '../utils/fb';
-// import Cookies from 'js-cookie';
+import '../public/assets/css/style.css'
+import '../public/assets/css/responsive.css'
 
 // const tagManagerArgs = {
 //     gtmId: AppConfig.GTM_CODE || '',
@@ -153,11 +153,11 @@ function MyApp({ Component, pageProps }: any) {
 
     return (
         <>
-            {/* <DefaultSeo {...seo} /> */}
-            {/* <StoreContextProvider> */}
+            <DefaultSeo {...seo} />
+            <StoreContextProvider>
                 {/* <Proloader /> */}
                 <Component {...pageProps} />
-            {/* </StoreContextProvider> */}
+            </StoreContextProvider>
         </>
     );
 }
