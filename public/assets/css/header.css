@@ -527,6 +527,29 @@ a .text_title_left {
     background-size: cover;
 }
 
+.new_icon_title_menu_resource05:before {
+    content: '';
+    background-image: url('../img/menu-icon_resource-icon05.svg');
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+}
+
+.new_icon_title_menu_resource06:before {
+    content: '';
+    background-image: url('../img/menu-icon_resource-icon06.svg');
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+}
+.new_icon_title_menu_resource07:before {
+    content: '';
+    background-image: url('../img/menu-icon_resource-icon07.svg');
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+}
+
 .new_icon_title_menu_support01:before {
     content: '';
     background-image: url('../img/menu-icon_support-icon01.svg');
@@ -546,6 +569,30 @@ a .text_title_left {
 .new_icon_title_menu_support03:before {
     content: '';
     background-image: url('../img/menu-icon_support-icon03.svg');
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+}
+
+.new_icon_title_menu_support04:before {
+    content: '';
+    background-image: url('../img/menu-icon_support-icon04.svg');
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+}
+
+.new_icon_title_menu_support05:before {
+    content: '';
+    background-image: url('../img/menu-icon_support-icon05.svg');
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+}
+
+.new_icon_title_menu_support06:before {
+    content: '';
+    background-image: url('../img/menu-icon_support-icon06.svg');
     position: absolute;
     display: inline-block;
     background-size: cover;
@@ -602,6 +649,22 @@ a .text_title_left {
 .new_icon_title_menu_about04:before {
     content: '';
     background-image: url('../img/menu-icon_about-icon04.svg');
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+}
+
+.new_icon_title_menu_about05:before {
+    content: '';
+    background-image: url('../img/menu-icon_about-icon05.svg');
+    position: absolute;
+    display: inline-block;
+    background-size: cover;
+}
+
+.new_icon_title_menu_about06:before {
+    content: '';
+    background-image: url('../img/menu-icon_about-icon06.svg');
     position: absolute;
     display: inline-block;
     background-size: cover;
